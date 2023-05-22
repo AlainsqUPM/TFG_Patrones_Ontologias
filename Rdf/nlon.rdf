@@ -1,0 +1,69 @@
+<rdf:RDF
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:nlfloc="http://lod.nl.go.kr/foreignLocation/"
+    xmlns:nlcon="http://lod.nl.go.kr/countries/"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:nllib="http://lod.nl.go.kr/library/"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:nlsc="http://lod.nl.go.kr/scheme/"
+    xmlns:nlloc="http://lod.nl.go.kr/location/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:bibframe="http://bibframe.org/vocab/"
+    xmlns:event="http://purl.org/NET/c4dm/event.owl#"
+    xmlns:units="http://lod.nl.go.kr/units/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:nlgov="http://lod.nl.go.kr/government/"
+    xmlns:nlon="http://lod.nl.go.kr/ontology/"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:org="http://www.w3.org/ns/org#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:nlddc="http://lod.nl.go.kr/ddc/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:schema="http://schema.org/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:geonames="http://www.geonames.org/ontology#"
+    xmlns:nluv="http://lod.nl.go.kr/university/"
+    xmlns:nls="http://lod.nl.go.kr/subject/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:bibo="http://purl.org/ontology/bibo/"
+    xmlns:nla="http://lod.nl.go.kr/author/"
+    xmlns:nlkdc="http://lod.nl.go.kr/kdc/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:nlk="http://lod.nl.go.kr/resource/">
+  <voaf:Vocabulary rdf:about="http://lod.nl.go.kr/ontology/">
+    <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <vann:preferredNamespaceUri>http://lod.nl.go.kr/ontology/</vann:preferredNamespaceUri>
+    <owl:imports rdf:resource="http://www.w3.org/ns/prov"/>
+    <vann:preferredNamespacePrefix>nlon</vann:preferredNamespacePrefix>
+    <dc:creator>National Library of Korea</dc:creator>
+    <owl:imports rdf:resource="http://purl.org/goodrelations/v1"/>
+    <dc:contributor xml:lang="gmail.com">LiST Inc., 주식회사 리스트 / codalida</dc:contributor>
+    <owl:imports rdf:resource="http://purl.org/ontology/bibo/"/>
+    <dcterms:contributor rdf:resource="http://lod.nl.go.kr/library/011001"/>
+    <dc:contributor>National Library of Korea / Bibliographic Control Division, 국립중앙도서관 국가서지과</dc:contributor>
+    <owl:imports rdf:resource="http://www.w3.org/ns/org"/>
+    <owl:imports rdf:resource="http://purl.org/dc/dcam/"/>
+    <owl:imports rdf:resource="http://purl.org/NET/c4dm/event.owl"/>
+    <owl:imports rdf:resource="http://schema.rdfs.org/all.rdf"/>
+    <rdfs:comment>이 명세서는 국립중앙도서관이 관리 및 서비스하고 있는 서지, 주제, 이름 데이터를 W3C의 RDF, OWL 기술을 활용하여 구성한 온톨로지의 상세 용어집입니다.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dc:contributor xml:lang="korea.kr">National Library of Korea / Digital Library Planning Division, 국립중앙도서관 디지털기획과 / nlklod</dc:contributor>
+    <dcterms:title>National Library of Korea Ontology</dcterms:title>
+    <dc:rights>Copyright © 2019 National Library of Korea. Some rights reserved.</dc:rights>
+    <dcterms:publisher rdf:resource="http://lod.nl.go.kr/library/011001"/>
+    <dcterms:contributor rdf:resource="http://listinc.kr/id/listinc"/>
+    <owl:imports rdf:resource="http://purl.org/dc/dcmitype/"/>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2019-09-02</dcterms:modified>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2018-09-17</dcterms:issued>
+    <owl:versionInfo>NLK_2019_0902</owl:versionInfo>
+    <dcterms:description>이 자료는 국립중앙도서관이 관리, 보존하고 있는 서지, 주제, 이름 데이터를 대상으로 기존의 (KOR)MARC 혹은 DBMS 형태 데이터를 RDF 형식으로 변환하여 웹에 Linked Open Data 형식으로 발행하고 있는 국립중앙도서관 LOD명세서 입니다. </dcterms:description>
+    <rdfs:comment>This specification describes National Library of Korea Ontology vocaburaries using W3C's RDF and OWL technology</rdfs:comment>
+    <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+  </voaf:Vocabulary>
+</rdf:RDF>

@@ -1,0 +1,1558 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="stylesheet" href="css/normalize.min.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="custom.css">
+
+<!--[if lt IE 9]>
+            <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
+        <![endif]-->
+<title>OAD Vocabulary Specification 1.3</title><script>var prefix='oad';var base='http://culturalis.org/oad#';</script>
+<script>
+var examples={};
+
+</script>
+</head>
+<body>
+	<!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+	<div class="header-container">
+		<header class="wrapper clearfix">
+			<h1 class="title">OAD Vocabulary Specification 1.3</h1>
+			<nav>
+				<ul>
+					<li><a href="#classes">Classes</a></li>
+					<li><a href="#object">Object properties</a></li>
+					<li><a href="#datatype">Datatype properties</a></li>
+				</ul>
+			</nav>
+		</header>
+	</div>
+
+	<div class="main-container">
+		<div class="main wrapper clearfix">
+			<article>
+				<section><h2>OAD - Ontology for Archival Description</h2><h3>Versions</h3>
+<p>
+	<strong>This version: </strong>
+	<br />
+	http://culturalis.org/oad# (<a href="http://culturalis.org/oad/oad.rdf">rdf</a>)
+	<br />
+	
+</p>
+<p>
+<strong>Version info</strong>
+<br>2 agosto 2018 (versione 1.3)
+</p>
+<p>
+<strong>Previous version</strong>
+https://labs.regesta.com/progettoReload/wp-content/uploads/2013/04/oad.rdf (<a href="https://labs.regesta.com/progettoReload/wp-content/uploads/2013/04/oad.rdf">rdf</a>)
+</p>
+<p>
+	<strong>Suggested prefix</strong>
+	<br>
+	oad
+	<br>
+	<strong> Ontology base </strong>
+	<br>
+	http://culturalis.org/oad#
+</p>
+
+</section><section><h2>Authors</h2><p>
+	<a href="http://ibc.regione.emilia-romagna.it/">Istituto per i beni artistici culturali e naturali della Regione Emilia-Romagna</a>, <a href="http://www.regesta.com">Regesta.exe</a>.
+<div style="height: 45px">
+	<a style="float: left; margin: 8px 15px 15px 0; height: 45px;" href="http://ibc.regione.emilia-romagna.it/"><img style="height: 45px; width: auto;" src="logo-ibc-footer.png" /></a> <a style="float: left; margin: 8px 15px 15px 0;" href="http://regesta.com"><img src="regesta.png" style="height: 45px; width: auto;" /></a>
+</div>
+</p>
+</section><section><h2>The ontology</h2><p>La definizione di una ontologia della descrizione archivistica &egrave; stata necessaria al fine di testare le potenzialit&agrave; offerte dal web of data alle descrizioni archivistiche. La descrizione archivistica mira alla rappresentazione di una unit&agrave; di descrizione attraverso la raccolta, l'analisi, l'organizzazione e la registrazione di informazioni che permettano di identificare, gestire, localizzare ed illustrare il materiale documentario e il contesto ed i sistemi di archiviazione che lo hanno prodotto (ISAD (G)). L'ontologia della descrizione archivistica (OAD) ha come obiettivo la rappresentazione formale degli elementi descrittivi delle singole unit&agrave; di descrizione - intese come oggetti di proprie descrizioni d'archivio. In particolare, OAD rinuncia a prendere in considerazione tutti i singoli elementi di tali descrizioni, nelle infinite varianti che esse presentano nell'ambito dei sistemi archivistici in cui sono incardinate, ma si propone invece di esplicitare solo gli elementi informativi ritenuti necessari per l'esposizione nel web of data delle unit&agrave; di descrizione archivistiche per garantire l'integrazione con altri dataset pubblicati anch'essi in formato Linked Open Data. OAD, in versione beta, &egrave; espressa in OWL (Ontology Web Language): essa prende in considerazione tutti gli elementi della descrizione archivistica previsti dallo standard ISAD (G) : general international standard archival description, adottato dall'ICA (International Council on Archives) integrandoli con altri elementi informativi non previsti dallo standard citato - come le voci di indice - e con i collegamenti ai soggetti produttori e conservatore. I meccanismi formali forniti dallo standard RDF e da OWL hanno consentito di ricondurre gli elementi informativi delle descrizioni archivistiche espresse in OAD ad una ontologia "esterna" di concetti archivistici rappresentativi della tradizione descrittiva internazionale e basati sullo standard ISAD (G).</p>
+<h3>License</h3>
+<p>
+	<a style="float: left; margin: 8px 15px 15px 0;" rel="license"
+		href="http://creativecommons.org/licenses/by/4.0/"> <img
+		alt="Licenza Creative Commons"
+		src="http://creativecommons.org/images/deed/by.png" /></a> This work is
+	licensed under a Creative Commons Attribution License. This copyright
+	applies to the OAD Vocabulary Specification and accompanying
+	documentation in RDF. <br /> OAD Vocabulary Specification e la
+	documentazione RDF di riferimento sono rilasciate nel rispetto dei
+	termini della <a rel="license"
+		href="https://creativecommons.org/licenses/by/4.0/deed.it">licenza
+		Creative Commons Attribuzione 4.0</a> .
+</p></section><section><h2>OAD e EAC-CPF</h2><p>Nel progetto di pubblicazione di Linked Open Data promosso dall'Istituto beni artistici culturali e naturali della Regione Emilia-Romagna, l'OAD Ontology &egrave; stata utilizzata in combinazione con un'altra ontologia del dominio archivistico: EAC-CPF Ontology.</p>
+<p>OAD ed EAC-CPF sono tra loro complementari, ma autonome e possono quindi essere utilizzate congiuntamente o disgiuntamente.</p>
+<p>Le due ontologie sono collegate da relazioni di mapping per favorire l'interoperabilit&agrave; dei dataset ad esse conformi.</p>
+</section><section><h2>Rapporti con altre ontologie</h2><p>Per specifiche classi descrittive, OAD Ontology fa riferimento esplicito ad ontologie "esterne":</p>
+<ul>
+	<li><strong>eac-cpf</strong> <a href="http://culturalis.org/eac-cpf#">http://culturalis.org/eac-cpf#</a></li>
+	<li><strong>culturalis</strong> <a href="http://culturalis.org/cult/0.1">http://culturalis.org/cult/0.1</a></li>
+	<li><strong>lode</strong> <a href="http://linkedevents.org/ontology/">http://linkedevents.org/ontology/</a></li>
+	<li><strong>dc</strong> <a href="h	http://purl.org/dc/elements/1.1/">	http://purl.org/dc/elements/1.1/</a></li>
+	<li><strong>foaf</strong> <a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a></li>
+</ul>
+<p>
+	Ove non esplicitato, si consiglia l'uso di ontologie pubbliche e di ampia diffusione (quali ad esempio <a href="http://www.w3.org/TR/rdf-schema/">RDF Schema</a>, <a href="http://dublincore.org">Dublin Core</a> e 
+	<a href="http://purl.org/goodrelations/v1">Goodrelations</a>) al fine di favorire un'ampia intellegibilit&agrave; dei dati e aumentarne l'interoperabilit&agrave;
+	
+</p>
+
+</section>
+				<section><h2>Schema</h2><div id="graphImage"><a href="OAD.png"><img src="OAD.png"></a></div></section>
+				<table border="1" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:opr="https://dati.quirinale.it/lod/opr/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oad="http://lod.xdams.org/reload/oad#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:wgs84_pos="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:viaf="http://viaf.org/ontology/1.1/#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:bio="http://purl.org/vocab/bio/0.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#" xmlns:gn="http://www.geonames.org/ontology#" xmlns:ADMS="https://w3id.org/italia/onto/ADMS/" xmlns:eac-cpf="http://culturalis.org/eac-cpf#" xmlns:standard="http://culturalis.org/standard#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ocd="http://dati.camera.it/ocd/">
+<th class="th2" colspan="1" id="pippo">Classes</th>
+<tr>
+<td style="padding: 10px;"><a href="#AdministrativeBiographicalHistory" title="http://culturalis.org/oad#AdministrativeBiographicalHistory" class="namespace">http://culturalis.org/oad#AdministrativeBiographicalHistory</a><a href="#ArchivalResource" title="http://culturalis.org/oad#ArchivalResource" class="namespace">http://culturalis.org/oad#ArchivalResource</a><a href="#ExtentAndMedium" title="http://culturalis.org/oad#ExtentAndMedium" class="namespace">http://culturalis.org/oad#ExtentAndMedium</a><a href="#FindingAid" title="http://culturalis.org/oad#FindingAid" class="namespace">http://culturalis.org/oad#FindingAid</a><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a><a href="#LevelOfDescription" title="http://culturalis.org/oad#LevelOfDescription" class="namespace">http://culturalis.org/oad#LevelOfDescription</a><a href="#Place" title="http://culturalis.org/oad#Place" class="namespace">http://culturalis.org/oad#Place</a><a href="#PublicationNote" title="http://culturalis.org/oad#PublicationNote" class="namespace">http://culturalis.org/oad#PublicationNote</a></td>
+</tr>
+</table><br><table border="1">
+<th class="th2" colspan="1">Object Properties</th>
+<tr>
+<td style="padding: 10px;"><a href="#contains" title="http://culturalis.org/oad#contains" class="namespace">http://culturalis.org/oad#contains</a><a href="#describes" title="http://culturalis.org/oad#describes" class="namespace">http://culturalis.org/oad#describes</a><a href="#hasAccessPoint" title="http://culturalis.org/oad#hasAccessPoint" class="namespace">http://culturalis.org/oad#hasAccessPoint</a><a href="#hasAdministrativeBiographicalHistory" title="http://culturalis.org/oad#hasAdministrativeBiographicalHistory" class="namespace">http://culturalis.org/oad#hasAdministrativeBiographicalHistory</a><a href="#hasEntry" title="http://culturalis.org/oad#hasEntry" class="namespace">http://culturalis.org/oad#hasEntry</a><a href="#hasExtentAndMedium" title="http://culturalis.org/oad#hasExtentAndMedium" class="namespace">http://culturalis.org/oad#hasExtentAndMedium</a><a href="#hasExtentType" title="http://culturalis.org/oad#hasExtentType" class="namespace">http://culturalis.org/oad#hasExtentType</a><a href="#hasFilePlan" title="http://culturalis.org/oad#hasFilePlan" class="namespace">http://culturalis.org/oad#hasFilePlan</a><a href="#hasLanguageScriptsOfMaterial" title="http://culturalis.org/oad#hasLanguageScriptsOfMaterial" class="namespace">http://culturalis.org/oad#hasLanguageScriptsOfMaterial</a><a href="#hasLevel" title="http://culturalis.org/oad#hasLevel" class="namespace">http://culturalis.org/oad#hasLevel</a><a href="#hasNextInSequence" title="http://culturalis.org/oad#hasNextInSequence" class="namespace">http://culturalis.org/oad#hasNextInSequence</a><a href="#hasPublicationNote" title="http://culturalis.org/oad#hasPublicationNote" class="namespace">http://culturalis.org/oad#hasPublicationNote</a><a href="#hasRelatedInstance" title="http://culturalis.org/oad#hasRelatedInstance" class="namespace">http://culturalis.org/oad#hasRelatedInstance</a><a href="#isContainedIn" title="http://culturalis.org/oad#isContainedIn" class="namespace">http://culturalis.org/oad#isContainedIn</a><a href="#isDescribedBy" title="http://culturalis.org/oad#isDescribedBy" class="namespace">http://culturalis.org/oad#isDescribedBy</a><a href="#isEntryOf" title="http://culturalis.org/oad#isEntryOf" class="namespace">http://culturalis.org/oad#isEntryOf</a><a href="#isProducedBy" title="http://culturalis.org/oad#isProducedBy" class="namespace">http://culturalis.org/oad#isProducedBy</a></td>
+</tr>
+</table><br><table border="1">
+<th class="th2" colspan="1">Datatype Properties</th>
+<tr>
+<td style="padding: 10px;"><a href="#accruals" title="http://culturalis.org/oad#accruals" class="namespace">http://culturalis.org/oad#accruals</a><a href="#appraisalDestructionAndSchedulingInformation" title="http://culturalis.org/oad#appraisalDestructionAndSchedulingInformation" class="namespace">http://culturalis.org/oad#appraisalDestructionAndSchedulingInformation</a><a href="#archivalHistory" title="http://culturalis.org/oad#archivalHistory" class="namespace">http://culturalis.org/oad#archivalHistory</a><a href="#conditionsGoverningAccess" title="http://culturalis.org/oad#conditionsGoverningAccess" class="namespace">http://culturalis.org/oad#conditionsGoverningAccess</a><a href="#conditionsGoverningReproduction" title="http://culturalis.org/oad#conditionsGoverningReproduction" class="namespace">http://culturalis.org/oad#conditionsGoverningReproduction</a><a href="#date" title="http://culturalis.org/oad#date" class="namespace">http://culturalis.org/oad#date</a><a href="#existenceAndLocationOfCopies" title="http://culturalis.org/oad#existenceAndLocationOfCopies" class="namespace">http://culturalis.org/oad#existenceAndLocationOfCopies</a><a href="#existenceAndLocationOfOriginals" title="http://culturalis.org/oad#existenceAndLocationOfOriginals" class="namespace">http://culturalis.org/oad#existenceAndLocationOfOriginals</a><a href="#immediateSourceOfAcquisitionOrTransfer" title="http://culturalis.org/oad#immediateSourceOfAcquisitionOrTransfer" class="namespace">http://culturalis.org/oad#immediateSourceOfAcquisitionOrTransfer</a><a href="#note" title="http://culturalis.org/oad#note" class="namespace">http://culturalis.org/oad#note</a><a href="#otherlevel" title="http://culturalis.org/oad#otherlevel" class="namespace">http://culturalis.org/oad#otherlevel</a><a href="#physicalCharacteristicsAndTechnicalRequirements" title="http://culturalis.org/oad#physicalCharacteristicsAndTechnicalRequirements" class="namespace">http://culturalis.org/oad#physicalCharacteristicsAndTechnicalRequirements</a><a href="#referenceCode" title="http://culturalis.org/oad#referenceCode" class="namespace">http://culturalis.org/oad#referenceCode</a><a href="#scopeAndContent" title="http://culturalis.org/oad#scopeAndContent" class="namespace">http://culturalis.org/oad#scopeAndContent</a><a href="#systemOfArrangement" title="http://culturalis.org/oad#systemOfArrangement" class="namespace">http://culturalis.org/oad#systemOfArrangement</a><a href="#title" title="http://culturalis.org/oad#title" class="namespace">http://culturalis.org/oad#title</a></td>
+</tr>
+</table><br><h2 id="classes">Classes</h2><table class="quick-reference class">
+<caption></caption>
+<colgroup>
+<col class="quick-ref-key">
+<col class="quick-ref-value">
+</colgroup>
+<tbody>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>C</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#AdministrativeBiographicalHistory" id="AdministrativeBiographicalHistory" class="namespace">http://culturalis.org/oad#AdministrativeBiographicalHistory</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#AdministrativeBiographicalHistory</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Storia istituzionale/ amministrativa o biografia</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Administrative / Biographical history</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/administrativeBiographicalHistory" title="http://lod.xdams.org/reload/oad/administrativeBiographicalHistory" class="namespace">http://lod.xdams.org/reload/oad/administrativeBiographicalHistory</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La classe rappresenta le informazioni relative alla storia istituzionale, amministrativa o biografica</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The class represents the administrative and biographical history.</td>
+</tr>
+<tr class="s">
+<td valign="top">is range of</td><td valign="top"><a href="#hasAdministrativeBiographicalHistory" title="http://culturalis.org/oad#hasAdministrativeBiographicalHistory" class="namespace">http://culturalis.org/oad#hasAdministrativeBiographicalHistory</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>C</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#ArchivalResource" id="ArchivalResource" class="namespace">http://culturalis.org/oad#ArchivalResource</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#ArchivalResource</td>
+</tr>
+<tr class="s">
+<td>version info</td><td>Questa classe &egrave; stata aggiunta nella versione del 2 agosto 2018</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Risorsa archivistica</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Archival resource</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La classe Archival resource indica un corpus documentale oggetto di descrizione</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">oad:ArchivalResource is the class that represents the object of the description (i.e., a single document or a set of document).</td>
+</tr>
+<tr class="s">
+<td valign="top">is domain of</td><td valign="top"><a href="#hasEntry" title="http://culturalis.org/oad#hasEntry" class="namespace">http://culturalis.org/oad#hasEntry</a><a href="#isDescribedBy" title="http://culturalis.org/oad#isDescribedBy" class="namespace">http://culturalis.org/oad#isDescribedBy</a><a href="#isProducedBy" title="http://culturalis.org/oad#isProducedBy" class="namespace">http://culturalis.org/oad#isProducedBy</a></td>
+</tr>
+<tr class="s">
+<td valign="top">is range of</td><td valign="top"><a href="#isEntryOf" title="http://culturalis.org/oad#isEntryOf" class="namespace">http://culturalis.org/oad#isEntryOf</a><a href="#describes" title="http://culturalis.org/oad#describes" class="namespace">http://culturalis.org/oad#describes</a></td>
+</tr>
+<tr class="s">
+<td valign="top">equivalent class</td><td valign="top"><a href="http://dati.san.beniculturali.it/SAN/complessoArchivistico" title="http://dati.san.beniculturali.it/SAN/complessoArchivistico" class="namespace">http://dati.san.beniculturali.it/SAN/complessoArchivistico</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>C</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#ExtentAndMedium" id="ExtentAndMedium" class="namespace">http://culturalis.org/oad#ExtentAndMedium</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#ExtentAndMedium</td>
+</tr>
+<tr class="s">
+<td>version info</td><td>Questa classe &egrave; stata aggiunta nella versione del 2 agosto 2018</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Consistenza e supporto</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Extent and medium</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La classe Extent and medium rappresenta la descrizione dell'estensione e del supporto</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The class represents the description about extent and medium.</td>
+</tr>
+<tr class="s">
+<td valign="top">is domain of</td><td valign="top"><a href="#hasExtentType" title="http://culturalis.org/oad#hasExtentType" class="namespace">http://culturalis.org/oad#hasExtentType</a></td>
+</tr>
+<tr class="s">
+<td valign="top">is range of</td><td valign="top"><a href="#hasExtentAndMedium" title="http://culturalis.org/oad#hasExtentAndMedium" class="namespace">http://culturalis.org/oad#hasExtentAndMedium</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>C</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#FindingAid" id="FindingAid" class="namespace">http://culturalis.org/oad#FindingAid</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#FindingAid</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Strumento di ricerca</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Finding aid</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/findingAid" title="http://lod.xdams.org/reload/oad/findingAid" class="namespace">http://lod.xdams.org/reload/oad/findingAid</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La classe rappresenta lo strumento di ricerca</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The class represents a finding aid.</td>
+</tr>
+<tr class="s">
+<td valign="top">is domain of</td><td valign="top"><a href="#contains" title="http://culturalis.org/oad#contains" class="namespace">http://culturalis.org/oad#contains</a><a href="#describes" title="http://culturalis.org/oad#describes" class="namespace">http://culturalis.org/oad#describes</a></td>
+</tr>
+<tr class="s">
+<td valign="top">is range of</td><td valign="top"><a href="#isContainedIn" title="http://culturalis.org/oad#isContainedIn" class="namespace">http://culturalis.org/oad#isContainedIn</a><a href="#isDescribedBy" title="http://culturalis.org/oad#isDescribedBy" class="namespace">http://culturalis.org/oad#isDescribedBy</a></td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="http://culturalis.org/cult/0.1/#Catalogue" title="http://culturalis.org/cult/0.1/#Catalogue" class="namespace">http://culturalis.org/cult/0.1/#Catalogue</a></td>
+</tr>
+<tr class="s">
+<td valign="top">equivalent class</td><td valign="top"><a href="http://dati.san.beniculturali.it/SAN/strumento" title="http://dati.san.beniculturali.it/SAN/strumento" class="namespace">http://dati.san.beniculturali.it/SAN/strumento</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>C</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#Instance" id="Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#Instance</td>
+</tr>
+<tr class="s">
+<td>version info</td><td>Questa classe &egrave; stata aggiunta nella versione del 2 agosto 2018</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Instanza archivistica</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Archival instance</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La classe Archival instance rappresenta l'istanziazione dell'archival resource</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The class represents the descriptive entry of an archival resource</td>
+</tr>
+<tr class="s">
+<td valign="top">is domain of</td><td valign="top"><a href="#hasAdministrativeBiographicalHistory" title="http://culturalis.org/oad#hasAdministrativeBiographicalHistory" class="namespace">http://culturalis.org/oad#hasAdministrativeBiographicalHistory</a><a href="#hasExtentAndMedium" title="http://culturalis.org/oad#hasExtentAndMedium" class="namespace">http://culturalis.org/oad#hasExtentAndMedium</a><a href="#hasFilePlan" title="http://culturalis.org/oad#hasFilePlan" class="namespace">http://culturalis.org/oad#hasFilePlan</a><a href="#hasLanguageScriptsOfMaterial" title="http://culturalis.org/oad#hasLanguageScriptsOfMaterial" class="namespace">http://culturalis.org/oad#hasLanguageScriptsOfMaterial</a><a href="#hasLevel" title="http://culturalis.org/oad#hasLevel" class="namespace">http://culturalis.org/oad#hasLevel</a><a href="#hasNextInSequence" title="http://culturalis.org/oad#hasNextInSequence" class="namespace">http://culturalis.org/oad#hasNextInSequence</a><a href="#hasPublicationNote" title="http://culturalis.org/oad#hasPublicationNote" class="namespace">http://culturalis.org/oad#hasPublicationNote</a><a href="#hasRelatedInstance" title="http://culturalis.org/oad#hasRelatedInstance" class="namespace">http://culturalis.org/oad#hasRelatedInstance</a><a href="#isEntryOf" title="http://culturalis.org/oad#isEntryOf" class="namespace">http://culturalis.org/oad#isEntryOf</a><a href="#accruals" title="http://culturalis.org/oad#accruals" class="namespace">http://culturalis.org/oad#accruals</a><a href="#appraisalDestructionAndSchedulingInformation" title="http://culturalis.org/oad#appraisalDestructionAndSchedulingInformation" class="namespace">http://culturalis.org/oad#appraisalDestructionAndSchedulingInformation</a><a href="#archivalHistory" title="http://culturalis.org/oad#archivalHistory" class="namespace">http://culturalis.org/oad#archivalHistory</a><a href="#conditionsGoverningAccess" title="http://culturalis.org/oad#conditionsGoverningAccess" class="namespace">http://culturalis.org/oad#conditionsGoverningAccess</a><a href="#conditionsGoverningReproduction" title="http://culturalis.org/oad#conditionsGoverningReproduction" class="namespace">http://culturalis.org/oad#conditionsGoverningReproduction</a><a href="#date" title="http://culturalis.org/oad#date" class="namespace">http://culturalis.org/oad#date</a><a href="#existenceAndLocationOfCopies" title="http://culturalis.org/oad#existenceAndLocationOfCopies" class="namespace">http://culturalis.org/oad#existenceAndLocationOfCopies</a><a href="#existenceAndLocationOfOriginals" title="http://culturalis.org/oad#existenceAndLocationOfOriginals" class="namespace">http://culturalis.org/oad#existenceAndLocationOfOriginals</a><a href="#immediateSourceOfAcquisitionOrTransfer" title="http://culturalis.org/oad#immediateSourceOfAcquisitionOrTransfer" class="namespace">http://culturalis.org/oad#immediateSourceOfAcquisitionOrTransfer</a><a href="#note" title="http://culturalis.org/oad#note" class="namespace">http://culturalis.org/oad#note</a><a href="#otherlevel" title="http://culturalis.org/oad#otherlevel" class="namespace">http://culturalis.org/oad#otherlevel</a><a href="#physicalCharacteristicsAndTechnicalRequirements" title="http://culturalis.org/oad#physicalCharacteristicsAndTechnicalRequirements" class="namespace">http://culturalis.org/oad#physicalCharacteristicsAndTechnicalRequirements</a><a href="#referenceCode" title="http://culturalis.org/oad#referenceCode" class="namespace">http://culturalis.org/oad#referenceCode</a><a href="#scopeAndContent" title="http://culturalis.org/oad#scopeAndContent" class="namespace">http://culturalis.org/oad#scopeAndContent</a><a href="#systemOfArrangement" title="http://culturalis.org/oad#systemOfArrangement" class="namespace">http://culturalis.org/oad#systemOfArrangement</a><a href="#title" title="http://culturalis.org/oad#title" class="namespace">http://culturalis.org/oad#title</a><a href="#hasAccessPoint" title="http://culturalis.org/oad#hasAccessPoint" class="namespace">http://culturalis.org/oad#hasAccessPoint</a><a href="#isContainedIn" title="http://culturalis.org/oad#isContainedIn" class="namespace">http://culturalis.org/oad#isContainedIn</a></td>
+</tr>
+<tr class="s">
+<td valign="top">is range of</td><td valign="top"><a href="#hasEntry" title="http://culturalis.org/oad#hasEntry" class="namespace">http://culturalis.org/oad#hasEntry</a><a href="#hasNextInSequence" title="http://culturalis.org/oad#hasNextInSequence" class="namespace">http://culturalis.org/oad#hasNextInSequence</a><a href="#hasRelatedInstance" title="http://culturalis.org/oad#hasRelatedInstance" class="namespace">http://culturalis.org/oad#hasRelatedInstance</a><a href="#contains" title="http://culturalis.org/oad#contains" class="namespace">http://culturalis.org/oad#contains</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>C</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#LevelOfDescription" id="LevelOfDescription" class="namespace">http://culturalis.org/oad#LevelOfDescription</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#LevelOfDescription</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Livello di descrizione</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Level of description</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/levelOfDescription" title="http://lod.xdams.org/reload/oad/levelOfDescription" class="namespace">http://lod.xdams.org/reload/oad/levelOfDescription</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La classe rappresenta il livello della descrizione archivistica</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The class represents the archival description level</td>
+</tr>
+<tr class="s">
+<td valign="top">is range of</td><td valign="top"><a href="#hasLevel" title="http://culturalis.org/oad#hasLevel" class="namespace">http://culturalis.org/oad#hasLevel</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>C</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#Place" id="Place" class="namespace">http://culturalis.org/oad#Place</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#Place</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Luogo</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Place</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/place" title="http://lod.xdams.org/reload/oad/place" class="namespace">http://lod.xdams.org/reload/oad/place</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La classe rappresenta un luogo</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The class represents a physical place</td>
+</tr>
+<tr class="s">
+<td valign="top">is range of</td><td valign="top"><a href="#hasAccessPoint" title="http://culturalis.org/oad#hasAccessPoint" class="namespace">http://culturalis.org/oad#hasAccessPoint</a></td>
+</tr>
+<tr class="s">
+<td valign="top">is subclass of</td><td valign="top"><a href="http://www.geonames.org/ontology#Feature" title="http://www.geonames.org/ontology#Feature" class="namespace">http://www.geonames.org/ontology#Feature</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>C</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#PublicationNote" id="PublicationNote" class="namespace">http://culturalis.org/oad#PublicationNote</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#PublicationNote</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Bibliografia</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Publication note</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/publicationNote" title="http://lod.xdams.org/reload/oad/publicationNote" class="namespace">http://lod.xdams.org/reload/oad/publicationNote</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La classe rappresenta la bibliografia</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The class represents a bibliography</td>
+</tr>
+<tr class="s">
+<td valign="top">is range of</td><td valign="top"><a href="#hasPublicationNote" title="http://culturalis.org/oad#hasPublicationNote" class="namespace">http://culturalis.org/oad#hasPublicationNote</a></td>
+</tr>
+<tr class="block">
+<td colspan="2">&nbsp;</td>
+</tr>
+</tbody>
+</table><h2 id="object">Object Properties</h2><table class="quick-reference object">
+<caption></caption>
+<colgroup>
+<col class="quick-ref-key">
+<col class="quick-ref-value">
+</colgroup>
+<tbody>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>OP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#contains" id="contains" class="namespace">http://culturalis.org/oad#contains</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#contains</td>
+</tr>
+<tr class="s">
+<td>version info</td><td>Questa propriet&agrave; &egrave; stata aggiunta nella versione del 2 agosto 2018</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Contiene</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Contains</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Propriet&agrave; inversa di 'isContainedIn'.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Inverse property of oad:isContainedIn</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#FindingAid" title="http://culturalis.org/oad#FindingAid" class="namespace">http://culturalis.org/oad#FindingAid</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://culturalis.org/eac-cpf#Instance" title="http://culturalis.org/eac-cpf#Instance" class="namespace">http://culturalis.org/eac-cpf#Instance</a><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>OP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#hasAccessPoint" id="hasAccessPoint" class="namespace">http://culturalis.org/oad#hasAccessPoint</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#hasAccessPoint</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Ha chiave di indice</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Has key access point</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/has_accessPoint" title="http://lod.xdams.org/reload/oad/has_accessPoint" class="namespace">http://lod.xdams.org/reload/oad/has_accessPoint</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; rappresenta le informazioni relative alle chiavi di accesso</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property represents an access point</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="http://culturalis.org/eac-cpf#Entity" title="http://culturalis.org/eac-cpf#Entity" class="namespace">http://culturalis.org/eac-cpf#Entity</a><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://culturalis.org/eac-cpf#Entity" title="http://culturalis.org/eac-cpf#Entity" class="namespace">http://culturalis.org/eac-cpf#Entity</a><a href="#Place" title="http://culturalis.org/oad#Place" class="namespace">http://culturalis.org/oad#Place</a><a href="http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept" class="namespace">http://www.w3.org/2004/02/skos/core#Concept</a><a href="http://xmlns.com/foaf/0.1/Organization" title="http://xmlns.com/foaf/0.1/Organization" class="namespace">http://xmlns.com/foaf/0.1/Organization</a><a href="http://xmlns.com/foaf/0.1/Person" title="http://xmlns.com/foaf/0.1/Person" class="namespace">http://xmlns.com/foaf/0.1/Person</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>OP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#hasAdministrativeBiographicalHistory" id="hasAdministrativeBiographicalHistory" class="namespace">http://culturalis.org/oad#hasAdministrativeBiographicalHistory</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#hasAdministrativeBiographicalHistory</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Ha storia amministrativa / biografica</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Has administrative / biographical history</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/has_administrativeBiographicalHistory" title="http://lod.xdams.org/reload/oad/has_administrativeBiographicalHistory" class="namespace">http://lod.xdams.org/reload/oad/has_administrativeBiographicalHistory</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; collega una scheda descrittiva alle informazioni relative alla storia amministrativa o biografica</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property links and instace to information about administrative and biographica history.</td>
+</tr>
+<tr class="s">
+<td valign="top">is defined by</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/isadOntology/isad_3.2.2_administrative_biographical_history" title="http://lod.xdams.org/reload/oad/isadOntology/isad_3.2.2_administrative_biographical_history" class="namespace">http://lod.xdams.org/reload/oad/isadOntology/isad_3.2.2_administrative_biographical_history</a></td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#AdministrativeBiographicalHistory" title="http://culturalis.org/oad#AdministrativeBiographicalHistory" class="namespace">http://culturalis.org/oad#AdministrativeBiographicalHistory</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>OP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#hasEntry" id="hasEntry" class="namespace">http://culturalis.org/oad#hasEntry</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#hasEntry</td>
+</tr>
+<tr class="s">
+<td>version info</td><td>Questa propriet&agrave; &egrave; stata aggiunta nella versione del 2 agosto 2018</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Ha scheda descrittiva</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Has entry</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Propriet&agrave; inversa di 'isEntryOf'.</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#ArchivalResource" title="http://culturalis.org/oad#ArchivalResource" class="namespace">http://culturalis.org/oad#ArchivalResource</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>OP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#hasExtentAndMedium" id="hasExtentAndMedium" class="namespace">http://culturalis.org/oad#hasExtentAndMedium</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#hasExtentAndMedium</td>
+</tr>
+<tr class="s">
+<td>version info</td><td>Questa propriet&agrave; &egrave; stata aggiunta nella versione del 2 agosto 2018</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Ha estensione e supporto</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Has extent and medium</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; collega l'istanziazione di una risorsa archivistica alle informazioni relative all'estensione e al supporto</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property links an instance to information about extent and medium</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#ExtentAndMedium" title="http://culturalis.org/oad#ExtentAndMedium" class="namespace">http://culturalis.org/oad#ExtentAndMedium</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>OP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#hasExtentType" id="hasExtentType" class="namespace">http://culturalis.org/oad#hasExtentType</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#hasExtentType</td>
+</tr>
+<tr class="s">
+<td>version info</td><td>Questa propriet&agrave; &egrave; stata aggiunta nella versione del 2 agosto 2018</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Ha tipo di estensione</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Has extent type</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; rappresenta le informazioni relative alla tipologia di estensione e punta ad un vocabolario skos</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property represents an extent type and it is related to a skos vocabulary</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#ExtentAndMedium" title="http://culturalis.org/oad#ExtentAndMedium" class="namespace">http://culturalis.org/oad#ExtentAndMedium</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept" class="namespace">http://www.w3.org/2004/02/skos/core#Concept</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>OP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#hasFilePlan" id="hasFilePlan" class="namespace">http://culturalis.org/oad#hasFilePlan</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#hasFilePlan</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Sistema di classificazione</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">File Plan</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/has_filePlan" title="http://lod.xdams.org/reload/oad/has_filePlan" class="namespace">http://lod.xdams.org/reload/oad/has_filePlan</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; collega una archival instance ad un sistema di classificazione</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property links an instance to a classification system</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept" class="namespace">http://www.w3.org/2004/02/skos/core#Concept</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>OP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#hasLanguageScriptsOfMaterial" id="hasLanguageScriptsOfMaterial" class="namespace">http://culturalis.org/oad#hasLanguageScriptsOfMaterial</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#hasLanguageScriptsOfMaterial</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Ha lingua/scrittura della documentazione</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Has language/scripts of material</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/has_languageScriptsOfMaterial" title="http://lod.xdams.org/reload/oad/has_languageScriptsOfMaterial" class="namespace">http://lod.xdams.org/reload/oad/has_languageScriptsOfMaterial</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; collega una archival instance alle informazioni relative alla lingua</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property links an instance to its language information</td>
+</tr>
+<tr class="s">
+<td valign="top">is defined by</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/isadOntology/isad_3.4.3_language_scripts_of_material" title="http://lod.xdams.org/reload/oad/isadOntology/isad_3.4.3_language_scripts_of_material" class="namespace">http://lod.xdams.org/reload/oad/isadOntology/isad_3.4.3_language_scripts_of_material</a></td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://id.loc.gov/vocabulary/iso639-1/iso639-1_Language" title="http://id.loc.gov/vocabulary/iso639-1/iso639-1_Language" class="namespace">http://id.loc.gov/vocabulary/iso639-1/iso639-1_Language</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>OP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#hasLevel" id="hasLevel" class="namespace">http://culturalis.org/oad#hasLevel</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#hasLevel</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Ha livello di descrizione</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Has level of description</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/has_level" title="http://lod.xdams.org/reload/oad/has_level" class="namespace">http://lod.xdams.org/reload/oad/has_level</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; collega una unit&agrave; di descrizione al livello di descrizione archivistica</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property links an archival resource to its level of description</td>
+</tr>
+<tr class="s">
+<td valign="top">is defined by</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/isadOntology/isad_3.1.4_level_of_description" title="http://lod.xdams.org/reload/oad/isadOntology/isad_3.1.4_level_of_description" class="namespace">http://lod.xdams.org/reload/oad/isadOntology/isad_3.1.4_level_of_description</a></td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#LevelOfDescription" title="http://culturalis.org/oad#LevelOfDescription" class="namespace">http://culturalis.org/oad#LevelOfDescription</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>OP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#hasNextInSequence" id="hasNextInSequence" class="namespace">http://culturalis.org/oad#hasNextInSequence</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#hasNextInSequence</td>
+</tr>
+<tr class="s">
+<td>version info</td><td>Questa propriet&agrave; &egrave; stata aggiunta nella versione del 2 agosto 2018</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Ha successivo</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Has next in sequence</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; collega l'istanziazione di una risorsa archivistica alla sua successiva gerarchicamente</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property links an instance to the following sibling</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>OP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#hasPublicationNote" id="hasPublicationNote" class="namespace">http://culturalis.org/oad#hasPublicationNote</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#hasPublicationNote</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Ha bibliografia</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Has publication note</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/has_publicationNote" title="http://lod.xdams.org/reload/oad/has_publicationNote" class="namespace">http://lod.xdams.org/reload/oad/has_publicationNote</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; collega una scheda descrittiva alle informazioni relative alla pubblicazione</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property links an instance to its bibliography information</td>
+</tr>
+<tr class="s">
+<td valign="top">is defined by</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/isadOntology/isad_3.5.4_publication_note" title="http://lod.xdams.org/reload/oad/isadOntology/isad_3.5.4_publication_note" class="namespace">http://lod.xdams.org/reload/oad/isadOntology/isad_3.5.4_publication_note</a></td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#PublicationNote" title="http://culturalis.org/oad#PublicationNote" class="namespace">http://culturalis.org/oad#PublicationNote</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>OP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#hasRelatedInstance" id="hasRelatedInstance" class="namespace">http://culturalis.org/oad#hasRelatedInstance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#hasRelatedInstance</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Ha scheda descrittiva collegata</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Has related instance</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/has_relatedUnitsOfDescription" title="http://lod.xdams.org/reload/oad/has_relatedUnitsOfDescription" class="namespace">http://lod.xdams.org/reload/oad/has_relatedUnitsOfDescription</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; collega tra loro due o pi&ugrave; istanze archivistiche</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property links two or more instances related</td>
+</tr>
+<tr class="s">
+<td valign="top">is defined by</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/isadOntology/isad_3.5.3_related_units_of_description" title="http://lod.xdams.org/reload/oad/isadOntology/isad_3.5.3_related_units_of_description" class="namespace">http://lod.xdams.org/reload/oad/isadOntology/isad_3.5.3_related_units_of_description</a></td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>OP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#isContainedIn" id="isContainedIn" class="namespace">http://culturalis.org/oad#isContainedIn</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#isContainedIn</td>
+</tr>
+<tr class="s">
+<td>version info</td><td>Questa propriet&agrave; &egrave; stata aggiunta nella versione del 2 agosto 2018</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">&Egrave; contenuta in</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Is contained in</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; descrive la relazione tra l'istanziazione di una risorsa archivistica o di un'entity e lo strumento di ricerca in cui &egrave; contenuta</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property represents the relationship between an instance and the finding aid in which it is contained</td>
+</tr>
+<tr class="s">
+<td valign="top">inverse property</td><td valign="top"><a href="#contains" title="http://culturalis.org/oad#contains" class="namespace">http://culturalis.org/oad#contains</a></td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="http://culturalis.org/eac-cpf#Instance" title="http://culturalis.org/eac-cpf#Instance" class="namespace">http://culturalis.org/eac-cpf#Instance</a><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#FindingAid" title="http://culturalis.org/oad#FindingAid" class="namespace">http://culturalis.org/oad#FindingAid</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>OP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#isDescribedBy" id="isDescribedBy" class="namespace">http://culturalis.org/oad#isDescribedBy</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#isDescribedBy</td>
+</tr>
+<tr class="s">
+<td>version info</td><td>Questa propriet&agrave; &egrave; stata aggiunta nella versione del 2 agosto 2018</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Descritta da</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Is described by</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">Propriet&agrave; inversa di 'describes'.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">Inverse property of oad:describes</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#ArchivalResource" title="http://culturalis.org/oad#ArchivalResource" class="namespace">http://culturalis.org/oad#ArchivalResource</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#FindingAid" title="http://culturalis.org/oad#FindingAid" class="namespace">http://culturalis.org/oad#FindingAid</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>OP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#isEntryOf" id="isEntryOf" class="namespace">http://culturalis.org/oad#isEntryOf</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#isEntryOf</td>
+</tr>
+<tr class="s">
+<td>version info</td><td>Questa propriet&agrave; &egrave; stata aggiunta nella versione del 2 agosto 2018</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">&Egrave; scheda descrittiva di</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Is entry of</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; mette in relazione l'istanziazione di una risorsa archivistica alla risorsa archivistica oggetto della descrizione</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property links an instance to an archival resource</td>
+</tr>
+<tr class="s">
+<td valign="top">inverse property</td><td valign="top"><a href="#hasEntry" title="http://culturalis.org/oad#hasEntry" class="namespace">http://culturalis.org/oad#hasEntry</a></td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#ArchivalResource" title="http://culturalis.org/oad#ArchivalResource" class="namespace">http://culturalis.org/oad#ArchivalResource</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>OP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#isProducedBy" id="isProducedBy" class="namespace">http://culturalis.org/oad#isProducedBy</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#isProducedBy</td>
+</tr>
+<tr class="s">
+<td>version info</td><td>Questa propriet&agrave; &egrave; stata aggiunta nella versione del 2 agosto 2018</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">&Egrave; prodotta da</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Is produced by</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; collega la risorsa archivistica descritta alla entity responsabile della sua produzione</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property links the archival resource described to the entity responsible for the production of the resource</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#ArchivalResource" title="http://culturalis.org/oad#ArchivalResource" class="namespace">http://culturalis.org/oad#ArchivalResource</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://culturalis.org/eac-cpf#Entity" title="http://culturalis.org/eac-cpf#Entity" class="namespace">http://culturalis.org/eac-cpf#Entity</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>OP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#describes" id="describes" class="namespace">http://culturalis.org/oad#describes</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#describes</td>
+</tr>
+<tr class="s">
+<td>version info</td><td>Questa propriet&agrave; &egrave; stata aggiunta nella versione del 2 agosto 2018</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Descrive</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Describes</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; collega uno strumento di ricerca alla risorsa archivistica descritta</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">This functional property links a finding aid to the archival resource described</td>
+</tr>
+<tr class="s">
+<td valign="top">is domain of</td><td valign="top"><a href="#describes" title="http://culturalis.org/oad#describes" class="namespace">http://culturalis.org/oad#describes</a>
+<tr class="s">
+<td valign="top">has charateristics</td><td valign="top">functional</td>
+</tr>
+</td>
+</tr>
+<tr class="s">
+<td valign="top">inverse property</td><td valign="top"><a href="#isDescribedBy" title="http://culturalis.org/oad#isDescribedBy" class="namespace">http://culturalis.org/oad#isDescribedBy</a></td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#FindingAid" title="http://culturalis.org/oad#FindingAid" class="namespace">http://culturalis.org/oad#FindingAid</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="#ArchivalResource" title="http://culturalis.org/oad#ArchivalResource" class="namespace">http://culturalis.org/oad#ArchivalResource</a></td>
+</tr>
+<tr class="block">
+<td colspan="2">&nbsp;</td>
+</tr>
+</tbody>
+</table><h2 id="datatype">Datatype Properties</h2><table class="quick-reference datatype">
+<caption></caption>
+<colgroup>
+<col class="quick-ref-key">
+<col class="quick-ref-value">
+</colgroup>
+<tbody>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>DP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#accruals" id="accruals" class="namespace">http://culturalis.org/oad#accruals</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#accruals</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Incrementi previsti</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Accruals</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/accruals" title="http://lod.xdams.org/reload/oad/accruals" class="namespace">http://lod.xdams.org/reload/oad/accruals</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; rappresenta le informazioni relative agli incrementi previsti.</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property represents expected increase.</td>
+</tr>
+<tr class="s">
+<td valign="top">is defined by</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/isadOntology/isad_3.3.3_accruals" title="http://lod.xdams.org/reload/oad/isadOntology/isad_3.3.3_accruals" class="namespace">http://lod.xdams.org/reload/oad/isadOntology/isad_3.3.3_accruals</a></td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>DP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#appraisalDestructionAndSchedulingInformation" id="appraisalDestructionAndSchedulingInformation" class="namespace">http://culturalis.org/oad#appraisalDestructionAndSchedulingInformation</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#appraisalDestructionAndSchedulingInformation</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Procedure, tempi e criteri di valutazione e scarto</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Appraisal, destruction and scheduling information</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/appraisalDestructionAndSchedulingInformation" title="http://lod.xdams.org/reload/oad/appraisalDestructionAndSchedulingInformation" class="namespace">http://lod.xdams.org/reload/oad/appraisalDestructionAndSchedulingInformation</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; rappresenta le informazioni relative alle procedure, ai tempi e ai criteri di valutazione e scarto della risorsa archivistica descritta</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property represents appraisal, destruction and scheduling information</td>
+</tr>
+<tr class="s">
+<td valign="top">is defined by</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/isadOntology/isad_3.3.2_appraisal_destruction_and_scheduling_information" title="http://lod.xdams.org/reload/oad/isadOntology/isad_3.3.2_appraisal_destruction_and_scheduling_information" class="namespace">http://lod.xdams.org/reload/oad/isadOntology/isad_3.3.2_appraisal_destruction_and_scheduling_information</a></td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>DP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#archivalHistory" id="archivalHistory" class="namespace">http://culturalis.org/oad#archivalHistory</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#archivalHistory</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Storia archivistica</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Archival history</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/archivalHistory" title="http://lod.xdams.org/reload/oad/archivalHistory" class="namespace">http://lod.xdams.org/reload/oad/archivalHistory</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; rappresenta le informazioni relative alla storia archivistica della risorsa archivistica descritta</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property represents information about the history of the instance</td>
+</tr>
+<tr class="s">
+<td valign="top">is defined by</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/isadOntology/isad_3.2.3_archival_history" title="http://lod.xdams.org/reload/oad/isadOntology/isad_3.2.3_archival_history" class="namespace">http://lod.xdams.org/reload/oad/isadOntology/isad_3.2.3_archival_history</a></td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>DP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#conditionsGoverningAccess" id="conditionsGoverningAccess" class="namespace">http://culturalis.org/oad#conditionsGoverningAccess</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#conditionsGoverningAccess</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Condizioni che regolano l&rsquo;accesso</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Conditions governing access</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/conditionsGoverningAccess" title="http://lod.xdams.org/reload/oad/conditionsGoverningAccess" class="namespace">http://lod.xdams.org/reload/oad/conditionsGoverningAccess</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; rappresenta le informazioni relative alle condizioni che regolano l'accesso della risorsa archivistica descritta</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property represents condition governing access of the instance</td>
+</tr>
+<tr class="s">
+<td valign="top">is defined by</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/isadOntology/isad_3.4.1_conditions_governing_access" title="http://lod.xdams.org/reload/oad/isadOntology/isad_3.4.1_conditions_governing_access" class="namespace">http://lod.xdams.org/reload/oad/isadOntology/isad_3.4.1_conditions_governing_access</a></td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>DP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#conditionsGoverningReproduction" id="conditionsGoverningReproduction" class="namespace">http://culturalis.org/oad#conditionsGoverningReproduction</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#conditionsGoverningReproduction</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Condizioni che regolano la riproduzione</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Conditions governing reproduction</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/conditionsGoverningReproduction" title="http://lod.xdams.org/reload/oad/conditionsGoverningReproduction" class="namespace">http://lod.xdams.org/reload/oad/conditionsGoverningReproduction</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; rappresenta le informazioni relative alle condizioni che regolano la riproduzione della risorsa archivistica descritta</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property represents condition governing reproduction of the instance</td>
+</tr>
+<tr class="s">
+<td valign="top">is defined by</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/isadOntology/isad_3.4.2_conditions_governing_reproduction" title="http://lod.xdams.org/reload/oad/isadOntology/isad_3.4.2_conditions_governing_reproduction" class="namespace">http://lod.xdams.org/reload/oad/isadOntology/isad_3.4.2_conditions_governing_reproduction</a></td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>DP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#date" id="date" class="namespace">http://culturalis.org/oad#date</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#date</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Data/e</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Date(s)</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/date" title="http://lod.xdams.org/reload/oad/date" class="namespace">http://lod.xdams.org/reload/oad/date</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; rappresenta le informazioni relative alla datazione della risorsa archivistica descritta</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property represents a date</td>
+</tr>
+<tr class="s">
+<td valign="top">is defined by</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/isadOntology/isad_3.1.3_dates" title="http://lod.xdams.org/reload/oad/isadOntology/isad_3.1.3_dates" class="namespace">http://lod.xdams.org/reload/oad/isadOntology/isad_3.1.3_dates</a></td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>DP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#existenceAndLocationOfCopies" id="existenceAndLocationOfCopies" class="namespace">http://culturalis.org/oad#existenceAndLocationOfCopies</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#existenceAndLocationOfCopies</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Esistenza e localizzazione di copie</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Existence and location of copies</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/existenceAndLocationOfCopies" title="http://lod.xdams.org/reload/oad/existenceAndLocationOfCopies" class="namespace">http://lod.xdams.org/reload/oad/existenceAndLocationOfCopies</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; rappresenta le informazioni relative all'esistenza e alla localizzazione di copie della risorsa archivistica descritta</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property represents the existence and location of copies</td>
+</tr>
+<tr class="s">
+<td valign="top">is defined by</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/isadOntology/isad_3.5.2_existence_and_location_of_copies" title="http://lod.xdams.org/reload/oad/isadOntology/isad_3.5.2_existence_and_location_of_copies" class="namespace">http://lod.xdams.org/reload/oad/isadOntology/isad_3.5.2_existence_and_location_of_copies</a></td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>DP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#existenceAndLocationOfOriginals" id="existenceAndLocationOfOriginals" class="namespace">http://culturalis.org/oad#existenceAndLocationOfOriginals</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#existenceAndLocationOfOriginals</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Esistenza e localizzazione degli originali</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Existence and location of originals</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/existenceAndLocationOfOriginals" title="http://lod.xdams.org/reload/oad/existenceAndLocationOfOriginals" class="namespace">http://lod.xdams.org/reload/oad/existenceAndLocationOfOriginals</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; rappresenta le informazioni relative all'esistenza e alla localizzazione degli originali della risorsa archivistica descritta</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property represents the existence and location of originals</td>
+</tr>
+<tr class="s">
+<td valign="top">is defined by</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/isadOntology/isad_3.5.1_existence_and_location_of_originals" title="http://lod.xdams.org/reload/oad/isadOntology/isad_3.5.1_existence_and_location_of_originals" class="namespace">http://lod.xdams.org/reload/oad/isadOntology/isad_3.5.1_existence_and_location_of_originals</a></td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>DP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#immediateSourceOfAcquisitionOrTransfer" id="immediateSourceOfAcquisitionOrTransfer" class="namespace">http://culturalis.org/oad#immediateSourceOfAcquisitionOrTransfer</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#immediateSourceOfAcquisitionOrTransfer</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Modalit&agrave; di acquisizione o versamento</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Immediate source of acquisition or transfer</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/immediateSourceOfAcquisitionOrTransfer" title="http://lod.xdams.org/reload/oad/immediateSourceOfAcquisitionOrTransfer" class="namespace">http://lod.xdams.org/reload/oad/immediateSourceOfAcquisitionOrTransfer</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; rappresenta le informazioni relative alla modalit&agrave; di acquisizione o versamento della risorsa archivistica descritta</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property represents an immediate source of acquisition or transfer</td>
+</tr>
+<tr class="s">
+<td valign="top">is defined by</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/isadOntology/isad_3.2.4_immediate_source_of_acquisition_or_transfer" title="http://lod.xdams.org/reload/oad/isadOntology/isad_3.2.4_immediate_source_of_acquisition_or_transfer" class="namespace">http://lod.xdams.org/reload/oad/isadOntology/isad_3.2.4_immediate_source_of_acquisition_or_transfer</a></td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>DP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#note" id="note" class="namespace">http://culturalis.org/oad#note</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#note</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Note</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Note</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/note" title="http://lod.xdams.org/reload/oad/note" class="namespace">http://lod.xdams.org/reload/oad/note</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; rappresenta le informazioni relative alle note della risorsa archivistica descritta</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property represents information that cannot be accommodated in any of the other properties.</td>
+</tr>
+<tr class="s">
+<td valign="top">is defined by</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/isadOntology/isad_3.6.1_note" title="http://lod.xdams.org/reload/oad/isadOntology/isad_3.6.1_note" class="namespace">http://lod.xdams.org/reload/oad/isadOntology/isad_3.6.1_note</a></td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>DP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#otherlevel" id="otherlevel" class="namespace">http://culturalis.org/oad#otherlevel</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#otherlevel</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Altro livello di descrizione</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Other Level of description</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/otherlevel" title="http://lod.xdams.org/reload/oad/otherlevel" class="namespace">http://lod.xdams.org/reload/oad/otherlevel</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; rappresenta le informazioni relative ad un altro livello di descrizione della risorsa archivistica descritta</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property represents an otherlevel of description</td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>DP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#physicalCharacteristicsAndTechnicalRequirements" id="physicalCharacteristicsAndTechnicalRequirements" class="namespace">http://culturalis.org/oad#physicalCharacteristicsAndTechnicalRequirements</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#physicalCharacteristicsAndTechnicalRequirements</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Caratteristiche materiali e requisiti tecnici</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Physical characteristics and technical requirements</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/physicalCharacteristicsAndTechnicalRequirements" title="http://lod.xdams.org/reload/oad/physicalCharacteristicsAndTechnicalRequirements" class="namespace">http://lod.xdams.org/reload/oad/physicalCharacteristicsAndTechnicalRequirements</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; rappresenta le informazioni relative alle caratteristiche materiali e ai requisiti tecnici della risorsa archivistica descritta</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property represents physical characteristics and technical requirements</td>
+</tr>
+<tr class="s">
+<td valign="top">is defined by</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/isadOntology/isad_3.4.4_physical_characteristics_and_technical_requirements" title="http://lod.xdams.org/reload/oad/isadOntology/isad_3.4.4_physical_characteristics_and_technical_requirements" class="namespace">http://lod.xdams.org/reload/oad/isadOntology/isad_3.4.4_physical_characteristics_and_technical_requirements</a></td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>DP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#referenceCode" id="referenceCode" class="namespace">http://culturalis.org/oad#referenceCode</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#referenceCode</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Segnatura o codice identificativo</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Reference code</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/referenceCode" title="http://lod.xdams.org/reload/oad/referenceCode" class="namespace">http://lod.xdams.org/reload/oad/referenceCode</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; rappresenta le informazioni relative al codice identificativo riportato in una scheda descrittiva</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property represents an identification code of the described resource</td>
+</tr>
+<tr class="s">
+<td valign="top">is defined by</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/isadOntology/isad_3.1.1_reference_codes" title="http://lod.xdams.org/reload/oad/isadOntology/isad_3.1.1_reference_codes" class="namespace">http://lod.xdams.org/reload/oad/isadOntology/isad_3.1.1_reference_codes</a></td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>DP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#scopeAndContent" id="scopeAndContent" class="namespace">http://culturalis.org/oad#scopeAndContent</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#scopeAndContent</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Ambiti e contenuto</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Scope and content</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/scopeAndContent" title="http://lod.xdams.org/reload/oad/scopeAndContent" class="namespace">http://lod.xdams.org/reload/oad/scopeAndContent</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; rappresenta le informazioni relative ad ambiti e contenuto della risorsa archivistica descritta</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property represents the scope and the content of the described resource</td>
+</tr>
+<tr class="s">
+<td valign="top">is defined by</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/isadOntology/isad_3.3.1_scope_and_content" title="http://lod.xdams.org/reload/oad/isadOntology/isad_3.3.1_scope_and_content" class="namespace">http://lod.xdams.org/reload/oad/isadOntology/isad_3.3.1_scope_and_content</a></td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>DP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#systemOfArrangement" id="systemOfArrangement" class="namespace">http://culturalis.org/oad#systemOfArrangement</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#systemOfArrangement</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Criteri di ordinamento</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">System of arrangement</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/systemOfArrangement" title="http://lod.xdams.org/reload/oad/systemOfArrangement" class="namespace">http://lod.xdams.org/reload/oad/systemOfArrangement</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; rappresenta le informazioni relative ai criteri di ordinamento della risorsa archivistica descritta</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property represents the internal structure, the order and/or the system of classification of the described resource</td>
+</tr>
+<tr class="s">
+<td valign="top">is defined by</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/isadOntology/isad_3.3.4_system_of_arrangement" title="http://lod.xdams.org/reload/oad/isadOntology/isad_3.3.4_system_of_arrangement" class="namespace">http://lod.xdams.org/reload/oad/isadOntology/isad_3.3.4_system_of_arrangement</a></td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr>
+<td class="th" colspan="1">
+<div align="left">
+<B>DP</B>
+</div>
+</td><td class="th" colspan="2"><a href="" title="http://culturalis.org/oad#title" id="title" class="namespace">http://culturalis.org/oad#title</a></td>
+</tr>
+<tr class="s">
+<td valign="top">IRI</td><td valign="top">http://culturalis.org/oad#title</td>
+</tr>
+<tr class="s">
+<td valign="top">label (it)</td><td valign="top">Denominazione o titolo</td>
+</tr>
+<tr class="s">
+<td valign="top">label (en)</td><td valign="top">Title</td>
+</tr>
+<tr class="s">
+<td valign="top">backward compatible with</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/title" title="http://lod.xdams.org/reload/oad/title" class="namespace">http://lod.xdams.org/reload/oad/title</a></td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (it)</td><td valign="top">La propriet&agrave; rappresenta le informazioni relative alla denominazione riportata in una scheda descrittiva</td>
+</tr>
+<tr class="s">
+<td valign="top">usage note (en)</td><td valign="top">The property represents the name shown in a description</td>
+</tr>
+<tr class="s">
+<td valign="top">is defined by</td><td valign="top"><a href="http://lod.xdams.org/reload/oad/isadOntology/isad_3.1.2_title" title="http://lod.xdams.org/reload/oad/isadOntology/isad_3.1.2_title" class="namespace">http://lod.xdams.org/reload/oad/isadOntology/isad_3.1.2_title</a></td>
+</tr>
+<tr class="s">
+<td valign="top">domain</td><td valign="top"><a href="#Instance" title="http://culturalis.org/oad#Instance" class="namespace">http://culturalis.org/oad#Instance</a></td>
+</tr>
+<tr class="s">
+<td valign="top">range</td><td valign="top"><a href="http://www.w3.org/2001/XMLSchema#string" title="http://www.w3.org/2001/XMLSchema#string" class="namespace">http://www.w3.org/2001/XMLSchema#string</a></td>
+</tr>
+<tr class="block">
+<td colspan="2">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+			</article>
+
+			<!-- 			<aside>
+				<h3>aside</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.</p>
+			</aside> -->
+
+		</div>
+		<!-- #main -->
+		<div class="scrollup">
+			<a href="#top">top</a>
+		</div>
+	</div>
+	<!-- #main-container -->
+
+	<div class="footer-container">
+		<footer class="wrapper">
+			
+			<p class="note">
+				build using owlHtmlGenerator by <a href="http://regesta.com">regesta.exe</a>
+			</p>
+		</footer>
+	</div>
+
+<!-- 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>
+		window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+	</script>
+ -->
+ 	<script src="js/vendor/jquery-1.11.2.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
+	<script>
+		(function(b, o, i, l, e, r) {
+			b.GoogleAnalyticsObject = l;
+			b[l] || (b[l] = function() {
+				(b[l].q = b[l].q || []).push(arguments)
+			});
+			b[l].l = +new Date;
+			e = o.createElement(i);
+			r = o.getElementsByTagName(i)[0];
+			e.src = '//www.google-analytics.com/analytics.js';
+			r.parentNode.insertBefore(e, r)
+		}(window, document, 'script', 'ga'));
+		ga('create', 'UA-XXXXX-X', 'auto');
+		ga('send', 'pageview');
+	</script>-->
+<script type="text/javascript" id="cookiebanner" src="http://media.regesta.com/dm_0/REGESTA/cookiebanner.js"></script></body>
+</html>

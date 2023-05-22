@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:dc="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:ivoasem="http://www.ivoa.net/rdf/ivoasem#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+   xmlns="http://www.ivoa.net/rdf/messenger#">
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+  <owl:Ontology rdf:about="http://www.ivoa.net/rdf/messenger">
+    <dc:created>2020-08-26</dc:created>
+    <dc:creator>
+      <rdf:Description>
+        <foaf:name>Demleitner, M.</foaf:name>
+      </rdf:Description>
+    </dc:creator>
+    <dc:creator>
+      <rdf:Description>
+        <foaf:name>Plante, R.</foaf:name>
+      </rdf:Description>
+    </dc:creator>
+    <dc:description>A vocabulary of particles used for observations in astronomy.
+This list started its existence as the controlled vocabulary for
+VODataService's vs:Waveband type; the machine-readable identifiers are in
+upper case for backwards compatibility.</dc:description>
+    <dc:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
+    <dc:title xml:lang="en">Messengers</dc:title>
+    <ivoasem:vocflavour>RDF Class</ivoasem:vocflavour>
+    <rdfs:label xml:lang="en">Messengers</rdfs:label>
+  </owl:Ontology>
+  <rdfs:Class rdf:about="http://www.ivoa.net/rdf/messenger#EUV">
+    <rdfs:comment>      Photon with an energy between 12 eV and 120 eV</rdfs:comment>
+    <rdfs:label>Extreme UV</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ivoa.net/rdf/messenger#UV"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.ivoa.net/rdf/messenger#Gamma-ray">
+    <rdfs:comment>       Photon with an energy above 120 keV</rdfs:comment>
+    <rdfs:label>Gamma Ray</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ivoa.net/rdf/messenger#Photon"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.ivoa.net/rdf/messenger#Infrared">
+    <rdfs:comment>        Photon with a wavelength between 1 µm and 100 µm</rdfs:comment>
+    <rdfs:label>Infrared</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ivoa.net/rdf/messenger#Photon"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.ivoa.net/rdf/messenger#Millimeter">
+    <rdfs:comment>      Photon with a wavelength between 0.1 mm and 10 mm (or 30 GHz&lt;=ν&lt;300 GHz)</rdfs:comment>
+    <rdfs:label>Millimeter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ivoa.net/rdf/messenger#Photon"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.ivoa.net/rdf/messenger#Neutrino">
+    <rdfs:comment>        This term comprises all generations of neutrinos (electron, µ, τ), and particles as well as antiparticles.</rdfs:comment>
+    <rdfs:label>Neutrino</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.ivoa.net/rdf/messenger#Optical">
+    <rdfs:comment>         Photon with a wavelength between 300 nm and 1000 nm</rdfs:comment>
+    <rdfs:label>Optical</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ivoa.net/rdf/messenger#Photon"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.ivoa.net/rdf/messenger#Photon">
+    <rdfs:comment>          Carrier particles of the electromagnetic interaction</rdfs:comment>
+    <rdfs:label>Photon</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.ivoa.net/rdf/messenger#Radio">
+    <rdfs:comment>           Photon with a wavelength longer than 10 mm (or ν&lt;30 GHz)</rdfs:comment>
+    <rdfs:label>Radio</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ivoa.net/rdf/messenger#Photon"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.ivoa.net/rdf/messenger#UV">
+    <rdfs:comment>     Photon with a wavelength between 100 nm and 300 nm</rdfs:comment>
+    <rdfs:label>Ultraviolet</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ivoa.net/rdf/messenger#Photon"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.ivoa.net/rdf/messenger#X-ray">
+    <rdfs:comment>           Photon with an energy between 120 eV and 120 keV</rdfs:comment>
+    <rdfs:label>X-Ray</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.ivoa.net/rdf/messenger#Photon"/>
+  </rdfs:Class>
+</rdf:RDF>

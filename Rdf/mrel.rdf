@@ -1,0 +1,1374 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:bf="http://id.loc.gov/ontologies/bibframe/" xmlns:bflc="http://id.loc.gov/ontologies/bflc/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#" xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  <madsrdf:MADSScheme rdf:about="http://id.loc.gov/vocabulary/relators" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/vdg">
+	<madsrdf:authoritativeLabel>Videographer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ctb">
+	<madsrdf:authoritativeLabel>Contributor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/wit">
+	<madsrdf:authoritativeLabel>Witness</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/bkp">
+	<madsrdf:authoritativeLabel>Book producer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cll">
+	<madsrdf:authoritativeLabel>Calligrapher</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/prc">
+	<madsrdf:authoritativeLabel>Process contact</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/dtm">
+	<madsrdf:authoritativeLabel>Data manager</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ptf">
+	<madsrdf:authoritativeLabel>Plaintiff</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/sgd">
+	<madsrdf:authoritativeLabel>Stage director</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/org">
+	<madsrdf:authoritativeLabel>Originator</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/aqt">
+	<madsrdf:authoritativeLabel>Author in quotations or text abstracts</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/dgc">
+	<madsrdf:authoritativeLabel>Degree committee member</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ins">
+	<madsrdf:authoritativeLabel>Inscriber</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/rst">
+	<madsrdf:authoritativeLabel>Respondent-appellant</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/med">
+	<madsrdf:authoritativeLabel>Medium</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/len">
+	<madsrdf:authoritativeLabel>Lender</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/csl">
+	<madsrdf:authoritativeLabel>Consultant</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ann">
+	<madsrdf:authoritativeLabel>Annotator</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cmp">
+	<madsrdf:authoritativeLabel>Composer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/sds">
+	<madsrdf:authoritativeLabel>Sound designer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/oth">
+	<madsrdf:authoritativeLabel>Other</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/pbl">
+	<madsrdf:authoritativeLabel>Publisher</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/rth">
+	<madsrdf:authoritativeLabel>Research team head</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/dgg">
+	<madsrdf:authoritativeLabel>Degree granting institution</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/hst">
+	<madsrdf:authoritativeLabel>Host</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/pro">
+	<madsrdf:authoritativeLabel>Producer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/std">
+	<madsrdf:authoritativeLabel>Set designer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/app">
+	<madsrdf:authoritativeLabel>Applicant</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cor">
+	<madsrdf:authoritativeLabel>Collection registrar</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ptt">
+	<madsrdf:authoritativeLabel>Plaintiff-appellant</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/pra">
+	<madsrdf:authoritativeLabel>Praeses</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/lee">
+	<madsrdf:authoritativeLabel>Libelee-appellee</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/brd">
+	<madsrdf:authoritativeLabel>Broadcaster</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cou">
+	<madsrdf:authoritativeLabel>Court governed</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/rtm">
+	<madsrdf:authoritativeLabel>Research team member</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/trc">
+	<madsrdf:authoritativeLabel>Transcriber</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/pdr">
+	<madsrdf:authoritativeLabel>Project director</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/rpy">
+	<madsrdf:authoritativeLabel>Responsible party</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ard">
+	<madsrdf:authoritativeLabel>Artistic director</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/adi">
+	<madsrdf:authoritativeLabel>Art director</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ths">
+	<madsrdf:authoritativeLabel>Thesis advisor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/dnr">
+	<madsrdf:authoritativeLabel>Donor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/lie">
+	<madsrdf:authoritativeLabel>Libelant-appellee</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/fmp">
+	<madsrdf:authoritativeLabel>Film producer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/spk">
+	<madsrdf:authoritativeLabel>Speaker</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/elg">
+	<madsrdf:authoritativeLabel>Electrician</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/com">
+	<madsrdf:authoritativeLabel>Compiler</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/act">
+	<madsrdf:authoritativeLabel>Actor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/gis">
+	<madsrdf:authoritativeLabel>Geographic information specialist</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/rce">
+	<madsrdf:authoritativeLabel>Recording engineer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/clt">
+	<madsrdf:authoritativeLabel>Collotyper</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/prv">
+	<madsrdf:authoritativeLabel>Provider</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/wde">
+	<madsrdf:authoritativeLabel>Wood engraver</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/pta">
+	<madsrdf:authoritativeLabel>Patent applicant</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/crp">
+	<madsrdf:authoritativeLabel>Correspondent</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/res">
+	<madsrdf:authoritativeLabel>Researcher</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/rev">
+	<madsrdf:authoritativeLabel>Reviewer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/dsr">
+	<madsrdf:authoritativeLabel>Designer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/mod">
+	<madsrdf:authoritativeLabel>Moderator</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/sgn">
+	<madsrdf:authoritativeLabel>Signer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/his">
+	<madsrdf:authoritativeLabel>Host institution</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/prt">
+	<madsrdf:authoritativeLabel>Printer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/pfr">
+	<madsrdf:authoritativeLabel>Proofreader</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/eng">
+	<madsrdf:authoritativeLabel>Engineer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/anm">
+	<madsrdf:authoritativeLabel>Animator</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/rdd">
+	<madsrdf:authoritativeLabel>Radio director</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/bnd">
+	<madsrdf:authoritativeLabel>Binder</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/dub">
+	<madsrdf:authoritativeLabel>Dubious author</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/vac">
+	<madsrdf:authoritativeLabel>Voice actor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/bjd">
+	<madsrdf:authoritativeLabel>Bookjacket designer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/mus">
+	<madsrdf:authoritativeLabel>Musician</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/dto">
+	<madsrdf:authoritativeLabel>Dedicator</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/pte">
+	<madsrdf:authoritativeLabel>Plaintiff-appellee</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/prm">
+	<madsrdf:authoritativeLabel>Printmaker</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/fac">
+	<madsrdf:authoritativeLabel>Facsimilist</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/nrt">
+	<madsrdf:authoritativeLabel>Narrator</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ltg">
+	<madsrdf:authoritativeLabel>Lithographer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/stl">
+	<madsrdf:authoritativeLabel>Storyteller</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/pbd">
+	<madsrdf:authoritativeLabel>Publisher director</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cos">
+	<madsrdf:authoritativeLabel>Contestant</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/hnr">
+	<madsrdf:authoritativeLabel>Honoree</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cph">
+	<madsrdf:authoritativeLabel>Copyright holder</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/dgs">
+	<madsrdf:authoritativeLabel>Degree supervisor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cst">
+	<madsrdf:authoritativeLabel>Costume designer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/fmo">
+	<madsrdf:authoritativeLabel>Former owner</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/lil">
+	<madsrdf:authoritativeLabel>Libelant</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/frg">
+	<madsrdf:authoritativeLabel>Forger</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/pmn">
+	<madsrdf:authoritativeLabel>Production manager</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cpe">
+	<madsrdf:authoritativeLabel>Complainant-appellee</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/con">
+	<madsrdf:authoritativeLabel>Conservator</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/pup">
+	<madsrdf:authoritativeLabel>Publication place</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/tyg">
+	<madsrdf:authoritativeLabel>Typographer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ctg">
+	<madsrdf:authoritativeLabel>Cartographer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/scr">
+	<madsrdf:authoritativeLabel>Scribe</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/wac">
+	<madsrdf:authoritativeLabel>Writer of added commentary</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/tyd">
+	<madsrdf:authoritativeLabel>Type designer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/stn">
+	<madsrdf:authoritativeLabel>Standards body</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/lbt">
+	<madsrdf:authoritativeLabel>Librettist</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cpc">
+	<madsrdf:authoritativeLabel>Copyright claimant</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/fld">
+	<madsrdf:authoritativeLabel>Field director</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/art">
+	<madsrdf:authoritativeLabel>Artist</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/dfd">
+	<madsrdf:authoritativeLabel>Defendant</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/scl">
+	<madsrdf:authoritativeLabel>Sculptor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/inv">
+	<madsrdf:authoritativeLabel>Inventor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/tld">
+	<madsrdf:authoritativeLabel>Television director</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ctr">
+	<madsrdf:authoritativeLabel>Contractor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/rcd">
+	<madsrdf:authoritativeLabel>Recordist</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cli">
+	<madsrdf:authoritativeLabel>Client</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/win">
+	<madsrdf:authoritativeLabel>Writer of introduction</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/wdc">
+	<madsrdf:authoritativeLabel>Woodcutter</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/spn">
+	<madsrdf:authoritativeLabel>Sponsor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ren">
+	<madsrdf:authoritativeLabel>Renderer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/rps">
+	<madsrdf:authoritativeLabel>Repository</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ant">
+	<madsrdf:authoritativeLabel>Bibliographic antecedent</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cot">
+	<madsrdf:authoritativeLabel>Contestant-appellant</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/osp">
+	<madsrdf:authoritativeLabel>Onscreen presenter</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cts">
+	<madsrdf:authoritativeLabel>Contestee</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ppt">
+	<madsrdf:authoritativeLabel>Puppeteer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/elt">
+	<madsrdf:authoritativeLabel>Electrotyper</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/rse">
+	<madsrdf:authoritativeLabel>Respondent-appellee</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/rsg">
+	<madsrdf:authoritativeLabel>Restager</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/srv">
+	<madsrdf:authoritativeLabel>Surveyor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/lgd">
+	<madsrdf:authoritativeLabel>Lighting designer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/sec">
+	<madsrdf:authoritativeLabel>Secretary</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/dst">
+	<madsrdf:authoritativeLabel>Distributor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/fnd">
+	<madsrdf:authoritativeLabel>Funder</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/rbr">
+	<madsrdf:authoritativeLabel>Rubricator</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ppm">
+	<madsrdf:authoritativeLabel>Papermaker</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cmm">
+	<madsrdf:authoritativeLabel>Commentator</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cpt">
+	<madsrdf:authoritativeLabel>Complainant-appellant</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/msd">
+	<madsrdf:authoritativeLabel>Musical director</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/drt">
+	<madsrdf:authoritativeLabel>Director</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/sce">
+	<madsrdf:authoritativeLabel>Scenarist</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/mdc">
+	<madsrdf:authoritativeLabel>Metadata contact</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/lit">
+	<madsrdf:authoritativeLabel>Libelant-appellant</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/let">
+	<madsrdf:authoritativeLabel>Libelee-appellant</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/clr">
+	<madsrdf:authoritativeLabel>Colorist</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/mrb">
+	<madsrdf:authoritativeLabel>Marbler</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/sht">
+	<madsrdf:authoritativeLabel>Supporting host</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/dtc">
+	<madsrdf:authoritativeLabel>Data contributor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/sll">
+	<madsrdf:authoritativeLabel>Seller</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/dln">
+	<madsrdf:authoritativeLabel>Delineator</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cns">
+	<madsrdf:authoritativeLabel>Censor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/apl">
+	<madsrdf:authoritativeLabel>Appellant</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/coe">
+	<madsrdf:authoritativeLabel>Contestant-appellee</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ato">
+	<madsrdf:authoritativeLabel>Autographer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/flm">
+	<madsrdf:authoritativeLabel>Film editor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/lsa">
+	<madsrdf:authoritativeLabel>Landscape architect</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cmt">
+	<madsrdf:authoritativeLabel>Compositor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/uvp">
+	<madsrdf:authoritativeLabel>University place</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/att">
+	<madsrdf:authoritativeLabel>Attributed name</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/chr">
+	<madsrdf:authoritativeLabel>Choreographer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/itr">
+	<madsrdf:authoritativeLabel>Instrumentalist</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/lse">
+	<madsrdf:authoritativeLabel>Licensee</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/stm">
+	<madsrdf:authoritativeLabel>Stage manager</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/rpc">
+	<madsrdf:authoritativeLabel>Radio producer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/pht">
+	<madsrdf:authoritativeLabel>Photographer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/anl">
+	<madsrdf:authoritativeLabel>Analyst</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cpl">
+	<madsrdf:authoritativeLabel>Complainant</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/spy">
+	<madsrdf:authoritativeLabel>Second party</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/sad">
+	<madsrdf:authoritativeLabel>Scientific advisor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cte">
+	<madsrdf:authoritativeLabel>Contestee-appellee</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/red">
+	<madsrdf:authoritativeLabel>Redaktor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/wam">
+	<madsrdf:authoritativeLabel>Writer of accompanying material</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/fpy">
+	<madsrdf:authoritativeLabel>First party</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/bkd">
+	<madsrdf:authoritativeLabel>Book designer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ilu">
+	<madsrdf:authoritativeLabel>Illuminator</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/dbp">
+	<madsrdf:authoritativeLabel>Distribution place</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/pad">
+	<madsrdf:authoritativeLabel>Place of address</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ctt">
+	<madsrdf:authoritativeLabel>Contestee-appellant</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/aus">
+	<madsrdf:authoritativeLabel>Screenwriter</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/csp">
+	<madsrdf:authoritativeLabel>Consultant to a project</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/edm">
+	<madsrdf:authoritativeLabel>Editor of moving image work</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cwt">
+	<madsrdf:authoritativeLabel>Commentator for written text</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/prf">
+	<madsrdf:authoritativeLabel>Performer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/wal">
+	<madsrdf:authoritativeLabel>Writer of added lyrics</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/lbr">
+	<madsrdf:authoritativeLabel>Laboratory</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/asn">
+	<madsrdf:authoritativeLabel>Associated name</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/adp">
+	<madsrdf:authoritativeLabel>Adapter</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/trl">
+	<madsrdf:authoritativeLabel>Translator</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/dft">
+	<madsrdf:authoritativeLabel>Defendant-appellant</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/edt">
+	<madsrdf:authoritativeLabel>Editor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/brl">
+	<madsrdf:authoritativeLabel>Braille embosser</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ccp">
+	<madsrdf:authoritativeLabel>Conceptor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/jud">
+	<madsrdf:authoritativeLabel>Judge</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ivr">
+	<madsrdf:authoritativeLabel>Interviewer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/auc">
+	<madsrdf:authoritativeLabel>Auctioneer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/drm">
+	<madsrdf:authoritativeLabel>Draftsman</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/opn">
+	<madsrdf:authoritativeLabel>Opponent</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/bpd">
+	<madsrdf:authoritativeLabel>Bookplate designer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/dte">
+	<madsrdf:authoritativeLabel>Dedicatee</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/aud">
+	<madsrdf:authoritativeLabel>Author of dialog</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/rsp">
+	<madsrdf:authoritativeLabel>Respondent</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/edc">
+	<madsrdf:authoritativeLabel>Editor of compilation</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/mcp">
+	<madsrdf:authoritativeLabel>Music copyist</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/str">
+	<madsrdf:authoritativeLabel>Stereotyper</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/asg">
+	<madsrdf:authoritativeLabel>Assignee</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/lel">
+	<madsrdf:authoritativeLabel>Libelee</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/mrk">
+	<madsrdf:authoritativeLabel>Markup editor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/crt">
+	<madsrdf:authoritativeLabel>Court reporter</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ill">
+	<madsrdf:authoritativeLabel>Illustrator</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ape">
+	<madsrdf:authoritativeLabel>Appellee</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/prs">
+	<madsrdf:authoritativeLabel>Production designer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/pth">
+	<madsrdf:authoritativeLabel>Patent holder</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/orm">
+	<madsrdf:authoritativeLabel>Organizer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/bsl">
+	<madsrdf:authoritativeLabel>Bookseller</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/bdd">
+	<madsrdf:authoritativeLabel>Binding designer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/tlp">
+	<madsrdf:authoritativeLabel>Television producer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/tch">
+	<madsrdf:authoritativeLabel>Teacher</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/jug">
+	<madsrdf:authoritativeLabel>Jurisdiction governed</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/pma">
+	<madsrdf:authoritativeLabel>Permitting agency</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/plt">
+	<madsrdf:authoritativeLabel>Platemaker</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/wat">
+	<madsrdf:authoritativeLabel>Writer of added text</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/isb">
+	<madsrdf:authoritativeLabel>Issuing body</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/aui">
+	<madsrdf:authoritativeLabel>Author of introduction, etc.</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/dpt">
+	<madsrdf:authoritativeLabel>Depositor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/prn">
+	<madsrdf:authoritativeLabel>Production company</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/prg">
+	<madsrdf:authoritativeLabel>Programmer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/lyr">
+	<madsrdf:authoritativeLabel>Lyricist</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cre">
+	<madsrdf:authoritativeLabel>Creator</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cas">
+	<madsrdf:authoritativeLabel>Caster</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/wst">
+	<madsrdf:authoritativeLabel>Writer of supplementary textual content</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cov">
+	<madsrdf:authoritativeLabel>Cover designer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/pop">
+	<madsrdf:authoritativeLabel>Printer of plates</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/dnc">
+	<madsrdf:authoritativeLabel>Dancer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/prp">
+	<madsrdf:authoritativeLabel>Production place</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/mtk">
+	<madsrdf:authoritativeLabel>Minute taker</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/evp">
+	<madsrdf:authoritativeLabel>Event place</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/aut">
+	<madsrdf:authoritativeLabel>Author</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/mon">
+	<madsrdf:authoritativeLabel>Monitor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/mfp">
+	<madsrdf:authoritativeLabel>Manufacture place</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/pat">
+	<madsrdf:authoritativeLabel>Patron</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/abr">
+	<madsrdf:authoritativeLabel>Abridger</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/acp">
+	<madsrdf:authoritativeLabel>Art copyist</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cnd">
+	<madsrdf:authoritativeLabel>Conductor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/etr">
+	<madsrdf:authoritativeLabel>Etcher</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/fds">
+	<madsrdf:authoritativeLabel>Film distributor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/mte">
+	<madsrdf:authoritativeLabel>Metal engraver</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/dfe">
+	<madsrdf:authoritativeLabel>Defendant-appellee</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/rpt">
+	<madsrdf:authoritativeLabel>Reporter</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/enj">
+	<madsrdf:authoritativeLabel>Enacting jurisdiction</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/crr">
+	<madsrdf:authoritativeLabel>Corrector</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/sng">
+	<madsrdf:authoritativeLabel>Singer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/arr">
+	<madsrdf:authoritativeLabel>Arranger</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/stg">
+	<madsrdf:authoritativeLabel>Setting</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/exp">
+	<madsrdf:authoritativeLabel>Expert</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/dis">
+	<madsrdf:authoritativeLabel>Dissertant</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/aft">
+	<madsrdf:authoritativeLabel>Author of afterword, colophon, etc.</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/fmd">
+	<madsrdf:authoritativeLabel>Film director</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/rcp">
+	<madsrdf:authoritativeLabel>Addressee</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/pre">
+	<madsrdf:authoritativeLabel>Presenter</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/wpr">
+	<madsrdf:authoritativeLabel>Writer of preface</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/blw">
+	<madsrdf:authoritativeLabel>Blurb writer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cng">
+	<madsrdf:authoritativeLabel>Cinematographer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ive">
+	<madsrdf:authoritativeLabel>Interviewee</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/pan">
+	<madsrdf:authoritativeLabel>Panelist</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/lso">
+	<madsrdf:authoritativeLabel>Licensor</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/mfr">
+	<madsrdf:authoritativeLabel>Manufacturer</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/arc">
+	<madsrdf:authoritativeLabel>Architect</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/dpc">
+	<madsrdf:authoritativeLabel>Depicted</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ldr">
+	<madsrdf:authoritativeLabel>Laboratory director</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/led">
+	<madsrdf:authoritativeLabel>Lead</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/rsr">
+	<madsrdf:authoritativeLabel>Restorationist</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/cur">
+	<madsrdf:authoritativeLabel>Curator</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/tcd">
+	<madsrdf:authoritativeLabel>Technical director</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/egr">
+	<madsrdf:authoritativeLabel>Engraver</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/own">
+	<madsrdf:authoritativeLabel>Owner</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/col">
+	<madsrdf:authoritativeLabel>Collector</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/fmk">
+	<madsrdf:authoritativeLabel>Filmmaker</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <madsrdf:hasMADSSchemeMember>
+      <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/prd">
+	<madsrdf:authoritativeLabel>Production personnel</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </madsrdf:hasMADSSchemeMember>
+    <rdfs:label xml:lang="en">Relators</rdfs:label>
+    <rdfs:comment rdf:parseType="Literal" xml:lang="en" xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
+    <madsrdf:definitionNote xml:lang="en">Relator terms and their associated codes designate the relationship between an agent and a bibliographic resource.</madsrdf:definitionNote>
+    <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+	<ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</ri:recordStatus>
+	<ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-02T00:00:00</ri:recordChangeDate>
+	<ri:recordContentSource rdf:resource="https://id.loc.gov/vocabulary/organizations/dlc"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <skos:definition xml:lang="en">Relator terms and their associated codes designate the relationship between an agent and a bibliographic resource.</skos:definition>
+    <skos:changeNote>
+      <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+	<cs:subjectOfChange rdf:resource="http://id.loc.gov/vocabulary/relators"/>
+	<cs:creatorName rdf:resource="https://id.loc.gov/vocabulary/organizations/dlc"/>
+	<cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-02T00:00:00</cs:createdDate>
+	<cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</cs:changeReason>
+      </cs:ChangeSet>
+    </skos:changeNote>
+  </madsrdf:MADSScheme>
+</rdf:RDF>

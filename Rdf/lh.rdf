@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:ns0="http://purl.org/vocab/vann/"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+  <owl:Ontology rdf:about="https://w3id.org/legalhtml/ov">
+    <owl:versionIRI rdf:resource="https://w3id.org/legalhtml/ov-1.0.0-rc.1"/>
+    <owl:imports rdf:resource="http://data.europa.eu/eli/ontology#"/>
+    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:versionInfo>1.0.0-rc.1</owl:versionInfo>
+    <ns0:preferredNamespacePrefix>lh</ns0:preferredNamespacePrefix>
+    <dc:license rdf:resource="http://joinup.ec.europa.eu/software/page/eupl"/>
+    <dc:creator rdf:resource="https://art.uniroma2.it/stellato"/>
+    <dc:creator rdf:resource="https://art.uniroma2.it/fiorelli"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-12-18</dc:issued>
+    <dc:description xml:lang="en">An ontology for metadata about legal texts represented using the LegalHTML format</dc:description>
+    <dc:title xml:lang="en">LegalHTML Ontology</dc:title>
+    <ns0:preferredNamespaceUri>https://w3id.org/legalhtml/ov#</ns0:preferredNamespaceUri>
+  </owl:Ontology>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#actingEntity">
+    <rdfs:label xml:lang="en">acting entity</rdfs:label>
+    <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#Agent"/>
+    <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+    <skos:definition xml:lang="en">Each of the acting entities of a legal resource</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#addressee">
+    <rdfs:label xml:lang="en">addressee</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+    <skos:definition xml:lang="en">A person or entity to which a legal resource is addressed</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#applicability">
+    <rdfs:label xml:lang="en">applicability</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+    <skos:definition xml:lang="en">Reference to an entity directly bound by the application of a legal resource</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#issuer">
+    <rdfs:label xml:lang="en">issuer</rdfs:label>
+    <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#Agent"/>
+    <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+    <skos:definition xml:lang="en">An entity responsible for originating a legal resource</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#legislature">
+    <rdfs:label xml:lang="en">legislature</rdfs:label>
+    <rdfs:range>
+      <owl:Class rdf:about="https://w3id.org/legalhtml/ov#Legislature">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">legislature</rdfs:label>
+        <skos:definition xml:lang="en">An assembly that is empowered to legislate for a political entity such as a country or city</skos:definition>
+      </owl:Class>
+    </rdfs:range>
+
+    <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+    <skos:definition xml:lang="en">Reference to the legislature responsible for originating a legal resource</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#originalLanguage">
+    <rdfs:label xml:lang="en">original language</rdfs:label>
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/LinguisticSystem"/>
+    <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+    <skos:definition xml:lang="en">The language in which a legal resource has been originally drafted</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/legalhtml/ov#procedureID">
+    <rdfs:label xml:lang="en">procedure identifier</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+    <skos:definition xml:lang="en">Unique reference for a procedure</skos:definition>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#procedureStage">
+    <rdfs:label xml:lang="en">procedure stage</rdfs:label>
+    <rdfs:range>
+      <owl:Class rdf:about="https://w3id.org/legalhtml/ov#ProcedureStage">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">procedure stage</rdfs:label>
+        <skos:definition xml:lang="en">A stage of a procedure</skos:definition>
+      </owl:Class>
+    </rdfs:range>
+
+    <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+    <skos:definition xml:lang="en">Reference to the stage of a procedure</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#proposingEntity">
+    <rdfs:label xml:lang="en">proposing entity</rdfs:label>
+    <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#Agent"/>
+    <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+    <skos:definition xml:lang="en">An entity responsible for the proposal</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/legalhtml/ov#reference">
+    <rdfs:label xml:lang="en">reference</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+    <skos:definition xml:lang="en">An identifier assigned to a legal resource by an entity</skos:definition>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#relevance">
+    <rdfs:label xml:lang="en">relevance</rdfs:label>
+    <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#Agent"/>
+    <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+    <skos:definition xml:lang="en">An entity governed by legal acts relevant for a legal resource</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#changeSet">
+    <rdfs:label xml:lang="en">change set</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/legalhtml/ov#ChangeSet"/>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://w3id.org/legalhtml/ov#ConsolidatedResource">
+        <rdfs:subClassOf rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+        <rdfs:label xml:lang="en">consolidated resource</rdfs:label>
+        <skos:definition xml:lang="en">A consolidated legal resource accounting for subsequent amendments</skos:definition>
+      </owl:Class>
+    </rdfs:domain>
+
+    <skos:definition xml:lang="en">Reference to a change set being consolidated by a consolidated resource</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="https://w3id.org/legalhtml/ov#ChangeSet">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label xml:lang="en">change set</rdfs:label>
+    <skos:definition xml:lang="en">A collection of related modifications to a legal resource (e.g. originating from the same amendment)</skos:definition>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#changingAct">
+    <rdfs:label xml:lang="en">changing act</rdfs:label>
+    <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+    <rdfs:domain rdf:resource="https://w3id.org/legalhtml/ov#ChangeSet"/>
+    <skos:definition xml:lang="en">the act making the modification</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/legalhtml/ov#entryIntoForce">
+    <rdfs:label xml:lang="en">entry into force</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="https://w3id.org/legalhtml/ov#ChangeSet"/>
+    <skos:definition xml:lang="en">The date of first entry into force</skos:definition>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/legalhtml/ov#startOfApplicability">
+    <rdfs:label xml:lang="en">start of applicability</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="https://w3id.org/legalhtml/ov#ChangeSet"/>
+    <skos:definition xml:lang="en">The date of first applicability</skos:definition>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/legalhtml/ov#published">
+    <rdfs:label xml:lang="en">published</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="https://w3id.org/legalhtml/ov#ChangeSet"/>
+    <skos:definition xml:lang="en">The date of publication</skos:definition>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#status">
+    <rdfs:label xml:lang="en">status</rdfs:label>
+    <rdfs:range>
+      <owl:Class rdf:about="https://w3id.org/legalhtml/ov#Status">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">status</rdfs:label>
+        <skos:definition>A status of a file, document, etc.</skos:definition>
+      </owl:Class>
+    </rdfs:range>
+
+    <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+    <skos:definition xml:lang="en">The status of a language resource</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#change">
+    <rdfs:label xml:lang="en">change</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/legalhtml/ov#Change"/>
+    <rdfs:domain rdf:resource="https://w3id.org/legalhtml/ov#ChangeSet"/>
+    <skos:definition xml:lang="en">Reference to a change in a change set</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="https://w3id.org/legalhtml/ov#Change">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label xml:lang="en">change</rdfs:label>
+    <skos:definition xml:lang="en">A modification affecting a legal resource</skos:definition>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#forceChange">
+    <rdfs:label xml:lang="en">force change</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/legalhtml/ov#ForceChange"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/legalhtml/ov#change"/>
+    <skos:definition xml:lang="en">Reference to a force change</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="https://w3id.org/legalhtml/ov#ForceChange">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/legalhtml/ov#Change"/>
+    <rdfs:label xml:lang="en">force change</rdfs:label>
+    <skos:definition xml:lang="en">A modification in the force of a legal resource</skos:definition>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#textualChange">
+    <rdfs:label xml:lang="en">textual change</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/legalhtml/ov#TextualChange"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/legalhtml/ov#change"/>
+    <skos:definition xml:lang="en">Reference to a textual change</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="https://w3id.org/legalhtml/ov#TextualChange">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/legalhtml/ov#Change"/>
+    <rdfs:label xml:lang="en">textual change</rdfs:label>
+    <skos:definition xml:lang="en">A textual modificaiton to a legal resource</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/legalhtml/ov#EntryIntoForce">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/legalhtml/ov#ForceChange"/>
+    <rdfs:label xml:lang="en">entry into force</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/legalhtml/ov#EndOfEnactment">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/legalhtml/ov#ForceChange"/>
+    <rdfs:label xml:lang="en">end of enactment</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/legalhtml/ov#PostponementOfEntryIntoForce">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/legalhtml/ov#ForceChange"/>
+    <rdfs:label xml:lang="en">postponement of entry into force</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/legalhtml/ov#ProrogationOfForce">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/legalhtml/ov#ForceChange"/>
+    <rdfs:label xml:lang="en">prorogation of force</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/legalhtml/ov#ReEnactment">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/legalhtml/ov#ForceChange"/>
+    <rdfs:label xml:lang="en">re-enactment</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/legalhtml/ov#Unconstitutionality">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/legalhtml/ov#ForceChange"/>
+    <rdfs:label xml:lang="en">uncostitutionality</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/legalhtml/ov#Repeal">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/legalhtml/ov#TextualChange"/>
+    <rdfs:label xml:lang="en">repeal</rdfs:label>
+    <skos:definition xml:lang="en">A deletion of text from a legal resource</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/legalhtml/ov#Substitution">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/legalhtml/ov#TextualChange"/>
+    <rdfs:label xml:lang="en">substitution</rdfs:label>
+    <skos:definition xml:lang="en">A substitution of text inside a legal resource</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/legalhtml/ov#Insertion">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/legalhtml/ov#TextualChange"/>
+    <rdfs:label xml:lang="en">insertion</rdfs:label>
+    <skos:definition xml:lang="en">An insertion of text into a legal resource</skos:definition>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#amendingText">
+    <rdfs:label xml:lang="en">amending text</rdfs:label>
+    <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#LegalResourceSubdivision"/>
+    <rdfs:domain rdf:resource="https://w3id.org/legalhtml/ov#TextualChange"/>
+    <skos:definition xml:lang="en">Reference to the part of the amending act that specifies the modification being done</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#amendedText">
+    <rdfs:label xml:lang="en">amended text</rdfs:label>
+    <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#LegalResourceSubdivision"/>
+    <rdfs:domain rdf:resource="https://w3id.org/legalhtml/ov#TextualChange"/>
+    <skos:definition xml:lang="en">Reference to the part of the act that is being modified</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#replacement">
+    <rdfs:label xml:lang="en">replacement</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/legalhtml/ov#Substitution"/>
+    <skos:definition xml:lang="en">Technical reference to the replacement text</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#addendum">
+    <rdfs:label xml:lang="en">addendum</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/legalhtml/ov#Insertion"/>
+    <skos:definition xml:lang="en">Technical reference to the inserted text</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#deletion">
+    <rdfs:label xml:lang="en">deletion</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/legalhtml/ov#Repeal"/>
+    <skos:definition xml:lang="en">Technical reference to the deleted text</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#replacedContent">
+    <rdfs:label xml:lang="en">replaced content</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/legalhtml/ov#Substitution"/>
+    <skos:definition xml:lang="en">Technical reference to the replaced text</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="https://w3id.org/legalhtml/ov#EfficacyChange">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/legalhtml/ov#Change"/>
+    <rdfs:label xml:lang="en">efficacy change</rdfs:label>
+    <skos:definition xml:lang="en">A modification in the efficacy of a legal resource</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/legalhtml/ov#EntryIntoEfficacy">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/legalhtml/ov#EfficacyChange"/>
+    <rdfs:label xml:lang="en">entry into efficacy</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/legalhtml/ov#EndOfEfficacy">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/legalhtml/ov#EfficacyChange"/>
+    <rdfs:label xml:lang="en">end of efficacy</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/legalhtml/ov#Inapplication">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/legalhtml/ov#EfficacyChange"/>
+    <rdfs:label xml:lang="en">inapplication</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/legalhtml/ov#Retroactivity">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/legalhtml/ov#EfficacyChange"/>
+    <rdfs:label xml:lang="en">retroactivity</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/legalhtml/ov#Extraefficacy">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/legalhtml/ov#EfficacyChange"/>
+    <rdfs:label xml:lang="en">extraefficacy</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/legalhtml/ov#PostponementOfEfficacy">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/legalhtml/ov#EfficacyChange"/>
+    <rdfs:label xml:lang="en">postponement of efficacy</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/legalhtml/ov#ProrogationOfEfficacy">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/legalhtml/ov#EfficacyChange"/>
+    <rdfs:label xml:lang="en">prorogation of efficacy</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/legalhtml/ov#Signature">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label xml:lang="en">signature</rdfs:label>
+    <skos:definition xml:lang="en">A signature on a legal resource made by someone in some organization with certain role</skos:definition>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#signature">
+    <rdfs:label xml:lang="en">signature</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/legalhtml/ov#Signature"/>
+    <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+    <skos:definition xml:lang="en">Reference to a signature on a legal resource</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#signaturePlace">
+    <rdfs:label xml:lang="en">signature place</rdfs:label>
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/Location"/>
+    <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+    <skos:definition xml:lang="en">The signature place of a legal resource</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/legalhtml/ov#signatureDate">
+    <rdfs:label xml:lang="en">signature date</rdfs:label>
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/date"/>
+    <rdfs:domain rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
+    <skos:definition xml:lang="en">The signature date of a legal resource</skos:definition>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#signatory">
+    <rdfs:label xml:lang="en">signatory</rdfs:label>
+    <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#Person"/>
+    <rdfs:domain rdf:resource="https://w3id.org/legalhtml/ov#Signature"/>
+    <skos:definition xml:lang="en">The person who affixed the signature</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#signatoryOrganization">
+    <rdfs:label xml:lang="en">signatory organization</rdfs:label>
+    <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#Organization"/>
+    <rdfs:domain rdf:resource="https://w3id.org/legalhtml/ov#Signature"/>
+    <skos:definition xml:lang="en">The organization on behalf of which the signatory affixed a signature on a legal resource</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/legalhtml/ov#signatoryRole">
+    <rdfs:label xml:lang="en">signatory role</rdfs:label>
+    <rdfs:range>
+      <owl:Class rdf:about="https://w3id.org/legalhtml/ov#Role">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">role</rdfs:label>
+        <skos:definition xml:lang="en">A role within an organization</skos:definition>
+      </owl:Class>
+    </rdfs:range>
+
+    <rdfs:domain rdf:resource="https://w3id.org/legalhtml/ov#Signature"/>
+    <skos:definition xml:lang="en">The role played within an organization by someones who affixed a signature on a legal resource on behalf of it</skos:definition>
+  </owl:ObjectProperty>
+
+</rdf:RDF>

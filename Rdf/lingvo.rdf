@@ -1,0 +1,1022 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:ns0="http://purl.org/vocab/vann/"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:ns1="http://lexvo.org/ontology#"
+         xmlns:ns2="https://w3id.org/vocab/olca#">
+
+  <owl:Ontology rdf:about="https://w3id.org/vocab/lingvoj">
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <rdfs:label xml:lang="en">The Lingvoj Ontology</rdfs:label>
+    <rdfs:label xml:lang="es">Ontología de lenguajes</rdfs:label>
+    <rdfs:label xml:lang="fr">Ontologie des langues</rdfs:label>
+    <rdfs:label xml:lang="nl">Taal Ontologie</rdfs:label>
+    <rdfs:label xml:lang="ja">言語オントロジー</rdfs:label>
+    <rdfs:label xml:lang="pt">Ontologia de idiomas</rdfs:label>
+    <dc:title xml:lang="en">The Lingvoj Ontology</dc:title>
+    <dc:title xml:lang="es">Ontología de lenguajes</dc:title>
+    <dc:title xml:lang="fr">Ontologie des langues</dc:title>
+    <dc:title xml:lang="nl">Taal Ontologie</dc:title>
+    <dc:title xml:lang="ja">言語オントロジー</dc:title>
+    <dc:title xml:lang="pt">A Ontologia dos idiomas</dc:title>
+    <dc:language rdf:resource="http://lexvo.org/id/iso639-3/eng"/>
+    <dc:language rdf:resource="http://lexvo.org/id/iso639-3/spa"/>
+    <dc:language rdf:resource="http://lexvo.org/id/iso639-3/fra"/>
+    <dc:language rdf:resource="http://lexvo.org/id/iso639-3/nld"/>
+    <dc:language rdf:resource="http://lexvo.org/id/iso639-3/jap"/>
+    <dc:language rdf:resource="http://www.lexvo.org/id/iso639-3/por"/>
+    <rdfs:comment xml:lang="en">A vocabulary for describing the use of languages by people and organizations, their geographical scope and status as well as their usage in documents or during events</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Un vocabulaire pour décrire l'utilisation des langues par les personnes et les organisations, leur répartition géographique et leur statut, ainsi que leur usage dans les documents ou lors des événements</rdfs:comment>
+    <rdfs:comment xml:lang="es">Un vocabulario para describir la utilización de lenguas por parte de personas y organizaciones, su ambito geográfico y su estatus, así como su utilización en documentos o durante eventos</rdfs:comment>
+    <rdfs:comment xml:lang="nl">Een vokabular voor de beschrijving en het gebruik van talen door personen en organisaties, de geografische extensie en status en het gebruik ervan in documenten en tijdens evenmenten</rdfs:comment>
+    <rdfs:comment xml:lang="ja">人や組織による言語の使用、ドキュメント内やイベント期間中におけるその使用に加え、その地理的範囲と状況を記述するための語彙</rdfs:comment>
+    <rdfs:comment xml:lang="pt">Um vocabulário para descrever a utilização de idiomas por parte de pessoas ou organizações, o seu âmbito geográfico e seu estatuto, assim como a sua utilização em documentos ou durante eventos</rdfs:comment>
+    <ns0:preferredNamespacePrefix>lingvo</ns0:preferredNamespacePrefix>
+    <ns0:preferredNamespaceUri>https://w3id.org/vocab/lingvoj#</ns0:preferredNamespaceUri>
+    <dc:creator rdf:resource="http://google.com/+BernardVatant"/>
+    <dc:contributor rdf:resource="http://google.com/+MaríaPovedaVillalón"/>
+    <dc:contributor rdf:resource="http://google.com/+RonaldPoell"/>
+    <dc:contributor rdf:resource="https://w3id.org/people/gatemezing"/>
+    <dc:contributor>
+      <rdf:Description>
+        <foaf:name>Shuji Kamitsuna</foaf:name>
+        <foaf:homepage rdf:resource="http://www.asahi-net.or.jp/~ax2s-kmtn/"/>
+      </rdf:Description>
+    </dc:contributor>
+
+    <dc:contributor rdf:resource="https://plus.google.com/113072078430654119300"/>
+    <dc:modified>2014-08-11</dc:modified>
+    <dc:modified>2020-05-31</dc:modified>
+    <dc:issued>2007-09-17</dc:issued>
+    <skos:historyNote>v3.0 : Added new content negotiation to w3id since the previous website is off</skos:historyNote>
+    <skos:historyNote>v2.33 : Corrected minor typos, and added portuguese translations, provided by Mariana Curado Malta</skos:historyNote>
+    <skos:historyNote>v2.32 : Added japanese translations, provided by Shuji Kamitsuna</skos:historyNote>
+    <skos:historyNote>v2.31 : Added more translations, language metadata, fixed typos plus cosmetic changes in the .ttl file</skos:historyNote>
+    <skos:historyNote>v2.3 : Added :LanguageResource class, subclasses and properties. Added properties :tag :officialIn :fromCountry</skos:historyNote>
+    <skos:historyNote>v2.21 : Added dutch translations plus 'interpreter' property suggested by Ronald Poell, along with minor corrections</skos:historyNote>
+    <skos:historyNote>v2.2 : Added spanish translations, provided by María Poveda Villalón</skos:historyNote>
+    <skos:historyNote>v2.1 : Relaxed domain constraints on several properties, replaced by Ontology Loose Coupling Annotations</skos:historyNote>
+    <rdfs:seeAlso rdf:resource="http://lingvoj.linkedvocabs.org/"/>
+    <owl:versionIRI rdf:resource="https://w3id.org/vocab/lingvoj_v3.0.ttl"/>
+    <owl:priorVersion rdf:resource="https://w3id.org/vocab/lingvoj_v2.33.ttl"/>
+    <owl:incompatibleWith rdf:resource="https://w3id.org/vocab/lingvoj_v1.3.rdf"/>
+    <owl:versionInfo>v3.0</owl:versionInfo>
+  </owl:Ontology>
+
+  <owl:Class rdf:about="https://w3id.org/vocab/lingvoj#Lingvo">
+    <rdfs:label xml:lang="de">Sprache</rdfs:label>
+    <rdfs:label xml:lang="en">Language</rdfs:label>
+    <rdfs:label xml:lang="eo">Lingvo</rdfs:label>
+    <rdfs:label xml:lang="es">Lenguaje</rdfs:label>
+    <rdfs:label xml:lang="fi">Kieli</rdfs:label>
+    <rdfs:label xml:lang="fr">Langue</rdfs:label>
+    <rdfs:label xml:lang="it">Linguaggio</rdfs:label>
+    <rdfs:label xml:lang="ja">言語</rdfs:label>
+    <rdfs:label xml:lang="nl">Taal</rdfs:label>
+    <rdfs:label xml:lang="no">Språk</rdfs:label>
+    <rdfs:label xml:lang="pl">Jezyk</rdfs:label>
+    <rdfs:label xml:lang="pt">Idioma</rdfs:label>
+    <rdfs:label xml:lang="ru">Язык</rdfs:label>
+    <rdfs:label xml:lang="sv">Språk</rdfs:label>
+    <rdfs:label xml:lang="tr">Dil</rdfs:label>
+    <rdfs:label xml:lang="zh">语言</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/LinguisticSystem"/>
+    <rdfs:subClassOf rdf:resource="http://www.loc.gov/mads/rdf/v1#Language"/>
+    <owl:equivalentClass rdf:resource="http://schema.org/Language"/>
+    <owl:equivalentClass rdf:resource="http://d-nb.info/standards/elementset/gnd#Language"/>
+    <owl:equivalentClass rdf:resource="http://purl.org/linguistics/gold/Language"/>
+    <owl:equivalentClass rdf:resource="http://www.ontotext.com/proton/protontop#Language"/>
+    <ns1:somewhatSameAs rdf:resource="http://lexvo.org/ontology#Language"/>
+    <ns0:example rdf:resource="http://lexvo.org/id/iso639-3/fra"/>
+    <ns0:example rdf:resource="http://id.loc.gov/vocabulary/iso639-1/ja"/>
+    <rdfs:comment xml:lang="en">A language used in spoken or written human communication, or in which a resource is written or recorded. It is recommended to use instances defined on the basis of ISO 639 codes, such as those in examples</rdfs:comment>
+    <rdfs:comment xml:lang="es">Una lengua utilizada en la comunicación oral o escrita entre personas, o en la que se escribe o graba un recurso. Se recomienda el uso de las instancias definidas según los códigos ISO 639, como los que aparecen en los ejemplos</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Une langue utilisée dans la communication orale ou écrite entre humains, ou dans laquelle une ressource est écrite ou enregistrée. Il est recommandé d'utiliser des instances définies sur la base d'un code ISO 639, comme dans les exemples</rdfs:comment>
+    <rdfs:comment xml:lang="nl">Een taal gebruikt in geschreven of gesproken communicatie tussen mensen of in welke een bron is geschreven of opgenomen. Het is aan te raden instanties te gebruiken gedefinieerd op basis van de ISO 630 codes, zoals in deze voorbeelden</rdfs:comment>
+    <rdfs:comment xml:lang="ja">会話または記述による人間のコミュニケーションで使用される言語、または資源が記述または記録される言語。例にあるような、ISO 639コードに基づいて定義されたインスタンスを使用することが推奨される</rdfs:comment>
+    <rdfs:comment xml:lang="pt">Um idioma utilizado na comunicação oral ou escrita entre pessoas, ou na que se escreve ou grava um recurso. Recomenda-se a utilização das instâncias definidas segundo os códigos ISO 639, como os que aparecem nos excemplos</rdfs:comment>
+  </owl:Class>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/vocab/lingvoj#tag">
+    <rdfs:label xml:lang="en">language tag</rdfs:label>
+    <rdfs:label xml:lang="fr">tag de langue</rdfs:label>
+    <rdfs:label xml:lang="es">etiqueta</rdfs:label>
+    <rdfs:label xml:lang="ja">言語タグ</rdfs:label>
+    <rdfs:label xml:lang="nl">taal tag</rdfs:label>
+    <rdfs:label xml:lang="pt">tag de idioma</rdfs:label>
+    <rdfs:comment xml:lang="en">The tag to use for the language, for example as value of xml:lang. See https://tools.ietf.org/html/bcp47</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Le tag à utiliser pour la langue, par exemple comme valeur de xml:lang. Voir https://tools.ietf.org/html/bcp47</rdfs:comment>
+    <rdfs:comment xml:lang="es">La etiqueta a utilizar para el lenguaje, por ejemplo como valor de xml:lang. Ver https://tools.ietf.org/html/bcp47</rdfs:comment>
+    <rdfs:comment xml:lang="ja">例えばxml:langの値として、言語に用いるタグ。https://tools.ietf.org/html/bcp47を参照</rdfs:comment>
+    <rdfs:comment xml:lang="pt">A tag para ser usada, por exemplo como valor de xml:lang. Ver https://tools.ietf.org/html/bcp47</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+    <rdfs:domain rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/vocab/lingvoj#livingLanguage">
+    <rdfs:label xml:lang="en">living language</rdfs:label>
+    <rdfs:label xml:lang="es">lengua viva</rdfs:label>
+    <rdfs:label xml:lang="fr">langue vivante</rdfs:label>
+    <rdfs:label xml:lang="nl">levende taal</rdfs:label>
+    <rdfs:label xml:lang="ja">現用言語</rdfs:label>
+    <rdfs:label xml:lang="pt">Idioma vivo</rdfs:label>
+    <rdfs:comment xml:lang="en">The language has speakers at the given date</rdfs:comment>
+    <rdfs:comment xml:lang="es">La lengua tiene hablantes en la fecha dada</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La langue possède des locuteurs à la date indiquée</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De taal wordt door mensen gesproken op het aangegeven moment</rdfs:comment>
+    <rdfs:comment xml:lang="ja">ある時点でその言語を話す人がいる</rdfs:comment>
+    <rdfs:comment xml:lang="pt">O idioma possui pessoas que o falam na data indicada</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/vocab/lingvoj#endangeredLanguage">
+    <rdfs:label xml:lang="en">endangered language</rdfs:label>
+    <rdfs:label xml:lang="es">lengua en vías de extinción</rdfs:label>
+    <rdfs:label xml:lang="fr">langue menacée</rdfs:label>
+    <rdfs:label xml:lang="nl">bedreigde taal</rdfs:label>
+    <rdfs:label xml:lang="ja">絶滅危惧言語</rdfs:label>
+    <rdfs:label xml:lang="pt">idioma em vias de extinção</rdfs:label>
+    <rdfs:comment xml:lang="en">The language is endangered at the given date</rdfs:comment>
+    <rdfs:comment xml:lang="es">La lengua está en vías de extinción en la fecha dada</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La langue est menacée à la date indiquée</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De taal is bedreigd met uitsterven op de gegeven datum</rdfs:comment>
+    <rdfs:comment xml:lang="ja">ある時点でその言語は絶滅寸前である</rdfs:comment>
+    <rdfs:comment xml:lang="pt">O idioma está em vias de extinção na data indicada</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/vocab/lingvoj#livingLanguage"/>
+    <rdfs:domain rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/vocab/lingvoj#extinctLanguage">
+    <rdfs:label xml:lang="en">extinct language</rdfs:label>
+    <rdfs:label xml:lang="es">lengua muerta</rdfs:label>
+    <rdfs:label xml:lang="fr">langue morte</rdfs:label>
+    <rdfs:label xml:lang="nl">uitgestorven taal</rdfs:label>
+    <rdfs:label xml:lang="ja">死語</rdfs:label>
+    <rdfs:label xml:lang="pt">Idioma morto</rdfs:label>
+    <rdfs:comment xml:lang="en">The language has no longer any speaker at the given date</rdfs:comment>
+    <rdfs:comment xml:lang="es">La lengua no tiene ningún hablante en la fecha dada</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La langue n'a plus de locuteurs à la date indiquée</rdfs:comment>
+    <rdfs:comment xml:lang="nl">Er zijn geen mensen meer die deze taal spreken</rdfs:comment>
+    <rdfs:comment xml:lang="ja">ある時点でその言語を話す人はいなくなった</rdfs:comment>
+    <rdfs:comment xml:lang="pt">O idioma já não possui pessoas que o falam na data indicada</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </owl:DatatypeProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#notUnderstood">
+    <rdfs:label xml:lang="en">not understood</rdfs:label>
+    <rdfs:label xml:lang="es">no comprendido</rdfs:label>
+    <rdfs:label xml:lang="fr">non comprise</rdfs:label>
+    <rdfs:label xml:lang="nl">niet verstaan</rdfs:label>
+    <rdfs:label xml:lang="ja">理解されない</rdfs:label>
+    <rdfs:label xml:lang="pt">não compreendido</rdfs:label>
+    <rdfs:comment xml:lang="en">The person does not understand at all the spoken language</rdfs:comment>
+    <rdfs:comment xml:lang="es">La persona no comprende la lengua hablada</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La personne ne comprend pas du tout la langue parlée</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De persoon verstaat de taal in het geheel niet</rdfs:comment>
+    <rdfs:comment xml:lang="ja">その人はその話し言葉をまったく理解しない</rdfs:comment>
+    <rdfs:comment xml:lang="pt">A pessoa não compreende o idioma falado</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#notSpoken">
+    <rdfs:label xml:lang="en">not spoken</rdfs:label>
+    <rdfs:label xml:lang="es">no hablado</rdfs:label>
+    <rdfs:label xml:lang="fr">non parlée</rdfs:label>
+    <rdfs:label xml:lang="nl">niet spreken</rdfs:label>
+    <rdfs:label xml:lang="ja">話されない</rdfs:label>
+    <rdfs:label xml:lang="pt">não falado</rdfs:label>
+    <rdfs:comment xml:lang="en">The person does not speak at all the language</rdfs:comment>
+    <rdfs:comment xml:lang="es">La persona no puede hablar la lengua</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La personne ne parle pas du tout la langue</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De persoon spreekt de taal in het geheel niet</rdfs:comment>
+    <rdfs:comment xml:lang="ja">その人はその言語をまったく話さない</rdfs:comment>
+    <rdfs:comment xml:lang="pt">A pessoa não sabe falar o idioma</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#notRead">
+    <rdfs:label xml:lang="en">not read</rdfs:label>
+    <rdfs:label xml:lang="es">no leído</rdfs:label>
+    <rdfs:label xml:lang="fr">non lue</rdfs:label>
+    <rdfs:label xml:lang="nl">niet lezen</rdfs:label>
+    <rdfs:label xml:lang="ja">読まれない</rdfs:label>
+    <rdfs:label xml:lang="pt">não lido</rdfs:label>
+    <rdfs:comment xml:lang="en">The person does not read at all the language</rdfs:comment>
+    <rdfs:comment xml:lang="es">La persona no puede leer la lengua</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La personne ne lit pas du tout la langue</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De persoon leest de taal in het geheel niet</rdfs:comment>
+    <rdfs:comment xml:lang="ja">その人はその言語をまったく読まない</rdfs:comment>
+    <rdfs:comment xml:lang="pt">A pessoa não sabe ler o idioma</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#notWritten">
+    <rdfs:label xml:lang="en">not written</rdfs:label>
+    <rdfs:label xml:lang="es">no escrito</rdfs:label>
+    <rdfs:label xml:lang="fr">non écrite</rdfs:label>
+    <rdfs:label xml:lang="nl">niet schrijven</rdfs:label>
+    <rdfs:label xml:lang="ja">書かれない</rdfs:label>
+    <rdfs:label xml:lang="pt">não escrito</rdfs:label>
+    <rdfs:comment xml:lang="en">The person does not write at all the language</rdfs:comment>
+    <rdfs:comment xml:lang="es">La persona no puede escribir la lengua</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La personne n'écrit pas du tout la langue</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De persoon schrijft de taal in het geheel niet</rdfs:comment>
+    <rdfs:comment xml:lang="ja">その人はその言語をまったく書かない</rdfs:comment>
+    <rdfs:comment xml:lang="pt">A pessoa não sabe escrever no idioma</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#basicUnderstanding">
+    <rdfs:label xml:lang="en">basic understanding</rdfs:label>
+    <rdfs:label xml:lang="es">comprensión básica</rdfs:label>
+    <rdfs:label xml:lang="fr">compréhension élémentaire</rdfs:label>
+    <rdfs:label xml:lang="nl">basis luisterniveau</rdfs:label>
+    <rdfs:label xml:lang="ja">基礎的な理解</rdfs:label>
+    <rdfs:label xml:lang="pt">entendimento básico</rdfs:label>
+    <rdfs:comment xml:lang="en">The person has a basic understanding of the spoken language</rdfs:comment>
+    <rdfs:comment xml:lang="es">La persona tiene un nivel básico de comprensión de la lengua hablada</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La personne a une compréhension élémentaire de la langue parlée</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De persoon kan eenvoudige gesproken taal begrijpen</rdfs:comment>
+    <rdfs:comment xml:lang="ja">その人はその話し言語について基礎的な理解力を有している</rdfs:comment>
+    <rdfs:comment xml:lang="pt">A pessoa tem um nível de compreensão básico do idioma falado</rdfs:comment>
+    <dc:replaces rdf:resource="https://w3id.org/vocab/lingvoj#hasAbility1"/>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#basicSpeaking">
+    <rdfs:label xml:lang="en">basic speaking</rdfs:label>
+    <rdfs:label xml:lang="es">expresión oral básica</rdfs:label>
+    <rdfs:label xml:lang="fr">expression élémentaire</rdfs:label>
+    <rdfs:label xml:lang="nl">basis spraakniveau</rdfs:label>
+    <rdfs:label xml:lang="ja">基礎的な会話</rdfs:label>
+    <rdfs:label xml:lang="pt">expressão oral básica</rdfs:label>
+    <rdfs:comment xml:lang="en">The person can speak the language at a basic level</rdfs:comment>
+    <rdfs:comment xml:lang="es">La persona puede hablar la lengua a un nivel básico</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La personne parle la langue à un niveau élémentaire</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De persoon kan eenvoudige taal spreken</rdfs:comment>
+    <rdfs:comment xml:lang="ja">その人はその言語を基礎レベルで話すことができる</rdfs:comment>
+    <rdfs:comment xml:lang="pt">A pessoa consegue falar o idioma a um nível básico</rdfs:comment>
+    <dc:replaces rdf:resource="https://w3id.org/vocab/lingvoj#hasAbility1"/>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#basicReading">
+    <rdfs:label xml:lang="en">basic reading</rdfs:label>
+    <rdfs:label xml:lang="es">lectura básica</rdfs:label>
+    <rdfs:label xml:lang="fr">lecture élémentaire</rdfs:label>
+    <rdfs:label xml:lang="nl">basis leesniveau</rdfs:label>
+    <rdfs:label xml:lang="ja">基礎的な読解</rdfs:label>
+    <rdfs:label xml:lang="pt">leitura básica</rdfs:label>
+    <rdfs:comment xml:lang="en">The person can read the language at a basic level</rdfs:comment>
+    <rdfs:comment xml:lang="es">La persona puede leer la lengua a un nivel básico</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La personne lit la langue à un niveau élémentaire</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De persoon kan eenvoudige taal lezen</rdfs:comment>
+    <rdfs:comment xml:lang="ja">その人はその言語を基礎レベルで読むことができる</rdfs:comment>
+    <rdfs:comment xml:lang="pt">A pessoa consegue ler o idioma a um nível básico</rdfs:comment>
+    <dc:replaces rdf:resource="https://w3id.org/vocab/lingvoj#hasAbility1"/>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#basicWriting">
+    <rdfs:label xml:lang="en">basic writing</rdfs:label>
+    <rdfs:label xml:lang="es">escritura básica</rdfs:label>
+    <rdfs:label xml:lang="fr">écriture élémentaire</rdfs:label>
+    <rdfs:label xml:lang="nl">basis schrijfniveau</rdfs:label>
+    <rdfs:label xml:lang="ja">基礎的な記述</rdfs:label>
+    <rdfs:label xml:lang="pt">escrita básica</rdfs:label>
+    <rdfs:comment xml:lang="en">The person can write the language at a basic level</rdfs:comment>
+    <rdfs:comment xml:lang="es">La persona puede escribir la lengua a un nivel básico</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La personne écrit la langue à un niveau élémentaire</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De persoon kan eenvoudige taal schrijven</rdfs:comment>
+    <rdfs:comment xml:lang="ja">その人はその言語を基礎レベルで書くことができる</rdfs:comment>
+    <rdfs:comment xml:lang="pt">A pessoa consegue escrever o idioma a um nível básico</rdfs:comment>
+    <dc:replaces rdf:resource="https://w3id.org/vocab/lingvoj#hasAbility1"/>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#intermediateUnderstanding">
+    <rdfs:label xml:lang="en">intermediate understanding</rdfs:label>
+    <rdfs:label xml:lang="es">comprensión intermedia</rdfs:label>
+    <rdfs:label xml:lang="fr">compréhension moyenne</rdfs:label>
+    <rdfs:label xml:lang="nl">voertaal</rdfs:label>
+    <rdfs:label xml:lang="ja">中級の理解</rdfs:label>
+    <rdfs:label xml:lang="pt">compreensão intermédia</rdfs:label>
+    <rdfs:comment xml:lang="en">The person has an intermediate understanding of the spoken language</rdfs:comment>
+    <rdfs:comment xml:lang="es">La persona tiene un nivel intermedio de comprensión de la lengua hablada</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La personne a une compréhension moyenne de la langue parlée</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De persoon begrijpt de gesproken taal op een gemiddeld niveau</rdfs:comment>
+    <rdfs:comment xml:lang="ja">その人はその話し言葉について中級レベルの理解力を有している</rdfs:comment>
+    <rdfs:comment xml:lang="pt">A pessoa possui um nível intermédio de compreensão do idioma falado</rdfs:comment>
+    <dc:replaces rdf:resource="https://w3id.org/vocab/lingvoj#hasAbility2"/>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#intermediateSpeaking">
+    <rdfs:label xml:lang="en">intermediate speaking</rdfs:label>
+    <rdfs:label xml:lang="es">nivel oral intermedio</rdfs:label>
+    <rdfs:label xml:lang="fr">expression moyenne</rdfs:label>
+    <rdfs:label xml:lang="nl">gemiddeld spraakniveau</rdfs:label>
+    <rdfs:label xml:lang="ja">中級の会話</rdfs:label>
+    <rdfs:label xml:lang="pt">nivel oral intermédio</rdfs:label>
+    <rdfs:comment xml:lang="en">The person can speak the language at an intermediate level</rdfs:comment>
+    <rdfs:comment xml:lang="es">La persona puede hablar la lengua a un nivel intermedio</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La personne parle la langue à un niveau moyen</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De persoon spreekt de taal op een gemiddeld niveau</rdfs:comment>
+    <rdfs:comment xml:lang="ja">その人はその言語を中級レベルで話すことができる</rdfs:comment>
+    <rdfs:comment xml:lang="pt">A pessoa consegue falar o idioma a um nível intermédio</rdfs:comment>
+    <dc:replaces rdf:resource="https://w3id.org/vocab/lingvoj#hasAbility2"/>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#intermediateReading">
+    <rdfs:label xml:lang="en">intermediate reading</rdfs:label>
+    <rdfs:label xml:lang="fr">lecture moyenne</rdfs:label>
+    <rdfs:label xml:lang="es">nivel de lectura intermedio</rdfs:label>
+    <rdfs:label xml:lang="nl">gemiddeld leesniveau</rdfs:label>
+    <rdfs:label xml:lang="ja">中級の読解</rdfs:label>
+    <rdfs:label xml:lang="pt">leitura intermédia</rdfs:label>
+    <rdfs:comment xml:lang="en">The person can read the language at a intermediate level</rdfs:comment>
+    <rdfs:comment xml:lang="es">La persona puede leer la lengua a un nivel intermedio</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La personne lit la langue à un niveau moyen</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De persoon leest de taal op een gemiddeld niveau</rdfs:comment>
+    <rdfs:comment xml:lang="ja">その人はその言語を中級レベルで読むことができる</rdfs:comment>
+    <rdfs:comment xml:lang="pt">A pessoa consegue ler o idioma a um nível intermédio</rdfs:comment>
+    <dc:replaces rdf:resource="https://w3id.org/vocab/lingvoj#hasAbility2"/>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#intermediateWriting">
+    <rdfs:label xml:lang="en">intermediate writing</rdfs:label>
+    <rdfs:label xml:lang="es">nivel escrito intermedio</rdfs:label>
+    <rdfs:label xml:lang="fr">écriture moyenne</rdfs:label>
+    <rdfs:label xml:lang="nl">gemiddeld schrijfniveau</rdfs:label>
+    <rdfs:label xml:lang="ja">中級の記述</rdfs:label>
+    <rdfs:label xml:lang="pt">escrita intermédia</rdfs:label>
+    <rdfs:comment xml:lang="en">The person can write the language at an intermediate level</rdfs:comment>
+    <rdfs:comment xml:lang="es">La persona puede escribir la lengua a un nivel intermedio</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La personne écrit la langue à un niveau moyen</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De persoon schrijft de taal op een gemiddeld niveau</rdfs:comment>
+    <rdfs:comment xml:lang="ja">その人はその言語を中級レベルで書くことができる</rdfs:comment>
+    <rdfs:comment xml:lang="pt">A pessoa consegue escrever o idioma com um nível intermédio</rdfs:comment>
+    <dc:replaces rdf:resource="https://w3id.org/vocab/lingvoj#hasAbility2"/>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#advancedUnderstanding">
+    <rdfs:label xml:lang="en">advanced understanding</rdfs:label>
+    <rdfs:label xml:lang="es">buena comprensión</rdfs:label>
+    <rdfs:label xml:lang="fr">bonne compréhension</rdfs:label>
+    <rdfs:label xml:lang="nl">goed luisterniveau</rdfs:label>
+    <rdfs:label xml:lang="ja">高度な理解</rdfs:label>
+    <rdfs:label xml:lang="pt">compreensão avançada</rdfs:label>
+    <rdfs:comment xml:lang="en">The person has an advanced understanding of the spoken language</rdfs:comment>
+    <rdfs:comment xml:lang="es">La persona tiene un nivel avanzado de comprensión de la lengua hablada</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La personne a une bonne compréhension de la langue parlée</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De persoon kan de gesproken taal goed begrijpen</rdfs:comment>
+    <rdfs:comment xml:lang="ja">その人はその話し言葉について高度な理解力を有している</rdfs:comment>
+    <rdfs:comment xml:lang="pt">A pessoa possui uma compreensão avançada do idioma falado</rdfs:comment>
+    <dc:replaces rdf:resource="https://w3id.org/vocab/lingvoj#hasAbility3"/>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#advancedSpeaking">
+    <rdfs:label xml:lang="en">advanced speaking</rdfs:label>
+    <rdfs:label xml:lang="es">buena expresión oral</rdfs:label>
+    <rdfs:label xml:lang="fr">bonne expression</rdfs:label>
+    <rdfs:label xml:lang="nl">goed spraakniveau</rdfs:label>
+    <rdfs:label xml:lang="ja">高度な会話</rdfs:label>
+    <rdfs:label xml:lang="pt">boa expressão oral</rdfs:label>
+    <rdfs:comment xml:lang="en">The person can speak the language at an advanced level</rdfs:comment>
+    <rdfs:comment xml:lang="es">La persona puede hablar la lengua a un nivel avanzado</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La personne parle la langue à un bon niveau</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De persoon kan de taal goed spreken</rdfs:comment>
+    <rdfs:comment xml:lang="ja">その人はその言語を上級レベルで話すことができる</rdfs:comment>
+    <rdfs:comment xml:lang="pt">A pessoa consegue falar o idioma a um nível avançado</rdfs:comment>
+    <dc:replaces rdf:resource="https://w3id.org/vocab/lingvoj#hasAbility3"/>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#advancedReading">
+    <rdfs:label xml:lang="en">advanced reading</rdfs:label>
+    <rdfs:label xml:lang="es">buen nivel de lectura</rdfs:label>
+    <rdfs:label xml:lang="fr">bon niveau de lecture</rdfs:label>
+    <rdfs:label xml:lang="nl">goed leesniveau</rdfs:label>
+    <rdfs:label xml:lang="ja">高度な読解</rdfs:label>
+    <rdfs:label xml:lang="pt">leitura avançada</rdfs:label>
+    <rdfs:comment xml:lang="en">The person can read the language at an advanced level</rdfs:comment>
+    <rdfs:comment xml:lang="es">La persona puede leer la lengua a un nivel avanzado</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La personne lit la langue à un bon niveau</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De persoon kan de taal goed lezen</rdfs:comment>
+    <rdfs:comment xml:lang="ja">その人はその言語を上級レベルで読むことができる</rdfs:comment>
+    <rdfs:comment xml:lang="pt">A pessoa consegue ler o idioma a um nível avançado</rdfs:comment>
+    <dc:replaces rdf:resource="https://w3id.org/vocab/lingvoj#hasAbility3"/>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#advancedWriting">
+    <rdfs:label xml:lang="en">advanced writing</rdfs:label>
+    <rdfs:label xml:lang="es">buen nivel de escritura</rdfs:label>
+    <rdfs:label xml:lang="fr">bon niveau d'écriture</rdfs:label>
+    <rdfs:label xml:lang="nl">goed schrijfniveau</rdfs:label>
+    <rdfs:label xml:lang="ja">高度な記述</rdfs:label>
+    <rdfs:label xml:lang="pt">escrita avançada</rdfs:label>
+    <rdfs:comment xml:lang="en">The person can write the language at an advanced level</rdfs:comment>
+    <rdfs:comment xml:lang="es">La persona puede escribir la lengua a un nivel avanzado</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La personne écrit la langue à un bon niveau</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De persoon kan de taal goed schrijven</rdfs:comment>
+    <rdfs:comment xml:lang="ja">その人はその言語を上級レベルで書くことができる</rdfs:comment>
+    <rdfs:comment xml:lang="pt">A pessoa consegue escrever o idioma a um nível avançado</rdfs:comment>
+    <dc:replaces rdf:resource="https://w3id.org/vocab/lingvoj#hasAbility3"/>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#expertUnderstanding">
+    <rdfs:label xml:lang="en">expert understanding</rdfs:label>
+    <rdfs:label xml:lang="es">comprensión excelente</rdfs:label>
+    <rdfs:label xml:lang="fr">excellente compréhension</rdfs:label>
+    <rdfs:label xml:lang="nl">uitstekend luisterniveau</rdfs:label>
+    <rdfs:label xml:lang="ja">専門家レベルの理解</rdfs:label>
+    <rdfs:label xml:lang="pt">compreensão a um nível de especialista</rdfs:label>
+    <rdfs:comment xml:lang="en">The person has an expert understanding of the spoken language</rdfs:comment>
+    <rdfs:comment xml:lang="es">La persona tiene un nivel experto de comprensión de la lengua hablada</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La personne a une excellente compréhension de la langue parlée</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De persoon kan de gesproken taal uitstekend begrijpen</rdfs:comment>
+    <rdfs:comment xml:lang="ja">その人はその話し言葉について専門家レベルの理解力を有している</rdfs:comment>
+    <rdfs:comment xml:lang="pt">A pessoa tem um nível de especialista do idioma falado</rdfs:comment>
+    <dc:replaces rdf:resource="https://w3id.org/vocab/lingvoj#hasAbility4"/>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#expertSpeaking">
+    <rdfs:label xml:lang="en">expert speaking</rdfs:label>
+    <rdfs:label xml:lang="es">expresión oral excelente</rdfs:label>
+    <rdfs:label xml:lang="fr">excellente expression</rdfs:label>
+    <rdfs:label xml:lang="nl">uitstekend spraakniveau</rdfs:label>
+    <rdfs:label xml:lang="ja">専門家レベルの会話</rdfs:label>
+    <rdfs:label xml:lang="pt">expressão oral a um nível de especialista</rdfs:label>
+    <rdfs:comment xml:lang="en">The person can speak the language at an expert level</rdfs:comment>
+    <rdfs:comment xml:lang="es">La persona puede hablar la lengua a un nivel experto</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La personne parle la langue à niveau excellent</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De persoon kan de taal uitstekend spreken</rdfs:comment>
+    <rdfs:comment xml:lang="ja">その人はその言語を専門家レベルで話すことができる</rdfs:comment>
+    <rdfs:comment xml:lang="pt">A pessoa consegue falar o idioma a um nível de especialista</rdfs:comment>
+    <dc:replaces rdf:resource="https://w3id.org/vocab/lingvoj#hasAbility4"/>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#expertReading">
+    <rdfs:label xml:lang="en">expert reading</rdfs:label>
+    <rdfs:label xml:lang="es">nivel de lectura excelente</rdfs:label>
+    <rdfs:label xml:lang="fr">excellente lecture</rdfs:label>
+    <rdfs:label xml:lang="nl">uitstekend leesniveau</rdfs:label>
+    <rdfs:label xml:lang="ja">専門家レベルの読解</rdfs:label>
+    <rdfs:label xml:lang="pt">leitura a um nível de especialista</rdfs:label>
+    <rdfs:comment xml:lang="en">The person can read the language at a expert level</rdfs:comment>
+    <rdfs:comment xml:lang="es">La persona puede leer en la lengua a un nivel experto</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La personne lit la langue à un niveau excellent</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De persoon kan de taal uitstekend lezen</rdfs:comment>
+    <rdfs:comment xml:lang="ja">その人はその言語を専門家レベルで読むことができる</rdfs:comment>
+    <dc:replaces rdf:resource="https://w3id.org/vocab/lingvoj#hasAbility4"/>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#expertWriting">
+    <rdfs:label xml:lang="en">expert writing</rdfs:label>
+    <rdfs:label xml:lang="es">nivel de escritura excelente</rdfs:label>
+    <rdfs:label xml:lang="fr">excellente écriture</rdfs:label>
+    <rdfs:label xml:lang="nl">uitstekend schrijfniveau</rdfs:label>
+    <rdfs:label xml:lang="ja">専門家レベルの記述</rdfs:label>
+    <rdfs:label xml:lang="pt">escrita a um nível de especialista</rdfs:label>
+    <rdfs:comment xml:lang="en">The person can write the language at an expert level</rdfs:comment>
+    <rdfs:comment xml:lang="es">La persona puede escribir la lengua a un nivel experto</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La personne écrit la langue à un niveau excellent</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De persoon kan de taal uitstekend schrijven</rdfs:comment>
+    <rdfs:comment xml:lang="ja">その人はその言語を専門家レベルで書くことができる</rdfs:comment>
+    <rdfs:comment xml:lang="pt">A pessoa consegue escrever o idioma a um nível de especialista</rdfs:comment>
+    <dc:replaces rdf:resource="https://w3id.org/vocab/lingvoj#hasAbility4"/>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#nativeLanguage">
+    <rdfs:label xml:lang="en">native language</rdfs:label>
+    <rdfs:label xml:lang="ja">母国語</rdfs:label>
+    <rdfs:label xml:lang="es">lengua materna</rdfs:label>
+    <rdfs:label xml:lang="fr">langue maternelle</rdfs:label>
+    <rdfs:label xml:lang="nl">moedertaal</rdfs:label>
+    <rdfs:label xml:lang="pt">idioma mãe</rdfs:label>
+    <rdfs:comment xml:lang="en">This property is independent of the level of fluency, reading or writing ability</rdfs:comment>
+    <rdfs:comment xml:lang="es">Esta propiedad es independiente de el nivel de fluidez o de las habilidades de lectura o escritura</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Cette propriété est indépendante du niveau de langue parlée, lue ou écrite</rdfs:comment>
+    <rdfs:comment xml:lang="nl">Deze eigenschap is onafhankelijk van het niveau van spreken, lezen of schrijven</rdfs:comment>
+    <rdfs:comment xml:lang="ja">このプロパティーは、流暢さ、読解力、記述能力のレベルに依存しない</rdfs:comment>
+    <rdfs:comment xml:lang="pt">Esta propriedade é independente do nível de fluência, de leitura ou de escrita</rdfs:comment>
+    <dc:replaces>
+      <rdf:Description rdf:about="https://w3id.org/vocab/lingvoj#hasNativeLanguage">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/vocab/lingvoj_v1.3.rdf"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <dc:isReplacedBy rdf:resource="https://w3id.org/vocab/lingvoj#nativeLanguage"/>
+      </rdf:Description>
+    </dc:replaces>
+
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#communicationLanguage">
+    <rdfs:label xml:lang="en">communication language</rdfs:label>
+    <rdfs:label xml:lang="es">lenguaje de comunicación</rdfs:label>
+    <rdfs:label xml:lang="fr">langue de communication</rdfs:label>
+    <rdfs:label xml:lang="nl">kommunikation taal</rdfs:label>
+    <rdfs:label xml:lang="ja">コミュニケーション言語</rdfs:label>
+    <rdfs:label xml:lang="pt">idioma de comunicação</rdfs:label>
+    <rdfs:comment xml:lang="en">A language used for external communication</rdfs:comment>
+    <rdfs:comment xml:lang="es">Una lengua utilizada para la comunicación externa</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Une langue utilisée pour la communication externe</rdfs:comment>
+    <rdfs:comment xml:lang="nl">Een taal gebruikt voor externe communicatie</rdfs:comment>
+    <rdfs:comment xml:lang="ja">外部とのコミュニケーションに用いる言語</rdfs:comment>
+    <rdfs:comment xml:lang="pt">Um idioma utilizado para a comunicação externa</rdfs:comment>
+    <dc:replaces>
+      <rdf:Description rdf:about="https://w3id.org/vocab/lingvoj#hasCommunicationLanguage">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/vocab/lingvoj_v1.3.rdf"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <dc:isReplacedBy rdf:resource="https://w3id.org/vocab/lingvoj#communicationLanguage"/>
+      </rdf:Description>
+    </dc:replaces>
+
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <ns2:domainIncludes rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <ns2:domainIncludes rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#workingLanguage">
+    <rdfs:label xml:lang="en">working language</rdfs:label>
+    <rdfs:label xml:lang="es">lenguaje de trabajo</rdfs:label>
+    <rdfs:label xml:lang="fr">langue de travail</rdfs:label>
+    <rdfs:label xml:lang="nl">werktaal</rdfs:label>
+    <rdfs:label xml:lang="ja">実用言語</rdfs:label>
+    <rdfs:label xml:lang="pt">idioma de trabalho</rdfs:label>
+    <rdfs:comment xml:lang="en">A language the project or organization uses for internal communication</rdfs:comment>
+    <rdfs:comment xml:lang="es">Una lengua que el proyecto o la organización utiliza para comunicación interna</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Une langue utilisée par l'organisation ou le projet pour sa communication interne</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De taal gebruikt voor interne communicatie door een organisatie of binnen een project</rdfs:comment>
+    <rdfs:comment xml:lang="ja">プロジェクトや組織が内部コミュニケーションに用いる言語</rdfs:comment>
+    <rdfs:comment xml:lang="pt">O idioma que o projecto ou organização usa para a comunicação interna</rdfs:comment>
+    <dc:replaces>
+      <rdf:Description rdf:about="https://w3id.org/vocab/lingvoj#hasWorkingLanguage">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/vocab/lingvoj_v1.3.rdf"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <dc:isReplacedBy rdf:resource="https://w3id.org/vocab/lingvoj#workingLanguage"/>
+      </rdf:Description>
+    </dc:replaces>
+
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <ns2:domainIncludes rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <ns2:domainIncludes rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#officialLanguage">
+    <rdfs:label xml:lang="en">official language</rdfs:label>
+    <rdfs:label xml:lang="es">lengua oficial</rdfs:label>
+    <rdfs:label xml:lang="fr">langue officielle</rdfs:label>
+    <rdfs:label xml:lang="nl">officiële taal</rdfs:label>
+    <rdfs:label xml:lang="ja">公用語</rdfs:label>
+    <rdfs:label xml:lang="pt">idioma oficial</rdfs:label>
+    <rdfs:comment xml:lang="en">An official language of a country, project, organization or event</rdfs:comment>
+    <rdfs:comment xml:lang="es">Una lengua oficial en un país, proyecto, organización o evento</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Une langue officielle d'un pays, d'une organisation, d'un projet ou d'un événement</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De officiële taal van een land, organisatie, prject of evenement</rdfs:comment>
+    <rdfs:comment xml:lang="ja">国、プロジェクト、組織やイベントの公用語</rdfs:comment>
+    <rdfs:comment xml:lang="pt">Um idioma oficial de um país, projecto, organização ou evento</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#officialIn">
+        <rdfs:label xml:lang="en">official language of</rdfs:label>
+        <rdfs:label xml:lang="es">lengua oficial de</rdfs:label>
+        <rdfs:label xml:lang="fr">langue officielle de</rdfs:label>
+        <rdfs:label xml:lang="nl">officiële taal</rdfs:label>
+        <rdfs:label xml:lang="ja">～の公用語</rdfs:label>
+        <rdfs:label xml:lang="pt">idioma oficial de</rdfs:label>
+        <rdfs:domain rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/vocab/lingvoj#officialLanguage"/>
+        <ns2:rangeIncludes rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <ns2:rangeIncludes rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <ns2:rangeIncludes rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <ns2:rangeIncludes rdf:resource="http://schema.org/Place"/>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+
+    <ns2:similarProperty rdf:resource="http://www.telegraphis.net/ontology/geography/geography#officialLanguage"/>
+    <ns2:domainIncludes rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <ns2:domainIncludes rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+    <ns2:domainIncludes rdf:resource="http://linkedevents.org/ontology/Event"/>
+    <ns2:domainIncludes rdf:resource="http://schema.org/Place"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#spokenLanguage">
+    <rdfs:label xml:lang="en">spoken language</rdfs:label>
+    <rdfs:label xml:lang="es">lengua hablada</rdfs:label>
+    <rdfs:label xml:lang="fr">langue parlée</rdfs:label>
+    <rdfs:label xml:lang="nl">gesproken taal</rdfs:label>
+    <rdfs:label xml:lang="ja">話し言葉</rdfs:label>
+    <rdfs:label xml:lang="pt">idioma falado</rdfs:label>
+    <rdfs:comment xml:lang="en">A language which is spoken in some place or event</rdfs:comment>
+    <rdfs:comment xml:lang="es">Una lengua que se habla en algún lugar o evento</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Une langue parlée dans un lieu ou lors d'un événement</rdfs:comment>
+    <rdfs:comment xml:lang="nl">Een taal gesproken op een bepaalde plek of tijdens een evenement</rdfs:comment>
+    <rdfs:comment xml:lang="ja">ある場所やイベントで話される言語</rdfs:comment>
+    <rdfs:comment xml:lang="pt">O idioma que é falado num determinado lugar ou evento</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <ns2:domainIncludes rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <ns2:domainIncludes rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+    <ns2:domainIncludes rdf:resource="http://linkedevents.org/ontology/Event"/>
+    <ns2:domainIncludes rdf:resource="http://schema.org/Place"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#fromCountry">
+    <rdfs:label xml:lang="en">from country</rdfs:label>
+    <rdfs:label xml:lang="es">país de origen</rdfs:label>
+    <rdfs:label xml:lang="fr">pays d'origine</rdfs:label>
+    <rdfs:label xml:lang="nl">land van herkomst</rdfs:label>
+    <rdfs:label xml:lang="ja">起源の国</rdfs:label>
+    <rdfs:label xml:lang="pt">do país</rdfs:label>
+    <rdfs:comment xml:lang="en">Country of origin of the language</rdfs:comment>
+    <rdfs:comment xml:lang="es">País de origen de la lengua</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Pays d'origine de la langue</rdfs:comment>
+    <rdfs:comment xml:lang="nl">Land van herkomst van de taal</rdfs:comment>
+    <rdfs:comment xml:lang="ja">言語の起源の国</rdfs:comment>
+    <rdfs:comment xml:lang="pt">País de origem do idioma</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:range rdf:resource="http://schema.org/Country"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#mainLanguage">
+    <rdfs:label xml:lang="en">main language</rdfs:label>
+    <rdfs:label xml:lang="es">lengua principal</rdfs:label>
+    <rdfs:label xml:lang="fr">langue principale</rdfs:label>
+    <rdfs:label xml:lang="nl">hoofdtaal</rdfs:label>
+    <rdfs:label xml:lang="ja">主要言語</rdfs:label>
+    <rdfs:label xml:lang="pt">Idioma principal</rdfs:label>
+    <rdfs:comment xml:lang="en">The main language used in the place or language resource </rdfs:comment>
+    <rdfs:comment xml:lang="es">Una lengua ampliamente hablada en un lugar (país, región, ciudad...)</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La langue principale utilisée dans le lieu ou la ressource linguistique</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De meest gebruikte taal op deze plek (land, regio, stad ...)</rdfs:comment>
+    <rdfs:comment xml:lang="ja">その場所または言語資源で用いられる主要言語</rdfs:comment>
+    <rdfs:comment xml:lang="pt">O idioma principal utilizado num local ou recurso linguístico</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <ns2:domainIncludes rdf:resource="http://schema.org/Place"/>
+    <ns2:domainIncludes rdf:resource="https://w3id.org/vocab/lingvoj#LanguageResource"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#regionalLanguage">
+    <rdfs:label xml:lang="en">regional language</rdfs:label>
+    <rdfs:label xml:lang="es">lengua regional</rdfs:label>
+    <rdfs:label xml:lang="fr">langue régionale</rdfs:label>
+    <rdfs:label xml:lang="nl">streektaal</rdfs:label>
+    <rdfs:label xml:lang="ja">地方言語</rdfs:label>
+    <rdfs:label xml:lang="pt">idioma regional</rdfs:label>
+    <rdfs:comment xml:lang="en">A language spoken in a region of a country</rdfs:comment>
+    <rdfs:comment xml:lang="es">Una lengua hablada en una región o un país</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Une langue parlée dans une région d'un pays</rdfs:comment>
+    <rdfs:comment xml:lang="nl">Een taal gesproken in bepaalde streek van een land</rdfs:comment>
+    <rdfs:comment xml:lang="ja">ある国のある地域で話される言語</rdfs:comment>
+    <rdfs:comment xml:lang="pt">Um idioma falado num região de um país</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <ns2:domainIncludes rdf:resource="http://schema.org/Country"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#minorityLanguage">
+    <rdfs:label xml:lang="en">minority language</rdfs:label>
+    <rdfs:label xml:lang="es">lengua minoritaria</rdfs:label>
+    <rdfs:label xml:lang="fr">langue minoritaire</rdfs:label>
+    <rdfs:label xml:lang="nl">minderheidstaal</rdfs:label>
+    <rdfs:label xml:lang="ja">少数言語</rdfs:label>
+    <rdfs:label xml:lang="pt">idioma minoritário</rdfs:label>
+    <rdfs:comment xml:lang="en">A language spoken by a minority in some country, but not necessarily in a specific region</rdfs:comment>
+    <rdfs:comment xml:lang="es">Un lengua hablada por una minoría en algún país, pero no necesariamente en una región específica</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Une langue parlée par une minorité dans un pays, mais pas nécessairement dans une région spécifique</rdfs:comment>
+    <rdfs:comment xml:lang="nl">Een taal die door een minderheid van de bevolking van een land gesproken wordt, maar niet noodzakelijkerwijs in een specifieke regio</rdfs:comment>
+    <rdfs:comment xml:lang="ja">ある国の少数の人々（必ずしも特定地域ではない）が話す言語</rdfs:comment>
+    <rdfs:comment xml:lang="pt">O idioma falado por uma minoria num país, mas não necessariamente numa região específica</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <ns2:domainIncludes rdf:resource="http://schema.org/Country"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#historicalLanguage">
+    <rdfs:label xml:lang="en">historical language</rdfs:label>
+    <rdfs:label xml:lang="es">lengua histórica</rdfs:label>
+    <rdfs:label xml:lang="fr">langue historique</rdfs:label>
+    <rdfs:label xml:lang="nl">historische taal</rdfs:label>
+    <rdfs:label xml:lang="ja">歴史的言語</rdfs:label>
+    <rdfs:label xml:lang="pt">idioma histórico</rdfs:label>
+    <rdfs:comment xml:lang="en">A language spoken in the past in this place, but not used anymore</rdfs:comment>
+    <rdfs:comment xml:lang="es">Una lengua hablada en el pasado en este lugar, pero ya no se utiliza</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Une langue parlée dans le passé dans ce lieu, mais plus utilisée aujourd'hui</rdfs:comment>
+    <rdfs:comment xml:lang="nl">Een taal die vroeger in dit gebied gesproken werd, maar wordt nu niet meer gebruikt</rdfs:comment>
+    <rdfs:comment xml:lang="ja">この場所で過去に話されていたが、もはや用いられていない言語</rdfs:comment>
+    <rdfs:comment xml:lang="pt">Um idioma falado no passado num determinado lugar, não sendo já utilizado no presente</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <ns2:domainIncludes rdf:resource="http://schema.org/Place"/>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="https://w3id.org/vocab/lingvoj#Translation">
+    <rdfs:label xml:lang="en">Translation</rdfs:label>
+    <rdfs:label xml:lang="es">Traducción</rdfs:label>
+    <rdfs:label xml:lang="fr">Traduction</rdfs:label>
+    <rdfs:label xml:lang="nl">Vertaling</rdfs:label>
+    <rdfs:label xml:lang="ja">翻訳</rdfs:label>
+    <rdfs:label xml:lang="pt">Tradução</rdfs:label>
+    <rdfs:comment xml:lang="en">Description of a Translation should include original resource, translated resource, original language and target language. It might also include translator(s) and translation date, and relevant other information using properties inherited from the generic Event class</rdfs:comment>
+    <rdfs:comment xml:lang="es">La descripción de una Traducción debe incluir la fuente original, la fuente traducida, la lengua  original y la lengua de  destino. También puede incluir  el o los traductor(es) , la fecha de traducción y otra información relevante utilizando propiedades heredadas de la clase generica Event</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La description d'une Traduction inclut au minimum la ressource originale, la ressource traduite, la langue d'origine et la langue cible. Elle peut aussi inclure le(s) traducteur(s), la date de traduction, et toute autre information pertinente utilisant les propriétés de la classe générique Evénement</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De beschrijving of een vertaling zou de oorspronkelijke bron, de vertaalde bron, de brontaal en de doeltaal moeten bevatten. Het kan ook de vertaler(s), de vertaaldatum en andere relevante informatie, gebruik makend van de eigenschappen geërfd van de generieke Event klasse, bevatten</rdfs:comment>
+    <rdfs:comment xml:lang="ja">Translation（翻訳）の記述には、元の資源、翻訳後の資源、元の言語および翻訳先の言語が含まれているべきである。さらに、それには、翻訳者と翻訳日、そして、汎用的なEventクラスから継承されたプロパティーを用いた、関連するその他の情報が含まれるかもしれない</rdfs:comment>
+    <rdfs:comment xml:lang="pt">Descrição de uma tradução deverá inclrui o recurso original, o recurso traduzido, o idioma original e o idioma de destino. Também pode incluir o(s)/a(s) tradutore(s)/tradutora(s), a data de tradução e outra informação relevante utilizando propriedades herdadas da classe genérica Event</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://linkedevents.org/ontology/Event"/>
+    <ns2:expectedProperty rdf:resource="http://purl.org/dc/terms/date"/>
+    <ns0:example rdf:resource="http://www.lingvoj.org/translations/w3c-recs.rdf#translation-css1-en-to-bg"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#originalLanguage">
+    <rdfs:label xml:lang="en">original language</rdfs:label>
+    <rdfs:label xml:lang="es">lengua original</rdfs:label>
+    <rdfs:label xml:lang="fr">langue d'origine</rdfs:label>
+    <rdfs:label xml:lang="nl">oorspronkelijke taal</rdfs:label>
+    <rdfs:label xml:lang="ja">元の言語</rdfs:label>
+    <rdfs:label xml:lang="pt">idioma original</rdfs:label>
+    <rdfs:comment xml:lang="en">The language of the original ressource</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La langue de la ressource originale</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De taal van de de bron</rdfs:comment>
+    <rdfs:comment xml:lang="es">La lengua de la fuente original</rdfs:comment>
+    <rdfs:comment xml:lang="ja">元の資源の言語</rdfs:comment>
+    <rdfs:comment xml:lang="pt">O idioma do recurso original</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:domain rdf:resource="https://w3id.org/vocab/lingvoj#Translation"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#targetLanguage">
+    <rdfs:label xml:lang="en">target language</rdfs:label>
+    <rdfs:label xml:lang="es">lengua destino</rdfs:label>
+    <rdfs:label xml:lang="fr">langue cible</rdfs:label>
+    <rdfs:label xml:lang="nl">doeltaal</rdfs:label>
+    <rdfs:label xml:lang="ja">翻訳先の言語</rdfs:label>
+    <rdfs:label xml:lang="pt">idioma destino</rdfs:label>
+    <rdfs:comment xml:lang="en">The language of the translated ressource</rdfs:comment>
+    <rdfs:comment xml:lang="es">La lengua de la fuente traducida</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La langue de la ressource traduite</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De taal waarin de bron vertaald is</rdfs:comment>
+    <rdfs:comment xml:lang="ja">翻訳後の資源の言語</rdfs:comment>
+    <rdfs:comment xml:lang="pt">O idioma do recurso traduzido</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:domain rdf:resource="https://w3id.org/vocab/lingvoj#Translation"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#originalResource">
+    <rdfs:label xml:lang="en">original resource</rdfs:label>
+    <rdfs:label xml:lang="es">recurso original</rdfs:label>
+    <rdfs:label xml:lang="fr">ressource originale</rdfs:label>
+    <rdfs:label xml:lang="nl">oorspronkelijke bron</rdfs:label>
+    <rdfs:label xml:lang="ja">元の資源</rdfs:label>
+    <rdfs:label xml:lang="pt">recurso original</rdfs:label>
+    <rdfs:comment xml:lang="en">The resource which is translated</rdfs:comment>
+    <rdfs:comment xml:lang="es">La fuente que se traduce</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La ressource qui est traduite</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De vertaalde bron</rdfs:comment>
+    <rdfs:comment xml:lang="ja">翻訳元の資源</rdfs:comment>
+    <rdfs:comment xml:lang="pt">o recurso que se traduz</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/vocab/lingvoj#Translation"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#translatedResource">
+    <rdfs:label xml:lang="en">translated resource</rdfs:label>
+    <rdfs:label xml:lang="es">recurso traducido</rdfs:label>
+    <rdfs:label xml:lang="fr">ressource traduite</rdfs:label>
+    <rdfs:label xml:lang="nl">vertaalde bron</rdfs:label>
+    <rdfs:label xml:lang="ja">翻訳後の資源</rdfs:label>
+    <rdfs:label xml:lang="pt">recurso traduzido</rdfs:label>
+    <rdfs:comment xml:lang="en">The resource which is the result of the translation</rdfs:comment>
+    <rdfs:comment xml:lang="es">La fuente que resulta de la traducción</rdfs:comment>
+    <rdfs:comment xml:lang="fr">La ressource qui est le résultat de la traduction</rdfs:comment>
+    <rdfs:comment xml:lang="nl">Het resultaat van de vertaling</rdfs:comment>
+    <rdfs:comment xml:lang="ja">翻訳の結果である資源</rdfs:comment>
+    <rdfs:comment xml:lang="pt">O recurso que é o resultado da tradução</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/vocab/lingvoj#Translation"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#translator">
+    <rdfs:label xml:lang="en">translator</rdfs:label>
+    <rdfs:label xml:lang="es">traductor</rdfs:label>
+    <rdfs:label xml:lang="fr">traducteur</rdfs:label>
+    <rdfs:label xml:lang="nl">vertaler</rdfs:label>
+    <rdfs:label xml:lang="ja">翻訳者</rdfs:label>
+    <rdfs:label xml:lang="pt">tradutor</rdfs:label>
+    <rdfs:comment xml:lang="en">An agent (person, organization or sofware) responsible of the translation</rdfs:comment>
+    <rdfs:comment xml:lang="es">Un agente (persona, organización o software) responsable de la traducción</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Un agent (personne, organisation ou logiciel) responsable de la traduction</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De agent (persoon, organisatie of applicatie) verantwoordelijk voor de vertaling</rdfs:comment>
+    <rdfs:comment xml:lang="ja">翻訳に責任を持つエージェント（人、組織またはソフトウェア）</rdfs:comment>
+    <rdfs:comment xml:lang="pt">um agente (pessoa, organização ou programa) responsável pela tradução</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/vocab/lingvoj#Translation"/>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#interpreter">
+    <rdfs:label xml:lang="en">interpreter</rdfs:label>
+    <rdfs:label xml:lang="es">intérprete</rdfs:label>
+    <rdfs:label xml:lang="fr">interprète</rdfs:label>
+    <rdfs:label xml:lang="nl">tolk</rdfs:label>
+    <rdfs:label xml:lang="ja">通訳者</rdfs:label>
+    <rdfs:label xml:lang="pt">interprete</rdfs:label>
+    <rdfs:comment xml:lang="en">An agent (person or software) responsible of a real-time oral translation</rdfs:comment>
+    <rdfs:comment xml:lang="es">Un agente (persona, organización o software) responsable de la interpretación oral</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Un agent (personne ou logiciel) responsable de la traduction orale en temps réel</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De agent (persoon of applicatie) verantwoordelijk voor het tolken</rdfs:comment>
+    <rdfs:comment xml:lang="ja">即時の通訳に責任を持つエージェント（人またはソフトウェア）</rdfs:comment>
+    <rdfs:comment xml:lang="pt">Um agente (pessoa ou programa) responsável por uma tradução oral em tempo real</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/vocab/lingvoj#translator"/>
+    <rdfs:domain rdf:resource="https://w3id.org/vocab/lingvoj#Translation"/>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="https://w3id.org/vocab/lingvoj#LanguageResource">
+    <rdfs:label xml:lang="en">Language resource</rdfs:label>
+    <rdfs:label xml:lang="es">Recurso lingüístico</rdfs:label>
+    <rdfs:label xml:lang="fr">Ressource linguistique</rdfs:label>
+    <rdfs:label xml:lang="nl">Taal bron</rdfs:label>
+    <rdfs:label xml:lang="ja">言語資源</rdfs:label>
+    <rdfs:label xml:lang="pt">Recurso linguístico</rdfs:label>
+    <rdfs:comment xml:lang="en">Dictionaries, thesauri, language courses, translation services, etc.</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Dictionnaires, thesaurus, cours de langue, services de traduction, etc.</rdfs:comment>
+    <rdfs:comment xml:lang="nl">Woordenboeken, thesauri, taalcursussen, vertaaldiensten, etc.</rdfs:comment>
+    <rdfs:comment xml:lang="es">Diccionarios, tesauros, cursos de idiomas, servicios de traducción, etc.</rdfs:comment>
+    <rdfs:comment xml:lang="ja">辞書、シソーラス、言語コース、翻訳サービスなど</rdfs:comment>
+    <rdfs:comment xml:lang="pt">Dicionários, tesauros, cursos de idiomas, serviços de tradução, etc.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://www.language-archives.org/documents/faq.html#2"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#resourceType">
+    <rdfs:label xml:lang="en">resource type</rdfs:label>
+    <rdfs:label xml:lang="es">tipo de recurso</rdfs:label>
+    <rdfs:label xml:lang="fr">type de ressource</rdfs:label>
+    <rdfs:label xml:lang="nl">bron type</rdfs:label>
+    <rdfs:label xml:lang="ja">資源の種類</rdfs:label>
+    <rdfs:label xml:lang="pt">tipo de recurso</rdfs:label>
+    <rdfs:comment xml:lang="en">A concept defining the type of the language resource</rdfs:comment>
+    <rdfs:comment xml:lang="es">Un concepto que define el tipo de recurso lingüístico</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Un concept définissant le type de la ressource linguistique</rdfs:comment>
+    <rdfs:comment xml:lang="nl">Een concept van het definiëren van de aard van de taal bron</rdfs:comment>
+    <rdfs:comment xml:lang="ja">言語資源の種類を定義する概念</rdfs:comment>
+    <rdfs:comment xml:lang="pt">Um conceito que define o tipo de recuso linguístico</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/vocab/lingvoj#LanguageResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#supportedLanguage">
+    <rdfs:label xml:lang="en">supported language</rdfs:label>
+    <rdfs:label xml:lang="es">idioma soportado</rdfs:label>
+    <rdfs:label xml:lang="fr">langue supportée</rdfs:label>
+    <rdfs:label xml:lang="nl">ondersteunde taal</rdfs:label>
+    <rdfs:label xml:lang="ja">サポートされている言語 </rdfs:label>
+    <rdfs:label xml:lang="pt">idioma suportado</rdfs:label>
+    <rdfs:comment xml:lang="en">A language supported by the language resource</rdfs:comment>
+    <rdfs:comment xml:lang="es">Un idioma soportado por el recurso lingüístico</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Une langue supportée par la ressource linguistique</rdfs:comment>
+    <rdfs:comment xml:lang="nl">Een taal die wordt ondersteund door de taal bron</rdfs:comment>
+    <rdfs:comment xml:lang="ja">言語資源でサポートされている言語</rdfs:comment>
+    <rdfs:comment xml:lang="pt">Um idioma suportado pelo recurso linguístico</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/vocab/lingvoj#LanguageResource"/>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#supportingResource">
+    <rdfs:label xml:lang="en">support resource</rdfs:label>
+    <rdfs:label xml:lang="es">recurso soportado</rdfs:label>
+    <rdfs:label xml:lang="fr">ressource support</rdfs:label>
+    <rdfs:label xml:lang="nl">ondersteunende bron</rdfs:label>
+    <rdfs:label xml:lang="ja">サポート資源</rdfs:label>
+    <rdfs:label xml:lang="pt">recurso suportado</rdfs:label>
+    <rdfs:comment xml:lang="en">A language resource for this language</rdfs:comment>
+    <rdfs:comment xml:lang="es">Un recurso lingüístico para este idioma</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Une ressource linguistique pour cette langue</rdfs:comment>
+    <rdfs:comment xml:lang="nl">Een taal bron voor deze taal</rdfs:comment>
+    <rdfs:comment xml:lang="ja">この言語の言語資源</rdfs:comment>
+    <rdfs:comment xml:lang="pt">Um recurso linguístico para este idioma</rdfs:comment>
+    <owl:inverseOf rdf:resource="https://w3id.org/vocab/lingvoj#supportedLanguage"/>
+    <rdfs:domain rdf:resource="https://w3id.org/vocab/lingvoj#Lingvo"/>
+    <rdfs:range rdf:resource="https://w3id.org/vocab/lingvoj#LanguageResource"/>
+  </owl:ObjectProperty>
+
+  <rdf:Description rdf:about="https://w3id.org/vocab/lingvoj#iso1">
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/vocab/lingvoj_v1.3.rdf"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <dc:isReplacedBy rdf:resource="http://lexvo.org/ontology#iso639P1Code"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://w3id.org/vocab/lingvoj#iso2b">
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/vocab/lingvoj_v1.3.rdf"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <dc:isReplacedBy rdf:resource="http://lexvo.org/ontology#iso639P2BCode"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://w3id.org/vocab/lingvoj#iso2t">
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/vocab/lingvoj_v1.3.rdf"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <dc:isReplacedBy rdf:resource="http://lexvo.org/ontology#iso639P2TCode"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://w3id.org/vocab/lingvoj#iso3">
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/vocab/lingvoj_v1.3.rdf"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <dc:isReplacedBy rdf:resource="http://lexvo.org/ontology#iso639P3Code"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://w3id.org/vocab/lingvoj#hasAbility1">
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/vocab/lingvoj_v1.3.rdf"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <dc:isReplacedBy rdf:resource="https://w3id.org/vocab/lingvoj#basicUnderstanding"/>
+    <dc:isReplacedBy rdf:resource="https://w3id.org/vocab/lingvoj#basicSpeaking"/>
+    <dc:isReplacedBy rdf:resource="https://w3id.org/vocab/lingvoj#basicReading"/>
+    <dc:isReplacedBy rdf:resource="https://w3id.org/vocab/lingvoj#basicWriting"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://w3id.org/vocab/lingvoj#hasAbility2">
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/vocab/lingvoj_v1.3.rdf"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <dc:isReplacedBy rdf:resource="https://w3id.org/vocab/lingvoj#intermediateUnderstanding"/>
+    <dc:isReplacedBy rdf:resource="https://w3id.org/vocab/lingvoj#intermediateSpeaking"/>
+    <dc:isReplacedBy rdf:resource="https://w3id.org/vocab/lingvoj#intermediateReading"/>
+    <dc:isReplacedBy rdf:resource="https://w3id.org/vocab/lingvoj#intermediateWriting"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://w3id.org/vocab/lingvoj#hasAbility3">
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/vocab/lingvoj_v1.3.rdf"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <dc:isReplacedBy rdf:resource="https://w3id.org/vocab/lingvoj#advancedUnderstanding"/>
+    <dc:isReplacedBy rdf:resource="https://w3id.org/vocab/lingvoj#advancedSpeaking"/>
+    <dc:isReplacedBy rdf:resource="https://w3id.org/vocab/lingvoj#advancedReading"/>
+    <dc:isReplacedBy rdf:resource="https://w3id.org/vocab/lingvoj#advancedWriting"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://w3id.org/vocab/lingvoj#hasAbility4">
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/vocab/lingvoj_v1.3.rdf"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <dc:isReplacedBy rdf:resource="https://w3id.org/vocab/lingvoj#expertUnderstanding"/>
+    <dc:isReplacedBy rdf:resource="https://w3id.org/vocab/lingvoj#expertSpeaking"/>
+    <dc:isReplacedBy rdf:resource="https://w3id.org/vocab/lingvoj#expertReading"/>
+    <dc:isReplacedBy rdf:resource="https://w3id.org/vocab/lingvoj#expertWriting"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://w3id.org/vocab/lingvoj#hasAbility5">
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/vocab/lingvoj_v1.3.rdf"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://w3id.org/vocab/lingvoj#original_resource">
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/vocab/lingvoj_v1.3.rdf"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <dc:isReplacedBy rdf:resource="https://w3id.org/vocab/lingvoj#originalResource"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://w3id.org/vocab/lingvoj#originalTitle">
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/vocab/lingvoj_v1.3.rdf"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:comment xml:lang="en">The original title is a property of the original resource (use dcterms:title) and not a property of the Translation itself</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Le titre original est une propriété de la ressource originale (utiliser dcterms:title) et non une propriété de la Traduction elle-même</rdfs:comment>
+    <rdfs:comment xml:lang="ja">原タイトルは、Translation（翻訳）自体のプロパティーではなく、元の資源のプロパティー（dcterms:titleを使用）</rdfs:comment>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://w3id.org/vocab/lingvoj#translatedTitle">
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/vocab/lingvoj_v1.3.rdf"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <rdfs:comment xml:lang="en">The translated title is a property of the translated resource (use dcterms:title) and not a property of the Translation itself</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Le titre traduit est une propriété de la ressource traduite (utiliser dcterms:title) et non une propriété de la Traduction elle-même</rdfs:comment>
+    <rdfs:comment xml:lang="ja">翻訳タイトルは、Translation（翻訳）自体のプロパティーではなく、翻訳された資源のプロパティー（dcterms:titleを使用）</rdfs:comment>
+  </rdf:Description>
+
+</rdf:RDF>

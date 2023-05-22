@@ -1,0 +1,4155 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/mod#"
+     xml:base="https://w3id.org/mod"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="https://w3id.org/mod">
+        <owl:versionIRI rdf:resource="https://w3id.org/mod/2.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#historyNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#historyNote">
+        <rdfs:comment xml:lang="en">A note about the past state/use/meaning of a concept.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#note"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://schema.org/Date -->
+
+
+    <rdfs:Datatype rdf:about="http://schema.org/Date"/>
+    
+
+
+    <!-- http://schema.org/DateTime -->
+
+
+    <rdfs:Datatype rdf:about="http://schema.org/DateTime"/>
+    
+
+
+    <!-- http://schema.org/Number -->
+
+
+    <rdfs:Datatype rdf:about="http://schema.org/Number"/>
+    
+
+
+    <!-- http://schema.org/Text -->
+
+
+    <rdfs:Datatype rdf:about="http://schema.org/Text"/>
+    
+
+
+    <!-- http://schema.org/URL -->
+
+
+    <rdfs:Datatype rdf:about="http://schema.org/URL"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://creativecommons.org/ns#attributionURL -->
+
+
+    <owl:ObjectProperty rdf:about="http://creativecommons.org/ns#attributionURL">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">The URL the creator of a Work would like used when attributing re-use.</rdfs:comment>
+        <rdfs:label xml:lang="en">attribution URL</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+
+    <owl:ObjectProperty rdf:about="http://creativecommons.org/ns#license">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/license"/>
+        <rdfs:comment xml:lang="en">A Work has license a License.
+(a subproperty of dc:license, the same as xhtml:license).</rdfs:comment>
+        <rdfs:label xml:lang="en">license</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://creativecommons.org/ns#morePermissions -->
+
+
+    <owl:ObjectProperty rdf:about="http://creativecommons.org/ns#morePermissions">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">A related resource which describes additional permissions or alternative licenses for a Work which may be available.</rdfs:comment>
+        <rdfs:label xml:lang="en">more permissions</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://creativecommons.org/ns#useGuidelines -->
+
+
+    <owl:ObjectProperty rdf:about="http://creativecommons.org/ns#useGuidelines">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">A related resource which defines non-binding use guidelines for the work.</rdfs:comment>
+        <rdfs:label xml:lang="en">use guidelines</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/Relation -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/Relation">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">relation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/accessRights -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/accessRights">
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+        <rdfs:comment xml:lang="en">Information about who access the resource or an indication of its security status.</rdfs:comment>
+        <rdfs:label xml:lang="en">access rights</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/accrualMethod -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/accrualMethod">
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/MethodOfAccrual"/>
+        <rdfs:comment xml:lang="en">The method by which items are added to a collection.</rdfs:comment>
+        <rdfs:label xml:lang="en">accrual method</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/accrualPeriodicity -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/accrualPeriodicity">
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/Frequency"/>
+        <rdfs:comment xml:lang="en">The frequency at which dataset is published.</rdfs:comment>
+        <rdfs:label xml:lang="en">accrual periodicity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/accrualPolicy -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/accrualPolicy">
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/Policy"/>
+        <rdfs:comment xml:lang="en">The policy governing the addition of items to a collection.</rdfs:comment>
+        <rdfs:comment xml:lang="en">accrual policy</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/audience -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/audience">
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/AgentClass"/>
+        <rdfs:comment xml:lang="en">A class of agents for whom the resource is intended or useful.</rdfs:comment>
+        <rdfs:label xml:lang="en">audience</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/conformsTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/conformsTo">
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/Standard"/>
+        <rdfs:comment xml:lang="en">An established standard to which the described resource conforms.</rdfs:comment>
+        <rdfs:label xml:lang="en">conforms to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/contributor">
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
+        <rdfs:comment xml:lang="en">An entity responsible for making contributions to the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">contributor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/coverage -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/coverage">
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/dc/terms/Jurisdiction"/>
+                    <rdf:Description rdf:about="http://purl.org/dc/terms/Location"/>
+                    <rdf:Description rdf:about="http://purl.org/dc/terms/PeriodOfTime"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant.</rdfs:comment>
+        <rdfs:label xml:lang="en">coverage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/creator">
+        <rdfs:comment xml:lang="en">An entity responsible for making the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">creator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/format -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/format">
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/MediaTypeOrExtent"/>
+        <rdfs:comment xml:lang="en">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">format</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasFormat -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasFormat">
+        <owl:inverseOf rdf:resource="http://purl.org/dc/terms/isFormatOf"/>
+        <rdfs:comment xml:lang="en">a related resource that is substantially the same as the pre-existing described resource, but in another format.</rdfs:comment>
+        <rdfs:label xml:lang="en">has format</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasPart -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasPart">
+        <owl:inverseOf rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+        <rdfs:comment xml:lang="en">A related resource that is included either physically or logically in the described resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasVersion">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">a related resource that is a version, edition, or adaptation of the described resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">has verison</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/isFormatOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/isFormatOf">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">a related resource that is substantially the same as the described resource, but in another format.</rdfs:comment>
+        <rdfs:label xml:lang="en">is format of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/isPartOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/isPartOf">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">A related resource in which the described resource is physically or logically included.</rdfs:comment>
+        <rdfs:label xml:lang="en">is part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/isReferencedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/isReferencedBy">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">A related resource that references, cites, or otherwise points to the described resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">is referenced by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/isVersionOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/isVersionOf">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">A related resource of which the described resource is a version, edition, or adaptation.</rdfs:comment>
+        <rdfs:label xml:lang="en">is version of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/language -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/language">
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/LinguisticSystem"/>
+        <rdfs:comment xml:lang="en">A language of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">language</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
+        <rdfs:comment xml:lang="en">A legal document giving official permission to do something with the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">license</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/publisher">
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
+        <rdfs:comment xml:lang="en">An entity responsible for making the resource available.</rdfs:comment>
+        <rdfs:label xml:lang="en">publisher</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/requires -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/requires">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">A related resource that is required by the described resource to support its function, delivery, or coherence.</rdfs:comment>
+        <rdfs:label xml:lang="en">requires</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/rights -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/rights">
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+        <rdfs:comment xml:lang="en">Information about rights held in and over the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">rights</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/rightsHolder -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/rightsHolder">
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
+        <rdfs:comment xml:lang="en">A person or organization owning or managing rights over the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">rights holder</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/source">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">A related resource from which the described resource is derived.</rdfs:comment>
+        <rdfs:label xml:lang="en">source</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/spatial -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/spatial">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/coverage"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/Location"/>
+        <rdfs:comment xml:lang="en">Spatial characteristics of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">spatial coverage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/temporal -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/temporal">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/coverage"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+        <rdfs:comment xml:lang="en">Temporal characteristics of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">temporal coverage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/type -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/type">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <rdfs:comment xml:lang="en">The nature or genre of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/pav/authoredBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pav/authoredBy">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/creator"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/pav/contributedBy"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+        <rdfs:comment xml:lang="en">An agent that originated or gave existence to the work that is expressed by the digital resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">authored by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/pav/contributedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pav/contributedBy">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/contributor"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAttributedTo"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+        <rdfs:comment xml:lang="en">The resource was contributed to by the given agent.</rdfs:comment>
+        <rdfs:label xml:lang="en">contributed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/pav/createdBY -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pav/createdBY">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/creator"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAttributedTo"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+        <rdfs:comment xml:lang="en">An agent primary responsible for making the digital artifact or resource representation.</rdfs:comment>
+        <rdfs:label xml:lang="en">created bY</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/pav/createdWith -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pav/createdWith">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">The software/tool used by the creator (pav:createdBy) when making the digital resource, for instance a word processor or an annotation tool. A more independent software agent that creates the resource without direct interaction by a human creator should instead be indicated using pav:createdBy.</rdfs:comment>
+        <rdfs:label xml:lang="en">created with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/pav/curatedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pav/curatedBy">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/pav/contributedBy"/>
+        <owl:inverseOf rdf:resource="http://purl.org/pav/curates"/>
+        <rdfs:comment xml:lang="en">Specifies an agent specialist responsible for shaping the expression in an appropriate format. Often the primary agent responsible for ensuring the quality of the representation.</rdfs:comment>
+        <rdfs:label xml:lang="en">curated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/pav/curates -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pav/curates">
+        <rdfs:comment xml:lang="en">Provided for backwards compatibility. Use instead the inverse pav:curatedBy.</rdfs:comment>
+        <rdfs:label xml:lang="en">curates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/pav/derivedFrom -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pav/derivedFrom">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">Derived from a different resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">derived from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/pav/hasCurrentVersion -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pav/hasCurrentVersion">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/pav/hasVersion"/>
+        <rdfs:comment xml:lang="en">This resource has a more specific, versioned resource with equivalent content.</rdfs:comment>
+        <rdfs:label xml:lang="en">has current version</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/pav/hasVersion -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pav/hasVersion">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/hasVersion"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#generalizationOf"/>
+        <rdfs:comment xml:lang="en">This resource has a more specific, versioned resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">has version</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rdfs.org/ns/void#classPartition -->
+
+
+    <owl:ObjectProperty rdf:about="http://rdfs.org/ns/void#classPartition">
+        <rdfs:subPropertyOf rdf:resource="http://rdfs.org/ns/void#subset"/>
+        <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdfs:range rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdfs:comment xml:lang="en">A subset of a void:Dataset that contains only the entities of a certain rdfs:Class.</rdfs:comment>
+        <rdfs:label xml:lang="en">class partition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rdfs.org/ns/void#dataDump -->
+
+
+    <owl:ObjectProperty rdf:about="http://rdfs.org/ns/void#dataDump">
+        <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">An RDF dump, partial or complete, of a void:Dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">data dump</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rdfs.org/ns/void#exampleResource -->
+
+
+    <owl:ObjectProperty rdf:about="http://rdfs.org/ns/void#exampleResource">
+        <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">An example entity that is representative for the entities described in a void:Dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">example resource</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rdfs.org/ns/void#propertyPartition -->
+
+
+    <owl:ObjectProperty rdf:about="http://rdfs.org/ns/void#propertyPartition">
+        <rdfs:subPropertyOf rdf:resource="http://rdfs.org/ns/void#subset"/>
+        <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdfs:range rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdfs:comment xml:lang="en">A subset of a void:Dataset that contains only the triples of a certain rdf:Property.</rdfs:comment>
+        <rdfs:label xml:lang="en">property partition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rdfs.org/ns/void#rootResource -->
+
+
+    <owl:ObjectProperty rdf:about="http://rdfs.org/ns/void#rootResource">
+        <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">A top concept or entry point for a void:Dataset that is structured in a tree-like fashion. All resources in a dataset can be reached by following links from its root resources in a small number of steps.</rdfs:comment>
+        <rdfs:label xml:lang="en">root resource</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rdfs.org/ns/void#sparqlEndpoint -->
+
+
+    <owl:ObjectProperty rdf:about="http://rdfs.org/ns/void#sparqlEndpoint">
+        <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">A SPARQL protocol endpoint that allows SPARQL query access to a void:Dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">sparql endpoint</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rdfs.org/ns/void#subset -->
+
+
+    <owl:ObjectProperty rdf:about="http://rdfs.org/ns/void#subset">
+        <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdfs:range rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdfs:comment xml:lang="en">A void:Dataset that is part of another void:Dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">subset</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rdfs.org/ns/void#uriLookupEndpoint -->
+
+
+    <owl:ObjectProperty rdf:about="http://rdfs.org/ns/void#uriLookupEndpoint">
+        <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">Defines a simple URI look-up protocol for accessing a dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">uri lookup endpoint</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://rdfs.org/ns/void#vocabulary -->
+
+
+    <owl:ObjectProperty rdf:about="http://rdfs.org/ns/void#vocabulary">
+        <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">A vocabulary that is used in the dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">vocabulary</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/about -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/about">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment xml:lang="en">The subject matter of the content.</rdfs:comment>
+        <rdfs:label xml:lang="en">about</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/associatedMedia -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/associatedMedia">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range rdf:resource="http://schema.org/MediaObject"/>
+        <rdfs:comment xml:lang="en">A media object that encodes this CreativeWork. This property is a synonym for encoding.</rdfs:comment>
+        <rdfs:label xml:lang="en">associated media</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/audience -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/audience">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range rdf:resource="http://schema.org/Audience"/>
+        <rdfs:comment xml:lang="en">An intended audience, i.e. a group for whom something was created.</rdfs:comment>
+        <rdfs:label xml:lang="en">audience</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/author -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/author">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.</rdfs:comment>
+        <rdfs:label xml:lang="en">author</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/citation -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/citation">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment xml:lang="en">A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">citation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/comment -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/comment">
+        <rdfs:range rdf:resource="http://schema.org/Comment"/>
+        <rdfs:comment xml:lang="en">Comments, typically from users.</rdfs:comment>
+        <rdfs:label xml:lang="en">comment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/contributor -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/contributor">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">A secondary contributor to the CreativeWork or Event.</rdfs:comment>
+        <rdfs:label xml:lang="en">contributor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/copyrightHolder -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/copyrightHolder">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">The party holding the legal copyright to the CreativeWork.</rdfs:comment>
+        <rdfs:label xml:lang="en">copyright holder</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/distribution -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/distribution">
+        <rdfs:domain rdf:resource="http://schema.org/Dataset"/>
+        <rdfs:range rdf:resource="http://schema.org/dataDownload"/>
+        <rdfs:comment xml:lang="en">A downloadable form of this dataset, at a specific location, in a specific format.</rdfs:comment>
+        <rdfs:label xml:lang="en">distribution</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/hasPart -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/hasPart">
+        <owl:inverseOf rdf:resource="http://schema.org/isPartOf"/>
+        <rdfs:comment xml:lang="en">Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).</rdfs:comment>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/includedInDataCatalog -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/includedInDataCatalog">
+        <rdfs:domain rdf:resource="http://schema.org/Dataset"/>
+        <rdfs:range rdf:resource="http://schema.org/DataCatalog"/>
+        <rdfs:comment xml:lang="en">A data catalog which contains this dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">included in data catalog</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/isBasedOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/isBasedOn">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment xml:lang="en">A resource from which this work is derived or from which it is a modification or adaption.</rdfs:comment>
+        <rdfs:label xml:lang="en">is based on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/isPartOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/isPartOf">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment xml:lang="en">Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.</rdfs:comment>
+        <rdfs:label xml:lang="en">is Part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/license -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/license">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment xml:lang="en">A license document that applies to this content, typically indicated by URL.</rdfs:comment>
+        <rdfs:label xml:lang="en">license</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/mainEntity -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/mainEntity">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment xml:lang="en">Indicates the primary entity described in some page or other CreativeWork.</rdfs:comment>
+        <rdfs:label xml:lang="en">main entity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/publisher -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/publisher">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">The publisher of the creative work.</rdfs:comment>
+        <rdfs:label xml:lang="en">publisher</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/review -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/review">
+        <rdfs:range rdf:resource="http://schema.org/Review"/>
+        <rdfs:comment xml:lang="en">A review of the item.</rdfs:comment>
+        <rdfs:label xml:lang="en">review</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/sourceOrganization -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/sourceOrganization">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range rdf:resource="http://schema.org/Organization"/>
+        <rdfs:comment xml:lang="en">The Organization on whose behalf the creator was working.</rdfs:comment>
+        <rdfs:label xml:lang="en">source organization</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/spatial -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/spatial">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range rdf:resource="http://schema.org/Place"/>
+        <rdfs:comment xml:lang="en">The &quot;spatial&quot; property can be used in cases when more specific properties (e.g. locationCreated, spatialCoverage, contentLocation) are not known to be appropriate.</rdfs:comment>
+        <rdfs:label xml:lang="en">spatial</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/translationOfWork -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/translationOfWork">
+        <owl:inverseOf rdf:resource="http://schema.org/workTranslation"/>
+        <rdfs:comment xml:lang="en">The work that this work has been translated from. e.g. 物种起源 is a translationOf “On the Origin of Species”</rdfs:comment>
+        <rdfs:label xml:lang="en">translation of work</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/translator -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/translator">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Organization"/>
+                    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event.</rdfs:comment>
+        <rdfs:label xml:lang="en">translator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/workExample -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/workExample">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment xml:lang="en">Example/instance/realization/derivation of the concept of this creative work. eg. The paperback edition, first edition, or eBook.</rdfs:comment>
+        <rdfs:label xml:lang="en">work example</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/workTranslation -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/workTranslation">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment xml:lang="en">A work that is a translation of the content of this work. e.g. 西遊記 has an English workTranslation “Journey to the West”,a German workTranslation “Monkeys Pilgerfahrt” and a Vietnamese translation Tây du ký bình khảo.</rdfs:comment>
+        <rdfs:label xml:lang="en">work translation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#blog -->
+
+
+    <owl:ObjectProperty rdf:about="http://usefulinc.com/ns/doap#blog">
+        <rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://rdfs.org/sioc/ns#Weblog"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">URI of a blog related to a project.</rdfs:comment>
+        <rdfs:label xml:lang="en">blog</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#bug-database -->
+
+
+    <owl:ObjectProperty rdf:about="http://usefulinc.com/ns/doap#bug-database">
+        <rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">Bug tracker for a project.</rdfs:comment>
+        <rdfs:label xml:lang="en">bug-database</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#developer -->
+
+
+    <owl:ObjectProperty rdf:about="http://usefulinc.com/ns/doap#developer">
+        <rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment xml:lang="en">Developer of software for the project.</rdfs:comment>
+        <rdfs:label xml:lang="en">developer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#download-mirror -->
+
+
+    <owl:ObjectProperty rdf:about="http://usefulinc.com/ns/doap#download-mirror">
+        <rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">Mirror of software download web page.</rdfs:comment>
+        <rdfs:label xml:lang="en">download mirror</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#download-page -->
+
+
+    <owl:ObjectProperty rdf:about="http://usefulinc.com/ns/doap#download-page">
+        <rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">Web page from which the project software can be downloaded.</rdfs:comment>
+        <rdfs:label xml:lang="en">download page</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#helper -->
+
+
+    <owl:ObjectProperty rdf:about="http://usefulinc.com/ns/doap#helper">
+        <rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment xml:lang="en">Project contributor.</rdfs:comment>
+        <rdfs:label xml:lang="en">helper</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#mailing-list -->
+
+
+    <owl:ObjectProperty rdf:about="http://usefulinc.com/ns/doap#mailing-list">
+        <rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+        <rdfs:range rdf:resource="http://rdfs.org/sioc/ns#MailingList"/>
+        <rdfs:comment xml:lang="en">Mailing list home page or email address.</rdfs:comment>
+        <rdfs:label xml:lang="en">mailing-list</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#maintainer -->
+
+
+    <owl:ObjectProperty rdf:about="http://usefulinc.com/ns/doap#maintainer">
+        <rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment xml:lang="en">Maintainer of a project, a project leader.</rdfs:comment>
+        <rdfs:label xml:lang="en">maintainer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#release -->
+
+
+    <owl:ObjectProperty rdf:about="http://usefulinc.com/ns/doap#release">
+        <rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+        <rdfs:range rdf:resource="http://usefulinc.com/ns/doap#Version"/>
+        <rdfs:comment xml:lang="en">A project release.</rdfs:comment>
+        <rdfs:label xml:lang="en">release</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#repository -->
+
+
+    <owl:ObjectProperty rdf:about="http://usefulinc.com/ns/doap#repository">
+        <rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+        <rdfs:range rdf:resource="http://usefulinc.com/ns/doap#Repository"/>
+        <rdfs:comment xml:lang="en">Source code repository.</rdfs:comment>
+        <rdfs:label xml:lang="en">repository</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#screenshots -->
+
+
+    <owl:ObjectProperty rdf:about="http://usefulinc.com/ns/doap#screenshots">
+        <rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">Web page with screenshots of project.</rdfs:comment>
+        <rdfs:label xml:lang="en">screenshots</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#wiki -->
+
+
+    <owl:ObjectProperty rdf:about="http://usefulinc.com/ns/doap#wiki">
+        <rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+        <rdfs:range rdf:resource="http://rdfs.org/sioc/ns#Wiki"/>
+        <rdfs:comment xml:lang="en">URL of Wiki for collaborative discussion of project.</rdfs:comment>
+        <rdfs:label xml:lang="en">wiki</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/nkos#alignedWith -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/nkos#alignedWith">
+        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+        <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+        <rdfs:comment xml:lang="en">A related resource with which the described resource is aligned.</rdfs:comment>
+        <rdfs:label xml:lang="en">aligned with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/nkos#basedOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/nkos#basedOn">
+        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Work"/>
+        <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Work"/>
+        <rdfs:comment xml:lang="en">A resource used as the source for a derivative resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">based on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/nkos#usedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/nkos#usedBy">
+        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Work"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/AgentClass"/>
+        <rdfs:comment xml:lang="en">Agent using the described KOS.</rdfs:comment>
+        <rdfs:label xml:lang="en">used by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#seeAlso -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso">
+        <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">rdfs:seeAlso is an instance of rdf:Property that is used to indicate a resource that might provide additional information about the subject resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">see also</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#identifier -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/adms#identifier">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/adms#Asset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+        <rdfs:comment xml:lang="en">Links a resource to an adms:Identifier class.</rdfs:comment>
+        <rdfs:label xml:lang="en">identifier</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#prev -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/adms#prev">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/adms#Asset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">A link to the previous version of the Asset.</rdfs:comment>
+        <rdfs:label xml:lang="en">prev</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#representationTechnique -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/adms#representationTechnique">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/adms#AssetDistribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">More information about the format in which an Asset Distribution is released. This is different from the file format as, for example, a ZIP file (file format) could contain an XML schema (representation technique).</rdfs:comment>
+        <rdfs:label xml:lang="en">representation technique</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#sample -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/adms#sample">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/adms#Asset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/adms#Asset"/>
+        <rdfs:comment xml:lang="en">Links to a sample of an Asset (which is itself an Asset).</rdfs:comment>
+        <rdfs:label xml:lang="en">sample</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#status -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/adms#status">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/adms#Asset"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/adms#AssetDistribution"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">The status of the Asset in the context of a particular workflow process.</rdfs:comment>
+        <rdfs:label xml:lang="en">status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#translation -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/adms#translation">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/adms#Asset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">Links Assets that are translations of each other.</rdfs:comment>
+        <rdfs:label xml:lang="en">translation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#accessSerive -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#accessSerive">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <rdfs:comment xml:lang="en">A data service that gives access to the distribution of the dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">access service</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#accessService -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#accessService">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <rdfs:comment xml:lang="en">A data service that gives access to the distribution of the dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">access service</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#accessURL -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#accessURL">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">A URL of the resource that gives access to a distribution of the dataset. E.g. landing page, feed, SPARQL endpoint.</rdfs:comment>
+        <rdfs:comment xml:lang="en">dcat:accessURL SHOULD be used for the URL of a service or location that can provide access to this distribution, typically through a Web form, query or API call.
+
+dcat:downloadURL is preferred for direct links to downloadable resources.
+
+If the distribution(s) are accessible only through a landing page (i.e. direct download URLs are not known), then the landing page URL associated with the dcat:Dataset SHOULD be duplicated as access URL on a distribution (see § 5.7 Dataset available only behind some Web page).</rdfs:comment>
+        <rdfs:label xml:lang="en">access URL</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#compressFormat -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#compressFormat">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/MediaType"/>
+        <rdfs:comment xml:lang="en">The compression format of the distribution in which the data is contained in a compressed form, e.g. to reduce the size of the downloadable file.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property to be used when the files in the distribution are compressed, e.g. in a ZIP file. The format SHOULD be expressed using a media type as defined by IANA [IANA-MEDIA-TYPES], if available.</rdfs:comment>
+        <rdfs:label xml:lang="en">compression format</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#contactPoint -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#contactPoint">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+        <rdfs:comment xml:lang="en">Relevant contact information for the cataloged resource. Use of vCard is recommended.</rdfs:comment>
+        <rdfs:label xml:lang="en">contact point</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#dataset -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#dataset">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:comment xml:lang="en">A collection of data that is listed in the catalog.</rdfs:comment>
+        <rdfs:label xml:lang="en">dataset</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#distribution -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#distribution">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/adms#Asset"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/adms#AssetDistribution"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Distribution"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">An available distribution of the dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">dataset distribution</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#downloadURL -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#downloadURL">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution&apos;s dct:format and/or dcat:mediaType</rdfs:comment>
+        <rdfs:label xml:lang="en">download URL</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#landingPage -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#landingPage">
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/page"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:comment xml:lang="en">A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.</rdfs:comment>
+        <rdfs:label xml:lang="en">landing page</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#mediaType -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#mediaType">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/MediaType"/>
+        <rdfs:comment xml:lang="en">The media type of the distribution as defined by IANA [IANA-MEDIA-TYPES].</rdfs:comment>
+        <rdfs:label xml:lang="en">media type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#packageFormat -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#packageFormat">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/MediaType"/>
+        <rdfs:comment xml:lang="en">The package format of the distribution in which one or more data files are grouped together, e.g. to enable a set of related files to be downloaded together.</rdfs:comment>
+        <rdfs:label xml:lang="en">packaging format</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#record -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#record">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+        <rdfs:comment xml:lang="en">A record describing the registration of a single resource (e.g., a dataset, a data service) that is part of the catalog.</rdfs:comment>
+        <rdfs:label xml:lang="en">catalog record</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#servesDataset -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#servesDataset">
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:comment xml:lang="en">A collection of data that this data service can distribute.</rdfs:comment>
+        <rdfs:label xml:lang="en">serves dataset</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#service -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#service">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/hasPart"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+        <rdfs:comment xml:lang="en">A site or end-point that is listed in the catalog.</rdfs:comment>
+        <rdfs:label xml:lang="en">service</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#theme -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#theme">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">A main category of the resource. A resource can have multiple themes.</rdfs:comment>
+        <rdfs:label xml:lang="en">theme</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/odrl/2/hasPolicy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/odrl/2/hasPolicy">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Distribution"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Resource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Policy"/>
+        <rdfs:comment xml:lang="en">Identifies an ODRL Policy for which the identified Asset is the target Asset to all the Rules.</rdfs:comment>
+        <rdfs:label xml:lang="en">has policy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#generalizationOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#generalizationOf">
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/prov#specializationOf"/>
+        <rdfs:label xml:lang="en">generalization of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#specializationOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#specializationOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:comment xml:lang="en">An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter. In particular, the lifetime of the entity being specialized contains that of any specialization. Examples of aspects include a time period, an abstraction, and a context associated with the entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">specialization of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasAttributedTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasAttributedTo">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+        <rdfs:comment xml:lang="en">Attribution is the ascribing of an entity to an agent.</rdfs:comment>
+        <rdfs:label xml:lang="en">was attributed to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:comment xml:lang="en">A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">was derived from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasGeneratedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <rdfs:comment xml:lang="en">Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation.</rdfs:comment>
+        <rdfs:label xml:lang="en">was generated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasInfluencedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasInfluencedBy">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/prov#Activity"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/prov#Entity"/>
+                    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Influence is the capacity of an entity, activity, or agent to have an effect on the character, development, or behavior of another by means of usage, start, end, generation, invalidation, communication, derivation, attribution, association, or delegation.</rdfs:comment>
+        <rdfs:label xml:lang="en">was influenced by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasInvalidatedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasInvalidatedBy">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <rdfs:comment xml:lang="en">Invalidation is the start of the destruction, cessation, or expiry of an existing entity by an activity. The entity is no longer available for use (or further invalidation) after invalidation. Any generation or usage of an entity precedes its invalidation.</rdfs:comment>
+        <rdfs:label xml:lang="en">was invalidated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasRevisionOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasRevisionOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:comment xml:lang="en">A revision is a derivation for which the resulting entity is a revised version of some original. The implication here is that the resulting entity contains substantial content from the original. Revision is a particular case of derivation.</rdfs:comment>
+        <rdfs:label xml:lang="en">was revision of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/sparql-service-description#endpoint -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sparql-service-description#endpoint">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sparql-service-description#Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">Relates an instance of sd:Service to a SPARQL endpoint that implements the SPARQL Protocol service [SPROT] for the service. The object of the sd:endpoint property is an IRI.</rdfs:comment>
+        <rdfs:label xml:lang="en">endpoint</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/fundedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/fundedBy">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">An organization funding a project or person.</rdfs:comment>
+        <rdfs:label xml:lang="en">funded by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/homepage -->
+
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/homepage">
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/page"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:comment xml:lang="en">A homepage for some thing.</rdfs:comment>
+        <rdfs:label xml:lang="en">homepage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/isPrimaryTopicOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/isPrimaryTopicOf">
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/page"/>
+        <owl:inverseOf rdf:resource="http://xmlns.com/foaf/0.1/primaryTopic"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:comment xml:lang="en">A document that this thing is the primary topic of.</rdfs:comment>
+        <rdfs:label xml:lang="en">is primary topic of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/logo -->
+
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/logo">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">A logo representing some thing.</rdfs:comment>
+        <rdfs:label xml:lang="en">logo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/maker -->
+
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/maker">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="en">An agent that made this thing.</rdfs:comment>
+        <rdfs:label xml:lang="en">maker</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/page -->
+
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/page">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:comment xml:lang="en">A page or document about this thing.</rdfs:comment>
+        <rdfs:label xml:lang="en">page</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/primaryTopic -->
+
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/primaryTopic">
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/page"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#CatalogRecord"/>
+                    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Document"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Resource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">A page or document about this thing.</rdfs:comment>
+        <rdfs:label xml:lang="en">primary topic</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/topic -->
+
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/topic">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">A topic of some page or document.</rdfs:comment>
+        <rdfs:label xml:lang="en">topic</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mod#analytics -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mod#analytics">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="https://w3id.org/mod#Analytics"/>
+        <rdfs:comment xml:lang="en">This property shall be used to store any analytics for an ontology. E.g., number of visits an ontology received in a portal, number of downloads, etc.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://www.isibang.ac.in/ns/mod/1.4/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">analytics</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mod#comesFromTheSameDomain -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mod#comesFromTheSameDomain">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#semanticArtefactRelation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:comment xml:lang="en">If the two ontologies come from the same domain (without any other details).</rdfs:comment>
+        <rdfs:label xml:lang="en">comes from the same domain</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mod#conformsToKnowledgeRepresentationParadigm -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mod#conformsToKnowledgeRepresentationParadigm">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="https://w3id.org/mod#KnowledgeRepresentationParadigm"/>
+        <rdfs:comment xml:lang="en">A representation formalism that is followed to describe knowledge in an ontology. Example includes description logics, first order logic, etc. dct: An established standard to which the described resource conforms.</rdfs:comment>
+        <rdfs:label xml:lang="en">conforms to knowledge representation paradigm</rdfs:label>
+        <skos:historyNote xml:lang="en">This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace.</skos:historyNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mod#depiction -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mod#depiction">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+        <rdfs:comment xml:lang="en">A depiction of some thing.</rdfs:comment>
+        <rdfs:label xml:lang="en">depiction</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mod#describes -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mod#describes">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mod#designedForTask -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mod#designedForTask">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="https://w3id.org/mod#SemanticArtefactTask"/>
+        <rdfs:label xml:lang="en">designed for task</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mod#endorsedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mod#endorsedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
+        <rdfs:comment xml:lang="en">An ontology endorsed by an agent.</rdfs:comment>
+        <rdfs:label xml:lang="en">endorsed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mod#generalizes -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mod#generalizes">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#semanticArtefactRelation"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/mod#specializes"/>
+        <rdfs:comment xml:lang="en">Indicates that the subject vocabulary generalizes by some superclasses or superproperties the object vocabulary.</rdfs:comment>
+        <rdfs:label xml:lang="en">generalizes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mod#group -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mod#group">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="https://w3id.org/mod#Group"/>
+        <rdfs:comment xml:lang="en">A group of ontologies that the ontology is usually considered into.</rdfs:comment>
+        <rdfs:label xml:lang="en">group</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mod#hasDisjunctionsWith -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mod#hasDisjunctionsWith">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#semanticArtefactRelation"/>
+        <rdfs:comment xml:lang="en">Indicates that the subject vocabulary declares some disjunct classes with the object vocabulary.</rdfs:comment>
+        <rdfs:label xml:lang="en">has disjunctions with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mod#hasDisparateModellingWith -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mod#hasDisparateModellingWith">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#semanticArtefactRelation"/>
+        <rdfs:comment xml:lang="en">Disagreements related  to  the  conceptualization  of  the  ontologies. Two ontologies are considered to have disparate modeling if they represent corresponding entities in different ways, e.g.  as an instance in one case and a class in the other.</rdfs:comment>
+        <rdfs:label xml:lang="en">disparate modelling with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mod#hasEquivalencesWith -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mod#hasEquivalencesWith">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#semanticArtefactRelation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:comment xml:lang="en">Indicates that the subject vocabulary declares some equivalent classes or properties with the object vocabulary.</rdfs:comment>
+        <rdfs:label xml:lang="en">ontology aligned to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mod#hasEvaluation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mod#hasEvaluation">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="https://w3id.org/mod#Evaluation"/>
+        <rdfs:comment xml:lang="en">This property makes a relationship between an ontology and its evaluation result.</rdfs:comment>
+        <rdfs:label xml:lang="en">has evaluation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mod#metadataVoc -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mod#metadataVoc">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#semanticArtefactRelation"/>
+        <rdfs:comment xml:lang="en">Indicates that the subject vocabulary uses the object vocabulary in metadata at vocabulary or element level.</rdfs:comment>
+        <rdfs:label xml:lang="en">metadata vocubulary used</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mod#qualifiedRelation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mod#qualifiedRelation">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Relationship"/>
+        <rdfs:comment xml:lang="en">Link to a description of a relationship with another resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">qualified relation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mod#semanticArtefactRelation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mod#semanticArtefactRelation">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mod#similar -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mod#similar">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#semanticArtefactRelation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:comment xml:lang="en">Used to assert that two vocabularies are similar in scope and objectives, independently of the fact that they otherwise refer to each other.</rdfs:comment>
+        <rdfs:label xml:lang="en">similar to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mod#specializes -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mod#specializes">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#semanticArtefactRelation"/>
+        <rdfs:comment xml:lang="en">An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter. voaf:Indicates that the subject vocabulary defines some subclasses or subproperties of the object vocabulary, or local restrictions on those.</rdfs:comment>
+        <rdfs:label xml:lang="en">specializes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mod#usedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mod#usedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#semanticArtefactRelation"/>
+        <rdfs:comment xml:lang="en">Indicates that the subject vocabulary is used by the object vocabulary.</rdfs:comment>
+        <rdfs:label xml:lang="en">used by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mod#usedEngineeringMethodology -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mod#usedEngineeringMethodology">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="https://w3id.org/mod#EngineeringMethodology"/>
+        <rdfs:label xml:lang="en">used engineering methodology</rdfs:label>
+        <skos:historyNote xml:lang="en">This property has been adopted from OMV Ontology Metadata Vocabulary, and renamed and redefined in the MOD namespace.</skos:historyNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mod#usedInProject -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mod#usedInProject">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <rdfs:comment xml:lang="en">An semantic artefact that is used in a project.</rdfs:comment>
+        <rdfs:label xml:lang="en">used in project</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://creativecommons.org/ns#attributionName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://creativecommons.org/ns#attributionName">
+        <rdfs:comment xml:lang="en">The name the creator of a Work would like used when attributing re-use.</rdfs:comment>
+        <rdfs:label xml:lang="en">attribution name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://identifiers.org/idot/alternatePrefix -->
+
+
+    <owl:DatatypeProperty rdf:about="http://identifiers.org/idot/alternatePrefix">
+        <rdfs:domain rdf:resource="http://purl.org/dc/dcmitype/Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">alternate prefix</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://identifiers.org/idot/exampleIdentifier -->
+
+
+    <owl:DatatypeProperty rdf:about="http://identifiers.org/idot/exampleIdentifier">
+        <rdfs:domain rdf:resource="http://purl.org/dc/dcmitype/Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">example identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://identifiers.org/idot/identifierPattern -->
+
+
+    <owl:DatatypeProperty rdf:about="http://identifiers.org/idot/identifierPattern">
+        <rdfs:domain rdf:resource="http://purl.org/dc/dcmitype/Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">identifier pattern</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://identifiers.org/idot/obsolete -->
+
+
+    <owl:DatatypeProperty rdf:about="http://identifiers.org/idot/obsolete">
+        <rdfs:domain rdf:resource="http://purl.org/dc/dcmitype/Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">obsolete</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://identifiers.org/idot/preferredPrefix -->
+
+
+    <owl:DatatypeProperty rdf:about="http://identifiers.org/idot/preferredPrefix">
+        <rdfs:domain rdf:resource="http://purl.org/dc/dcmitype/Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">preferred prefix</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://identifiers.org/idot/state -->
+
+
+    <owl:DatatypeProperty rdf:about="http://identifiers.org/idot/state">
+        <rdfs:domain rdf:resource="http://purl.org/dc/dcmitype/Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">state</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/abstract">
+        <rdfs:comment xml:lang="en">A summary of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">abstract</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/alternative -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/alternative">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">An alternative name for the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">alternative</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">A bibliographic reference for the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">bibliographic citation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/created">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Date of creation of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">created</rdfs:label>
+        <rdfs:label xml:lang="en">date created</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/date -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/date">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">A point or period of time associated with an event in the lifecycle of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/dateSubmitted -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/dateSubmitted">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Date of submission of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">date submitted</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:comment xml:lang="en">An account of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">An unambiguous reference to the resource within a given context.</rdfs:comment>
+        <rdfs:label xml:lang="en">identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/issued">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Date of formal issuance of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">date issued</rdfs:label>
+        <rdfs:label xml:lang="en">issued</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/modified">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Date on which the resource was changed.</rdfs:comment>
+        <rdfs:label xml:lang="en">Date modified</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/subject -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/subject">
+        <rdfs:comment xml:lang="en">A topic of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">subject</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/valid -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/valid">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Date (often a range) of validity of a resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">valid</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/pav/authoredOn -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/pav/authoredOn">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/pav/contributedOn"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The date this resource was authored.</rdfs:comment>
+        <rdfs:label xml:lang="en">authored on</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/pav/contributedOn -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/pav/contributedOn">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The date this resource was contributed to.</rdfs:comment>
+        <rdfs:label xml:lang="en">contributed on</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/pav/createdOn -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/pav/createdOn">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The date of creation of the resource representation.</rdfs:comment>
+        <rdfs:label xml:lang="en">created on</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/pav/curatedOn -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/pav/curatedOn">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/pav/contributedOn"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The date this resource was curated.</rdfs:comment>
+        <rdfs:label xml:lang="en">curated on</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/pav/lastUpdateOn -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/pav/lastUpdateOn">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The date of the last update of the resource. An update is a change which did not warrant making a new resource related using pav:previousVersion, for instance correcting a spelling mistake.</rdfs:comment>
+        <rdfs:label xml:lang="en">last update on</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/pav/version -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/pav/version">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The version number of a resource. This is a freetext string, typical values are &quot;1.5&quot; or &quot;21&quot;. The URI identifying the previous version can be provided using prov:previousVersion.</rdfs:comment>
+        <rdfs:label xml:lang="en">version</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rdfs.org/ns/void#classes -->
+
+
+    <owl:DatatypeProperty rdf:about="http://rdfs.org/ns/void#classes">
+        <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">The total number of distinct classes in a void:Dataset. In other words, the number of distinct resources occuring as objects of rdf:type triples in the dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">classes</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rdfs.org/ns/void#entities -->
+
+
+    <owl:DatatypeProperty rdf:about="http://rdfs.org/ns/void#entities">
+        <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">The total number of entities that are described in a void:Dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">entities</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rdfs.org/ns/void#properties -->
+
+
+    <owl:DatatypeProperty rdf:about="http://rdfs.org/ns/void#properties">
+        <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">The total number of distinct properties in a void:Dataset. In other words, the number of distinct resources that occur in the predicate position of triples in the dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">properties</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rdfs.org/ns/void#triples -->
+
+
+    <owl:DatatypeProperty rdf:about="http://rdfs.org/ns/void#triples">
+        <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">The total number of triples contained in a void:Dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">triples</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rdfs.org/ns/void#uriRegexPattern -->
+
+
+    <owl:DatatypeProperty rdf:about="http://rdfs.org/ns/void#uriRegexPattern">
+        <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A regular expression that matches the URIs of a void:Dataset&apos;s entities.</rdfs:comment>
+        <rdfs:label xml:lang="en">uri regex pattern</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://rdfs.org/ns/void#uriSpace -->
+
+
+    <owl:DatatypeProperty rdf:about="http://rdfs.org/ns/void#uriSpace">
+        <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A URI that is a common string prefix of all the entity URIs in a void:Datset.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The void:uriSpace property can be used to state that all entity URIs in a dataset start with a given string. In other words, they share a common “URI namespace”.</rdfs:comment>
+        <rdfs:label xml:lang="en">uri space</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/award -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/award">
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment xml:lang="en">An award won by or for this item.</rdfs:comment>
+        <rdfs:label xml:lang="en">award</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/dateCreated -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/dateCreated">
+        <rdfs:range rdf:resource="http://schema.org/DateTime"/>
+        <rdfs:comment xml:lang="en">The date on which the CreativeWork was created or the item was added to a DataFeed.</rdfs:comment>
+        <rdfs:label xml:lang="en">date created</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/dateModified -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/dateModified">
+        <rdfs:range rdf:resource="http://schema.org/DateTime"/>
+        <rdfs:comment xml:lang="en">The date on which the CreativeWork was most recently modified or when the item&apos;s entry was modified within a DataFeed.</rdfs:comment>
+        <rdfs:label xml:lang="en">date modified</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/datePublished -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/datePublished">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Date"/>
+                    <rdf:Description rdf:about="http://schema.org/DateTime"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Date of first broadcast/publication.</rdfs:comment>
+        <rdfs:label xml:lang="en">date published</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/description -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/description">
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment xml:lang="en">A description of the item.</rdfs:comment>
+        <rdfs:label xml:lang="en">description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/fileFormat -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/fileFormat">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Media type, typically MIME format (see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, &apos;encoding&apos; can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.</rdfs:comment>
+        <rdfs:label xml:lang="en">file format</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/image -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/image">
+        <rdfs:range rdf:resource="http://schema.org/URL"/>
+        <rdfs:comment xml:lang="en">An image of the item. This can be a URL or a fully described ImageObject.</rdfs:comment>
+        <rdfs:label xml:lang="en">image</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/inLanguage -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/inLanguage">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment xml:lang="en">The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. See also availableLanguage.</rdfs:comment>
+        <rdfs:label xml:lang="en">in language</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/keywords -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/keywords">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.</rdfs:comment>
+        <rdfs:label xml:lang="en">keywords</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/logo -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/logo">
+        <rdfs:range rdf:resource="http://schema.org/URL"/>
+        <rdfs:comment xml:lang="en">An associated logo.</rdfs:comment>
+        <rdfs:label xml:lang="en">logo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/mainEntityOfPage -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/mainEntityOfPage">
+        <rdfs:range rdf:resource="http://schema.org/URL"/>
+        <rdfs:comment xml:lang="en">Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details.</rdfs:comment>
+        <rdfs:label xml:lang="en">main entity of page</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/name -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/name">
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment xml:lang="en">The name of the item.</rdfs:comment>
+        <rdfs:label xml:lang="en">name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/publishingPrinciples -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/publishingPrinciples">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment xml:lang="en">The publishingPrinciples property indicates (typically via URL) a document describing the editorial principles of an Organization (or individual e.g. a Person writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a CreativeWork (e.g. NewsArticle) the principles are those of the party primarily responsible for the creation of the CreativeWork.
+
+While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a funder) can be expressed using schema.org terminology.</rdfs:comment>
+        <rdfs:label xml:lang="en">publishing principles</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/schemaVersion -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/schemaVersion">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Indicates (by URL or string) a particular version of a schema used in some CreativeWork. This property was created primarily to indicate the use of a specific schema.org release, e.g. 10.0 as a simple string, or more explicitly via URL, https://schema.org/docs/releases.html#v10.0. There may be situations in which other schemas might usefully be referenced this way, e.g. http://dublincore.org/specifications/dublin-core/dces/1999-07-02/ but this has not been carefully explored in the community.</rdfs:comment>
+        <rdfs:label xml:lang="en">schema version</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/temporalCoverage -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/temporalCoverage">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/DateTime"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                    <rdf:Description rdf:about="http://schema.org/URL"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in ISO 8601 time interval format. In the case of a Dataset it will typically indicate the relevant time period in a precise notation (e.g. for a 2011 census dataset, the year 2011 would be written &quot;2011/2012&quot;). Other forms of content e.g. ScholarlyArticle, Book, TVSeries or TVEpisode may indicate their temporalCoverage in broader terms - textually or via well-known URL. Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via &quot;1939/1945&quot;.
+
+Open-ended date ranges can be written with &quot;..&quot; in place of the end date. For example, &quot;2015-11/..&quot; indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.</rdfs:comment>
+        <rdfs:label xml:lang="en">temporal coverage</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/version -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/version">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Number"/>
+                    <rdf:Description rdf:about="http://schema.org/Text"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">The version of the CreativeWork embodied by a specified resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">version</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#audience -->
+
+
+    <owl:DatatypeProperty rdf:about="http://usefulinc.com/ns/doap#audience">
+        <rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Description of target user base.</rdfs:comment>
+        <rdfs:label xml:lang="en">audience</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#created -->
+
+
+    <owl:DatatypeProperty rdf:about="http://usefulinc.com/ns/doap#created">
+        <rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Date when something was created, in YYYY-MM-DD form. e.g. 2004-04-05.</rdfs:comment>
+        <rdfs:label xml:lang="en">created</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#description -->
+
+
+    <owl:DatatypeProperty rdf:about="http://usefulinc.com/ns/doap#description">
+        <rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Plain text description of a project, of 2-4 sentences in length.</rdfs:comment>
+        <rdfs:label xml:lang="en">description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#language -->
+
+
+    <owl:DatatypeProperty rdf:about="http://usefulinc.com/ns/doap#language">
+        <rdfs:domain rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">ISO language code a project has been translated into.</rdfs:comment>
+        <rdfs:label xml:lang="en">language</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/nkos#updateFrequency -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/nkos#updateFrequency">
+        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The period in which a KOS is typically updated.</rdfs:comment>
+        <rdfs:label xml:lang="en">update frequency</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#autoGeneratedBy -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#autoGeneratedBy">
+        <rdfs:label xml:lang="en">auto-generated by</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDate">
+        <rdfs:label xml:lang="en">has date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasDefaultNamespace -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDefaultNamespace">
+        <rdfs:label xml:lang="en">has default namespace</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasSubset -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSubset">
+        <rdfs:label xml:lang="en">has subset</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasSynonymType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSynonymType">
+        <rdfs:label xml:lang="en">has synonym type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasVersion -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasVersion">
+        <rdfs:label xml:lang="en">has version</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#savedBy -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#savedBy">
+        <rdfs:label xml:lang="en">saved by</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#deprecated -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#deprecated">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">deprecated</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The version information of the ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">version info</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">An alternative lexical label for a resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">alternative label</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hiddenLabel -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#hiddenLabel">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations.</rdfs:comment>
+        <rdfs:label xml:lang="en">hidden label</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The preferred lexical label for a resource, in a given language.</rdfs:comment>
+        <rdfs:label xml:lang="en">pref label</rdfs:label>
+        <rdfs:label xml:lang="en">preferred label</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#versionNotes -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/adms#versionNotes">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/adms#Asset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">A description of changes between this version and the previous version of the Asset.</rdfs:comment>
+        <rdfs:label xml:lang="en">version notes</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#byteSize -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#byteSize">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">The size in bytes can be approximated (as a decimal) when the precise size is not known.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The size of a distribution in bytes.</rdfs:comment>
+        <rdfs:label xml:lang="en">byte size</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#keyword -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#keyword">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">A keyword or tag describing the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">keyword</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#spatialResolutionInMeters -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#spatialResolutionInMeters">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Distribution"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Minimum spatial separation resolvable in a dataset, measured in meters.</rdfs:comment>
+        <rdfs:label xml:lang="en">spatial resolution in meters</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#temporalResolution -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#temporalResolution">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Distribution"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:comment xml:lang="en">Minimum time period resolvable in the dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">temporal resolution</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#generatedAtTime -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#generatedAtTime">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="http://schema.org/DateTime"/>
+        <rdfs:comment xml:lang="en">Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation.</rdfs:comment>
+        <rdfs:label xml:lang="en">generated at time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#invalidatedAtTime -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#invalidatedAtTime">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:range rdf:resource="http://schema.org/DateTime"/>
+        <rdfs:comment xml:lang="en">Invalidation is the start of the destruction, cessation, or expiry of an existing entity by an activity. The entity is no longer available for use (or further invalidation) after invalidation. Any generation or usage of an entity precedes its invalidation.</rdfs:comment>
+        <rdfs:label xml:lang="en">invalidated at time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A name for some thing.</rdfs:comment>
+        <rdfs:label xml:lang="en">name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/alternateName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/alternateName">
+        <rdfs:range rdf:resource="http://schema.org/Text"/>
+        <rdfs:comment xml:lang="en">An alias for the item.</rdfs:comment>
+        <rdfs:label xml:lang="en">alternate name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://vocab.org/vann/changes -->
+
+
+    <owl:DatatypeProperty rdf:about="https://vocab.org/vann/changes">
+        <rdfs:comment xml:lang="en">A reference to a resource that describes changes between this version of a vocabulary and the previous.</rdfs:comment>
+        <rdfs:label xml:lang="en">changes</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://vocab.org/vann/example -->
+
+
+    <owl:DatatypeProperty rdf:about="https://vocab.org/vann/example">
+        <rdfs:comment xml:lang="en">A reference to a resource that provides an example of how this resource can be used.</rdfs:comment>
+        <rdfs:label xml:lang="en">example</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://vocab.org/vann/preferredNamespacePrefix -->
+
+
+    <owl:DatatypeProperty rdf:about="https://vocab.org/vann/preferredNamespacePrefix">
+        <rdfs:comment xml:lang="en">The preferred namespace prefix to use when using terms from this vocabulary in an XML document.</rdfs:comment>
+        <rdfs:label xml:lang="en">preferred namespace prefix</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://vocab.org/vann/preferredNamespaceUri -->
+
+
+    <owl:DatatypeProperty rdf:about="https://vocab.org/vann/preferredNamespaceUri">
+        <rdfs:comment xml:lang="en">The preferred namespace URI to use when using terms from this vocabulary in an XML document.</rdfs:comment>
+        <rdfs:label xml:lang="en">preferred namespace uri</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://vocab.org/vann/usageNote -->
+
+
+    <owl:DatatypeProperty rdf:about="https://vocab.org/vann/usageNote">
+        <rdfs:comment xml:lang="en">A reference to a resource that provides information on how this resource is to be used.</rdfs:comment>
+        <rdfs:label xml:lang="en">usage note</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#URI -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#URI">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">The URI of the ontology which is described by this metadata.</rdfs:comment>
+        <rdfs:label xml:lang="en">URI</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#acronym -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#acronym">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Often used as an identifier within some ontology platforms such as BioPortal or OBO Foundry.</rdfs:comment>
+        <rdfs:label xml:lang="en">acronym</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#authorProperty -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#authorProperty">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">property used to specify the author of a class (BioPortal definition).</rdfs:comment>
+        <rdfs:label xml:lang="en">object author property</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#averageChildCount -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#averageChildCount">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#metrics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">Average number of children per class (BioPortal definition) .</rdfs:comment>
+        <rdfs:label xml:lang="en">average number of children per class</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#browsingUI -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#browsingUI">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">The user interface (URL) where the ontology may be browsed or searched.</rdfs:comment>
+        <rdfs:label xml:lang="en">Browsing user interface</rdfs:label>
+        <rdfs:label xml:lang="en">browsing UI</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#classesWithMoreThan25Children -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#classesWithMoreThan25Children">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#metrics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">Number of classes that have more than 25 direct subclasses (BioPortal definition).</rdfs:comment>
+        <rdfs:label xml:lang="en">number of classes with more than 25 children</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#classesWithNoDefinition -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#classesWithNoDefinition">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#metrics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">List of classes that have no value for the definition property (BioPortal definition). For ontologies in OBO and RRF formats, the property for definition is part of the language. For OWL ontologies, the authors specify this property as part of the ontology metadata (the default is skos:definition).</rdfs:comment>
+        <rdfs:label xml:lang="en">number of classes with no definition</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#classesWithOneChild -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#classesWithOneChild">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#metrics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">Number of classes that have only one subclass in the is-a hierarchy (BioPortal definition).</rdfs:comment>
+        <rdfs:label xml:lang="en">number of classes with a single child</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#competencyQuestion -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#competencyQuestion">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A set of questions made to build an ontology at the design time.</rdfs:comment>
+        <rdfs:label xml:lang="en">competency question</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#definitionProperty -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#definitionProperty">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">Property used to specify the definition of a class (BioPortal definition).</rdfs:comment>
+        <rdfs:label xml:lang="en">object definition property</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#hasFormalityLevel -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#hasFormalityLevel">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The level of formality of an ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">has formality level</rdfs:label>
+        <skos:historyNote xml:lang="en">This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace.</skos:historyNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#hasRepresentationLanguage -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#hasRepresentationLanguage">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">A language that is used to create an ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">has representation language</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#hasSyntax -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#hasSyntax">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">The syntax followed in the creation of an ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">has syntax</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#hierarchyProperty -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#hierarchyProperty">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">property used to specify the hierarchy  (e.g. rdfs:subClassOf or skos:broader).</rdfs:comment>
+        <rdfs:label xml:lang="en">transitive hierarchy property</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#knownUsage -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#knownUsage">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The applications where the ontology is being used.</rdfs:comment>
+        <rdfs:label xml:lang="en">known usage</rdfs:label>
+        <skos:historyNote xml:lang="en">This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace.</skos:historyNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#maxChildCount -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#maxChildCount">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#metrics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">Maximum number of children per class (BioPortal definition)
+Screen reader support enabled.</rdfs:comment>
+        <rdfs:label xml:lang="en">maximum number of children per class</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#maxDepth -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#maxDepth">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#metrics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">Maximum depth of the hierarchy tree (BioPortal definition).</rdfs:comment>
+        <rdfs:label xml:lang="en">maximum depth of the hierarchy</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#metrics -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#metrics">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefactDistribution"/>
+        <rdfs:comment xml:lang="en">A generic property to store any metrics related to the ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">metrics</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#numberOfAxioms -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#numberOfAxioms">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#metrics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">The total number of axioms in an ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">number of axioms or triples</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#numberOfClasses -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#numberOfClasses">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#metrics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">The total number of classes in an ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">number of classes</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#numberOfDataProperties -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#numberOfDataProperties">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#numberOfProperties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">The total number of data properties in an ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">number of data properties</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#numberOfIndividuals -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#numberOfIndividuals">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#metrics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">The total number of individuals in an ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">number of individuals</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#numberOfLabels -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#numberOfLabels">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#metrics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">Number of defined labels for any resources in an ontology (classes, properties, etc).</rdfs:comment>
+        <rdfs:label xml:lang="en">number of labels</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#numberOfObjectProperties -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#numberOfObjectProperties">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#numberOfProperties"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">The total number of object properties in an ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">number of object properties</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#numberOfProperties -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#numberOfProperties">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/mod#metrics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">The total number of properties in an ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">number of properties</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#obsoleteParent -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#obsoleteParent">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">property used to specify the root of an obsolete branch in the ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">root of obsolete branch</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#obsoleteProperty -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#obsoleteProperty">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">property used to specify an obsolete class.</rdfs:comment>
+        <rdfs:label xml:lang="en">object obsolete property</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#prefLabelPropert -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#prefLabelPropert">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">Property used to specify preferred name (BioPortal definition).</rdfs:comment>
+        <rdfs:label xml:lang="en">object preferred label property</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#sampleQueries -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#sampleQueries">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A set of queries (may be SPARQL, DL Queries) that are provided along with an ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">sample queries</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#status -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#status">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The tracking information for the contents of the ontology.</rdfs:comment>
+        <skos:historyNote xml:lang="en">This property has been adopted from OMV Ontology Metadata Vocabulary and redefined in the MOD namespace.</skos:historyNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#synonymProperty -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#synonymProperty">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefactDistribution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">Property used to specify preferred name (BioPortal definition).</rdfs:comment>
+        <rdfs:label xml:lang="en">object synonym property</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mod#toDoList -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mod#toDoList">
+        <rdfs:domain rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Describes future tasks planned by a resource curator. This property is primarily intended to be used for vocabularies or datasets, but the domain is left open, it can be used for any resource. Use iCalendar Vtodo class and its properties to further describe the task calendar, priorities etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">to do list</rdfs:label>
+        <skos:historyNote xml:lang="en">This property had been originally defined by VOAF metadata vocabulary. 
+Now, it has been adopted and redefined in the MOD namespace.</skos:historyNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://creativecommons.org/ns#License -->
+
+
+    <owl:Class rdf:about="http://creativecommons.org/ns#License">
+        <rdfs:comment xml:lang="en">A set of requests/permissions to users of a Work, e.g. a copyright license, the public domain, information for distributors.</rdfs:comment>
+        <rdfs:label xml:lang="en">License</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://creativecommons.org/ns#work -->
+
+
+    <owl:Class rdf:about="http://creativecommons.org/ns#work">
+        <rdfs:comment xml:lang="en">A potentially copyrightable work.
+(source: https://creativecommons.org/ns)</rdfs:comment>
+        <rdfs:label xml:lang="en">Work</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbrer/Expression -->
+
+
+    <owl:Class rdf:about="http://iflastandards.info/ns/fr/frbr/frbrer/Expression">
+        <rdfs:comment xml:lang="en">The intellectual or artistic realization of a work in the form of alpha-numeric, musical, or choreographic notation, sound, image, object, movement, etc., or any combination of such forms.</rdfs:comment>
+        <rdfs:label xml:lang="en">Expression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbrer/Work -->
+
+
+    <owl:Class rdf:about="http://iflastandards.info/ns/fr/frbr/frbrer/Work">
+        <rdfs:comment xml:lang="en">A distinct intellectual or artistic creation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Work</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/dcmitype/Collection -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/dcmitype/Collection">
+        <rdfs:comment xml:lang="en">An aggregation of resources.</rdfs:comment>
+        <rdfs:label xml:lang="en">Collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/dcmitype/Dataset -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/dcmitype/Dataset">
+        <rdfs:comment xml:lang="en">Data encoded in a defined structure. Examples include lists, tables, and databases. A dataset may be useful for direct machine processing.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/Agent -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/Agent">
+        <rdfs:comment xml:lang="en">A resource that acts or has the power to act.</rdfs:comment>
+        <rdfs:label xml:lang="en">Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/AgentClass -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/AgentClass">
+        <rdfs:comment xml:lang="en">A group of agents.</rdfs:comment>
+        <rdfs:label xml:lang="en">Agent Class</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/Frequency -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/Frequency">
+        <rdfs:comment xml:lang="en">A rate at which something recurs.</rdfs:comment>
+        <rdfs:label xml:lang="en">Frequency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/Jurisdiction -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/Jurisdiction">
+        <rdfs:comment xml:lang="en">The extent or range of judicial, law enforcement, or other authority.</rdfs:comment>
+        <rdfs:label xml:lang="en">Jurisdiction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/LicenseDocument -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/LicenseDocument">
+        <rdfs:comment xml:lang="en">A legal document giving official permission to do something with a resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">License Document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/LinguisticSystem -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/LinguisticSystem">
+        <rdfs:comment xml:lang="en">A system of signs, symbols, sounds, gestures, or rules used in communication.</rdfs:comment>
+        <rdfs:label xml:lang="en">Linguistic System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/Location -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/Location">
+        <rdfs:comment xml:lang="en">A spatial region or named place.</rdfs:comment>
+        <rdfs:label xml:lang="en">Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/MediaType -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/MediaType">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/MediaTypeOrExtent"/>
+        <rdfs:comment xml:lang="en">A file format or physical medium.</rdfs:comment>
+        <rdfs:label xml:lang="en">Media Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/MediaTypeOrExtent -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/MediaTypeOrExtent">
+        <rdfs:comment xml:lang="en">A media type or extent.</rdfs:comment>
+        <rdfs:label xml:lang="en">Media Type or Extent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/MethodOfAccrual -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/MethodOfAccrual">
+        <rdfs:comment xml:lang="en">A method by which resources are added to a collection.</rdfs:comment>
+        <rdfs:label xml:lang="en">Method of Accrual</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/PeriodOfTime -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/PeriodOfTime">
+        <rdfs:comment xml:lang="en">An interval of time that is named or defined by its start and end dates.</rdfs:comment>
+        <rdfs:label xml:lang="en">Period Of Time</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/Policy -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/Policy">
+        <rdfs:comment xml:lang="en">A plan or course of action by an authority, intended to influence and determine decisions, actions, and other matters.</rdfs:comment>
+        <rdfs:label xml:lang="en">Policy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/RightsStatement -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/RightsStatement">
+        <rdfs:comment xml:lang="en">A statement about the intellectual property rights (IPR) held in or over a resource, a legal document giving official permission to do something with a resource, or a statement about access rights.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rights statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/Standard -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/Standard">
+        <rdfs:comment xml:lang="en">A reference point against which other things can be evaluated or compared.</rdfs:comment>
+        <rdfs:label xml:lang="en">Standard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://rdfs.org/ns/void#Dataset -->
+
+
+    <owl:Class rdf:about="http://rdfs.org/ns/void#Dataset">
+        <rdfs:comment xml:lang="en">A dataset is a set of RDF triples that are published, maintained or aggregated by a single provider.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://rdfs.org/sioc/ns#MailingList -->
+
+
+    <owl:Class rdf:about="http://rdfs.org/sioc/ns#MailingList">
+        <rdfs:comment xml:lang="en">Describes an electronic mailing list.</rdfs:comment>
+        <rdfs:label xml:lang="en">MailingList</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://rdfs.org/sioc/ns#Weblog -->
+
+
+    <owl:Class rdf:about="http://rdfs.org/sioc/ns#Weblog">
+        <rdfs:comment xml:lang="en">Describes a weblog (blog), i.e. an online journal.</rdfs:comment>
+        <rdfs:label xml:lang="en">Weblog</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://rdfs.org/sioc/ns#Wiki -->
+
+
+    <owl:Class rdf:about="http://rdfs.org/sioc/ns#Wiki">
+        <rdfs:comment xml:lang="en">Describes a wiki space.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://rdfs.org/sioc/types#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Wiki</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Audience -->
+
+
+    <owl:Class rdf:about="http://schema.org/Audience">
+        <rdfs:comment xml:lang="en">Intended audience for an item, i.e. the group for whom the item was created.</rdfs:comment>
+        <rdfs:label xml:lang="en">Audience</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Comment -->
+
+
+    <owl:Class rdf:about="http://schema.org/Comment">
+        <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment xml:lang="en">A comment on an item - for example, a comment on a blog post. The comment&apos;s content is expressed via the text property, and its topic via about, properties shared with all CreativeWorks.</rdfs:comment>
+        <rdfs:label xml:lang="en">Comment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/CreativeWork -->
+
+
+    <owl:Class rdf:about="http://schema.org/CreativeWork">
+        <rdfs:comment xml:lang="en">The most generic kind of creative work, including books, movies, photographs, software programs, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Creative Work</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/DataCatalog -->
+
+
+    <owl:Class rdf:about="http://schema.org/DataCatalog">
+        <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment xml:lang="en">A collection of datasets.</rdfs:comment>
+        <rdfs:label xml:lang="en">Data Catalog</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Dataset -->
+
+
+    <owl:Class rdf:about="http://schema.org/Dataset">
+        <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment xml:lang="en">A body of structured information describing some topic(s) of interest.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/MediaObject -->
+
+
+    <owl:Class rdf:about="http://schema.org/MediaObject">
+        <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment xml:lang="en">A media object, such as an image, video, or audio object embedded in a web page or a downloadable dataset i.e. DataDownload. Note that a creative work may have many media objects associated with it on the same web page. For example, a page about a single song (MusicRecording) may have a music video (VideoObject), and a high and low bandwidth audio stream (2 AudioObject&apos;s).</rdfs:comment>
+        <rdfs:label xml:lang="en">Media Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Organization -->
+
+
+    <owl:Class rdf:about="http://schema.org/Organization">
+        <rdfs:comment xml:lang="en">An organization such as a school, NGO, corporation, club, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Person -->
+
+
+    <owl:Class rdf:about="http://schema.org/Person">
+        <rdfs:comment xml:lang="en">A person (alive, dead, undead, or fictional).</rdfs:comment>
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Place -->
+
+
+    <owl:Class rdf:about="http://schema.org/Place">
+        <rdfs:comment xml:lang="en">Entities that have a somewhat fixed, physical extension.</rdfs:comment>
+        <rdfs:label xml:lang="en">Place</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Review -->
+
+
+    <owl:Class rdf:about="http://schema.org/Review">
+        <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:comment xml:lang="en">A review of an item - for example, of a restaurant, movie, or store.</rdfs:comment>
+        <rdfs:label xml:lang="en">Review</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/dataDownload -->
+
+
+    <owl:Class rdf:about="http://schema.org/dataDownload">
+        <rdfs:subClassOf rdf:resource="http://schema.org/MediaObject"/>
+        <rdfs:comment xml:lang="en">A dataset in downloadable form.</rdfs:comment>
+        <rdfs:label xml:lang="en">data download</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#Project -->
+
+
+    <owl:Class rdf:about="http://usefulinc.com/ns/doap#Project">
+        <rdfs:subClassOf rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdfs:comment xml:lang="en">A project.</rdfs:comment>
+        <rdfs:label xml:lang="en">Project</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#Repository -->
+
+
+    <owl:Class rdf:about="http://usefulinc.com/ns/doap#Repository">
+        <rdfs:comment xml:lang="en">Source code repository.</rdfs:comment>
+        <rdfs:label xml:lang="en">Repository</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#Version -->
+
+
+    <owl:Class rdf:about="http://usefulinc.com/ns/doap#Version">
+        <rdfs:comment xml:lang="en">Version information of a project release.</rdfs:comment>
+        <rdfs:label xml:lang="en">Version</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Class -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Class">
+        <rdfs:comment xml:lang="en">The class resource, everything.</rdfs:comment>
+        <rdfs:label xml:lang="en">Class</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <rdfs:comment xml:lang="en">All things described by RDF are called resources.</rdfs:comment>
+        <rdfs:label xml:lang="en">Resource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+        <rdfs:comment xml:lang="en">An idea or notion; a unit of thought.</rdfs:comment>
+        <rdfs:label xml:lang="en">Concept</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mod#SemanticArtefactDistribution"/>
+        <rdfs:comment xml:lang="en">A SKOS concept scheme can be viewed as an aggregation of one or more SKOS concepts. Semantic relationships (links) between those concepts may also be viewed as part of a concept scheme.</rdfs:comment>
+        <rdfs:label xml:lang="en">Concept Scheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#Kind -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Kind">
+        <rdfs:comment xml:lang="en">&quot;Kinds&quot; to represent the types of objects to be represented by vCard:	 
+Individual - To represent people
+Organization - To represent organisations
+Group - To represent groups of vCard objects
+Location - To represent location objects</rdfs:comment>
+        <rdfs:label xml:lang="en">Kind</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#Asset -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/adms#Asset">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:comment xml:lang="en">An abstract entity that reflects the intellectual content of the asset and represents those characteristics of the asset that are independent of its physical embodiment. This abstract entity combines the FRBR entities work (a distinct intellectual or artistic creation) and expression (the intellectual or artistic realization of a work).</rdfs:comment>
+        <rdfs:label xml:lang="en">Asset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#AssetDistribution -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/adms#AssetDistribution">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:comment xml:lang="en">A particular physical embodiment of an Asset, which is an example of the FRBR entity manifestation (the physical embodiment of an expression of a work).</rdfs:comment>
+        <rdfs:label xml:lang="en">Asset Distribution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/adms#Identifier -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/adms#Identifier">
+        <rdfs:comment xml:lang="en">This is based on the UN/CEFACT Identifier class which consists of:
+
+    a content string which is the identifier;
+    an optional identifier for the identifier scheme;
+    an optional identifier for the version of the identifier scheme;
+    an optional identifier for the agency that manages the identifier scheme.</rdfs:comment>
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Catalog -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Catalog">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#CatalogRecord -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#CatalogRecord">
+        <rdfs:comment xml:lang="en">A record in a catalog, describing the registration of a single dcat:Resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">Catalog Record</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#DataService -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#DataService">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Dataset -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Dataset">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <rdfs:label xml:lang="en">Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Distribution -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Distribution">
+        <rdfs:comment xml:lang="en">A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above).</rdfs:comment>
+        <rdfs:label xml:lang="en">Distribution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Relationship -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Relationship">
+        <rdfs:comment xml:lang="en">An association class for attaching additional information to a relationship between DCAT Resources.</rdfs:comment>
+        <rdfs:label xml:lang="en">Relationship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Resource -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Resource">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">Resource published or curated by a single agent.</rdfs:comment>
+        <rdfs:label xml:lang="en">Cataloged Resource</rdfs:label>
+        <rdfs:label xml:lang="en">Resource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/odrl/2/Policy -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/odrl/2/Policy">
+        <rdfs:label xml:lang="en">Policy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Activity -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Activity">
+        <rdfs:comment xml:lang="en">An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.</rdfs:comment>
+        <rdfs:label xml:lang="en">Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Agent -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent">
+        <rdfs:comment xml:lang="en">An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent&apos;s activity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Entity -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Entity">
+        <rdfs:comment xml:lang="en">An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary.</rdfs:comment>
+        <rdfs:label xml:lang="en">Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sparql-service-description#Service -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sparql-service-description#Service">
+        <rdfs:comment xml:lang="en">An instance of sd:Service represents a SPARQL service made available via the SPARQL Protocol.</rdfs:comment>
+        <rdfs:label xml:lang="en">Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+        <rdfs:comment xml:lang="en">An agent (eg. person, group, software or physical artifact).</rdfs:comment>
+        <rdfs:label xml:lang="en">Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Document -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Document">
+        <rdfs:comment xml:lang="en">A document.</rdfs:comment>
+        <rdfs:label xml:lang="en">Document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Image -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Image">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:comment xml:lang="en">An image.</rdfs:comment>
+        <rdfs:label xml:lang="en">Image</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="en">A person.</rdfs:comment>
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Project -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Project">
+        <rdfs:comment xml:lang="en">A project (a collective endeavour of some kind).</rdfs:comment>
+        <rdfs:label xml:lang="en">Project</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mod#Analytics -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mod#Analytics">
+        <rdfs:comment xml:lang="en">Number of visits an ontology received.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://www.isibang.ac.in/ns/mod/1.4/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Analytics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mod#EngineeringMethodology -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mod#EngineeringMethodology">
+        <rdfs:comment xml:lang="en">Information about the engineering methodology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Engineering Methodology</rdfs:label>
+        <skos:historyNote xml:lang="en">This class has been adopted from OMV Ontology Metadata Vocabulary, and renamed and redefined in the MOD namespace.</skos:historyNote>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mod#Evaluation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mod#Evaluation">
+        <rdfs:comment xml:lang="en">The results of evaluating an ontology. An ontology can have more than one evaluations.</rdfs:comment>
+        <rdfs:label xml:lang="en">Evaluation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mod#Group -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mod#Group">
+        <rdfs:comment xml:lang="en">A group of ontologies that the ontology is usually considered into.</rdfs:comment>
+        <rdfs:label xml:lang="en">Group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mod#KnowledgeRepresentationParadigm -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mod#KnowledgeRepresentationParadigm">
+        <rdfs:label xml:lang="en">Knowledge representation paradigm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mod#SemanticArtefact -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mod#SemanticArtefact">
+        <rdfs:subClassOf rdf:resource="http://creativecommons.org/ns#work"/>
+        <rdfs:subClassOf rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Expression"/>
+        <rdfs:subClassOf rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/Work"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/dcmitype/Collection"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/dcmitype/Dataset"/>
+        <rdfs:subClassOf rdf:resource="http://schema.org/Dataset"/>
+        <rdfs:subClassOf rdf:resource="http://usefulinc.com/ns/doap#Project"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/adms#Asset"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sparql-service-description#Service"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:label xml:lang="en">Semantic Artefact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mod#SemanticArtefactCatalogRecord -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mod#SemanticArtefactCatalogRecord">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mod#SemanticArtefactDistribution -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mod#SemanticArtefactDistribution">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/adms#AssetDistribution"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mod#SemanticArtefactEvaluation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mod#SemanticArtefactEvaluation">
+        <rdfs:label xml:lang="en">Semantic Artefact Evaluation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mod#SemanticArtefactService -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mod#SemanticArtefactService">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mod#SemanticArtefactTask -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mod#SemanticArtefactTask">
+        <rdfs:label xml:lang="en">Semantic Artefact Task</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mod#SemanticArtfeactCatalog -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mod#SemanticArtfeactCatalog">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mod#Taxonomy -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mod#Taxonomy">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mod#Terminology -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mod#Terminology">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mod#Thesaurus -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mod#Thesaurus">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mod#SemanticArtefact"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+
