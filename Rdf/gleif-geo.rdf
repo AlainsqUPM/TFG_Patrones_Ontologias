@@ -1,0 +1,515 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.gleif.org/ontology/Geocoding/"
+     xml:base="https://www.gleif.org/ontology/Geocoding/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Base="https://www.gleif.org/ontology/Base/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:Geocoding="https://www.gleif.org/ontology/Geocoding/"
+     xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+    <owl:Ontology rdf:about="https://www.gleif.org/ontology/Geocoding/">
+        <owl:versionIRI rdf:resource="https://www.gleif.org/ontology/Geocoding-v1.0/Geocoding/"/>
+        <owl:imports rdf:resource="https://www.gleif.org/ontology/Base/"/>
+        <owl:imports rdf:resource="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/"/>
+        <terms:abstract>Ontology defining concepts for Geocoding of addresses. It is based on the geocoding  used in the Global Legal Entity Identifier Foundation (GLEIF) Golden Copy Data, but is more broadly applicable.</terms:abstract>
+        <terms:contributor rdf:resource="http://www.workingontologist.com"/>
+        <terms:contributor rdf:resource="http://purl.org/bryon"/>
+        <terms:contributor rdf:resource="https://www.linkedin.com/in/peterivett/"/>
+        <terms:creator rdf:resource="https://www.gleif.org/ontology/Base/GLEIF"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-01T00:00:00+00:00</terms:issued>
+        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gleif.org/en/meta/lei-data-terms-of-use/</terms:license>
+        <terms:rights>Copyright (c) 2019 Global Legal Entity Identifier Foundation (GLEIF)</terms:rights>
+        <terms:rightsHolder rdf:resource="https://www.gleif.org/ontology/Base/GLEIF"/>
+        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://developer.here.com/documentation/geocoder/topics/reading-geocoding-response.html</terms:source>
+        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gleif.org/en/lei-data/gleif-golden-copy</terms:source>
+        <terms:title xml:lang="en">Global Legal Entity Identifier Foundation Geocoding Ontology</terms:title>
+        <vann:preferredNamespacePrefix>gleif-geo</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://www.gleif.org/ontology/Geocoding/</vann:preferredNamespaceUri>
+        <rdfs:label>GLEIF Geocoding Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.gleif.org/ontology/Geocoding/matchLevel -->
+
+
+    <owl:AnnotationProperty rdf:about="https://www.gleif.org/ontology/Geocoding/matchLevel">
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/Geocoding/"/>
+        <rdfs:label>match level</rdfs:label>
+        <skos:definition>The most detailed address field that the geocoding was able to provide.</skos:definition>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/Geocoding/GeocodedAddress"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.gleif.org/ontology/Geocoding/bottomRight -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/Geocoding/bottomRight">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/Geocoding/BoundingBox"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/Geocoding/"/>
+        <rdfs:label>bottom right</rdfs:label>
+        <skos:definition>The bottom right point of a bounding box.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/Geocoding/hasBoundingBox -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/Geocoding/hasBoundingBox">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/Geocoding/GeocodedAddress"/>
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/Geocoding/BoundingBox"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/Geocoding/"/>
+        <rdfs:label>has bounding box</rdfs:label>
+        <skos:definition>The geographic area represented by the address.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/Geocoding/hasGeocodedAddress -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/Geocoding/hasGeocodedAddress">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/hasAddress"/>
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/Geocoding/GeocodedAddress"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/Geocoding/"/>
+        <rdfs:label>has geocoded address</rdfs:label>
+        <skos:definition>A geocoded address for the legal entity.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/Geocoding/matchType -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/Geocoding/matchType">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/Geocoding/GeocodedAddress"/>
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/Geocoding/MatchType"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/Geocoding/"/>
+        <rdfs:label>match type</rdfs:label>
+        <skos:definition>Quality of the location match, either pointAddress or interpolated.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/Geocoding/originalAddress -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/Geocoding/originalAddress">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/Geocoding/GeocodedAddress"/>
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/Base/PhysicalAddress"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/Geocoding/"/>
+        <rdfs:label>original address</rdfs:label>
+        <skos:definition>The original address(es) from which the geocoding was derived.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/Geocoding/topLeft -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/Geocoding/topLeft">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/Geocoding/BoundingBox"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/Geocoding/"/>
+        <rdfs:label>top left</rdfs:label>
+        <skos:definition>The top left point of a bounding box.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.gleif.org/ontology/Geocoding/formattedAddressText -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/Geocoding/formattedAddressText">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/Geocoding/GeocodedAddress"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/Geocoding/"/>
+        <rdfs:label>formatted address text</rdfs:label>
+        <skos:definition>An aggregated textual representation of the the fields produced by the geocoding as a comma-separated list of fields.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/Geocoding/hasDistrict -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/Geocoding/hasDistrict">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/Geocoding/GeocodedAddress"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/Geocoding/"/>
+        <rdfs:label>has district</rdfs:label>
+        <skos:definition>A textual representation of the district.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/Geocoding/hasRegionText -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/Geocoding/hasRegionText">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/Geocoding/GeocodedAddress"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/Geocoding/"/>
+        <rdfs:label>has region text</rdfs:label>
+        <skos:altLabel>has state text</skos:altLabel>
+        <skos:definition>A textual representation of the state or region.</skos:definition>
+        <skos:prefLabel>has region text</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/Geocoding/hasStreet -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/Geocoding/hasStreet">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/Geocoding/GeocodedAddress"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/Geocoding/"/>
+        <rdfs:label>has street</rdfs:label>
+        <skos:definition>The name of a street, as opposed to a house within it.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/Geocoding/locationId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/Geocoding/locationId">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/hasTag"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/Geocoding/GeocodedAddress"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/Geocoding/"/>
+        <rdfs:label>location ID</rdfs:label>
+        <skos:definition>A unique identifier representing a hash of the location.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/Geocoding/matchDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/Geocoding/matchDate">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/Geocoding/GeocodedAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/Geocoding/"/>
+        <rdfs:label xml:lang="en">has end</rdfs:label>
+        <skos:definition>The date of the geocoding from the original address.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/Geocoding/originalAddressText -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/Geocoding/originalAddressText">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/Geocoding/GeocodedAddress"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/Geocoding/"/>
+        <rdfs:label>original address text</rdfs:label>
+        <skos:definition>An aggregated textual representation of the original address(es) from which the geocoding was derived, as a comma-separated list of fields with null where the field did not have a value.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/Geocoding/relevance -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/Geocoding/relevance">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/Geocoding/GeocodedAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/Geocoding/"/>
+        <rdfs:label>bottom right</rdfs:label>
+        <skos:definition>A value from 0 to 1 representing the percentage of the input that matched the returned address. 1 means that all input tokens were matched.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#Point -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    
+
+
+    <!-- https://www.gleif.org/ontology/Geocoding/BoundingBox -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/Geocoding/BoundingBox">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Geocoding/bottomRight"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Geocoding/topLeft"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/Geocoding/"/>
+        <rdfs:label>bounding box</rdfs:label>
+        <skos:definition>A geographic rectangular area bounded by its top left and bottom right points.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/Geocoding/GeocodedAddress -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/Geocoding/GeocodedAddress">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/Base/PhysicalAddress"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Geocoding/originalAddress"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/Base/PhysicalAddress"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasCountry"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Geocoding/hasBoundingBox"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/Geocoding/BoundingBox"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Geocoding/matchType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/Geocoding/MatchType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Geocoding/originalAddressText"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasCity"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Geocoding/locationId"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Geocoding/matchDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Geocoding/relevance"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasAddressNumber"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasPostalCode"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Geocoding/formattedAddressText"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Geocoding/hasDistrict"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Geocoding/hasRegionText"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Geocoding/hasStreet"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/Geocoding/"/>
+        <rdfs:label xml:lang="en">geocoded address</rdfs:label>
+        <skos:definition>A geocoded address, derived from a physical address, with latitude and longitude information.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/Geocoding/MatchType -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/Geocoding/MatchType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.gleif.org/ontology/Geocoding/MatchTypeInterpolated"/>
+                    <rdf:Description rdf:about="https://www.gleif.org/ontology/Geocoding/MatchTypePointAddress"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/Geocoding/"/>
+        <rdfs:label>match type</rdfs:label>
+        <skos:definition>Quality of the location match, either pointAddress or interpolated.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.gleif.org/ontology/Geocoding/ -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/Geocoding/">
+        <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/Geocoding/MatchTypeInterpolated -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/Geocoding/MatchTypeInterpolated">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/Geocoding/MatchType"/>
+        <Base:hasTag>interpolated</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/Geocoding/"/>
+        <rdfs:label>match type interpolated</rdfs:label>
+        <skos:definition>The location was interpolated from known locations of adjacent addresses.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/Geocoding/MatchTypePointAddress -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/Geocoding/MatchTypePointAddress">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/Geocoding/MatchType"/>
+        <Base:hasTag>pointAddress</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/Geocoding/"/>
+        <rdfs:label>match type point address</rdfs:label>
+        <skos:definition>The location matches the specific address.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/Geocoding/MatchTypeInterpolated"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/Geocoding/MatchTypePointAddress"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ -->
+
+

@@ -1,0 +1,1143 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://ontology.ethereal.cz/irao#"
+     xml:base="http://ontology.ethereal.cz/irao"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dcam="http://purl.org/dc/dcam/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:irao="http://ontology.ethereal.cz/irao/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:skos1="http://www.w3.org/2008/05/skos#"
+     xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:statistics="http://purl.org/net/OCRe/statistics.owl#"
+     xmlns:geopolitical="http://aims.fao.org/aos/geopolitical.owl#"
+     xmlns:study_protocol="http://purl.org/net/OCRe/study_protocol.owl#">
+    <owl:Ontology rdf:about="http://ontology.ethereal.cz/irao">
+        <owl:versionIRI rdf:resource="https://w3id.org/def/InformaticsResearchArtifactsOntology"/>
+        <!-- owl:imports rdf:resource="http://cso.kmi.open.ac.uk/schema/cso#"/ -->
+        <!-- owl:imports rdf:resource="http://purl.org/dc/terms"/ -->
+        <!-- owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/ -->
+        <!-- owl:imports rdf:resource="http://purl.org/vocab/vann/"/ -->
+        <!-- owl:imports rdf:resource="http://vivoweb.org/ontology/core"/ -->
+        <!-- owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/ -->
+        <!-- owl:imports rdf:resource="http://purl.org/vocommons/voaf"/ -->
+        <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+        <dc:contributor>
+            <foaf:Person rdf:about="https://nb.vse.cz/~svatek/"/>
+        </dc:contributor>
+        <dc:creator>
+            <foaf:Person rdf:about="https://www.linkedin.com/in/nvbach91/"/>
+        </dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-03-18</dc:date>
+        <dc:description xml:lang="en">Informatics Research Artifacts Ontology, described using W3C RDF Schema and the Web Ontology Language OWL.</dc:description>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-03-18</dc:issued>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-03-18</dc:modified>
+        <dc:publisher>
+            <foaf:Organization rdf:about="https://cs.dbpedia.org/page/Vysok%C3%A1_%C5%A1kola_ekonomick%C3%A1_v_Praze"/> 
+        </dc:publisher>
+        <dc:rights>Copyright © 2021 Prague University of Economics and Business</dc:rights>
+        <dc:subject xml:lang="en">Informatics, Research Artifacts, Ontology, Semantic SEO, Linked Data, RDF, Semantic Web</dc:subject>
+        <dc:title xml:lang="en">Informatics Research Artifacts Ontology</dc:title>
+        <dcterms:abstract xml:lang="en">Informatics Research Artifacts Ontology, described using W3C RDF Schema and the Web Ontology Language OWL.</dcterms:abstract>
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-03-18</dcterms:created>
+        <dcterms:description xml:lang="en">Informatics Research Artifacts Ontology, described using W3C RDF Schema and the Web Ontology Language OWL.</dcterms:description>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
+        <dcterms:publisher>Prague University of Economics and Business, Czech Republic. Faculty of Informatics and Statistics. Department of Information and Knowledge Engineering</dcterms:publisher>
+        <vann:preferredNamespacePrefix>irao</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://ontology.ethereal.cz/irao/</vann:preferredNamespaceUri>
+        <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+        <rdfs:comment xml:lang="en">Informatics Research Artifacts Ontology, described using W3C RDF Schema and the Web Ontology Language OWL.</rdfs:comment>
+        <rdfs:label xml:lang="en">Informatics Research Artifacts Ontology</rdfs:label>
+        <owl:versionInfo xml:lang="en">1.1.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasAccessibility -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasAccessibility">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/ResearchArtifact"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/Accessibility"/>
+        <rdfs:comment xml:lang="en">This property specifies the accessibility of a research artifact</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has accessibility</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasAffiliation -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasAffiliation">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/Researcher"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/Affiliation"/>
+        <rdfs:comment xml:lang="en">This property specifies the affiliation of a researcher</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has affiliation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasAuthor">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/ResearchArtifact"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment xml:lang="en">This property specifies the author of a research artifact</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has author</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasDesign -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasDesign">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/ResearchArtifact"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/DesignQuality"/>
+        <rdfs:comment xml:lang="en">This property specifies the design of a research artifact</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has design</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasDesignQuality -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasDesignQuality">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/Design"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/DesignQuality"/>
+        <rdfs:comment xml:lang="en">This property specifies the design quality of a design</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has design quality</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasDevelopmentStatus -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasDevelopmentStatus">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/ResearchArtifact"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/DevelopmentStatus"/>
+        <rdfs:comment xml:lang="en">This property specifies the development status of a research artifact</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has development status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasDomain -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasDomain">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/ResearchArtifact"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/ResearchDomain"/>
+        <rdfs:comment xml:lang="en">This property specifies the research domain of a research artifact</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has domain</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasField -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasField">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/ResearchArtifact"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/ResearchField"/>
+        <rdfs:comment xml:lang="en">This property specifies the research field of a research artifact</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has field</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasFollowedProtocol -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasFollowedProtocol">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/Benchmark"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/Protocol"/>
+        <rdfs:comment xml:lang="en">This property specifies the protocol that a benchmark follows</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has followed protocol</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasFramework -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasFramework">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/Software"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/Framework"/>
+        <rdfs:comment xml:lang="en">This property specifies the framework used by a software</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has framework</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasLicense -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasLicense">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/ResearchArtifact"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/License"/>
+        <rdfs:comment xml:lang="en">This property specifies the license of a research artifact</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has license</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasLicenseType -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasLicenseType">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/License"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/LicenseType"/>
+        <rdfs:comment xml:lang="en">This property specifies the type of a license</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has license type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasMaintainer -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasMaintainer">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/ResearchArtifact"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/Researcher"/>
+        <rdfs:comment xml:lang="en">This property specifies the maintainer of a research artifact</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">is maintained by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasMeasuringSystem -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasMeasuringSystem">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/Benchmark"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/System"/>
+        <rdfs:comment xml:lang="en">This property specifies a system that measures a benchmark</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has measuring system</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasMethodology -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasMethodology">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.ethereal.cz/irao/Dataset"/>
+                    <rdf:Description rdf:about="http://ontology.ethereal.cz/irao/Framework"/>
+                    <rdf:Description rdf:about="http://ontology.ethereal.cz/irao/Protocol"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/Methodology"/>
+        <rdfs:comment xml:lang="en">This property specifies the methodology used by a research artifact</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has methodology</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasOpenStandard -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasOpenStandard">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/ResearchArtifact"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/OpenStandard"/>
+        <rdfs:comment xml:lang="en">This property specifies the open standard used by a research artifact</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has open standard</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasProducedDataset -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasProducedDataset">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/Benchmark"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/Dataset"/>
+        <rdfs:comment xml:lang="en">This property specifies the dataset which us produced by a benchmark</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has produced dataset</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasPublication -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasPublication">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/ResearchArtifact"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/Publication"/>
+        <rdfs:comment xml:lang="en">This property specifies the publication of a research artifact</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has publication</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasReferredBenchmark -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasReferredBenchmark">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/Benchmark"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/Benchmark"/>
+        <rdfs:comment xml:lang="en">This property specifies a benchmark referred by another benchmark</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has referred benchmark</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasRepositoryType -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasRepositoryType">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/Repository"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/RepositoryType"/>
+        <rdfs:comment xml:lang="en">This property specifies the repository type of a research artifact repository</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has repository type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasResearchArea -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasResearchArea">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/ResearchArtifact"/>
+        <rdfs:range rdf:resource="http://cso.kmi.open.ac.uk/schema/cso#Topic"/>
+        <rdfs:comment xml:lang="en">This property specifies the research area of a research artifact</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has research area</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasResearchOutput -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasResearchOutput">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/ResearchProject"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/ResearchOutput"/>
+        <rdfs:comment xml:lang="en">This property specifies the research output of a research project</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has research output</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasUsedFramework -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasUsedFramework">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.ethereal.cz/irao/Framework"/>
+                    <rdf:Description rdf:about="http://ontology.ethereal.cz/irao/Software"/>
+                    <rdf:Description rdf:about="http://ontology.ethereal.cz/irao/System"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/Framework"/>
+        <rdfs:comment xml:lang="en">This property specifies the framework used by a research artifact like software or system</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has used framework</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasUsedMethodology -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasUsedMethodology">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.ethereal.cz/irao/Dataset"/>
+                    <rdf:Description rdf:about="http://ontology.ethereal.cz/irao/Framework"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/Methodology"/>
+        <rdfs:comment xml:lang="en">This property specifies the methodology used in a research artifact like framework or dataset</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has used methodology</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasUsedOntologyDesignPattern -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/hasUsedOntologyDesignPattern">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.ethereal.cz/irao/Ontology"/>
+                    <rdf:Description rdf:about="http://ontology.ethereal.cz/irao/OntologyDesignPattern"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/OntologyDesignPattern"/>
+        <rdfs:comment xml:lang="en">This property specifies the ontology design pattern of an ontology or another ontology design pattern</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has used ontology design pattern</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/isDescribedBy -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/isDescribedBy">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/Dataset"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/DataModel"/>
+        <rdfs:comment xml:lang="en">This property specifies the data model of a dataset</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">is described by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/isFollowedBy -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/isFollowedBy">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/ResearchProject"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/ResearchProject"/>
+        <rdfs:comment xml:lang="en">This property specifies that a research project is followed by another research project</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">is followed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/isPartOfSystem -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/isPartOfSystem">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/Software"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/System"/>
+        <rdfs:comment xml:lang="en">This property specifies the system which a software is part of</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">is part of system</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/isPublishedAt -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/isPublishedAt">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/ResearchArtifact"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/Repository"/>
+        <rdfs:comment xml:lang="en">This property specifies the repository that a research artifact is published at</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">is published at</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/isUsedBy -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.ethereal.cz/irao/isUsedBy">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/ResearchArtifact"/>
+        <rdfs:range rdf:resource="http://ontology.ethereal.cz/irao/ResearchArtifact"/>
+        <rdfs:comment xml:lang="en">This property specifies that a research artifact is used by another research artifact</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">is used by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasTopic -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.ethereal.cz/irao/hasTopic">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">This property specifies the topic of a publication</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has topic</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasURL -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.ethereal.cz/irao/hasURL">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ontology.ethereal.cz/irao/Publication"/>
+                    <rdf:Description rdf:about="http://ontology.ethereal.cz/irao/Repository"/>
+                    <rdf:Description rdf:about="http://ontology.ethereal.cz/irao/ResearchArtifact"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">This property specifies the resource URL of a publication, repository or research artifact</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has URL</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/hasVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.ethereal.cz/irao/hasVersion">
+        <rdfs:domain rdf:resource="http://ontology.ethereal.cz/irao/ResearchArtifact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">This property specifies the version of a research artifact</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">has version</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/API -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/API">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/Service"/>
+        <rdfs:comment xml:lang="en">An API is a type of service-based research artifact</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">API</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/Accessibility -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/Accessibility">
+        <rdfs:comment xml:lang="en">A research artifact can be made accessible via download or some kind of API, etc.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Accessibility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/Affiliation -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/Affiliation">
+        <rdfs:comment xml:lang="en">An affiliation of the author, it maybe a company or an institution</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Affiliation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/AnnotatedDataset -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/AnnotatedDataset">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/Dataset"/>
+        <rdfs:comment xml:lang="en">A dataset which was processed for AI or machine learning</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Annotated Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/ApplicationFramework -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/ApplicationFramework">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/SoftwareFramework"/>
+        <rdfs:comment xml:lang="en">A framework that is used by applications</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Application Framework</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/Benchmark -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/Benchmark">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/InformaticsResearchArtifact"/>
+        <rdfs:comment xml:lang="en">A benchmark is a type of comparison and measuring with metrics, producing datasets and algorithms for comprehensive and systematic evaluation of existing and future systems</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Benchmark</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/ConferencePaper -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/ConferencePaper">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/Publication"/>
+        <rdfs:comment xml:lang="en">A paper or article published at a scientific conference</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Conference paper</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/DataModel -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/DataModel">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/Model"/>
+        <rdfs:comment xml:lang="en">A data model such as schema and ontologies</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Data model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/Dataset -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/Dataset">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/InformaticsResearchArtifact"/>
+        <rdfs:comment xml:lang="en">A dataset containing the gathered or generated data about some topic</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/Design -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/Design">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/InformaticsResearchArtifact"/>
+        <rdfs:comment xml:lang="en">A plan or specification for the construction or production of a research artifact</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Design</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/DesignQuality -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/DesignQuality">
+        <rdfs:comment xml:lang="en">A design quality involves the usage of recommended standards, protocols, frameworks, methodologies</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Design quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/DevelopmentStatus -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/DevelopmentStatus">
+        <rdfs:comment xml:lang="en">The development status of a research artifact, informing about its maturity</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Development status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/Framework -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/Framework">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/InformaticsResearchArtifact"/>
+        <rdfs:comment xml:lang="en">The framework is a type of an informatics research artifact</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Framework</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/InformaticsResearchArtifact -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/InformaticsResearchArtifact">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/ResearchArtifact"/>
+        <rdfs:comment xml:lang="en">An informatics research artifact is a research artifact in the informatics field</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Informatics Research Artifact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/License -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/License">
+        <rdfs:comment xml:lang="en">A license authorizes the use, performace, or release of a research artifact</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">License</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/LicenseType -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/LicenseType">
+        <rdfs:comment xml:lang="en">The type of a license</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">License type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/Methodology -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/Methodology">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/InformaticsResearchArtifact"/>
+        <rdfs:comment xml:lang="en">Methodology is a type of research artifact</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Methodology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/Middleware -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/Middleware">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/Software"/>
+        <rdfs:comment xml:lang="en">A middleware is a type of software that is used to connect software components in to a system</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Middleware</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/Model -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/Model">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/InformaticsResearchArtifact"/>
+        <rdfs:comment xml:lang="en">A model is a type of research artifact that can be used to describe other artifacts such as a dataset or a software</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/Ontology -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/Ontology">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/DataModel"/>
+        <rdfs:comment xml:lang="en">An ontology is a type of data model used to describe linked datasets</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Ontology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/OntologyDesignPattern -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/OntologyDesignPattern">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/InformaticsResearchArtifact"/>
+        <rdfs:comment xml:lang="en">An ontology design pattern is a pattern used in designing ontologies</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Ontology design pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/OpenStandard -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/OpenStandard">
+        <rdfs:comment xml:lang="en">A open standard is a standard used to provide guidelines for the development and operations of artifacts and systems</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Open Standard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/Protocol -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/Protocol">
+        <rdfs:comment xml:lang="en">A protocol is used to provide guidelines to execute certain tasks</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Protocol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/Publication -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/Publication">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/ResearchOutput"/>
+        <rdfs:comment xml:lang="en">A publication makes content and research results available to the general public via publication venues such as journals, books, websites, etc.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Publication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/Repository -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/Repository">
+        <rdfs:comment xml:lang="en">A repository is an online storage for the deposit of research artifacts such as datasets and vocabularies</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Repository</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/RepositoryType -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/RepositoryType">
+        <rdfs:comment xml:lang="en">A repository type can be a knowledge base, knowledge graph, version control hosting, etc.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Repository Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/ResearchArtifact -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/ResearchArtifact">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/ResearchOutput"/>
+        <rdfs:comment xml:lang="en">A research artifact is a direct output or result of a research project</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Research Artifact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/ResearchDomain -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/ResearchDomain">
+        <rdfs:comment xml:lang="en">A research domain is the domain of interest of a research project</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Research Domain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/ResearchField -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/ResearchField">
+        <rdfs:comment xml:lang="en">A research field is the field of interest of a research project</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Research Field</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/ResearchOutput -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/ResearchOutput">
+        <rdfs:comment xml:lang="en">A research output is the result of a research project</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Research output</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/ResearchProject -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/ResearchProject">
+        <rdfs:subClassOf rdf:resource="http://vivoweb.org/ontology/core#Project"/>
+        <rdfs:comment xml:lang="en">A research project is a project within the research domain with the endeavor of achieving scientific results</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Research project</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/Researcher -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/Researcher">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment xml:lang="en">A researcher is a person doing research</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Researcher</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/Service -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/Service">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/Software"/>
+        <rdfs:comment xml:lang="en">A service is a type of software that provides e.g. data or some type of functionalities</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/Software -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/Software">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/InformaticsResearchArtifact"/>
+        <rdfs:comment xml:lang="en">A software is a type of informatics research artifact</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Software</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/SoftwareFramework -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/SoftwareFramework">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/Framework"/>
+        <rdfs:comment xml:lang="en">A software framework is a type of software that provides guidelines for the development of new softwares</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Software Framework</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/SyntheticDataset -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/SyntheticDataset">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/Dataset"/>
+        <rdfs:comment xml:lang="en">Synthetic datasets are generated through computer programs, instead of being composed through the documentation of real-world events</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Synthetic Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/System -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/System">
+        <rdfs:comment xml:lang="en">A system is a group of interacting or interrelated informatics components that form a unified whole</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/Thesis -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/Thesis">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/Publication"/>
+        <rdfs:comment xml:lang="en">A thesis as a type of scientific or academic publication or dissertation is a document submitted in support of candidature for an academic degree or professional qualification presenting the author&apos;s research and findings</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Thesis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/Vocabulary -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/Vocabulary">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/InformaticsResearchArtifact"/>
+        <rdfs:comment xml:lang="en">A vocabulary is used to provide a range of commonly used terms and their definitions</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Vocabulary</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/WebFramework -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/WebFramework">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/SoftwareFramework"/>
+        <rdfs:comment xml:lang="en">A web framework is a type of software framework that is used to develop applications on the web</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Web Framework</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/Workflow -->
+
+    <owl:Class rdf:about="http://ontology.ethereal.cz/irao/Workflow">
+        <rdfs:subClassOf rdf:resource="http://ontology.ethereal.cz/irao/InformaticsResearchArtifact"/>
+        <rdfs:comment xml:lang="en">A workflow is a sequence of interrelated, orchestrated and repeatable tasks</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Workflow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/accessibility#API -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.ethereal.cz/irao/accessibility#API">
+        <rdf:type rdf:resource="http://ontology.ethereal.cz/irao/Accessibility"/>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">API</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/accessibility#Download -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.ethereal.cz/irao/accessibility#Download">
+        <rdf:type rdf:resource="http://ontology.ethereal.cz/irao/Accessibility"/>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Download</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/accessibility#OpenData -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.ethereal.cz/irao/accessibility#OpenData">
+        <rdf:type rdf:resource="http://ontology.ethereal.cz/irao/Accessibility"/>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Open Data</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/accessibility#OpenSource -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.ethereal.cz/irao/accessibility#OpenSource">
+        <rdf:type rdf:resource="http://ontology.ethereal.cz/irao/Accessibility"/>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Opensource</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/designquality#FAIR -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.ethereal.cz/irao/designquality#FAIR">
+        <rdf:type rdf:resource="http://ontology.ethereal.cz/irao/DesignQuality"/>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">FAIR</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/designquality#Reuse -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.ethereal.cz/irao/designquality#Reuse">
+        <rdf:type rdf:resource="http://ontology.ethereal.cz/irao/DesignQuality"/>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Reuse</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/developmentstatus#alpha -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.ethereal.cz/irao/developmentstatus#alpha">
+        <rdf:type rdf:resource="http://ontology.ethereal.cz/irao/DevelopmentStatus"/>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Alpha</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/developmentstatus#beta -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.ethereal.cz/irao/developmentstatus#beta">
+        <rdf:type rdf:resource="http://ontology.ethereal.cz/irao/DevelopmentStatus"/>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Beta</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/developmentstatus#release -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.ethereal.cz/irao/developmentstatus#release">
+        <rdf:type rdf:resource="http://ontology.ethereal.cz/irao/DevelopmentStatus"/>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Release</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/openstandard#RDF -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.ethereal.cz/irao/openstandard#RDF">
+        <rdf:type rdf:resource="http://ontology.ethereal.cz/irao/OpenStandard"/>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">RDF</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/openstandard#RDFS -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.ethereal.cz/irao/openstandard#RDFS">
+        <rdf:type rdf:resource="http://ontology.ethereal.cz/irao/OpenStandard"/>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">RDFS</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/openstandard#SKOS -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.ethereal.cz/irao/openstandard#SKOS">
+        <rdf:type rdf:resource="http://ontology.ethereal.cz/irao/OpenStandard"/>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">SKOS</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/openstandard#SPARQL -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.ethereal.cz/irao/openstandard#SPARQL">
+        <rdf:type rdf:resource="http://ontology.ethereal.cz/irao/OpenStandard"/>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">SPARQL</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/openstandard#XML -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.ethereal.cz/irao/openstandard#XML">
+        <rdf:type rdf:resource="http://ontology.ethereal.cz/irao/OpenStandard"/>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">XML</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/repositorytype#KnowledgeBase -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.ethereal.cz/irao/repositorytype#KnowledgeBase">
+        <rdf:type rdf:resource="http://ontology.ethereal.cz/irao/RepositoryType"/>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Knowledge base</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.ethereal.cz/irao/repositorytype#VersionControlHosting -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.ethereal.cz/irao/repositorytype#VersionControlHosting">
+        <rdf:type rdf:resource="http://ontology.ethereal.cz/irao/RepositoryType"/>
+        <rdfs:isDefinedBy rdf:resource="http://ontology.ethereal.cz/irao"/>
+        <rdfs:label xml:lang="en">Version control hosting</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

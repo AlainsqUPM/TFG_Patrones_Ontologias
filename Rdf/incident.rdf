@@ -1,0 +1,138 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:j.0="http://purl.org/dc/terms/"
+    xmlns:j.1="http://www.w3.org/ns/adms#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.2="urn:neoneo:"
+    xmlns:j.3="http://purl.org/vocab/vann/"
+    xmlns:j.4="http://vocab.firegraph.store/decoration#"
+    xmlns:j.5="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <rdfs:Class rdf:about="http://vocab.resc.info/incident#Characteristic">
+    <j.4:glyphSource>data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nNTEuMicgaGVpZ2h0PSc1MS4yJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9Jy0wLjk4MzM5OCAtNjQuOTgzNCA2NDAuMTA0IDQ0OC40MjcnPjxwYXRoIGZpbGw9JyM1OTU5NTknIHRyYW5zZm9ybT0nc2NhbGUoMSwtMSkgdHJhbnNsYXRlKDAsLTM0OCknIGQ9J001MDQgMTkyYzAgLTEzNi45OTcgLTExMS4wNDMgLTI0OCAtMjQ4IC0yNDhzLTI0OCAxMTEuMDAzIC0yNDggMjQ4YzAgMTM2LjkxNyAxMTEuMDQzIDI0OCAyNDggMjQ4czI0OCAtMTExLjA4MyAyNDggLTI0OHpNMjU2IDE0MmMtMjUuNDA1MyAwIC00NiAtMjAuNTk0NyAtNDYgLTQ2czIwLjU5NDcgLTQ2IDQ2IC00NnM0NiAyMC41OTQ3IDQ2IDQ2cy0yMC41OTQ3IDQ2IC00NiA0NnpNMjEyLjMyNyAzMDcuMzQ2bDcuNDE3OTcgLTEzNiBjMC4zNDY2OCAtNi4zNjMyOCA1LjYwODQgLTExLjM0NTcgMTEuOTgxNCAtMTEuMzQ1N2g0OC41NDY5YzYuMzczMDUgMCAxMS42MzQ4IDQuOTgyNDIgMTEuOTgxNCAxMS4zNDU3bDcuNDE3OTcgMTM2YzAuMzc1IDYuODc0MDIgLTUuMDk3NjYgMTIuNjU0MyAtMTEuOTgxNCAxMi42NTQzaC02My4zODM4Yy02Ljg4Mzc5IDAgLTEyLjM1NTUgLTUuNzgwMjcgLTExLjk4MDUgLTEyLjY1NDN6Jz48L3BhdGg+PC9zdmc+</j.4:glyphSource>
+    <j.4:glyphName>fas fa-exclamation-circle</j.4:glyphName>
+    <j.4:color>#595959</j.4:color>
+    <rdfs:comment>Holds characteristics of a Incident</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Characteristic</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://vocab.resc.info/incident#IncidentRecord">
+    <rdfs:comment>A class to record the response to a incident by emergency response services.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://semanticweb.cs.vu.nl/2009/11/sem/Event"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Incident Record</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://vocab.resc.info/incident#Note">
+    <j.4:glyphSource>data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nNTEuMicgaGVpZ2h0PSc1MS4yJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9Jy0wLjk4MzM5OCAtNjQuOTgzNCA2NDAuMTA0IDQ0OC40MjcnPjxwYXRoIGZpbGw9JyM2NkE4QzEnIHRyYW5zZm9ybT0nc2NhbGUoMSwtMSkgdHJhbnNsYXRlKDk2LC0zNDgpJyBkPSdNMzEyIDEyOGMtMTMuMjAwMiAwIC0yNCAtMTAuNzk5OCAtMjQgLTI0di0xMzZoLTI2NGMtMTMuMjk5OCAwIC0yNCAxMC43MDAyIC0yNCAyNHY0MDBjMCAxMy4yOTk4IDEwLjcwMDIgMjQgMjQgMjRoNDAwYzEzLjI5OTggMCAyNCAtMTAuNzAwMiAyNCAtMjR2LTI2NGgtMTM2ek00NDEgNzNsLTk4IC05OGMtNC41IC00LjUgLTEwLjU5OTYgLTcgLTE3IC03aC02djEyOGgxMjh2LTYuMDk5NjEgYzAgLTYuMzAwNzggLTIuNSAtMTIuNDAwNCAtNyAtMTYuOTAwNHonPjwvcGF0aD48L3N2Zz4=</j.4:glyphSource>
+    <j.4:glyphName>fas fa-sticky-note</j.4:glyphName>
+    <j.4:color>#66A8C1</j.4:color>
+    <rdfs:comment>A text note for the incident, in general the CAD system log book. Should contain dcterms:modified instead of semtimestamp</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Note</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://vocab.resc.info/incident#Deployment">
+    <rdfs:comment>The actual sending of a responding unit to a Incident.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Deployment</rdfs:label>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://vocab.resc.info/incident#hasCharacteristic">
+    <rdfs:range rdf:resource="http://vocab.resc.info/incident#Characteristic"/>
+    <rdfs:domain rdf:resource="http://vocab.resc.info/incident#IncidentRecord"/>
+    <rdfs:comment>Relation between characteristics and incidents</rdfs:comment>
+    <rdfs:label>has Characteristic</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://vocab.resc.info/incident#hasNote">
+    <rdfs:range rdf:resource="http://vocab.resc.info/incident#Note"/>
+    <rdfs:domain rdf:resource="http://vocab.resc.info/incident#IncidentRecord"/>
+    <rdfs:comment>The relation between a incident and the text notes</rdfs:comment>
+    <rdfs:label>hasNote</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://vocab.resc.info/incident#location">
+    <rdfs:comment>The location of the incident</rdfs:comment>
+    <rdfs:label>Location</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://vocab.resc.info/incident#characteristicType">
+    <rdfs:domain rdf:resource="http://vocab.resc.info/incident#Characteristic"/>
+    <rdfs:comment>The type of the recorded characteristic, preferably points to a SKOS concept</rdfs:comment>
+    <rdfs:label>Characteristic Type</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://vocab.resc.info/incident#deployedUnit">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:domain rdf:resource="http://vocab.resc.info/incident#Deployment"/>
+    <rdfs:comment>The unit deployed to a incident</rdfs:comment>
+    <rdfs:label>Unit deployed</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://vocab.resc.info/incident#isDeploymentOf">
+    <rdfs:range rdf:resource="http://vocab.resc.info/incident#IncidentRecord"/>
+    <rdfs:domain rdf:resource="http://vocab.resc.info/incident#Deployment"/>
+    <rdfs:comment>This is a deployment to a specific incident</rdfs:comment>
+    <rdfs:label>is Deployment of</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://vocab.resc.info/incident#hasDeployment">
+    <rdfs:range rdf:resource="http://vocab.resc.info/incident#Deployment"/>
+    <rdfs:domain rdf:resource="http://vocab.resc.info/incident#IncidentRecord"/>
+    <rdfs:comment>a deployment of a unit to a incident</rdfs:comment>
+    <rdfs:label>Has Deployment</rdfs:label>
+  </rdf:Property>
+  <owl:DatatypeProperty rdf:about="http://vocab.resc.info/incident#mobilizationTimestamp">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://vocab.resc.info/incident#Deployment"/>
+    <rdfs:comment>The time the unit is mobilized, when it starts heading to the incident</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Mobilization timestamp</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://vocab.resc.info/incident#incidentRecordStartTimestamp">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://vocab.resc.info/incident#IncidentRecord"/>
+    <rdfs:comment>The time the recordinf of the incident response begins</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Incident Record timestamp</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://vocab.resc.info/incident#incidentRecordEndTimestamp">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://vocab.resc.info/incident#IncidentRecord"/>
+    <rdfs:comment>the time the emergency response services are no longer involved in the incident.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Incident Record end timestamp</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://vocab.resc.info/incident#arrivalTimestamp">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://vocab.resc.info/incident#Deployment"/>
+    <rdfs:comment>The time the unit arrived at the incident location, this might not be automatically generated</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Arrival timestamp</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://vocab.resc.info/incident#deploymentStartTimestamp">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://vocab.resc.info/incident#Deployment"/>
+    <rdfs:comment>The time that a unit is send out to a incident</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Deployment Start</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://vocab.resc.info/incident#deploymentEndTimestamp">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://vocab.resc.info/incident#Deployment"/>
+    <rdfs:comment>The time the unit was no longer needed at the incident.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>End of the deployment</rdfs:label>
+  </owl:DatatypeProperty>
+  <j.5:Person rdf:about="http://vocab.resc.info/incident#bart">
+    <j.5:nick>bart</j.5:nick>
+  </j.5:Person>
+  <j.1:Asset rdf:about="http://vocab.resc.info/incident">
+    <j.0:title>Vocabulary to describe incident response by emergency respose services</j.0:title>
+    <j.3:preferredNamespaceUri>http://vocab.resc.info/incident#</j.3:preferredNamespaceUri>
+    <j.3:preferredNamespacePrefix>incident</j.3:preferredNamespacePrefix>
+    <j.2:vocab rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.2:vocab>
+    <j.0:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-12-19</j.0:created>
+    <j.0:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2015-06-22</j.0:modified>
+    <j.0:description>Vocabulary to describe the response to a incident by emergency services.
+This is NOT intended to describe the incident itself, it describes the response</j.0:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </j.1:Asset>
+</rdf:RDF>

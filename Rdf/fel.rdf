@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:ns0="http://purl.org/vocab/vann/"
+         xmlns:doap="http://usefulinc.com/ns/doap#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+  <owl:Ontology rdf:about="http://w3id.org/vcb/fel#">
+    <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+    <rdfs:seeAlso rdf:resource="http://users.dcc.uchile.cl/~hrosales/vocabulary_fel"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">A Fine-grained Entity Linking vocabulary</rdfs:label>
+    <dc:title xml:lang="en">A Fine-grained Entity Linking vocabulary</dc:title>
+    <dc:creator rdf:resource="http://users.dcc.uchile.cl/~hrosales/foaf.ttl#me"/>
+    <dc:creator rdf:resource="http://aidanhogan.com/foaf.rdf#me"/>
+    <dc:creator rdf:resource="http://w3id.org/scholarlydata/person/barbara-poblete"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-03-01</dc:issued>
+    <dc:rights xml:lang="en">This ontology is licensed under CC-BY 4 (http://creativecommons.org/licenses/by/4.0/)</dc:rights>
+    <dc:license rdf:resource="http://creativecommons.org/licenses/by/4.0"/>
+    <dc:description xml:lang="en">This RDF vocabulary can be use to describe and categorize annotations involving entity mentions (sub-strings of text) that link to knowledgebase identifiers</dc:description>
+    <dc:publisher rdf:resource="http://www.wikidata.org/entity/Q232141"/>
+    <ns0:preferredNamespacePrefix>fel</ns0:preferredNamespacePrefix>
+    <ns0:preferredNamespaceUri>http://w3id.org/vcb/fel#</ns0:preferredNamespaceUri>
+    <ns0:changes rdf:resource="http://github.com/henryrosalesmendez/fel"/>
+    <doap:maintainer rdf:resource="http://users.dcc.uchile.cl/~hrosales/foaf.ttl#me"/>
+    <owl:versionInfo>0.0.1</owl:versionInfo>
+  </owl:Ontology>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#BaseFormClass">
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Base Form Class</rdfs:label>
+    <dc:description xml:lang="en">This meta-class gathers classes that divide annotations by the base-form of their mention, recognizing not only proper nouns as entities, but also other more flexible definitions, such as those that allow pronouns, numbers, temporal expressions, etc. Current instances of this meta-class include: ProperForm, NumericTemporalForm, CommonForm, and ProForm.</dc:description>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#ProperForm">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#BaseFormClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Proper Form</rdfs:label>
+    <dc:description xml:lang="en">This class gathers all mentions based on names (proper nouns), e.g., 'Michael Jackson', 'USA', 'King of the Pop', 'B. Obama', etc. Such mentions do not have to be nouns if they are based on proper nouns, as in the case of 'French, 'Orwellian', etc. Such mentions may use abbreviated or extended forms of names; we add a new level in the class hierarchy to separate them: Full, Extended, Short or Alias.</dc:description>
+    <skos:closeMatch rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo#ProperNoun"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#FullProperForm">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#BaseFormClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Full Proper Form</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/vcb/fel#ProperForm"/>
+    <dc:description xml:lang="en">This class gathers all proper-form mentions that (almost) exactly match with the label of the knowledgebase entity. For example, the mention 'Michael Jackson' targeting wiki:Michael_Jackson is considered Full. This class also includes mentions that are syntactically close to the knowlegebase entity (specifically, the lemmas should be the same and in the same order), for instance 'German' pointing to wiki:Germany is also considered a FullProperForm.</dc:description>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#ExtendedProperForm">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#BaseFormClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Extended Proper Form</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/vcb/fel#ProperForm"/>
+    <dc:description xml:lang="en">This class gathers all proper-name mentions longer than the label of the knowledgebase entity but containing the label. For example, the mention 'Michael Joseph Jackson' targeting wiki:Michael_Jackson is considered an ExtendedProperForm.</dc:description>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#ShortProperForm">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#BaseFormClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Short Proper Form</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/vcb/fel#ProperForm"/>
+    <dc:description xml:lang="en">This class is concerned with all the proper-name mentions that are shorter than the label of the knowledgebase entity while still being based on the label. For instance, the mentions 'Jackson' or 'M. Jackson' targeting wiki:Michael_Jackson are considered ShortProperForm.</dc:description>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#AliasProperForm">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#BaseFormClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Alias Proper Form</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/vcb/fel#ProperForm"/>
+    <dc:description xml:lang="en">This class is concerned with all the proper-noun mentions with a different morpheme than the primary label of the knowledge base entity to which if refers (though it may be a known alias). For instance, the mention 'King of Pop' targeting wiki:Michael_Jackson is considered an AliasProperForm.</dc:description>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#NumericTemporalForm">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#BaseFormClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Numeric and Temporal Form</rdfs:label>
+    <dc:description xml:lang="en">This class gathers all mentions based on numeric and temporal expressions, such as: '1', 'one', '12/23/2019', etc. (as were included in MUC-6).</dc:description>
+    <skos:narrower rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo#NumeralPOS"/>
+    <skos:narrower rdf:resource="http://purl.org/linguistics/goldQuantifier"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#CommonForm">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#BaseFormClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Common Form</rdfs:label>
+    <dc:description xml:lang="en">This class gathers all the mentions with a corresponding entity in the knowledgebase, but that does not correspond to a Proper Form, Pro-Form or Numeric/Temporal Form. For instance, the mention 'bfelt' referring to wiki:Bfelt_(clothing) is considered CommonForm.</dc:description>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#ProForm">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#BaseFormClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Pro-Form</rdfs:label>
+    <dc:description xml:lang="en">This class gathers all mentions based on pronouns, pro-adjective, etc. For example, the mentions 'he', 'theirs', etc., are considered ProForm (assuming they link to a knowledgebase entity).</dc:description>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#PartOfSpeechClass">
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Part Of Speech Class</rdfs:label>
+    <dc:description xml:lang="en">This meta-class gathers classes that divide annotations according to the part-of-speech of their mention.</dc:description>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#NounPhrasePoS">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#PartOfSpeechClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Noun Phrase PoS</rdfs:label>
+    <dc:description>This class gathers all the noun-phrase mentions. It is further divided into singular and plural noun-phrase mentions.</dc:description>
+    <skos:narrower rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo#NounPOS"/>
+    <skos:narrower rdf:resource="http://purl.org/linguistics/goldNoun"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#SingularNounPhrasePoS">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#PartOfSpeechClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Singular Noun Phrase PoS</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/vcb/fel#NounPhrase"/>
+    <dc:description xml:lang="en">This class gathers all the singular noun-phrase mentions, including 'documentary', 'Germany', etc.</dc:description>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#PluralNounPhrasePoS">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#PartOfSpeechClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Plural Noun Phrase PoS</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/vcb/fel#NounPhrase"/>
+    <dc:description xml:lang="en">This class gathers all the plural noun-phrase mentions. For instance, 'political parties' may refer to wiki:Political_party.</dc:description>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#VerbPoS">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#PartOfSpeechClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Verb PoS</rdfs:label>
+    <dc:description xml:lang="en">This class gathers all the verb mentions. For instance the verb mention 'assassinated' may link to wiki:Assassination.</dc:description>
+    <skos:closeMatch rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo#VerbPOS"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#AdjectivePoS">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#PartOfSpeechClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Adjective</rdfs:label>
+    <dc:description>This class gathers all the adjective mentions. For instance, the mention 'red' in the phrase 'red car' can be linked to wiki:Red; other examples include 'French', 'Democratic', 'his', etc.</dc:description>
+    <skos:closeMatch rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo#AdjectivePOS"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#AdverbPoS">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#PartOfSpeechClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Adverb</rdfs:label>
+    <dc:description>This class gathers all the Adverb mentions. For instance, 'comercially' could be associated to wiki:Commerce</dc:description>
+    <skos:closeMatch rdf:resource="http://www.lexinfo.net/ontology/2.0/lexinfo#AdverbPOS"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#OverlapClass">
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Overlap Class</rdfs:label>
+    <dc:description xml:lang="en">This meta-class gathers classes that divide annotations based on whether or not their mention overlaps with others. For example, in the sentence 'Living with Michael Jackson is a tfelevision documentary' the mention 'documentary' does not overlap with another mention; for this reason it is considered non-overlapping. On the other hand, the mentions 'Living with Michael Jackson' and 'Michael Jackson' have overlap.</dc:description>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#NoOverlap">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#OverlapClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">No Overlap</rdfs:label>
+    <dc:description>This class gathers all the mentions without overlap.</dc:description>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#MaximalOverlap">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#OverlapClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Maximal Overlap</rdfs:label>
+    <dc:description>This class describes all the mentions that overlap with others and that, more specifically, contain other mentions entirfely inside them but are not contained in other mentions. For instance, 'Living with Michael Jackson' is considered as maximal overlap assuming 'Michael Jackson' is also annotated and it is not contained inside another mention.</dc:description>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#IntermediateOverlap">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#OverlapClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Intermediate Overlap</rdfs:label>
+    <dc:description>This class describes all the mentions that overlap with others and that, more specifically, both contain and are contained in other mentions. For instance, in the mention 'New York Police Department Museum', the mention 'New York Police Department' has intermediate overlap because it is contained in the overall mention and contains the mention 'New York'.</dc:description>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#MinimalOverlap">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#OverlapClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Minimal Overlap</rdfs:label>
+    <dc:description>This class describes all the mentions that overlap with others and that, more specifically, are contained in but do not contain other mentions. For instance, in the annotation 'Living with Michael Jackson', the mention 'Michael Jackson' is considered to have minimal overlap.</dc:description>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#ReferenceClass">
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Reference Class</rdfs:label>
+    <dc:description xml:lang="en">This meta-class gathers classes that divide annotations based on how the mention references its entity. Examples of types of reference include Anaphoric, Direct, Descriptive, Metaphoric, Metonymic and Related.</dc:description>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#AnaphoricReference">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#ReferenceClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Anaphoric Reference</rdfs:label>
+    <dc:description xml:lang="en">This class gathers mentions that are pro-forms referring to an antecedent or postcedent in the text. For instance, in the sentence 'His son was widfely regarded ...' the mention 'His' may be an anaphoric reference to wiki:Joe_Jackson_(manager). (Note that noun phrases such as 'His son' referring to wiki:Michael_Jackson' should rather be marked as descriptive references.)</dc:description>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#DirectReference">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#ReferenceClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Direct Reference</rdfs:label>
+    <dc:description xml:lang="en">This class gathers mentions with references based on the direct, literal meaning of the words and names. For instance, the reference 'Michael Jackson' referring to wiki:Michael_Jackson, or the reference 'talent manager' referring to wiki:Talent_manager, are considered direct references</dc:description>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#DescriptiveReference">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#ReferenceClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Desciptive Reference</rdfs:label>
+    <dc:description xml:lang="en">This class gathers mentions based on describing the entities they refer to. For instance, the mention 'the capital of Peru' refers descriptively to wiki:Lima, or in the sentence 'Michael Jackson and his father', the mention 'his father' refers to wiki:Joe_Jackson_(manager). Note that simple proforms ('he', 'her', etc.) should rather be marked as anaphoric reference.</dc:description>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#MetaphoricReference">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#ReferenceClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Metaphoric Reference</rdfs:label>
+    <dc:description xml:lang="en">This class gathers mentions that make reference based on a figurative rather than literal meaning of the words. For example, in the phrase 'the King of Pop', the mention 'King' can be considered a metaphoric reference to wiki:King; in the sentence 'they added spice to their rfelationship', the mention 'spice' (wiki:Spice) is again a metaphoric reference.</dc:description>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#MetonymicReference">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#ReferenceClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Metonymic Reference</rdfs:label>
+    <dc:description xml:lang="en">This class gathers mentions that refer to something specific by reference to a broader related entity (often, but not always, countries). For example, in the phrase 'Russia announced today', the mention 'Russia' is a metonymic reference to wiki:Government_of_Russia; in the phrase 'Poland won 3-2 on penalties', 'Poland' may be a metonymic reference to wiki:Poland_national_football_team, etc.</dc:description>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://w3id.org/vcb/fel#RelatedReference">
+    <rdf:type rdf:resource="http://w3id.org/vcb/fel#ReferenceClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://w3id.org/vcb/fel#"/>
+    <rdfs:label xml:lang="en">Related Reference</rdfs:label>
+    <dc:description xml:lang="en">This class gathers mentions that refer to something for which there is (only) something closely related in the knowledgebase. For instance, in the phrase 'The Russian daily RBK', the mention 'daily' refers to a daily newpaper, but in Wikipedia we only have wiki:Newspaper, so 'daily' can be seen as a reference to the closely related wiki:Newspaper. (Such references are sometimes reflected, for example, with redirects in Wikipedia, or pointers to a subsection of an entity's article.)</dc:description>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="http://w3id.org/vcb/fel#entityType">
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Entity Type</rdfs:label>
+    <dc:description xml:lang="en">Specifies the entity type of a mention. The domain of the property are mentions, and the range is classes (from the KB), e.g., Organization, Place, Person, etc.</dc:description>
+  </owl:ObjectProperty>
+
+</rdf:RDF>

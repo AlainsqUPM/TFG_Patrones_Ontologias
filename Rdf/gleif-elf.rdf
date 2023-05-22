@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.gleif.org/ontology/EntityLegalForm/"
+     xml:base="https://www.gleif.org/ontology/EntityLegalForm/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Base="https://www.gleif.org/ontology/Base/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+    <owl:Ontology rdf:about="https://www.gleif.org/ontology/EntityLegalForm/">
+        <owl:versionIRI rdf:resource="https://www.gleif.org/ontology/EntityLegalForm-v1.0/EntityLegalForm/"/>
+        <owl:imports rdf:resource="https://www.gleif.org/ontology/Base/"/>
+        <owl:imports rdf:resource="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/"/>
+        <terms:abstract xml:lang="en">Ontology defining concepts for Entity Legal Forms and their abbreviations by jurisdiction, based on ISO 20275. Though used by Global Legal Entity Identifier Foundation (GLEIF)  for Legal Entity Identifier registration, it is more broadly applicable.</terms:abstract>
+        <terms:contributor rdf:resource="http://www.workingontologist.com"/>
+        <terms:contributor rdf:resource="http://purl.org/bryon"/>
+        <terms:contributor rdf:resource="https://www.linkedin.com/in/peterivett/"/>
+        <terms:creator rdf:resource="https://www.gleif.org/ontology/Base/GLEIF"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-01T00:00:00+00:00</terms:issued>
+        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gleif.org/en/meta/lei-data-terms-of-use/</terms:license>
+        <terms:rights>Copyright (c) 2019 Global Legal Entity Identifier Foundation (GLEIF)</terms:rights>
+        <terms:rightsHolder rdf:resource="https://www.gleif.org/ontology/Base/GLEIF"/>
+        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gleif.org/en/about-lei/code-lists/iso-20275-entity-legal-forms-code-list</terms:source>
+        <terms:title xml:lang="en">Entity Legal Form Ontology</terms:title>
+        <vann:preferredNamespacePrefix>gleif-elf</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://www.gleif.org/ontology/EntityLegalForm/</vann:preferredNamespaceUri>
+        <rdfs:label>Entity Legal Form Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.gleif.org/ontology/EntityLegalForm/EntityLegalForm -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/EntityLegalForm/EntityLegalForm">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasCoverageArea"/>
+                <owl:someValuesFrom rdf:resource="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/GeographicRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasAbbreviationLocal"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasAbbreviationTransliterated"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasNameLegalLocal"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasNameTransliterated"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/EntityLegalForm/"/>
+        <rdfs:label>entity legal form</rdfs:label>
+        <skos:definition>The legal form of the entity, taken from the ISO Entity Legal Form (ELF) code list maintained by GLEIF. </skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/EntityLegalForm/EntityLegalFormIdentifier -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/EntityLegalForm/EntityLegalFormIdentifier">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/Base/Identifier"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/identifies"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/EntityLegalForm/EntityLegalForm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/EntityLegalForm/"/>
+        <rdfs:label>entity legal form identifier</rdfs:label>
+        <skos:definition>A current code from the GLEIF-maintained list MUST be used. Values of the LegalFormEnum code list are maintained by GLEIF on behalf of ISO through the Entity Legal Form (ELF) as defined in ISO 20275.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.gleif.org/ontology/EntityLegalForm/ -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/EntityLegalForm/">
+        <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/EntityLegalForm/ELFregistry -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/EntityLegalForm/ELFregistry">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/Base/Registry"/>
+        <Base:isManagedBy rdf:resource="https://www.gleif.org/ontology/Base/GLEIF"/>
+        <Base:hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gleif.org/en/about-lei/code-lists/iso-20275-entity-legal-forms-code-list</Base:hasWebsite>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/EntityLegalForm/"/>
+        <rdfs:label>ELF registry</rdfs:label>
+        <skos:altLabel>ELF list</skos:altLabel>
+        <skos:altLabel>Entity Legal Form list</skos:altLabel>
+        <skos:prefLabel>ELF registry</skos:prefLabel>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ -->
+
+

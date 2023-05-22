@@ -1,0 +1,1028 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://data.ign.fr/def/geofla#"
+     xml:base="http://data.ign.fr/def/geofla"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:org="http://www.w3.org/ns/org#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://data.ign.fr/def/geofla">
+        <ns:license rdf:resource="http://creativecommons.org/licenses/by/2.0/"/>
+        <ns:license rdf:resource="http://opendatacommons.org/licenses/by/"/>
+        <ns:license rdf:resource="http://www.data.gouv.fr/Licence-Ouverte-Open-Licence"/>
+        <terms:contributor rdf:resource="http://data.semanticweb.org/person/bernard-vatant"/>
+        <terms:contributor rdf:resource="http://recherche.ign.fr/labos/cogit/cv.php?prenom=Bénédicte&amp;nom=Bucher"/>
+        <terms:contributor rdf:resource="http://www.eurecom.fr/~troncy/"/>
+        <terms:contributor rdf:nodeID="genid1"/>
+        <terms:creator rdf:resource="http://www.eurecom.fr/~atemezin/"/>
+        <terms:creator rdf:nodeID="genid6"/>
+        <terms:description xml:lang="fr">Ontologie décrivant le découpage administratif de la France métropolitaine, des départements d&apos;outre-mer, ou de la collectivité  départementale de Mayotte, représentée comme une hiérarchie de classes OWL</terms:description>
+        <terms:description xml:lang="en">Ontology describing the administrative division of metropolitan France, the overseas departments, or the departmental community of Mayotte, represented as a hierarchy of OWL classes</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-06-11</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-08-22</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-02-12</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-02-18</terms:modified>
+        <terms:publisher rdf:resource="http://fr.dbpedia.org/resource/Institut_national_de_l%27information_g%C3%A9ographique_et_foresti%C3%A8re"/>
+        <terms:rights>Copyright 2021, IGN</terms:rights>
+        <terms:title xml:lang="fr">Ontologie des unités administratives de l&apos;IGN</terms:title>
+        <terms:title xml:lang="en">Ontology of IGN administrative units</terms:title>
+        <vann:preferredNamespacePrefix>geofla</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:resource="http://data.ign.fr/def/geofla#"/>
+        <owl:priorVersion rdf:resource="http://data.ign.fr/def/geofla/20190212.ttl"/>
+        <owl:versionInfo>Version 1.2 - 2021-02-18</owl:versionInfo>
+    </owl:Ontology>
+    <rdf:Description rdf:nodeID="genid1">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <org:hasMembership rdf:nodeID="genid2"/>
+        <foaf:family_name>McGibbney</foaf:family_name>
+        <foaf:firstName>Lewis J</foaf:firstName>
+        <foaf:mbox rdf:resource="mailto:lewis.j.mcgibbney@jpl.nasa.gov"/>
+        <foaf:name>Lewis John McGibbney</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid6">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <org:hasMembership rdf:nodeID="genid7"/>
+        <foaf:family_name>Abadie</foaf:family_name>
+        <foaf:firstName>Nathalie</foaf:firstName>
+        <foaf:mbox rdf:resource="mailto:nathalie-f.abadie@ign.fr"/>
+        <foaf:name>Nathalie Abadie</foaf:name>
+        <foaf:workInfoHomepage rdf:resource="http://recherche.ign.fr/labos/cogit/cv.php?prenom=Nathalie&amp;nom=Abadie"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid2">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Membership"/>
+        <org:memberDuring rdf:nodeID="genid3"/>
+        <org:organization rdf:resource="http://dbpedia.org/resource/JPL"/>
+        <org:organization rdf:resource="https://www.jpl.nasa.gov"/>
+        <org:role rdf:nodeID="genid5"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid7">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Membership"/>
+        <org:memberDuring rdf:nodeID="genid8"/>
+        <org:organization rdf:resource="http://recherche.ign.fr/"/>
+        <org:organization rdf:resource="http://www.ign.fr/"/>
+        <org:role rdf:nodeID="genid10"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid3">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:nodeID="genid4"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid5">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Role"/>
+        <rdfs:label>Data Scientist</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid8">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <time:hasBeginning rdf:nodeID="genid9"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid10">
+        <rdf:type rdf:resource="http://www.w3.org/ns/org#Role"/>
+        <rdfs:label xml:lang="fr">Chargée de recherche</rdfs:label>
+        <rdfs:label xml:lang="en">Survey engineer and Scientist</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid4">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2014-04-01T00:00:00+08:00</time:inXSDDateTimeStamp>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid9">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2005-09-09</time:inXSDDateTimeStamp>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/rights -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasBeginning -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#hasBeginning"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inXSDDateTimeStamp -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/time#inXSDDateTimeStamp"/>
+    
+
+
+    <!-- http://www.w3.org/ns/org#hasMembership -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/org#hasMembership"/>
+    
+
+
+    <!-- http://www.w3.org/ns/org#memberDuring -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/org#memberDuring"/>
+    
+
+
+    <!-- http://www.w3.org/ns/org#organization -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/org#organization"/>
+    
+
+
+    <!-- http://www.w3.org/ns/org#role -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/org#role"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/family_name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/family_name"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/firstName -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/firstName"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/mbox -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/mbox"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/workInfoHomepage -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/workInfoHomepage"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://data.ign.fr/def/geofla#arr -->
+
+
+    <owl:ObjectProperty rdf:about="http://data.ign.fr/def/geofla#arr">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://data.ign.fr/def/geofla#Canton"/>
+                    <rdf:Description rdf:about="http://data.ign.fr/def/geofla#Commune"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://data.ign.fr/def/geofla#Arrondissement"/>
+        <rdfs:comment xml:lang="fr">Arrondissement auquel appartient l&apos;unité administrative.</rdfs:comment>
+        <rdfs:comment xml:lang="en">District to which the administrative unit belongs.</rdfs:comment>
+        <rdfs:label xml:lang="fr">appartient à l&apos;arrondisssement</rdfs:label>
+        <rdfs:label xml:lang="en">belongs to arrondisssement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ign.fr/def/geofla#cant -->
+
+
+    <owl:ObjectProperty rdf:about="http://data.ign.fr/def/geofla#cant">
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/geofla#Commune"/>
+        <rdfs:range rdf:resource="http://data.ign.fr/def/geofla#Canton"/>
+        <rdfs:comment xml:lang="fr">Canton auquel appartient l&apos;unité administrative.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Canton to which the administrative unit belongs.</rdfs:comment>
+        <rdfs:label xml:lang="fr">appartient au canton</rdfs:label>
+        <rdfs:label xml:lang="en">belongs to canton</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ign.fr/def/geofla#chefLieu -->
+
+
+    <owl:ObjectProperty rdf:about="http://data.ign.fr/def/geofla#chefLieu">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://data.ign.fr/def/geofla#Arrondissement"/>
+                    <rdf:Description rdf:about="http://data.ign.fr/def/geofla#Canton"/>
+                    <rdf:Description rdf:about="http://data.ign.fr/def/geofla#Departement"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://data.ign.fr/def/geofla#Commune"/>
+        <rdfs:comment xml:lang="fr">Chef-lieu de l&apos;unité administrative lorsqu&apos;il existe (un canton ne possède pas toujours de chef-lieu. Cela arrive dans le cas de cantons situés à la périphérie d&apos;une ville importante constituant à elle seule un canton non précisé.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">The capital of the administrative unit when it exists (a canton does not always have a capital city, this happens in the case of cantons located on the outskirts of a major city which alone constitutes an unspecified canton.)</rdfs:comment>
+        <rdfs:label xml:lang="en">capital of the administrative subdivision</rdfs:label>
+        <rdfs:label xml:lang="fr">chef-lieu de l&apos;unité administrative</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ign.fr/def/geofla#dpt -->
+
+
+    <owl:ObjectProperty rdf:about="http://data.ign.fr/def/geofla#dpt">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://data.ign.fr/def/geofla#Arrondissement"/>
+                    <rdf:Description rdf:about="http://data.ign.fr/def/geofla#Canton"/>
+                    <rdf:Description rdf:about="http://data.ign.fr/def/geofla#Commune"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://data.ign.fr/def/geofla#Departement"/>
+        <rdfs:comment xml:lang="en">Department to which the administrative unit belongs</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Département auquel appartient l&apos;unité administrative</rdfs:comment>
+        <rdfs:label xml:lang="fr">appartient au département</rdfs:label>
+        <rdfs:label xml:lang="en">belongs to department</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ign.fr/def/geofla#region -->
+
+
+    <owl:ObjectProperty rdf:about="http://data.ign.fr/def/geofla#region">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://data.ign.fr/def/geofla#Arrondissement"/>
+                    <rdf:Description rdf:about="http://data.ign.fr/def/geofla#Canton"/>
+                    <rdf:Description rdf:about="http://data.ign.fr/def/geofla#Commune"/>
+                    <rdf:Description rdf:about="http://data.ign.fr/def/geofla#Departement"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://data.ign.fr/def/geofla#Region"/>
+        <rdfs:comment xml:lang="en">Region to which the administrative unit belongs.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Région à laquelle appartient l&apos;unité administrative.</rdfs:comment>
+        <rdfs:label xml:lang="fr">appartient à la région</rdfs:label>
+        <rdfs:label xml:lang="en">belongs to region</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ign.fr/def/geofla#siegeDuChefLieu -->
+
+
+    <owl:ObjectProperty rdf:about="http://data.ign.fr/def/geofla#siegeDuChefLieu">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://data.ign.fr/def/geofla#Arrondissement"/>
+                    <rdf:Description rdf:about="http://data.ign.fr/def/geofla#Canton"/>
+                    <rdf:Description rdf:about="http://data.ign.fr/def/geofla#Commune"/>
+                    <rdf:Description rdf:about="http://data.ign.fr/def/geofla#Departement"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://data.ign.fr/def/geometrie#Point"/>
+        <rdfs:comment xml:lang="fr">Point qui représente la localisation du siège du chef-lieu de l&apos;unité administrative.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Point representing the location of the seat of the administrative center of the administrative unit.</rdfs:comment>
+        <rdfs:label xml:lang="en">head office of the capital</rdfs:label>
+        <rdfs:label xml:lang="fr">siège du chef-lieu</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.ign.fr/def/geofla#statut -->
+
+
+    <owl:ObjectProperty rdf:about="http://data.ign.fr/def/geofla#statut">
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/geofla#Commune"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                <owl:hasValue rdf:resource="http://data.ign.fr/codes/geonto/typedecommune/liste"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">status</rdfs:label>
+        <rdfs:label xml:lang="fr">statut</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.geonames.org/ontology#featureCode -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.geonames.org/ontology#featureCode"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://data.ign.fr/def/geofla#codeArr -->
+
+
+    <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/geofla#codeArr">
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/geofla#Arrondissement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="fr">Code géographique de l&apos;arrondissement dans son département d&apos;appartenance(texte d&apos;un caractère).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Geographical code of the district in the department it belongs to (one-character text).</rdfs:comment>
+        <rdfs:label xml:lang="fr">code géographique de l&apos;arrondissement</rdfs:label>
+        <rdfs:label xml:lang="en">geographic code of the arrondissement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ign.fr/def/geofla#codeCant -->
+
+
+    <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/geofla#codeCant">
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/geofla#Canton"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="fr">Code géographique permettant d&apos;identifier le canton (texte de quatre caractères).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Geographical code to identify the canton (four-character text).</rdfs:comment>
+        <rdfs:label xml:lang="fr">code géographique du canton</rdfs:label>
+        <rdfs:label xml:lang="en">geographic code of the canton</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ign.fr/def/geofla#codeComm -->
+
+
+    <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/geofla#codeComm">
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/geofla#Commune"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="fr">Code géographique permettant d&apos;identifier la commune dans son département d&apos;appartenance (texte de trois caractères).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Geographical code to identify the municipality in the department it belongs to (three-character text).</rdfs:comment>
+        <rdfs:label xml:lang="fr">code géographique de la commune</rdfs:label>
+        <rdfs:label xml:lang="en">geographic code of the commune</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ign.fr/def/geofla#codeDpt -->
+
+
+    <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/geofla#codeDpt">
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/geofla#Departement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="fr">Code géographique du département (texte de deux caractères).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Geographical code of the department (two-character text).</rdfs:comment>
+        <rdfs:label xml:lang="fr">code géographique du département</rdfs:label>
+        <rdfs:label xml:lang="en">geographic code of the department</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ign.fr/def/geofla#codeReg -->
+
+
+    <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/geofla#codeReg">
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/geofla#Region"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="fr">Code géographique de la région (texte de deux caractères).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Geographical code of the region (two-character text).</rdfs:comment>
+        <rdfs:label xml:lang="fr">code géographique de la région</rdfs:label>
+        <rdfs:label xml:lang="en">geographic code of the region</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ign.fr/def/geofla#numInsee -->
+
+
+    <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/geofla#numInsee">
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/geofla#Commune"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="fr">Il s&apos;agit d&apos;un numéro de 5 caractères : le code du département suivi du code géographique de la commune. Pour les DOM, le 3ème caractère est commun au numéro de département et au numéro de commune.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is a 5-character number: the department code followed by the geographical code of the municipality. For DOMs, the 3rd character is common to the department number and the commune number.</rdfs:comment>
+        <rdfs:label xml:lang="en">insee identifier of the commune</rdfs:label>
+        <rdfs:label xml:lang="fr">numéro insee de la commune</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ign.fr/def/geofla#population -->
+
+
+    <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/geofla#population">
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/geofla#Commune"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="fr">Chiffre de population municipale, au sens défini par le décret n°2003-485 publié au Journal Officiel du 8 juin 2003.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Municipal population, as defined by decree n°2003-485 published in the Journal Officiel of 8 June 2003.</rdfs:comment>
+        <rdfs:label xml:lang="en">population</rdfs:label>
+        <rdfs:label xml:lang="fr">population</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ign.fr/def/geofla#superficieHa -->
+
+
+    <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/geofla#superficieHa">
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/geofla#Commune"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Area of the municipality in hectares.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Superficie de la commune en hectares.</rdfs:comment>
+        <rdfs:label xml:lang="en">area in hectares</rdfs:label>
+        <rdfs:label xml:lang="fr">superficie en hectares</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.ign.fr/def/geofla#zMoyen -->
+
+
+    <owl:DatatypeProperty rdf:about="http://data.ign.fr/def/geofla#zMoyen">
+        <rdfs:domain rdf:resource="http://data.ign.fr/def/geofla#Commune"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="fr">Altitude moyenne de la commune en mètres.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Average altitude of the municipality in meters.</rdfs:comment>
+        <rdfs:label xml:lang="fr">altitude moyenne</rdfs:label>
+        <rdfs:label xml:lang="en">mean altitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://data.ign.fr/def/geofla#Arrondissement -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/geofla#Arrondissement">
+        <owl:equivalentClass rdf:resource="http://rdf.insee.fr/def/geo#Arrondissement"/>
+        <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/geofla#UniteAdministrative"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.geonames.org/ontology#featureCode"/>
+                <owl:hasValue rdf:resource="http://www.geonames.org/ontology#A.ADM3"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="fr">Cette classe contient l&apos;ensemble des arrondissements (ce sont les arrondissements au sens INSEE, et non les arrondissements municipaux).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class contains all the boroughs (these are the districts in the INSEE sense, and not the municipal districts).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/geofla"/>
+        <rdfs:label xml:lang="en">Arrondissement</rdfs:label>
+        <rdfs:label xml:lang="fr">Arrondissement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ign.fr/def/geofla#Canton -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/geofla#Canton">
+        <owl:equivalentClass rdf:resource="http://rdf.insee.fr/def/geo#CantonOuVille"/>
+        <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/geofla#UniteAdministrative"/>
+        <rdfs:comment xml:lang="fr">Les cantons contenus dans les différentes bases de données de l&apos;IGN sont des cantons au sens INSEE du terme, appelés pseudo-cantons. Un pseudo-canton, quant à lui, est un regroupement d&apos;une ou plusieurs communes entières.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The cantons contained in the various databases of the IGN are cantons in the INSEE sense of the term, called pseudo-cantons. A pseudo-canton, meanwhile, is a grouping of one or more whole communes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/geofla"/>
+        <rdfs:label xml:lang="en">Canton</rdfs:label>
+        <rdfs:label xml:lang="fr">Canton</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ign.fr/def/geofla#Commune -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/geofla#Commune">
+        <owl:equivalentClass rdf:resource="http://rdf.insee.fr/def/geo#Commune"/>
+        <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/geofla#UniteAdministrative"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.geonames.org/ontology#featureCode"/>
+                <owl:hasValue rdf:resource="http://www.geonames.org/ontology#A.ADM4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="fr">Cette classe contient l&apos;ensemble des communes métropolitaines, des 5 départements d&apos;outre-mer (Guadeloupe, Martinique, Guyane, La Réunion et Mayotte).</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class contains all metropolitan municipalities, 5 overseas departments (Guadeloupe, Martinique, French Guiana, Reunion and Mayotte).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/geofla"/>
+        <rdfs:label xml:lang="fr">Commune</rdfs:label>
+        <rdfs:label xml:lang="en">Municipality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ign.fr/def/geofla#Departement -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/geofla#Departement">
+        <owl:equivalentClass rdf:resource="http://rdf.insee.fr/def/geo#Departement"/>
+        <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/geofla#UniteAdministrative"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.geonames.org/ontology#featureCode"/>
+                <owl:hasValue rdf:resource="http://www.geonames.org/ontology#A.ADM2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="fr">Cette classe contient l&apos;ensemble des départements.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class contains all departments.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/geofla"/>
+        <rdfs:label xml:lang="en">Department</rdfs:label>
+        <rdfs:label xml:lang="fr">Département</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ign.fr/def/geofla#Region -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/geofla#Region">
+        <owl:equivalentClass rdf:resource="http://rdf.insee.fr/def/geo#Region"/>
+        <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/geofla#UniteAdministrative"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.geonames.org/ontology#featureCode"/>
+                <owl:hasValue rdf:resource="http://www.geonames.org/ontology#A.ADM1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="fr">Cette classe contient l&apos;ensemble des régions.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class contains all regions.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/geofla"/>
+        <rdfs:label xml:lang="en">Region</rdfs:label>
+        <rdfs:label xml:lang="fr">Région</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ign.fr/def/geofla#TypeDeCommune -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/geofla#TypeDeCommune">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="fr">Type de commune</rdfs:label>
+        <rdfs:label xml:lang="en">Type of commune</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ign.fr/def/geofla#UniteAdministrative -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/geofla#UniteAdministrative">
+        <rdfs:subClassOf rdf:resource="http://data.ign.fr/def/topo#EntiteTopographique"/>
+        <rdfs:comment xml:lang="en">Geographical object resulting from the administrative division of the French territory.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Objet géographique résultant du découpage administratif du territoire français.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://data.ign.fr/def/geofla"/>
+        <rdfs:label xml:lang="en">Administrative subdivision</rdfs:label>
+        <rdfs:label xml:lang="fr">Unité administrative</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.ign.fr/def/geometrie#Point -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/geometrie#Point"/>
+    
+
+
+    <!-- http://data.ign.fr/def/topo#EntiteTopographique -->
+
+
+    <owl:Class rdf:about="http://data.ign.fr/def/topo#EntiteTopographique">
+        <rdfs:label xml:lang="fr">Entité topographique</rdfs:label>
+        <rdfs:label xml:lang="en">Topographic entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocommons/voaf#Vocabulary -->
+
+
+    <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+    
+
+
+    <!-- http://rdf.insee.fr/def/geo#Arrondissement -->
+
+
+    <owl:Class rdf:about="http://rdf.insee.fr/def/geo#Arrondissement"/>
+    
+
+
+    <!-- http://rdf.insee.fr/def/geo#CantonOuVille -->
+
+
+    <owl:Class rdf:about="http://rdf.insee.fr/def/geo#CantonOuVille"/>
+    
+
+
+    <!-- http://rdf.insee.fr/def/geo#Commune -->
+
+
+    <owl:Class rdf:about="http://rdf.insee.fr/def/geo#Commune"/>
+    
+
+
+    <!-- http://rdf.insee.fr/def/geo#Departement -->
+
+
+    <owl:Class rdf:about="http://rdf.insee.fr/def/geo#Departement"/>
+    
+
+
+    <!-- http://rdf.insee.fr/def/geo#Region -->
+
+
+    <owl:Class rdf:about="http://rdf.insee.fr/def/geo#Region"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Instant"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Interval -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Interval"/>
+    
+
+
+    <!-- http://www.w3.org/ns/org#Membership -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/org#Membership"/>
+    
+
+
+    <!-- http://www.w3.org/ns/org#Role -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/org#Role"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://data.ign.fr/codes/geonto/typedecommune/liste -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/codes/geonto/typedecommune/liste"/>
+    
+
+
+    <!-- http://data.ign.fr/def/geofla -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/def/geofla">
+        <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geofla/typedecommune/CapitaleDEtat -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geofla/typedecommune/CapitaleDEtat">
+        <rdf:type rdf:resource="http://data.ign.fr/def/geofla#TypeDeCommune"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="fr">Commune principale d&apos;un état, siège du gouvernement et de l&apos;administration.</skos:definition>
+        <skos:definition xml:lang="en">Main municipality of a state, seat of government and administration.</skos:definition>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geofla/typedecommune/liste"/>
+        <skos:prefLabel xml:lang="fr">capitale d&apos;état</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">state capital</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geofla/typedecommune/ChefLieuDeCanton -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geofla/typedecommune/ChefLieuDeCanton">
+        <rdf:type rdf:resource="http://data.ign.fr/def/geofla#TypeDeCommune"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="fr">Chef-lieu d&apos;un canton français.</skos:definition>
+        <skos:definition xml:lang="en">Chief town of a French canton.</skos:definition>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geofla/typedecommune/liste"/>
+        <skos:prefLabel xml:lang="fr">chef-lieu de canton</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">township capital</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geofla/typedecommune/CommuneSimple -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geofla/typedecommune/CommuneSimple">
+        <rdf:type rdf:resource="http://data.ign.fr/def/geofla#TypeDeCommune"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="fr">Commune sans rôle administratif particulier.</skos:definition>
+        <skos:definition xml:lang="en">Commune without a particular administrative role.</skos:definition>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geofla/typedecommune/liste"/>
+        <skos:prefLabel xml:lang="fr">commune simple</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">simple commune</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geofla/typedecommune/PrefectureDeDepartement -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geofla/typedecommune/PrefectureDeDepartement">
+        <rdf:type rdf:resource="http://data.ign.fr/def/geofla#TypeDeCommune"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="fr">Chef-lieu d&apos;un département français.</skos:definition>
+        <skos:definition xml:lang="en">Chief town of a French department.</skos:definition>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geofla/typedecommune/liste"/>
+        <skos:prefLabel xml:lang="en">prefecture</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">préfecture de département</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geofla/typedecommune/PrefectureDeRegion -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geofla/typedecommune/PrefectureDeRegion">
+        <rdf:type rdf:resource="http://data.ign.fr/def/geofla#TypeDeCommune"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="fr">Chef-lieu d&apos;une région française.</skos:definition>
+        <skos:definition xml:lang="en">Chief town of a French region.</skos:definition>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geofla/typedecommune/liste"/>
+        <skos:prefLabel xml:lang="fr">préfecture de région</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">regional prefecture</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geofla/typedecommune/SousPrefecture -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geofla/typedecommune/SousPrefecture">
+        <rdf:type rdf:resource="http://data.ign.fr/def/geofla#TypeDeCommune"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="fr">Chef-lieu d&apos;un arrondissement français.</skos:definition>
+        <skos:definition xml:lang="en">Chief town of a French district.</skos:definition>
+        <skos:inScheme rdf:resource="http://data.ign.fr/id/codes/geofla/typedecommune/liste"/>
+        <skos:prefLabel xml:lang="fr">sous-préfecture</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">subprefecture</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.ign.fr/id/codes/geofla/typedecommune/liste -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.ign.fr/id/codes/geofla/typedecommune/liste">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:comment xml:lang="en">List of the different roles that can be played by a municipality in the French administrative organization, represented as a list of SKOS concepts.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Liste des différents rôles pouvant être joués par une commune dans l&apos;organisation administrative française, représentés comme une liste de concepts SKOS.</rdfs:comment>
+        <rdfs:label xml:lang="fr">type de commune</rdfs:label>
+        <rdfs:label xml:lang="en">type of commune</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.semanticweb.org/person/bernard-vatant -->
+
+
+    <owl:NamedIndividual rdf:about="http://data.semanticweb.org/person/bernard-vatant">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://recherche.ign.fr/labos/cogit/cv.php?prenom=Bénédicte&amp;nom=Bucher -->
+
+
+    <owl:NamedIndividual rdf:about="http://recherche.ign.fr/labos/cogit/cv.php?prenom=Bénédicte&amp;nom=Bucher">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eurecom.fr/~atemezin/ -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.eurecom.fr/~atemezin/">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eurecom.fr/~troncy/ -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.eurecom.fr/~troncy/">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.geonames.org/ontology#A.ADM1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.geonames.org/ontology#A.ADM1"/>
+    
+
+
+    <!-- http://www.geonames.org/ontology#A.ADM2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.geonames.org/ontology#A.ADM2"/>
+    
+
+
+    <!-- http://www.geonames.org/ontology#A.ADM3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.geonames.org/ontology#A.ADM3"/>
+    
+
+
+    <!-- http://www.geonames.org/ontology#A.ADM4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.geonames.org/ontology#A.ADM4"/>
+    
+
+
+    <!-- http://www.geonames.org/ontology#A.ADM5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.geonames.org/ontology#A.ADM5"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+

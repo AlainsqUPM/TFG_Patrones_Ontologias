@@ -1,0 +1,1275 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.gleif.org/ontology/L1/"
+     xml:base="https://www.gleif.org/ontology/L1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Base="https://www.gleif.org/ontology/Base/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+    <owl:Ontology rdf:about="https://www.gleif.org/ontology/L1/">
+        <owl:versionIRI rdf:resource="https://www.gleif.org/ontology/L1-v1.0/L1/"/>
+        <owl:imports rdf:resource="https://www.gleif.org/ontology/Base/"/>
+        <owl:imports rdf:resource="https://www.gleif.org/ontology/EntityLegalForm/"/>
+        <owl:imports rdf:resource="https://www.gleif.org/ontology/RegistrationAuthority/"/>
+        <terms:abstract xml:lang="en">Ontology for legal entity identifier registration. It was designed for Global Legal Entity Identifier Foundation (GLEIF) Level 1 data corresponding to the Common Data Format version 2.1. It covers key reference data for a legal entity identifiable with an LEI. The ISO 17442 standard developed by the International Organization for Standardization defines a set of attributes or LEI reference data that comprises the most essential elements of identification. It specifies the minimum reference data, which must be supplied for each LEI:
+    The official name of the legal entity as recorded in the official registers.
+    The registered address of that legal entity.
+    The country of formation.
+    The codes for the representation of names of countries and their subdivisions.
+    The date of the first LEI assignment; the date of last update of the LEI information; and the date of expiry, if applicable.</terms:abstract>
+        <terms:contributor rdf:resource="http://www.workingontologist.com"/>
+        <terms:contributor rdf:resource="http://purl.org/bryon"/>
+        <terms:contributor rdf:resource="https://www.linkedin.com/in/peterivett/"/>
+        <terms:creator rdf:resource="https://www.gleif.org/ontology/Base/GLEIF"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-01T00:00:00+00:00</terms:issued>
+        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gleif.org/en/meta/lei-data-terms-of-use/</terms:license>
+        <terms:rights>Copyright (c) 2019 Global Legal Entity Identifier Foundation (GLEIF)</terms:rights>
+        <terms:rightsHolder rdf:resource="https://www.gleif.org/ontology/Base/GLEIF"/>
+        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gleif.org/en/about-lei/common-data-file-format/lei-cdf-format/lei-cdf-format-version-2-1</terms:source>
+        <terms:title xml:lang="en">Global Legal Entity Identifier Foundation Level 1 Ontology - Who Is Who</terms:title>
+        <vann:preferredNamespacePrefix>gleif-L1</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://www.gleif.org/ontology/L1/</vann:preferredNamespaceUri>
+        <rdfs:label>GLEIF L1 Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasAlternativeLanguageHeadquartersAddress -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L1/hasAlternativeLanguageHeadquartersAddress">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/hasAddressHeadquarters"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/L1/hasOtherAddresses"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has alternative language headquarters address</rdfs:label>
+        <skos:definition>Address of the headquarters of the entity, in an alternative language used in the legal jurisdiction.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasAlternativeLanguageLegalAddress -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L1/hasAlternativeLanguageLegalAddress">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/hasAddressLegal"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/L1/hasOtherAddresses"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has alternative language legal address</rdfs:label>
+        <skos:definition>Registered address of the entity in the legal jurisdiction, in analternative language used in the legal jurisdiction.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasAssociatedEntity -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L1/hasAssociatedEntity">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/L1/RegisteredEntity"/>
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/L1/RegisteredEntity"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has associated entity</rdfs:label>
+        <skos:definition>Another entity associated with this entity if needed to fully identify this entity or to place it in an appropriate context.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasAutoASCIITransliteratedHeadquartersAddress -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L1/hasAutoASCIITransliteratedHeadquartersAddress">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/L1/hasTransliteratedHeadquartersAddress"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has auto ASCII transliterated headquarters address</rdfs:label>
+        <skos:definition>Auto transliterated headquarters address for the legal entity.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasAutoASCIITransliteratedLegalAddress -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L1/hasAutoASCIITransliteratedLegalAddress">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/L1/hasTransliteratedLegalAddress"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has auto ASCII transliterated legal address</rdfs:label>
+        <skos:definition>Auto transliterated legal address for the legal entity.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasFundFamily -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L1/hasFundFamily">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/isManagedBy"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/L1/hasAssociatedEntity"/>
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/L1/Fund"/>
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/L1/FundFamily"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has fund family</rdfs:label>
+        <skos:definition>The entity that is the manager of the fund.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasHeadquartersAddress -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L1/hasHeadquartersAddress">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/hasAddressHeadquarters"/>
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/Base/Entity"/>
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/Base/PhysicalAddress"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has headquarters address</rdfs:label>
+        <skos:definition>The primary address of the headquarters of the Entity.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasLegalAddress -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L1/hasLegalAddress">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/hasAddressLegal"/>
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/Base/Entity"/>
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/Base/PhysicalAddress"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has legal address</rdfs:label>
+        <skos:definition>The primary legal address of the entity as recorded in the registration of the entity in its legal jurisdiction.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasLegalForm -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L1/hasLegalForm">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/Base/Entity"/>
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/EntityLegalForm/EntityLegalForm"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has legal form</rdfs:label>
+        <skos:definition>The legal form of the entity, taken from the ISO 20275 Entity Legal Form (ELF) data set maintained by GLEIF.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasManagingLOU -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L1/hasManagingLOU">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/isManagedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/Base/RegistryEntry"/>
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/L1/LocalOperatingUnit"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has managing LOU</rdfs:label>
+        <skos:definition>The LOU that is responsible for administering this LEI registration.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasOtherAddresses -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L1/hasOtherAddresses">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/hasAddress"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has other addresses</rdfs:label>
+        <skos:definition>An optional list of other addresses for the legal entity, excluding transliterations.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasOtherValidationIdentifier -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L1/hasOtherValidationIdentifier">
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/Base/RegistryIdentifier"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has other validation identifier</rdfs:label>
+        <skos:altLabel>has additional validation identifier</skos:altLabel>
+        <skos:definition>An optional list of additional registrations used by the LEI Issuer to validate the entity data.</skos:definition>
+        <skos:prefLabel>has other validation identifier</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasPreferredASCIITransliteratedHeadquartersAddress -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L1/hasPreferredASCIITransliteratedHeadquartersAddress">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/L1/hasTransliteratedHeadquartersAddress"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has preferred ASCII transliterated headquarters address</rdfs:label>
+        <skos:definition>Preferred transliterated headquarters address for the legal entity.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasPreferredASCIITransliteratedLegalAddress -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L1/hasPreferredASCIITransliteratedLegalAddress">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/L1/hasTransliteratedLegalAddress"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has preferred ASCII transliterated legal address</rdfs:label>
+        <skos:definition>Preferred transliterated legal address for the legal entity.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasRegisteredAuthority -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L1/hasRegisteredAuthority">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/isRegisteredIn"/>
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/RegistrationAuthority/BusinessRegistryIdentifier"/>
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/RegistrationAuthority/BusinessRegistry"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has registered authority</rdfs:label>
+        <skos:definition>The reference of the registration authority, taken from the Registration Authorities Code List (RAL) maintained by GLEIF.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasRegistrationIdentifier -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L1/hasRegistrationIdentifier">
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/Base/RegistryIdentifier"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has registration identifier</rdfs:label>
+        <skos:altLabel>has business register entity ID</skos:altLabel>
+        <skos:altLabel>has registration authority</skos:altLabel>
+        <skos:definition>An identifier for the legal entity in a business registry in the jurisdiction of legal registration, or in the appropriate registration authority.</skos:definition>
+        <skos:prefLabel>has registration identifier</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasTransliteratedHeadquartersAddress -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L1/hasTransliteratedHeadquartersAddress">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/hasAddressHeadquarters"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/L1/hasTransliteratedOtherAddresses"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has transliterated headquarters address</rdfs:label>
+        <skos:definition>A transliterated headquarters address for the legal entity.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasTransliteratedLegalAddress -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L1/hasTransliteratedLegalAddress">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/hasAddressLegal"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/L1/hasTransliteratedOtherAddresses"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has transliterated legal address</rdfs:label>
+        <skos:definition>A transliterated legal address for the legal entity.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasTransliteratedOtherAddresses -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L1/hasTransliteratedOtherAddresses">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/hasAddressTransliterated"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has transliterated other addresses</rdfs:label>
+        <skos:definition>An optional list of transliterated addresses for the legal entity.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasValidationIdentifier -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L1/hasValidationIdentifier">
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/L1/BusinessRegistryIdentifier"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has validation identifier</rdfs:label>
+        <skos:altLabel>has validation authority</skos:altLabel>
+        <skos:definition>The (primary) registration used by the LOU to validate the entity data.</skos:definition>
+        <skos:prefLabel>has validation identifier</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasValidationSources -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L1/hasValidationSources">
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/L1/ValidationSourceKind"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has validation sources</rdfs:label>
+        <skos:definition>The level of validation of the reference data provided by the registrant.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/identifiesAndRecords -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L1/identifiesAndRecords">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/identifies"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/records"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/L1/RegisteredEntity"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>identifies and records</rdfs:label>
+        <skos:definition>The legal entity that is recorded by this registry entry and identified by the LEI.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/LEI -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/L1/LEI">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/hasTag"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>LEI</rdfs:label>
+        <skos:altLabel>has LEI string</skos:altLabel>
+        <skos:definition>The ISO 17442 compatible identifier for the legal entity recorded.</skos:definition>
+        <skos:prefLabel>LEI</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasAlternativeLanguageLegalName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/L1/hasAlternativeLanguageLegalName">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/hasNameAdditionalLocal"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/L1/hasOtherEntityNames"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has other entity names</rdfs:label>
+        <skos:definition>Registered name of the entity in an alternative language in the legal jurisdiction in which the entity is registered.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasAssociatedEntityName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/L1/hasAssociatedEntityName">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/L1/RegisteredEntity"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has associated entity name</rdfs:label>
+        <skos:definition>The name of another entity associated with this entity if needed to fully identify this entity or to place it in an appropriate context.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasAutoASCIITransliteratedLegalName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/L1/hasAutoASCIITransliteratedLegalName">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/hasNameASCIIAutomatic"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/L1/hasTransliteratedOtherEntityNames"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has auto ASCII transliterated legal name</rdfs:label>
+        <skos:definition>Legal name of the entity transliterated to ASCII characters, auto-transliterated by the managing LOU.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasEntityID -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/L1/hasEntityID">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/hasTag"/>
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/L1/BusinessRegistryIdentifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has entity id</rdfs:label>
+        <skos:definition>The identifier of the entity at the indicated registration authority. Typically, the identifier of the legal entity as maintained by a business registry in the jurisdiction of legal registration, or if the entity is one that is not recorded in a business registry (e.g. one of the varieties of funds registered instead with financial regulators), the identifier of the entity in the appropriate registration authority.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasFundFamilyName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/L1/hasFundFamilyName">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/L1/hasAssociatedEntityName"/>
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/L1/Fund"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has fund family name</rdfs:label>
+        <skos:definition>The name of an entity that is the manager of the fund.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasLegalFormText -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/L1/hasLegalFormText">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/Base/Entity"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has legal form</rdfs:label>
+        <skos:definition>A legacy code or textual description for the legal entity&apos;s legal form, used until a current code from the GLEIF-maintained list can be used.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasLegalName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/L1/hasLegalName">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/hasNameLegalLocal"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has legal name</rdfs:label>
+        <skos:definition>The legal name of the entity.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasOtherAuthority -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/L1/hasOtherAuthority">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/RegistrationAuthority/BusinessRegistryIdentifier"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has other authority</rdfs:label>
+        <skos:definition>A legacy / historical reference code of a registration authority which is not yet entered in the Registration Authorities Code List (RAL) maintained by GLEIF, or the designation of an interim register until such time as an entry from RAL can be delivered. </skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasOtherEntityNames -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/L1/hasOtherEntityNames">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/hasNameAdditional"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has other entity names</rdfs:label>
+        <skos:definition>An optional list of other names (excluding transliterations) for the legal entity.</skos:definition>
+        <skos:note>Not expected to be used directly: use one of its subProperties.</skos:note>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasPreferredASCIITransliteratedLegalName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/L1/hasPreferredASCIITransliteratedLegalName">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/hasNameASCIIPreferred"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/L1/hasTransliteratedOtherEntityNames"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has preferred ASCII transliterated legal name</rdfs:label>
+        <skos:definition>Legal name of the entity transliterated to ASCII characters, provided by the entity for this purpose.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasPreviousLegalName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/L1/hasPreviousLegalName">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/hasNamePreviousLegal"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/L1/hasOtherEntityNames"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has previous legal name</rdfs:label>
+        <skos:definition>A primary legal name previously used by this entity.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasTradingOrOperatingName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/L1/hasTradingOrOperatingName">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/hasNameTradingOrOperating"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/L1/hasOtherEntityNames"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has trading or operating name</rdfs:label>
+        <skos:altLabel>brand name</skos:altLabel>
+        <skos:altLabel>doing business as</skos:altLabel>
+        <skos:altLabel>has trading or operating name</skos:altLabel>
+        <skos:altLabel>operating under</skos:altLabel>
+        <skos:altLabel>trading as</skos:altLabel>
+        <skos:definition>A &apos;trading as&apos;, &apos;brand name&apos; or &apos;operating under&apos; name currently used by this entity in addition to, but not replacing, the (primary) legal, official registered name</skos:definition>
+        <skos:prefLabel>has trading or operating name</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/hasTransliteratedOtherEntityNames -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/L1/hasTransliteratedOtherEntityNames">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/hasNameTransliterated"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>has transliterated other entity names</rdfs:label>
+        <skos:definition>An optional list of ASCII-transliterated (i.e. Latin- or Romanized) representations of names for the legal entity.</skos:definition>
+        <skos:note>Not expected to be used directly: use one of its subProperties.</skos:note>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/Branch -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/L1/Branch">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/L1/RegisteredEntity"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>branch</rdfs:label>
+        <skos:definition>The entity is a branch of another legal entity.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/BusinessRegistryIdentifier -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/L1/BusinessRegistryIdentifier">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/Base/RegistryIdentifier"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasRegisteredAuthority"/>
+                                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                                <owl:onClass rdf:resource="https://www.gleif.org/ontology/RegistrationAuthority/BusinessRegistry"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasOtherAuthority"/>
+                                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasRegisteredAuthority"/>
+                                        <owl:someValuesFrom rdf:resource="https://www.gleif.org/ontology/RegistrationAuthority/BusinessRegistry"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasOtherAuthority"/>
+                                        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/identifies"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/L1/RegisteredEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasRegisteredAuthority"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/RegistrationAuthority/BusinessRegistry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasEntityID"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasOtherAuthority"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>business registry identifier</rdfs:label>
+        <skos:definition>The legal entity is a branch of another legal entity.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/Fund -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/L1/Fund">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/L1/RegisteredEntity"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasFundFamily"/>
+                                <owl:someValuesFrom rdf:resource="https://www.gleif.org/ontology/L1/FundFamily"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasFundFamilyName"/>
+                                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasFundFamily"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/L1/FundFamily"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasFundFamilyName"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>fund</rdfs:label>
+        <skos:definition>The legal entity is a fund.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/FundFamily -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/L1/FundFamily">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/L1/LegalEntity"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>fund family</rdfs:label>
+        <skos:definition>The entity that is the manager of one or more funds.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/LegalEntity -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/L1/LegalEntity">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/Base/LegalPerson"/>
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/L1/RegisteredEntity"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>legal entity</rdfs:label>
+        <skos:definition>LEI-registered entities that are legally or financially responsible for the performance of financial transactions or have the legal right in their jurisdiction to enter independently into legal contracts, regardless of whether they are incorporated or constituted in some other way (e.g. trust, partnership, contractual). It excludes natural persons, but includes governmental organizations and supranationals.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/LegalEntityIdentifier -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/L1/LegalEntityIdentifier">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/Base/Identifier"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/identifies"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/L1/RegisteredEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/LEI"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>legal entity identifier</rdfs:label>
+        <skos:definition>The ISO 17442 compatible identifier for the legal entity referenced.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/LegalEntityIdentifierRegistryEntry -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/L1/LegalEntityIdentifierRegistryEntry">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/Base/RegistryEntry"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasOtherValidationIdentifier"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/L1/BusinessRegistryIdentifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasValidationSources"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/ValidationSourceKindEntitySuppliedOnly"/>
+                            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/ValidationSourceKindFullyCorroborated"/>
+                            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/ValidationSourceKindPartiallyCorroborated"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasRegistrationStatus"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusAnnulled"/>
+                            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusDuplicate"/>
+                            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusIssued"/>
+                            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusLapsed"/>
+                            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusMerged"/>
+                            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusPendingArchival"/>
+                            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusPendingTransfer"/>
+                            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusRetired"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasManagingLOU"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/L1/LocalOperatingUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/identifiesAndRecords"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/L1/RegisteredEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasValidationIdentifier"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/L1/BusinessRegistryIdentifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasInitialRegistrationDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasLastUpdateDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/LEI"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasNextRenewalDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>legal entity identifier registry entry</rdfs:label>
+        <skos:definition>The Registration container element which contains all information on the legal entity&apos;s LEI registration with the Managing LOU.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/LocalOperatingUnit -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/L1/LocalOperatingUnit">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/L1/LegalEntity"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>local operating unit</rdfs:label>
+        <skos:altLabel>LEI issuer</skos:altLabel>
+        <skos:altLabel>LOU</skos:altLabel>
+        <skos:definition>An entity that supplies registration, renewal and other services, and acts as the primary interface for legal entities wishing to obtain an LEI. Only organizations duly accredited by the Global Legal Entity Identifier Foundation (GLEIF) are authorized to issue LEIs.</skos:definition>
+        <skos:prefLabel>local operating unit</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/RegisteredEntity -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/L1/RegisteredEntity">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/Base/Entity"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasLegalForm"/>
+                                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                                <owl:onClass rdf:resource="https://www.gleif.org/ontology/EntityLegalForm/EntityLegalForm"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasLegalFormText"/>
+                                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasLegalForm"/>
+                                        <owl:someValuesFrom rdf:resource="https://www.gleif.org/ontology/EntityLegalForm/EntityLegalForm"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasLegalFormText"/>
+                                        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasSuccessor"/>
+                                <owl:someValuesFrom rdf:resource="https://www.gleif.org/ontology/L1/RegisteredEntity"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasSuccessorName"/>
+                                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasOtherAddresses"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/Base/PhysicalAddress"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasEntityStatus"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/Base/EntityStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasLegalJurisdiction"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/GeographicRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasHeadquartersAddress"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/Base/PhysicalAddress"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasLegalAddress"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/Base/PhysicalAddress"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasRegistrationIdentifier"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/L1/BusinessRegistryIdentifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasEntityExpirationReason"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/Base/EntityExpirationReason"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasSuccessor"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/L1/LegalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasTransliteratedHeadquartersAddress"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/Base/PhysicalAddressASCII"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasTransliteratedLegalAddress"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/Base/PhysicalAddressASCII"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasOtherEntityNames"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasLegalName"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasEntityExpirationDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasSuccessorName"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>registered entity</rdfs:label>
+        <skos:definition>LEI-registered entities including, but not limited to, unique parties that are legally or financially responsible for the performance of financial transactions or have the legal right in their jurisdiction to enter independently into legal contracts, regardless of whether they are incorporated or constituted in some other way (e.g. trust, partnership, contractual). It excludes natural persons, but includes governmental organizations and supranationals.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/RegistrationStatus -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatus">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/Base/RegistrationStatus"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>legal entity identifier registration status</rdfs:label>
+        <skos:definition>The status of the legal entity&apos;s LEI registration with the Managing LOU.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/SoleProprietor -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/L1/SoleProprietor">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/L1/LegalEntity"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>sole proprietor</rdfs:label>
+        <skos:definition>The legal entity represents an individual acting in a business capacity</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/ValidationSourceKind -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/L1/ValidationSourceKind">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/Base/RegistrationStatus"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>LEI validation source kind</rdfs:label>
+        <skos:definition>The level of validation of the reference data provided by the registrant.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/RegistrationAuthority/BusinessRegistryIdentifier -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/RegistrationAuthority/BusinessRegistryIdentifier"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/ -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L1/">
+        <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/GlobalLegalEntityIdentifierSystem -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L1/GlobalLegalEntityIdentifierSystem">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/Base/Registry"/>
+        <Base:isManagedBy rdf:resource="https://www.gleif.org/ontology/Base/GLEIF"/>
+        <Base:hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gleif.org/en/about-lei/gleif-management-of-the-global-lei-system</Base:hasWebsite>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>Global Legal Entity Identifier System</rdfs:label>
+        <skos:altLabel>GLEIS</skos:altLabel>
+        <skos:definition>The global repository of LEIs and reference data.</skos:definition>
+        <skos:prefLabel>Global Legal Entity Identifier System</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/RegistrationStatusAnnulled -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusAnnulled">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L1/RegistrationStatus"/>
+        <Base:hasTag>ANNULLED</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>annulled</rdfs:label>
+        <skos:definition>An LEI registration that was marked as erroneous or invalid after it was issued.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/RegistrationStatusDuplicate -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusDuplicate">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L1/RegistrationStatus"/>
+        <Base:hasTag>DUPLICATE</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>duplicate</rdfs:label>
+        <skos:definition>An LEI Registration that has been determined to be a duplicate registration of the same legal entity as another LEI Registration; the DUPLICATE status is assigned to the non-surviving registration (i.e. the LEI that should no longer be used).</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/RegistrationStatusIssued -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusIssued">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L1/RegistrationStatus"/>
+        <Base:hasTag>ISSUED</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>issued</rdfs:label>
+        <skos:definition>An LEI Registration that has been validated and issued, and which identifies an entity that was an operating legal entity as of the last update.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/RegistrationStatusLapsed -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusLapsed">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L1/RegistrationStatus"/>
+        <Base:hasTag>LAPSED</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>lapsed</rdfs:label>
+        <skos:definition>An LEI Registration that has not been renewed by the specified next renewal date and is not known by public sources to have ceased operation.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/RegistrationStatusMerged -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusMerged">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L1/RegistrationStatus"/>
+        <Base:hasTag>MERGED</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>merged</rdfs:label>
+        <skos:definition>An LEI registration for an entity that has been merged into another legal entity, such that this legal entity no longer exists as an operating entity.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/RegistrationStatusPendingArchival -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusPendingArchival">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L1/RegistrationStatus"/>
+        <Base:hasTag>PENDING_ARCHIVAL</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>pending archival</rdfs:label>
+        <skos:definition>An LEI registration is about to be transferred to a different LOU, after which its registration status will revert to a non-pending status.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/RegistrationStatusPendingTransfer -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusPendingTransfer">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L1/RegistrationStatus"/>
+        <Base:hasTag>PENDING_TRANSFER</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>pending transfer</rdfs:label>
+        <skos:definition>An LEI registration that has been requested to be transferred to another LOU. The request is being processed at the sending LOU.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/RegistrationStatusRetired -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusRetired">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L1/RegistrationStatus"/>
+        <Base:hasTag>RETIRED</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>retired</rdfs:label>
+        <skos:definition>An LEI registration for an entity that has ceased operation, without having been merged into another entity.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/ValidationSourceKindEntitySuppliedOnly -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L1/ValidationSourceKindEntitySuppliedOnly">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L1/ValidationSourceKind"/>
+        <Base:hasTag>ENTITY_SUPPLIED_ONLY</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>entity supplied only</rdfs:label>
+        <skos:definition>Based on the validation procedures in use by the LOU responsible for the record, the information associated with this record has significant reliance on the information that a submitter provided due to the unavailability of corroborating information.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/ValidationSourceKindFullyCorroborated -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L1/ValidationSourceKindFullyCorroborated">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L1/ValidationSourceKind"/>
+        <Base:hasTag>FULLY_CORROBORATED</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>fully corroborated</rdfs:label>
+        <skos:definition>Based on the validation procedures in use by the LOU responsible for the record, there is sufficient information contained in authoritative public sources to corroborate the information that the submitter has provided for the record.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L1/ValidationSourceKindPartiallyCorroborated -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L1/ValidationSourceKindPartiallyCorroborated">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L1/ValidationSourceKind"/>
+        <Base:hasTag>PARTIALLY_CORROBORATED</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <rdfs:label>partially corroborated</rdfs:label>
+        <skos:definition>Based on the validation procedures in use by the LOU responsible for the record, the information supplied by the registrant can be partially corroborated by public authoritative sources, while some of the record is dependent upon the information that the registrant submitted, either due to conflicts with authoritative information, or due to data unavailability.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusAnnulled"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusDuplicate"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusIssued"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusLapsed"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusMerged"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusPendingArchival"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusPendingTransfer"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/RegistrationStatusRetired"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/ValidationSourceKindEntitySuppliedOnly"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/ValidationSourceKindFullyCorroborated"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/ValidationSourceKindPartiallyCorroborated"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ -->
+
+

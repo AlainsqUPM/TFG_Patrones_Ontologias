@@ -1,0 +1,80 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Ontology for Internet of Things Technologies, Tools, and Applications</title><title>Ontology for Internet of Things Technologies, Tools, and Applications</title><link href="./index_IoT-TTA_files/owl.css" rel="stylesheet" type="text/css"><link href="./index_IoT-TTA_files/Primer.css" rel="stylesheet" type="text/css"><link href="./index_IoT-TTA_files/rec.css" rel="stylesheet" type="text/css"><link href="./index_IoT-TTA_files/extra.css" rel="stylesheet" type="text/css"><link rel="shortcut icon" href="http://150.146.207.114/lode/favicon.ico"><script src="./index_IoT-TTA_files/jquery.js.descărcare"></script><script src="./index_IoT-TTA_files/jquery.scrollTo.js.descărcare"></script><script src="./index_IoT-TTA_files/marked.min.js.descărcare"></script><script>
+			$(document).ready(
+			function () {
+			jQuery(".markdown").each(function(el){
+			jQuery(this).after(marked(jQuery(this).text())).remove()});
+			var list =
+			$('a[name="
+			https://tudorliv.github.io/IoT-TTA/IIoT_v1.3_fr.owl
+			"]');
+			if (list.size() != 0) {
+			var element = list.first();
+			$.scrollTo(element);
+			}
+			});
+		</script></head>
+               <body data-new-gr-c-s-check-loaded="14.1079.0" data-gr-ext-installed=""><div class="head"><h1> IoT-TTA: Ontology for Internet of Things Technologies, Tools, and Applications</h1><dl>
+		       <dt> <b> URI: </b></dt><dd>https://w3id.org/iot-tta</dd>
+		      <dt> <b> Version IRI: </b> </dt><dd>   <a href="https://tudorliv.github.io/IoT-TTA/iot-tta.ttl">  https://tudorliv.github.io/IoT-TTA/iot-tta.ttl </a> </dd></dl><dl>
+                 <dt> <b> Current version: </b>
+		       </dt><dd>Version 1.3</dd></dl><dl><dt><b>Authors: </b>
+					</dt> <dd>  Liviana Tudor - <a href="https://upb.ro/en/"> Politehnica University of Bucharest </a>, <a href="https://www.upg-ploiesti.ro/en"> Petroleum-Gas University of Ploiesti, Romania </a></dd>
+		                               <dd>  Lecia Barker - <a href="https://www.colorado.edu/"> University of Colorado, Boulder, USA </a>  </dd>
+                   
+                                 <dt> <b> Contributors: </b>
+					</dt>
+		                             <dd> Ghislain Atemezing - <a href = "https://mondeca.com/"> Mondeca (Paris), France </a> </dd>
+		                             <dd>  Mohammad Q. Azhar - <a href="https://www.bmcc.cuny.edu/"> BMCC, The City University of New York, USA </a>  </dd>
+                                             <dd> Jorge Guerra Guerra - <a href="https://unmsm.edu.pe/"> San Marcos National University, Lima, Perú  </a> </dd>
+		                             <dd>  Clark Mousaw - <a href="https://www.colorado.edu/"> University of Colorado, Boulder, USA </a> </dd>
+		                           </dl><dl>
+		                        <dt> <b> Other visualisation: </b>
+					</dt><dd><a href="http://150.146.207.114/lode/source?url=https://tudorliv.github.io/IoT-TTA/iot-tta.owl">Ontology source</a>
+						-
+						<a href="https://tudorliv.github.io/IoT-TTA/iot-tta.owl">WebVowl</a></dd></dl></div><hr><div id="toc">
+
+<h2><b> Table of Content </b></h2><ol>
+		       <li><a href="http://150.146.207.114/lode/extract?url=https%3A%2F%2Ftudorliv.github.io%2FIoT-TTA%2Fiot-tta.owl&owlapi=true&lang=en#classes">
+			        Classes
+			       </a>
+		       </li>
+		       <li>
+			        <a href="http://150.146.207.114/lode/extract?url=https%3A%2F%2Ftudorliv.github.io%2FIoT-TTA%2Fiot-tta.owl&owlapi=true&lang=en#objectproperties">
+					Object Properties
+			       </a>
+		       </li>
+		       <li>
+			       <a href="http://150.146.207.114/lode/extract?url=https%3A%2F%2Ftudorliv.github.io%2FIoT-TTA%2Fiot-tta.owl&owlapi=true&lang=en#dataproperties">
+				       Data Properties
+			       </a>
+		       </li>
+		       <li>
+			       <a href="http://150.146.207.114/lode/extract?url=https%3A%2F%2Ftudorliv.github.io%2FIoT-TTA%2Fiot-tta.owl&owlapi=true&lang=en#namedindividuals">
+				       Named Individuals
+			       </a>
+		       </li>
+		       <li>
+			       <a href="http://150.146.207.114/lode/extract?url=https%3A%2F%2Ftudorliv.github.io%2FIoT-TTA%2Fiot-tta.owl&owlapi=true&lang=en#annotationproperties">
+				       Annotation Properties
+			       </a>
+		       </li>
+		       <li>
+			       <a href="http://150.146.207.114/lode/extract?url=https%3A%2F%2Ftudorliv.github.io%2FIoT-TTA%2Fiot-tta.owl&owlapi=true&lang=en#generalaxioms">
+				       General Axioms
+			       </a>
+		       </li>
+		       <li>
+			       <a href="http://150.146.207.114/lode/extract?url=https%3A%2F%2Ftudorliv.github.io%2FIoT-TTA%2Fiot-tta.owl&owlapi=true&lang=en#swrlrules">
+				       SWRL Rules
+			       </a>
+		       </li>
+		       <li>
+			       <a href="http://150.146.207.114/lode/extract?url=https%3A%2F%2Ftudorliv.github.io%2FIoT-TTA%2Fiot-tta.owl&owlapi=true&lang=en#namespacedeclarations">
+				       Namespace Declarations
+			       </a>
+		       </li>
+		       </ol>
+		       </div>
+		       <div id="classes">
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

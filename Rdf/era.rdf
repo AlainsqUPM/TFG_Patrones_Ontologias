@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:ns4="http://creativecommons.org/ns#" >
+  <rdf:Description rdf:about="http://data.europa.eu/949/">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology" />
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-03-25</dcterms:modified>
+    <rdfs:label xml:lang="en">ERA vocabulary</rdfs:label>
+    <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql#" />
+    <rdfs:comment xml:lang="en">This is the human and machine readable Vocabulary/Ontology governed by the European Union Agency for Railways. It represents the concepts and relationships linked to the sectorial legal framework and the use cases under the Agency´s remit. Currently, this vocabulary covers the European railway infrastructure and the vehicles authorized to operate over it. It is a semantic/browsable representation of the [RINF](https://www.era.europa.eu/sites/default/files/registers/docs/rinf_application_guide_for_register_en.pdf) and [ERATV](https://www.era.europa.eu/sites/default/files/registers/docs/iu-eratv_application_guide_for_register_2016-797_en.pdf) application guides that were built by domain experts in the RINF and ERATV working parties.
+Since version 2.6.0, the ontology includes the routebook concepts described in appendix D2 &quot;Elements the infrastructure manager has to provide to the railway undertaking for the Route Book&quot; (https://eur-lex.europa.eu/eli/reg_impl/2019/773/oj) and the appendix D3 &quot;ERTMS trackside engineering information relevant to operation that the infrastructure manager shall provide to the railway undertaking&quot;.</rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v3.0.0</owl:versionInfo>
+    <owl:priorVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://git.fpfis.eu/datateam/ERA/era-vocabulary/-/releases/v2.6.3</owl:priorVersion>
+    <ns4:license rdf:resource="https://creativecommons.org/licenses/by/4.0/" />
+    <dcterms:title xml:lang="en">ERA vocabulary</dcterms:title>
+    <dcterms:publisher>European Union Agency for Railways</dcterms:publisher>
+    <dcterms:contributor>Ivo Velitchkov</dcterms:contributor>
+    <dcterms:contributor>Polymnia Vasilopoulou</dcterms:contributor>
+    <dcterms:contributor>Marina Aguado</dcterms:contributor>
+    <dcterms:contributor>Wouter Beek</dcterms:contributor>
+    <dcterms:contributor rdf:resource="https://dylanvanassche.be/#me" />
+    <dcterms:contributor rdf:resource="https://julianrojas.org/#me" />
+    <dcterms:contributor rdf:resource="https://pietercolpaert.be/#me" />
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-07-29</dcterms:issued>
+    <owl:versionURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://git.fpfis.eu/datateam/ERA/era-vocabulary/-/releases/v3.0.0</owl:versionURI>
+    <dcterms:author>Edna Ruckhaus</dcterms:author>
+    <dcterms:author>Oscar Corcho</dcterms:author>
+  </rdf:Description>
+</rdf:RDF>

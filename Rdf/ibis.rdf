@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:dct="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ibis="https://vocab.methodandstructure.com/ibis#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfa="http://www.w3.org/ns/rdfa#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis">
+    <rdf:type rdf:resource="http://purl.org/ontology/bibo/Webpage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis">
+    <xhv:up rdf:resource="https://vocab.methodandstructure.com/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis">
+    <rdfa:usesVocabulary rdf:resource="http://www.w3.org/1999/xhtml/vocab#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Invariant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Invariant">
+    <rdfs:label xml:lang="en">Invariant</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Invariant">
+    <rdfs:comment xml:lang="en">An Issue or Position can be marked Invariant to denote that it has been deemed outside of the influence of the Agents in the system, i.e., something to be steered around.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Invariant">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Invariant">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Network">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Network">
+    <rdfs:label xml:lang="en">Network</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Network">
+    <rdfs:comment xml:lang="en">A network of issues, positions, and arguments.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Network">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Network">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://danny.ayers.name/index.rdf#me">
+    <foaf:name xml:lang="en">Danny Ayers</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hyperdata.org/xmlns/ibis/">
+    <dct:creator rdf:resource="http://danny.ayers.name/index.rdf#me"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cc.gatech.edu/~ellendo/rittel/rittel-issues.pdf">
+    <dct:title xml:lang="en">Issues as Elements of Information Systems</dct:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cc.gatech.edu/~ellendo/rittel/rittel-issues.pdf">
+    <dct:creator xml:lang="en">Werner Kunz</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cc.gatech.edu/~ellendo/rittel/rittel-issues.pdf">
+    <dct:creator xml:lang="en">Horst Rittel</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cc.gatech.edu/~ellendo/rittel/rittel-issues.pdf">
+    <dct:date xml:lang="en">1970</dct:date>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cs.hut.fi/Opinnot/T-93.850/2005/Papers/gIBIS1988-conklin.pdf">
+    <dct:title xml:lang="en">gIBIS: a hypertext tool for exploratory policy discussion</dct:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cs.hut.fi/Opinnot/T-93.850/2005/Papers/gIBIS1988-conklin.pdf">
+    <dct:creator xml:lang="en">Jeff Conklin</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cs.hut.fi/Opinnot/T-93.850/2005/Papers/gIBIS1988-conklin.pdf">
+    <dct:creator xml:lang="en">Michael L. Begeman</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cs.hut.fi/Opinnot/T-93.850/2005/Papers/gIBIS1988-conklin.pdf">
+    <dct:date xml:lang="en">1988</dct:date>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doriantaylor.com/person/dorian-taylor#me">
+    <foaf:name xml:lang="en">Dorian Taylor</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#concern-of">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#concern-of">
+    <rdfs:label xml:lang="en">concern-of</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#concern-of">
+    <rdfs:comment xml:lang="en">The subject is an issue concerning the object, which can be any resource.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#concern-of">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/ibis#Issue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#concern-of">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#concern-of">
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#concern-of">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/ibis#concerns"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#concerns">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#concerns">
+    <rdfs:label xml:lang="en">concerns</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#concerns">
+    <rdfs:comment xml:lang="en">The subject is an issue concerning the object, which can be any resource.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#concerns">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/ibis#Issue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#concerns">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#concerns">
+    <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#concerns">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/ibis#concern-of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#endorsed-by">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#endorsed-by">
+    <rdfs:label xml:lang="en">endorsed by</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#endorsed-by">
+    <rdfs:comment xml:lang="en">A concept can be endorsed by an Agent without said Agent having mentioned or advanced it initially, and without any additional comment.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#endorsed-by">
+    <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#endorsed-by">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#endorsed-by">
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#endorsed-by">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/ibis#endorses"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#endorsed-by">
+    <skos:note xml:lang="en">This term, along with ibis:endorses, enables an Agent to signal its agreement with a concept. To signal disagreement, explain why with an ibis:Argument that ibis:opposes the concept.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#endorses">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#endorses">
+    <rdfs:label xml:lang="en">endorses</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#endorses">
+    <rdfs:comment xml:lang="en">An Agent can endorse a concept without having initially mentioned or advanced it, and without any additional comment.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#endorses">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#endorses">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#endorses">
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#endorses">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/ibis#endorsed-by"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#endorses">
+    <skos:note xml:lang="en">This term, along with ibis:endorsed-by, enables an Agent to signal its agreement with a concept. To signal disagreement, explain why with an ibis:Argument that ibis:opposes the concept.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#generalizes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#generalizes">
+    <rdfs:label xml:lang="en">generalizes</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#generalizes">
+    <rdfs:comment xml:lang="en">The subject is a more generic form of the object.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#generalizes">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#generalizes">
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#generalizes">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/ibis#specializes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#generalizes">
+    <skos:note xml:lang="en">The equivalent property skos:narrower asserts that the object is narrower than the subject, while the subject of ibis:generalizes is more general than the object.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#opposed-by">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#opposed-by">
+    <rdfs:label xml:lang="en">opposed by</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#opposed-by">
+    <rdfs:comment xml:lang="en">Indicates a subject position opposed by an object argument.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#opposed-by">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/ibis#Position"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#opposed-by">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#opposed-by">
+    <rdfs:range rdf:resource="https://vocab.methodandstructure.com/ibis#Argument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#opposed-by">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/ibis#opposes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#opposes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#opposes">
+    <rdfs:label xml:lang="en">opposes</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#opposes">
+    <rdfs:comment xml:lang="en">Indicates a subject argument that opposes an object position.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#opposes">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/ibis#Argument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#opposes">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#opposes">
+    <rdfs:range rdf:resource="https://vocab.methodandstructure.com/ibis#Position"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#opposes">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/ibis#opposed-by"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#questioned-by">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#questioned-by">
+    <rdfs:label xml:lang="en">questioned by</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#questioned-by">
+    <rdfs:comment xml:lang="en">Indicates a belief called into question by an issue.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#questioned-by">
+    <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#questioned-by">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#questioned-by">
+    <rdfs:range rdf:resource="https://vocab.methodandstructure.com/ibis#Issue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#questioned-by">
+    <rdfs:subPropertyOf rdf:resource="https://vocab.methodandstructure.com/ibis#suggests"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#questioned-by">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/ibis#questions"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#questions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#questions">
+    <rdfs:label xml:lang="en">questions</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#questions">
+    <rdfs:comment xml:lang="en">Indicates an issue that raises doubt on a belief.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#questions">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/ibis#Issue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#questions">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#questions">
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#questions">
+    <rdfs:subPropertyOf rdf:resource="https://vocab.methodandstructure.com/ibis#suggested-by"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#questions">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/ibis#questioned-by"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#responds-to">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#responds-to">
+    <rdfs:label xml:lang="en">responds to</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#responds-to">
+    <rdfs:comment xml:lang="en">Indicates an issue to which the subject position responds.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#responds-to">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/ibis#Position"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#responds-to">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#responds-to">
+    <rdfs:range rdf:resource="https://vocab.methodandstructure.com/ibis#Issue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#responds-to">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/ibis#response"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#response">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#response">
+    <rdfs:label xml:lang="en">response</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#response">
+    <rdfs:comment xml:lang="en">Indicates a position that responds to the subject issue.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#response">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/ibis#Issue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#response">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#response">
+    <rdfs:range rdf:resource="https://vocab.methodandstructure.com/ibis#Position"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#response">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/ibis#responds-to"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#specializes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#specializes">
+    <rdfs:label xml:lang="en">specializes</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#specializes">
+    <rdfs:comment xml:lang="en">The subject is a more specific form of the object.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#specializes">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#specializes">
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#specializes">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/ibis#generalizes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#specializes">
+    <skos:note xml:lang="en">The equivalent property skos:broader asserts that the object is broader than the subject, while the subject of ibis:specializes is more specific than the object.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#supported-by">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#supported-by">
+    <rdfs:label xml:lang="en">supported by</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#supported-by">
+    <rdfs:comment xml:lang="en">Indicates a subject position supported by an object argument.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#supported-by">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/ibis#Position"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#supported-by">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#supported-by">
+    <rdfs:range rdf:resource="https://vocab.methodandstructure.com/ibis#Argument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#supported-by">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/ibis#supports"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#supports">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#supports">
+    <rdfs:label xml:lang="en">supports</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#supports">
+    <rdfs:comment xml:lang="en">Indicates a subject argument that supports an object position.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#supports">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/ibis#Argument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#supports">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#supports">
+    <rdfs:range rdf:resource="https://vocab.methodandstructure.com/ibis#Position"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#supports">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/ibis#supported-by"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#suggested-by">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#suggested-by">
+    <rdfs:label xml:lang="en">suggested by</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#suggested-by">
+    <rdfs:comment xml:lang="en">Indicates when the subject issue is suggested by the object belief.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#suggested-by">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/ibis#Issue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#suggested-by">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#suggested-by">
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#suggested-by">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/ibis#suggests"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#suggests">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#suggests">
+    <rdfs:label xml:lang="en">suggests</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#suggests">
+    <rdfs:comment xml:lang="en">Indicates when the subject belief suggests the object issue.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#suggests">
+    <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#suggests">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#suggests">
+    <rdfs:range rdf:resource="https://vocab.methodandstructure.com/ibis#Issue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#suggests">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/ibis#suggested-by"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#replaced-by">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#replaced-by">
+    <rdfs:label xml:lang="en">replaced by</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#replaced-by">
+    <rdfs:comment xml:lang="en">Indicates when a concept is replaced by another concept of the same type.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#replaced-by">
+    <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#replaced-by">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#replaced-by">
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#replaced-by">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/isReplacedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#replaced-by">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/ibis#replaces"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#replaces">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#replaces">
+    <rdfs:label xml:lang="en">replaces</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#replaces">
+    <rdfs:comment xml:lang="en">Indicates when a concept replaces another concept of the same type.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#replaces">
+    <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#replaces">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#replaces">
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#replaces">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/replaces"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#replaces">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/ibis#replaced-by"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <owl:allValuesFrom rdf:resource="https://vocab.methodandstructure.com/ibis#Argument"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <owl:onProperty rdf:resource="https://vocab.methodandstructure.com/ibis#replaces"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
+    <owl:allValuesFrom rdf:resource="https://vocab.methodandstructure.com/ibis#Argument"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
+    <owl:onProperty rdf:resource="https://vocab.methodandstructure.com/ibis#replaced-by"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Argument">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Argument">
+    <rdfs:label xml:lang="en">Argument</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Argument">
+    <rdfs:comment xml:lang="en">An Argument is a type of Issue that explicitly supports or refutes a Position.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Argument">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Argument">
+    <rdfs:subClassOf rdf:resource="https://vocab.methodandstructure.com/ibis#Issue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Argument">
+    <rdfs:subClassOf rdf:nodeID="genid1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Argument">
+    <rdfs:subClassOf rdf:nodeID="genid2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Argument">
+    <owl:disjointWith rdf:resource="https://vocab.methodandstructure.com/ibis#Position"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Argument">
+    <skos:usageNote xml:lang="en">An Argument need not only relate in scope to another Argument, but it must only be replaced by another argument.</skos:usageNote>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid3">
+    <owl:allValuesFrom rdf:resource="https://vocab.methodandstructure.com/ibis#Position"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid3">
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrowerTransitive"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid4">
+    <owl:allValuesFrom rdf:resource="https://vocab.methodandstructure.com/ibis#Position"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid4">
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#broaderTransitive"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid5">
+    <owl:allValuesFrom rdf:resource="https://vocab.methodandstructure.com/ibis#Position"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid5">
+    <owl:onProperty rdf:resource="https://vocab.methodandstructure.com/ibis#replaces"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid6">
+    <owl:allValuesFrom rdf:resource="https://vocab.methodandstructure.com/ibis#Position"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid6">
+    <owl:onProperty rdf:resource="https://vocab.methodandstructure.com/ibis#replaced-by"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Position">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Position">
+    <rdfs:label xml:lang="en">Position</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Position">
+    <rdfs:comment xml:lang="en">A Position asserts a moral, ethical, pragmatic, or similar kind of assertion, typically identifying what, if anything, should be done about an Issue.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Position">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Position">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Position">
+    <rdfs:subClassOf rdf:nodeID="genid3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Position">
+    <rdfs:subClassOf rdf:nodeID="genid4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Position">
+    <rdfs:subClassOf rdf:nodeID="genid5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Position">
+    <rdfs:subClassOf rdf:nodeID="genid6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Position">
+    <owl:disjointWith rdf:resource="https://vocab.methodandstructure.com/ibis#Issue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Position">
+    <owl:disjointWith rdf:resource="https://vocab.methodandstructure.com/ibis#Argument"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid7">
+    <owl:allValuesFrom rdf:resource="https://vocab.methodandstructure.com/ibis#Issue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid7">
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrowerTransitive"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid8">
+    <owl:allValuesFrom rdf:resource="https://vocab.methodandstructure.com/ibis#Issue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid8">
+    <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#broaderTransitive"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid9">
+    <owl:allValuesFrom rdf:resource="https://vocab.methodandstructure.com/ibis#Issue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid9">
+    <owl:onProperty rdf:resource="https://vocab.methodandstructure.com/ibis#replaces"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid10">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid10">
+    <owl:allValuesFrom rdf:resource="https://vocab.methodandstructure.com/ibis#Issue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid10">
+    <owl:onProperty rdf:resource="https://vocab.methodandstructure.com/ibis#replaced-by"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Issue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Issue">
+    <rdfs:label xml:lang="en">Issue</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Issue">
+    <rdfs:comment xml:lang="en">An Issue is a state of affairs, claimed by one or more Agents to either be a misfit itself, or affecting some other Issue or Position.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Issue">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Issue">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Issue">
+    <rdfs:subClassOf rdf:nodeID="genid7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Issue">
+    <rdfs:subClassOf rdf:nodeID="genid8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Issue">
+    <rdfs:subClassOf rdf:nodeID="genid9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Issue">
+    <rdfs:subClassOf rdf:nodeID="genid10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#Issue">
+    <owl:disjointWith rdf:resource="https://vocab.methodandstructure.com/ibis#Position"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <rdfs:label xml:lang="en">IBIS</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <dct:title xml:lang="en">IBIS (bis) Vocabulary</dct:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-12-11T22:22:53-08:00</dct:created>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <dct:creator rdf:resource="https://doriantaylor.com/person/dorian-taylor#me"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <dct:creator rdf:resource="http://doriantaylor.com/person/dorian-taylor#me"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-12-12T16:04:50-08:00</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-02-24T21:14:13Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-22T03:39:14Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-24T22:37:22Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <dct:references rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <bibo:uri rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <vann:preferredNamespacePrefix>ibis</vann:preferredNamespacePrefix>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <rdfs:comment xml:lang="en">This document specifies a vocabulary for describing an IBIS (issue-based information system).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/ibis#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <rdfs:seeAlso rdf:resource="http://www.cs.hut.fi/Opinnot/T-93.850/2005/Papers/gIBIS1988-conklin.pdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <rdfs:seeAlso rdf:resource="http://hyperdata.org/xmlns/ibis/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <rdfs:seeAlso rdf:resource="https://vocab.methodandstructure.com/ibis.rdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <rdfs:seeAlso rdf:resource="https://vocab.methodandstructure.com/ibis.n3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <rdfs:seeAlso rdf:resource="http://dublincore.org/documents/dcmi-terms/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/prov-o/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <rdfs:seeAlso rdf:resource="https://vocab.methodandstructure.com/process-model#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <rdfs:seeAlso rdf:resource="http://www.cc.gatech.edu/~ellendo/rittel/rittel-issues.pdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Issue-Based_Information_System"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/ibis#">
+    <owl:versionInfo>0.4</owl:versionInfo>
+  </rdf:Description>
+</rdf:RDF>

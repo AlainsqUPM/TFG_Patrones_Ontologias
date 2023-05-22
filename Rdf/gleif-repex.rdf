@@ -1,0 +1,400 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.gleif.org/ontology/ReportingException/"
+     xml:base="https://www.gleif.org/ontology/ReportingException/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Base="https://www.gleif.org/ontology/Base/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+    <owl:Ontology rdf:about="https://www.gleif.org/ontology/ReportingException/">
+        <owl:versionIRI rdf:resource="https://www.gleif.org/ontology/ReportingException-v1.0/ReportingException/"/>
+        <owl:imports rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <owl:imports rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <terms:abstract>Ontology for representing exceptions to reporting of parents, for entities registered with a Legal Entity Identifier. The Global Legal Identifier System (GLEIS) requires that legal entities with an LEI provide information on their ultimate and direct accounting consolidating parents. Relationship reporting is mandatory with exceptions allowed for certain well-defined reasons. This ontology provides a simple structure for recording reasons for each exception by LEI.</terms:abstract>
+        <terms:contributor rdf:resource="http://www.workingontologist.com"/>
+        <terms:contributor rdf:resource="http://purl.org/bryon"/>
+        <terms:contributor rdf:resource="https://www.linkedin.com/in/peterivett/"/>
+        <terms:creator rdf:resource="https://www.gleif.org/ontology/Base/GLEIF"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-01T00:00:00+00:00</terms:issued>
+        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gleif.org/en/meta/lei-data-terms-of-use/</terms:license>
+        <terms:rights>Copyright (c) 2019 Global Legal Entity Identifier Foundation (GLEIF)</terms:rights>
+        <terms:rightsHolder rdf:resource="https://www.gleif.org/ontology/Base/GLEIF"/>
+        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gleif.org/en/about-lei/common-data-file-format/level-2-data-reporting-exceptions-format</terms:source>
+        <terms:title xml:lang="en">Global Legal Entity Identifier Foundation Reporting Exception Ontology</terms:title>
+        <vann:preferredNamespacePrefix>gleif-repex</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://www.gleif.org/ontology/ReportingException/</vann:preferredNamespaceUri>
+        <rdfs:label>GLEIF Reporting Exception Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.gleif.org/ontology/ReportingException/hasExceptionReason -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/ReportingException/hasExceptionReason">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/ReportingException/ReportingException"/>
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKind"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/ReportingException/"/>
+        <rdfs:label>has exception reason</rdfs:label>
+        <skos:definition>A single reason provided by the legal entity for declining to provide the mandatory report of a specified type of information (beyond the minimum reference data needed purely for identification of the legal entity).</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/ReportingException/hasReportingEntity -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/ReportingException/hasReportingEntity">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/ReportingException/ReportingException"/>
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/L1/RegisteredEntity"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/ReportingException/"/>
+        <rdfs:label>has reporting entity</rdfs:label>
+        <skos:definition>The LEI-registered legal entity which raised this exception.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.gleif.org/ontology/ReportingException/hasExceptionReference -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/ReportingException/hasExceptionReference">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/ReportingException/ReportingException"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/ReportingException/"/>
+        <rdfs:label>has exception reference</rdfs:label>
+        <skos:definition>References of the law, regulation or other element of the legal framework to support reason(s) provided by the legal entity for declining to provide information on its parents.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.gleif.org/ontology/ReportingException/DirectConsolidationReportingException -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/ReportingException/DirectConsolidationReportingException">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/ReportingException/ReportingException"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/ReportingException/ExceptionReasonKind -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKind">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindConsentNotObtained"/>
+                    <rdf:Description rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindDetrimentNotExcluded"/>
+                    <rdf:Description rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindDisclosureDetrimental"/>
+                    <rdf:Description rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindLegalCommitments"/>
+                    <rdf:Description rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindLegalObstacles"/>
+                    <rdf:Description rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindNaturalPersons"/>
+                    <rdf:Description rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindNoKnownPerson"/>
+                    <rdf:Description rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindNoLEI"/>
+                    <rdf:Description rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindNonConsolidating"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/ReportingException/"/>
+        <rdfs:label>exception reason</rdfs:label>
+        <skos:definition>A single reason provided by the legal entity for declining to provide the mandatory report of a specified type of information (beyond the minimum reference data needed purely for identification of the legal entity). </skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/ReportingException/ReportingException -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/ReportingException/ReportingException">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/ReportingException/hasExceptionReason"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKind"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/ReportingException/hasReportingEntity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/L1/RegisteredEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/ReportingException/hasExceptionReference"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/ReportingException/"/>
+        <rdfs:label>reporting exception</rdfs:label>
+        <skos:definition>A single exception to a specified reporting requirement, giving reasons and references where applicable.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/ReportingException/UltimateConsolidationReportingException -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/ReportingException/UltimateConsolidationReportingException">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/ReportingException/ReportingException"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.gleif.org/ontology/ReportingException/ -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/ReportingException/">
+        <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/ReportingException/DirectConsolidationReportingException -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/ReportingException/DirectConsolidationReportingException">
+        <Base:hasTag>DIRECT_ACCOUNTING_CONSOLIDATION_PARENT</Base:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindBindingLegalCommitments -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindBindingLegalCommitments">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKind"/>
+        <Base:hasTag>BINDING_LEGAL_COMMITMENTS</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/ReportingException/"/>
+        <rdfs:label>binding legal commitments</rdfs:label>
+        <skos:definition>Binding legal commitments (other than the laws or regulations of a jurisdiction), such as articles governing the legal entity or a contract, prevent providing or publishing this information. The LOU is not expected to verify or analyze whether the legal framework constitutes a legal obstacle.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindConsentNotObtained -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindConsentNotObtained">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKind"/>
+        <Base:hasTag>CONSENT_NOT_OBTAINED</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/ReportingException/"/>
+        <rdfs:label>consent not obtained</rdfs:label>
+        <skos:definition>There is no parent according to the definition used, because there is no known person controlling the entity (e.g., diversified shareholding).</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindDetrimentNotExcluded -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindDetrimentNotExcluded">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKind"/>
+        <Base:hasTag>DETRIMENT_NOT_EXCLUDED</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/ReportingException/"/>
+        <rdfs:label>detriment not excluded</rdfs:label>
+        <skos:definition>The child entity has sought to consult the parent entity about the reporting of the parent information to the GLEIS but could not confirm the absence of detriment in a way that can appropriately prevent liability risks for the child entity (or those acting on its behalf) under the applicable legal framework. The disclosure of this information would be detrimental to the legal entity or the relevant parent. This will include reasons generally accepted by public authorities in similar circumstances, based on a declaration by the entity. 
+  This reason may be used only when all following cumulative circumstances apply: [i) the parent could not be informed via the GLEIS and have the possibility to correct the relationship information before publication (including raising a cause for opt out, either because the parent does not have an LEI, or it has an LEI but the GLEIS has not yet implemented such system;] ii) the relationship is not already in the public domain (information being in the public domain assumes here that the way the information came into the public domain did not infringe the applicable legal framework); iii) the child entity has reasons to believe that the parent may consider disclosure to be detrimental; (iv) the child entity has sought to consult the parent entity of the reporting of the parent information to the GLEIS but could not confirm the absence of detriment in a way that can appropriately prevent liability risks for the child entity (or those acting on its behalf) under the applicable legal framework.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindDisclosureDetrimental -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindDisclosureDetrimental">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKind"/>
+        <Base:hasTag>DISCLOSURE_DETRIMENTAL</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/ReportingException/"/>
+        <rdfs:label>disclosure detrimental</rdfs:label>
+        <skos:definition>The disclosure of this information would be detrimental to the legal entity or the relevant parent. This will include reasons generally accepted by public authorities in similar circumstances, based on a declaration by the entity.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindLegalCommitments -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindLegalCommitments"/>
+    
+
+
+    <!-- https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindLegalObstacles -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindLegalObstacles">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKind"/>
+        <Base:hasTag>LEGAL_OBSTACLES</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/ReportingException/"/>
+        <rdfs:label>legal obstacles</rdfs:label>
+        <skos:definition>Obstacles in the laws or regulations of a jurisdiction prevent providing or publishing this information. This does not include cases where, under the applicable legal framework disclosing the parent relationship would require the consent of one of the entities in the relationship, or both, and such consent could not be obtained (in these cases &apos;CONSENT_NOT_OBTAINED&apos; is the applicable code). The LOU is not expected to verify or analyze whether the legal framework constitutes a legal obstacle.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindNaturalPersons -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindNaturalPersons">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKind"/>
+        <Base:hasTag>NATURAL_PERSONS</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/ReportingException/"/>
+        <rdfs:label>natural persons</rdfs:label>
+        <skos:definition>There is no parent according to the definition used, because the entity is controlled by natural person(s) without any intermediate legal entity meeting the definition of accounting consolidating parent.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindNoKnownPerson -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindNoKnownPerson">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKind"/>
+        <Base:hasTag>NO_KNOWN_PERSON</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/ReportingException/"/>
+        <rdfs:label>no known person</rdfs:label>
+        <skos:definition>There is no parent according to the definition used, because there is no known person controlling the entity (e.g., diversified shareholding).</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindNoLEI -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindNoLEI">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKind"/>
+        <Base:hasTag>NO_LEI</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/ReportingException/"/>
+        <rdfs:label>no LEI</rdfs:label>
+        <skos:definition>The parent does not consent to have an LEI.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindNonConsolidating -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindNonConsolidating">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKind"/>
+        <Base:hasTag>NON_CONSOLIDATING</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/ReportingException/"/>
+        <rdfs:label>non consolidating</rdfs:label>
+        <skos:definition>There is no parent according to the definition used, because the entity is controlled by legal entities not subject to preparing consolidated financial statements.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/ReportingException/UltimateConsolidationReportingException -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/ReportingException/UltimateConsolidationReportingException">
+        <Base:hasTag>ULTIMATE_ACCOUNTING_CONSOLIDATION_PARENT</Base:hasTag>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="https://www.gleif.org/ontology/ReportingException/DirectConsolidationReportingException">
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/ReportingException/"/>
+        <rdfs:label>direct consolidation reporting exception</rdfs:label>
+        <skos:definition>The legal entity has declined to report a direct accounting consolidation parent, based on applicable accounting standards.</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://www.gleif.org/ontology/ReportingException/UltimateConsolidationReportingException">
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/ReportingException/"/>
+        <rdfs:label>ultimate consolidation reporting exception</rdfs:label>
+        <skos:definition>The legal entity has declined to report an ultimate accounting consolidation parent, based on applicable accounting standards.</skos:definition>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindConsentNotObtained"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindDetrimentNotExcluded"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindDisclosureDetrimental"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindLegalCommitments"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindLegalObstacles"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindNaturalPersons"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindNoKnownPerson"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindNoLEI"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/ReportingException/ExceptionReasonKindNonConsolidating"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ -->
+
+

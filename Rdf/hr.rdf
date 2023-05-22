@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Error 404</title>
+	<!--fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<style type="text/css">
+		.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}
+		@media (min-width: 576px){
+			.container{max-width:540px}
+		}
+		@media (min-width:768px){
+			.container{max-width:720px}
+		}
+		@media (min-width: 992px){
+			.container{max-width:960px}
+		}
+		@media (min-width: 1200px){
+			.container{max-width:1140px}
+		}
+		.row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}
+		.col-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}
+		.col-12{-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}		
+		@media (min-width: 576px){
+			.col-sm-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}
+			.col-sm-12{-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}
+		}
+		@media (min-width:768px){
+			.col-md-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}
+			.col-md-12{-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}
+		}
+		@media (min-width:992px){
+			.col-lg-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}
+			.col-lg-12{-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}
+		}
+		@media (min-width:1200px){
+			.col-xl-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%;}
+			.col-xl-12{-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%;}
+		}
+		body{font-family:'Poppins', sans-serif;margin-top:60px;}
+		#title{color:#f26522;text-align:left;font-weight:600;font-size:52px;margin-bottom:5px;line-height:60px;margin-top:40px;}
+		#description{text-align:left;display:inline-block;width:550px;font-weight:400;font-size:21px;line-height:30px;margin-bottom:14px;}
+		#error{color:#1e4b9b;font-weight:700;font-size:36px;margin-bottom:20px;margin-top:0px;}
+		.button{background-color:#1e4b9b;padding:5px;padding-left:35px;padding-right:35px;margin-right:25px;border:none;text-align:center;border-radius:15px;margin-bottom:10px;}
+		#buttons{margin-top:12px;margin-left:0px;}
+		.link{color:#fff;font-size:24px;text-align:center;text-decoration:none;font-family:'Poppins', sans-serif;}
+		.link:hover{color:#fff;text-decoration:none;}
+		/*#error-image{float:right;position:absolute;top:20px;right:320px;margin-left:10px;}*/
+		#error-image{width:100%;height:auto;}
+		#oulogo{float:right;height:58px;width:auto;}
+		#right{text-align:right;margin:40px 0;}		
+	</style>
+	
+	
+	<main>		
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-6 col-lg-6">
+					<h1 id="title">OOPS! <br> Page Not Found</h1>
+					<p id="description">The page you requested could not be found on our web site. Please visit the STEM Technical Services Homepage or use the Contact button below.</p>
+					<p id="error">ERROR CODE 404</p>
+					<div id="buttons">
+						<button class="button"><a href="https://stem-ts.open.ac.uk/" class="link">STEM-TS</a></button>
+						<button class="button"><a href="mailto: STEM-Technical-Services@open.ac.uk" class="link">CONTACT</a></button>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-6">
+					<img src="https://kmi.open.ac.uk/ERROR-404-image.png" alt="Error 404 image" id="error-image">
+				</div>
+			</div>
+			<div class="row">				
+				<div class="col-sm-12 col-md-12 col-lg-12">
+					<div id="right">
+						<a href="https://open.ac.uk/" title="Visit The Open University Website"><img src="https://kmi.open.ac.uk/images/ou-logo/ou-logo.png" alt="The Open University Logo" id="oulogo"></a>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</main>
+</body>
+</html>

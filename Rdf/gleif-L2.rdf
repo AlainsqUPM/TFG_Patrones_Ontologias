@@ -1,0 +1,788 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.gleif.org/ontology/L2/"
+     xml:base="https://www.gleif.org/ontology/L2/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Base="https://www.gleif.org/ontology/Base/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+    <owl:Ontology rdf:about="https://www.gleif.org/ontology/L2/">
+        <owl:versionIRI rdf:resource="https://www.gleif.org/ontology/L2-v1.0/L2/"/>
+        <owl:imports rdf:resource="https://www.gleif.org/ontology/Base/"/>
+        <owl:imports rdf:resource="https://www.gleif.org/ontology/L1/"/>
+        <terms:abstract xml:lang="en">Ontology for legal entity parent relationships. It was designed for Global Legal Entity Identifier Foundation (GLEIF) Level 2 data corresponding to the Relationship Record format, version 1.1. Legal entities that have or acquire an LEI report their ‘direct accounting consolidating parent’ as well as their ‘ultimate accounting consolidating parent’, or for International Branches ‘is an International Branch of&apos;. Otherwise they must provide a Reporting Exception.</terms:abstract>
+        <terms:contributor rdf:resource="http://www.workingontologist.com"/>
+        <terms:contributor rdf:resource="http://purl.org/bryon"/>
+        <terms:contributor rdf:resource="https://www.linkedin.com/in/peterivett/"/>
+        <terms:creator rdf:resource="https://www.gleif.org/ontology/Base/GLEIF"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-01T00:00:00+00:00</terms:issued>
+        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gleif.org/en/meta/lei-data-terms-of-use/</terms:license>
+        <terms:rights>Copyright (c) 2019 Global Legal Entity Identifier Foundation (GLEIF)</terms:rights>
+        <terms:rightsHolder rdf:resource="https://www.gleif.org/ontology/Base/GLEIF"/>
+        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gleif.org/en/about-lei/common-data-file-format/relationship-record-cdf-format</terms:source>
+        <terms:title xml:lang="en">Global Legal Entity Identifier Foundation Level 2 Ontology - Who Owns Whom</terms:title>
+        <vann:preferredNamespacePrefix>gleif-L2</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://www.gleif.org/ontology/L2/</vann:preferredNamespaceUri>
+        <rdfs:label>GLEIF L2 Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/hasAccountingPeriod -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L2/hasAccountingPeriod">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/L2/LegalEntityRelationshipRecord"/>
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/Base/Period"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>has accounting period</rdfs:label>
+        <skos:definition>The dates in this Period indicate the accounting period covered by the most recent validation documents for this relationship.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/hasAccountingStandard -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L2/hasAccountingStandard">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/isQualifiedBy"/>
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/L2/AccountingConsolidation"/>
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/L2/AccountingStandard"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>has accounting standard</rdfs:label>
+        <skos:definition>The accounting standard applied to determine the definition of e.g. ultimate or direct accounting consolidating parent for the relationship. The relevant accounting standard is that applicable to the &apos;parent&apos; entity.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/hasChild -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L2/hasChild">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/hasSource"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/Base/LegalEntityRelationship"/>
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/Base/Entity"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>has child</rdfs:label>
+        <skos:definition>The entity that plays the child role.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/hasDocumentFilingPeriod -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L2/hasDocumentFilingPeriod">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/L2/LegalEntityRelationshipRecord"/>
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/Base/Period"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>has document filing period</rdfs:label>
+        <skos:definition>The dates in this instance of Period indicate the validity period of a regulatory filing, accounting document, or other document demonstrating the relationship&apos;s validity</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/hasParent -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L2/hasParent">
+        <rdfs:subPropertyOf rdf:resource="https://www.gleif.org/ontology/Base/hasTarget"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/Base/LegalEntityRelationship"/>
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/Base/Entity"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>has parent</rdfs:label>
+        <skos:definition>The entity that plays the parent role.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/hasRelationshipPeriod -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L2/hasRelationshipPeriod">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/Base/LegalEntityRelationship"/>
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/Base/Period"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>has relationship period</rdfs:label>
+        <skos:definition>The dates in this instance of Period indicate the duration of validity of the relationship itself, as distinct from any administrative or reporting aspects.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/hasRelationshipStatus -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L2/hasRelationshipStatus">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/Base/LegalEntityRelationship"/>
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/L2/RelationshipStatus"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>has relationship status</rdfs:label>
+        <skos:definition>Indicates the status of the relationship (i.e., active, inactive).</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/hasValidationDocuments -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L2/hasValidationDocuments">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/L2/LegalEntityRelationshipRecord"/>
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKind"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>has validation documents</rdfs:label>
+        <skos:definition>Type of source document(s) used for validating the relationship.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/hasValidationSources -->
+
+
+    <owl:ObjectProperty rdf:about="https://www.gleif.org/ontology/L2/hasValidationSources">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/L2/LegalEntityRelationshipRecord"/>
+        <rdfs:range rdf:resource="https://www.gleif.org/ontology/L1/ValidationSourceKind"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>has validation sources</rdfs:label>
+        <skos:definition>Level of relationship validation.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/hasValidationReference -->
+
+
+    <owl:DatatypeProperty rdf:about="https://www.gleif.org/ontology/L2/hasValidationReference">
+        <rdfs:domain rdf:resource="https://www.gleif.org/ontology/L2/LegalEntityRelationshipRecord"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>has validation reference</rdfs:label>
+        <skos:definition>A reference to a specific document or other source used as the basis of relationship validation for this relationship record.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error1 -->
+
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error1"/>
+    
+
+
+    <!-- https://www.gleif.org/ontology/Base/LegalEntityRelationship -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/Base/LegalEntityRelationship">
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error1"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/Base/Entity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L2/hasRelationshipStatus"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/L2/RelationshipStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L2/hasRelationshipPeriod"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/Base/Period"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/AccountingConsolidation -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/L2/AccountingConsolidation">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/Base/LegalEntityRelationship"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L2/hasAccountingStandard"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/L2/AccountingStandard"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>accounting consolidation</rdfs:label>
+        <skos:definition>Accounting consolidation holds when &apos;[in the] financial statements of a group [...] the assets, liabilities, equity, income, expenses and cash flows of the parent and its subsidiaries are presented as those of a single economic entity&apos;.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/AccountingStandard -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/L2/AccountingStandard">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/AccountingStandardIFRS"/>
+                    <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/AccountingStandardOtherAccountingStandard"/>
+                    <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/AccountingStandardUSGAAP"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>accounting standard</rdfs:label>
+        <skos:definition>the type of accounting standard used to source consolidation information, which is based on reported accounting roll-ups</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/DirectConsolidation -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/L2/DirectConsolidation">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/L2/AccountingConsolidation"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>direct consolidation</rdfs:label>
+        <skos:altLabel>is directly consolidated by</skos:altLabel>
+        <skos:definition>The &apos;child&apos; entity has its accounts fully consolidated by the &apos;parent&apos; entity, in the sense given by the accounting standard(s) specified; the parent entity is the closest fully consolidating parent to the child entity in any applicable hierarchical ownership structure.</skos:definition>
+        <skos:prefLabel>direct consolidation</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/InternationalBranchRelationship -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/L2/InternationalBranchRelationship">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/Base/LegalEntityRelationship"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>international branch relationship</rdfs:label>
+        <skos:altLabel>is international branch of</skos:altLabel>
+        <skos:definition>Child is a lead international branch or international branch network outside of the head office’s jurisdiction. The Parent is the Head Office and MUST have an LEI.</skos:definition>
+        <skos:note>A non-incorporated establishment of a head office legal entity, when this establishment is located in a separate jurisdiction from the jurisdiction in which the head office legal entity is located, i.e., in a host jurisdiction outside of its home jurisdiction. Under this definition, an establishment may consist of a single office or other business premises, or of several offices (i.e., a branch network) in different locations of the same host jurisdiction: even in the latter case, only one LEI would be issued per host jurisdiction, essentially amounting to, “one country-one LEI.” Unlike foreign subsidiaries of a parent entity, which are separately incorporated or organised under the laws of the host jurisdictions, an international branch, as defined here, is legally dependent on the head office legal entity and cannot exist without its head office legal entity </skos:note>
+        <skos:prefLabel>international branch relationship</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/LegalEntityRelationshipRecord -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/L2/LegalEntityRelationshipRecord">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/Base/RegistryEntry"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L2/hasValidationDocuments"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKind"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L2/hasValidationSources"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/ValidationSourceKindEntitySuppliedOnly"/>
+                            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/ValidationSourceKindFullyCorroborated"/>
+                            <rdf:Description rdf:about="https://www.gleif.org/ontology/L1/ValidationSourceKindPartiallyCorroborated"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasRegistrationStatus"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RegistrationStatusAnnulled"/>
+                            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RegistrationStatusDuplicate"/>
+                            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RegistrationStatusLapsed"/>
+                            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RegistrationStatusPendingArchival"/>
+                            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RegistrationStatusPendingTransfer"/>
+                            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RegistrationStatusPublished"/>
+                            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RegistrationStatusRetired"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/records"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/Base/LegalEntityRelationship"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L1/hasManagingLOU"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/L1/LocalOperatingUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/L2/hasValidationReference"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasInitialRegistrationDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasLastUpdateDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasNextRenewalDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>legal entity relationship record</rdfs:label>
+        <skos:definition>The Registration container element contains information specifying the LOU&apos;s administration of the relationship record.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/RegistrationStatus -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/L2/RegistrationStatus">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/Base/RegistrationStatus"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>relationship registration status</rdfs:label>
+        <skos:definition>The status of the legal entity&apos;s relationship record registration with the Managing LOU.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/RelationshipStatus -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/L2/RelationshipStatus">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RelationshipStatusActive"/>
+                    <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RelationshipStatusInactive"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>relationship status</rdfs:label>
+        <skos:definition>The status of the legal entities&apos; relationship itself: active or inactive.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKind -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKind">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKindAccountsFiling"/>
+                    <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKindContracts"/>
+                    <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKindOtherOfficialDocuments"/>
+                    <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKindRegulatoryFiling"/>
+                    <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKindSupportingDocuments"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>relationship validation documents kind</rdfs:label>
+        <skos:definition>Type of source document(s) used for validating the relationship.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/UltimateConsolidation -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/L2/UltimateConsolidation">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/L2/AccountingConsolidation"/>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>ultimate consolidation</rdfs:label>
+        <skos:altLabel>is ultimately consolidated by</skos:altLabel>
+        <skos:definition>The &apos;child&apos; entity has its accounts fully consolidated by the &apos;parent&apos; entity, in the sense given by the accounting standard(s) specified; the child entity is the most distant fully consolidating parent from the child entity in any applicable hierarchical ownership structure.</skos:definition>
+        <skos:prefLabel>ultimate consolidation</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/ -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L2/">
+        <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/AccountingStandardIFRS -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L2/AccountingStandardIFRS">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L2/AccountingStandard"/>
+        <Base:hasTag>IFRS</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>IFRS</rdfs:label>
+        <skos:definition>International Financial Reporting Standard (developed by the International Accounting Standards Board – IASB)</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/AccountingStandardOtherAccountingStandard -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L2/AccountingStandardOtherAccountingStandard">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L2/AccountingStandard"/>
+        <Base:hasTag>OTHER_ACCOUNTING_STANDARD</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>other accounting standard</rdfs:label>
+        <skos:definition>A financial reporting (accounting) standard not otherwise listed in the latest version of the relationship data file format.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/AccountingStandardUSGAAP -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L2/AccountingStandardUSGAAP">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L2/AccountingStandard"/>
+        <Base:hasTag>US_GAAP</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>US GAAP</rdfs:label>
+        <skos:definition>United States-Generally Accepted Accounting Principles.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/RegistrationStatusAnnulled -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L2/RegistrationStatusAnnulled">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L2/RegistrationStatus"/>
+        <Base:hasTag>ANNULLED</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>annulled</rdfs:label>
+        <skos:definition>A relationship data report that was marked as erroneous or invalid after it was published. The relationship report is kept in publication for historical audit trail purposes only (so that data recipients can correct their local data).</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/RegistrationStatusDuplicate -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L2/RegistrationStatusDuplicate">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L2/RegistrationStatus"/>
+        <Base:hasTag>DUPLICATE</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>duplicate</rdfs:label>
+        <skos:definition>A relationship data report that has been determined to be a  duplicate registration of the same relationship. In many cases this will mean more than one report with e.g. the same 2 entity IDs, the same relationship type, certain status values and the same relationship date(s), but this determination will depend on the relationship type in question.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/RegistrationStatusLapsed -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L2/RegistrationStatusLapsed">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L2/RegistrationStatus"/>
+        <Base:hasTag>LAPSED</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>lapsed</rdfs:label>
+        <skos:definition>A relationship data report that has not been renewed by the NextRenewalDate</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/RegistrationStatusPendingArchival -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L2/RegistrationStatusPendingArchival">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L2/RegistrationStatus"/>
+        <Base:hasTag>PENDING_ARCHIVAL</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>pending archival</rdfs:label>
+        <skos:definition>An LEI registration is about to be transferred to a different LOU, after which its registration status will revert to a non-pending status.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/RegistrationStatusPendingTransfer -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L2/RegistrationStatusPendingTransfer">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L2/RegistrationStatus"/>
+        <Base:hasTag>PENDING_TRANSFER</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>pending transfer</rdfs:label>
+        <skos:definition>An LEI registration that has been requested to be transferred to another LOU. The request is being processed at the sending LOU.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/RegistrationStatusPublished -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L2/RegistrationStatusPublished">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L2/RegistrationStatus"/>
+        <Base:hasTag>PUBLISHED</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>published</rdfs:label>
+        <skos:definition>A relationship data report that has been validated and published, and which is reported by an entity that was an operating legal entity as of the last update.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/RegistrationStatusRetired -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L2/RegistrationStatusRetired">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L2/RegistrationStatus"/>
+        <Base:hasTag>RETIRED</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>retired</rdfs:label>
+        <skos:definition>status indicating that the registration is for an entity that has ceased operation, without having been merged into another entity</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/RelationshipStatusActive -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L2/RelationshipStatusActive">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L2/RelationshipStatus"/>
+        <Base:hasTag>ACTIVE</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>active</rdfs:label>
+        <skos:definition>As of the last report or update, the reporting legal entity reported that it is legally registered and/or operating, AND that the relationship detailed in this RelationshipRecord is still valid.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/RelationshipStatusInactive -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L2/RelationshipStatusInactive">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L2/RelationshipStatus"/>
+        <Base:hasTag>INACTIVE</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>inactive</rdfs:label>
+        <skos:definition>It has been determined that the relationship ended, e.g. because entity that reported this relationship is no longer legally registered and/or operating; or the relationship is no longer valid for other reasons</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKindAccountsFiling -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKindAccountsFiling">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKind"/>
+        <Base:hasTag>ACCOUNTS_FILING</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>accounts filing</rdfs:label>
+        <skos:definition>A consolidated financial (accounting) statement, prepared and submitted to the relevant authority.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKindContracts -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKindContracts">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKind"/>
+        <Base:hasTag>CONTRACTS</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>contracts</rdfs:label>
+        <skos:definition>Other documents supporting the preparation of consolidated financial statements.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKindOtherOfficialDocuments -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKindOtherOfficialDocuments">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKind"/>
+        <Base:hasTag>OTHER_OFFICIAL_DOCUMENTS</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>other official documents</rdfs:label>
+        <skos:definition>Other official document(s) attesting to the validity of the relationship.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKindRegulatoryFiling -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKindRegulatoryFiling">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKind"/>
+        <Base:hasTag>REGULATORY_FILING</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>regulatory filing</rdfs:label>
+        <skos:definition>An annual regulatory filing providing public information on parent relationships</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKindSupportingDocuments -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKindSupportingDocuments">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKind"/>
+        <Base:hasTag>SUPPORTING_DOCUMENTS</Base:hasTag>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/L2/"/>
+        <rdfs:label>supporting documents</rdfs:label>
+        <skos:definition>Other documents supporting the preparation of consolidated financial statements.</skos:definition>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/AccountingStandardIFRS"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/AccountingStandardOtherAccountingStandard"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/AccountingStandardUSGAAP"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RegistrationStatusAnnulled"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RegistrationStatusDuplicate"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RegistrationStatusLapsed"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RegistrationStatusPendingArchival"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RegistrationStatusPendingTransfer"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RegistrationStatusPublished"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RegistrationStatusRetired"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RelationshipStatusActive"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RelationshipStatusInactive"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKindAccountsFiling"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKindContracts"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKindOtherOfficialDocuments"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKindRegulatoryFiling"/>
+            <rdf:Description rdf:about="https://www.gleif.org/ontology/L2/RelationshipValidationDocumentsKindSupportingDocuments"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ -->
+
+

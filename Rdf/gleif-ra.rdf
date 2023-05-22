@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.gleif.org/ontology/RegistrationAuthority/"
+     xml:base="https://www.gleif.org/ontology/RegistrationAuthority/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Base="https://www.gleif.org/ontology/Base/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+    <owl:Ontology rdf:about="https://www.gleif.org/ontology/RegistrationAuthority/">
+        <owl:versionIRI rdf:resource="https://www.gleif.org/ontology/RegistrationAuthority-1.0/RegistrationAuthority/"/>
+        <owl:imports rdf:resource="https://www.gleif.org/ontology/Base/"/>
+        <owl:imports rdf:resource="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/"/>
+        <terms:abstract xml:lang="en">Ontology defining concepts for Business Registries, including the jurisdictions served. This is based on the Registration Authority Code List (RAL) used for Global Legal Entity Identifier Foundation (GLEIF) registration, but is more broadly applicable.</terms:abstract>
+        <terms:contributor rdf:resource="http://www.workingontologist.com"/>
+        <terms:contributor rdf:resource="http://purl.org/bryon"/>
+        <terms:contributor rdf:resource="https://www.linkedin.com/in/peterivett/"/>
+        <terms:creator rdf:resource="https://www.gleif.org/ontology/Base/GLEIF"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-01T00:00:00+00:00</terms:issued>
+        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gleif.org/en/meta/lei-data-terms-of-use/</terms:license>
+        <terms:rights>Copyright (c) 2019 Global Legal Entity Identifier Foundation (GLEIF)</terms:rights>
+        <terms:rightsHolder rdf:resource="https://www.gleif.org/ontology/Base/GLEIF"/>
+        <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gleif.org/en/about-lei/gleif-registration-authorities-list</terms:source>
+        <terms:title xml:lang="en">Global Legal Entity Identifier Foundation Registration Authority Ontology</terms:title>
+        <vann:preferredNamespacePrefix>gleif-ra</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://www.gleif.org/ontology/RegistrationAuthority/</vann:preferredNamespaceUri>
+        <rdfs:label>GLEIF Registration Authority Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.gleif.org/ontology/RegistrationAuthority/BusinessRegistry -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/RegistrationAuthority/BusinessRegistry">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/Base/Registry"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasCoverageArea"/>
+                <owl:someValuesFrom rdf:resource="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/GeographicRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/isManagedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/Base/RegistrationAuthority"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasWebsite"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasNameLegalLocal"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/hasNameTranslatedEnglish"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/RegistrationAuthority/"/>
+        <rdfs:label>business registry</rdfs:label>
+        <skos:definition>a registry for registering and maintaining information about business entities</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://www.gleif.org/ontology/RegistrationAuthority/RegistrationAuthorityCode -->
+
+
+    <owl:Class rdf:about="https://www.gleif.org/ontology/RegistrationAuthority/RegistrationAuthorityCode">
+        <rdfs:subClassOf rdf:resource="https://www.gleif.org/ontology/Base/Identifier"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.gleif.org/ontology/Base/identifies"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.gleif.org/ontology/RegistrationAuthority/BusinessRegistry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/RegistrationAuthority/"/>
+        <rdfs:label>registration authority code</rdfs:label>
+        <skos:definition>The reference code of the registration authority, taken from the Registration Authorities Code List maintained by GLEIF.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.gleif.org/ontology/RegistrationAuthority/ -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/RegistrationAuthority/">
+        <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.gleif.org/ontology/RegistrationAuthority/RAregistry -->
+
+
+    <owl:NamedIndividual rdf:about="https://www.gleif.org/ontology/RegistrationAuthority/RAregistry">
+        <rdf:type rdf:resource="https://www.gleif.org/ontology/Base/Registry"/>
+        <Base:isManagedBy rdf:resource="https://www.gleif.org/ontology/Base/GLEIF"/>
+        <Base:hasNameLocal xml:lang="en">GLEIF Registration Authorities List</Base:hasNameLocal>
+        <Base:hasWebsite rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gleif.org/en/about-lei/code-lists/gleif-registration-authorities-list</Base:hasWebsite>
+        <rdfs:isDefinedBy rdf:resource="https://www.gleif.org/ontology/RegistrationAuthority/"/>
+        <rdfs:label>RA registry</rdfs:label>
+        <skos:altLabel>GLEIF Registration Authorities List</skos:altLabel>
+        <skos:altLabel>RAL</skos:altLabel>
+        <skos:prefLabel>RA registry</skos:prefLabel>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ -->
+
+
