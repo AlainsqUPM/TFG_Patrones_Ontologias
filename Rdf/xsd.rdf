@@ -1,0 +1,13 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>406 Not Acceptable</title>
+</head><body>
+<h1>Not Acceptable</h1>
+<p>An appropriate representation of the requested resource could not be found on this server.</p>
+Available variants:
+<ul>
+<li><a href="XMLSchema.dtd">XMLSchema.dtd</a> , type text/plain</li>
+<li><a href="XMLSchema.html">XMLSchema.html</a> , type application/xhtml+xml, charset utf-8</li>
+<li><a href="XMLSchema.xsd">XMLSchema.xsd</a> , type application/xml</li>
+</ul>
+</body></html>
