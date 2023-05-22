@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TempO - Temporal Ontology</title>
+    <style>
+        #pylode {
+            position: fixed;
+            top: 130px;
+            left: -80px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
+        #pylode #p {
+            color: #329545;
+        }
+        #pylode #y {
+            color: #f9cb33;
+        }
+        #pylode #version {
+            font-size: 1.0em;
+        }
+
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dl {
+            /*border: 1px solid navy;*/
+            /*padding:5px;*/
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 0;
+        }
+
+        dd {
+            margin-bottom: 10px;
+            padding-top: 7px;
+        }
+
+        #metadata ul,
+        #classes ul {
+            list-style-type: none;
+        }
+
+        #metadata ul li,
+        #classes ul li {
+            margin-left: -40px;
+        }
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        section#overview img {
+            max-width: 1000px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 20px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
+
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: justify;
+        }
+
+        section {
+            max-width: 1500px;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-con,
+        .sup-col {
+            cursor:help;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-con {
+            color:orange;
+        }
+
+        .sup-col {
+            color:darkred;
+        }
+
+        sup {
+            margin-left: -3px;
+        }
+        code {
+            font-size: large;
+            color: darkred;
+        }
+
+        /* less prominent links for properties */
+        .proplink {
+            color: #336;
+            text-decoration: none;
+        }
+
+#toc {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+    border: solid 1px navy;
+    font-size: small;
+    width: 180px;
+}
+#toc h3 {
+    margin-top: 5px;
+}
+
+#toc ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#toc .first > li {
+    margin-top: 5px;
+}
+
+#toc .second,
+#toc .third {
+    padding-left: 10px;
+}
+
+#content {
+    width: calc(100% - 150px);
+}
+
+.hover_property {
+    cursor: help;
+    text-decoration: none;
+    border-bottom: dashed 1px;
+}
+
+.setclass {
+    list-style-type: none;
+}
+
+code{
+    word-wrap: break-word;
+  }
+  table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  td {
+    word-wrap: break-word;
+  }
+	</style>
+    <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhklEQVQ4jbWPzStEURjG3yQLirlGKUnKFO45Z+SjmXvnnmthQcpCoVhYmD/AwmJiI3OvZuZc2U3UlKU0/gAslMw9JgvhHxAr2fko7r0jHSsl+TgbTz2Lt5731/MASEiJW9ONml2QyX6rsGalmnT74v8BDf12hxJfpV8d1uwNKUBYszabdFv84L8B9X0rESVmmUup2fme0cVhJWaZHw4NWL1SewEAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ9Hn31OgoATL+CkLDGB5H1OKj4nFd/FBxUXJ0UZNb4edw/6nLyJXaj5FeCVyPLNIVmYK8TG1IwWb16L1gEACAFV90ftoT8bdOX0EeyY99gxBXZMgRz6qGb1KantAACI0UvE6F5XJqEjpsdURouI0Vt5gGOUkUNnPu7ObGIIMfNaGqDmjDRi9FZldF1lRgYzeqUyeoiY4ag5Iy3RgOYRM8+/M2bG8efsO4hGrpmJseyMAAAAAElFTkSuQmCC" rel="icon" sizes="16x16" type="image/png">
+    <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC40lEQVRYhe2UT0hUQRzHp6Iss1B3VZKIDbbdfW9mnoi4f3zzjkJQeOgS0SEIb1EWBGGlLLu460zQPQM1unUIIjA6rfpm6ZAhHjoIRVQUFUlEbG+euTsdXG1d3VL3bVD4g+9h+L35fT/8fvN7ADgY9aHY5fpIvK82HO9ysu66wxWOzbkjcekKx0a2ALYA/n2AGi3a6ArFezcidziecQygNhhrcUficjP6PwBqtGijKxy/thnVBePHywYoDsFhl53GV8SEcsTx4usCMLUewTVpc23BNvEzm6Neyf1+KcG2vwqwUjgrOJq2JmHftwmkVBRGTvncFodnbI7vChO/FRznCmHsNM7aHM9Yk7Df5iqsLMw9sMNOK2g+jS4IEz0UJv4iuJZb2RltWnB4UZqH6ioGAgAAGe5vtiZhtzDx7OoRadLmeM7m6IRjhnLMW2Vx1bA5GhAmnhIcz6/xNj4Ujsky8UspwfayjDPjsF2Y6L7N8Vzx/BfP+KPg6LbgSqd8DnfJW2CnbaLhfH5ephpqygJYvQU4Z3P82TLRsDDhUTnmrSq+Y3N0Mg+Xldy/zwEAnLMWZ3pHpNExmfLs/t0dOdVcbT0JeKxUwFP2VljjqiE47Jp53LTXNxhsUZjerTByXWX6VZWRs/4bIQ2ACv+UAomgDzLCISNZxAxZKMhIDjLy1JfsaK+I+eGBUBNk5E2x8RogX/PdcDZUqieWTSh5D6nOVKqfhoycUmlHFFIyu5RXqf7AcQDISCpv/tqbMBqK883RtmpISRoxQyJKPgGn3wNk5NEigDFa6hslqV/Kj+FdBQD0bshIDlKSLlVcoWQo36UhR80BAMB73lulMn0EMpJTqD6qJiOt3mho/8GbkT2BZNgDB/V+RI0fkOrT3kRIVQbaDizJm2hdNbINBxwk5xAj3yEjuV9rZ1iIkgxixkLBA83mz8uCjLwoGwAx0vOnFSy5mtR4VTaAQvVORMnwZgSpzkrV/QmdE2tKe46+MQAAAABJRU5ErkJggg==" rel="icon" sizes="32x32" type="image/png">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <script id="schema.org" type="application/ld+json">
+[
+  {
+    "@id": "http://purl.org/tempo",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/creator": [
+      {
+        "@id": "https://orcid.org/0000-0002-7352-2825"
+      },
+      {
+        "@value": "Sebastian Freundt"
+      }
+    ],
+    "https://schema.org/dateIssued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2022-05-26T05:00:00+00:00"
+      }
+    ],
+    "https://schema.org/dateModified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2022-08-20T05:19:00+00:00"
+      }
+    ],
+    "https://schema.org/description": [
+      {
+        "@language": "en",
+        "@value": "In a typical (uni)temporal data model every resource's appearance (and disappearance) is being tracked.\nNumerous systems accomplish unitemporal tracking, either externally by e.g. using git to record the insertion or deletion of a resource, or internally by e.g. using prov:generatedAtTime and prov:invalidatedAtTime.\nThis axis of time is known as *system time*, and none of TempO's concern because for one there is readily available support, and moreover because unitemporal tracking is used for principally true statements, i.e. those that have always been (considered) true or will always be (considered) true.\n\nTempO addresses bitemporal and tritemporal setups: Resources which are (known or believed to be) valid and efficacious for some time.\nA second time axis orthogonal to system time is introduced, that is a resource can be valid even though it is currently not in the system, or, conversely, can be already or still invalid by the time it enters the system.\n\nEfficacy, sometimes called decision time, is yet another concept orthogonal to validity, i.e. a resource that is no longer or not yet valid can be efficacious.\nThe converse, a valid but inefficacious resource in the system, is *usually* not encountered but TempO does not impose restrictions on the shape of the time area.\n\nIn general the necessity for tracking both validity and efficacy arises in areas where concepts are assigned a code or label that is subject to reuse following invalidation.\nTracking efficacy and validity concurrently then allows for fine-grained control over how much future knowledge or how much past knowledge we tolerate in a datset.\n\nExample:\n--------\nCzechoslovakia was founded in 1918 but became part of Germany, Hungary and Poland in 1938.\nIt was reestablished in 1945 but split into two sovereign states in 1993.\nThe ISO 3166 country code for Czechoslovakia used to be 'CS', assigned in 1974, published in February 1978, and invalidated with the country's split.\nIn 2003 ISO 3166 reassigned the country code 'CS' to Serbia and Montenegro.\nThe facts were assembled in 2018 and written down as follows:\n\n    cc:CSHH\n        a cc:ISO3166-CountryCode ;\n        rdfs:label \"CS\" ;\n        cc:refersTo \"Czechoslovakia\" ;\n        prov:generatedAtTime \"2018-02-29T04:00:00Z\"^^xsd:dateTime .\n        tempo:validFrom \"1978-02\"^^xsd:gYearMonth ;\n        tempo:validTill \"1993-01-01\"^^xsd:date ;\n        tempo:efficaciousFrom \"1918\"^^xsd:gYear , \"1945\"^^xsd:gYear ;\n        tempo:efficaciousTill \"1938\"^^xsd:gYear , \"2003\"^^xsd:gYear .\n\nThe use of the country code 'CS' in a statement from 1988 can be resolved to cc:CSHH, as of today, free from ambiguity; it was valid back then after all and we know that today.\nThe same query in 2017 (point-in-time query) would have yielded no results because the information hadn't been in the system back then.\nPoint-in-time queries, however, are not TempO's major concern so only as-of-today queries are assumed from now on.\n\nFollowing the country's split it is highly likely that news reports from, say, 1994 highlighting the then-recent past would still have used 'CS' to refer to cc:CSHH.\nAccording to the resource this is possible, a query for 'CS' in 1994 would bring up cc:CSHH as it is efficacious but marked as invalidated.\n\nOn the other end of history, the use of the code 'CS' in, say, 1976 is plausible.  The code was decided on but not yet formally published.\nA query for 'CS' as used in 1976 would bring up cc:CSHH, marked as anachronistic.\nGoing back further, a statement from, say 1942, using the code 'CS' must clearly refer to something else.\nA query for 'CS' as used in 1976 would yield not yield any results.\n\n--\n\nThe ontology IRI http://purl.org/tempo/ always resolve to the latest version of TempO.  Particular versionIRIs such as http://purl.org/tempo/0.1/ can be used by clients to force the import of a particular version.\n\nThe goal of TempO is to allow for temporal constraints with control over how much future or past is permissible directly on the published resource, and as such, TempO does not restrict domain/ranges."
+      }
+    ],
+    "https://schema.org/license": [
+      {
+        "@id": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@language": "en",
+        "@value": "TempO - Temporal Ontology"
+      }
+    ],
+    "https://schema.org/publisher": [
+      {
+        "@id": "https://orcid.org/0000-0002-7352-2825"
+      }
+    ]
+  }
+]
+	</script>
+  </head>
+  <body>
+    <div id="content">
+      <div class="section" id="metadata">
+        <h1>TempO - Temporal Ontology</h1>
+        <h2>Metadata</h2>
+        <dl>
+          <div>
+            <dt>
+              <strong>IRI</strong>
+            </dt>
+            <dd>
+              <code>http://purl.org/tempo</code>
+            </dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/title" title="A name given to the resource. Defined in DCMI Metadata Terms">Title</a>
+            </dt>
+            <dd><p>TempO - Temporal Ontology</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/publisher" title="An entity responsible for making the resource available. Defined in DCMI Metadata Terms">Publisher</a>
+            </dt>
+            <dd>
+              <a href="https://orcid.org/0000-0002-7352-2825">orcid:0000-0002-7352-2825</a>
+            </dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/creator" title="An entity responsible for making the resource. Defined in DCMI Metadata Terms">Creator</a>
+            </dt>
+            <dd>
+              <ul>
+                <li>
+                  <a href="https://orcid.org/0000-0002-7352-2825">orcid:0000-0002-7352-2825</a>
+                </li>
+                <li><p>Sebastian Freundt</p></li>
+              </ul>
+            </dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/modified" title="Date on which the resource was changed. Defined in DCMI Metadata Terms">Date Modified</a>
+            </dt>
+            <dd><p>2022-08-20T05:19:00+00:00</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/issued" title="Date of formal issuance of the resource. Defined in DCMI Metadata Terms">Date Issued</a>
+            </dt>
+            <dd><p>2022-05-26T05:00:00+00:00</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/license" title="A legal document giving official permission to do something with the resource. Defined in DCMI Metadata Terms">License</a>
+            </dt>
+            <dd>
+              <a href="https://creativecommons.org/licenses/by-sa/4.0/">https://creativecommons.org/licenses/by-sa/4.0/</a>
+            </dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://www.w3.org/2002/07/owl#versionIRI" title="The property that identifies the version IRI of an ontology. Defined in The OWL 2 Schema vocabulary (OWL 2)">Version Iri</a>
+            </dt>
+            <dd>
+              <a href="http://purl.org/tempo/0.1/">http://purl.org/tempo/0.1/</a>
+            </dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://www.w3.org/2002/07/owl#versionInfo" title="The annotation property that provides version information for an ontology or another OWL construct. Defined in The OWL 2 Schema vocabulary (OWL 2)">Version Info</a>
+            </dt>
+            <dd><p>0.1</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/vocab/vann/preferredNamespacePrefix" title="None. Defined in None">Preferred Namespace Prefix</a>
+            </dt>
+            <dd><p>tempo</p></dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/vocab/vann/preferredNamespaceUri" title="None. Defined in None">Preferred Namespace Uri</a>
+            </dt>
+            <dd>
+              <a href="http://purl.org/tempo/">tempo:</a>
+            </dd>
+          </div>
+          <div>
+            <dt>
+              <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+            </dt>
+            <dd><p>In a typical (uni)temporal data model every resource's appearance (and disappearance) is being tracked.
+Numerous systems accomplish unitemporal tracking, either externally by e.g. using git to record the insertion or deletion of a resource, or internally by e.g. using prov:generatedAtTime and prov:invalidatedAtTime.
+This axis of time is known as <em>system time</em>, and none of TempO's concern because for one there is readily available support, and moreover because unitemporal tracking is used for principally true statements, i.e. those that have always been (considered) true or will always be (considered) true.</p>
+<p>TempO addresses bitemporal and tritemporal setups: Resources which are (known or believed to be) valid and efficacious for some time.
+A second time axis orthogonal to system time is introduced, that is a resource can be valid even though it is currently not in the system, or, conversely, can be already or still invalid by the time it enters the system.</p>
+<p>Efficacy, sometimes called decision time, is yet another concept orthogonal to validity, i.e. a resource that is no longer or not yet valid can be efficacious.
+The converse, a valid but inefficacious resource in the system, is <em>usually</em> not encountered but TempO does not impose restrictions on the shape of the time area.</p>
+<p>In general the necessity for tracking both validity and efficacy arises in areas where concepts are assigned a code or label that is subject to reuse following invalidation.
+Tracking efficacy and validity concurrently then allows for fine-grained control over how much future knowledge or how much past knowledge we tolerate in a datset.</p>
+<h2>Example:</h2>
+<p>Czechoslovakia was founded in 1918 but became part of Germany, Hungary and Poland in 1938.
+It was reestablished in 1945 but split into two sovereign states in 1993.
+The ISO 3166 country code for Czechoslovakia used to be 'CS', assigned in 1974, published in February 1978, and invalidated with the country's split.
+In 2003 ISO 3166 reassigned the country code 'CS' to Serbia and Montenegro.
+The facts were assembled in 2018 and written down as follows:</p>
+<pre><code>cc:CSHH
+    a cc:ISO3166-CountryCode ;
+    rdfs:label "CS" ;
+    cc:refersTo "Czechoslovakia" ;
+    prov:generatedAtTime "2018-02-29T04:00:00Z"^^xsd:dateTime .
+    tempo:validFrom "1978-02"^^xsd:gYearMonth ;
+    tempo:validTill "1993-01-01"^^xsd:date ;
+    tempo:efficaciousFrom "1918"^^xsd:gYear , "1945"^^xsd:gYear ;
+    tempo:efficaciousTill "1938"^^xsd:gYear , "2003"^^xsd:gYear .
+</code></pre>
+<p>The use of the country code 'CS' in a statement from 1988 can be resolved to cc:CSHH, as of today, free from ambiguity; it was valid back then after all and we know that today.
+The same query in 2017 (point-in-time query) would have yielded no results because the information hadn't been in the system back then.
+Point-in-time queries, however, are not TempO's major concern so only as-of-today queries are assumed from now on.</p>
+<p>Following the country's split it is highly likely that news reports from, say, 1994 highlighting the then-recent past would still have used 'CS' to refer to cc:CSHH.
+According to the resource this is possible, a query for 'CS' in 1994 would bring up cc:CSHH as it is efficacious but marked as invalidated.</p>
+<p>On the other end of history, the use of the code 'CS' in, say, 1976 is plausible.  The code was decided on but not yet formally published.
+A query for 'CS' as used in 1976 would bring up cc:CSHH, marked as anachronistic.
+Going back further, a statement from, say 1942, using the code 'CS' must clearly refer to something else.
+A query for 'CS' as used in 1976 would yield not yield any results.</p>
+<p>--</p>
+<p>The ontology IRI http://purl.org/tempo/ always resolve to the latest version of TempO.  Particular versionIRIs such as http://purl.org/tempo/0.1/ can be used by clients to force the import of a particular version.</p>
+<p>The goal of TempO is to allow for temporal constraints with control over how much future or past is permissible directly on the published resource, and as such, TempO does not restrict domain/ranges.</p></dd>
+          </div>
+        </dl>
+      </div>
+      <div class="section" id="classes">
+        <h2>Classes</h2>
+        <div class="property entity" id="TemporalConstraint">
+          <h3>Temporal Constraint
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://purl.org/tempo/TemporalConstraint</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Temporal constraint box to capture a consistent set of validity and efficacy intervals.</p>
+<p>Objects of this class also serve the purpose to capture additional constraints or annotations, in particular when they are also temporally constrained.</p>
+<h2>Example</h2>
+<pre><code>ccy:EUR
+    a ccy:ISO4217-CurrencyCode ;
+    ccy:usedIn cc:DE , cc:GR ;
+    rdfs:label "EUR" ;
+    tempo:constrainedBy [
+        a tempo:TemporalConstraint ;
+        tempo:validFrom "1999-01-01"^^xsd:date ;
+        ccy:usedIn cc:DE ;
+    ] , [
+        a tempo:TemporalConstraint ;
+        tempo:validFrom "2001-01-01"^^xsd:date ;
+        ccy:usedIn cc:GR ;
+    ] .
+</code></pre>
+<p>meaning the currency code 'EUR' became valid in Germany in 1999 whereas in Greece it became valid in 2001.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/inRangeOf" title="Inverse of rdfs:range. Defined in Ontology Documentation Profile">In Range Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#constrainedBy">tempo:constrainedBy</a>
+                  <sup class="sup-op" title="OWL Object Property">op</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="section" id="objectproperties">
+        <h2>Object Properties</h2>
+        <div class="property entity" id="constrainedBy">
+          <h3>constrained by
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://purl.org/tempo/constrainedBy</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
+              </th>
+              <td>
+                <a href="http://purl.org/tempo/">tempo:</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>A temporal constraint associated with this resource.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#TemporalConstraint">tempo:TemporalConstraint</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="section" id="annotationproperties">
+        <h2>Annotation Properties</h2>
+        <div class="property entity" id="efficaciousfrom">
+          <h3>efficacious from
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://purl.org/tempo/efficaciousFrom</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
+              </th>
+              <td>
+                <a href="http://purl.org/tempo/">tempo:</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>The date or time when this resource becomes efficacious.</p>
+<p>If omitted the resource is said to be efficacious in the past from a tempo:efficaciousTill's point of view.
+If neither is present the resource is said to be forever efficacious.</p>
+<p>A resource might not exist yet or have ceased to exist during its efficacy,
+Use tempo:validFrom/tempo:validTill to track validity.</p>
+<h2>Example</h2>
+<p>The Federal Republic of Germany was formed on 1949-05-23.
+In 1974 ISO 3166 assigns the country code 'DE' to Germany.
+With today's knowledge it is safe to assume that no other country would have been assigned the country code 'DE' so we use information from the future to roll out the efficacy of the code into the past:</p>
+<pre><code>cc:DE
+    a cc:ISO3166-CountryCode ;
+    rdfs:label "DE" ;
+    cc:refersTo "Germany" ;
+    tempo:validFrom "1974"^^xsd:gYear ;
+    tempo:efficaciousFrom "1949-05-23"^^xsd:date .
+</code></pre>
+<p>With this resource, a consumer of the dataset may safely liken the ccTLD '.de' to the country Germany as long as the temporal context is not older than 1949-05-23, while at the same time being aware that uses of the country code before 1974 are anachronistic.</p>
+<p>The notes about incomplete date or time types and mixing different date or time types in intervals made up from tempo:efficaciousFrom/tempo:efficaciousTill values as outlined in tempo:validFrom apply to efficacy annotations too.
+However, seeing as efficacy and validity are orthogonal concepts it is permissible to use incomplete date or time types on the efficacy axis different from the ones used on the validity axis.</p>
+<h2>Example</h2>
+<p>It is up further clarification whether in this resource:</p>
+<pre><code>ex:XY
+    rdfs:label "XY" ;
+    tempo:validFrom "2004-08-02"^^xsd:date ;
+    tempo:efficaciousFrom "2004-08"^^xsd:gYearMonth .
+</code></pre>
+<p>the use of ex:XY's label on 2004-08-01 is anachronistic (use before its validated life-span) or illegal (use before efficacy).</p></td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="efficacioustill">
+          <h3>efficacious till
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://purl.org/tempo/efficaciousTill</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
+              </th>
+              <td>
+                <a href="http://purl.org/tempo/">tempo:</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>The date or time when this resource becomes inefficacious.</p>
+<p>If omitted the resource is said to be efficacious in the future from a tempo:efficaciousFrom's point of view.
+If neither is present the resource is said to be forever efficacious.</p>
+<p>A resource might not exist yet or have ceased to exist during its efficacy,
+Use tempo:validFrom/tempo:validTill to track validity.</p>
+<h2>Example</h2>
+<p>The country code for Czechoslovkia had been 'CS' until 1993 when Czechoslovakia divided into Czechia and Slovakia.
+In 2003 then-Yugoslavia changed its name to Serbia and Montenegro, the ISO 3166 assignment is 'CS'.</p>
+<pre><code>cc:CSHH
+    a cc:ISO3166-CountryCode ;
+    rdfs:label "CS" ;
+    cc:refersTo "Czechoslovakia" ;
+    tempo:validFrom "1974"^^xsd:gYear ;
+    tempo:validTill "1993"^^xsd:gYear ;
+    tempo:efficaciousTill "2003"^^xsd:gYear .
+</code></pre>
+<p>With this resource, a consumer of the dataset may safely attribute any occurrence of the label 'CS' before 2003 to Czechoslovakia.</p>
+<p>A point in time in tempo:efficaciousTill is always exclusive.  See tempo:validTill for further explanation and implications.</p></td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="validfrom">
+          <h3>valid from
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://purl.org/tempo/validFrom</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
+              </th>
+              <td>
+                <a href="http://purl.org/tempo/">tempo:</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>The date or time when this resource becomes valid.</p>
+<p>If omitted the resource is said to be valid in the past from a tempo:validTill's point of view.
+If neither is present the resource is said to be forever valid.</p>
+<p>A resource can be formally invalid and yet efficacious, like the future name of an unborn baby can be used to refer to the baby during pregnancy knowing that a birth certificate with this name will exist one day.
+Use tempo:efficaciousFrom/tempo:efficaciousTill to track efficacy.</p>
+<p>There are no restrictions on the multiplicity of tempo:validFrom.
+A resource can be valid during a number of non-overlapping time periods (intervals) which implies that multiple tempo:validFrom's can be ordered chronologically and paired with a chronological ordering of tempo:validTill's such that there is an alternating sequence of elements from the validFrom set and the validTill set with respect to chronologicity.</p>
+<h2>Example</h2>
+<p>The resource</p>
+<pre><code>[]
+    tempo:validFrom "1998-01-01"^^xsd:date , "2004-01-01"^^xsd:date ;
+    tempo:validTill "2001-01-01"^^xsd:date , "2008-01-01"^^xsd:date .
+</code></pre>
+<p>is valid during the union of the intervals [1998-01-01, 2001-01-01) and [2004-01-01, 2008-01-01).  Note: the textual order cannot be preserved so this resource</p>
+<pre><code>[]
+    tempo:validFrom "1998-01-01"^^xsd:date ;
+    tempo:validTill "2008-01-01"^^xsd:date ;
+    tempo:validFrom "2004-01-01"^^xsd:date ;
+    tempo:validTill "2001-01-01"^^xsd:date .
+</code></pre>
+<p>conveys the same validity statement as above.</p>
+<h2>Example</h2>
+<p>Omission of the time value for the most distant point in the past and/or the most distant point in the future mandates this resource</p>
+<pre><code>[]
+    tempo:validFrom "2004-01-01"^^xsd:date ;
+    tempo:validTill "2001-01-01"^^xsd:date .
+</code></pre>
+<p>to be interpreted as valid in [-infinity, 2001-01-01) u [2004-01-01, infinity), i.e. invalid during [2001-01-01, 2004-01-01).</p>
+<h2>Illegal example</h2>
+<p>The following resource</p>
+<pre><code>[]
+    tempo:validFrom "1998-01-01"^^xsd:date , "2000-01-01"^^xsd:date , "2004-01-01"^^xsd:date ;
+    tempo:validTill "2001-01-01"^^xsd:date , "2008-01-01"^^xsd:date .
+</code></pre>
+<p>does not convey proper validity information because 1998-01-01 would have to be paired with 2001-01-01 chronologically whilst alternatingly choosing from the 'from' and 'till' sets but [2000-01-01, 2008-01-01), interval next in line, overlaps with the first interval, i.e. there is a point in time that is invalid according to the first interval, to wit 2001-01-01, but at the same time valid according to the second interval.</p>
+<p>The use of incomplete date or time types is generally up to further clarification.  As far as temporal logic and constraints in TempO are concerned, a value of, say, "1999-02"^^xsd:gYearMonth is interpreted as "at some point in February 1999".  All of these points are considered equivalent as long as all values in tempo:validFrom (and paired up corresponding values in tempo:validTill) use the same scale.</p>
+<p>Using different date or time types is generally discouraged in situations where the coarser scale's value contains points before and after the finer scale's value.  That is the following is permissible</p>
+<pre><code>[]
+    tempo:validFrom "2019"^^xsd:gYear ;
+    tempo:validTill "2022-02"^^xsd:gYearMonth .
+</code></pre>
+<p>whereas</p>
+<pre><code>[]
+    tempo:validFrom "2019"^^xsd:gYear ;
+    tempo:validTill "2019-02"^^xsd:gYearMonth .
+</code></pre>
+<p>is discouraged.</p></td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="validtill">
+          <h3>valid till
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://purl.org/tempo/validTill</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#isDefinedBy" title="The definition of the subject resource. Defined in The RDF Schema vocabulary (RDFS)">Is Defined By</a>
+              </th>
+              <td>
+                <a href="http://purl.org/tempo/">tempo:</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>The date or time when this resource becomes invalid.</p>
+<p>If omitted the resource is said to be valid in the future from a tempo:validFrom's point of view.
+If neither is present the resource is said to be forever valid.</p>
+<p>A resource can be formally invalid and yet efficacious, like an expired passport can be used still to identify a person.
+Use tempo:efficaciousFrom/tempo:efficaciousTill to track efficacy.</p>
+<p>There are no restrictions on the multiplicity of tempo:validTill.
+A resource can be valid during a number of non-overlapping time periods (intervals) which implies that multiple tempo:validTill's can be ordered chronologically and paired with a chronological ordering of tempo:validFrom's such that there is an alternating sequence of elements from the validTill set and the validFrom set with respect to chronologicity.  See tempo:validFrom for an example.</p>
+<p>A point in time in tempo:validTill is always exclusive.
+Combined with the policy about omissible far-in-the-future and far-in-the-past time points this implies that the resource</p>
+<pre><code>[]
+    tempo:validFrom "2009-09-09"^^xsd:date ;
+    tempo:validTill "2009-09-09"^^xsd:date .
+</code></pre>
+<p>is to be interpreted as valid in [-infinity, 2009-09-09) and valid again in [2009-09-09, infinity), or in other words forever-valid.  There is no way to encode that a resource is valid only at exactly one point in time or during an infinitesimally small period of time.</p>
+<p>The use of incomplete date or time types is generally up to further clarification.  As far as temporal logic and constraints in TempO are concerned, a value of, say, "1999-02"^^xsd:gYearMonth is interpreted as "at some point in February 1999".  All of these points are considered equivalent as long as all values in tempo:validTill (and paired up corresponding values in tempo:validFrom) use the same scale.</p>
+<p>Using different date or time types is generally discouraged in situations where the coarser scale's value contains points before and after the finer scale's value.  That is the following is permissible</p>
+<pre><code>[]
+    tempo:validFrom "2019"^^xsd:gYear ;
+    tempo:validTill "2022-02"^^xsd:gYearMonth .
+</code></pre>
+<p>whereas</p>
+<pre><code>[]
+    tempo:validFrom "2019"^^xsd:gYear ;
+    tempo:validTill "2019-02"^^xsd:gYearMonth .
+</code></pre>
+<p>is discouraged.</p></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="namespaces">
+        <h2>Namespaces</h2>
+        <dl>
+          <dt id="dc">dc</dt>
+          <dd>
+            <code>http://purl.org/dc/elements/1.1/</code>
+          </dd>
+          <dt id="dcat">dcat</dt>
+          <dd>
+            <code>http://www.w3.org/ns/dcat#</code>
+          </dd>
+          <dt id="dct">dct</dt>
+          <dd>
+            <code>http://purl.org/dc/terms/</code>
+          </dd>
+          <dt id="dcterms">dcterms</dt>
+          <dd>
+            <code>http://purl.org/dc/terms/</code>
+          </dd>
+          <dt id="ns1">ns1</dt>
+          <dd>
+            <code>https://orcid.org/</code>
+          </dd>
+          <dt id="owl">owl</dt>
+          <dd>
+            <code>http://www.w3.org/2002/07/owl#</code>
+          </dd>
+          <dt id="prov">prov</dt>
+          <dd>
+            <code>http://www.w3.org/ns/prov#</code>
+          </dd>
+          <dt id="rdf">rdf</dt>
+          <dd>
+            <code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code>
+          </dd>
+          <dt id="rdfs">rdfs</dt>
+          <dd>
+            <code>http://www.w3.org/2000/01/rdf-schema#</code>
+          </dd>
+          <dt id="tempo">tempo</dt>
+          <dd>
+            <code>http://purl.org/tempo/</code>
+          </dd>
+          <dt id="vann">vann</dt>
+          <dd>
+            <code>http://purl.org/vocab/vann/</code>
+          </dd>
+        </dl>
+      </div>
+      <div id="legend">
+        <h2>Legend</h2>
+        <table class="entity">
+          <tr>
+            <td>
+              <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+            </td>
+            <td>Classes</td>
+          </tr>
+          <tr>
+            <td>
+              <sup class="sup-op" title="OWL Object Property">op</sup>
+            </td>
+            <td>Object Properties</td>
+          </tr>
+          <tr>
+            <td>
+              <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+            </td>
+            <td>Annotation Properties</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="pylode">
+      <p>made by 
+        <a href="https://github.com/rdflib/pyLODE">
+          <span id="p">p</span>
+          <span id="y">y</span>
+          <span>LODE</span>
+        </a>
+        <a href="https://github.com/rdflib/pyLODE/release/3.0.4" id="version">3.0.4</a>
+      </p>
+    </div>
+    <div id="toc">
+      <h3>Table of Contents</h3>
+      <ul class="first">
+        <li>
+          <h4>
+            <a href="#metadata">Metadata</a>
+          </h4>
+        </li>
+        <li>
+          <h4>
+            <a href="#classes">Classes</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#TemporalConstraint">Temporal Constraint</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#objectproperties">Object Properties</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#constrainedBy">constrained by</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#annotationproperties">Annotation Properties</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#efficaciousfrom">efficacious from</a>
+            </li>
+            <li>
+              <a href="#efficacioustill">efficacious till</a>
+            </li>
+            <li>
+              <a href="#validfrom">valid from</a>
+            </li>
+            <li>
+              <a href="#validtill">valid till</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#namespaces">Namespaces</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#dc">dc</a>
+            </li>
+            <li>
+              <a href="#dcat">dcat</a>
+            </li>
+            <li>
+              <a href="#dct">dct</a>
+            </li>
+            <li>
+              <a href="#dcterms">dcterms</a>
+            </li>
+            <li>
+              <a href="#ns1">ns1</a>
+            </li>
+            <li>
+              <a href="#owl">owl</a>
+            </li>
+            <li>
+              <a href="#prov">prov</a>
+            </li>
+            <li>
+              <a href="#rdf">rdf</a>
+            </li>
+            <li>
+              <a href="#rdfs">rdfs</a>
+            </li>
+            <li>
+              <a href="#tempo">tempo</a>
+            </li>
+            <li>
+              <a href="#vann">vann</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#legend">Legend</a>
+          </h4>
+          <ul class="second"></ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

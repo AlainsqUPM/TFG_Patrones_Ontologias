@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/EUTaxO#"
+     xml:base="https://w3id.org/EUTaxO"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:tax="https://w3id.org/EUTaxO#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:tax-old="https://www.eudaphobase.eu/ontologies/taxonomy/">
+    <owl:Ontology rdf:about="https://w3id.org/EUTaxO">
+        <owl:versionIRI rdf:resource="https://w3id.org/EUTaxO#2.1.0"/>
+        <cc:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://opensource.org/licenses/MIT</cc:license>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carlos Alberto Martínez Muñoz</terms:contributor>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-09-29T23:59:59</terms:created>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">José F. Aldana-Martín</terms:creator>
+        <terms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EUdaphobase Taxonomy Ontology for the European Soil-Biology Data Warehouse for Soil Protection</terms:description>
+        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EUTaxO - EUdaphobase Taxonomy Ontology</terms:title>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tax</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/EUTaxO#</vann:preferredNamespaceUri>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EUTaxO - EUdaphobase Taxonomy Ontology</rdfs:label>
+        <owl:priorVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/EUTaxO#2.0.0</owl:priorVersion>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v2.1.0 - Changes:
+This major version adapts the ontology to better comply with the FAIR principles.
+- Removal of Animalia as a fixed class, it is now loaded from Edaphobase.</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/EUTaxO#belongsTo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/EUTaxO#belongsTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/EUTaxO#Taxon"/>
+        <rdfs:range rdf:resource="https://w3id.org/EUTaxO#Taxon"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Defines a hierarchy from more generic taxa, to more specific ones</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">belongs to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/EUTaxO#kingdom -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/EUTaxO#kingdom">
+        <rdfs:domain rdf:resource="https://w3id.org/EUTaxO#Taxon"/>
+        <rdfs:range rdf:resource="https://w3id.org/EUTaxO#Taxon"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The kingdom of a specific taxon</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kingdom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/EUTaxO#phylum -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/EUTaxO#phylum">
+        <rdfs:domain rdf:resource="https://w3id.org/EUTaxO#Taxon"/>
+        <rdfs:range rdf:resource="https://w3id.org/EUTaxO#Taxon"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The phylum of a specific taxon</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phylum</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/EUTaxO#synonym -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/EUTaxO#synonym">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/EUTaxO#Taxon"/>
+        <rdfs:range rdf:resource="https://w3id.org/EUTaxO#Taxon"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relates if two taxon are synonyms</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synonym</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/acceptedNameUsage -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/acceptedNameUsage"/>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/genus -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/genus"/>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/namePublishedInYear -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/namePublishedInYear"/>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/scientificName -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/scientificName"/>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/scientificNameAuthorship -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/scientificNameAuthorship"/>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/specificEpithet -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/specificEpithet"/>
+    
+
+
+    <!-- http://rs.tdwg.org/dwc/terms/taxonRank -->
+
+    <owl:DatatypeProperty rdf:about="http://rs.tdwg.org/dwc/terms/taxonRank"/>
+    
+
+
+    <!-- https://w3id.org/EUTaxO#brackets -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/EUTaxO#brackets">
+        <rdfs:domain rdf:resource="https://w3id.org/EUTaxO#Taxon"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Whether to use brackets for the correct nomenclature of a taxon</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brackets</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/EUTaxO#id -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/EUTaxO#id">
+        <rdfs:domain rdf:resource="https://w3id.org/EUTaxO#Taxon"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">id from the EUdaphobase database</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/EUTaxO#synonyms_exist -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/EUTaxO#synonyms_exist">
+        <rdfs:domain rdf:resource="https://w3id.org/EUTaxO#Taxon"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Whether or not synonyms exists for a given taxon</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synonyms exist</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/EUTaxO#Taxon -->
+
+    <owl:Class rdf:about="https://w3id.org/EUTaxO#Taxon">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Base taxon class</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taxon</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/biodiversity/taxon/Taxon</rdfs:seeAlso>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

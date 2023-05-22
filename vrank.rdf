@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vocabulary Broswer</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/sdo.css">
+</head>
+
+<body>
+    <div id="header">
+    </div>
+    <div id="mainContent">
+        <h4 id="vocabName">
+            Vocabulary:
+        </h4>
+        <div id="loading"> <img src="/images/loading.gif"> </div>
+        <b>Vocabulary defines: </b>
+        <ul>
+            <li id="noOfClasses"></li>
+            <li id="noOfProps"></li>
+            <li id="noOfEnu"></li>
+        </ul>
+        <!--    <table class="definition-table">
+    </table> -->
+        <table id="listofClasses">
+            <thead>
+                <th>
+                    Classes:
+                </th>
+            </thead>
+        </table>
+        <table id="listofProps">
+            <thead>
+                <th>
+                    Properties:
+                </th>
+            </thead>
+        </table>
+    </div>
+    <script src="/libs/jquery/jquery.min.js"></script>
+    <script src="/libs/schema-org-adapter/schema-org-adapter.min.js"></script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/vocabWelcome.js"></script>
+</body>
+
+</html>

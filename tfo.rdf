@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:ci="https://vocab.methodandstructure.com/content-inventory#" xmlns:dct="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sh="http://www.w3.org/ns/shacl#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:tfo="https://vocab.methodandstructure.com/transformation#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <rdf:Description rdf:nodeID="genid1">
+    <rdf:first rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
+    <rdf:first rdf:resource="https://vocab.methodandstructure.com/transformation#content-type"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
+    <rdf:rest rdf:nodeID="genid1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid3">
+    <owl:unionOf rdf:nodeID="genid2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#accepts">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#accepts">
+    <rdfs:label xml:lang="en">accepts</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#accepts">
+    <rdfs:comment xml:lang="en">Specifies the list of content-types, in order of preference, that the function can process.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#accepts">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/transformation#Transform"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#accepts">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/transformation#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#accepts">
+    <rdfs:range rdf:nodeID="genid3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#by-uri">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#by-uri">
+    <rdfs:label xml:lang="en">by-uri</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#by-uri">
+    <rdfs:comment xml:lang="en">Specifies a regular expression for matching against URIs.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#by-uri">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/transformation#Transform"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#by-uri">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/transformation#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#by-uri">
+    <rdfs:range rdf:resource="https://vocab.methodandstructure.com/transformation#regexp"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#by-xpath">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#by-xpath">
+    <rdfs:label xml:lang="en">by-xpath</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#by-xpath">
+    <rdfs:comment xml:lang="en">Specifies an XPath expression for matching against markup (HTML/XML) content.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#by-xpath">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/transformation#MarkupTransform"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#by-xpath">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/transformation#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#by-xpath">
+    <rdfs:range rdf:resource="https://vocab.methodandstructure.com/transformation#xpath"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#completes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#completes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#completes">
+    <rdfs:label xml:lang="en">completes</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#completes">
+    <rdfs:comment xml:lang="en">Identifies a tfo:Partial function that this tfo:Application completes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#completes">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/transformation#Application"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#completes">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/transformation#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#completes">
+    <rdfs:range rdf:resource="https://vocab.methodandstructure.com/transformation#Partial"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#default">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#default">
+    <rdfs:label xml:lang="en">default</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#default">
+    <rdfs:comment xml:lang="en">Specifies one or more default values for a parameter.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#default">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/transformation#Parameter"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#default">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/transformation#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#implementation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#implementation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#implementation">
+    <rdfs:label xml:lang="en">implementation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#implementation">
+    <rdfs:comment xml:lang="en">URI to the implementation of the function.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#implementation">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/transformation#Transform"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#implementation">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/transformation#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#implementation">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#implementation">
+    <skos:usageNote xml:lang="en">The URI is meant to be dereferenced by an internal implementation, e.g. file:, jar:, or an idiosyncratic scheme like urn:x-python:.</skos:usageNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#input">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#input">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#input">
+    <rdfs:label xml:lang="en">input</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#input">
+    <rdfs:comment xml:lang="en">Specifies the resource that was the input of the transformation function.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#input">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/transformation#Application"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#input">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/transformation#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#input">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#iregexp">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#iregexp">
+    <rdfs:label xml:lang="en">iregexp</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#iregexp">
+    <rdfs:comment xml:lang="en">A case-insensitive regular expression.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#iregexp">
+    <rdfs:subClassOf rdf:resource="https://vocab.methodandstructure.com/transformation#regexp"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#iregexp">
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#iregexp">
+    <skos:note xml:lang="en">
+          Note that we do not intend to provide the full complement of flags for regular expressions like m, s, or x.
+        </skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#not-by-uri">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#not-by-uri">
+    <rdfs:label xml:lang="en">not-by-uri</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#not-by-uri">
+    <rdfs:comment xml:lang="en">Specifies a regular expression for anti-matching against URIs.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#not-by-uri">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/transformation#Transform"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#not-by-uri">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/transformation#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#not-by-uri">
+    <rdfs:range rdf:resource="https://vocab.methodandstructure.com/transformation#regexp"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#not-by-xpath">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#not-by-xpath">
+    <rdfs:label xml:lang="en">not-by-xpath</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#not-by-xpath">
+    <rdfs:comment xml:lang="en">Specifies an XPath expression for anti-matching against markup (HTML/XML) content.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#not-by-xpath">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/transformation#MarkupTransform"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#not-by-xpath">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/transformation#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#not-by-xpath">
+    <rdfs:range rdf:resource="https://vocab.methodandstructure.com/transformation#xpath"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#output">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#output">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#output">
+    <rdfs:label xml:lang="en">output</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#output">
+    <rdfs:comment xml:lang="en">Specifies the resource that was the output of the transformation function.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#output">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/transformation#Application"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#output">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/transformation#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#output">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#parameter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#parameter">
+    <rdfs:label xml:lang="en">parameter</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#parameter">
+    <rdfs:comment xml:lang="en">Binds a parameter object to its function.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#parameter">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/transformation#Transform"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#parameter">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/transformation#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#parameter">
+    <rdfs:range rdf:resource="https://vocab.methodandstructure.com/transformation#Parameter"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#parameter">
+    <skos:usageNote xml:lang="en">Parameters can either be supplied to the function as key-value pairs or sequentially.</skos:usageNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#parameter-list">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#parameter-list">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#parameter-list">
+    <rdfs:label xml:lang="en">parameter-list</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#parameter-list">
+    <rdfs:comment xml:lang="en">Specifies the sequence of parameters when the invocation method of the function is sequential.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#parameter-list">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/transformation#Transform"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#parameter-list">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/transformation#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#parameter-list">
+    <rdfs:range rdf:resource="https://vocab.methodandstructure.com/transformation#ParameterList"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#prefix">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#prefix">
+    <rdfs:label xml:lang="en">prefix</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#prefix">
+    <rdfs:comment xml:lang="en">Specifies a SHACL prefix declaration for complementing any associated XPath expression.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#prefix">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/transformation#MarkupTransform"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#prefix">
+    <rdfs:range rdf:resource="http://www.w3.org/ns/shacl#PrefixDeclaration"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#prefix">
+    <skos:note xml:lang="en">
+            Note that the existing sh:declare property has a domain of owl:Ontology so we can't use it for this.
+          </skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid4">
+    <rdf:first rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid4">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid5">
+    <rdf:first rdf:resource="https://vocab.methodandstructure.com/transformation#content-type"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid5">
+    <rdf:rest rdf:nodeID="genid4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid6">
+    <owl:unionOf rdf:nodeID="genid5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#returns">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#returns">
+    <rdfs:label xml:lang="en">returns</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#returns">
+    <rdfs:comment xml:lang="en">Specifies the list of content-types, in order of preference, that the function is capable of returning.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#returns">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/transformation#Transform"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#returns">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/transformation#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#returns">
+    <rdfs:range rdf:nodeID="genid6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#transform">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#transform">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#transform">
+    <rdfs:label xml:lang="en">transform</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#transform">
+    <rdfs:comment xml:lang="en">Specifies the transform associated with this particular application</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#transform">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/transformation#Partial"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#transform">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/transformation#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#transform">
+    <rdfs:range rdf:resource="https://vocab.methodandstructure.com/transformation#Transform"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doriantaylor.com/person/dorian-taylor#me">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doriantaylor.com/person/dorian-taylor#me">
+    <foaf:name xml:lang="en">Dorian Taylor</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://privatealpha.com/ontology/permutation/1">
+    <ci:canonical rdf:resource="https://vocab.methodandstructure.com/transformation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://privatealpha.com/ontology/permutation/1#">
+    <ci:canonical rdf:resource="https://vocab.methodandstructure.com/transformation#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://privatealpha.com/ontology/transformation/1">
+    <ci:canonical rdf:resource="https://vocab.methodandstructure.com/transformation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://privatealpha.com/ontology/transformation/1#">
+    <ci:canonical rdf:resource="https://vocab.methodandstructure.com/transformation#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation">
+    <rdf:type rdf:resource="http://purl.org/ontology/bibo/Specification"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation">
+    <dct:references rdf:resource="https://www.w3.org/TR/prov-o/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation">
+    <dct:references rdf:resource="https://www.w3.org/TR/rdf-schema/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation">
+    <dct:references rdf:resource="https://www.w3.org/TR/xmlschema-2/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation">
+    <dct:references rdf:resource="https://www.iana.org/assignments/media-types/media-types.xhtml"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation">
+    <dct:subject rdf:resource="https://vocab.methodandstructure.com/transformation#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation">
+    <owl:sameAs rdf:resource="https://privatealpha.com/ontology/permutation/1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation">
+    <owl:sameAs rdf:resource="https://privatealpha.com/ontology/transformation/1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation">
+    <foaf:primaryTopic rdf:resource="https://vocab.methodandstructure.com/transformation#"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid7">
+    <owl:allValuesFrom rdf:resource="https://vocab.methodandstructure.com/transformation#Parameter"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid7">
+    <owl:onProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#first"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid8">
+    <owl:allValuesFrom rdf:resource="https://vocab.methodandstructure.com/transformation#ParameterList"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid8">
+    <owl:onProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#ParameterList">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#ParameterList">
+    <rdfs:label xml:lang="en">ParameterList</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#ParameterList">
+    <rdfs:comment xml:lang="en">This class represents a list with the restriction that its members be tfo:Parameter nodes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#ParameterList">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#ParameterList">
+    <rdfs:subClassOf rdf:nodeID="genid7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#ParameterList">
+    <rdfs:subClassOf rdf:nodeID="genid8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid9">
+    <xsd:pattern>^([!#$%&amp;'\*\+\-.^_`|~0-9-A-Za-z]+)(?:/[!#$%&amp;'\*\+\-.^_`|~0-9-A-Za-z]+)?)$</xsd:pattern>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid10">
+    <rdf:first rdf:nodeID="genid9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid10">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#content-type">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#content-type">
+    <rdfs:label xml:lang="en">content-type</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#content-type">
+    <rdfs:comment xml:lang="en">A literal that represents a content-type such as that which is found in the HTTP Accept: or Content-Type: header.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#content-type">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/transformation#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#content-type">
+    <rdfs:seeAlso rdf:resource="https://tools.ietf.org/html/rfc7230#section-3.2.6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#content-type">
+    <rdfs:seeAlso rdf:resource="https://tools.ietf.org/html/rfc7231#section-5.3.2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#content-type">
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#token"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#content-type">
+    <owl:withRestrictions rdf:nodeID="genid10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#xpath">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#xpath">
+    <rdfs:label xml:lang="en">xpath</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#xpath">
+    <rdfs:comment xml:lang="en">An XPath expression.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#xpath">
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#Application">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#Application">
+    <rdfs:label xml:lang="en">Application</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#Application">
+    <rdfs:comment xml:lang="en">This class represents an application of a transformation function, connecting a specific input and scalar parameters with its output.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#Application">
+    <rdfs:subClassOf rdf:resource="https://vocab.methodandstructure.com/transformation#Partial"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#MarkupTransform">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#MarkupTransform">
+    <rdfs:label xml:lang="en">MarkupTransform</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#MarkupTransform">
+    <rdfs:comment xml:lang="en">This class represents the set of transformation functions that operate exclusively over (HTML/XML) markup.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#MarkupTransform">
+    <rdfs:subClassOf rdf:resource="https://vocab.methodandstructure.com/transformation#Transform"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid11">
+    <owl:allValuesFrom rdf:resource="https://vocab.methodandstructure.com/transformation#Partial"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid11">
+    <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#domain"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#Parameter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#Parameter">
+    <rdfs:label xml:lang="en">Parameter</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#Parameter">
+    <rdfs:comment xml:lang="en">This class provides a specification for a parameter in a given function.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#Parameter">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#Parameter">
+    <rdfs:subClassOf rdf:nodeID="genid11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#regexp">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#regexp">
+    <rdfs:label xml:lang="en">regexp</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#regexp">
+    <rdfs:comment xml:lang="en">A regular expression.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#regexp">
+    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#regexp">
+    <skos:usageNote xml:lang="en">
+          We do not specify a flavour, but in practice we should assume PCRE or ECMA-262.
+        </skos:usageNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#Partial">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#Partial">
+    <rdfs:label xml:lang="en">Partial</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#Partial">
+    <rdfs:comment xml:lang="en">This class represents a partial application of a transformation function, affording the encapsulation and re-use of existing parameters.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#Partial">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#Transform">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#Transform">
+    <rdfs:label xml:lang="en">Transform</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#Transform">
+    <rdfs:comment xml:lang="en">This class provides a specification for a transformation function.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#Transform">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#">
+    <dct:title xml:lang="en">Transformation Functions Ontology</dct:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#">
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-06-05T03:06:58Z</dct:created>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#">
+    <dct:creator rdf:resource="https://doriantaylor.com/person/dorian-taylor#me"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#">
+    <dct:description xml:lang="en">This document describes functions which transform HTTP representations, i.e., the actual literal payloads of HTTP messages.</dct:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-20T06:05:13Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-11T02:51:52Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-06-10T18:27:35Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-03T04:49:40Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#">
+    <bibo:uri rdf:resource="https://vocab.methodandstructure.com/transformation#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#">
+    <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#token">tfo</vann:preferredNamespacePrefix>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#">
+    <rdfs:comment xml:lang="en">This document describes functions which transform HTTP representations, i.e., the actual literal payloads of HTTP messages.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/transformation#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#">
+    <owl:sameAs rdf:resource="https://privatealpha.com/ontology/permutation/1#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/transformation#">
+    <owl:sameAs rdf:resource="https://privatealpha.com/ontology/transformation/1#"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid12">
+    <xhv:role rdf:resource="http://www.w3.org/1999/xhtml/vocab#note"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid13">
+    <xhv:role rdf:resource="http://www.w3.org/1999/xhtml/vocab#note"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid14">
+    <xhv:role rdf:resource="http://www.w3.org/1999/xhtml/vocab#note"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid15">
+    <xhv:role rdf:resource="http://www.w3.org/1999/xhtml/vocab#note"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid16">
+    <xhv:role rdf:resource="http://www.w3.org/1999/xhtml/vocab#note"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:schema="http://schema.org/"
+	xmlns:void="http://rdfs.org/ns/void#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:dcat="http://www.w3.org/ns/dcat#"
+	xmlns:ns8="http://www.w3.org/ns/prov#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:bibo="http://purl.org/ontology/bibo/"
+	xmlns:ns11="http://qudt.org/schema/qudt/"
+	xmlns:ns12="http://purl.org/vocab/vann/"
+	xmlns:ns13="http://purl.org/pav/" >
+  <rdf:Description rdf:about="http://taxref.mnhn.fr/lod/taxref-ld">
+    <rdf:type rdf:resource="http://schema.org/Dataset" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology" />
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme" />
+    <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset" />
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset" />
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity" />
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2015</dct:created>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-07-29</dct:modified>
+    <rdfs:label>TAXREF-LD</rdfs:label>
+    <owl:versionInfo>15.2</owl:versionInfo>
+    <schema:subjectOf rdf:resource="http://taxref.mnhn.fr/lod/hal01617708" />
+    <schema:author rdf:resource="http://taxref.mnhn.fr/lod/sandrinetercerie" />
+    <schema:author rdf:resource="http://taxref.mnhn.fr/lod/oliviergargominy" />
+    <schema:author rdf:resource="https://orcid.org/0000-0001-9064-0463" />
+    <schema:author rdf:resource="https://orcid.org/0000-0001-5959-5561" />
+    <schema:datePublished rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-07-29</schema:datePublished>
+    <dct:title>TAXREF-LD</dct:title>
+    <void:vocabulary rdf:resource="http://schema.org/" />
+    <void:vocabulary rdf:resource="http://www.w3.org/2004/02/skos/core#" />
+    <void:vocabulary rdf:resource="http://xmlns.com/foaf/0.1/" />
+    <void:vocabulary rdf:resource="http://purl.org/ontology/bibo/" />
+    <void:vocabulary rdf:resource="http://aims.fao.org/aos/agrovoc/" />
+    <void:vocabulary rdf:resource="http://www.w3.org/2008/05/skos-xl#" />
+    <void:vocabulary rdf:resource="http://purl.obolibrary.org/obo/" />
+    <void:vocabulary rdf:resource="http://purl.org/dc/terms/" />
+    <void:vocabulary rdf:resource="http://www.wikidata.org/" />
+    <void:vocabulary rdf:resource="http://sws.geonames.org/" />
+    <void:vocabulary rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl" />
+    <void:vocabulary rdf:resource="http://rdf.geospecies.org/ont/geospecies.owl" />
+    <void:vocabulary rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonRank" />
+    <void:vocabulary rdf:resource="http://lod.taxonconcept.org/ontology/txn.owl" />
+    <void:vocabulary rdf:resource="http://purl.obolibrary.org/obo/envo.owl" />
+    <void:vocabulary rdf:resource="http://rs.tdwg.org/dwc/terms/" />
+    <void:vocabulary rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonName" />
+    <void:vocabulary rdf:resource="http://rs.tdwg.org/dwc/iri/" />
+    <dct:description xml:lang="en">Representation of the TAXREF taxonomic register as linked data. This resource is at the same time an ontology of classes depicting the taxa and a thesaurus (SKOS concept scheme) of the scientific names attached to the taxa.</dct:description>
+    <dct:description xml:lang="fr">Représentation du référentiel taxonomique TAXREF comme un jeu de données liées. Cette ressource est à la fois une ontologies des classes représentant les taxons, et un thésaurus (SKOS concept scheme) des noms scientifiques désignant ces taxons.</dct:description>
+    <dct:identifier>https://doi.org/10.5281/zenodo.6940891</dct:identifier>
+    <schema:name>TAXREF-LD</schema:name>
+    <dct:creator rdf:resource="https://orcid.org/0000-0001-9064-0463" />
+    <dct:creator rdf:resource="https://orcid.org/0000-0001-5959-5561" />
+    <dct:creator rdf:resource="http://taxref.mnhn.fr/lod/sandrinetercerie" />
+    <dct:creator rdf:resource="http://taxref.mnhn.fr/lod/oliviergargominy" />
+    <dct:language rdf:resource="http://data.bnf.fr/ark:/12148/cb11935375d" />
+    <dct:language rdf:resource="http://id.loc.gov/vocabulary/iso639-1/fr" />
+    <dct:language rdf:resource="http://data.bnf.fr/ark:/12148/cb119308987" />
+    <dct:language rdf:resource="http://id.loc.gov/vocabulary/iso639-1/en" />
+    <foaf:page rdf:resource="https://github.com/frmichel/taxref-ld/" />
+    <dct:publisher rdf:resource="https://ror.org/0496p8026" />
+    <dct:publisher rdf:resource="https://ror.org/02kvxyf05" />
+    <dct:publisher rdf:resource="https://ror.org/03wkt5x30" />
+    <dct:publisher rdf:resource="https://ror.org/02feahw73" />
+    <dct:publisher rdf:resource="http://taxref.mnhn.fr/lod/INPN" />
+    <void:rootResource rdf:resource="http://taxref.mnhn.fr/lod/name/349525" />
+    <void:sparqlEndpoint rdf:resource="http://taxref.mnhn.fr/sparql" />
+    <void:subset rdf:resource="http://taxref.mnhn.fr/lod/Taxref2Worms" />
+    <void:subset rdf:resource="http://taxref.mnhn.fr/lod/Taxref2Agrovoc" />
+    <void:subset rdf:resource="http://taxref.mnhn.fr/lod/Taxref2NcbiTaxon" />
+    <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35486931</void:triples>
+    <void:uriSpace>http://taxref.mnhn.fr/lod/</void:uriSpace>
+    <dcat:keyword>vocab-mappings</dcat:keyword>
+    <dcat:keyword>lod</dcat:keyword>
+    <dcat:keyword>fauna</dcat:keyword>
+    <dcat:keyword>format-geonames</dcat:keyword>
+    <dcat:keyword>format-ro</dcat:keyword>
+    <dcat:keyword>biodiversity</dcat:keyword>
+    <dcat:keyword>taxonomy</dcat:keyword>
+    <dcat:keyword>format-txn</dcat:keyword>
+    <dcat:keyword>deref-vocab</dcat:keyword>
+    <dcat:keyword>format-dc</dcat:keyword>
+    <dcat:keyword>format-rdf</dcat:keyword>
+    <dcat:keyword>published-by-producer</dcat:keyword>
+    <dcat:keyword>lifesciences</dcat:keyword>
+    <dcat:keyword>format-bibo</dcat:keyword>
+    <dcat:keyword>format-foaf</dcat:keyword>
+    <dcat:keyword>species</dcat:keyword>
+    <dcat:keyword>format-skos</dcat:keyword>
+    <dcat:keyword>flora</dcat:keyword>
+    <dcat:keyword>provenance-metadata</dcat:keyword>
+    <dcat:keyword>format-ncbitaxon</dcat:keyword>
+    <dcat:keyword>format-geospecies</dcat:keyword>
+    <dcat:keyword>format-schema</dcat:keyword>
+    <dcat:keyword>license-metadata</dcat:keyword>
+    <dcat:keyword>format-dwc</dcat:keyword>
+    <dcat:keyword>schemata</dcat:keyword>
+    <dcat:keyword>format-rdfs</dcat:keyword>
+    <dcat:distribution rdf:nodeID="b68030927" />
+    <ns8:wasDerivedFrom rdf:resource="http://taxref.mnhn.fr/lod/taxref" />
+    <ns8:wasGeneratedBy rdf:resource="http://taxref.mnhn.fr/lod/RdfGeneration" />
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-07-29</dct:issued>
+    <dct:license rdf:resource="https://creativecommons.org/licenses/by/3.0/fr/" />
+    <dct:spatial rdf:resource="http://sws.geonames.org/1024031/" />
+    <dct:spatial rdf:resource="http://sws.geonames.org/3424932/" />
+    <dct:spatial rdf:resource="http://sws.geonames.org/3570311/" />
+    <dct:spatial rdf:resource="http://sws.geonames.org/3578421/" />
+    <dct:spatial rdf:resource="http://sws.geonames.org/3578476/" />
+    <dct:spatial rdf:resource="http://sws.geonames.org/1546748/" />
+    <dct:spatial rdf:resource="http://sws.geonames.org/2139685/" />
+    <dct:spatial rdf:resource="http://sws.geonames.org/3017382/" />
+    <dct:spatial rdf:resource="http://sws.geonames.org/3381670/" />
+    <dct:spatial rdf:resource="http://sws.geonames.org/6690916/" />
+    <dct:spatial rdf:resource="http://sws.geonames.org/935317/" />
+    <dct:spatial rdf:resource="http://sws.geonames.org/3579143/" />
+    <dct:spatial rdf:resource="http://sws.geonames.org/4020092/" />
+    <dct:spatial rdf:resource="http://sws.geonames.org/4030656/" />
+    <dct:spatial rdf:resource="http://sws.geonames.org/4034749/" />
+    <skos:hasTopConcept rdf:resource="http://taxref.mnhn.fr/lod/name/349525" />
+    <dct:bibliographicCitation>Franck Michel, Olivier Gargominy, Sandrine Tercerie, Catherine Faron Zucker. A Model to Represent Nomenclatural and Taxonomic Information as Linked Data. Application to the French Taxonomic Register, TAXREF. In Proceedings of the 2nd International Workshop on Semantics for Biodiversity (S4Biodiv) co-located with ISWC 2017, Oct 2017, Vienna, Austria. CEUR Vol. 1933, pp.1-12, 2017</dct:bibliographicCitation>
+    <bibo:doi>10.5281/zenodo.6940891</bibo:doi>
+    <owl:versionIRI rdf:resource="http://taxref.mnhn.fr/lod/taxref-ld/15.2" />
+    <schema:keywords>lifesciences</schema:keywords>
+    <schema:keywords>biodiversity</schema:keywords>
+    <schema:keywords>species</schema:keywords>
+    <schema:keywords>fungus</schema:keywords>
+    <schema:keywords>flora</schema:keywords>
+    <schema:keywords>taxonomy</schema:keywords>
+    <schema:keywords>fauna</schema:keywords>
+    <schema:publisher rdf:resource="https://ror.org/02feahw73" />
+    <schema:publisher rdf:resource="https://ror.org/02kvxyf05" />
+    <schema:publisher rdf:resource="https://ror.org/03wkt5x30" />
+    <schema:publisher rdf:resource="http://taxref.mnhn.fr/lod/INPN" />
+    <schema:publisher rdf:resource="https://ror.org/0496p8026" />
+    <schema:license rdf:resource="https://creativecommons.org/licenses/by/3.0/fr/" />
+    <schema:dateCreated rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2015</schema:dateCreated>
+    <schema:dateModified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-07-29</schema:dateModified>
+    <ns8:wasGeneratedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-07-29</ns8:wasGeneratedAtTime>
+    <dct:contributor>Julien Kaplan</dct:contributor>
+    <dct:contributor rdf:resource="https://orcid.org/0000-0003-4868-2584" />
+    <dct:rightsHolder rdf:resource="https://ror.org/0496p8026" />
+    <dct:rightsHolder rdf:resource="https://ror.org/02kvxyf05" />
+    <dct:rightsHolder rdf:resource="https://ror.org/03wkt5x30" />
+    <dct:rightsHolder rdf:resource="https://ror.org/02feahw73" />
+    <dct:rightsHolder rdf:resource="http://taxref.mnhn.fr/lod/INPN" />
+    <dct:accessRights rdf:resource="http://purl.org/coar/access_right/c_abf2" />
+    <dct:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC" />
+    <ns11:acronym>taxref-ld</ns11:acronym>
+    <schema:language rdf:resource="http://data.bnf.fr/ark:/12148/cb11935375d" />
+    <schema:language rdf:resource="http://id.loc.gov/vocabulary/iso639-1/fr" />
+    <schema:language rdf:resource="http://id.loc.gov/vocabulary/iso639-1/en" />
+    <schema:language rdf:resource="http://data.bnf.fr/ark:/12148/cb119308987" />
+    <dcat:version>15.2</dcat:version>
+    <ns12:preferredNamespacePrefix>taxref</ns12:preferredNamespacePrefix>
+    <ns12:preferredNamespaceUri>http://taxref.mnhn.fr/lod/</ns12:preferredNamespaceUri>
+    <dct:subject>taxonomy</dct:subject>
+    <dct:subject>biodiversity</dct:subject>
+    <dct:subject>species</dct:subject>
+    <dct:subject>lifesciences</dct:subject>
+    <dct:subject>flora</dct:subject>
+    <dct:subject>fauna</dct:subject>
+    <dct:subject>fungus</dct:subject>
+    <void:exampleResource rdf:resource="http://taxref.mnhn.fr/lod/taxon/60878" />
+    <void:dataDump rdf:resource="https://zenodo.org/record/6940891/files/taxrefld15.2.zip" />
+    <ns13:createdOn rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2015</ns13:createdOn>
+    <ns8:hadPrimarySource rdf:resource="http://taxref.mnhn.fr/lod/taxref" />
+    <foaf:fundedBy rdf:resource="https://ror.org/02kvxyf05" />
+    <foaf:fundedBy rdf:resource="https://ror.org/03wkt5x30" />
+    <foaf:fundedBy rdf:resource="https://ror.org/02feahw73" />
+    <foaf:fundedBy rdf:resource="http://taxref.mnhn.fr/lod/INPN" />
+    <foaf:fundedBy rdf:resource="https://ror.org/0496p8026" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="b68030927">
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution" />
+    <dct:description>Distribution of TAXREF-LD as an archive of RDF Turtle files</dct:description>
+    <dcat:accessURL rdf:resource="https://doi.org/10.5281/zenodo.6940891" />
+    <dcat:mediaType rdf:resource="http://www.iana.org/assignments/media-types/text/turtle" />
+    <dcat:downloadURL rdf:resource="https://zenodo.org/record/6940891/files/taxrefld15.2.zip" />
+    <dcat:compressFormat rdf:resource="http://www.iana.org/assignments/media-types/application/zip" />
+  </rdf:Description>
+</rdf:RDF>

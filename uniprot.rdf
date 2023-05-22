@@ -1,0 +1,1569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Member_Of_Redudant_Proteome">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Redox_Potential_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Polymorphism_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Non-terminal_Residue_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/measuredError">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/author">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/complete">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Submission_Citation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/">
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">UniProt RDF schema ontology</label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/fragment">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/date">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/precursor">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/partOf">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Transcribed_RNA">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Nucleomorph">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/topology">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Disulfide_Bond_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/cdAntigenName">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/LSIMS">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Pathway_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Alternative_Promoter_Usage_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Induction_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/strain">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Site_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Signal_Peptide_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/uriTemplate">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/oldMnemonic">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/synonym">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/ligandPart">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Infrared_Spectroscopy">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/width">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/urlTemplate">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Part">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Hydrogenosome">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Motif_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/withdrawnFromINSDC">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/domain">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Viral_cRNA">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/relatedLocation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Transmembrane_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/referenceProteome">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Electronic_Citation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/measuredValue">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/representativeProteome">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Absorption_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/interaction">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/representativeFor">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/name">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/maximum">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/replaces">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/seedFor">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/modification">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/locator">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/participant">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/scientificName">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/substitution">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/someMembersClassifiedWith">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/potentialSequence">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/sequenceDiscrepancy">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/shortCoden">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Apicoplast">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/partOfLineage">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/xeno">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/part">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/NMR_Spectroscopy">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/pattern">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Mutagenesis_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Non-adjacent_Residues_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Concept">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/PH_Dependence_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/publishedIn">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Modified_Sequence">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/API">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Non_Self_Interaction">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Sequence_Caution_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Sequence_Conflict_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/redundantTo">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/">
+	<versionInfo xmlns="http://www.w3.org/2002/07/owl#">2022_04</versionInfo>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Observation_Citation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/">
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">Properties and classes used for protein annotation.</comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/rank">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Participant">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Toxic_Dose_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/experiments">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/mappedCitation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Tissue_Specificity_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/frameshift">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/conflictingSequence">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/mappedAnnotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/disease">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/RNA_Editing_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Electron_Microscopy">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/memberOf">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/basedOn">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/ESI">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/member">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/External_Sequence">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/nucleotideSequenceMappingIssue">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Erroneous_Initiation_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/negative">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Alternative_Sequence_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Interaction">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/panproteome">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Alternative_Initiation_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Frameshift_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/otherName">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Disease_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Mass_Spectrometry_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Alternative_Splicing_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/certain">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/MALDI">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/height">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Erroneous_Termination_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/identity">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Erroneous_Gene_Model_Prediction_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/host">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/length">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/implicit">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Erroneous_Translation_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/linkIsExplicit">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/crc64Checksum">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Nucleotide_Binding_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/commonTaxon">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Neutron_Diffraction">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/measuredActivity">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/curated">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Temperature_Dependence_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/erratumFor">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/measuredAffinity">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/translatedFrom">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/internationalNonproprietaryName">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/exclusionReason">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/transcribedFrom">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Cross-link_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/">
+	<license xmlns="http://purl.org/dc/terms/" rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/orientation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/translatedTo">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Compositional_Bias_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Transposon">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/biotechName">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Modified_Residue_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/FAB">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Domain_Extent_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/SELDI">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/checksum">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Subunit_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/PD">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/volume">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Topological_Domain_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/category">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/PTM_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/commonName">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Initiator_Methionine_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/cofactorLabel">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/mnemonic">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Unpublished_Citation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/scope">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Tribe">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Propeptide_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/recommendedName">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Pharmaceutical_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/abstract">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Kinetics_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/shortName">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Zinc_Finger_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Peptide_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Plasmid">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Varietas">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/sequence">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Predicted_Existence">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/MRNA">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/alias">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/source">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Non-photosynthetic_plastid">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/encodedIn">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/activity">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/signatureSequenceMatch">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/submittedName">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Sequence_Uncertainty_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/authorsIncomplete">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/existence">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Repeat_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/atypical">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Superclass">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/ligand">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Subtribe">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/component">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/fullName">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/allergenName">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Superkingdom">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/catalyzedPhysiologicalReaction">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/locusName">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Allergen_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Superfamily">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/locatedOn">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Superphylum">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/mass">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Superorder">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Non-standard_Residue_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/manual">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Topology">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/citation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Taxon">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/catalyzedReaction">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/cofactor">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Coiled_Coil_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Subclass">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Unknown_Sequence">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Caution_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/classifiedWith">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Subgenus">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/ecName">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Subfamily">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/context">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Suborder">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/enzymeClass">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Subkingdom">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/enzyme">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Intramembrane_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Subspecies">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Simple_Sequence">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Lipidation_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Subphylum">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Similarity_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/sequenceFor">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Disruption_Phenotype_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Other_RNA">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Species">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Transcript_Resource">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/reviewed">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Sequence_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Strain">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/structuredNameType">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Species_Subgroup">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/structuredName">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Species_Group">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/alternativeName">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Structure_Determination_Method">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/catalyticActivity">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/version">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Status">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/attribution">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/created">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Subcellular_Location">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Unassigned_RNA">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Cofactor_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/chain">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Structure_Mapping_Statement">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Fiber_Diffraction">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Citation_Statement">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/encodedBy">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/RNA">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Function_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/database">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Published_Citation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Evidence_at_Protein_Level_Existence">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/modified">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Reference_Proteome">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Nucleotide_Resource">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Experimental_Information_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/md5Checksum">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Rank">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Genomic_DNA">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Experimental">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/organism">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Reviewed">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Resource">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/obsolete">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Representative_Proteome">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Protein">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Family">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Natural_Variant_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Secondary_Structure_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Genus">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Reviewed_Protein">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Forma">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Phylum">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Active_Site_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Infraorder">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Pathway">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Infraclass">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Gene">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/cellularComponent">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Prediction">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Catalytic_Activity">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Database">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/X-Ray_Crystallography">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Potential">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Binding_Site_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/DNA">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/locatedIn">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Structured_Name">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Protein_Existence">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Chain_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Domain_Assignment_Statement">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/chainSequenceMapping">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Other_DNA">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Sequence">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/">
+	<imports xmlns="http://www.w3.org/2002/07/owl#" rdf:resource="http://xmlns.com/foaf/0.1/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Probable">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Catalytic_Activity_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Disease">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/orfName">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Proteome_Component">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Enzyme">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/method">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Proteome">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Endpoint_Statement">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Obsolete_Protein">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Excluded_Proteome">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/resolution">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Obsolete">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Enzyme_Regulation_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Domain_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Order">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Biophysicochemical_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Beta_Strand_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Obsolete_Taxon">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Attribution">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Inferred_from_Homology_Existence">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Orientation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Cellular_Component">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Helix_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Organelle">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/By_Similarity">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Structure_Resource">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Parvorder">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Class">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Region_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Paratype">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Citation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Unassigned_DNA">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Turn_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Molecule">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/">
+	<description xmlns="http://purl.org/dc/terms/">The UniProt RDF schema ontology contains predicates used to describe UniProt entries and associated data.</description>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Cohort">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Transit_Peptide_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Subcellular_Location_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Modification_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Uncertain_Existence">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Patent_Citation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Cluster">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/isolatedFrom">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Natural_Variation_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/institution">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Molecule_Processing_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Organellar_chromatophore">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Not_Obsolete_Protein">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/replacedBy">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/place">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Not_Obsolete">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Book_Citation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Nucleotide_Mapping_Statement">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Evidence_at_Transcript_Level_Existence">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Not_Obsolete_Taxon">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/">
+	<imports xmlns="http://www.w3.org/2002/07/owl#" rdf:resource="http://biohackathon.org/resource/faldo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/editor">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Chloroplast">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/submittedTo">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Journal">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/erratum">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Cyanelle">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/">
+	<imports xmlns="http://www.w3.org/2002/07/owl#" rdf:resource="http://www.w3.org/2000/01/rdf-schema"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Alternative_Products_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/group">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Biotechnology_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/">
+	<imports xmlns="http://www.w3.org/2002/07/owl#" rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Activity_Regulation_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Isotype">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/">
+	<imports xmlns="http://www.w3.org/2002/07/owl#" rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/publisher">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Glycosylation_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Kingdom">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/pages">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Developmental_Stage_Annotation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/title">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Journal_Citation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Genomic_RNA">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Self_Interaction">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/">
+	<title xmlns="http://purl.org/dc/terms/">UniProt RDF schema ontology</title>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Mass_Measurement_Method">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Mitochondrion">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Plastid">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Ribosomal_Frameshifting">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Known_Sequence">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Tissue">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Method">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.uniprot.org/core/Thesis_Citation">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.uniprot.org/core/"/>
+</rdf:Description>
+
+</rdf:RDF>
