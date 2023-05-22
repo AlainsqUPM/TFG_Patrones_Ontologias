@@ -1,0 +1,1435 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:s4syst="https://saref.etsi.org/saref4syst/"
+    xmlns:schema="http://schema.org/"
+    xmlns:s4city="https://saref.etsi.org/saref4city/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:saref="https://saref.etsi.org/core/"
+    xmlns:sf="http://www.opengis.net/ont/sf#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:s4watr="https://saref.etsi.org/saref4watr/"
+    xmlns:geosp="http://www.opengis.net/ont/geosparql#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://saref.etsi.org/saref4watr/">
+    <vann:preferredNamespacePrefix>s4watr</vann:preferredNamespacePrefix>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2020-06-03</dcterms:modified>
+    <dcterms:source rdf:resource="https://saref.etsi.org/sources/saref4watr/"/>
+    <vann:preferredNamespaceUri>https://saref.etsi.org/saref4watr/</vann:preferredNamespaceUri>
+    <dcterms:publisher rdf:resource="https://www.etsi.org/"/>
+    <dcterms:description xml:lang="en">This ontology extends the SAREF ontology for the water domain. This work has been developed in the context of the STF 566, which was established with the goal to create three SAREF extensions, one of them for the water domain.</dcterms:description>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2020-04-01</dcterms:issued>
+    <dcterms:title xml:lang="en">SAREF extension for water</dcterms:title>
+    <dcterms:license rdf:resource="https://forge.etsi.org/etsi-software-license"/>
+    <dcterms:creator>
+      <schema:Person rdf:about="http://www.garcia-castro.com/foaf.rdf#me">
+        <schema:affiliation>
+          <schema:Organization rdf:about="https://www.upm.es/">
+            <schema:name>Universidad Politécnica de Madrid</schema:name>
+          </schema:Organization>
+        </schema:affiliation>
+        <schema:familyName>García-Castro</schema:familyName>
+        <schema:givenName>Raúl</schema:givenName>
+      </schema:Person>
+    </dcterms:creator>
+    <owl:versionInfo>v1.1.1</owl:versionInfo>
+    <owl:versionIRI rdf:resource="https://saref.etsi.org/saref4watr/v1.1.1/"/>
+  </owl:Ontology>
+  <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#gDay"/>
+  <owl:Class rdf:about="http://www.w3.org/2006/time#DayOfWeek">
+    <rdfs:label xml:lang="en">Day of week</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/time#"/>
+    <rdfs:comment xml:lang="en">The day of week.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/BacterialProperty">
+    <rdfs:label xml:lang="en">Bacterial property</rdfs:label>
+    <rdfs:comment xml:lang="en">A bacterial property is a property of water that is related to bacteria.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4watr/MicrobialProperty"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/Tank">
+    <rdfs:label xml:lang="en">Tank</rdfs:label>
+    <rdfs:comment xml:lang="en">A tank is a container for storing water.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4watr/StorageAsset"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/core/Property">
+    <rdfs:label xml:lang="en">Property</rdfs:label>
+    <rdfs:comment xml:lang="en">An aspect of an entity that can be observable by a sensor.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="https://saref.etsi.org/core/Measurement"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/relatesToMeasurement"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="https://saref.etsi.org/core/Device"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isMeasuredByDevice"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="https://saref.etsi.org/core/Device"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isControlledByDevice"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/Glacier">
+    <rdfs:label xml:lang="en">Glacier</rdfs:label>
+    <rdfs:comment xml:lang="en">A glacier is a persistent body of dense ice that is constantly moving under its own weight.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4watr/SourceAsset"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/Valve">
+    <rdfs:label xml:lang="en">Valve</rdfs:label>
+    <rdfs:comment xml:lang="en">A valve is a device designed to control water flow, pressure or volume.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/core/Actuator"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4watr/WaterDevice"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalEntity">
+    <rdfs:label xml:lang="en">Temporal entity</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/time#"/>
+    <rdfs:comment xml:lang="en">A temporal interval or instant.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/Sea">
+    <rdfs:label xml:lang="en">Sea</rdfs:label>
+    <rdfs:comment xml:lang="en">A sea is a body of salt water partly or fully enclosed by land.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4watr/SinkAsset"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#SpatialObject">
+    <rdfs:label xml:lang="en">Spatial object</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/Vent">
+    <rdfs:label xml:lang="en">Vent</rdfs:label>
+    <rdfs:comment xml:lang="en">A vent is the part of a system that allows air to enter a plumbing system to maintain proper air pressure and sewer gases to escape to the outside.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4watr/TransportAsset"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/TreatmentPlant">
+    <rdfs:label xml:lang="en">Treatment plant</rdfs:label>
+    <rdfs:comment xml:lang="en">A treatment plant is an infrastructure to improve the quality of water to make it more acceptable for a specific end-use.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4watr/WaterInfrastructure"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/Main">
+    <rdfs:label xml:lang="en">Main</rdfs:label>
+    <rdfs:comment xml:lang="en">A main is a passage of water to flow through.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4watr/TransportAsset"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/2006/time#Interval">
+    <rdfs:label xml:lang="en">Interval</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/time#"/>
+    <rdfs:comment xml:lang="en">A temporal entity with an extent or duration.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/WaterAsset">
+    <rdfs:label xml:lang="en">Water asset</rdfs:label>
+    <rdfs:comment xml:lang="en">A water asset is a physical entity used in the process of transporting, treating, storing and distributing water.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4syst/System"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/core/FeatureOfInterest"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Feature"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/core/UnitOfMeasure">
+    <rdfs:label xml:lang="en">Unit of measure</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+    <rdfs:comment xml:lang="en">The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called "watt". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Feature">
+    <rdfs:label xml:lang="en">Feature</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
+    <rdfs:comment xml:lang="en">This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/TransportAsset">
+    <rdfs:label xml:lang="en">Transport asset</rdfs:label>
+    <rdfs:comment xml:lang="en">A transport asset is a water asset used to enable and support the transport and distribution of water.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/WaterAsset"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/SourceAsset">
+    <rdfs:label xml:lang="en">Source asset</rdfs:label>
+    <rdfs:comment xml:lang="en">A source asset is a water asset that is a natural source of water.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/WaterAsset"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/Tariff">
+    <rdfs:label xml:lang="en">Tariff</rdfs:label>
+    <rdfs:comment xml:lang="en">A tariff is a schedule of rates or charges of a business or a public utility. Tariffs can be based on time, thresholds or consumption; however, combined tariffs may also exist that mix more than one of these types.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Geometry">
+    <rdfs:label xml:lang="en">Geometry</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
+    <rdfs:comment xml:lang="en">The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/ConsumptionBasedTariff">
+    <rdfs:label xml:lang="en">Consumption-based tariff</rdfs:label>
+    <rdfs:comment xml:lang="en">A consumption-based tariff is a tariff that is based on consumption.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/Tariff"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/StorageInfrastructure">
+    <rdfs:label xml:lang="en">Storage infrastructure</rdfs:label>
+    <rdfs:comment xml:lang="en">An storage infrastructure is an infrastructure to storage both potable water for consumption, and non potable water for use in agriculture.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4watr/WaterInfrastructure"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4city/Agent">
+    <rdfs:label xml:lang="en">Agent</rdfs:label>
+    <rdfs:comment xml:lang="en">An agent making an action in the context of a city. An agent could be a person, software, etc.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/saref4city/"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/StorageAsset">
+    <rdfs:label xml:lang="en">Storage asset</rdfs:label>
+    <rdfs:comment xml:lang="en">A storage asset is a water asset used to store water.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/WaterAsset"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/2006/time#Instant">
+    <rdfs:label xml:lang="en">Instant</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/time#"/>
+    <rdfs:comment xml:lang="en">A temporal entity with zero extent or duration</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/Lagoon">
+    <rdfs:label xml:lang="en">Lagoon</rdfs:label>
+    <rdfs:comment xml:lang="en">A lagoon is a shallow body of water separated from a larger body of water by barrier islands or reefs.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/SourceAsset"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/WaterUse">
+    <rdfs:label xml:lang="en">Water use</rdfs:label>
+    <rdfs:comment xml:lang="en">This class is used to define the different uses of water.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/ChemicalProperty">
+    <rdfs:label xml:lang="en">ChemicalProperty</rdfs:label>
+    <rdfs:comment xml:lang="en">A chemical property is a property of water that is related to chemical components.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4watr/WaterProperty"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/River">
+    <rdfs:label xml:lang="en">River</rdfs:label>
+    <rdfs:comment xml:lang="en">A river is a natural flowing watercourse, usually freshwater, flowing towards an ocean, sea, lake or another river.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4watr/SinkAsset"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/core/Measurement">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass rdf:resource="https://saref.etsi.org/core/Property"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/relatesToProperty"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasValue"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/relatesToProperty"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onClass rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isMeasuredIn"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isMeasuredIn"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:qualifiedCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasValue"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasTimestamp"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Measurement</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/Channel">
+    <rdfs:label xml:lang="en">Channel</rdfs:label>
+    <rdfs:comment xml:lang="en">A channel is a passage of water flowing in an open conduit (i.e., subject to atmospheric pressure).</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/Main"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://schema.org/Organization"/>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/SinkAsset">
+    <rdfs:label xml:lang="en">Sink asset</rdfs:label>
+    <rdfs:comment xml:lang="en">A sink asset is a water asset where water sinks.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/WaterAsset"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/core/FeatureOfInterest">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasMeasurement"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/TimeBasedTariff">
+    <rdfs:label xml:lang="en">Time-based tariff</rdfs:label>
+    <rdfs:comment xml:lang="en">A time-based tariff is a tariff that is based on time.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/Tariff"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://schema.org/Person"/>
+  <owl:Class rdf:about="https://saref.etsi.org/core/Sensor">
+    <rdfs:label xml:lang="en">Sensor</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+    <rdfs:comment xml:lang="en">A device that detects and responds to events or changes in the physical environment such as light, motion, or temperature changes. A device that has category saref:Sensor and performs a saref:SensingFunction.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/core/Device"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/Reservoir">
+    <rdfs:label xml:lang="en">Reservoir</rdfs:label>
+    <rdfs:comment xml:lang="en">A reservoir is an enlarged natural or artificial lake, pond or impoundment created using a dam or lock to store water.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/StorageAsset"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/WaterMeterProperty">
+    <rdfs:label xml:lang="en">Water meter property</rdfs:label>
+    <rdfs:comment xml:lang="en">Class to group those properties related to water meters.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/GaugingStation">
+    <rdfs:label xml:lang="en">Gauging station</rdfs:label>
+    <rdfs:comment xml:lang="en">A gauging station is an infrastructure to monitor and test terrestrial bodies of water.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4watr/MonitoringInfrastructure"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/Estuary">
+    <rdfs:label xml:lang="en">Estuary</rdfs:label>
+    <rdfs:comment xml:lang="en">An estuary is a partially enclosed coastal body of brackish water with one or more rivers or streams flowing into it, and with a free connection to the open sea.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/SinkAsset"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/WaterMeter">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4watr/hasFirmwareVersion"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4watr/hasHardwareVersion"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4watr/hasVersion"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Water meter</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="https://saref.etsi.org/saref4watr/WaterFlowProperty"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/measuresProperty"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/core/Meter"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4watr/WaterDevice"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A water meter is an instrument intended to measure continuously, memorize, and display the volume of water passing through the meter.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:maxCardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4watr/hasFabricationNumber"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="https://saref.etsi.org/saref4watr/WaterMeterProperty"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasProperty"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/WaterInfrastructure">
+    <rdfs:label xml:lang="en">Water infrastructure</rdfs:label>
+    <rdfs:comment xml:lang="en">A water infrastructure is the set of facilities, services, and installations needed for water management.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="https://saref.etsi.org/saref4watr/WaterUse"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4watr/isIntendedFor"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:about="https://saref.etsi.org/saref4watr/Water"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4watr/isDesignedFor"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4syst/System"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/core/Meter">
+    <rdfs:label xml:lang="en">Meter</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+    <rdfs:comment xml:lang="en">A device built to accurately detect and display a quantity in a form readable by a human being. Further, a device of category saref:Meter that performs a saref:MeteringFunction.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Sensor"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalDuration">
+    <rdfs:label xml:lang="en">Temporal duration</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/time#"/>
+    <rdfs:comment xml:lang="en">Time extent; duration of a time interval separate from its particular start position</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/WaterFlowProperty">
+    <rdfs:label xml:lang="en">Water flow property</rdfs:label>
+    <rdfs:comment xml:lang="en">Class to group those properties related to water flow.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/Aquifer">
+    <rdfs:label xml:lang="en">Aquifer</rdfs:label>
+    <rdfs:comment xml:lang="en">An aquifer is an underground layer of water-bearing permeable rock, rock fractures or unconsolidated materials.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/StorageAsset"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/Water">
+    <rdfs:label xml:lang="en">Water</rdfs:label>
+    <rdfs:comment xml:lang="en">This class is used to define a particular quantity or body of water.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="https://saref.etsi.org/saref4watr/WaterProperty"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasProperty"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/core/Actuator">
+    <rdfs:label xml:lang="en">Actuator</rdfs:label>
+    <rdfs:comment xml:lang="en">A device responsible for moving or controlling a mechanism or system.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+    <owl:disjointWith rdf:resource="https://saref.etsi.org/core/Sensor"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/core/Device"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/WaterProperty">
+    <rdfs:label xml:lang="en">Water property</rdfs:label>
+    <rdfs:comment xml:lang="en">Class to group those properties related to the water.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/ThresholdBasedTariff">
+    <rdfs:label xml:lang="en">Threshold-based tariff</rdfs:label>
+    <rdfs:comment xml:lang="en">A threshold-based tariff is a tariff that is based on a threshold.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/Tariff"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/Pit">
+    <rdfs:label xml:lang="en">Pit</rdfs:label>
+    <rdfs:comment xml:lang="en">A pit is a well or hole sunk in the ground to procure, store or drain water.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/TransportAsset"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/Manhole">
+    <rdfs:label xml:lang="en">Manhole</rdfs:label>
+    <rdfs:label xml:lang="en">Maintenance hole</rdfs:label>
+    <rdfs:comment xml:lang="en">A maintenance hole is an enclosure that facilitates human access to and working space for equipment.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/TransportAsset"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.opengis.net/ont/sf#Polygon">
+    <rdfs:label xml:lang="en">Polygon</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/sf#"/>
+    <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/AcceptabilityProperty">
+    <rdfs:label xml:lang="en">Acceptability property</rdfs:label>
+    <rdfs:comment xml:lang="en">An acceptability property is a property of water that is related to its acceptability.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/WaterProperty"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/FireHydrant">
+    <rdfs:label xml:lang="en">Fire hydrant</rdfs:label>
+    <rdfs:comment xml:lang="en">A fire hydrant is a fitting in a street or other public place with a nozzle by which a fire hose may be attached to a water main.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4watr/WaterDevice"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/DistributionSystem">
+    <rdfs:label xml:lang="en">Distribution system</rdfs:label>
+    <rdfs:comment xml:lang="en">A water distribution system is an infrastructure to carry potable water from a centralized treatment plant or wells to water consumers in order to adequately deliver water to satisfy residential, commercial, industrial and fire fighting requirements.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/WaterInfrastructure"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4city/KeyPerformanceIndicatorAssessment">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4city/refersToTime"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4city/assesses"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasValue"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="https://saref.etsi.org/saref4city/KeyPerformanceIndicator"/>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4city/quantifiesKPI"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A Key Performance Indicator assessment represents the assessment of a KPI calculated by a given agent in a given time.</rdfs:comment>
+    <rdfs:label xml:lang="en">Key performance indicator assessment</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/saref4city/"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4city/hasExpirationDate"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4city/hasCreationDate"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isMeasuredIn"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4city/isDerivedFrom"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="https://saref.etsi.org/saref4city/Agent"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4city/isAssessedBy"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4city/hasLastUpdateDate"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/Ocean">
+    <rdfs:label xml:lang="en">Ocean</rdfs:label>
+    <rdfs:comment xml:lang="en">An ocean is a large body of salt water.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/SinkAsset"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/WaterDevice">
+    <rdfs:label xml:lang="en">Water device</rdfs:label>
+    <rdfs:comment xml:lang="en">A water device is a device that is also a water asset.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/core/Device"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/WaterAsset"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/core/Device">
+    <rdfs:label xml:lang="en">Device</rdfs:label>
+    <rdfs:comment xml:lang="en">A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device's user vs. the point of view of the device's manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/measuresProperty"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/makesMeasurement"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/controlsProperty"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/HydroelectricPowerPlant">
+    <rdfs:label xml:lang="en">Hydroelectric power plant</rdfs:label>
+    <rdfs:comment xml:lang="en">A hydroelectric power plant is an infrastructure to generate electricity by conversion of the energy of running water.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/WaterInfrastructure"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/Pump">
+    <rdfs:label xml:lang="en">Pump</rdfs:label>
+    <rdfs:comment xml:lang="en">A pump is a device for moving water by mechanical action.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Actuator"/>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/WaterDevice"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/EnvironmentalProperty">
+    <rdfs:label xml:lang="en">Environmental property</rdfs:label>
+    <rdfs:comment xml:lang="en">Class to group those properties related to the environment.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/MicrobialProperty">
+    <rdfs:label xml:lang="en">Microbial property</rdfs:label>
+    <rdfs:comment xml:lang="en">A microbial property is a property of water that is related to microbes.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/WaterProperty"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/Lake">
+    <rdfs:label xml:lang="en">Lake</rdfs:label>
+    <rdfs:comment xml:lang="en">A lake is an area filled with water, localized in a basin, surrounded by land, apart from any river or other outlet that serves to feed or drain the lake.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/SourceAsset"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4syst/System">
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/saref4syst/"/>
+    <rdfs:label xml:lang="en">System</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/Pipe">
+    <rdfs:label xml:lang="en">Pipe</rdfs:label>
+    <rdfs:comment xml:lang="en">A pipe is a passage of water flowing in a closed conduit (i.e., not subject to atmospheric pressure).</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/Main"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.opengis.net/ont/sf#Point">
+    <rdfs:label xml:lang="en">Point</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/sf#"/>
+    <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/MonitoringInfrastructure">
+    <rdfs:label xml:lang="en">Monitoring infrastructure</rdfs:label>
+    <rdfs:comment xml:lang="en">A monitoring infrastructure is an infrastructure to monitor water.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/WaterInfrastructure"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4watr/Intake">
+    <rdfs:label xml:lang="en">Intake</rdfs:label>
+    <rdfs:comment xml:lang="en">An intake is an installation for obtaining water from a source of supply (river, lake, reservoir, and so on).</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4watr/TransportAsset"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4city/KeyPerformanceIndicator">
+    <rdfs:seeAlso rdf:resource="http://fiware-datamodels.readthedocs.io/en/latest/KeyPerformanceIndicator/doc/spec/index.html"/>
+    <rdfs:label xml:lang="en">Key Performance Indicator</rdfs:label>
+    <rdfs:comment xml:lang="en">A Key Performance Indicator (KPI) is a type of performance measurement. KPIs evaluate the success of an organization or of a particular activity in which it engages. (Definition taken from FIWARE)</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4city/isKPIOf"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#TemporalDuration"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4city/hasCalculationPeriod"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/saref4city/"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/controlsProperty">
+    <rdfs:label xml:lang="en">controls property</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isMeasuredIn">
+    <rdfs:label xml:lang="en">is measured in</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasMeasurement">
+    <rdfs:label xml:lang="en">has measurement</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4city/quantifiesKPI">
+    <rdfs:label xml:lang="en">quantifies KPI</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/saref4city/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4city/hasCalculationPeriod">
+    <rdfs:label xml:lang="en">has calculation period</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/saref4city/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry">
+    <rdfs:label xml:lang="en">hasGeometry</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4watr/featureIsMeasuredByDevice">
+    <rdfs:label xml:lang="en">feature is measured by device</rdfs:label>
+    <rdfs:comment xml:lang="en">A relationship specifying the devices that measure a feature of interest.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/core/Device"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4watr/hasDuration">
+    <rdfs:label xml:lang="en">has duration</rdfs:label>
+    <rdfs:comment xml:lang="en">The duration of a tariff.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalDuration"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4watr/Tariff"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/measuresProperty">
+    <rdfs:label xml:lang="en">measures property</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/measurementMadeBy">
+    <rdfs:label xml:lang="en">measurement made by</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfContains">
+    <rdfs:label xml:lang="en">sfContains</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4watr/forAbsoluteTimeAtDay">
+    <rdfs:label xml:lang="en">for absolute time at day</rdfs:label>
+    <rdfs:comment xml:lang="en">The time interval in each day for which a tariff is applied (e.g., 8:00 to 10:00).</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2006/time#Interval"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4watr/TimeBasedTariff"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4watr/appliesTo">
+    <rdfs:label xml:lang="en">applies to</rdfs:label>
+    <rdfs:comment xml:lang="en">The water meter to which a tariff applies to.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4watr/WaterMeter"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4watr/Tariff"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4city/assesses">
+    <rdfs:label xml:lang="en">assesses</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/saref4city/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4watr/hasBillingPeriod">
+    <rdfs:label xml:lang="en">has billing period</rdfs:label>
+    <rdfs:comment xml:lang="en">The billing period of a tariff.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalDuration"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4watr/Tariff"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4watr/isDesignedFor">
+    <rdfs:label xml:lang="en">is designed for</rdfs:label>
+    <rdfs:comment xml:lang="en">The type of water for which an infrastructure is designed for.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfWithin">
+    <rdfs:label xml:lang="en">sfWithin</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasProperty">
+    <rdfs:label xml:lang="en">has property</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4watr/isIntendedFor">
+    <rdfs:label xml:lang="en">is intended for</rdfs:label>
+    <rdfs:comment xml:lang="en">The intended use of the infrastructure.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4watr/controlsFeature">
+    <rdfs:label xml:lang="en">controls feature</rdfs:label>
+    <rdfs:comment xml:lang="en">A relationship specifying the features of interest that are controlled by a device.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/core/Device"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4city/isAssessedBy">
+    <rdfs:label xml:lang="en">is assessed by</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/saref4city/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/makesMeasurement">
+    <rdfs:label xml:lang="en">makes measurement</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+    <owl:inverseOf rdf:resource="https://saref.etsi.org/core/measurementMadeBy"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4watr/hasPeriod">
+    <rdfs:label xml:lang="en">has period</rdfs:label>
+    <rdfs:comment xml:lang="en">The period of a tariff.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalDuration"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4watr/Tariff"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4watr/forWeekDay">
+    <rdfs:label xml:lang="en">for week day</rdfs:label>
+    <rdfs:comment xml:lang="en">The day of the week for which a tariff is applied (e.g., each Saturday and Sunday).</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2006/time#DayOfWeek"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4watr/TimeBasedTariff"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4city/refersToTime">
+    <rdfs:label xml:lang="en">refers to time</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/saref4city/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4city/isKPIOf">
+    <rdfs:label xml:lang="en">is key performance indicator of</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/saref4city/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4watr/featureIsControlledByDevice">
+    <rdfs:label xml:lang="en">feature is controlled by device</rdfs:label>
+    <rdfs:comment xml:lang="en">A relationship specifying the devices that control a feature of interest.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/core/Device"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4watr/hasPhenomenonTime">
+    <rdfs:comment xml:lang="en">The time for which the value of a measurement applies to the feature of interest.</rdfs:comment>
+    <rdfs:label xml:lang="en">has phenomenon time</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/core/Measurement"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4watr/measuresFeature">
+    <rdfs:label xml:lang="en">measures feature</rdfs:label>
+    <rdfs:comment xml:lang="en">A relationship specifying the features of interest that are measured by a device.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/core/Device"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4city/refersToFeature">
+    <rdfs:label xml:lang="en">refers to feature</rdfs:label>
+    <rdfs:comment xml:lang="en">Relation between a KPI assessment and the geographical feature it refers to</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/saref4city/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/relatesToProperty">
+    <rdfs:label xml:lang="en">relates to property</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isMeasuredByDevice">
+    <rdfs:label xml:lang="en">is measured by device</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4city/isDerivedFrom">
+    <rdfs:label xml:lang="en">is derived from</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/saref4city/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4syst/hasSubSystem">
+    <rdfs:label xml:lang="en">has sub-system</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/saref4syst/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/relatesToMeasurement">
+    <rdfs:label xml:lang="en">relates to measurement</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isPropertyOf">
+    <rdfs:label xml:lang="en">is property of</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4city/hasKPI">
+    <rdfs:label xml:lang="en">has key performance indicator</rdfs:label>
+    <owl:inverseOf rdf:resource="https://saref.etsi.org/saref4city/isKPIOf"/>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/saref4city/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isControlledByDevice">
+    <rdfs:label xml:lang="en">is controlled by device</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://schema.org/affiliation"/>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isMeasurementOf">
+    <rdfs:label xml:lang="en">is measurement of</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+    <owl:inverseOf rdf:resource="https://saref.etsi.org/core/hasMeasurement"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4watr/forVolumeFlow">
+    <rdfs:label xml:lang="en">for volume flow</rdfs:label>
+    <rdfs:comment xml:lang="en">The volume flow related to a tariff.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4watr/ThresholdBasedTariff"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4watr/operatesAtRadioFrequency">
+    <rdfs:label xml:lang="en">operates at radio frequency</rdfs:label>
+    <rdfs:comment xml:lang="en">The radio frequency at which a device operates.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4watr/hasStartTimestamp">
+    <rdfs:label xml:lang="en">has start timestamp</rdfs:label>
+    <rdfs:comment xml:lang="en">The start date and time of a tariff.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4watr/Tariff"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4watr/hasFabricationNumber">
+    <rdfs:label xml:lang="en">has fabrication number</rdfs:label>
+    <rdfs:comment xml:lang="en">The fabrication number of a device.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4watr/hasBillingDate">
+    <rdfs:label xml:lang="en">has billing date</rdfs:label>
+    <rdfs:comment xml:lang="en">The billing date of a tariff.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4watr/Tariff"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4watr/forFinancialConsumption">
+    <rdfs:label xml:lang="en">for financial consumption</rdfs:label>
+    <rdfs:comment xml:lang="en">The financial consumption related to a tariff (e.g., prepaid tariffs).</rdfs:comment>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4watr/ConsumptionBasedTariff"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasManufacturer">
+    <rdfs:label xml:lang="en">has manufacturer</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+    <rdfs:comment xml:lang="en">A relationship identifying the manufacturer of an entity (e.g., device)</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4watr/hasFirmwareVersion">
+    <rdfs:label xml:lang="en">has firmware version</rdfs:label>
+    <rdfs:comment xml:lang="en">The firmware version of a device.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasModel">
+    <rdfs:label xml:lang="en">has model</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+    <rdfs:comment xml:lang="en">A relationship identifying the model of an entity (e.g., device)</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4watr/requiresPower">
+    <rdfs:label xml:lang="en">requires power</rdfs:label>
+    <rdfs:comment xml:lang="en">The power required by a device.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasValue">
+    <rdfs:label xml:lang="en">has value</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4watr/hasHardwareVersion">
+    <rdfs:label xml:lang="en">has hardware version</rdfs:label>
+    <rdfs:comment xml:lang="en">The hardware version of a device.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://schema.org/name"/>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasTimestamp">
+    <rdfs:label xml:lang="en">has timestamp</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4watr/hasVersion">
+    <rdfs:label xml:lang="en">has version</rdfs:label>
+    <rdfs:comment xml:lang="en">The version of a device.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4city/hasExpirationDate">
+    <rdfs:label xml:lang="en">has expiration date</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/saref4city/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4city/hasLastUpdateDate">
+    <rdfs:label xml:lang="en">has last update date</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/saref4city/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4watr/forVolumeConsumption">
+    <rdfs:label xml:lang="en">for volume consumption</rdfs:label>
+    <rdfs:comment xml:lang="en">The volume consumption related to a tariff (e.g., after consumption of 900 litres).</rdfs:comment>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4watr/ConsumptionBasedTariff"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4city/hasCreationDate">
+    <rdfs:label xml:lang="en">has creation date</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/saref4city/"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://schema.org/givenName"/>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4watr/forDayInMonth">
+    <rdfs:label xml:lang="en">for day in month</rdfs:label>
+    <rdfs:comment xml:lang="en">The day of the month for which a tariff is applied (e.g., each 15).</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gDay"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4watr/TimeBasedTariff"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://schema.org/familyName"/>
+  <s4watr:AcceptabilityProperty rdf:about="https://saref.etsi.org/saref4watr/TotalSuspendedSolids">
+    <rdfs:label xml:lang="en">Total suspended solids</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating the dry-weight of suspended particles, that are not dissolved, in a sample of water.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:AcceptabilityProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Aluminium">
+    <rdfs:label xml:lang="en">Aluminium</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of aluminium.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Benzoapyrene">
+    <rdfs:label xml:lang="en">Benzo(a)pyrene</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of benzo(a)pyrene.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:WaterFlowProperty rdf:about="https://saref.etsi.org/saref4watr/FlowRate">
+    <rdfs:label xml:lang="en">Flow rate</rdfs:label>
+    <rdfs:comment xml:lang="en">Property indicating the rate of a water flow.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:WaterFlowProperty>
+  <s4watr:WaterFlowProperty rdf:about="https://saref.etsi.org/saref4watr/FlowPressure">
+    <rdfs:label xml:lang="en">Flow pressure</rdfs:label>
+    <rdfs:comment xml:lang="en">Property indicating the pressure of a water flow.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:WaterFlowProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/VinylChloride">
+    <rdfs:label xml:lang="en">Vinyl chloride</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of vinyl chloride.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:WaterFlowProperty rdf:about="https://saref.etsi.org/saref4watr/FlowVolume">
+    <rdfs:label xml:lang="en">Flow volume</rdfs:label>
+    <rdfs:comment xml:lang="en">Property indicating the volume of a water flow.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:WaterFlowProperty>
+  <s4watr:WaterMeterProperty rdf:about="https://saref.etsi.org/saref4watr/BatteryLastChange">
+    <rdfs:label xml:lang="en">Battery last change</rdfs:label>
+    <rdfs:comment xml:lang="en">The time in which the battery was last changed.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:WaterMeterProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Iron">
+    <rdfs:label xml:lang="en">Iron</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of iron.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:BacterialProperty rdf:about="https://saref.etsi.org/saref4watr/ClostridiumPerfringens">
+    <rdfs:label xml:lang="en">Clostridium perfringens</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of clostridium perfringens.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:BacterialProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Nitrite">
+    <rdfs:label xml:lang="en">Nitrite</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of nitrite.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Lead">
+    <rdfs:label xml:lang="en">Lead</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of lead.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Bromate">
+    <rdfs:label xml:lang="en">Bromate</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of bromate.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Acrylamide">
+    <rdfs:label xml:lang="en">Acrylamide</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of acrylamide.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:WaterUse rdf:about="https://saref.etsi.org/saref4watr/Domestic">
+    <rdfs:label xml:lang="en">Domestic</rdfs:label>
+    <rdfs:comment xml:lang="en">Use of water for domestic purposes.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:WaterUse>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/PolycyclicAromaticHydrocarbons">
+    <rdfs:label xml:lang="en">Polycyclic aromatic hydrocarbons</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of polycyclic aromatic hydrocarbons.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:AcceptabilityProperty rdf:about="https://saref.etsi.org/saref4watr/Hardness">
+    <rdfs:label xml:lang="en">Hardness</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its hardness.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:AcceptabilityProperty>
+  <s4watr:EnvironmentalProperty rdf:about="https://saref.etsi.org/saref4watr/AtmosphericPressure">
+    <rdfs:label xml:lang="en">Atmospheric pressure</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the environment indicating the atmospheric pressure.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:EnvironmentalProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+  <s4watr:EnvironmentalProperty rdf:about="https://saref.etsi.org/saref4watr/Precipitation">
+    <rdfs:label xml:lang="en">Precipitation</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the environment indicating the precipitation.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:EnvironmentalProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Benzene">
+    <rdfs:label xml:lang="en">Benzene</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of benzene.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Copper">
+    <rdfs:label xml:lang="en">Copper</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of copper.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:Water rdf:about="https://saref.etsi.org/saref4watr/Wastewater">
+    <rdfs:label xml:lang="en">Waste water</rdfs:label>
+    <rdfs:comment xml:lang="en">Wastewater is water that has been used in the home, in a business, or as part of an industrial process.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:Water>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Chromium">
+    <rdfs:label xml:lang="en">Chromium</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of chromium.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Boron">
+    <rdfs:label xml:lang="en">Boron</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of boron.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Ammonium">
+    <rdfs:label xml:lang="en">Ammonium</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of ammonium.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:BacterialProperty rdf:about="https://saref.etsi.org/saref4watr/ColonyCount22C">
+    <rdfs:label xml:lang="en">Colony count at 22 °C</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its colony count at 22 ºC.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:BacterialProperty>
+  <s4watr:Water rdf:about="https://saref.etsi.org/saref4watr/RawWater">
+    <rdfs:label xml:lang="en">Raw water</rdfs:label>
+    <rdfs:comment xml:lang="en">Raw water is water found in the environment that has not been treated and does not have any of its minerals, ions, particles, bacteria, or parasites removed.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:Water>
+  <s4watr:AcceptabilityProperty rdf:about="https://saref.etsi.org/saref4watr/Colour">
+    <rdfs:label xml:lang="en">Colour</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its colour.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:AcceptabilityProperty>
+  <s4watr:AcceptabilityProperty rdf:about="https://saref.etsi.org/saref4watr/Taste">
+    <rdfs:label xml:lang="en">Taste</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its taste.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:AcceptabilityProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Fluoride">
+    <rdfs:label xml:lang="en">Fluoride</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of fluoride.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:AcceptabilityProperty rdf:about="https://saref.etsi.org/saref4watr/Conductivity">
+    <rdfs:label xml:lang="en">Conductivity</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its conductivity.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:AcceptabilityProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Arsenic">
+    <rdfs:label xml:lang="en">Arsenic</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of arsenic.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+  <s4watr:BacterialProperty rdf:about="https://saref.etsi.org/saref4watr/PseudomonasAeruginosa">
+    <rdfs:label xml:lang="en">Pseudomonas aeruginosa</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of pseudomonas aeruginosa.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:BacterialProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Sulphate">
+    <rdfs:label xml:lang="en">Sulphate</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of sulphate.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:AcceptabilityProperty rdf:about="https://saref.etsi.org/saref4watr/Oxidisability">
+    <rdfs:label xml:lang="en">Oxidisability</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its oxidisability.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:AcceptabilityProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/TotalOrganicCarbon">
+    <rdfs:label xml:lang="en">Total organic carbon</rdfs:label>
+    <rdfs:label xml:lang="en">TOC</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of total organic carbon.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Mercury">
+    <rdfs:label xml:lang="en">Mercury</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of mercury.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+  <s4watr:WaterFlowProperty rdf:about="https://saref.etsi.org/saref4watr/FlowTemperature">
+    <rdfs:label xml:lang="en">Flow temperature</rdfs:label>
+    <rdfs:comment xml:lang="en">Property indicating the temperature of a water flow.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:WaterFlowProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Tetrachloroethene">
+    <rdfs:label xml:lang="en">Tetrachloroethene</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of tetrachloroethene.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Epichlorohydrin">
+    <rdfs:label xml:lang="en">Epichlorohydrin</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of epichlorohydrin.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Nitrate">
+    <rdfs:label xml:lang="en">Nitrate</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of nitrate.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Chloride">
+    <rdfs:label xml:lang="en">Chloride</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of chloride.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Oxygen">
+    <rdfs:label xml:lang="en">Dissolved oxygen</rdfs:label>
+    <rdfs:label xml:lang="en">Oxygen saturation</rdfs:label>
+    <rdfs:label xml:lang="en">Oxygen</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its oxygen saturation.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:BacterialProperty rdf:about="https://saref.etsi.org/saref4watr/ColonyCount37C">
+    <rdfs:label xml:lang="en">Colony count at 37 °C</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its colony count at 37 ºC.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:BacterialProperty>
+  <s4watr:BacterialProperty rdf:about="https://saref.etsi.org/saref4watr/ColiformBacteria">
+    <rdfs:label xml:lang="en">Coliform bacteria</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of coliform bacteria.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:BacterialProperty>
+  <s4watr:AcceptabilityProperty rdf:about="https://saref.etsi.org/saref4watr/TotalDissolvedSolids">
+    <rdfs:label xml:lang="en">Total dissolved solids</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating the dissolved combined content of all inorganic and organic substances present in a sample of water.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:AcceptabilityProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+  <s4watr:AcceptabilityProperty rdf:about="https://saref.etsi.org/saref4watr/HydrogenIonConcentration">
+    <rdfs:label xml:lang="en">pH</rdfs:label>
+    <rdfs:label xml:lang="en">Hydrogen ion concentration</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its hydrogen ion concentration.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:AcceptabilityProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Cyanide">
+    <rdfs:label xml:lang="en">Cyanide</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of cyanide.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:WaterUse rdf:about="https://saref.etsi.org/saref4watr/Agriculture">
+    <rdfs:label xml:lang="en">Agriculture</rdfs:label>
+    <rdfs:comment xml:lang="en">Use of water for the farming of plants and livestock.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:WaterUse>
+  <s4watr:EnvironmentalProperty rdf:about="https://saref.etsi.org/saref4watr/ExternalTemperature">
+    <rdfs:label xml:lang="en">External temperature</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the environment indicating the temperature.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:EnvironmentalProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+  <s4watr:AcceptabilityProperty rdf:about="https://saref.etsi.org/saref4watr/TotalIndicativeDose">
+    <rdfs:label xml:lang="en">Total indicative dose</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its total indicative dose.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:AcceptabilityProperty>
+  <s4watr:BacterialProperty rdf:about="https://saref.etsi.org/saref4watr/EscherichiaColi">
+    <rdfs:label xml:lang="en">Escherichia coli</rdfs:label>
+    <rdfs:label xml:lang="en">E. coli</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of escherichia coli.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:BacterialProperty>
+  <s4watr:WaterMeterProperty rdf:about="https://saref.etsi.org/saref4watr/MeterOperatingTime">
+    <rdfs:label xml:lang="en">Meter operating time</rdfs:label>
+    <rdfs:comment xml:lang="en">The time for which the meter has been operating.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:WaterMeterProperty>
+  <s4watr:WaterMeterProperty rdf:about="https://saref.etsi.org/saref4watr/BatteryRemainingTime">
+    <rdfs:label xml:lang="en">Battery remaining time</rdfs:label>
+    <rdfs:comment xml:lang="en">The time until the battery is discharged.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:WaterMeterProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Manganese">
+    <rdfs:label xml:lang="en">Manganese</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of manganese.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Nickel">
+    <rdfs:label xml:lang="en">Nickel</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of nickel.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Trichloroethene">
+    <rdfs:label xml:lang="en">Trichloroethene</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of trichloroethene.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Selenium">
+    <rdfs:label xml:lang="en">Selenium</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of selenium.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Tritium">
+    <rdfs:label xml:lang="en">Tritium</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of tritium.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Antimony">
+    <rdfs:label xml:lang="en">Antimony</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of antimony.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:WaterMeterProperty rdf:about="https://saref.etsi.org/saref4watr/MeterOnTime">
+    <rdfs:label xml:lang="en">Meter on time</rdfs:label>
+    <rdfs:comment xml:lang="en">The duration of the meter power up.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:WaterMeterProperty>
+  <s4watr:AcceptabilityProperty rdf:about="https://saref.etsi.org/saref4watr/Temperature">
+    <rdfs:label xml:lang="en">Temperature</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its temperature.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:AcceptabilityProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+  <s4watr:EnvironmentalProperty rdf:about="https://saref.etsi.org/saref4watr/Humidity">
+    <rdfs:label xml:lang="en">Humidity</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the environment indicating the humidity.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:EnvironmentalProperty>
+  <s4watr:WaterUse rdf:about="https://saref.etsi.org/saref4watr/Industry">
+    <rdfs:label xml:lang="en">Industry</rdfs:label>
+    <rdfs:comment xml:lang="en">Use of water for industrial purposes.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:WaterUse>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+  <s4watr:Water rdf:about="https://saref.etsi.org/saref4watr/Stormwater">
+    <rdfs:label xml:lang="en">Storm water</rdfs:label>
+    <rdfs:comment xml:lang="en">Stormwater is water that originates during precipitation events and snow/ice melt.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:Water>
+  <s4watr:Water rdf:about="https://saref.etsi.org/saref4watr/DrinkingWater">
+    <rdfs:label xml:lang="en">Potable water</rdfs:label>
+    <rdfs:label xml:lang="en">Drinking water</rdfs:label>
+    <rdfs:comment xml:lang="en">Drinking water is water that is treated to comply with drinking water standards.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:Water>
+  <s4watr:WaterMeterProperty rdf:about="https://saref.etsi.org/saref4watr/BatteryOperatingTime">
+    <rdfs:label xml:lang="en">Battery operating time</rdfs:label>
+    <rdfs:comment xml:lang="en">The time for which the battery has been operating since the last charge.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:WaterMeterProperty>
+  <s4watr:AcceptabilityProperty rdf:about="https://saref.etsi.org/saref4watr/Turbidity">
+    <rdfs:label xml:lang="en">Turbidity</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its turbidity.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:AcceptabilityProperty>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Sodium">
+    <rdfs:label xml:lang="en">Sodium</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of sodium.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:WaterUse rdf:about="https://saref.etsi.org/saref4watr/Recreation">
+    <rdfs:label xml:lang="en">Recreation</rdfs:label>
+    <rdfs:comment xml:lang="en">Use of water for recreational purposes.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:WaterUse>
+  <s4watr:AcceptabilityProperty rdf:about="https://saref.etsi.org/saref4watr/Odour">
+    <rdfs:label xml:lang="en">Odour</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its odour.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:AcceptabilityProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Cadmium">
+    <rdfs:label xml:lang="en">Cadmium</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of cadmium.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:BacterialProperty rdf:about="https://saref.etsi.org/saref4watr/Enterococci">
+    <rdfs:label xml:lang="en">Enterococci</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of enterococci.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:BacterialProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/12Dichloroethane">
+    <rdfs:label xml:lang="en">1,2-dichloroethane</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of 1,2-dichloroethane.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:ChemicalProperty rdf:about="https://saref.etsi.org/saref4watr/Trihalomethanes">
+    <rdfs:label xml:lang="en">Trihalomethanes</rdfs:label>
+    <rdfs:comment xml:lang="en">Property of the water indicating its concentration of trihalomethanes.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:ChemicalProperty>
+  <s4watr:WaterUse rdf:about="https://saref.etsi.org/saref4watr/Aquaculture">
+    <rdfs:label xml:lang="en">Aquaculture</rdfs:label>
+    <rdfs:comment xml:lang="en">Use of water for the farming of fish, crustaceans, molluscs, aquatic plants, algae, and other organisms.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4watr:WaterUse>
+</rdf:RDF>

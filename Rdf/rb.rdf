@@ -1,0 +1,388 @@
+<rdf:RDF
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rb="https://w3id.org/riverbench/schema/metadata#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.0="http://schema.org/"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://w3id.org/riverbench/schema/metadata">
+    <dct:license rdf:resource="https://spdx.org/licenses/CC-BY-4.0"/>
+    <j.0:citation xml:lang="en">Please cite this work according to the instructions here: https://w3id.org/riverbench/documentation/licensing/</j.0:citation>
+    <dct:creator rdf:parseType="Resource">
+      <foaf:nick>Ostrzyciel</foaf:nick>
+      <foaf:name>Piotr Sowiński</foaf:name>
+      <foaf:homepage rdf:resource="https://orcid.org/0000-0002-2543-9461"/>
+      <foaf:homepage rdf:resource="https://github.com/Ostrzyciel"/>
+    </dct:creator>
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2023-04-30T00:00:00</dct:created>
+    <dc:title xml:lang="en">RiverBench metadata ontology</dc:title>
+    <owl:imports rdf:resource="http://www.w3.org/ns/dcat"/>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2023-05-05T00:00:00</dct:issued>
+    <vann:preferredNamespacePrefix>rb</vann:preferredNamespacePrefix>
+    <dc:description xml:lang="en">Ontology for describing datasets and profiles in the RiverBench benchmark suite.</dc:description>
+    <dct:creator xml:lang="en">Piotr Sowiński</dct:creator>
+    <vann:preferredNamespaceUri>https://w3id.org/riverbench/schema/metadata#</vann:preferredNamespaceUri>
+    <owl:versionIRI rdf:resource="https://w3id.org/riverbench/schema/metadata/dev"/>
+  </owl:Ontology>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#ObjectCountStatistics">
+    <rdfs:label xml:lang="en">Object count statistics</rdfs:label>
+    <rdfs:comment xml:lang="en">Statistics about the number of objects in the dataset.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#Statistics"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#SimpleLiteralCountStatistics">
+    <rdfs:label xml:lang="en">Simple literal count statistics</rdfs:label>
+    <rdfs:comment xml:lang="en">Statistics about the number of simple literals (of type xsd:string) in the dataset.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#Statistics"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#SubjectCountStatistics">
+    <rdfs:label xml:lang="en">Subject count statistics</rdfs:label>
+    <rdfs:comment xml:lang="en">Statistics about the number of subjects in the dataset.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#Statistics"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#TimeStreamElementSplit">
+    <rdfs:label xml:lang="en">Stream elements split by time</rdfs:label>
+    <rdfs:comment xml:lang="en">The elements correspond to different instants or intervals of time.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#StreamElementSplit"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#DatatypeLiteralCountStatistics">
+    <rdfs:label xml:lang="en">Datatype literal count statistics</rdfs:label>
+    <rdfs:comment xml:lang="en">Statistics about the number of datatype literals (NOT of type rdf:langString) in the dataset.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#Statistics"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#BlankNodeCountStatistics">
+    <rdfs:label xml:lang="en">Blank node count statistics</rdfs:label>
+    <rdfs:comment xml:lang="en">Statistics about the number of blank nodes in the dataset.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#Statistics"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#StatementCountStreamElementSplit">
+    <rdfs:label xml:lang="en">Stream elements split by statement count</rdfs:label>
+    <rdfs:comment xml:lang="en">The number of statements in an element was the criterion for splitting the stream elements.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#StreamElementSplit"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#Dataset">
+    <rdfs:label xml:lang="en">RiverBench dataset</rdfs:label>
+    <rdfs:comment xml:lang="en">A dataset in the RiverBench benchmark suite</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#QuotedTripleCountStatistics">
+    <rdfs:label xml:lang="en">Quoted triple count statistics</rdfs:label>
+    <rdfs:comment xml:lang="en">Statistics about the number of quoted triples in the dataset.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#Statistics"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#Profile">
+    <rdfs:label xml:lang="en">Benchmark profile</rdfs:label>
+    <rdfs:comment xml:lang="en">Benchmark profile grouping several datasets in RiverBench</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.w3.org/ns/dcat#DatasetSeries"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#LiteralCountStatistics">
+    <rdfs:label xml:lang="en">Literal count statistics</rdfs:label>
+    <rdfs:comment xml:lang="en">Statistics about the number of literals in the dataset.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#Statistics"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/dcat#DatasetSeries">
+    <rdfs:label xml:lang="en">Dataset series</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#RiverBench">
+    <rdfs:label xml:lang="en">RiverBench suite</rdfs:label>
+    <rdfs:comment xml:lang="en">RiverBench – RDF streaming benchmark suite</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#Distribution">
+    <rdfs:label xml:lang="en">RiverBench dataset distribution</rdfs:label>
+    <rdfs:comment xml:lang="en">A distribution of a dataset in the RiverBench benchmark suite.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#Statistics">
+    <rdfs:label xml:lang="en">Statistics</rdfs:label>
+    <rdfs:comment xml:lang="en">Class for statistics objects about distributions</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#TopicStreamElementSplit">
+    <rdfs:label xml:lang="en">Stream elements split by topic</rdfs:label>
+    <rdfs:comment xml:lang="en">The elements correspond to different topics/subjects in the dataset.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#StreamElementSplit"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#StreamElementType">
+    <rdfs:label xml:lang="en">Stream element type</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates the type of the contents of stream elements</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#IriCountStatistics">
+    <rdfs:label xml:lang="en">IRI count statistics</rdfs:label>
+    <rdfs:comment xml:lang="en">Statistics about the number of IRIs in the dataset.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/riverbench/schema/metadata#Statistics"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#GraphCountStatistics">
+    <rdfs:label xml:lang="en">Graph count statistics</rdfs:label>
+    <rdfs:comment xml:lang="en">Statistics about the number of RDF graphs in the dataset, including the default graph.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/riverbench/schema/metadata#Statistics"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#DistributionType">
+    <rdfs:label xml:lang="en">RiverBench distribution type</rdfs:label>
+    <rdfs:comment xml:lang="en">Type of dataset distribution, indicating the corresponding streaming task formulation.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#StreamElementSplit">
+    <rdfs:label xml:lang="en">Stream element split</rdfs:label>
+    <rdfs:comment xml:lang="en">Describes how was the stream split into individual elements.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#StatementCountStatistics">
+    <rdfs:label xml:lang="en">Statement count statistics</rdfs:label>
+    <rdfs:comment xml:lang="en">Statistics about the number of RDF statements in the dataset.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/riverbench/schema/metadata#Statistics"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#ProfileRestriction">
+    <rdfs:label xml:lang="en">Profile restriction</rdfs:label>
+    <rdfs:comment xml:lang="en">Resource with properties that specify conditions for datasets to be included in the profile. The conditions are joined with the OR operator.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#PredicateCountStatistics">
+    <rdfs:label xml:lang="en">Predicate count statistics</rdfs:label>
+    <rdfs:comment xml:lang="en">Statistics about the number of predicates in the dataset.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/riverbench/schema/metadata#Statistics"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://w3id.org/riverbench/schema/metadata#LanguageLiteralCountStatistics">
+    <rdfs:label xml:lang="en">Language string count statistics</rdfs:label>
+    <rdfs:comment xml:lang="en">Statistics about the number of language literals in the dataset.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/riverbench/schema/metadata#Statistics"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://w3id.org/riverbench/schema/metadata#hasTemporalProperty">
+    <rdfs:label xml:lang="en">Has temporal property</rdfs:label>
+    <rdfs:comment xml:lang="en">The IRI of the property that is used in the stream to denote time at which the event occured.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/riverbench/schema/metadata#TimeStreamElementSplit"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#seriesMember">
+    <rdfs:label xml:lang="en">Includes dataset</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates which datasets are included in the profile</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/riverbench/schema/metadata#hasDistributionType">
+    <rdfs:label xml:lang="en">Has distribution type</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates the type of RiverBench dataset distribution</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/riverbench/schema/metadata#DistributionType"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/riverbench/schema/metadata#hasProfile">
+    <rdfs:label xml:lang="en">Has benchmark profile</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates benchmark profiles that belong to this benchmark suite.</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/riverbench/schema/metadata#Profile"/>
+    <rdfs:domain rdf:resource="https://w3id.org/riverbench/schema/metadata#RiverBench"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/dcat#resource"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/riverbench/schema/metadata#hasStreamElementType">
+    <rdfs:label xml:lang="en">Has stream element type</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates the type of contents of each stream element</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/riverbench/schema/metadata#StreamElementType"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/riverbench/schema/metadata#usesOntology">
+    <rdfs:label xml:lang="en">Uses ontology</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates that the dataset uses an ontology. The object must be a resource, but it doesn't neccesarily have to be an OWL ontology.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/riverbench/schema/metadata#Dataset"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/riverbench/schema/metadata#hasStreamElementSplit">
+    <rdfs:label xml:lang="en">Has stream element split</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates how the stream was split into elements.</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/riverbench/schema/metadata#StreamElementSplit"/>
+    <rdfs:domain rdf:resource="https://w3id.org/riverbench/schema/metadata#Dataset"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/riverbench/schema/metadata#hasStatistics">
+    <rdfs:label xml:lang="en">Has statistics</rdfs:label>
+    <rdfs:comment xml:lang="en">Has a dataset statistics object</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/riverbench/schema/metadata#Statistics"/>
+    <rdfs:domain rdf:resource="https://w3id.org/riverbench/schema/metadata#Distribution"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/riverbench/schema/metadata#hasRestriction">
+    <rdfs:label xml:lang="en">Has restriction</rdfs:label>
+    <rdfs:comment xml:lang="en">Has profile restriction. The restrictions are joined with the AND operator.</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/riverbench/schema/metadata#ProfileRestriction"/>
+    <rdfs:domain rdf:resource="https://w3id.org/riverbench/schema/metadata#Profile"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/riverbench/schema/metadata#hasFileName">
+    <rdfs:label xml:lang="en">Has file name</rdfs:label>
+    <rdfs:comment xml:lang="en">Canonical file name of this distribution</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://w3id.org/riverbench/schema/metadata#Distribution"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/riverbench/schema/metadata#hasStreamElementCount">
+    <rdfs:label xml:lang="en">Has stream element count</rdfs:label>
+    <rdfs:comment xml:lang="en">Number of elements in the stream</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/riverbench/schema/metadata#standardDeviation">
+    <rdfs:label xml:lang="en">Standard deviation</rdfs:label>
+    <rdfs:comment xml:lang="en">Standard deviation of a distribution</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="https://w3id.org/riverbench/schema/metadata#statisticalProperty"/>
+    </rdfs:subPropertyOf>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/riverbench/schema/metadata#statisticalProperty">
+    <rdfs:label xml:lang="en">Statistical property</rdfs:label>
+    <rdfs:comment>The base statistical property.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/riverbench/schema/metadata#Statistics"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/riverbench/schema/metadata#sum">
+    <rdfs:label xml:lang="en">Sum</rdfs:label>
+    <rdfs:comment xml:lang="en">Sum of all values in the distribution. In statistics about counts, this corresponds to the total number of given elements in the dataset.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/riverbench/schema/metadata#statisticalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/riverbench/schema/metadata#mean">
+    <rdfs:label xml:lang="en">Mean</rdfs:label>
+    <rdfs:comment xml:lang="en">Arithmetic mean of a distribution</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/riverbench/schema/metadata#statisticalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/riverbench/schema/metadata#usesGeneralizedRdfDatasets">
+    <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/rdf11-concepts/#section-generalized-rdf"/>
+    <rdfs:label xml:lang="en">Uses generalized RDF datasets</rdfs:label>
+    <rdfs:comment xml:lang="en">Whether the dataset uses the non-standard generalized datasets feature. A "dataset" here is used in the same meaning as in the RDF 1.1 specification.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="https://w3id.org/riverbench/schema/metadata#conformanceProperty"/>
+    </rdfs:subPropertyOf>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/riverbench/schema/metadata#maximum">
+    <rdfs:label xml:lang="en">Maximum</rdfs:label>
+    <rdfs:comment xml:lang="en">Maximum value of a distribution</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/riverbench/schema/metadata#statisticalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/riverbench/schema/metadata#conformanceProperty">
+    <rdfs:label xml:lang="en">Conformance property</rdfs:label>
+    <rdfs:comment xml:lang="en">Base property for all conformance data properties</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/riverbench/schema/metadata#usesRdfStar">
+    <rdfs:seeAlso xml:lang="en">https://www.w3.org/2021/12/rdf-star.html</rdfs:seeAlso>
+    <rdfs:label xml:lang="en">Uses RDF-star</rdfs:label>
+    <rdfs:comment xml:lang="en">Whether the dataset uses RDF-star features.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/riverbench/schema/metadata#conformanceProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/riverbench/schema/metadata#conformsToRdf11">
+    <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/rdf11-concepts/"/>
+    <rdfs:label xml:lang="en">Conforms to W3C RDF 1.1 specification</rdfs:label>
+    <rdfs:comment xml:lang="en">Whether the dataset is RDF 1.1-compliant, i.e., does not use any non-standard features, like generalized triples.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/riverbench/schema/metadata#conformanceProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/riverbench/schema/metadata#hasVersion">
+    <rdfs:label xml:lang="en">Has version</rdfs:label>
+    <rdfs:comment xml:lang="en">Version tag of an artifact</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/riverbench/schema/metadata#conformsToRdfStarDraft_20211217">
+    <rdfs:seeAlso rdf:resource="https://www.w3.org/2021/12/rdf-star.html"/>
+    <rdfs:label xml:lang="en">Conforms to W3C RDF-star draft specification as of December 17, 2021</rdfs:label>
+    <rdfs:comment xml:lang="en">Whether the dataset is RDF-star compliant, i.e., does not use any non-standard features. Note that all standard RDF 1.1 datasets also qualify, as RDF-star is a superset of RDF 1.1.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/riverbench/schema/metadata#conformanceProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/riverbench/schema/metadata#uniqueCount">
+    <rdfs:label xml:lang="en">Unique count (estimated)</rdfs:label>
+    <rdfs:comment xml:lang="en">Only used for count statistics. Indicates how many unique elements are in the entire dataset. The value is estimated with a Bloom filter and is accurate to ~1%.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/riverbench/schema/metadata#statisticalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/riverbench/schema/metadata#usesGeneralizedTriples">
+    <rdfs:seeAlso xml:lang="en">https://www.w3.org/TR/rdf11-concepts/#section-generalized-rdf</rdfs:seeAlso>
+    <rdfs:label xml:lang="en">Uses generalized triples</rdfs:label>
+    <rdfs:comment xml:lang="en">Whether the dataset uses the non-standard generalized triples feature</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/riverbench/schema/metadata#conformanceProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/riverbench/schema/metadata#minimum">
+    <rdfs:label xml:lang="en">Minimum</rdfs:label>
+    <rdfs:comment xml:lang="en">Minimum value of a distribution</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/riverbench/schema/metadata#statisticalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:TransitiveProperty rdf:about="https://w3id.org/riverbench/schema/metadata#isSubsetOfProfile">
+    <rdfs:label xml:lang="en">Is subset of profile</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates that this profile's datasets are all in the other profile</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/riverbench/schema/metadata#Profile"/>
+    <rdfs:domain rdf:resource="https://w3id.org/riverbench/schema/metadata#Profile"/>
+    <owl:inverseOf>
+      <owl:TransitiveProperty rdf:about="https://w3id.org/riverbench/schema/metadata#isSupersetOfProfile"/>
+    </owl:inverseOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:about="https://w3id.org/riverbench/schema/metadata#isSupersetOfProfile">
+    <rdfs:label xml:lang="en">Is superset of profile</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates that this profile contains all datasets of the other profile</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/riverbench/schema/metadata#Profile"/>
+    <rdfs:domain rdf:resource="https://w3id.org/riverbench/schema/metadata#Profile"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:TransitiveProperty>
+  <rb:StreamElementType rdf:about="https://w3id.org/riverbench/schema/metadata#triples">
+    <rdfs:label xml:lang="en">Triples</rdfs:label>
+    <rdfs:comment xml:lang="en">Triple streams consist of elements, where each element is an RDF graph.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rb:StreamElementType>
+  <rb:DistributionType rdf:about="https://w3id.org/riverbench/schema/metadata#partialDistribution">
+    <rdfs:label xml:lang="en">Partial distribution</rdfs:label>
+    <rdfs:comment xml:lang="en">A partial distribution, including only a subset of the data in the dataset. The rb:hasStreamElementCount property indicates the length of this distribution.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rb:DistributionType>
+  <rb:DistributionType rdf:about="https://w3id.org/riverbench/schema/metadata#graphStreamDistribution">
+    <rdfs:label xml:lang="en">Graph stream distribution</rdfs:label>
+    <rdfs:comment xml:lang="en">The dataset is distributed as a stream of named RDF graphs.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rb:DistributionType>
+  <rb:StreamElementType rdf:about="https://w3id.org/riverbench/schema/metadata#graphs">
+    <rdfs:label xml:lang="en">Graphs</rdfs:label>
+    <rdfs:comment xml:lang="en">Graph streams are a special case of quad streams, where each element contains exactly one named RDF graph.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rb:StreamElementType>
+  <rb:StreamElementType rdf:about="https://w3id.org/riverbench/schema/metadata#quads">
+    <rdfs:label xml:lang="en">Quads</rdfs:label>
+    <rdfs:comment xml:lang="en">Quad streams consist of elements, where each element is an RDF dataset.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rb:StreamElementType>
+  <rb:DistributionType rdf:about="https://w3id.org/riverbench/schema/metadata#tripleStreamDistribution">
+    <rdfs:label xml:lang="en">Triple stream distribution</rdfs:label>
+    <rdfs:comment xml:lang="en">The dataset is distributed as a stream of RDF triples.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rb:DistributionType>
+  <rb:DistributionType rdf:about="https://w3id.org/riverbench/schema/metadata#quadStreamDistribution">
+    <rdfs:label xml:lang="en">Quad stream distribution</rdfs:label>
+    <rdfs:comment xml:lang="en">The dataset is distributed as a stream of RDF quads.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rb:DistributionType>
+  <rb:DistributionType rdf:about="https://w3id.org/riverbench/schema/metadata#fullDistribution">
+    <rdfs:label xml:lang="en">Full distribution</rdfs:label>
+    <rdfs:comment xml:lang="en">A full distribution, including all data in the dataset.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rb:DistributionType>
+  <rb:DistributionType rdf:about="https://w3id.org/riverbench/schema/metadata#flatDistribution">
+    <rdfs:label xml:lang="en">Flat distribution</rdfs:label>
+    <rdfs:comment xml:lang="en">The dataset is distributed as a single flat file.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rb:DistributionType>
+</rdf:RDF>

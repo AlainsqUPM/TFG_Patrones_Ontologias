@@ -1,0 +1,1081 @@
+<rdf:RDF
+    xmlns:s4ehaw="https://saref.etsi.org/saref4ehaw/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:ssn-system="http://www.w3.org/ns/ssn/systems/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:s4envi="https://saref.etsi.org/saref4envi/"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:saref="https://saref.etsi.org/core/"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="https://saref.etsi.org/saref4ehaw/">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2020-02-01</dcterms:issued>
+    <owl:imports rdf:resource="https://saref.etsi.org/core/v3.1.1/"/>
+    <dcterms:source rdf:resource="https://saref.etsi.org/sources/saref4ehaw/"/>
+    <dcterms:description rdf:datatype="https://www.iana.org/assignments/media-types/text/markdown"
+    >The objective of SAREF4EHAW is to extend SAREF ontology for the eHealth/Ageing-well (EHAW) vertical. Clause 4.1 of the present document shortly introduces a high level view of the envisioned SAREF4EHAW semantic model and modular ontology, with the retained concepts (i.e. classes) and their relations. 
+SAREF4EHAW extension has been specified and formalised by investigating EHAW domain related resources, as reported in ETSI TR 103 509, such as: potential stakeholders, standardization initiatives, alliances/associations, European projects, EC directives, existing ontologies, and data repositories. Therefore, SAREF4EHAW modular ontology shall both:
+ - Allow the implementation of a limited set of typical EHAW related use cases already identified in ETSI TR 103 509, i.e.
+ - Use case 1 “elderly at home monitoring and support”,
+ - Use case 2 “monitoring and support of healthy lifestyles for citizens”,
+ - Use case 3 “Early Warning System (EWS) and Cardiovascular Accidents detection”.
+ - Fulfil the eHealth Ageing Well related requirements provided in ETSI TR 103 509, mainly the ontological ones that were mostly taken as input for the ontology specification.
+
+SAREF4EHAW mainly reuses the following existing ontologies: SAREF, ETSI SmartBAN reference model, SAREF 4 Environment extension and W3C SSN System module. The following figure presents the high level view of SAREF4EHAW ontology.
+![SAREF4SYST overview](diagrams/SAREF4EHAW_Model.jpg)
+For semantic interoperability handling purposes, an ontology based solution, combined with sensing-as-a-service and WoT strategies, is retained for SAREF4EHAW. Therefore, an upper level ontology, at service level, shall also behas been fully modelled (Service class and sub-classes depicted in the previous figure).
+For embedded semantic analytics purposes, SAREF4EHAW shall behas been designed using the modularity principle (see ETSI TR 103 509) and can thus be mainly described by the following self-contained knowledge sub-ontologies (or modules): HealthActor, Ban, HealthDevice, Function (measured data related concepts included) and Service.</dcterms:description>
+    <dcterms:title xml:lang="en">SAREF4EHAW: an extension of SAREF for eHealth Ageing Well domain</dcterms:title>
+    <dcterms:license rdf:resource="https://forge.etsi.org/etsi-software-license"/>
+    <owl:versionIRI rdf:resource="https://saref.etsi.org/saref4ehaw/v1.1.1/"/>
+    <dcterms:creator rdf:resource="http://www-public.imtbs-tsp.eu/~girodgen/"/>
+    <dcterms:contributor rdf:resource="https://www.linkedin.com/in/lina-nachabe-2b292457/"/>
+    <dcterms:contributor rdf:resource="https://pdi.fbk.eu/people/profile/dragoni"/>
+    <dcterms:contributor rdf:resource="http://www.maxime-lefrancois.info/"/>
+    <dcterms:contributor rdf:resource="https://research.utwente.nl/en/persons/jo%C3%A3o-luiz-moreira"/>
+    <vann:preferredNamespaceUri>https://saref.etsi.org/saref4ehaw/</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>s4ehaw</vann:preferredNamespacePrefix>
+    <dcterms:publisher rdf:resource="https://www.etsi.org/"/>
+    <owl:versionInfo>v1.1.1</owl:versionInfo>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2020-05-01</dcterms:modified>
+  </owl:Ontology>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/DataConstraint">
+    <rdfs:label xml:lang="en">Data constraint</rdfs:label>
+    <rdfs:comment xml:lang="en">The Data constraints, e.g. validity, legal...</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/core/Property"/>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/Helper">
+    <rdfs:label xml:lang="en">Helper</rdfs:label>
+    <rdfs:comment xml:lang="en">Helper of patients/users, e.g. a patient's relative.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/HealthActor"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/LegalConstraint">
+    <rdfs:label xml:lang="en">Legal constraint</rdfs:label>
+    <rdfs:comment xml:lang="en">An empty container for describing the legal constraints a data can be submitted to, like e.g. anonymization.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4ehaw/DataConstraint"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/Posture">
+    <rdfs:label xml:lang="en">Posture</rdfs:label>
+    <rdfs:comment xml:lang="en">The posture of a health actor (mainly a patient or a user), e.g. exercising, lying, running, sitting, walking...</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/BodySurfaceLocation">
+    <rdfs:label xml:lang="en">Body surface location</rdfs:label>
+    <rdfs:comment xml:lang="en">Defines a health device location in terms of a body surface position (i.e. on body health device).</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/Location"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/Location">
+    <rdfs:label xml:lang="en">Location</rdfs:label>
+    <rdfs:comment xml:lang="en">The location, i.e. a position against the body (on - body surface – or in the body – implant –) and a physical location (i.e. a postal address and/or a current geolocation when available).</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/Impairment">
+    <rdfs:label xml:lang="en">Impairment</rdfs:label>
+    <rdfs:comment xml:lang="en">Defined for users (that can in particular be patients) impairments modelling, e.g. aural impairment, skeletal impairment, ocular impairment, mobility impairment, intellectual impairment. Those non exhaustive impairments are compatible with the World Health Organization classification.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4envi/FrequencyUnit"/>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/PhysicalLocation">
+    <rdfs:label xml:lang="en">Physical location</rdfs:label>
+    <rdfs:comment xml:lang="en">The physical location, i.e. a postal address and a geolocation when available.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4ehaw/Location"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/HealthSensor">
+    <rdfs:label xml:lang="en">Health sensor</rdfs:label>
+    <rdfs:comment xml:lang="en">Health-related Sensor, equivalent to SAREF Sensor.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/HealthDevice"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/BanHub">
+    <rdfs:label xml:lang="en">BAN hub</rdfs:label>
+    <rdfs:comment xml:lang="en">Hub of the BAN, mainly playing the role of both a data concentrator and a network gateway.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/HealthDevice"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/core/UnitOfMeasure"/>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/DailyActivity">
+    <rdfs:label xml:lang="en">Daily activity</rdfs:label>
+    <rdfs:comment xml:lang="en">The patient/user activities that occur during daytime.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/Activity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/Patient">
+    <rdfs:label xml:lang="en">Patient</rdfs:label>
+    <rdfs:comment xml:lang="en">A user of the type patient, i.e. a cared-for person by one or multiple caregivers.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/User"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/AgeCategory">
+    <rdfs:label xml:lang="en">Age category</rdfs:label>
+    <rdfs:comment xml:lang="en">The age group of a health actor, e.g. old or young.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/ServiceGrounding">
+    <rdfs:label xml:lang="en">Service grounding</rdfs:label>
+    <rdfs:comment xml:lang="en">How to access the service.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4envi/FrequencyMeasurement">
+    <rdfs:label xml:lang="en">Frequency measurement</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/saref4envi/"/>
+    <rdfs:comment xml:lang="en">Represents the measured value made over a frequency property. It is also linked to the frequency unit of measure in which the value is expressed and the timestamp of the measurement.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/HealthDevice">
+    <rdfs:label xml:lang="en">Health Device</rdfs:label>
+    <rdfs:comment xml:lang="en">Health devices, e.g. BAN hub, health sensor/actuator/Wereable.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/core/Device"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/NocturnalActivity">
+    <rdfs:label xml:lang="en">Nocturnal activity</rdfs:label>
+    <rdfs:comment xml:lang="en">The patient/user activities that occur during the night.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/Activity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/ssn/systems/Precision"/>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/MeasurementFunction">
+    <rdfs:label xml:lang="en">Measurement function</rdfs:label>
+    <rdfs:comment xml:lang="en">The functionality necessary to accomplish the measurement task for which a measurement-related health Device (e.g. Sensor, Wearable, ECG Device...) is designed for, e.g. a heart rate measurement function.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/core/Function"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/ServiceProcess">
+    <rdfs:label xml:lang="en">Service process</rdfs:label>
+    <rdfs:comment xml:lang="en">How the service works.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/Activity">
+    <rdfs:label xml:lang="en">Activity</rdfs:label>
+    <rdfs:comment xml:lang="en">The activity of a patient/user, i.e. daily and nocturnal activities.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/core/Measurement"/>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/Ban">
+    <rdfs:label xml:lang="en">BAN</rdfs:label>
+    <rdfs:comment xml:lang="en">Body Area Network.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/OperatingConstraint">
+    <rdfs:label xml:lang="en">Operating constraint</rdfs:label>
+    <rdfs:comment xml:lang="en">An empty container for describing the operating constraints of a device, e.g. recommended humidity and temperature range...</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/AlarmCommand">
+    <rdfs:label xml:lang="en">Alarm command</rdfs:label>
+    <rdfs:comment xml:lang="en">A command corresponding to alarm sending.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/core/Command"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/core/Task"/>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/PeriodicBanCommunicationType">
+    <rdfs:label xml:lang="en">Periodic BAN communication type</rdfs:label>
+    <rdfs:comment xml:lang="en">BAN communication function way of working of the type periodic.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/BanCommunicationType"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/EventDrivenBanCommunicationType">
+    <rdfs:label xml:lang="en">Event driven BAN communication type</rdfs:label>
+    <rdfs:comment xml:lang="en">BAN communication function way of working of the type event driven.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/BanCommunicationType"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/TimeSeriesMeasurement">
+    <rdfs:label xml:lang="en">Time series measurement</rdfs:label>
+    <rdfs:comment xml:lang="en">A sequence of data in a successive equally spaced points in time. The O&amp;M ontology (ISO 19156) defines Time Series Observation  as an “observation whose result is a time-series”, while both Hl7 aECG and DICOM standards define the Series element as a sequence of data sharing a common frame of reference. In SAREF4health this concept is termed as Time Series Measurements since this sequence of data refers to time series measured by a health device.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasValues"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="https://saref.etsi.org/saref4envi/FrequencyMeasurement"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4envi/hasFrequencyMeasurement"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Measurement"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/BanApplicationDomain">
+    <rdfs:label xml:lang="en">BAN application domain</rdfs:label>
+    <rdfs:comment xml:lang="en">The BAN application domain, e.g. healthcare, telemedicine, assisted living, sport training, safety and emergency...</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/PowerSource">
+    <rdfs:label xml:lang="en">Power source</rdfs:label>
+    <rdfs:comment xml:lang="en">The power sources of a health device, mainly describing energy source and battery related capabilities of the health device (number of power source, source type, rechargeable or not...).</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/Data">
+    <rdfs:label xml:lang="en">Data</rdfs:label>
+    <rdfs:comment xml:lang="en">A function has one or many data, for example a tracking function shall include latitude, longitude and speed data.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/Mode">
+    <rdfs:label xml:lang="en">Mode</rdfs:label>
+    <rdfs:comment xml:lang="en">The dynamic characteristics of a eHealth Device that vary during its lifetime or its BAN lifetime.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/ValidityConstraint">
+    <rdfs:label xml:lang="en">Validity constraint</rdfs:label>
+    <rdfs:comment xml:lang="en">Data may have validity constraint such as allowable value range.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4ehaw/DataConstraint"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/MeasurementCollectionSession">
+    <rdfs:label xml:lang="en">Measurement collection session</rdfs:label>
+    <rdfs:comment xml:lang="en">Task in which a health actor (mainly a patient or a user) is subject of measurement collection (recording) by both some measurement-related health Device (e.g. Sensor, Wearable, ECG Device...) and a health actor (mainly a caregiver).</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Task"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/User">
+    <rdfs:label xml:lang="en">User</rdfs:label>
+    <rdfs:comment xml:lang="en">A health actor (patient included) that can be equiped with BANs or health devices for monitoring, control, care (specific case of patients) or support purposes.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/HealthActor"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/core/NotifyCommand"/>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/ComputingPower">
+    <rdfs:label xml:lang="en">Computing power</rdfs:label>
+    <rdfs:comment xml:lang="en">The computing power capabilities of a Health device.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/Contact">
+    <rdfs:label xml:lang="en">Contact</rdfs:label>
+    <rdfs:comment xml:lang="en">A BAN has one or multiple contacts, i.e. some health actors, e.g. the patient or user that is monitored through this BAN, the caregiver that is using this BAN for monitoring purposes...</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/HealthActor"/>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/CommunicationProtocol">
+    <rdfs:label xml:lang="en">Communication protocol</rdfs:label>
+    <rdfs:comment xml:lang="en">The communication protocol, e.g. BLE, serial, Ethernet...</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/ImplantLocation">
+    <rdfs:label xml:lang="en">Implant location</rdfs:label>
+    <rdfs:comment xml:lang="en">Implant Device (i.e. in body health device) position.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4ehaw/Location"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/Caregiver">
+    <rdfs:label xml:lang="en">Caregiver</rdfs:label>
+    <rdfs:comment xml:lang="en">For caregivers modelling.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/HealthActor"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/HealthActuator">
+    <rdfs:label xml:lang="en">Health actuator</rdfs:label>
+    <rdfs:comment xml:lang="en">Health-related Actuator, equivalent to SAREF Actuator.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4ehaw/HealthDevice"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/Interface">
+    <rdfs:label xml:lang="en">Interface</rdfs:label>
+    <rdfs:comment xml:lang="en">Used for modelling the interfaces of a health device (e.g. Bluetooth, UWB, IEEE 802.15.6, serial interface...).</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/HealthActor">
+    <rdfs:label xml:lang="en">Health actor</rdfs:label>
+    <rdfs:comment xml:lang="en">The eHealth actors like e.g. caregivers, patients, users, helpers...</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/Habit">
+    <rdfs:label xml:lang="en">Habit</rdfs:label>
+    <rdfs:comment xml:lang="en">Defined for users (that can in particular be patients) habits modelling, e.g. smoking, alcohol drinking, overeating, undereating...</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/DeviceCharacteristic">
+    <rdfs:label xml:lang="en">Device characteristic</rdfs:label>
+    <rdfs:comment xml:lang="en">A health device has device characteristic describing the physical characteristics of the health device.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/FunctionalDevice">
+    <rdfs:label xml:lang="en">Functional device</rdfs:label>
+    <rdfs:comment xml:lang="en">Functional Devices are non-purely eHealth/ageing-well devices that can be used for modelling/detecting activities or behaviours of patients/users, like for example beacons that can detect indoor positioning of a patient in a house.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Device"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/HealthWearable">
+    <rdfs:label xml:lang="en">Health wereable</rdfs:label>
+    <rdfs:comment xml:lang="en">Health-related Wearable, equivalent to SAREF4WEAR Wearable.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4ehaw/HealthDevice"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/core/Service"/>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/OnRequestBanCommunicationType">
+    <rdfs:label xml:lang="en">On request BAN communication type</rdfs:label>
+    <rdfs:comment xml:lang="en">BAN communication function way of working of the type on request.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/BanCommunicationType"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4envi/Frequency"/>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/ServiceProfile">
+    <rdfs:label xml:lang="en">Service profile</rdfs:label>
+    <rdfs:comment xml:lang="en">What the service does.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/ReminderCommand">
+    <rdfs:label xml:lang="en">Reminder command</rdfs:label>
+    <rdfs:comment xml:lang="en">Command used for sending reminder notifications to health actors, e.g. patients, users or Caregivers.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/NotifyCommand"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/ResponsibleParty">
+    <rdfs:label xml:lang="en">Responsible party</rdfs:label>
+    <rdfs:comment xml:lang="en">The legal entity responsible for a BAN, i.e. to contact in case of problem.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4ehaw/HealthActor"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/ChronicDisease">
+    <rdfs:label xml:lang="en">Chronic disease</rdfs:label>
+    <rdfs:comment xml:lang="en">For chronic disease modelling, e.g. diabetes, asthma...</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://saref.etsi.org/saref4ehaw/BanCommunicationType">
+    <rdfs:label xml:lang="en">BAN Communication type</rdfs:label>
+    <rdfs:comment xml:lang="en">The BAN communication function type, i.e. periodic, event driven or on request.</rdfs:comment>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/uom">
+    <rdfs:label xml:lang="en">unit of measurement</rdfs:label>
+    <rdfs:comment xml:lang="en">Defines the unit of measure of a measurement function.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/MeasurementFunction"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasOperatingConstraint">
+    <rdfs:label xml:lang="en">has operating constraint</rdfs:label>
+    <rdfs:comment xml:lang="en">The operating constraints of a health device, e.g. recommended humidity and temperature range...</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/OperatingConstraint"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/HealthDevice"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasMode">
+    <rdfs:label xml:lang="en">has mode</rdfs:label>
+    <rdfs:comment xml:lang="en">Each device has modes of operations that model its dynamic characteristic varying during its lifetime, e.g. active, hold, beacon...</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/Mode"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/DeviceCharacteristic"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasContact">
+    <rdfs:label xml:lang="en">has contact</rdfs:label>
+    <rdfs:comment xml:lang="en">A BAN has one or multiple contacts (e.g. the patient or user that is monitored through this BAN, the caregiver that is using this BAN for monitoring purposes).</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/Contact"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Ban"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasActivity">
+    <rdfs:label xml:lang="en">has activity</rdfs:label>
+    <rdfs:comment xml:lang="en">A health actor may have one or multiple activities.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/Activity"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/HealthActor"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/inCurrentMode">
+    <rdfs:label xml:lang="en">in current mode</rdfs:label>
+    <rdfs:comment xml:lang="en">Each eHealth device has modes of operations that model its dynamic characteristic varying during its lifetime, e.g. active, hold, beacon...</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/Mode"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/HealthDevice"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/contains">
+    <rdfs:label xml:lang="en">contains</rdfs:label>
+    <rdfs:comment xml:lang="en">A Body Area Network or BAN contains one or multiple health devices</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/HealthDevice"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Ban"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasPatient">
+    <rdfs:label xml:lang="en">has patient</rdfs:label>
+    <rdfs:comment xml:lang="en">A caregiver may have one or multiple patients.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/Patient"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Caregiver"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/usesBan">
+    <rdfs:label xml:lang="en">uses ban</rdfs:label>
+    <rdfs:comment xml:lang="en">A health actor (e.g. a caregiver, a patient or a helper) uses a BAN for collecting, aggregating and relaying vital parameters.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/Ban"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/HealthActor"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/precision">
+    <rdfs:label xml:lang="en">precision</rdfs:label>
+    <rdfs:comment xml:lang="en">Precision refers to the degree of reproducibility of a measured quantity (when the same quantity is measured several times how close are the measurements from each other).</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/systems/Precision"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/MeasurementFunction"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasPowerSource">
+    <rdfs:label xml:lang="en">has power source</rdfs:label>
+    <rdfs:comment xml:lang="en">A health device characteristic is its  power sources, mainly describing energy source and battery related capabilities of the health device (number of power source, source type, rechargeable or not, available power level...).</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/PowerSource"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/DeviceCharacteristic"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasInterface">
+    <rdfs:label xml:lang="en">has interface</rdfs:label>
+    <rdfs:comment xml:lang="en">A health device has one or multiple interfaces (Bluetooth, UWB, IEEE 802.15.6, serial interface...).</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/Interface"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/HealthDevice"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasMeasurement">
+    <rdfs:label xml:lang="en">has measurement</rdfs:label>
+    <rdfs:comment xml:lang="en">Defines the relationship between data that has measurement.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/core/Measurement"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Data"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/interfaceProtocol">
+    <rdfs:label xml:lang="en">interface protocol</rdfs:label>
+    <rdfs:comment xml:lang="en">The interface communication protocol can be e.g. BLE, serial, Ethernet...</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/CommunicationProtocol"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Interface"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasImpairment">
+    <rdfs:label xml:lang="en">has impairment</rdfs:label>
+    <rdfs:comment xml:lang="en">The impairment type of a user and a patient (as sub-class of user it also inherits impairment), e.g. aural, skeletal, ocular, mobility, intellectual...</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/Impairment"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/User"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/followsUser">
+    <rdfs:label xml:lang="en">follows user</rdfs:label>
+    <rdfs:comment xml:lang="en">A helper may follow one or multiple users that can in particular be patients.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/User"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Helper"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/presents">
+    <rdfs:label xml:lang="en">presents</rdfs:label>
+    <rdfs:comment xml:lang="en">A service presents a service profile (what the service does).</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/ServiceProfile"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/core/Service"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasDataConstraint">
+    <rdfs:label xml:lang="en">has data constraint</rdfs:label>
+    <rdfs:comment xml:lang="en">Data has data constraints (validity, legal...).</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/DataConstraint"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Data"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasHabit">
+    <rdfs:label xml:lang="en">has habit</rdfs:label>
+    <rdfs:comment xml:lang="en">The habits of a user and a patient (as sub-class of user it also inherits habit), e.g. smoking or overeating.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/Habit"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/User"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasComputingPower">
+    <rdfs:label xml:lang="en">has computing power</rdfs:label>
+    <rdfs:comment xml:lang="en">A health device characteristic describing the processing power or capabilities of the device (e.g. processor ID and manufacturer, duty cycle, available flash/RM memory, maximum flash/RAM memory...).</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/ComputingPower"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/DeviceCharacteristic"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasParticipant">
+    <rdfs:label xml:lang="en">has participant</rdfs:label>
+    <rdfs:comment xml:lang="en">A measurement session has health actors as participants (caregiver controling the session, patient monitored during the session).</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/HealthActor"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/MeasurementCollectionSession"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasData">
+    <rdfs:label xml:lang="en">has data</rdfs:label>
+    <rdfs:comment xml:lang="en">A function has one or many data, for example a tracking function shall include latitude, longitude and speed data.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/Data"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/core/Function"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasAgeCategory">
+    <rdfs:label xml:lang="en">has age category</rdfs:label>
+    <rdfs:comment xml:lang="en">The age group of a health actor, e.g. old or young.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/AgeCategory"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/HealthActor"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasBanCommunicationType">
+    <rdfs:label xml:lang="en">has BAN communication type</rdfs:label>
+    <rdfs:comment xml:lang="en">A BAN has a BAN communication type that is the type of communication carried out between BAN devices and BAN Hub.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/BanCommunicationType"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Ban"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasResponsibleParty">
+    <rdfs:label xml:lang="en">has responsible party</rdfs:label>
+    <rdfs:comment xml:lang="en">A BAN that has a responsible party which plays the role of the legal entity responsible for this BAN (e.g. to contact in case of problem). It should be an organization or a person.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/ResponsibleParty"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Ban"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/isAttachedTo">
+    <rdfs:label xml:lang="en">is attached to</rdfs:label>
+    <rdfs:comment xml:lang="en">A health Device is attached to a health actor such as a patient, a user and or a caregiver.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/HealthActor"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/HealthDevice"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasBanApplicationDomain">
+    <rdfs:label xml:lang="en">has BAN application domain</rdfs:label>
+    <rdfs:comment xml:lang="en">The BAN application domain - healthcare, telemedicine, assisted living, sport training, pervasive computing, safety and emergency... -.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/BanApplicationDomain"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Ban"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasTimeSeriesMesurement">
+    <rdfs:label xml:lang="en">has time series measurement</rdfs:label>
+    <rdfs:comment xml:lang="en">Data has time series measurements, a sequence taken at successive equally spaced points in time.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/TimeSeriesMeasurement"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Data"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/consistsOf">
+    <rdfs:label xml:lang="en">consists of</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+    <rdfs:comment xml:lang="en">A relationship indicating a composite entity that consists of other entities (e.g., a temperature/humidity sensor that consists of a temperature sensor and a humidity sensor)</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasLocation">
+    <rdfs:label xml:lang="en">has location</rdfs:label>
+    <rdfs:comment xml:lang="en">The location of an eHealth device, i.e. its position against the body (on body surface or in the body - implant -) and its physical location (i.e. its postal address and/or its current geolocation geolocation when available).</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/Location"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/HealthDevice"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasPosture">
+    <rdfs:label xml:lang="en">has posture</rdfs:label>
+    <rdfs:comment xml:lang="en">The posture of a user and a patient (as sub-class of user it also inherits habit), e.g. exercising, lying, running, sitting, walking...</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/Posture"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/User"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4envi/hasFrequencyMeasurement">
+    <rdfs:label xml:lang="en">has frequency measurement</rdfs:label>
+    <rdfs:comment xml:lang="en">A measurement fucntion, in case of complex measurement like time series, has frequency measurement, i.e. the frequency in which it makes measurements.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4envi/FrequencyMeasurement"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/MeasurementFunction"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasDeviceCharacteristic">
+    <rdfs:label xml:lang="en">has device characteristic</rdfs:label>
+    <rdfs:comment xml:lang="en">A health device has device characteristic describing the physical characteristics of the health device, e.g. its dimensions.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/DeviceCharacteristic"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/HealthDevice"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasHub">
+    <rdfs:label xml:lang="en">has hub</rdfs:label>
+    <rdfs:comment xml:lang="en">A Body Area Network or BAN elects one hub that mainly plays the role of both a data concentrator and a network gateway.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/BanHub"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Ban"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/groundingProtocol">
+    <rdfs:label xml:lang="en">grounding protocol</rdfs:label>
+    <rdfs:comment xml:lang="en">The grounding protocol is the protocol used to transmit the message by the service, e.g. BLE.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/CommunicationProtocol"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/ServiceGrounding"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasChronicDisease">
+    <rdfs:label xml:lang="en">has chronic disease</rdfs:label>
+    <rdfs:comment xml:lang="en">A patient can suffer from one or more chronic disease like Diabetes, azma, etc.</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/ChronicDisease"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Patient"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/supports">
+    <rdfs:label xml:lang="en">supports</rdfs:label>
+    <rdfs:comment>A service supports a service grounding (how to access the service).</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/ServiceGrounding"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/core/Service"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasPhysicalLocation">
+    <rdfs:label xml:lang="en">has physical location</rdfs:label>
+    <rdfs:comment xml:lang="en">Defines the physical location of the patient, i.e. its postal address and/or its geolocation (when available).</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/PhysicalLocation"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Patient"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4ehaw/isDescribedBy">
+    <rdfs:label xml:lang="en">is described by</rdfs:label>
+    <rdfs:comment xml:lang="en">A service is described by a service process (how the service works).</rdfs:comment>
+    <rdfs:range rdf:resource="https://saref.etsi.org/saref4ehaw/ServiceProcess"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/core/Service"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/activityKind">
+    <rdfs:label xml:lang="en">activity kind</rdfs:label>
+    <rdfs:comment xml:lang="en">The kind of atcivities that a patient or a user can have, i.e. e.g. sleeping in bed, sitting on a chair, using the shower, etc.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Activity"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/serviceName">
+    <rdfs:label xml:lang="en">service name</rdfs:label>
+    <rdfs:comment xml:lang="en">The service name identify the offered service, e.g heart rate.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/ServiceProfile"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/minimumValue">
+    <rdfs:label xml:lang="en">minimum value</rdfs:label>
+    <rdfs:comment xml:lang="en">The minimum allowable value  of a measurement.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/ValidityConstraint"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/serviceDescription">
+    <rdfs:label xml:lang="en">service description</rdfs:label>
+    <rdfs:comment xml:lang="en">The service description should describe the offered service like e.g. heart rate measurement.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/ServiceProfile"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/banDensity">
+    <rdfs:label xml:lang="en">BAN density</rdfs:label>
+    <rdfs:comment xml:lang="en">The BAN density, i.e. its number of node.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Ban"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasOutput">
+    <rdfs:label xml:lang="en">has output</rdfs:label>
+    <rdfs:comment xml:lang="en">The output is e.g. the calculated value returned by the process, e.g the posture of a patient.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/ServiceProcess"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/lastName">
+    <rdfs:label xml:lang="en">last name</rdfs:label>
+    <rdfs:comment xml:lang="en">The familly name of a health actor.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/HealthActor"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/availableRam">
+    <rdfs:label xml:lang="en">available ram</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates the available volatile memory space (in byte) of a health device. It is a dynamic attribute.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/HealthDevice"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/latency">
+    <rdfs:label xml:lang="en">latency</rdfs:label>
+    <rdfs:comment xml:lang="en">The latency is the time interval between the stimulation and response of a measurement function (in ms).</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/MeasurementFunction"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/availableFlash">
+    <rdfs:label xml:lang="en">available flash</rdfs:label>
+    <rdfs:comment xml:lang="en">The available flash memory (in byte) of a health device. It is a dynamic attribute.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/HealthDevice"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/format">
+    <rdfs:label xml:lang="en">format</rdfs:label>
+    <rdfs:comment xml:lang="en">The format is a URI for a standard format like e.g. integer.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Data"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/portNumber">
+    <rdfs:label xml:lang="en">port number</rdfs:label>
+    <rdfs:comment xml:lang="en">The port number used to offer the service.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/ServiceGrounding"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasCalculationMethod">
+    <rdfs:label xml:lang="en">has calculation method</rdfs:label>
+    <rdfs:comment xml:lang="en">The service process has a calculation method to get the output or result, e.g. the calculation formula to determine the posture of a patient.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/ServiceProcess"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/frequency">
+    <rdfs:label xml:lang="en">frequency</rdfs:label>
+    <rdfs:comment xml:lang="en">The frequency is the number of instructions an embedded processor - within a health device - can perform per second (MIPS).</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/ComputingPower"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/banGeolocation">
+    <rdfs:label xml:lang="en">BAN geolocation</rdfs:label>
+    <rdfs:comment xml:lang="en">The geolocation of the BAN, when available and needed, shall be given relatively to the current location - geolocation as standardized ISO 6709, e.g. +40.75-074.00/  - of the patient wearing the BAN.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Ban"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/isGateway">
+    <rdfs:label xml:lang="en">is gateway</rdfs:label>
+    <rdfs:comment xml:lang="en">This boolean variable indicates if the interface is a gateway or not.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Interface"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/geolocation">
+    <rdfs:label xml:lang="en">geolocation</rdfs:label>
+    <rdfs:comment xml:lang="en">The geolocation, when available, shall be given relatively to the current location - geolocation as standardized ISO 6709, e.g. +40.75-074.00/ -.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/PhysicalLocation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/dataSize">
+    <rdfs:label xml:lang="en">data size</rdfs:label>
+    <rdfs:comment xml:lang="en">The data size represents the size of the data in bytes</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Data"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/velocity">
+    <rdfs:label xml:lang="en">velocity</rdfs:label>
+    <rdfs:comment xml:lang="en">The velocity of a moving device (in m/s).</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/DeviceCharacteristic"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/faultTolerence">
+    <rdfs:label xml:lang="en">fault tolerence</rdfs:label>
+    <rdfs:comment xml:lang="en">Defines the error rate tolerated for a measurement function.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/MeasurementFunction"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/dutyCycle">
+    <rdfs:label xml:lang="en">duty cycle</rdfs:label>
+    <rdfs:comment xml:lang="en">The duty cycle for each health device embedded processor, in percent.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/ComputingPower"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/powerSourceType">
+    <rdfs:label xml:lang="en">power source type</rdfs:label>
+    <rdfs:comment xml:lang="en">The type of power source of a health device. It can be solar, battery, electricity...</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/PowerSource"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasGender">
+    <rdfs:label xml:lang="en">has gender</rdfs:label>
+    <rdfs:comment xml:lang="en">The gender of a health actor.</rdfs:comment>
+    <rdfs:range>
+      <rdfs:Datatype>
+        <owl:oneOf>
+          <rdf:List>
+            <rdf:rest>
+              <rdf:List>
+                <rdf:rest>
+                  <rdf:List>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    <rdf:first>undetermined</rdf:first>
+                  </rdf:List>
+                </rdf:rest>
+                <rdf:first>male</rdf:first>
+              </rdf:List>
+            </rdf:rest>
+            <rdf:first>female</rdf:first>
+          </rdf:List>
+        </owl:oneOf>
+      </rdfs:Datatype>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/HealthActor"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/isDerivedData">
+    <rdfs:label xml:lang="en">is derived data</rdfs:label>
+    <rdfs:comment xml:lang="en">Is derived data is a Boolean property to indicate if the data is a row data or a calculated/derived data from other one.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Data"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/activityDuration">
+    <rdfs:label xml:lang="en">activity duration</rdfs:label>
+    <rdfs:comment xml:lang="en">The duration of an activity, in second.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Activity"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/deviceCharacteristicName">
+    <rdfs:label xml:lang="en">device characteristic name</rdfs:label>
+    <rdfs:comment xml:lang="en">The commercial name of a device.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/DeviceCharacteristic"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/transmissionRate">
+    <rdfs:label xml:lang="en">transmission rate</rdfs:label>
+    <rdfs:comment xml:lang="en">The transmission rate of the interface, i.e. the number of bits transmitted per second (usually expressed in kbps or Mbps).</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Interface"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasPrecondition">
+    <rdfs:label xml:lang="en">has precondition</rdfs:label>
+    <rdfs:comment xml:lang="en">The conditions that are imposed over the inputs of the process and the process must hold to be successufully invoked.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/ServiceProcess"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/maximumFlash">
+    <rdfs:label xml:lang="en">maximum flash</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates the maximum flash memory space (in byte) of a health device.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/ComputingPower"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/dimension">
+    <rdfs:label xml:lang="en">dimension</rdfs:label>
+    <rdfs:comment xml:lang="en">The dimension of the device i.e. height*weight*length string.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/DeviceCharacteristic"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/phenomena">
+    <rdfs:label xml:lang="en">phenomena</rdfs:label>
+    <rdfs:comment xml:lang="en">The BAN monitors a specific phenomenon (burned calories during exercises, glucose level...).</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Ban"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/rechargeable">
+    <rdfs:label xml:lang="en">rechargeable</rdfs:label>
+    <rdfs:comment xml:lang="en">This boolean variable indicates if the power source is rechargeable or not, e.g. a rechargeable battery.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/PowerSource"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasManufacturer">
+    <rdfs:label xml:lang="en">has manufacturer</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+    <rdfs:comment xml:lang="en">A relationship identifying the manufacturer of an entity (e.g., device). The value is expected to be a string or a string with language tag.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasValues">
+    <rdfs:label xml:lang="en">has values</rdfs:label>
+    <rdfs:comment xml:lang="en">A relationship defining the set of values (an ordered array of numbers) of a certain property, e.g., heart rate. Attention: to assure ordering in the serialization format, it is necessary to use either rdf:Seq (RDF/XML) or @list (JSON-LD).</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/TimeSeriesMeasurement"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasMbox">
+    <rdfs:label xml:lang="en">has mbox</rdfs:label>
+    <rdfs:comment xml:lang="en">An email address (or mail box) of an health actor: a URI with the 'mailto' scheme as defined by RFC 6068.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/HealthActor"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/lifetime">
+    <rdfs:label xml:lang="en">lifetime</rdfs:label>
+    <rdfs:comment xml:lang="en">The BAN lifetime (in month), e.g. BAN for entertainment purposes should have a lifetime of weeks or few years whereas BAN dedicated for assisted living or anomaly monitoring should last for many years.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Ban"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/phone">
+    <rdfs:label xml:lang="en">phone</rdfs:label>
+    <rdfs:comment xml:lang="en">The phone number of a health actor, in international format.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/HealthActor"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/maximumValue">
+    <rdfs:label xml:lang="en">maximum value</rdfs:label>
+    <rdfs:comment xml:lang="en">The maximum allowable value of a measurement.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/ValidityConstraint"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/interfaceAddress">
+    <rdfs:label xml:lang="en">interface address</rdfs:label>
+    <rdfs:comment xml:lang="en">The interface address. The interface may have many addresses like MAC address, IP address or others.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Interface"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasEffect">
+    <rdfs:label xml:lang="en">has effect</rdfs:label>
+    <rdfs:comment xml:lang="en">The effect of a service can be an alert, nothing, an activation of another process...</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/ServiceProcess"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/remainingBatteryLevel">
+    <rdfs:label xml:lang="en">remaining battery level</rdfs:label>
+    <rdfs:comment xml:lang="en">The level of remaining battery (if any : in percent) for a health device. It is a dynamic attribute.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/HealthDevice"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/interfaceDescription">
+    <rdfs:label xml:lang="en">interface description</rdfs:label>
+    <rdfs:comment xml:lang="en">The interface type description.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Interface"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/banTopology">
+    <rdfs:label xml:lang="en">BAN topology</rdfs:label>
+    <rdfs:comment xml:lang="ne">The BAN physical topology type, i.e Adhoc or Star or Mesh or Others.</rdfs:comment>
+    <rdfs:range>
+      <rdfs:Datatype>
+        <owl:oneOf>
+          <rdf:List>
+            <rdf:rest>
+              <rdf:List>
+                <rdf:rest>
+                  <rdf:List>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    <rdf:first>Star</rdf:first>
+                  </rdf:List>
+                </rdf:rest>
+                <rdf:first>Mesh</rdf:first>
+              </rdf:List>
+            </rdf:rest>
+            <rdf:first>Adhoc</rdf:first>
+          </rdf:List>
+        </owl:oneOf>
+      </rdfs:Datatype>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Ban"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/dob">
+    <rdfs:label xml:lang="en">date of birth</rdfs:label>
+    <rdfs:comment xml:lang="en">The date of birth of a health actor.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/HealthActor"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/serialNb">
+    <rdfs:label xml:lang="en">serial number</rdfs:label>
+    <rdfs:comment xml:lang="en">The serial number of a health device.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/HealthDevice"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/modeName">
+    <rdfs:label xml:lang="en">mode name</rdfs:label>
+    <rdfs:comment xml:lang="en">The mode name of a device, e.g. sleeping.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/Mode"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/maximumRam">
+    <rdfs:label xml:lang="en">maximum ram</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates the maximum volatile memory space (in byte) of a health device.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/ComputingPower"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasResult">
+    <rdfs:label xml:lang="en">has result</rdfs:label>
+    <rdfs:comment xml:lang="en">The process can have many results for the same output. Those results may include a message that should be displayed, an alert...</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/ServiceProcess"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/postalAddress">
+    <rdfs:label xml:lang="en">postal address</rdfs:label>
+    <rdfs:comment xml:lang="en">Defines the postal address.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/PhysicalLocation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/firstName">
+    <rdfs:label xml:lang="en">first name</rdfs:label>
+    <rdfs:comment xml:lang="en">The first name of a health actor.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/HealthActor"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/sendingFrequency">
+    <rdfs:label xml:lang="en">sending frequency</rdfs:label>
+    <rdfs:comment xml:lang="en">Defines the sending frequency (in ms), at an health device level, in case of pariodic BAN communication type.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/PeriodicBanCommunicationType"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/sampleTime">
+    <rdfs:label xml:lang="en">sample time</rdfs:label>
+    <rdfs:comment xml:lang="en">The sample time of a measurement function (a discrete integer).</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/MeasurementFunction"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4ehaw/hasInput">
+    <rdfs:label xml:lang="en">has input</rdfs:label>
+    <rdfs:comment xml:lang="en">The service process has data input like e.g. the patient ID, the timestamp, the read value from a sensor...</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://saref.etsi.org/saref4ehaw/ServiceProcess"/>
+  </owl:DatatypeProperty>
+  <s4ehaw:Posture rdf:about="https://saref.etsi.org/saref4ehaw/Sitting">
+    <rdfs:label xml:lang="en">Sitting</rdfs:label>
+    <rdfs:comment xml:lang="en">Posture of a sitting user.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:Posture>
+  <s4ehaw:BanApplicationDomain rdf:about="https://saref.etsi.org/saref4ehaw/Telemedicine">
+    <rdfs:label xml:lang="en">Telemedicine</rdfs:label>
+    <rdfs:comment xml:lang="en">Telemedicine sub-domain for BAN application.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:BanApplicationDomain>
+  <s4ehaw:BodySurfaceLocation rdf:about="https://saref.etsi.org/saref4ehaw/ArmpitLocation">
+    <rdfs:label xml:lang="en">Armpit location</rdfs:label>
+    <rdfs:comment xml:lang="en">Armpit location, a user body surface location.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:BodySurfaceLocation>
+  <s4ehaw:BanApplicationDomain rdf:about="https://saref.etsi.org/saref4ehaw/Safety">
+    <rdfs:label xml:lang="en">Safety</rdfs:label>
+    <rdfs:comment xml:lang="en">Safety sub-domain for BAN application.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:BanApplicationDomain>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+  <s4ehaw:ChronicDisease rdf:about="https://saref.etsi.org/saref4ehaw/Asthma">
+    <rdfs:label xml:lang="en">Asthma</rdfs:label>
+    <rdfs:comment xml:lang="en">Asthma, a chronical disease that some users can have.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:ChronicDisease>
+  <s4ehaw:BanApplicationDomain rdf:about="https://saref.etsi.org/saref4ehaw/SportTraining">
+    <rdfs:label xml:lang="en">Sport Training</rdfs:label>
+    <rdfs:comment xml:lang="en">Sport training sub-domain for BAN application.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:BanApplicationDomain>
+  <s4ehaw:BanApplicationDomain rdf:about="https://saref.etsi.org/saref4ehaw/Prevention">
+    <rdfs:label xml:lang="en">Prevention</rdfs:label>
+    <rdfs:comment xml:lang="en">Prevention sub-domain (e.g. preventive health) for BAN application.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:BanApplicationDomain>
+  <s4ehaw:BanApplicationDomain rdf:about="https://saref.etsi.org/saref4ehaw/PervasiveComputing">
+    <rdfs:label xml:lang="en">Pervasive computing</rdfs:label>
+    <rdfs:comment xml:lang="en">Pervasive computing sub-domain for BAN application.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:BanApplicationDomain>
+  <s4ehaw:Impairment rdf:about="https://saref.etsi.org/saref4ehaw/MobilityImpairment">
+    <rdfs:label xml:lang="en">Mobility impairment</rdfs:label>
+    <rdfs:comment xml:lang="en">Mobility impairment (User level).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:Impairment>
+  <s4ehaw:Habit rdf:about="https://saref.etsi.org/saref4ehaw/Overeating">
+    <rdfs:label xml:lang="en">Overeating</rdfs:label>
+    <rdfs:comment xml:lang="en">Overeating habit (User level).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:Habit>
+  <s4ehaw:AgeCategory rdf:about="https://saref.etsi.org/saref4ehaw/Young">
+    <rdfs:label xml:lang="en">Young</rdfs:label>
+    <rdfs:comment xml:lang="en">Young, one user age category.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:AgeCategory>
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+  <s4ehaw:Habit rdf:about="https://saref.etsi.org/saref4ehaw/Undereating">
+    <rdfs:label xml:lang="en">Undereating</rdfs:label>
+    <rdfs:comment xml:lang="en">Undereating habit (User level).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:Habit>
+  <s4ehaw:Habit rdf:about="https://saref.etsi.org/saref4ehaw/AlcoholDrinking">
+    <rdfs:label xml:lang="en">Alcohol drinking</rdfs:label>
+    <rdfs:comment xml:lang="en">Alcohol drinking habit (User level).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:Habit>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+  <s4ehaw:BanApplicationDomain rdf:about="https://saref.etsi.org/saref4ehaw/Emergency">
+    <rdfs:label xml:lang="en">Emergency</rdfs:label>
+    <rdfs:comment xml:lang="en">Emergency sub-domain for BAN application.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:BanApplicationDomain>
+  <s4ehaw:Posture rdf:about="https://saref.etsi.org/saref4ehaw/Running">
+    <rdfs:label xml:lang="en">Running</rdfs:label>
+    <rdfs:comment xml:lang="en">Posture of a running user.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:Posture>
+  <s4ehaw:Impairment rdf:about="https://saref.etsi.org/saref4ehaw/AuralImpairment">
+    <rdfs:label xml:lang="en">Aural impairment</rdfs:label>
+    <rdfs:comment xml:lang="en">Aural impairment (User level), i.e. impairments of auditory sensitivity.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:Impairment>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+  <s4ehaw:Posture rdf:about="https://saref.etsi.org/saref4ehaw/Exercising">
+    <rdfs:label xml:lang="en">Exercising</rdfs:label>
+    <rdfs:comment xml:lang="en">Posture of user doing exercises.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:Posture>
+  <s4ehaw:BanApplicationDomain rdf:about="https://saref.etsi.org/saref4ehaw/AssistedLiving">
+    <rdfs:label xml:lang="en">Assisted living</rdfs:label>
+    <rdfs:comment xml:lang="en">Assisted living sub-domain for BAN application.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:BanApplicationDomain>
+  <s4ehaw:Posture rdf:about="https://saref.etsi.org/saref4ehaw/Walking">
+    <rdfs:label xml:lang="en">Walking</rdfs:label>
+    <rdfs:comment xml:lang="en">Posture of a walking user.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:Posture>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+  <s4ehaw:Impairment rdf:about="https://saref.etsi.org/saref4ehaw/SkeletalImpairment">
+    <rdfs:label xml:lang="en">Skeletal impairment</rdfs:label>
+    <rdfs:comment xml:lang="en">Skeletal impairment (User level), e.g. of head and trunk regions, limbs...</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:Impairment>
+  <s4ehaw:BanApplicationDomain rdf:about="https://saref.etsi.org/saref4ehaw/Healthcare">
+    <rdfs:label xml:lang="en">Healthcare</rdfs:label>
+    <rdfs:comment xml:lang="en">Healthcare domain for BAN application.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:BanApplicationDomain>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+  <s4ehaw:ChronicDisease rdf:about="https://saref.etsi.org/saref4ehaw/Diabetes">
+    <rdfs:label xml:lang="en">Diabetes</rdfs:label>
+    <rdfs:comment xml:lang="en">Diabetes, a chronical disease that some users can have.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:ChronicDisease>
+  <s4ehaw:Posture rdf:about="https://saref.etsi.org/saref4ehaw/Lying">
+    <rdfs:label xml:lang="en">Lying</rdfs:label>
+    <rdfs:comment xml:lang="en">Posture of a lying user.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:Posture>
+  <s4ehaw:AgeCategory rdf:about="https://saref.etsi.org/saref4ehaw/Old">
+    <rdfs:label xml:lang="en">Old</rdfs:label>
+    <rdfs:comment xml:lang="en">Old, one user age category.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:AgeCategory>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+  <s4ehaw:Impairment rdf:about="https://saref.etsi.org/saref4ehaw/IntellectualImpairment">
+    <rdfs:label xml:lang="en">Intellectual impairment</rdfs:label>
+    <rdfs:comment xml:lang="en">Skeletal impairment (User level), e.g. ...</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:Impairment>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+  <s4ehaw:Habit rdf:about="https://saref.etsi.org/saref4ehaw/Smoking">
+    <rdfs:label xml:lang="en">Smoking</rdfs:label>
+    <rdfs:comment xml:lang="en">Smoking habit (User level).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:Habit>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+  <s4ehaw:Impairment rdf:about="https://saref.etsi.org/saref4ehaw/OcularImpairment">
+    <rdfs:comment xml:lang="en">Ocular impairment (User level).</rdfs:comment>
+    <rdfs:label xml:lang="en">Ocular impairment</rdfs:label>
+    <rdfs:comment xml:lang="en">Ocular impairment (User level), i.e. impamnents of visual acuity.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:Impairment>
+  <s4ehaw:BodySurfaceLocation rdf:about="https://saref.etsi.org/saref4ehaw/WristLocation">
+    <rdfs:label xml:lang="en">Wrist location</rdfs:label>
+    <rdfs:comment xml:lang="en">Wrist, a user body surface location.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </s4ehaw:BodySurfaceLocation>
+</rdf:RDF>

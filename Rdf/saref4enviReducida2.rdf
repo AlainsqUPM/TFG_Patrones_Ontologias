@@ -1,0 +1,789 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://saref.etsi.org/saref4envi/"
+     xml:base="https://saref.etsi.org/saref4envi/"
+     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:saref="https://saref.etsi.org/core/"
+     xmlns:s4envi="https://saref.etsi.org/saref4envi/"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://saref.etsi.org/saref4envi/">
+        <owl:versionIRI rdf:resource="https://saref.etsi.org/saref4envi/v1.1.2/"/>
+        <dcterms:creator rdf:resource="http://purl.org/net/mpoveda"/>
+        <dcterms:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
+        <dcterms:description xml:lang="en">This ontology extends the SAREF ontology for the environment domain, specifically for the light pollution domain, including concepts like photometers, light, etc.</dcterms:description>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-06-05</dcterms:issued>
+        <dcterms:license rdf:resource="https://forge.etsi.org/etsi-software-license"/>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-06-05</dcterms:modified>
+        <dcterms:publisher rdf:resource="https://www.etsi.org/"/>
+        <dcterms:source rdf:resource="https://saref.etsi.org/sources/saref4envi/"/>
+        <dcterms:title xml:lang="en">SAREF extension for environment</dcterms:title>
+        <vann:preferredNamespacePrefix>s4envi</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://saref.etsi.org/saref4envi/</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="en">Information about changes compared to version 1.1.1: 
+ - Updated namespaces for compatibility with SAREF v3.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://www.etsi.org/deliver/etsi_ts/103400_103499/10341002/01.01.02_60/ts_10341002v010102p.pdf"/>
+        <owl:versionInfo>v1.1.2</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#location -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
+        <rdfs:comment xml:lang="en">The relation between something and the point,  or other geometrical thing in space, where it is.  For example, the realtionship between a radio tower and a Point with a given lat and long. Or a relationship between a park and its outline as a closed arc of points, or a road and its location as a arc (a sequence of points). Clearly in practice there will be limit to the accuracy of any such statement, but one would expect an accuracy appropriate for the size of the object and uses such as mapping .</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+        <rdfs:label xml:lang="en">location</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/isMeasuredIn -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isMeasuredIn">
+        <rdfs:comment xml:lang="en">A relation between a measurement and the unit of measure in which the measurement value is expressed.</rdfs:comment>
+        <rdfs:comment xml:lang="en">is measured in</rdfs:comment>
+        <rdfs:isDefinedBy>https://saref.etsi.org/core/</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/makesMeasurement -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/makesMeasurement">
+        <rdfs:comment xml:lang="en">A relation between a sensor and the measurements it makes. Such measurement will link together the valur of the measurement, its unit of measure and the property to which it relates.</rdfs:comment>
+        <rdfs:isDefinedBy>https://saref.etsi.org/core/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">makes measurement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/measuresProperty -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/measuresProperty">
+        <rdfs:comment xml:lang="en">A relation between a sensor and the property o properties it can take measurement about.</rdfs:comment>
+        <rdfs:isDefinedBy>https://saref.etsi.org/core/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">measures property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/relatesToProperty -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/relatesToProperty">
+        <rdfs:comment xml:lang="en">A relation between a measurement and the property such measurement is about.</rdfs:comment>
+        <rdfs:isDefinedBy>https://saref.etsi.org/core/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">relates to property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/affectsProperty -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4envi/affectsProperty">
+        <rdfs:comment xml:lang="en">A relation between an actuator with the property or properties it can act on</rdfs:comment>
+        <rdfs:label xml:lang="en">affects property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/contains -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4envi/contains">
+        <owl:inverseOf rdf:resource="https://saref.etsi.org/saref4envi/isContainedIn"/>
+        <rdfs:comment xml:lang="en">A relation between a physical object and the physical objects that can be contained in it.</rdfs:comment>
+        <rdfs:label xml:lang="en">contains</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/encapsulates -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4envi/encapsulates">
+        <owl:inverseOf rdf:resource="https://saref.etsi.org/saref4envi/hasDigitalRepresentation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="en">A relation between a digital representation and the physical objects it represents.</rdfs:comment>
+        <rdfs:label xml:lang="en">encapsulates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/hasColor -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4envi/hasColor">
+        <rdfs:comment xml:lang="en">A relation between a light emitted and its color.</rdfs:comment>
+        <rdfs:label xml:lang="en">has color</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/hasComponent -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4envi/hasComponent">
+        <owl:inverseOf rdf:resource="https://saref.etsi.org/saref4envi/isComponentOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="en">A relation between a system and the system in which it might be decomposed.</rdfs:comment>
+        <rdfs:label xml:lang="en">has component</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/hasDigitalRepresentation -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4envi/hasDigitalRepresentation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:comment xml:lang="en">A relation between a physical object and the digital representation in which it is encapsulated.</rdfs:comment>
+        <rdfs:label xml:lang="en">has digital representation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/hasFrequencyMeasurement -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4envi/hasFrequencyMeasurement">
+        <rdfs:comment xml:lang="en">The relation between a device and the frequency in which it makes measurements.</rdfs:comment>
+        <rdfs:label xml:lang="en">has frequency measurement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/hasGeometry -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4envi/hasGeometry">
+        <rdfs:comment xml:lang="en">A relation between a light emitted and the shape it is projected in.</rdfs:comment>
+        <rdfs:label xml:lang="en">has geometry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/hasLightPoint -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4envi/hasLightPoint">
+        <rdfs:comment xml:lang="en">A relation between a lamppost and its light points</rdfs:comment>
+        <rdfs:label xml:lang="en">has light point</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/hasTransmissionPeriod -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4envi/hasTransmissionPeriod">
+        <rdfs:comment xml:lang="en">The relation between a device and the period in which it transmit information.</rdfs:comment>
+        <rdfs:label xml:lang="en">has transmission period</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/isAccesibleThrough -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4envi/isAccesibleThrough">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="en">The relation between a digital representation and the service which it is accesible through.</rdfs:comment>
+        <rdfs:label xml:lang="en">is accesible through</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/isComponentOf -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4envi/isComponentOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="en">A relation between a system and the system it belongs to as a component.</rdfs:comment>
+        <rdfs:label xml:lang="en">is component of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/isConnectedTo -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4envi/isConnectedTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:comment xml:lang="en">A relation between a system and the system to which it is connected.</rdfs:comment>
+        <rdfs:label xml:lang="en">is connected to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/isContainedIn -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4envi/isContainedIn">
+        <rdfs:comment xml:lang="en">A relation between a physical object and the physical object in which it might be contained.</rdfs:comment>
+        <rdfs:label xml:lang="en">is contained in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/isProjectedFromHeight -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4envi/isProjectedFromHeight">
+        <rdfs:comment xml:lang="en">A relation between a light and the height measurement from which it is projected.</rdfs:comment>
+        <rdfs:label xml:lang="en">is projected from height</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/isProjectedInDirection -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4envi/isProjectedInDirection">
+        <rdfs:comment xml:lang="en">A relation between a light and the direction in which it is projected.</rdfs:comment>
+        <rdfs:label xml:lang="en">is projected in direction</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/projectsLight -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4envi/projectsLight">
+        <rdfs:comment xml:lang="en">A relation between a lamppost or a light point and the light (or lights) they might project.</rdfs:comment>
+        <rdfs:label xml:lang="en">projects light</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/usesCommunicationInterface -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4envi/usesCommunicationInterface">
+        <rdfs:comment xml:lang="en">A relation between a system and the communication interface it uses.</rdfs:comment>
+        <rdfs:label xml:lang="en">uses communication interface</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/usesCommunicationProtocol -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4envi/usesCommunicationProtocol">
+        <rdfs:comment xml:lang="en">A relation between a system and the communication protocol it uses.</rdfs:comment>
+        <rdfs:label xml:lang="en">uses communication protocol</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://saref.etsi.org/core/hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasDescription">
+        <rdfs:comment xml:lang="en">A relationship providing a description of an entity (e.g., device)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+        <rdfs:label xml:lang="en">has description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasManufacturer -->
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasManufacturer">
+        <rdfs:comment xml:lang="en">A relationship identifying the manufacturer of an entity (e.g., device)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+        <rdfs:label xml:lang="en">has manufacturer</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasTimestamp -->
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasTimestamp">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">A relationship stating the timestamp of an entity (e.g. a measurement).</rdfs:comment>
+        <rdfs:isDefinedBy>https://saref.etsi.org/core/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">has timestamp</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasValue -->
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasValue">
+        <rdfs:comment xml:lang="en">A relationship defining the value of a certain property, e.g., energy or power</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+        <rdfs:label xml:lang="en">has value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/hasCreationDate -->
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4envi/hasCreationDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">A relationship defining the creation date of an entity (e.g., a digital representation).</rdfs:comment>
+        <rdfs:label xml:lang="en">has creation date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/hasFlash -->
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4envi/hasFlash">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">A relationship stating whether a light has flash.</rdfs:comment>
+        <rdfs:label xml:lang="en">has flash</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/hasIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4envi/hasIdentifier">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A relationship providing the identifier of an entity (e.g., digital representation)</rdfs:comment>
+        <rdfs:label xml:lang="en">has identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/hasProjectionAngle -->
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4envi/hasProjectionAngle">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">A relationship defining the projection angle of an entity (e.g., a light).</rdfs:comment>
+        <rdfs:label xml:lang="en">has projection angle</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/hasRevisionNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4envi/hasRevisionNumber">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A relationship defining the revision number of a certain entity (e.g., a device)</rdfs:comment>
+        <rdfs:label xml:lang="en">has revision number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/hasShield -->
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4envi/hasShield">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">A relationship stating whether a lamppost has a shield.</rdfs:comment>
+        <rdfs:label xml:lang="en">has shield</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/hasTag -->
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4envi/hasTag">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A relationship stating the tags that can be assigned to an entity (e.g., a digital representation).</rdfs:comment>
+        <rdfs:label xml:lang="en">has tag</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/hasVersion -->
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/saref4envi/hasVersion">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A relationship defining the version  of a certain entity (e.g., a device)</rdfs:comment>
+        <rdfs:label xml:lang="en">has version</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/FrequencyMeasurement -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4envi/FrequencyMeasurement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/relatesToProperty"/>
+                <owl:hasValue rdf:resource="https://saref.etsi.org/saref4envi/Frequency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Represents the measured value made over a frequency property. It is also linked to the frequency unit of measure in which the value is expressed and the timestamp of the measurement.</rdfs:comment>
+        <rdfs:label xml:lang="en">Frequency measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/PhysicalObject -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4envi/PhysicalObject">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/saref4envi/contains"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/saref4envi/PhysicalObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/saref4envi/isContainedIn"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/saref4envi/PhysicalObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasDescription"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Any Object that has a proper space region.  (Definition extracted from DUL ontology)</rdfs:comment>
+        <rdfs:label xml:lang="en">Physical object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/System -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4envi/System">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/saref4envi/affectsProperty"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://saref.etsi.org/saref4envi/PhysicalObject"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/saref4envi/hasComponent"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://saref.etsi.org/saref4envi/encapsulates"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/saref4envi/isConnectedTo"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/saref4envi/System"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A group of related hardware units or programs or both, especially when dedicated to a single application. (Definition taken from https://en.oxforddictionaries.com/definition/system)</rdfs:comment>
+        <rdfs:label xml:lang="en">System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/centimetre -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/centimetre">
+        <rdfs:label xml:lang="en">Centimetre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/decametre -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/decametre">
+        <rdfs:label xml:lang="en">Decametre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/decimetre -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/decimetre">
+        <rdfs:label xml:lang="en">Decimetre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/hectometre -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/hectometre">
+        <rdfs:label xml:lang="en">Hectometre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/hertz -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/hertz">
+        <rdfs:label xml:lang="en">Hertz</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/kilometre -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/kilometre">
+        <rdfs:label xml:lang="en">Kilometre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/metre -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/metre">
+        <rdfs:label xml:lang="en">Metre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/millimetre -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/millimetre">
+        <rdfs:label xml:lang="en">Milimetre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_day -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_day">
+        <rdfs:label xml:lang="en">Reciprocal day</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_hour -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_hour">
+        <rdfs:label xml:lang="en">Reciprocal hour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time">
+        <rdfs:label xml:lang="en">Reciprocal second</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_year -->
+
+    <owl:NamedIndividual rdf:about="http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_year">
+        <rdfs:label xml:lang="en">Reciprocal year</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/Fluorescence -->
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4envi/Fluorescence">
+        <rdfs:comment xml:lang="en">An individual representing the light property fluorescence.</rdfs:comment>
+        <rdfs:label xml:lang="en">Fluorescence</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/Frequency -->
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4envi/Frequency">
+        <rdfs:comment xml:lang="en">An individual representing the property frequency.</rdfs:comment>
+        <rdfs:label xml:lang="en">Frequency</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/Height -->
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4envi/Height">
+        <rdfs:comment xml:lang="en">An individual representing the property height.</rdfs:comment>
+        <rdfs:label xml:lang="en">Height</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/Illuminance -->
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4envi/Illuminance">
+        <rdfs:comment xml:lang="en">An individual representing the light property illuminance.</rdfs:comment>
+        <rdfs:label xml:lang="en">Illuminance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/Irradiance -->
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4envi/Irradiance">
+        <rdfs:comment xml:lang="en">An individual representing the light property irradiance.</rdfs:comment>
+        <rdfs:label xml:lang="en">Irradiance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/LightAbsorption -->
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4envi/LightAbsorption">
+        <rdfs:comment xml:lang="en">An individual representing the light property light absorption.</rdfs:comment>
+        <rdfs:label xml:lang="en">Light absorption</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/LightMagnitude -->
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4envi/LightMagnitude">
+        <rdfs:comment xml:lang="en">An individual representing the light property light magnitude.</rdfs:comment>
+        <rdfs:label xml:lang="en">Light magnitude</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/Luminiscence -->
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4envi/Luminiscence">
+        <rdfs:comment xml:lang="en">An individual representing the light property luminiscence.</rdfs:comment>
+        <rdfs:label xml:lang="en">Luminiscence</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/Period -->
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4envi/Period">
+        <rdfs:comment xml:lang="en">An individual representing the property period.</rdfs:comment>
+        <rdfs:label xml:lang="en">Period</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/Phosphorescence -->
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4envi/Phosphorescence">
+        <rdfs:comment xml:lang="en">An individual representing the light property phosphorescence.</rdfs:comment>
+        <rdfs:label xml:lang="en">Phosphorescence</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/ReflectionOfLight -->
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4envi/ReflectionOfLight">
+        <rdfs:comment xml:lang="en">An individual representing the light property reflection of light.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reflection of light</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://saref.etsi.org/saref4envi/ScatteringOfLight -->
+
+    <owl:NamedIndividual rdf:about="https://saref.etsi.org/saref4envi/ScatteringOfLight">
+        <rdfs:comment xml:lang="en">An individual representing the light property scattering of light.</rdfs:comment>
+        <rdfs:label xml:lang="en">Scattering of light</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
