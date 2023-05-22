@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:cc="http://creativecommons.org/ns#"
+         xmlns:ns0="http://purl.org/vocab/vann/"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ns1="https://w3id.org/vocab/olca#">
+
+  <owl:Ontology rdf:about="https://w3id.org/vocab/olca">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type>
+      <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary">
+      </owl:Class>
+    </rdf:type>
+
+    <owl:versionIRI rdf:resource="http://linkedvocabs.org/vocab/olca_v2.0.ttl"/>
+    <dc:contributor rdf:resource="http://data.semanticweb.org/person/carlos-tejo-alonso"/>
+    <dc:contributor rdf:resource="https://w3id.org/people/gatemezing"/>
+    <dc:creator rdf:resource="http://data.semanticweb.org/person/bernard-vatant"/>
+    <dc:issued>2013-02-07</dc:issued>
+    <dc:modified>2020-02-31</dc:modified>
+    <owl:priorVersion rdf:resource="http://linkedvocabs.org/vocab/olca/olca_v1.0.ttl"/>
+    <cc:licence rdf:resource="http://www.datagouv.fr/Licence-Ouverte-Open-Licence"/>
+    <dc:title xml:lang="en">Ontology Loose Coupling Annotation</dc:title>
+    <ns0:preferredNamespacePrefix>olca</ns0:preferredNamespacePrefix>
+    <ns0:preferredNamespaceUri rdf:resource="https://w3id.org/vocab/olca#"/>
+    <rdfs:comment xml:lang="en">A vocabulary defining annotations enabling loose coupling between classes and properties in ontologies. Those annotations define with some accuracy the expected use of properties, in particular across vocabularies, without the formal constraints entailed by the use of OWL or RDFS constructions</rdfs:comment>
+    <rdfs:label xml:lang="en">Ontology Loose Coupling Annotation</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgMetaSchema"/>
+    <owl:versionInfo>v2.0</owl:versionInfo>
+  </owl:Ontology>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="https://w3id.org/vocab/olca#domainIncludes">
+    <rdfs:comment xml:lang="en">A loose coupling of a property to possible or expected class it can describe. This annotation is to be used when one does not want to enforce formally the coupling by rdfs:domain or some owl:Restriction constraint. </rdfs:comment>
+    <rdfs:label xml:lang="en">domain includes</rdfs:label>
+    <ns1:domainIncludes rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <ns1:domainIncludes rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <ns1:domainIncludes rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <ns1:domainIncludes rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <ns1:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <ns1:rangeIncludes rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="https://w3id.org/vocab/olca#expectedProperty">
+    <rdfs:comment xml:lang="en">A loose coupling of a class to possible or expected properties. This annotation is to be used when one does not want to enforce formally the coupling using rdfs:range or some owl:Restriction.</rdfs:comment>
+    <rdfs:label xml:lang="en">expected property</rdfs:label>
+    <ns1:domainIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <ns1:domainIncludes rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <ns1:rangeIncludes rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <ns1:rangeIncludes rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <ns1:rangeIncludes rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <ns1:rangeIncludes rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="https://w3id.org/vocab/olca#rangeIncludes">
+    <rdfs:comment xml:lang="en">A loose coupling of a property to possible or expected values. This annotation is to be used when one does not want to enforce formally the coupling by rdfs:range or some owl:Restriction constraint.</rdfs:comment>
+    <rdfs:label xml:lang="en">range includes</rdfs:label>
+    <ns1:domainIncludes rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <ns1:domainIncludes rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <ns1:domainIncludes rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <ns1:domainIncludes rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <ns1:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <ns1:rangeIncludes rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="https://w3id.org/vocab/olca#similarClass">
+    <rdfs:comment xml:lang="en">A loose similarity of classes, typically across ontologies . This annotation is to be used when one does not want to enforce formally the coupling by owl:equivalentClass. </rdfs:comment>
+    <rdfs:label xml:lang="en">similar class</rdfs:label>
+    <ns1:domainIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <ns1:domainIncludes rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <ns1:rangeIncludes rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <ns1:rangeIncludes rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="https://w3id.org/vocab/olca#similarProperty">
+    <rdfs:comment xml:lang="en">A loose similary of properties, typically across ontologies . This annotation is to be used when one does not want to enforce formally the coupling by owl:equivalentProperty. </rdfs:comment>
+    <rdfs:label xml:lang="en">similar property</rdfs:label>
+    <ns1:domainIncludes rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <ns1:domainIncludes rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <ns1:domainIncludes rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <ns1:domainIncludes rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <ns1:rangeIncludes rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <ns1:rangeIncludes rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <ns1:rangeIncludes rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <ns1:rangeIncludes rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:AnnotationProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/vocab/lingvoj#officialLanguage">
+    <rdfs:range>
+      <owl:Class rdf:about="http://www.lingvoj.org/ontology#Lingvo">
+      </owl:Class>
+    </rdfs:range>
+
+    <rdfs:comment xml:lang="en">An official language of a country, project, organization or event.</rdfs:comment>
+    <rdfs:label xml:lang="en">official language</rdfs:label>
+    <ns1:domainIncludes rdf:resource="http://linkedevents.org/ontology/Event"/>
+    <ns1:domainIncludes rdf:resource="http://schema.org/Country"/>
+    <ns1:domainIncludes rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <ns1:domainIncludes rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+  </owl:ObjectProperty>
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/subject">
+    <ns1:domainIncludes rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <ns1:rangeIncludes rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+
+</rdf:RDF>

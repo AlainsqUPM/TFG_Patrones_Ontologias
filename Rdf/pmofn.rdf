@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://premon.fbk.eu/ontology/all#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:nif="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:xml="http://www.w3.org/XML/1998/namespace"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:vann="http://purl.org/vocab/vann/"
+	xmlns:void="http://rdfs.org/ns/void#"
+	xmlns:pmo="http://premon.fbk.eu/ontology/core#"
+	xmlns:pmopb="http://premon.fbk.eu/ontology/pb#"
+	xmlns:pmonb="http://premon.fbk.eu/ontology/nb#"
+	xmlns:pmovn="http://premon.fbk.eu/ontology/vn#"
+	xmlns:pmofn="http://premon.fbk.eu/ontology/fn#"
+	xmlns:pmoall="http://premon.fbk.eu/ontology/all#"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:ontolex="http://www.w3.org/ns/lemon/ontolex#"
+	xmlns:lime="http://www.w3.org/ns/lemon/lime#"
+	xmlns:synsem="http://www.w3.org/ns/lemon/synsem#"
+	xmlns:decomp="http://www.w3.org/ns/lemon/decomp#"
+	xmlns:vartrans="http://www.w3.org/ns/lemon/vartrans#">
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-10-28</dcterms:issued>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-15</dcterms:modified>
+	<dcterms:creator>Francesco Corcoglioniti</dcterms:creator>
+	<dcterms:creator>Marco Rospocher &lt;https://dkm.fbk.eu/rospocher&gt;</dcterms:creator>
+	<dcterms:publisher>DKM, Fondazione Bruno Kessler &lt;http://dkm.fbk.eu/&gt;</dcterms:publisher>
+	<owl:versionInfo>2018a</owl:versionInfo>
+	<dcterms:title xml:lang="en">Predicate Model for Ontologies (PreMOn) - FrameNet ontology module</dcterms:title>
+	<vann:preferredNamespacePrefix>pmofn</vann:preferredNamespacePrefix>
+	<vann:preferredNamespaceUri>http://premon.fbk.eu/ontology/fn#</vann:preferredNamespaceUri>
+	<rdfs:comment xml:lang="en">The FrameNet module of the PreMOn ontology extends the core module for representing concepts specific to FrameNet. The modelling is based on the [FrameNet II: Extended Theory and Practice](https://framenet2.icsi.berkeley.edu/docs/r1.5/book.pdf) book.</rdfs:comment>
+	<dcterms:description rdf:resource="http://premon.fbk.eu/images/fn.svg"/>
+	<dcterms:description xml:lang="en">The PreMOn FrameNet ontology module defines classes [pmofn:Frame](http://premon.fbk.eu/ontology/fn#Frame) and [pmofn:FrameElement](http://premon.fbk.eu/ontology/fn#FrameElement) as subclasses of [pmo:SemanticClass](http://premon.fbk.eu/ontology/core#SemanticClass) and [pmo:SemanticRole](http://premon.fbk.eu/ontology/core#SemanticRole), respectively. [pmofn:FrameElement](http://premon.fbk.eu/ontology/fn#FrameElement) is further specialized in four subclasses, denoting the four typologies of FN frame elements (e.g., [pmofn:CoreFrameElement](http://premon.fbk.eu/ontology/fn#CoreFrameElement)). Being [pmo:SemanticRole](http://premon.fbk.eu/ontology/core#SemanticRole)s, in PreMOn Ontology frame elements are always specific to the frame where they are defined, even for extra thematic frame elements that are typically shared across frames in FN (e.g., the *Circumstances* extra thematic frame element corresponds to multiple individuals of type [pmofn:ExtraThematicFrameElement](http://premon.fbk.eu/ontology/fn#ExtraThematicFrameElement), one for each frame where it is defined). Frame element core sets of a [pmofn:Frame](http://premon.fbk.eu/ontology/fn#Frame) are represented as reified objects of type [pmofn:FECoreSet](http://premon.fbk.eu/ontology/fn#FECoreSet), having as members some [pmofn:FrameElement](http://premon.fbk.eu/ontology/fn#FrameElement)s.
+
+Relations between [pmofn:Frame](http://premon.fbk.eu/ontology/fn#Frame)s are modeled using the subproperties of [pmofn:frameRelation](http://premon.fbk.eu/ontology/fn#frameRelation) (e.g., [pmofn:inheritsFrom](http://premon.fbk.eu/ontology/fn#inheritsFrom)). Similarly, mappings between [pmofn:FrameElement](http://premon.fbk.eu/ontology/fn#FrameElement)s of [pmofn:Frame](http://premon.fbk.eu/ontology/fn#Frame)s related via some [pmofn:frameRelation](http://premon.fbk.eu/ontology/fn#frameRelation) are represented using frame relation-specific subproperties of [pmofn:frameElementRelation](http://premon.fbk.eu/ontology/fn#frameElementRelation) (e.g., [pmofn:inheritsFromFER](http://premon.fbk.eu/ontology/fn#inheritsFromFER)). Within a frame, a frame element may exclude/require the presence of another frame element ([pmofn:excludesFrameElement](http://premon.fbk.eu/ontology/fn#excludesFrameElement)/[pmofn:requiresFrameElement](http://premon.fbk.eu/ontology/fn#requiresFrameElement)).
+
+ [pmofn:LexicalUnit](http://premon.fbk.eu/ontology/fn#LexicalUnit), associating a lexical entry with a frame, is defined as subclass of [pmo:Conceptualization](http://premon.fbk.eu/ontology/core#Conceptualization). A [pmofn:LexicalUnit](http://premon.fbk.eu/ontology/fn#LexicalUnit) may have a development status ([pmofn:LUStatus](http://premon.fbk.eu/ontology/fn#LUStatus)) and can incorporate a [pmofn:FrameElement](http://premon.fbk.eu/ontology/fn#FrameElement) (e.g., *microvawe.v*, besides evoking frame *Apply heat*, also incorporates the frame element *Heating instrument*).
+
+Finally, [pmofn:Frame](http://premon.fbk.eu/ontology/fn#Frame)s, [pmofn:FrameElement](http://premon.fbk.eu/ontology/fn#FrameElement)s and [pmofn:LexicalUnit](http://premon.fbk.eu/ontology/fn#LexicalUnit)s can be constrained according to some semantic types, defined in [pmofn:SemType](http://premon.fbk.eu/ontology/fn#SemType), and organized in a hierarchy according to [pmofn:subTypeOf](http://premon.fbk.eu/ontology/fn#subTypeOf) relations between them.</dcterms:description>
+	<dcterms:rights xml:lang="en">This ontology is licensed under CC-BY-SA &lt;http://creativecommons.org/licenses/by-sa/4.0/&gt;</dcterms:rights>
+	<dcterms:license rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/"/>
+	<owl:imports rdf:resource="http://premon.fbk.eu/ontology/core"/>
+	<owl:imports rdf:resource="http://www.w3.org/ns/lemon/ontolex"/>
+	<rdfs:isDefinedBy rdf:resource="http://premon.fbk.eu/ontology/fn.ttl"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#excludesFrameElement">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+	<rdfs:label xml:lang="en">excludes frame element</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://premon.fbk.eu/ontology/core#roleRel"/>
+	<rdfs:range rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+	<rdfs:domain rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+	<owl:propertyDisjointWith rdf:resource="http://premon.fbk.eu/ontology/fn#requiresFrameElement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#FrameElement">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">Frame Element (FN)</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://premon.fbk.eu/ontology/core#SemanticRole"/>
+	<rdfs:subClassOf rdf:nodeID="node1c6crrrnox10"/>
+	<owl:disjointUnionOf rdf:nodeID="node1c6crrrnox12"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#requiresFrameElement">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">requires frame element</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://premon.fbk.eu/ontology/core#roleRel"/>
+	<rdfs:range rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+	<rdfs:domain rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#feCoreSet">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:label xml:lang="en">frame element core set</rdfs:label>
+	<rdfs:range rdf:resource="http://premon.fbk.eu/ontology/fn#FECoreSet"/>
+	<rdfs:domain rdf:resource="http://premon.fbk.eu/ontology/fn#Frame"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#FECoreSet">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">Frame Element Core Set</rdfs:label>
+	<rdfs:subClassOf rdf:nodeID="node1c6crrrnox5"/>
+	<rdfs:subClassOf rdf:nodeID="node1c6crrrnox6"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#Frame">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">Frame (FN)</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://premon.fbk.eu/ontology/core#SemanticClass"/>
+	<rdfs:subClassOf rdf:nodeID="node1c6crrrnox7"/>
+	<rdfs:subClassOf rdf:nodeID="node1c6crrrnox9"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#frameRelation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">frame relation</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://premon.fbk.eu/ontology/core#classRel"/>
+	<rdfs:range rdf:resource="http://premon.fbk.eu/ontology/fn#Frame"/>
+	<rdfs:domain rdf:resource="http://premon.fbk.eu/ontology/fn#Frame"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#implicitIn">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">implicit in</rdfs:label>
+	<rdfs:domain rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#incorporatedFrameElement">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label xml:lang="en">incorporated frame element</rdfs:label>
+	<rdfs:range rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+	<rdfs:domain rdf:resource="http://premon.fbk.eu/ontology/fn#LexicalUnit"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#LexicalUnit">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">Lexical Unit</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://premon.fbk.eu/ontology/core#Conceptualization"/>
+	<rdfs:subClassOf rdf:nodeID="node1c6crrrnox16"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#inheritsFrom">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">inherits from</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+	<rdfs:subPropertyOf rdf:resource="http://premon.fbk.eu/ontology/fn#frameRelation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#inheritsFromFER">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">frame element mapping (on inheritsFrom frame relation)</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://premon.fbk.eu/ontology/core#roleRel"/>
+	<rdfs:range rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+	<rdfs:domain rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#isCausativeOf">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">is causative of</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://premon.fbk.eu/ontology/fn#frameRelation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#isCausativeOfFER">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">frame element mapping (on isCausativeOf frame relation)</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://premon.fbk.eu/ontology/core#roleRel"/>
+	<rdfs:range rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+	<rdfs:domain rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#isInchoativeOf">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">is inchoative of</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://premon.fbk.eu/ontology/fn#frameRelation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#isInchoativeOfFER">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">frame element mapping (on isInchoativeOf frame relation)</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://premon.fbk.eu/ontology/core#roleRel"/>
+	<rdfs:range rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+	<rdfs:domain rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#metaphor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">metaphor</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://premon.fbk.eu/ontology/fn#frameRelation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#metaphorFER">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">frame element mapping (on metaphor frame relation)</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://premon.fbk.eu/ontology/core#roleRel"/>
+	<rdfs:range rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+	<rdfs:domain rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#perspectiveOn">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">perspective on</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://premon.fbk.eu/ontology/fn#frameRelation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#perspectiveOnFER">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">frame element mapping (on perspectiveOn frame relation)</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://premon.fbk.eu/ontology/core#roleRel"/>
+	<rdfs:range rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+	<rdfs:domain rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#precedes">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">precedes</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://premon.fbk.eu/ontology/fn#frameRelation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#precedesFER">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">frame element mapping (on precedes frame relation)</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://premon.fbk.eu/ontology/core#roleRel"/>
+	<rdfs:range rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+	<rdfs:domain rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#reFrameMapping">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">re-frame mapping</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://premon.fbk.eu/ontology/fn#frameRelation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#reFrameMappingFER">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">frame element mapping (on reFrameMapping frame relation)</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://premon.fbk.eu/ontology/core#roleRel"/>
+	<rdfs:range rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+	<rdfs:domain rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#seeAlso">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+	<rdfs:label xml:lang="en">see also</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://premon.fbk.eu/ontology/fn#frameRelation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#seeAlsoFER">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+	<rdfs:label xml:lang="en">frame element mapping (on seeAlso frame relation)</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://premon.fbk.eu/ontology/core#roleRel"/>
+	<rdfs:range rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+	<rdfs:domain rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#semType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">semantic type</rdfs:label>
+	<rdfs:range rdf:resource="http://premon.fbk.eu/ontology/fn#SemType"/>
+	<rdfs:domain rdf:nodeID="node1c6crrrnox1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#SemType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">Semantic Type</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#status">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">status</rdfs:label>
+	<rdfs:range rdf:resource="http://premon.fbk.eu/ontology/fn#LUStatus"/>
+	<rdfs:domain rdf:resource="http://premon.fbk.eu/ontology/fn#LexicalUnit"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#LUStatus">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">Lexical Unit Status</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#subTypeOf">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">sub-type of</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+	<rdfs:range rdf:resource="http://premon.fbk.eu/ontology/fn#SemType"/>
+	<rdfs:domain rdf:resource="http://premon.fbk.eu/ontology/fn#SemType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#subframeOf">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">sub-frame of</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://premon.fbk.eu/ontology/fn#frameRelation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#subframeOfFER">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">frame element mapping (on subframeOf frame relation)</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://premon.fbk.eu/ontology/core#roleRel"/>
+	<rdfs:range rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+	<rdfs:domain rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#uses">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">uses</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://premon.fbk.eu/ontology/fn#frameRelation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#usesFER">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label xml:lang="en">frame element mapping (on uses frame relation)</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://premon.fbk.eu/ontology/core#roleRel"/>
+	<rdfs:range rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+	<rdfs:domain rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#CoreFrameElement">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">Core Frame Element (FN)</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#CoreUnexpressedFrameElement">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">Core-unexpressed Frame Element (FN)</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#ExtraThematicFrameElement">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">Extra-thematic Frame Element (FN)</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://premon.fbk.eu/ontology/fn#PeripheralFrameElement">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label xml:lang="en">Peripheral Frame Element (FN)</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="node1c6crrrnox2"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox10">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:nodeID="node1c6crrrnox11"/>
+	<owl:allValuesFrom rdf:resource="http://premon.fbk.eu/ontology/fn#Frame"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox11">
+	<owl:inverseOf rdf:resource="http://premon.fbk.eu/ontology/core#semRole"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox12">
+	<rdf:first rdf:resource="http://premon.fbk.eu/ontology/fn#CoreFrameElement"/>
+	<rdf:rest rdf:nodeID="node1c6crrrnox13"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox13">
+	<rdf:first rdf:resource="http://premon.fbk.eu/ontology/fn#CoreUnexpressedFrameElement"/>
+	<rdf:rest rdf:nodeID="node1c6crrrnox14"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox14">
+	<rdf:first rdf:resource="http://premon.fbk.eu/ontology/fn#ExtraThematicFrameElement"/>
+	<rdf:rest rdf:nodeID="node1c6crrrnox15"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox15">
+	<rdf:first rdf:resource="http://premon.fbk.eu/ontology/fn#PeripheralFrameElement"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox16">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://premon.fbk.eu/ontology/core#evokedConcept"/>
+	<owl:allValuesFrom rdf:resource="http://premon.fbk.eu/ontology/fn#Frame"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox17">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+	<owl:members rdf:nodeID="node1c6crrrnox18"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox18">
+	<rdf:first rdf:resource="http://premon.fbk.eu/ontology/fn#inheritsFrom"/>
+	<rdf:rest rdf:nodeID="node1c6crrrnox19"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox19">
+	<rdf:first rdf:resource="http://premon.fbk.eu/ontology/fn#isCausativeOf"/>
+	<rdf:rest rdf:nodeID="node1c6crrrnox20"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox2">
+	<rdf:first rdf:resource="http://premon.fbk.eu/ontology/fn#Frame"/>
+	<rdf:rest rdf:nodeID="node1c6crrrnox3"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox20">
+	<rdf:first rdf:resource="http://premon.fbk.eu/ontology/fn#isInchoativeOf"/>
+	<rdf:rest rdf:nodeID="node1c6crrrnox21"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox21">
+	<rdf:first rdf:resource="http://premon.fbk.eu/ontology/fn#metaphor"/>
+	<rdf:rest rdf:nodeID="node1c6crrrnox22"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox22">
+	<rdf:first rdf:resource="http://premon.fbk.eu/ontology/fn#perspectiveOn"/>
+	<rdf:rest rdf:nodeID="node1c6crrrnox23"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox23">
+	<rdf:first rdf:resource="http://premon.fbk.eu/ontology/fn#precedes"/>
+	<rdf:rest rdf:nodeID="node1c6crrrnox24"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox24">
+	<rdf:first rdf:resource="http://premon.fbk.eu/ontology/fn#reFrameMapping"/>
+	<rdf:rest rdf:nodeID="node1c6crrrnox25"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox25">
+	<rdf:first rdf:resource="http://premon.fbk.eu/ontology/fn#seeAlso"/>
+	<rdf:rest rdf:nodeID="node1c6crrrnox26"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox26">
+	<rdf:first rdf:resource="http://premon.fbk.eu/ontology/fn#subframeOf"/>
+	<rdf:rest rdf:nodeID="node1c6crrrnox27"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox27">
+	<rdf:first rdf:resource="http://premon.fbk.eu/ontology/fn#uses"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox3">
+	<rdf:first rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+	<rdf:rest rdf:nodeID="node1c6crrrnox4"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox4">
+	<rdf:first rdf:resource="http://premon.fbk.eu/ontology/fn#LexicalUnit"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox5">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://premon.fbk.eu/ontology/core#item"/>
+	<owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox6">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://premon.fbk.eu/ontology/core#item"/>
+	<owl:allValuesFrom rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox7">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:nodeID="node1c6crrrnox8"/>
+	<owl:allValuesFrom rdf:resource="http://premon.fbk.eu/ontology/fn#LexicalUnit"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox8">
+	<owl:inverseOf rdf:resource="http://premon.fbk.eu/ontology/core#evokedConcept"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1c6crrrnox9">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://premon.fbk.eu/ontology/core#semRole"/>
+	<owl:allValuesFrom rdf:resource="http://premon.fbk.eu/ontology/fn#FrameElement"/>
+</rdf:Description>
+
+</rdf:RDF>

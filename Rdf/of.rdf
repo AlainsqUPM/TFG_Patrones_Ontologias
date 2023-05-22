@@ -1,0 +1,1213 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Meta Data -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Free VPN Portugal is one of the best virtual private network services to protect all data you receive or send over the internet. Free VPN Portugal is powered by PaladinVPN" />
+        <title>Fast & Secure Free Premium VPN Service | Free VPN Portugal</title>
+
+        <!-- Fav Icon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href= "/freevpnportugal/assets/img/favicon.svg"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href= "/freevpnportugal/assets/img/favicon.svg"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href= "/freevpnportugal/assets/img/favicon.svg"
+        />
+
+        <!-- Dependency Styles -->
+        <link
+            rel="stylesheet"
+            href= "/freevpnportugal/dependencies/bootstrap/css/bootstrap.min.css?ver=1"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href= "/freevpnportugal/dependencies/fontawesome/css/fontawesome-all.min.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href= "/freevpnportugal/dependencies/flaticon/css/flaticon.min.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href= "/freevpnportugal/dependencies/owl.carousel/css/owl.carousel.min.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href= "/freevpnportugal/dependencies/owl.carousel/css/owl.theme.default.min.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href= "/freevpnportugal/dependencies/magnific-popup/magnific-popup.min.css?ver=1"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href= "/freevpnportugal/dependencies/animate.css/css/animate.min.css?ver=1"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href= "/freevpnportugal/dependencies/slick-carousel/css/slick.min.css?ver=1"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href= "/freevpnportugal/dependencies/slick-carousel/css/slick-theme.min.css?ver=1"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href= "/freevpnportugal/dependencies/material-design-icons/css/material-icons.min.css?ver=1"
+        />
+        <link rel="stylesheet" href= "/freevpnportugal/dependencies/aos/css/aos.css" />
+        <link
+            rel="stylesheet"
+            href= "/freevpnportugal/dependencies/rangeslider.js/css/rangeslider.min.css?ver=1"
+        />
+
+        <!-- Site Stylesheet -->
+        <link rel="stylesheet" href= "/freevpnportugal/assets/css/app.min.css?ver=1" type="text/css" />
+        <link rel="stylesheet" href= "/freevpnportugal/assets/css/custom.css?ver=1.3.33" type="text/css" />
+
+        <!-- Google Web Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900%7CRoboto:300,400,500,700,900"
+            rel="stylesheet"
+        />
+        
+        <link rel="stylesheet" type="text/css" href= "/freevpnportugal/assets/mk/css/vpn2.css">
+        <link rel="stylesheet" type="text/css" href= "/freevpnportugal/assets/mk/css/vpn-locations.css">
+    </head>
+
+    <body id="home-version-1" class="home-version-1" data-style="default">
+        <div id="site">
+            <!--=========================-->
+            <!--=        Navbar         =-->
+            <!--=========================-->
+            <header id="header" class="header_area hdr_area_two hdr_area_three">
+                <!-- Start Main Menu -->
+                <section class="header_nav">
+                    <div class="vigo_container_two">
+                        <div class="row">
+                            <div class="col-auto mr-auto">
+                                <nav class="main_menu">
+                                    <ul id="example-one">
+                                        <li><a href="https://paladinvpn.com/index.html">Home</a></li>
+                                        <li><a href="https://paladinvpn.com/privacy.html">Your Privacy</a></li>
+                                        <li><a href="https://paladinvpn.com/why_vpn.html">Why use VPN?</a></li>
+                                        <li><a href="https://paladinvpn.com/vpn_locations.html">VPN Locations</a></li>
+                                        <li><a href="https://paladinvpn.com/why_it_is_free.html">Why is it free?</a></li>
+                                        <li><a href="https://paladinvpn.com/faq.html">FAQ</a>
+                                        <li><a href="https://paladinvpn.com/news.html">News</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="col-auto no-position">
+                                <div class="header_logo">
+                                    <a href="https://paladinvpn.com/index.html">
+                                        <img
+                                            class="logo-default"
+                                            src= "/freevpnportugal/assets/img/logo.svg"
+                                            alt="free vpn"
+                                        />
+                                        <img
+                                            class="logo-white"
+                                            src= "/freevpnportugal/assets/img/logo.svg"
+                                            alt="free vpn"
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Main Menu -->
+
+                <!-- Start Mobile Menu outer-->
+                <section id="mobile-nav-wrap" class="clearfix">
+                    <div class="vigo_container_one">
+                        <div class="bottom_nav bottom_nav_two">
+                            <div id="mobile-logo">
+                                <a href="https://paladinvpn.com/index.html">
+                                    <img
+                                        src= "/freevpnportugal/assets/img/logo.svg"
+                                        class="svg"
+                                        alt="vpn free"
+                                    />
+                                </a>
+                            </div>
+                            <div class="toggle-inner">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Mobile Menu outer-->
+            </header>
+
+            <section class="mobile-menu-inner mobile-menu-inner-two mobile-menu-inner-four">
+                <div class="mobile_accor_togo">
+                    <div class="mobile_accor_logo">
+                        <a href="https://paladinvpn.com/index.html">
+                            <img
+                                src= "/freevpnportugal/assets/img/logo.svg"
+                                class="svg"
+                                alt="vpn free"
+                            />
+                        </a>
+                    </div>
+                    <div class="close-menu">
+                        <span></span>
+                    </div>
+                </div>
+                <nav id="accordian">
+                    <ul class="accordion-menu">
+                        <li><a href="https://paladinvpn.com/index.html">Home</a></li>
+                        <li><a href="https://paladinvpn.com/privacy.html">Your Privacy</a></li>
+                        <li><a href="https://paladinvpn.com/why_vpn.html">Why use VPN?</a></li>
+                        <li><a href="https://paladinvpn.com/vpn_locations.html">VPN Locations</a></li>
+                        <li><a href="https://paladinvpn.com/why_it_is_free.html">Why is it free?</a></li>
+                        <li><a href="https://paladinvpn.com/faq.html">FAQ</a><a href="https://freevpnportugal.com/site-map/">Site Map</a></li>
+                        <li><a href="https://paladinvpn.com/news.html">News</a></li>
+                    </ul>
+                </nav>
+                <ul class="footer-social-link">
+                    <li class="fb-bg">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li class="in-bg">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li class="tw-bg">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="gp-bg">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                </ul>
+            </section>
+            <!--==========================-->
+            <!--=        Content         =-->
+            <!--==========================-->
+
+            <!--==========================-->
+            <!--=        Banner         =-->
+            <!--==========================-->
+            <section id="banner-top" class="py-100 banner-top-row">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 my-auto">
+                        <h1 style="font-size:2.2rem;">
+                            <span class="text-theme" style="font-size: 14px;">PALADIN VPN</span><br>
+                            <span class="text-theme">Free</span> VPN for <span class="text-theme">Portugal</span> to protect your privacy
+                        </h1>
+                        <p><b>Why use a VPN?</b></p>
+                        <p>There are many reasons to use a VPN below we summarized the most important reasons.</p>
+                        <ul class="country-check-list">
+                            <li>Protect your privacy and identity</li>
+                            <li>Security on public wifi</li>
+                            <li>Security when working remotely</li>
+                            <li>Access any content from anywhere</li>
+                            <li>Protect your data from governments, service providers, and apps</li>
+                        </ul>
+                        <div class="slr_btn_wrapper">
+                            <a href="javascript:void(0)" class="btn_two active download_button">Free Download <i class="fas fa-arrow-right pl-2"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center">
+                        <center><img class="" src= "/freevpnportugal/img/portugal-free-vpn.png" alt="Free VPN Portugal" title="Free VPN Portugal" style="height: fit-content; margin-top: 70px;"></center>
+                    </div>
+                </div>
+            </section>
+            <!--==========================-->
+            <!--=        Banner         =-->
+            <!--==========================-->
+
+            <section class="py-t-100" style="background-color:#ffffff;padding-bottom: 100px;">
+                <div class="container">
+                    <!--<div class="row">
+                        <div class="col-12">
+                            <div class="location-map-info" style="max-width: 700px; margin: 0 auto 30px;">
+                                <div class="map-wrapper">
+                                    <img src= "/freevpnportugal/locations/img/location_spain.png" />
+                                    <div class="shape"></div>
+                                </div>
+                                <div class="map-info">
+                                    <div class="l_header">As an PaladinVPN user in Spain You will enjoy</div>
+                                    <div class="l_features">
+                                        <div>Anonymity</div>
+                                        <div>Freedom to browse anywhere</div>
+                                        <div>Public WiFi Protection</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="text-center" style="margin-bottom: 30px;">Stay anonymous while surfing the internet in Spain</h3>
+                        </div>
+                    </div>-->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2 style="max-width: 700px; margin: auto;text-align: center;"><span class="text-theme">Our mission is to provide private and secure Internet access to all.</span></h2>
+                            <h3 style="margin-top:40px"><center>What is a VPN?</center></h3>
+                            <div class="row" style="margin-top: 30px">
+                                <div class="col-md-6">
+                                    <p style="margin-bottom: 20px;">According to Wikipedia A virtual private network (VPN) extends a private network across a public network and enables users to send and receive data across shared or public networks as if their computing devices were directly connected to the private network<sup><a href="https://en.wikipedia.org/wiki/Virtual_private_network" target="_blank">[1]</a></sup>. The benefits of a VPN include increases in functionality, security, and management of the private network. It provides access to resources that are inaccessible on the public network and is typically used for remote workers. Encryption is common, although not an inherent part of a VPN connection.</p>
+                                    <p>A VPN is created by establishing a virtual point-to-point connection through the use of dedicated circuits or with tunneling protocols over existing networks. A VPN available from the public Internet can provide some of the benefits of a wide area network (WAN). From a user perspective, the resources available within the private network can be accessed remotely.</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <img class="" src= "/freevpnportugal/img/what-is-vpn.png" alt="What is VPN" title="What is VPN" style="height: fit-content;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top:40px">
+                        <div class="col-lg-12">
+                            <h3 style="margin-top:20px"><center>How is it free?</center></h3>
+                            <div class="row" style="margin-top: 30px">
+                                <div class="col-md-6">
+                                    <img class="" src= "/freevpnportugal/img/how-it-is-free.png" alt="How is it free" title="How is it free" style="height: fit-content;">
+                                </div>
+                                <div class="col-md-6">
+                                    <p style="margin-bottom: 20px;">Big cooperations, brand holders, and institutions like banks or insurance companies are often misled or blocked when trying to access publicly available information on websites. The information displayed to them is often different from what a regular user sees. Our partners, collects data from the public websites for these cooperations and brand holders. In return, these companies pay for your free VPN by allowing Our Partners to access the web via your IP address to gather the data.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+              
+                </div>
+            </section>
+
+            <section style="padding: 50px 0">
+                <div class="container">
+                    <div class="row"> <!-- List Row -->
+                        <div class="col-md-4" style="margin-top: 25px;">
+                            <div class="supplement_benefit_item" style="width: 100%;min-height: 500px;">
+                                <div class="supplement_benefit_inner" style="padding: 45px 25px 45px!important;">
+                                    <center><img class="" src= "/freevpnportugal/img/academic-research.png" alt="Academic Research" title="Academic Research" style="height: fit-content;"></center>
+                                    <center>
+                                        <p><b>1. Academic Research</b></p>
+                                        <p>Researchers, data scientists, statisticians as well as universities require a vast amount of data for their research. Allowing them to gather data via your IP address ensures that they can gather accurate data for their research.</p>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" style="margin-top: 25px;">
+                            <div class="supplement_benefit_item" style="width: 100%;min-height: 500px;">
+                                <div class="supplement_benefit_inner" style="padding: 45px 25px 45px!important;">
+                                    <center><img class="" src= "/freevpnportugal/img/campaign-ver.png?ver=1" alt="Ad campaign verification" title="Ad campaign verification" style="height: fit-content;"></center>
+                                    <center>
+                                        <p><b>2. Ad campaign verification</b></p>
+                                        <p>Most companies these days run online ad campaigns. These companies need to verify that the ads are displayed in the way they are intended to be. Bots often do not show the correct display of the ads. Accessing the web via your IP address will allow them to see the ads as they are displayed to regular internet users.</p>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" style="margin-top: 25px;">
+                            <div class="supplement_benefit_item" style="width: 100%; min-height: 500px;">
+                                <div class="supplement_benefit_inner" style="padding: 45px 25px 45px!important;">
+                                    <center><img class="" src= "/freevpnportugal/img/brand-protection.png" alt="Brand Protection" title="Brand Protection" style="height: fit-content;"></center>
+                                    <center>
+                                        <p><b>3. Brand Protection</b></p>
+                                        <p>Brand and trademark owners are trying to find websites that sell counterfeits of their products. Example fake famous watches or handbags, designer clothes, and shoes... To do this they need to access the web from different locations and not just their office IP address.</p>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- END List Row -->
+
+                    <div class="row"> <!-- List Row -->
+                        <div class="col-md-4 offset-md-2" style="margin-top: 25px;">
+                            <div class="supplement_benefit_item" style="width: 100%; min-height: 475px;">
+                                <div class="supplement_benefit_inner" style="padding: 45px 25px 45px!important;">
+                                    <center><img class="" src= "/freevpnportugal/img/price-comparison.png" alt="Price Comparison" title="Price Comparison" title="Price Comparison" style="height: fit-content;"></center>
+                                    <center>
+                                        <p><b>4. Price Comparison</b></p>
+                                        <p>You may already be aware that the same product or service is offered at various prices in different countries as well as on different websites. To offer their clients the best price possible they need to gather data from all over the web.</p>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4" style="margin-top: 25px;">
+                            <div class="supplement_benefit_item" style="width: 100%;min-height: 475px;">
+                                <div class="supplement_benefit_inner" style="padding: 45px 25px 45px!important;">
+                                    <center><img class="" src= "/freevpnportugal/img/seo.png" alt="Search Engine Optimization - SEO" title="Search Engine Optimization - SEO" style="height: fit-content;"></center>
+                                    <center>
+                                        <p><b>5. Search Engine Optimization - SEO</b></p>
+                                        <p>Depending on the location the search results of the big search engine show different results. For the companies to see how their website is ranked in a certain location they need to be able to access search engines from various locations. Allowing them to access the results via your IP address makes it possible.</p>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- END List Row -->
+                </div>
+            </section>
+
+            <section class="security-tools security-tools-row" style="padding: 50px;">
+                <div class="row">
+                    <div class="col-12" style="max-width: 800px; margin: auto; padding: 40px; background: #fff; border: 1px solid #fff; border-radius: 16px; box-shadow: 0 2px 4px rgb(0 0 0 / 1%), 0 4px 6px rgb(0 0 0 / 2%), 0 8px 16px rgb(0 0 0 / 7%);">
+                        <center>
+                        <h3>Many countries to choose from, 100% no log policy, no signup required, no email required, unlimited devices, unlimited traffic</h3><br />
+                        <a href="javascript:void(0)" class="btn_two active download_button">Get Free VPN Now<i class="fas fa-arrow-right pl-2"></i></a>
+                    </center>
+                    </div>
+                </div>
+            </section>
+
+            <section class="countries-list countries-list-row py-120" style="background-color: #ffffff;padding: 120px 120px 20px;">
+                <div class="row" style="display: block;">
+                    <div class="cold-md-12">
+                        <h2><center>Free VPN for other countries</center></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="d-flex justify-content-around">
+                            <div class="contries-list"><a href="#europe">Europe</a></div>
+                            <div class="contries-list"><a href="#northamerica">North America</a></div>
+                            <div class="contries-list"><a href="#southamerica">South America</a></div>
+                            <div class="contries-list"><a href="#asia">Asia</a></div>
+                            <div class="contries-list"><a href="#middleeast">Middle East</a></div>
+                            <div class="contries-list"><a href="#africa">Africa</a></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-12 col-sm-12 countries-list-wrapper mt-5">
+                        <div class="row mt-5"  id="europe">
+                            <div class="col-12 pb-3"><a href="https://freevpneurope.com"><h6><u>Europe</u></h6></a></div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnaustria.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/at.svg" alt="Free VPN Austria" title="Free VPN Austria"> <span class="flag-title" style="color: black;">Austria</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnbelgium.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/be.svg" alt="Free VPN Belgium" title="Free VPN Belgium"> <span class="flag-title" style="color: black;">Belgium</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnbulgaria.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/bg.svg" alt="Free VPN Bulgaria" title="Free VPN Bulgaria"> <span class="flag-title" style="color: black;">Bulgaria</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnswitzerland.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/ch.svg" alt="Free VPN Switzerland" title="Free VPN Switzerland"> <span class="flag-title" style="color: black;">Switzerland</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnczech.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/cz.svg" alt="Free VPN Czech Republic" title="Free VPN Czech Republic"> <span class="flag-title" style="color: black;">Czech Republic</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12">
+                                <a href="https://freevpngermany.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/de.svg" alt="Free VPN Germany" title="Free VPN Germany"> <span class="flag-title" style="color: black;">Germany</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpndenmark.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/dk.svg" alt="Free VPN Denmark" title="Free VPN Denmark"> <span class="flag-title" style="color: black;">Denmark</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnspain.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/es.svg" alt="Free VPN Spain" title="Free VPN Spain"> <span class="flag-title" style="color: black;">Spain</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnfinland.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/fi.svg" alt="Free VPN Finland" title="Free VPN Finland"> <span class="flag-title" style="color: black;">Finland</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://paladinvpn.com/locations/france-vpn/"><img class="flag-img" src= "/freevpnportugal/assets/flags/fr.svg" alt="Free VPN France" title="Free VPN France"> <span class="flag-title" style="color: black;">France</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://paladinvpn.com/locations/uk-vpn/"><img class="flag-img" src= "/freevpnportugal/assets/flags/gb.svg" alt="Free VPN UK" title="Free VPN United Kingdom"> <span class="flag-title" style="color: black;">United Kingdom</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpngreece.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/gr.svg" alt="Free VPN Greece" title="Free VPN Greece"> <span class="flag-title" style="color: black;">Greece</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpncroatia.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/hr.svg" alt="Free VPN Croatia " title="Free VPN Croatia "> <span class="flag-title" style="color: black;">Croatia</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnhungary.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/hu.svg" alt="Free VPN Hungary" title="Free VPN Hungary"> <span class="flag-title" style="color: black;">Hungary</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnireland.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/ie.svg" alt="Free VPN Ireland" title="Free VPN Ireland"> <span class="flag-title" style="color: black;">Ireland</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpniceland.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/is.svg" alt="Free VPN Iceland" title="Free VPN Iceland" > <span class="flag-title" style="color: black;">Iceland</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnitaly.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/it.svg" alt="Free VPN Italy" title="Free VPN Italy"> <span class="flag-title" style="color: black;">Italy</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnnetherlands.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/nl.svg" alt="Free VPN Netherlands" title="Free VPN Netherlands"> <span class="flag-title" style="color: black;">Netherlands</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnnorway.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/no.svg" alt="Free VPN Norway" title="Free VPN Norway"> <span class="flag-title" style="color: black;">Norway</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnpoland.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/pl.svg" alt="Free VPN Poland" title="Free VPN Poland"> <span class="flag-title" style="color: black;">Poland</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnromania.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/ro.svg" alt="Free VPN Romania" title="Free VPN Romania"> <span class="flag-title" style="color: black;">Romania</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnrussia.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/ru.svg" alt="Free VPN Russia" title="Free VPN Russia"> <span class="flag-title" style="color: black;">Russia</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnserbia.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/serbia.png" alt="Free VPN Serbia" title="Free VPN Serbia"> <span class="flag-title" style="color: black;">Serbia</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnsweden.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/se.svg" alt="Free VPN Sweden " title="Free VPN Sweden "> <span class="flag-title" style="color: black;">Sweden</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://paladinvpn.com/locations/slovakia-vpn/"><img class="flag-img" src= "/freevpnportugal/assets/flags/sk.svg" alt="Free VPN Slovakia" title="Free VPN Slovakia"> <span class="flag-title" style="color: black;">Slovakia</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnbelarus.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/belarus.png" alt="Free VPN Belarus" title="Free VPN Belarus"> <span class="flag-title" style="color: black;">Belarus</span></a>
+                            </div><div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnlatvia.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/latvia.png" alt="Free VPN Latvia" title="Free VPN Latvia"> <span class="flag-title" style="color: black;">Latvia</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnestonia.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/estonia.png" alt="Free VPN Estonia" title="Free VPN Estonia"> <span class="flag-title" style="color: black;">Estonia</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnlithuania.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/lithuania.png" alt="Free VPN Lithuania" title="Free VPN Lithuania"> <span class="flag-title" style="color: black;">Lithuania</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnmalta.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/malta.png" alt="Free VPN Malta" title="Free VPN Malta"> <span class="flag-title" style="color: black;">Malta</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnportugal.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/portugal.png" alt="Free VPN Portugal" title="Free VPN Portugal"> <span class="flag-title" style="color: black;">Portugal</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnukraine.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/ukraine.png" alt="Free VPN Ukraine" title="Free VPN Ukraine"> <span class="flag-title" style="color: black;">Ukraine</span></a>
+                            </div>
+                        </div>
+            
+                        <div class="row mt-5" id="northamerica">
+                            <div class="col-12 pt-5 pb-3"><h6>North America</h6></div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnbelize.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/belize.png" alt="Free VPN Belize" title="Free VPN Belize"> <span class="flag-title" style="color: black;">Belize</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpncanada.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/ca.svg" alt="Free VPN Canada" title="Free VPN Canada"> <span class="flag-title" style="color: black;">Canada</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpncostarica.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/costarica.png" alt="Free VPN Costarica" title="Free VPN Costa Rica"> <span class="flag-title" style="color: black;">Costa Rica</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpncuba.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/cuba.png" alt="Free VPN Cuba" title="Free VPN Cuba"> <span class="flag-title" style="color: black;">Cuba</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnmexico.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/mx.svg" alt="Free VPN Mexico" title="Free VPN Mexico"> <span class="flag-title" style="color: black;">Mexico</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnhaiti.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/haiti.png" alt="Free VPN Haiti" title="Free VPN Haiti"> <span class="flag-title" style="color: black;">Haiti</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnhonduras.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/honduras.png" alt="Free VPN Honduras" title="Free VPN Honduras"> <span class="flag-title" style="color: black;">Honduras</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnpanama.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/panama.png" alt="Free VPN Panama" title="Free VPN Panama" > <span class="flag-title" style="color: black;">Panama</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnamerica.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/us.svg" alt="Free VPN USA" title="Free VPN United States"> <span class="flag-title" style="color: black;">United States</span></a>
+                            </div>
+                        </div>
+            
+                        <div class="row mt-5" id="southamerica">
+                            <div class="col-12 pt-5 pb-3"><h6>South America</h6></div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnargentina.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/ar.svg" alt="Free VPN Argentina" title="Free VPN Argentina"> <span class="flag-title" style="color: black;">Argentina</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnbolivia.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/bolivia.png" alt="Free VPN Bolivia" title="Free VPN Bolivia"> <span class="flag-title" style="color: black;">Bolivia</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnbrazil.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/br.svg" alt="Free VPN Brazil" title="Free VPN Brazil"> <span class="flag-title" style="color: black;">Brazil</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnchile.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/cl.svg" alt="Free VPN Chile" title="Free VPN Chile"> <span class="flag-title" style="color: black;">Chile</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://paladinvpn.com/locations/colombia-vpn/"><img class="flag-img" src= "/freevpnportugal/assets/flags/co.svg" alt="Free VPN Colombia" title="Free VPN Colombia"> <span class="flag-title" style="color:black;">Colombia</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnecuador.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/ecuador.png" alt="Free VPN Ecuador" title="Free VPN Ecuador"> <span class="flag-title" style="color: black;">Ecuador</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnperu.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/peru.png" alt="Free VPN Peru" title="Free VPN Peru"> <span class="flag-title" style="color: black;">Peru</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnvenezuela.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/venezuela.png" alt="Free VPN Venezuela" title="Free VPN Venezuela"> <span class="flag-title" style="color: black;">Venezuela</span></a>
+                            </div>
+                        </div>
+            
+                        <div class="row mt-5" id="asia">
+                            <div class="col-12 pb-3"><a href="https://freevpnasia.com"><h6><u>Asia</u></h6></a></div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnafghanistan.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/afghanistan.png" alt="Free VPN Afghanistan" title="Free VPN Afghanistan"> <span class="flag-title" style="color: black;">Afghanistan</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://paladinvpn.com/locations/australia-vpn/"><img class="flag-img" src= "/freevpnportugal/assets/flags/au.svg" alt="Free VPN Australia" title="Free VPN Australia"> <span class="flag-title" style="color: black;">Australia</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnazerbaijan.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/azerbaijan.png" alt="Free VPN Azerbaijan" title="Free VPN Azerbaijan"> <span class="flag-title" style="color: black;">Azerbaijan</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnbangladesh.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/bangladesh.png" alt="Free VPN Bangladesh" title="Free VPN Bangladesh"> <span class="flag-title" style="color: black;">Bangladesh</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpncambodia.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/cambodia.png" alt="Free VPN Cambodia" title="Free VPN Cambodia"> <span class="flag-title" style="color: black;">Cambodia</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnhongkong.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/hk.svg" alt="Free Hong Kong" title="Free Hong Kong"> <span class="flag-title" style="color: black;">Hong Kong</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnindonesia.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/id.svg" alt="Free VPN Indonesia" title="Free VPN Indonesia"> <span class="flag-title" style="color: black;">Indonesia</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://paladinvpn.com/locations/india-vpn/"><img class="flag-img" src= "/freevpnportugal/assets/flags/in.svg" alt="Free VPN India" title="Free VPN India"> <span class="flag-title" style="color: black;">India</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnjapan.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/jp.svg" alt="Free VPN Japan" title="Free VPN Japan"> <span class="flag-title" style="color: black;">Japan</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnkazakhstan.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/kazakhstan.png" alt="Free VPN Kazakhstan" title="Free VPN Kazakhstan"> <span class="flag-title" style="color: black;">Kazakhstan</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnlaos.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/laos.png" alt="Free VPN Laos" title="Free VPN Laos"> <span class="flag-title" style="color: black;">Laos</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnlebanon.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/lebanon.png" alt="Free VPN Lebanon" title="Free VPN Lebanon"> <span class="flag-title" style="color: black;">Lebanon</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnmalaysia.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/malaysia.png" alt="Free VPN Malaysia" title="Free VPN Malaysia"> <span class="flag-title" style="color: black;">Malaysia</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnmynamar.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/mynamar.png" alt="Free VPN Mynamar" title="Free VPN Mynamar"> <span class="flag-title" style="color: black;">Mynamar</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnnewzealand.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/nz.svg" alt="Free VPN New Zealand" title="Free VPN New Zealand"> <span class="flag-title" style="color: black;">New Zealand</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnphilippines.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/philippines.png" alt="Free VPN Philippines" title="Free VPN Philippines"> <span class="flag-title" style="color: black;">Philippines</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnsingapore.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/sg.svg" alt="Free VPN Singapore" title="Free VPN Singapore"> <span class="flag-title" style="color: black;">Singapore</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnsouthkorea.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/kr.svg" alt="Free VPN South Korea" title="Free VPN South Korea"> <span class="flag-title" style="color: black;">South Korea</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpntaiwan.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/taiwan.png" alt="Free VPN Taiwan" title="Free VPN Taiwan"> <span class="flag-title" style="color: black;">Taiwan</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpntajikistan.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/tajikistan.png" alt="Free VPN Tajikistan" title="Free VPN Tajikistan"> <span class="flag-title" style="color: black;">Tajikistan</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnthailand.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/thailand.png" alt="Free VPN Thailand" title="Free VPN Thailand"> <span class="flag-title" style="color: black;">Thailand</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnuzbekistan.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/uzbekistan.png" alt="Free VPN Uzbekistan" title="Free VPN Uzbekistan"> <span class="flag-title" style="color: black;">Uzbekistan</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnvietnam.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/vietnam.png" alt="Free VPN Vietnam" title="Free VPN Vietnam"> <span class="flag-title" style="color: black;">Vietnam</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnyemen.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/yemen.png" alt="Free VPN Yemen" title="Free VPN Yemen"> <span class="flag-title" style="color: black;">Yemen</span></a>
+                            </div>
+                        </div>
+            
+                        <div class="row mt-5" id="middleeast">
+                            <div class="col-12 pt-5 pb-3"><h6>Middle East</h6></div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnabudhabi.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/ae.svg" alt="Free VPN Abu Dhabi" title="Free VPN Abu Dhabi"> <span class="flag-title" style="color: black;">Abu Dhabi</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpndubai.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/ae.svg" alt="Free VPN Dubai" title="Free VPN Dubai"> <span class="flag-title" style="color: black;">Dubai</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpniran.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/iran.png" alt="Free VPN Iran" title="Free VPN Iran"> <span class="flag-title" style="color: black;">Iran</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpniraq.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/iraq.png" alt="Free VPN Iraq" title="Free VPN Iraq"> <span class="flag-title" style="color: black;">Iraq</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnisrael.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/il.svg" alt="Free VPN Israel" title="Free VPN Israel" > <span class="flag-title" style="color: black;">Israel</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnjordan.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/Jordan-jpg.jpg" alt="Free VPN Jordan" title="Free VPN Jordan"> <span class="flag-title" style="color: black;">Jordan</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnoman.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/oman.png" alt="Free VPN Oman" title="Free VPN Oman"> <span class="flag-title" style="color: black;">Oman</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnpakistan.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/pakistan.png" alt="Free VPN Pakistan" title="Free VPN Pakistan"> <span class="flag-title" style="color: black;">Pakistan</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnsaudiarabia.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/saudiarabia.png" alt="Free VPN Saudiarabia" title="Free VPN Saudiarabia"> <span class="flag-title" style="color: black;">Saudiarabia</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnturkey.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/tr.svg" alt="Free VPN Turkey" title="Free VPN Turkey"> <span class="flag-title" style="color: black;">Turkey</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnuae.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/ae.svg" alt="Free VPN United Arab Emirates" title="Free VPN United Arab Emirates"> <span class="flag-title" style="color: black;">United Arab Emirates</span></a>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5" id="africa">
+                            <div class="col-12 pt-5 pb-3"><h6>Africa</h6></div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnalgeria.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/dz.svg" alt="Free VPN Algeria" title="Free VPN Algeria"> <span class="flag-title" style="color: black;">Algeria</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnangola.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/angola.png?1" alt="Free VPN Angola" title="Free VPN Angola"> <span class="flag-title" style="color: black;">Angola</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpncameroon.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/cameroon.png" alt="Free VPN Cameroon" title="Free VPN Cameroon"> <span class="flag-title" style="color: black;">Cameroon</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpncongo.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/congo.png" alt="Free VPN Congo" title="Free VPN Congo"> <span class="flag-title" style="color: black;">Congo</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnegypt.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/eg.svg" alt="Free VPN Egypt" title="Free VPN Egypt"> <span class="flag-title"style="color: black;">Egypt</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnethiopia.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/ethiopia.png" alt="Free VPN Ethiopia" title="Free VPN Ethiopia"> <span class="flag-title" style="color: black;">Ethiopia</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnghana.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/ghana.jpg" alt="Free VPN Ghana" title="Free VPN Ghana"> <span class="flag-title" style="color: black;">Ghana</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnkenya.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/kenya.png" alt="Free VPN Kenya" title="Free VPN Kenya"> <span class="flag-title" style="color: black;">Kenya</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnmadagascar.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/madagascar.png" alt="Free VPN Madagascar" title="Free VPN Madagascar"> <span class="flag-title" style="color: black;">Madagascar</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnmalawi.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/malawi.png" alt="Free VPN Malawi" title="Free VPN Malawi"> <span class="flag-title" style="color: black;">Malawi</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnmali.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/mali.png" alt="Free VPN Mali" title="Free VPN Mali"> <span class="flag-title" style="color: black;">Mali</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnmorocco.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/morocco.png" alt="Free VPN Morocco" title="Free VPN Morocco"> <span class="flag-title" style="color: black;">Morocco</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnnamibia.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/namibia.png" alt="Free VPN Namibia" title="Free VPN Namibia"> <span class="flag-title" style="color: black;">Namibia</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnniger.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/niger.png" alt="Free VPN Niger" title="Free VPN Niger"> <span class="flag-title" style="color: black;">Niger</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnnigeria.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/nigeria.png" alt="Free VPN Nigeria" title="Free VPN Nigeria"> <span class="flag-title" style="color: black;">Nigeria</span></a>
+                            </div>
+                    <!--    <div class="col-md-4 col-lg-4 col-sm-12 mt-3">
+                                <img class="flag-img" src= "/freevpnportugal/assets/flags/ly.svg"> <span class="flag-title">Libya</span>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 mt-3">
+                                <img class="flag-img" src= "/freevpnportugal/assets/flags/sd.svg"> <span class="flag-title">Sudan</span>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 mt-3">
+                                <img class="flag-img" src= "/freevpnportugal/assets/flags/et.svg"> <span class="flag-title">Ethiopia</span>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 mt-3">
+                                <img class="flag-img" src= "/freevpnportugal/assets/flags/ke.svg"> <span class="flag-title">Kenya</span>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 mt-3">
+                                <img class="flag-img" src= "/freevpnportugal/assets/flags/tz.svg"> <span class="flag-title">Tanzania</span>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 mt-3">
+                                <img class="flag-img" src= "/freevpnportugal/assets/flags/ug.svg"> <span class="flag-title">Uganda</span>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 mt-3">
+                                <img class="flag-img" src= "/freevpnportugal/assets/flags/zw.svg"> <span class="flag-title">Zimbabwe</span>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 mt-3">
+                                <img class="flag-img" src= "/freevpnportugal/assets/flags/ao.svg"> <span class="flag-title">Angola</span>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 mt-3">
+                                <img class="flag-img" src= "/freevpnportugal/assets/flags/na.svg"> <span class="flag-title">Namibia</span>
+                            </div>
+                        --> 
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnsudan.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/sudan.png" alt="Free VPN Sudan" title="Free VPN Sudan"> <span class="flag-title" style="color:black;">Sudan</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnsouthafrica.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/za.svg" alt="Free VPN South Africa" title="Free VPN South Africa"> <span class="flag-title" style="color:black;">South Africa</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpntanzania.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/tanzania.png" alt="Free VPN Tanzania" title="Free VPN Tanzania"> <span class="flag-title"style="color: black;">Tanzania</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpntogo.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/togo.png" alt="Free VPN Togo" title="Free VPN Togo"> <span class="flag-title"style="color: black;">Togo</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpntunisia.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/tunisia.png" alt="Free VPN Tunisia" title="Free VPN Tunisia"> <span class="flag-title"style="color: black;">Tunisia</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnuganda.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/uganda.png" alt="Free VPN Uganda" title="Free VPN Uganda"> <span class="flag-title"style="color: black;">Uganda</span></a>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                <a href="https://freevpnzimbabwe.com"><img class="flag-img" src= "/freevpnportugal/assets/flags/zimbabwe.png" alt="Free VPN Zimbabwe" title="Free VPN Zimbabwe"> <span class="flag-title"style="color: black;">Zimbabwe</span></a>
+                            </div>
+                    <!--    <div class="col-md-4 col-lg-4 col-sm-12 mt-3">
+                                <img class="flag-img" src= "/freevpnportugal/assets/flags/gh.svg"> <span class="flag-title">Ghana</span>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 mt-3">
+                                <img class="flag-img" src= "/freevpnportugal/assets/flags/lr.svg"> <span class="flag-title">Liberia</span>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-12 mt-3">
+                                <img class="flag-img" src= "/freevpnportugal/assets/flags/ne.svg"> <span class="flag-title">Nigeria</span>
+                            </div> -->  
+                        </div>
+                    </div> 
+                </div>
+            </section>
+
+
+            <section style="background-color: #ffffff; padding: 20px 50px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="cold-md-12" style="margin-bottom: 50px; width: 100%;">
+                            <h2><center>Special Purpose VPN</center></h2>
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                            <center>
+                                <a href="https://nbastreamingvpn.com"><img src= "/freevpnportugal/img/nbastreamingvpn.png" alt="NBA Streaming VPN" title="NBA Streaming VPN"><br><h4 style="display: block; font-size: 12px; font-weight: 400; text-transform: uppercase; margin: 10px 0 0; text-align: center; text-decoration: underline;">NBA streaming VPN</h4></a>
+                            </center>
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                            <center>
+                                <a href="https://soccerstreamingvpn.com"><img src= "/freevpnportugal/img/soccerstreamingvpn.png" alt=" Soccer Streaming VPN" title="Soccer Streaming VPN"><br><h4 style="display: block; font-size: 12px; font-weight: 400; text-transform: uppercase; margin: 10px 0 0; text-align: center; text-decoration: underline;">soccer streaming vpn</h4></a>
+                            </center>
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                            <center>
+                                <a href="https://iplstreamingvpn.com"><img src= "/freevpnportugal/img/iplstreamingvpn..png" alt="IPL Streaming VPN" title="IPL Streaming VPN"><br><h4 style="display: block; font-size: 12px; font-weight: 400; text-transform: uppercase; margin: 10px 0 0; text-align: center; text-decoration: underline;">ipl streaming vpn</h4></a>
+                            </center>
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                            <center>
+                                <a href="https://nflstreamingvpn.com"><img src= "/freevpnportugal/img/nflstreamingvpn.png" alt="NFL Streaming VPN" title="NFL Streaming VPN"><br><h4 style="display: block; font-size: 12px; font-weight: 400; text-transform: uppercase; margin: 10px 0 0; text-align: center; text-decoration: underline;">nfl streaming vpn</h4></a>
+                            </center>
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                            <center>
+                                <a href="https://mlbstreamingvpn.com"><img src= "/freevpnportugal/img/mlbstreamingvpn.png" alt="MBL Streaming VPN" title="MBL Streaming VPN"><br><h4 style="display: block; font-size: 12px; font-weight: 400; text-transform: uppercase; margin: 10px 0 0; text-align: center; text-decoration: underline;">mlb streaming vpn</h4></a>
+                            </center>
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                            <center>
+                                <a href="https://nhlstreamingvpn.com"><img src= "/freevpnportugal/img/nhlstreamingvpn.png" alt="NHL Streaming VPN" title="NHL Streaming VPN"><br><h4 style="display: block; font-size: 12px; font-weight: 400; text-transform: uppercase; margin: 10px 0 0; text-align: center; text-decoration: underline;">nhl streaming vpn</h4></a>
+                            </center>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 25px;"> 
+                        <div class="col-md-2 col-sm-2">
+                            <center>
+                                <a href="https://ufcstreamingvpn.com"><img src= "/freevpnportugal/img/ufcstreamingvpn.png" alt="UFC Streaming VPN" title="UFC Streaming VPN"><br><h4 style="display: block; font-size: 12px; font-weight: 400; text-transform: uppercase; margin: 10px 0 0; text-align: center; text-decoration: underline;">ufc streaming vpn</h4></a>
+                            </center>
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                            <center>
+                                <a href="https://mmastreamingvpn.com"><img src= "/freevpnportugal/img/mmastreamingvpn.png" alt="MMA Streaming VPN" title="MMA Streaming VPN"><br><h4 style="display: block; font-size: 12px; font-weight: 400; text-transform: uppercase; margin: 10px 0 0; text-align: center; text-decoration: underline;">mma streaming vpn</h4></a>
+                            </center>
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                            <center>
+                                <a href="https://f1streamingvpn.com"><img src= "/freevpnportugal/img/f1streamingvpn.png" alt="F1 Streaming VPN" title="F1 Streaming VPN"><br><h4 style="display: block; font-size: 12px; font-weight: 400; text-transform: uppercase; margin: 10px 0 0; text-align: center; text-decoration: underline;">f1 streaming vpn</h4></a>
+                            </center>
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                            <center>
+                                <a href="https://motogpstreamingvpn.com"><img src= "/freevpnportugal/img/motogpstreamingvpn.png" alt="MOTOGP Streaming VPN" title="MOTOGP Streaming VPN"><br><h4 style="display: block; font-size: 12px; font-weight: 400; text-transform: uppercase; margin: 10px 0 0; text-align: center; text-decoration: underline;">motogp streaming vpn</h4></a>
+                            </center>
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                            <center>
+                                <a href="https://freehotspotshield.com"><img src= "/freevpnportugal/img/freehotspotshield.png?1" alt="Free Hotspot Shield" title="Free Hotspot Shield"><br><h4 style="display: block; font-size: 12px; font-weight: 400; text-transform: uppercase; margin: 10px 0 0; text-align: center; text-decoration: underline;">free hotspot shield</h4></a>
+                            </center>
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                            <center>
+                                <a href="https://freemacvpn.com"><img src= "/freevpnportugal/img/freemacvpn.png?1" alt="Free MAC VPN" title="Free MAC VPN"><br><h4 style="display: block; font-size: 12px; font-weight: 400; text-transform: uppercase; margin: 10px 0 0; text-align: center; text-decoration: underline;">free mac vpn</h4></a>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section style="padding: 100px 20px">
+                <div class="row">
+                    <div class="col-12 pt-3">
+                        <h3 style="max-width: 800px; margin: auto; text-align: center; line-height: 36px; font-weight: 400;"><b>Freevpnportugal.com</b> is a free VPN service provided to you by PaladinVPN.com (Ledger Media LTD) and our corporate partners.</h3>
+                        <center>
+                            <div class="slr_btn_wrapper mt-5">
+                                <a href="javascript:void(0)" class="btn_two active download_button">Download PaladinVPN <i class="fas fa-arrow-right pl-2"></i></a>
+                            </div>
+                        </center>
+                    </div>
+                </div>
+            </section>
+
+            <!--============================-->
+            <!--=   Products / Locations   =-->
+            <!--============================-->
+            <!--<section class="footer_five_area" style="padding: 50px 10px;">
+                <div class="footer_five_middle clearfix" style="padding: 0">
+                    <div class="vigo_container_one">
+                        <div class="col-md-4">
+                            <div class="widget5_title">
+                                <p class="text-dark" style="margin-left: -5px;">PRODUCTS</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6" style="padding-left:10px">
+                                    <ul class="list-group widget5_desc">
+                                        <li class="list-group-item"><a href="/products/free-browser-extension">Free Browser Extensions</a></li>
+                                        <li class="list-group-item"><a href="/products/free-windows-vpn">Free VPN for Windows</a></li>
+                                        <li class="list-group-item"><a href="/products/free-iphone-vpn">Free IPhone VPN</a></li>
+                                        <li class="list-group-item"><a href="/products/free-proxy">Free Unblock Proxy</a></li>
+                                        <li class="list-group-item"><a href="/products/free-disney-plus-vpn">Free Disney VPN</a></li>
+                                        <li class="list-group-item"><a href="/products/free-roblox-vpn">Free Roblox VPN</a></li>
+                                        <li class="list-group-item"><a href="/products/free-gaming-vpn">Free Gaming VPN</a>
+                                            <ul style="padding-left: 15px;margin: 0;">
+                                                <li class="list-group-item"><a href="/products/free-vpn-for-pubg">- Free VPN for PUBG</a></li>
+                                                <li class="list-group-item"><a href="/products/free-vpn-for-free-fire">- Free VPN for Free Fire</a></li>
+                                                <li class="list-group-item"><a href="/products/free-vpn-for-mobile-legends">- Free VPN for Mobile Legends</a></li>
+                                                <li class="list-group-item"><a href="/products/free-vpn-for-warzone">- Free VPN for Warzone</a></li>
+                                                <li class="list-group-item"><a href="/products/free-vpn-for-gameloop">- Free VPN for Gameloop</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="list-group-item"><a href="/products/chrome-proxy-settings">Chrome Proxy Settings</a></li>
+                                        <li class="list-group-item"><a href="/products/ip-location">Free IP location</a></li>
+                                        <li class="list-group-item"><a href="/products/free-hotspot-shield">Free Hotspot Shield</a></li>
+                                        <li class="list-group-item"><a href="/products/free-android-vpn/">Free Android VPN</a></li>
+                                        <li class="list-group-item"><a href="/products/free-mac-vpn">Free Mac VPN</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6" style="padding-left:10px">
+                                    <ul class="list-group widget5_desc">
+                                        <li class="list-group-item"><a href="/products/free-netflix-vpn">Free Netflix VPN</a></li>
+                                        <li class="list-group-item"><a href="/products/free-instagram-vpn">Free Instagram VPN</a></li>
+                                        <li class="list-group-item"><a href="/products/free-pc-laptop-vpn">Free PC/Laptop VPN</a></li>
+                                        <li class="list-group-item"><a href="/products/free-craigslist-vpn">Free Craigslist VPN</a></li>
+                                        <li class="list-group-item"><a href="/products/free-travel-vpn">Free Travel VPN</a></li>
+                                        <li class="list-group-item"><a href="/products/free-sports-streaming-vpn">Free Sports Streaming VPN</a>
+                                            <ul style="padding-left: 15px;margin: 0;">
+                                                <li class="list-group-item"><a href="/products/soccer-streaming-vpn">- Soccer Streaming VPN</a></li>
+                                                <li class="list-group-item"><a href="/products/nba-streaming-vpn">- NBA Streaming VPN</a></li>
+                                                <li class="list-group-item"><a href="/products/ipl-streaming-vpn">- IPL Streaming VPN</a></li>
+                                                <li class="list-group-item"><a href="/products/nfl-streaming-vpn">- NFL Streaming VPN</a></li>
+                                                <li class="list-group-item"><a href="/products/mlb-streaming-vpn">- MLB Streaming VPN</a></li>
+                                                <li class="list-group-item"><a href="/products/nhl-streaming-vpn">- NHL Streaming VPN</a></li>
+                                                <li class="list-group-item"><a href="/products/ufc-streaming-vpn">- UFC Streaming VPN</a></li>
+                                                <li class="list-group-item"><a href="/products/mma-streaming-vpn">- MMA Streaming VPN</a></li>
+                                                <li class="list-group-item"><a href="/products/f1-streaming-vpn">- F1 Streaming VPN</a></li>
+                                                <li class="list-group-item"><a href="/products/motogp-streaming-vpn">- MotoGP Streaming VPN</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 features">
+                            <div class="widget5_title">
+                                <p class="text-dark" style="margin-left: -5px;">FEATURES</p>
+                                <ul class="list-group widget5_desc">
+                                    <li><a href="/features/anonymous-browsing/">Anonymous browsing</a></li>
+                                    <li><a href="/features/isp-throttling">ISP throttling</a></li>
+                                    <li><a href="/features/server-locations">Server locations</a></li>
+                                    <li><a href="/features/unblock-any-website">Unblock any website</a></li>
+                                    <li><a href="/features/unlimited-bandwidth">Unlimited bandwidth</a></li>
+                                    <li><a href="/features/unlimited-devices">Unlimited devices</a></li>
+                                    <li><a href="/features/unlimited-vpn">Unlimited VPN</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 countries flags32">
+                            <div class="widget5_title">
+                                <p class="text-dark" style="margin-left: -5px;">VPN LOCATIONS</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4" style="padding-left:5px">
+                                    <div class="widget5_title">
+                                        <p class="text-dark" style="margin-left: -5px;margin-bottom: 0;">Asia</p>
+                                    </div>
+                                    <ul class="location-list">
+                                         <li><a href= "/freevpnportugal/locations/china-vpn/"><div class="flag_country flag flag-cn"></div></a></li>
+                                         <li><a href= "/freevpnportugal/locations/hong-kong-vpn/"><div class="flag_country flag flag-hk"></div></a></li>
+                                         <li><a href= "/freevpnportugal/locations/india-vpn/"><div class="flag_country flag flag-in"></div></a></li>
+                                         <li><a href= "/freevpnportugal/locations/indonesia-vpn/"><div class="flag_country flag flag-id"></div></a></li>
+                                         <li><a href= "/freevpnportugal/locations/japan-vpn/"><div class="flag_country flag flag-jp"></div></a></li>
+                                         <li><a href= "/freevpnportugal/locations/kazakhstan-vpn/"><div class="flag_country flag flag-kz"></div></a></li>
+                                         <li><a href= "/freevpnportugal/locations/kyrgyzstan-vpn/"><div class="flag_country flag flag-kg"></div></a></li>
+                                         <li><a href= "/freevpnportugal/locations/malaysia-vpn/"><div class="flag_country flag flag-my"></div></a></li>
+                                         <li><a href= "/freevpnportugal/locations/mongolia-vpn/"><div class="flag_country flag flag-mn"></div></a></li>
+                                         <li><a href= "/freevpnportugal/locations/pakistan-vpn/"><div class="flag_country flag flag-pk"></div></a></li>
+                                         <li><a href= "/freevpnportugal/locations/philippines-vpn/"><div class="flag_country flag flag-ph"></div></a></li>
+                                         <li><a href= "/freevpnportugal/locations/south-korea-vpn/"><div class="flag_country flag flag-kr"></div></a></li>
+                                         <li><a href= "/freevpnportugal/locations/singapore-vpn/"><div class="flag_country flag flag-sg"></div></a></li>
+                                         <li><a href= "/freevpnportugal/locations/taiwan-vpn/"><div class="flag_country flag flag-tw"></div></a></li>
+                                         <li><a href= "/freevpnportugal/locations/thailand-vpn/"><div class="flag_country flag flag-th"></div></a></li>
+                                         <li><a href= "/freevpnportugal/locations/vietnam-vpn/"><div class="flag_country flag flag-vn"></div></a></li>
+                                    </ul>
+                                    <div class="widget5_title">
+                                        <p class="text-dark" style="margin-left: -5px;margin-bottom: 0;">Middle East</p>
+                                    </div>
+                                    <ul class="location-list">
+                                        <li><a href= "/freevpnportugal/locations/israel-vpn/"><div class="flag_country flag flag-il"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/jordan-vpn/"><div class="flag_country flag flag-jo"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/qatar-vpn/"><div class="flag_country flag flag-qa"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/saudi-arabia-vpn/"><div class="flag_country flag flag-sa"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/turkey-vpn/"><div class="flag_country flag flag-tr"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/uae-vpn/"><div class="flag_country flag flag-ae"></div></a></li>
+                                    </ul>
+                                    <div class="widget5_title">
+                                        <p class="text-dark" style="margin-left: -5px;margin-bottom: 0;">Africa</p>
+                                    </div>
+                                    <ul class="location-list">
+                                        <li><a href= "/freevpnportugal/locations/algeria-vpn/"><div class="flag_country flag flag-dz"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/egypt-vpn/"><div class="flag_country flag flag-eg"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/morocco-vpn/"><div class="flag_country flag flag-ma"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/south-africa-vpn/"><div class="flag_country flag flag-za"></div></a></li>
+                                    </ul>
+                                    <div class="widget5_title">
+                                        <p class="text-dark" style="margin-left: -5px;margin-bottom: 0;">Oceania</p>
+                                    </div>
+                                    <ul class="location-list">
+                                        <li><a href= "/freevpnportugal/locations/australia-vpn/"><div class="flag_country flag flag-au"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/new-zealand-vpn/"><div class="flag_country flag flag-nz"></div></a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4" style="padding-left:5px">
+                                    <div class="widget5_title">
+                                        <p class="text-dark" style="margin-left: -5px;margin-bottom: 0;">North America</p>
+                                    </div>
+                                    <ul class="location-list">
+                                        <li><a href= "/freevpnportugal/locations/canada-vpn/"><div class="flag_country flag flag-ca"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/mexico-vpn/"><div class="flag_country flag flag-mx"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/puerto-rico-vpn/"><div class="flag_country flag flag-pr"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/usa-vpn/"><div class="flag_country flag flag-us"></div></a></li>
+                                    </ul>
+                                    <div class="widget5_title">
+                                        <p class="text-dark" style="margin-left: -5px;margin-bottom: 0;">South America</p>
+                                    </div>
+                                    <ul class="location-list">
+                                        <li><a href= "/freevpnportugal/locations/argentina-vpn/"><div class="flag_country flag flag-ar"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/bolivia-vpn/"><div class="flag_country flag flag-bo"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/brazil-vpn/"><div class="flag_country flag flag-br"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/chile-vpn/"><div class="flag_country flag flag-cl"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/colombia-vpn/"><div class="flag_country flag flag-co"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/ecuador-vpn/"><div class="flag_country flag flag-ec"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/paraguay-vpn/"><div class="flag_country flag flag-py"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/peru-vpn/"><div class="flag_country flag flag-pe"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/uruguay-vpn/"><div class="flag_country flag flag-uy"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/venezuela-vpn/"><div class="flag_country flag flag-ve"></div></a></li>
+                                    </ul>
+                                    <div class="widget5_title">
+                                        <p class="text-dark" style="margin-left: -5px;margin-bottom: 0;">Central America</p>
+                                    </div>
+                                    <ul class="location-list">
+                                        <li><a href= "/freevpnportugal/locations/costa-rica-vpn/"><div class="flag_country flag flag-cr"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/guatemala-vpn/"><div class="flag_country flag flag-gt"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/honduras-vpn/"><div class="flag_country flag flag-hn"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/nicaragua-vpn/"><div class="flag_country flag flag-ni"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/panama-vpn/"><div class="flag_country flag flag-pa"></div></a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4" style="padding-left:5px">
+                                    <div class="widget5_title">
+                                        <p class="text-dark" style="margin-left: -5px;margin-bottom: 0;">Europe</p>
+                                    </div>
+                                    <ul class="location-list">
+                                        <li><a href= "/freevpnportugal/locations/austria-vpn/"><div class="flag_country flag flag-at"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/belarus-vpn/"><div class="flag_country flag flag-by"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/belgium-vpn/"><div class="flag_country flag flag-be"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/bulgaria-vpn/"><div class="flag_country flag flag-bg"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/cyprus-vpn/"><div class="flag_country flag flag-cy"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/croatia-vpn/"><div class="flag_country flag flag-hr"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/czech-republic-vpn/"><div class="flag_country flag flag-cz"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/denmark-vpn/"><div class="flag_country flag flag-dk"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/estonia-vpn/"><div class="flag_country flag flag-ee"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/finland-vpn/"><div class="flag_country flag flag-fi"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/france-vpn/"><div class="flag_country flag flag-fr"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/germany-vpn/"><div class="flag_country flag flag-de"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/greece-vpn/"><div class="flag_country flag flag-gr"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/hungary-vpn/"><div class="flag_country flag flag-hu"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/iceland-vpn/"><div class="flag_country flag flag-is"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/ireland-vpn/"><div class="flag_country flag flag-ie"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/italy-vpn/"><div class="flag_country flag flag-it"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/latvia-vpn/"><div class="flag_country flag flag-lv"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/lithuania-vpn/"><div class="flag_country flag flag-lt"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/luxembourg-vpn/"><div class="flag_country flag flag-lu"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/malta-vpn/"><div class="flag_country flag flag-mt"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/netherlands-vpn/"><div class="flag_country flag flag-nl"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/norway-vpn/"><div class="flag_country flag flag-no"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/poland-vpn/"><div class="flag_country flag flag-pl"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/portugal-vpn/"><div class="flag_country flag flag-pt"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/romania-vpn/"><div class="flag_country flag flag-ro"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/russia-vpn/"><div class="flag_country flag flag-ru"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/serbia-vpn/"><div class="flag_country flag flag-rs"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/slovenia-vpn/"><div class="flag_country flag flag-si"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/slovakia-vpn/"><div class="flag_country flag flag-sk"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/spain-vpn/"><div class="flag_country flag flag-es"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/sweden-vpn/"><div class="flag_country flag flag-se"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/switzerland-vpn/"><div class="flag_country flag flag-ch"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/ukraine-vpn/"><div class="flag_country flag flag-ua"></div></a></li>
+                                        <li><a href= "/freevpnportugal/locations/uk-vpn/"><div class="flag_country flag flag-gb"></div></a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>-->
+            <!--============================-->
+            <!--= End Products / Locations =-->
+            <!--============================-->
+
+            <!--==========================-->
+            <!--=        Footer         =-->
+            <!--==========================-->
+            
+            <footer class="footer_five_area" style="background-color: #ffffff; padding-top: 50px;">
+                <div class="footer_five_middle clearfix">
+                    <div class="vigo_container_one">
+                        <div class="footer_five_middle_flex">
+                            <div class="widget widget5">
+                                <div class="widget5_title">
+                                    <p class="text-dark">GENERAL</p>
+                                </div>
+                                <div class="widget5_desc">
+                                    <a href="https://paladinvpn.com/why_it_is_free.html">Why is it free?</a>
+                                    <a href="https://paladinvpn.com/privacy.html">Your Privacy</a>
+                                    <a href="https://paladinvpn.com/vpn_locations.html">Country list</a>
+                                    <a href="https://paladinvpn.com/why_vpn.html">Why use a VPN?</a>
+                                    <a href="https://paladinvpn.com/whats_my_ip.html">What's my IP?</a>
+                                    <a href="https://paladinvpn.com/news.html">News</a>
+                                    <a href="https://paladinvpn.com/faq.html">FAQ</a><a href="https://freevpnportugal.com/site-map/">Site Map</a>
+                                </div>
+                            </div>
+                            <div class="widget widget5">
+                                <div class="widget5_title">
+                                    <p class="text-dark">POLICIES</p>
+                                </div>
+                                <div class="widget5_desc">
+                                    <a href="https://paladinvpn.com/privacy_policy.html">Privacy</a>
+                                    <a href="https://paladinvpn.com/eula.html">End User Level Agreement (EULA)</a>
+                                    <a href="https://paladinvpn.com/privacy_policy.html">DMCA Policy</a>
+                                    <a href="https://paladinvpn.com/privacy_policy.html">Report Vulnerability</a>
+                                </div>
+                            </div>
+                            <div class="widget widget5">
+                                <div class="widget5_title">
+                                    <p class="text-dark">GET IN TOUCH</p>
+                                </div>
+                                <div class="widget5_desc">
+                                    <a href="mailto:info@paladinvpn.com">info@paladinvpn.com</a>
+                                    <a href="mailto:abuse@paladinvpn.com">Report Abuse</a>
+                                    <a href="https://paladinvpn.com/contact.html">Contact Us</a>
+                                </div>
+                            </div>
+                            <div class="widget widget5">
+                                <div class="widget5_title">
+                                    <p class="text-dark">SUPPORTED DEVICES</p>
+                                    <div class="widget5_desc">
+                                        <div class="icon-wrapper" style="background:#e9ecef;padding:10px;border-radius: 10px; width: 100px;">
+                                            <a href="https://d1f64skmkl5mzn.cloudfront.net/PaladinVPN.exe"><img src="/freevpnportugal/assets/img/footer-icon-1.png" alt="vpn chrome" title="Paladin VPN for Windows" style="height:20px;"></a>
+                                        </div>
+                                        <div class="icon-wrapper mt-2" style="background:#e9ecef;padding:10px;border-radius: 10px; width:107px">
+                                            <a href="https://chrome.google.com/webstore/detail/paladinvpn-100%25-unlimited/fmfjhpifmnfhaifhdenjjpdpmfpodlce"><img src="/freevpnportugal/assets/img/footer-icon-2.png" alt="chrome vpn" title="Paladin VPN for Chrome Extension" style="height:20px;"></a>
+                                        </div>
+                                        <div class="icon-wrapper mt-2" style="background:#e9ecef;padding:10px;border-radius: 10px; width:102px">
+                                            <a href="https://microsoftedge.microsoft.com/addons/detail/paladinvpn-100-unlimit/jpoanokndpebmilbjpbfmaapcahklbmb"><img src="/freevpnportugal/assets/img/footer-icon-3.png" alt="vpn mozilla" title="Paladin VPN for Microsoft Edge Extension" style="height:20px;"></a>
+                                        </div>
+                                        <div class="icon-wrapper mt-2" style="background:#e9ecef;padding:10px;border-radius: 10px; width:80px">
+                                            <a href=" https://addons.mozilla.org/en-US/firefox/addon/paladinvpn-unlimited-free-vpn/"><img src="/freevpnportugal/assets/img/footer-icon-4.png" alt="mozilla vpn" title="Paladin VPN for Firefox Extension" style="height:20px;"></a>
+                                        </div>
+                                        <div class="icon-wrapper mt-2" style="background:#e9ecef;padding:10px;border-radius: 10px; width:76px">
+                                            <a href="https://addons.opera.com/en/extensions/details/paladinvpn-100-unlimited-free-vpn-proxy/"><img src="/freevpnportugal/assets/img/footer-icon-5.png" alt="setup vpn" title="Paladin VPN for Opera Extension" style="height:20px;"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="widget widget5">
+                                <div class="widget5_title">
+                                    <p class="text-dark">Follow Us</p>
+                                </div>
+                                <div class="widget5_social">
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-youtube"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+
+                <div class="footer_five_bottom">
+                    <div class="vigo_container_one">
+                        <div class="footer_five_bottom_flex">
+                            <div class="footer_four_bottom_left">
+                                <img src= "/freevpnportugal/assets/img/logo.svg" alt="install vpn" title="Free VPN Paladinvpn">
+                            </div>
+                            <div class="footer_four_bottom_right">
+                                <p class="text-dark"><small>© Copyright 2022 PaladinVPN. | All rights reserved</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- /#site -->
+        <!-- Dependency Scripts -->
+        <script src="/dependencies/jquery/jquery.min.js"></script>
+        <script src="/dependencies/popper.js/popper.min.js"></script>
+        <script src="/dependencies/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/dependencies/owl.carousel/js/owl.carousel.min.js"></script>
+        <script src="/dependencies/magnific-popup/js/jquery.magnific-popup.min.js"></script>
+        <script src="/dependencies/isotope-layout/js/isotope.pkgd.min.js"></script>
+        <script src="/dependencies/slick-carousel/js/slick.min.js"></script>
+        <script src="/dependencies/jquery.countdown/js/jquery.countdown.min.js"></script>
+        <!--<script src="/dependencies/gmap3/gmap3.min.js"></script>-->
+        <script src="/dependencies/headroom/js/headroom.js"></script>
+        <script src="/dependencies/countUp.js/js/countUp.min.js"></script>
+        <script src="/dependencies/twitter-fetcher/js/twitterFetcher_min.js"></script>
+        <script src="/dependencies/aos/js/aos.js"></script>
+        <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsBrMPsyNtpwKXPPpG54XwJXnyobfMAIc"></script>-->
+        <script src="/dependencies/rangeslider.js/js/rangeslider.min.js"></script>
+        <script src="/dependencies/waypoints/js/jquery.waypoints.min.js"></script>
+        <!-- Site Scripts -->
+        <script src= "/freevpnportugal/assets/js/middle.js"></script>
+        <script src= "/freevpnportugal/assets/js/widget.js"></script>
+        <script src= "/freevpnportugal/assets/js/app.js"></script>
+        <script>
+            $.get("https://api.ipdata.co?api-key=ddfb7773da29c22b13cfbcf075a0393077062747218270ace806f7f4", function(response) {
+                console.log(response);
+                var ip = response.ip;
+                var city = response.city;
+                var country_code = response.city != null ? `${response.city}, ${response.country_code}` : country_code;
+                var isp = response.asn.name;
+                var latitude = response.latitude;
+                var longitude = response.longitude;
+                // console.log(ip, city, country_code, isp, latitude, longitude);
+                $("#ip").html(ip);
+                $("#city_country").html(`${country_code}`);
+                $("#isp").html(isp);
+            }, "jsonp");
+        </script>
+        <script type="text/javascript" src= "/freevpnportugal/assets/mk/js/script.js?t=20210804"></script>
+        <script type="text/javascript" src= "/freevpnportugal/assets/mk/js/helpers.js"></script>
+    </body>
+</html>

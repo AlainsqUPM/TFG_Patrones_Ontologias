@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>Ontology for Property Management</title>
+    <script class="remove" src="https://www.w3.org/Tools/respec/respec-w3c-common"></script>
+    <script class="remove" src="config.js"></script>
+    <script src="https://www.w3.org/2007/OWL/toggles.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="small.css" media="only all and (max-width: 649px)">
+</head>
+
+<body prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# owl: http://www.w3.org/2002/07/owl# xsd: http://www.w3.org/2001/XMLSchema# skos: http://www.w3.org/2004/02/skos/core# dcterms: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/>. vann: http://purl.org/vocab/vann/ voaf: http://purl.org/vocommons/voaf# time: http://www.w3.org/2006/time#  bot: https://w3id.org/bot# seas: https://w3id.org/seas/  sampling: http://www.w3.org/ns/sosa/sampling/ vs: http://www.w3.org/2003/06/sw-vocab-status/ns#">
+
+    <section id="abstract">
+        <p>
+            The Ontology for Property Management (OPM) is an ontology for describing temporal properties that are subject to changes as the building design evolves.
+        </p>
+        <p style="text-align: center;">
+            The namespace for OPM terms is <span class="repeated" style="font-family: courier;">
+        http://www.w3id.org/opm#</span>
+        </p>
+        <p style="text-align: center;">
+            The suggested prefix for the OPM namespace is <span class="repeated" style="font-family: courier;">
+        opm</span>
+        </p>
+        <p style="text-align: center;">
+            The Turtle version of the OPM ontology is available at <a href="http://www.w3id.org/opm/opm.ttl">http://www.w3id.org/opm/opm.ttl</a>
+        </p>
+    </section>
+    <section id="sotd">
+        <p>
+            <b>General Information</b>
+        </p>
+        <p>This is a Public Draft of a document prepared by the Linked Building Data Community Group (<a href="https://www.w3.org/community/lbd/">LBD</a>). The document is prepared following W3C conventions. The document is released at this time to solicit public comment.</p>
+    </section>
+    <section id="intro" class="informative">
+        <h2>Introduction</h2>
+        <p>
+            Some description.
+        </p>
+    </section>
+
+    <section id="Developments" class="informative">
+        <h2>Origins of OPM</h2>
+        <p>Here we briefly review the origins of OPM.</p>
+    </section>
+    <section id="Axiomatization" class="normative">
+        <h2>Axiomatization</h2>
+        <p>This section introduces the specifications for OPM.</p>
+
+        <section>
+            <p style="text-align: center;">
+                The namespace for OPM terms is <span class="repeated" style="font-family: courier;">
+            http://www.w3id.org/opm#</span>
+            </p>
+            <p style="text-align: center;">
+                The suggested prefix for the OPM namespace is <span class="repeated" style="font-family: courier;">
+            opm</span>
+            </p>
+            <p style="text-align: center;">
+                The Turtle version of the OPM ontology is available at <a href="http://www.w3id.org/opm/opm.ttl">http://www.w3id.org/opm/opm.ttl</a>
+            </p>
+        </section>
+
+        <section class="informative" id="overview-of-classes-and-properties">
+            <h3>Overview of Classes and Properties</h3>
+            <div id="index-of-classes-and-properties">
+                <div class="azlist">
+                    <p>Classes:
+                        <a href="#PropertyState">opm:PropertyState</a> , 
+                        <a href="#CurrentPropertyState">opm:CurrentPropertyState</a> ,
+                        <a href="#OutdatedPropertyState">opm:OutdatedPropertyState</a> ,
+                        <a href="#Deleted">opm:Deleted</a> ,
+                        <a href="#Assumed">opm:Assumed</a> ,
+                        <a href="#Confirmed">opm:Confirmed</a> ,
+                        <a href="#Calculation">opm:Calculation</a>
+                    </p>
+
+                </div>
+                <div class="azlist">
+                    <p>Object Properties:
+                        <!-- <a href="#hasProperty">opm:hasProperty</a> ,  -->
+                        <a href="#hasPropertyState">opm:hasPropertyState</a> , 
+                        <a href="#documentation">opm:documentation</a> , 
+                        <a href="#argumentPaths">opm:argumentPaths</a> , 
+                        <a href="#inferredProperty">opm:inferredProperty</a> , 
+                        <a href="#foiRestriction">opm:foiRestriction</a>
+                    </p>
+                </div>
+                <div class="azlist">
+                    <p>Datatype Properties:
+                        <a href="#expression">opm:expression</a> , 
+                        <a href="#pathRestriction">opm:pathRestriction</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    <!-- States -->
+    <section id="PropertyStates">
+        <h3>Property States</h3>
+        <section class="informative" id="States-overview">
+            <h4>Overview and examples</h4>
+
+            <figure>
+                <a href="assets/states.svg"><img alt="States" src="assets/states.svg"></a>
+                <figcaption>Defining a property state.</figcaption>
+            </figure>
+
+        </section>
+
+        <section id="PropertyStates-specification">
+                <h4>Specification</h4>
+              <p>This section introduces the following classes and properties:</p>
+              <div class="azlist">
+                <p>
+                   <a href="#PropertyState">opm:PropertyState</a> ,
+                   <a href="#CurrentPropertyState">opm:CurrentPropertyState</a> ,
+                   <a href="#OutdatedPropertyState">opm:OutdatedPropertyState</a> ,
+                   <a href="#Deleted">opm:Deleted</a> ,
+                   <!-- <a href="#hasProperty">opm:hasProperty</a> ,  -->
+                   <a href="#hasPropertyState">opm:hasPropertyState</a>
+                 </p>
+              </div>
+
+            <!-- PropertyState -->
+            <section class="specterm" id="PropertyState" about="opm:PropertyState" typeof="owl:Class rdfs:Class">
+                <h5><a href="#PropertyState">opm:PropertyState</a></h5>
+                <p class="crossreference"><strong>IRI:</strong> http://www.w3id.org/opm#PropertyState</p>
+                <p><strong>a OWL Class</strong></p>
+
+                <em property="rdfs:label">Property State</em> -
+                <span property="rdfs:comment skos:definition">A property state is an evaluation holding the value + 
+                    metadata about a property that was true for the given time.
+                    Metadata must as a minimum be the time of generation stated by prov:generatedAtTime, 
+                    but preferably also a prov:wasAttributedTo reference to the agent who created the state.
+                    Calculated properties are also stored as states as these change when an expression 
+                    argument changes. Calculations must have an opm:expression and a prov:wasDerivedFrom 
+                    assigned to them. prov:wasDerivedFrom is stored as a rdf:Seq pointing to the property 
+                    states that were used for the calculation.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Example</th>
+                            <td><span property="skos:example">An area state holding the value, unit and generation time of a temporal area property.</span></td>
+                        </tr>
+                        <tr>
+                            <th class="restrictions">Disjoint with</th>
+                            <td>
+                                <span about="opm:PropertyState" rel="owl:disjointWith" resource="opm:Calculation"><a href="#Calculation">opm:Calculation</a></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- CurrentPropertyState -->
+            <section class="specterm" id="CurrentPropertyState" about="opm:CurrentPropertyState" typeof="owl:Class rdfs:Class">
+                <h5><a href="#CurrentPropertyState">opm:CurrentPropertyState</a></h5>
+                <p class="crossreference"><strong>IRI:</strong> http://www.w3id.org/opm#CurrentPropertyState</p>
+                <p><strong>a OWL Class</strong></p>
+
+                <em property="rdfs:label">Current Property State</em> -
+                <span property="rdfs:comment skos:definition">The property state that was most recently defined is an instance of opm:CurrentPropertyState.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Example</th>
+                            <td><span property="skos:example">The most recent area state.</span></td>
+                        </tr>
+                        <tr>
+                            <th>Sub class of</th>
+                            <td>
+                                <span rel="rdfs:subClassOf" resource="opm:PropertyState"><a href="#PropertyState">opm:PropertyState</a></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="restrictions">Disjoint with</th>
+                            <td>
+                                <span about="opm:CurrentPropertyState" rel="owl:disjointWith" resource="opm:OutdatedPropertyState"><a href="#OutdatedPropertyState">opm:OutdatedPropertyState</a></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- OutdatedPropertyState -->
+            <section class="specterm" id="OutdatedPropertyState" about="opm:OutdatedPropertyState" typeof="owl:Class rdfs:Class">
+                <h5><a href="#OutdatedPropertyState">opm:OutdatedPropertyState</a></h5>
+                <p class="crossreference"><strong>IRI:</strong> http://www.w3id.org/opm#OutdatedPropertyState</p>
+                <p><strong>a OWL Class</strong></p>
+
+                <em property="rdfs:label">Outdated Property State</em> -
+                <span property="rdfs:comment skos:definition">Any property state that has been substituted with a new one is an instance of opm:OutdatedPropertyState.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Example</th>
+                            <td><span property="skos:example">The area state that was replaced by the most recent area state.</span></td>
+                        </tr>
+                        <tr>
+                            <th>Sub class of</th>
+                            <td>
+                                <span rel="rdfs:subClassOf" resource="opm:PropertyState"><a href="#PropertyState">opm:PropertyState</a></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="restrictions">Disjoint with</th>
+                            <td>
+                                <span about="opm:OutdatedPropertyState" rel="owl:disjointWith" resource="opm:CurrentPropertyState"><a href="#CurrentPropertyState">opm:CurrentPropertyState</a></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Deleted -->
+            <section class="specterm" id="Deleted" about="opm:Deleted" typeof="owl:Class rdfs:Class">
+                <h5><a href="#Deleted">opm:Deleted</a></h5>
+                <p class="crossreference"><strong>IRI:</strong> http://www.w3id.org/opm#Deleted</p>
+                <p><strong>a OWL Class</strong></p>
+
+                <em property="rdfs:label">Deleted</em> -
+                <span property="rdfs:comment skos:definition">A deleted property is a property that is no longer part of the design. 
+                    The class enables a user to delete a property without removing it from the dataset.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Example</th>
+                            <td><span property="skos:example">Deletion of the area property.</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- hasProperty -->
+            <!-- <section class="specterm" id="hasProperty" about="opm:hasProperty" typeof="owl:ObjectProperty">
+                <h5><a href="#hasProperty">opm:hasProperty</a></h5>
+                <em>To be considered</em>
+                <p class="crossreference"><strong>IRI:</strong> http://www.w3id.org/opm#hasProperty</p>
+                <p><strong>a OWL Object Property</strong></p>
+
+                <em property="rdfs:label">hasProperty</em> -
+                <span property="rdfs:comment skos:definition">Relationship between a feature of interest and a property it has assigned.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Example</th>
+                            <td><span property="skos:example">
+                                Some area property defined as a sub property of <a href="#hasProperty">opm:hasProperty</a>:
+                                <br>
+                                <code>
+                                    ex:area  <a href="https://www.w3.org/2000/01/rdf-schema#subPropertyOf">rdfs:subPropertyOf</a>  <a href="#hasProperty">opm:hasProperty</a> .
+                                    <br>
+                                    &lt;window&gt; ex:area &lt;window_prop_area&gt; .
+                                </code>
+                            </span></td>
+                        </tr>
+                        <tr>
+                            <th>Range</th>
+                            <td><span rel="rdfs:range" resource="opm:Property"><a href="#Property">opm:Property</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Sub property of</th>
+                            <td>
+                                <span rel="rdfs:subPropertyOf" resource="seas:hasProperty"><a href="http://www.w3id.org/seas/hasProperty">seas:hasProperty</a></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section> -->
+
+            <!-- hasPropertyState -->
+            <section class="specterm" id="hasPropertyState" about="opm:hasPropertyState" typeof="owl:ObjectProperty">
+                <h5><a href="#hasPropertyState">opm:hasPropertyState</a></h5>
+                <p class="crossreference"><strong>IRI:</strong> http://www.w3id.org/opm#hasPropertyState</p>
+                <p><strong>a OWL Object Property</strong></p>
+
+                <em property="rdfs:label">hasPropertyState</em> -
+                <span property="rdfs:comment skos:definition">Relationship between a property and one of its states.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Example</th>
+                            <td><span property="skos:example">
+                                Some area property having a state with metadata:
+                                <br>
+                                <code>
+                                    &lt;window_prop_area&gt; <a href="#hasPropertyState">opm:hasPropertyState</a> &lt;window_prop_area1&gt; .
+                                    <br>
+                                    &lt;window_prop_area1&gt; a <a href="#CurrentPropertyState">opm:CurrentPropertyState</a> ;
+                                    <br>
+                                    &emsp;&emsp;<a href="http://schema.org/value">schema:value</a>  "20 m2"^^<a href="http://w3id.org/lindt/custom_datatypes#area">cdt:area</a> ;
+                                    <br>
+                                    &emsp;&emsp;<a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/#generatedAtTime">prov:generatedAtTime</a>  "2018-02-03T13:35:23Z"^^<a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a> .
+                                </code>
+                            </span></td>
+                        </tr>
+                        <tr>
+                            <th>Domain</th>
+                            <td><span rel="rdfs:domain" resource="opm:Property"><a href="#Property">opm:Property</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Range</th>
+                            <td><span rel="rdfs:range" resource="opm:PropertyState"><a href="#PropertyState">opm:PropertyState</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Sub property of</th>
+                            <td>
+                                <span rel="rdfs:subPropertyOf" resource="seas:evaluation"><a href="http://www.w3id.org/seas/evaluation">seas:evaluation</a></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </section>
+
+    </section>
+
+    <!-- Reliability -->
+    <section id="Reliability">
+        <h3>Reliability</h3>
+        <section class="informative" id="Reliability-overview">
+            <h4>Overview and examples</h4>
+
+            <p>In project design it is common that properties change over time. By clearly flagging the reliability of a certain property state
+                the other project participants can interpret the property accordingly when taking design decisions that depend upon it.
+                <br>
+                The figure below illustrates an assumed property state. An assumed property state is likely subject to changes.
+            </p>
+
+            <figure>
+                <a href="assets/assumed.svg"><img alt="Assumed" src="assets/assumed.svg"></a>
+                <figcaption>An opm:Assumed state is a state with lowest reliability. It will most likely change before the final design.</figcaption>
+            </figure>
+
+            <p>At some point, distinct properties must be locked in oreder to progress with the design. The design team could for example decide
+                that the super structure of a building cannot be changed after a certain data because numerous other design disciplines depend
+                upon its geometry. 
+                <br>
+                The figure below illustrates a confirmed property state. The state directly refers to documentation of the confirmation, and it
+                is attributed to a <a href="https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent">prov:Agent</a>. A confirmed property should
+                not change! Changing a confirmed property is possible, but it will likely come at a price. OPM provides the means to document that
+                a property was changed after it was confirmed by some authority. This is a valuable tool in rapidly changing design projects.
+            </p>
+
+            <figure>
+                <a href="assets/confirmed.svg"><img alt="Confirmed" src="assets/confirmed.svg"></a>
+                <figcaption>An opm:Confirmed state is a state with highest reliability. It should not be changed.</figcaption>
+            </figure>
+
+        </section>
+
+        <section id="Reliability-specification">
+                <h4>Specification</h4>
+                <p>This section introduces the following classes and properties:</p>
+                <div class="azlist">
+                <p>
+                    <a href="#Assumed">opm:Assumed</a> ,
+                    <a href="#Confirmed">opm:Confirmed</a> ,
+                    <a href="#documentation">opm:documentation</a>
+                    </p>
+                </div>
+
+            <!-- Assumed -->
+            <section class="specterm" id="Assumed" about="opm:Assumed" typeof="owl:Class rdfs:Class">
+                <h5><a href="#Assumed">opm:Assumed</a></h5>
+                <p class="crossreference"><strong>IRI:</strong> http://www.w3id.org/opm#Assumed</p>
+                <p><strong>a OWL Class</strong></p>
+
+                <em property="rdfs:label">Assumed</em> -
+                <span property="rdfs:comment skos:definition">An assumption is an unconfirmed property. Assumptions enable designers to move on with the design knowing that the assumed property might change as the project progresses.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Example</th>
+                            <td><span property="skos:example">An assumed U-value (heat transfer coefficient) of a wall at an early design stage where its final structure has not been defined by the architect.</span></td>
+                        </tr>
+                        <tr>
+                            <th class="restrictions">Disjoint with</th>
+                            <td>
+                                <span about="opm:Assumed" rel="owl:disjointWith" resource="opm:Confirmed"><a href="#Confirmed">opm:Confirmed</a></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Confirmed -->
+            <section class="specterm" id="Confirmed" about="opm:Confirmed" typeof="owl:Class rdfs:Class">
+                <h5><a href="#Confirmed">opm:Confirmed</a></h5>
+                <p class="crossreference"><strong>IRI:</strong> http://www.w3id.org/opm#Confirmed</p>
+                <p><strong>a OWL Class</strong></p>
+
+                <em property="rdfs:label">Confirmed</em> -
+                <span property="rdfs:comment skos:definition">A confirmed property is a property that has been validated by an agent 
+                    who is authorized to do so. A confirmed property should not be changed, and it should preferably be documented
+                    using <a href="#documentation"><code>opm:documentation</code></a>.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Example</th>
+                            <td><span property="skos:example">At a specific milestone in the project design, the superstructure of the building is locked. All coordinates will hence be classified as <a href="#Confirmed"><code>opm:Confirmed</code></a>.</span></td>
+                        </tr>
+                        <tr>
+                            <th class="restrictions">Disjoint with</th>
+                            <td>
+                                <span about="opm:Confirmed" rel="owl:disjointWith" resource="opm:Assumed"><a href="#Assumed">opm:Assumed</a></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Derived -->
+            <section class="specterm" id="Derived" about="opm:Derived" typeof="owl:Class rdfs:Class">
+                <h5><a href="#Derived">opm:Derived</a></h5>
+                <p class="crossreference"><strong>IRI:</strong> http://www.w3id.org/opm#Derived</p>
+                <p><strong>a OWL Class</strong></p>
+
+                <em property="rdfs:label">Derived</em> -
+                <span property="rdfs:comment skos:definition">A derived property is a property that has been deduced from one or more other properties. 
+                    Specifying a relationship to these should be done using the <a href="http://www.w3.org/ns/prov#wasDerivedFrom"><code>prov:wasDerivedFrom</code></a> predicate.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Example</th>
+                            <td><span property="skos:example">The area of a rectangular window is a derived property. It is derived as the product of the width and the height of the same window.</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Required -->
+            <section class="specterm" id="Required" about="opm:Required" typeof="owl:Class rdfs:Class">
+                    <h5><a href="#Required">opm:Required</a></h5>
+                    <p class="crossreference"><strong>IRI:</strong> http://www.w3id.org/opm#Required</p>
+                    <p><strong>a OWL Class</strong></p>
+    
+                    <em property="rdfs:label">Required</em> -
+                    <span property="rdfs:comment skos:definition">A required property can be assigned to abstract models such as an abstract product model that holds the prerequisites for a future building. 
+                        The requirements can be compared to properties of actual products available on the market.</span>
+                    <br>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Example</th>
+                                <td><span property="skos:example">[1] uses OPM requirements to describe client requirements to rooms of a future building.</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    [1] Rasmussen, M. H., Hviid, C. A., Karlshøj, J., & Bonduel, M. (2018). Managing Space Requirements of New Buildings Using Linked Building Data Technologies. In <i>12th European Conference on Product and Process Modelling</i>.
+                </section>
+
+            <!-- documentation -->
+            <section class="specterm" id="documentation" about="opm:documentation" typeof="owl:ObjectProperty">
+                <h5><a href="#documentation">opm:documentation</a></h5>
+                <p class="crossreference"><strong>IRI:</strong> http://www.w3id.org/opm#documentation</p>
+                <p><strong>a OWL Object Property</strong></p>
+
+                <em property="rdfs:label">documentation</em> -
+                <span property="rdfs:comment skos:definition">Relationship between a confirmed state and a file holding some documentation. 
+                    This could for example be a mail, a scanned document or a digital signature.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Domain</th>
+                            <td><span rel="rdfs:domain" resource="opm:PropertyState"><a href="#PropertyState">opm:PropertyState</a></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </section>
+    </section>
+
+    <!-- Calculations -->
+    <section id="Calculations">
+        <h3>Calculations</h3>
+        <section class="informative" id="Calculations-overview">
+            <h4>Overview and examples</h4>
+
+            <p>OPM deals with derived properties. The figure below illustrates how to define a 
+                <a href="#Calculation">opm:Calculation</a> that will infer the property 
+                <a href="https://w3id.org/props#area">props:area</a> as the product
+                of variables <em>?width</em> and <em>?height</em> where <em>?width</em> is found
+                by the argument path "<em>?foi <a href="https://w3id.org/props#width">props:width</a></em>" 
+                and <em>?height</em> is found by the argument path "<em>?foi 
+                <a href="https://w3id.org/props#height">props:height</a> ?height</em>".
+            </p>
+
+            <figure>
+                <a href="assets/calc.svg"><img alt="Calculation" src="assets/calc.svg"></a>
+                <figcaption>Defining a calculation.</figcaption>
+            </figure>
+
+            <p>It is recommended that OPM calculations are be implemented in a REST API following these guidelines:</p>
+            <ul>
+                <li>URI of &lt;calc&gt; as API route</li>
+                <li>
+                    <strong>POST</strong> request to &lt;calc&gt; URI will append the derived property to all FoIs that have the necessary
+                    relationships defined by <code><a href="#argumentPath">opm:argumentPaths</a></code> attached. If further
+                    restrictions are defined by <code><a href="#foiRestriction">opm:foiRestriction</a></code> and
+                    <code><a href="#pathRestriction">opm:pathRestriction</a></code> (see next section), these should also be fulfilled.
+                </li>
+                <li>
+                    <strong>PUT</strong> request to &lt;calc&gt; URI will update all derived properties of the specific kind
+                    where the state of one or more of the arguments has been outdated.
+                </li>
+            </ul>
+
+            <h5>Restrictions</h5>
+            <p>
+                In some cases is might be necessary to restrict a calculation to a single FoI or FoIs where a certain path is fulfilled.
+                This can be handled by using one of the restrictions illustrated in the figures below.
+            </p>
+
+            <figure>
+                <a href="assets/calc_foirestriction.svg"><img alt="FoI restriction" src="assets/calc_foirestriction.svg"></a>
+                <figcaption>Restricting a calculation to only be applied to a specific FoI.</figcaption>
+            </figure>
+
+            <figure>
+                <a href="assets/calc_pathrestriction.svg"><img alt="Path restriction" src="assets/calc_pathrestriction.svg"></a>
+                <figcaption>Restricting a calculation to only be applied to FoIs where a certain path is fulfilled.</figcaption>
+            </figure>
+
+        </section>
+
+        <section id="Calculations-specification">
+                <h4>Specification</h4>
+                <p>This section introduces the following classes and properties:</p>
+                <div class="azlist">
+                <p>
+                    <a href="#Calculation">opm:Calculation</a>,
+                    <a href="#argumentPaths">opm:argumentPaths</a>,
+                    <a href="#inferredProperty">opm:inferredProperty</a>,
+                    <a href="#expression">opm:expression</a> ,
+                    <a href="#foiRestriction">opm:foiRestriction</a> ,
+                    <a href="#pathRestriction">opm:pathRestriction</a>
+                    </p>
+                </div>
+
+            <!-- Calculation -->
+            <section class="specterm" id="Calculation" about="opm:Calculation" typeof="owl:Class rdfs:Class">
+                <h5><a href="#Calculation">opm:Calculation</a></h5>
+                <p class="crossreference"><strong>IRI:</strong> http://www.w3id.org/opm#Calculation</p>
+                <p><strong>a OWL Class</strong></p>
+
+                <em property="rdfs:label">Calculation</em> -
+                <span property="rdfs:comment skos:definition">A calculation holds the necessary information to infer derived properties.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Example</th>
+                            <td><span property="skos:example">An area calculation with inferred property <a href="https://w3id.org/props#area"><code>props:area</code></a>, property path <em>['?foi props:width ?width', '?foi props:height ?height']</em> and expression <em>?width*?height</em>.</span></td>
+                        </tr>
+                        <tr>
+                            <th class="restrictions">Disjoint with</th>
+                            <td>
+                                <span about="opm:Calculation" rel="owl:disjointWith" resource="opm:PropertyState"><a href="#PropertyState">opm:PropertyState</a></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- argumentPaths -->
+            <section class="specterm" id="argumentPaths" about="opm:argumentPaths" typeof="owl:ObjectProperty">
+                <h5><a href="#argumentPaths">opm:argumentPaths</a></h5>
+                <p class="crossreference"><strong>IRI:</strong> http://www.w3id.org/opm#argumentPaths</p>
+                <p><strong>a OWL Object Property</strong></p>
+
+                <em property="rdfs:label">argument paths</em> -
+                <span property="rdfs:comment skos:definition">
+                    Relationship between a calculation and a list (RDF collection) 
+                    of argument paths. An argument path is given in triples and indicates the relationship between the 
+                    Feature of Interest (FoI) to which the inferred property will be applied and a FoI on which the argument 
+                    property exists. 
+                    If the argument exists on the FoI itself it can be referred by "<em>?foi xx:argProperty ?arg1</em>". 
+                    The path can be any length, and another example could be an argument existing on the super-system of 
+                    a FoI: "<em>?foi xx:subSystemOf/xx:argProperty ?arg1</em>".
+                </span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Domain</th>
+                            <td><span rel="rdfs:domain" resource="opm:Calculation"><a href="#Calculation">opm:Calculation</a></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- inferredProperty -->
+            <section class="specterm" id="inferredProperty" about="opm:inferredProperty" typeof="owl:ObjectProperty">
+                <h5><a href="#inferredProperty">opm:inferredProperty</a></h5>
+                <p class="crossreference"><strong>IRI:</strong> http://www.w3id.org/opm#inferredProperty</p>
+                <p><strong>a OWL Object Property</strong></p>
+
+                <em property="rdfs:label">inferred property</em> -
+                <span property="rdfs:comment skos:definition">Relationship between a calculation and the property kind it will infer.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Domain</th>
+                            <td><span rel="rdfs:domain" resource="opm:Calculation"><a href="#Calculation">opm:Calculation</a></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- expression -->
+            <section class="specterm" id="expression" about="opm:expression" typeof="owl:DatatypeProperty">
+                <h5><a href="#expression">opm:expression</a></h5>
+                <p class="crossreference"><strong>IRI:</strong> http://www.w3id.org/opm#expression</p>
+                <p><strong>a OWL Datatype Property</strong></p>
+
+                <em property="rdfs:label">expression</em> -
+                <span property="rdfs:comment skos:definition">Points to a literal containing the expression to execute with a calculation. 
+                    Arguments of the expression are defined with vaiables (ie. ?arg1) corresponding to ones used in the argument paths.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Domain</th>
+                            <td><span rel="rdfs:domain" resource="opm:Calculation"><a href="#Calculation">opm:Calculation</a></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- foiRestriction -->
+            <section class="specterm" id="foiRestriction" about="opm:foiRestriction" typeof="owl:ObjectProperty">
+                <h5><a href="#foiRestriction">opm:foiRestriction</a></h5>
+                <p class="crossreference"><strong>IRI:</strong> http://www.w3id.org/opm#foiRestriction</p>
+                <p><strong>a OWL Object Property</strong></p>
+
+                <em property="rdfs:label">feature of interest restriction</em> -
+                <span property="rdfs:comment skos:definition">If a calculation is only to be applied to one specific feature of interest (FoI), this restriction can be used.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Domain</th>
+                            <td><span rel="rdfs:domain" resource="opm:Calculation"><a href="#Calculation">opm:Calculation</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Range</th>
+                            <td><span rel="rdfs:range" resource="seas:FeatureOfInterest"><a href="https://w3id.org/seas/FeatureOfInterest">seas:FeatureOfInterest</a></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- pathRestriction -->
+            <section class="specterm" id="pathRestriction" about="opm:pathRestriction" typeof="owl:DatatypeProperty">
+                <h5><a href="#pathRestriction">opm:pathRestriction</a></h5>
+                <p class="crossreference"><strong>IRI:</strong> http://www.w3id.org/opm#pathRestriction</p>
+                <p><strong>a OWL Datatype Property</strong></p>
+
+                <em property="rdfs:label">path restriction</em> -
+                <span property="rdfs:comment skos:definition">If a calculation is only to be applied to features of interest (FoIs) 
+                    that have a certain relationship applied, this restriction can be used.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Domain</th>
+                            <td><span rel="rdfs:domain" resource="opm:Calculation"><a href="#Calculation">opm:Calculation</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Range</th>
+                            <td><span rel="rdfs:range" resource="xsd:string"><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </section>
+    </section>
+
+    <section class="informative" id="common-modeling-questions">
+        <h2>Common Modeling Questions</h2> 
+        
+        </section>
+
+    </section>
+
+    <section class="appendix" id="wide-review">
+        <h3>Wide review</h3>
+        <p>Results of the wide review of OPM is missing.</p>
+
+    </section>
+
+    <section class="appendix" id="examples">
+        <h2>Complete Examples</h2>
+        <section id="two-storey-building">
+            <h3>Assigning a new OPM property</h3>
+
+            <p>
+                The <a href="https://github.com/MadsHolten/opm-qg">OPM query generator</a> is a JavaScript library with methods
+                to construct SPARQL queries for operations on an OPM compliant RDF graph.
+                <br>
+
+            </p>
+
+            <pre class="example">
+                const { OPMProp } = require('opm-qg');
+
+                var host = "http://example.org/opmTest/";
+
+                var prefixes = [
+                    {prefix: 'cdt', uri: 'http://w3id.org/lindt/custom_datatypes#'},
+                    {prefix: 'props', uri: 'https://w3id.org/product/props/'}
+                ];
+
+                let opmProp = new OPMProp(host, prefixes);
+
+                const q = opmProp.postByFoI('&lt;someFoi&gt;', 'props:area', '"20 m2"^^cdt:area');
+
+                console.log(q);
+            </pre>
+
+            <p>Above will return the query:</p>
+
+            <pre class="example">
+                PREFIX  props: &lt;https://w3id.org/product/props/&gt;
+                PREFIX  opm:   &lt;https://w3id.org/opm#&gt;
+                PREFIX  prov:  &lt;http://www.w3.org/ns/prov#&gt;
+                PREFIX  cdt:   &lt;http://w3id.org/lindt/custom_datatypes#&gt;
+                
+                INSERT {
+                    ?foi props:area ?propertyURI .
+                    ?propertyURI a opm:Property ;
+                        opm:hasPropertyState ?stateURI .
+                    ?stateURI a opm:CurrentPropertyState ;
+                        schema:value ?val ;
+                        prov:generatedAtTime ?now .
+                }
+                WHERE {
+                    BIND(&lt;someFoi&gt; AS ?foi)
+                    BIND("20 m2"^^cdt:area AS ?val)
+            
+                    # FoI MUST EXIST
+                    ?foi ?p ?o .
+            
+                    # THE FoI CANNOT HAVE THE PROPERTY ASSIGNED ALREADY
+                    MINUS { ?foi props:area ?prop . }
+            
+                    # CREATE STATE AND PROPERTY URIs
+                    BIND(URI(CONCAT("https://example.org/opmTest/", "state_", STRUUID())) AS ?stateURI)
+                    BIND(URI(CONCAT("https://example.org/opmTest/", "property_", STRUUID())) AS ?propertyURI)
+                    BIND(now() AS ?now)
+                }
+            </pre>
+
+            <p>Provided that &lt;someFoi&gt; exists and that it doesn't have a props:area assigned already, triples in the following
+                form will be generated:
+            </p>
+
+            <pre class="example">
+                @prefix cdt:   &lt;http://w3id.org/lindt/custom_datatypes#&gt; .
+                @prefix ex:    &lt;https://example.org/opmTest/&gt; .
+                @prefix opm:   &lt;https://w3id.org/opm#&gt; .
+                @prefix prov:  &lt;http://www.w3.org/ns/prov#&gt; .
+                @prefix props: &lt;https://w3id.org/product/props/&gt; .
+                @prefix xsd:   &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+                
+                &lt;someFoi&gt; 
+                    props:area ex:property_efafede9-53d3-425f-89f3-ed8a40b5995a .
+                
+                ex:property_efafede9-53d3-425f-89f3-ed8a40b5995a 
+                    a opm:Property ;
+                    opm:hasPropertyState ex:state_8e889bba-bc25-4b1a-ac34-330f776892fa .
+                
+                ex:state_8e889bba-bc25-4b1a-ac34-330f776892fa 
+                    a opm:Assumed , opm:CurrentPropertyState ;
+                    schema:value "20 m2"^^cdt:area ;
+                    prov:generatedAtTime "2018-05-28T16:41:17.711+02:00"^^xsd#dateTime .' }
+            </pre>
+
+        </section>
+
+    </section>
+    <section class="appendix" id="acknowledgments">
+        <h2>Acknowledgments</h2> The Editors recognize the major contribution of the members of the W3C Linked Building Data Community Group.
+    </section>
+</body>
+
+</html>

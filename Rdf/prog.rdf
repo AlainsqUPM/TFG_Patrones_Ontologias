@@ -1,0 +1,351 @@
+<html>
+<head>
+<title>Event Programme Ontology</title>
+<link rel="stylesheet" href="reset-fonts-grids.css" type="text/css"></link>
+<style type="text/css">
+body { 
+	text-align: left;
+	padding: 1em;
+}
+h1 {
+	font-size: 200%;
+}
+h2 {
+	margin-top: 2em;
+	font-size: 150%;
+	color: blue;
+}
+h3 {
+	margin-top: 3em;
+	margin-bottom: 3em;
+	font-size: 120%;
+	color: blue;
+}
+.item_desc h4 {
+	font-size: 150%;
+	color: blue;
+}
+.type {
+	color: #000;
+	font-size: 80%;
+}
+h5 {
+	margin-top: 1em;
+}
+li {
+	list-style: disc;
+	margin-left: 4em;
+}
+ul,p {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.item_desc {
+	padding: 1em;
+	background-color: #eee;
+	border: solid 1px blue;
+	margin-bottom:1em;
+}
+.short_code_example, .long_code_example {
+	white-space: pre;
+	margin: 1em;
+	padding: 1em;
+	border: dashed blue 1px;
+}
+.short_code_example {
+}
+.long_code_example {
+	height: 20em;
+	overflow: auto;
+}
+
+a.crossref {
+	text-decoration: none;
+}
+dd { margin-left: 3em; }
+dt { font-weight: bold; }
+</style>
+</head>
+<body>
+
+
+<h1>Event Programme Ontology</h1>
+
+For...
+
+<ul>
+<li>Conferences (academic or otherwise)</li>
+<li>Conventions</li>
+<li>Music and arts festivals</li>
+<li>Theatre listings</li>
+<li>Lecture timetables</li>
+</ul>
+
+<p>This is a simple ontology being developed by <a href='http://users.ecs.soton.ac.uk/cjg/'>Christopher Gutteridge</a>, with advice from the community. It is intended to allow programmed events to easily publish their programmes online in an interoperable manner.</p>
+
+<p>It should be easy enough to create and publish a valid programme without any understanding RDF, Linked Data etc.</p>
+
+
+
+<h2>Example</h2>
+<p>This example implements a multi-day conference, with a programme streamed by location. [<a href='examples/dev8d.rdf'>Download</a>]</p>
+
+
+<h2>Renderer</h2>
+
+<p>We've created a basic HTML renderer, <a href='mailto:cjg@ecs.soton.ac.uk'>ask if you'd like a copy of the source code</a>:</p>
+
+<form action="http://programme.ecs.soton.ac.uk/tool.php">
+<table width='99%'><tr><td><input name="src" style='width:100%' value='http://programme.ecs.soton.ac.uk/examples/dev8d.rdf' /></td>
+<td><input value='render' type='submit' /></td>
+</tr></table>
+<ul>
+<li><a href='tool.php%3Fsrc=http:%252F%252Fprogramme.ecs.soton.ac.uk%252Fexamples%252Foverlaps.rdf.html'>More complicated example with overlapping events in the same stream</a></li>
+<!--<li><a href='http://programme.ecs.soton.ac.uk/download.php/programme.php'>Programme RDF to HTML source code (PHP,GPL)</a></li>-->
+<!--<li><a href='http://programme.ecs.soton.ac.uk/tool.php?src=http://programme.ecs.soton.ac.uk/glastonbury/2010/rdf.php'>Glastonbury 2010 Programme</a></li>-->
+</ul>
+
+<h2>Relationship to Semantic Web Conference Programme Ontology</h2>
+
+<p>The <a href="http://data.semanticweb.org/ns/swc/swc_2009-05-09.html">ISWC ontology</a> is very specific and designed for describing academic conferences. You may wish to add additional semantics to your programme by using rdf:type to indicate that your events and locations have specific semantic meanings. Also check out their conference chair specification and listing a paper being given in an event. These are compatible with this Programme Ontology, but make sure you don't lose our class types,even if you also add theirs, as otherwise consuming apps may not understand it.</p>
+
+<h2>Relationship to ical/ics and the cal: namespace</h2>
+
+<p>The event properties should be very easy to map into ical or the cal: namespace. We don't use the properties from that namespace as an abstract event can have a summary and description, which if we used cal:summary would semantically indicate that it's an event, which it's not. Also the timezone information in the cal: namespace is a tad icky.</p>
+<table>
+<tr>
+<th><u>ical</u></th>
+<th></th>
+<th><u>prog</u></th>
+</tr>
+<tr>
+<td>summary</td>
+<td>&nbsp;-&nbsp;</td>
+<td>rdfs:label</td>
+</tr>
+<tr>
+<td>description</td>
+<td>&nbsp;-&nbsp;</td>
+<td>dcterms:description</td>
+</tr>
+<tr>
+<td>dtstart</td>
+<td>&nbsp;-&nbsp;</td>
+<td>event:time &rarr; tl:start</td>
+</tr>
+<tr>
+<td>dtend</td>
+<td>&nbsp;-&nbsp;</td>
+<td>event:time &rarr; tl:end</td>
+</tr>
+<tr>
+<td>location</td>
+<td>&nbsp;-&nbsp;</td>
+<td>event:place &rarr; rdfs:label</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>&nbsp;-&nbsp;</td>
+<td>The URI of the event</td>
+</tr>
+</table>
+<h2>The Obligitary Relationship Diagram</h2>
+<img src='ProgrammeER.png' style='width:800px'/>
+
+
+<h2>Best Practice</h2>
+
+<p>Good practice is to publish all of the data required for a programme in a single RDF+XML document, with boilerplate triples identifying the programme which is the foaf:primaryTopic, and clearly stating a license.</p>
+
+<h2>Reference</h2>
+<p>Classes and properties with no prefix are in the prog: namespace.</p>
+<table>
+<tr>
+<td style='text-align:right'>event:</td>
+<td>&nbsp;</td>
+<td>http://purl.org/NET/c4dm/event.owl#</td>
+</tr>
+<tr>
+<td style='text-align:right'>prog:</td>
+<td>&nbsp;</td>
+<td>http://purl.org/prog/</td>
+</tr>
+<tr>
+<td style='text-align:right'>tl:</td>
+<td>&nbsp;</td>
+<td>http://purl.org/NET/c4dm/timeline.owl#</td>
+</tr>
+<tr>
+<td style='text-align:right'>dcterms:</td>
+<td>&nbsp;</td>
+<td>http://purl.org/dc/terms/</td>
+</tr>
+<tr>
+<td style='text-align:right'>rdf:</td>
+<td>&nbsp;</td>
+<td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td>
+</tr>
+<tr>
+<td style='text-align:right'>foaf:</td>
+<td>&nbsp;</td>
+<td>http://xmlns.com/foaf/0.1/</td>
+</tr>
+<tr>
+<td style='text-align:right'>geo:</td>
+<td>&nbsp;</td>
+<td>http://www.w3.org/2003/01/geo/wgs84_pos#</td>
+</tr>
+<tr>
+<td style='text-align:right'>oo:</td>
+<td>&nbsp;</td>
+<td>http://purl.org/openorg/</td>
+</tr>
+<tr>
+<td style='text-align:right'>spacerel:</td>
+<td>&nbsp;</td>
+<td>http://data.ordnancesurvey.co.uk/ontology/spatialrelations/</td>
+</tr>
+<tr>
+<td style='text-align:right'>skos:</td>
+<td>&nbsp;</td>
+<td>http://www.w3.org/2004/02/skos/core#</td>
+</tr>
+<tr>
+<td style='text-align:right'>xsd:</td>
+<td>&nbsp;</td>
+<td>http://www.w3.org/2001/XMLSchema#</td>
+</tr>
+<tr>
+<td style='text-align:right'>bibo:</td>
+<td>&nbsp;</td>
+<td>http://purl.org/ontology/bibo/</td>
+</tr>
+<tr>
+<td style='text-align:right'>bio:</td>
+<td>&nbsp;</td>
+<td>http://purl.org/vocab/bio/0.1/</td>
+</tr>
+<tr>
+<td style='text-align:right'>xtypes:</td>
+<td>&nbsp;</td>
+<td>http://purl.org/xtypes/</td>
+</tr>
+</table>
+
+<table><tr><td valign='top' width='50%'><h3>Classes List</h3><ul><li><a href='1.0/index.html#event:Event'>event:Event</a></li><li><a href='1.0/index.html#foaf:Agent'>foaf:Agent</a></li><li><a href='1.0/index.html#foaf:Person'>foaf:Person</a></li><li><a href='1.0/index.html#geo:SpatialThing'>geo:SpatialThing</a></li><li><a href='1.0/index.html#prog:Activity'>prog:Activity</a></li><li><a href='1.0/index.html#prog:Programme'>prog:Programme</a></li><li><a href='1.0/index.html#prog:TimeSlot'>prog:TimeSlot</a></li><li><a href='1.0/index.html#skos:Concept'>skos:Concept</a></li><li><a href='1.0/index.html#tl:Instant'>tl:Instant</a></li><li><a href='1.0/index.html#tl:Interval'>tl:Interval</a></li></ul></td><td valign='top' width='50%'><h3>Properties List</h3><ul><li><a href='1.0/index.html#bibo:abstract'>bibo:abstract</a></li><li><a href='1.0/index.html#bio:biography'>bio:biography</a></li><li><a href='1.0/index.html#dcterms:description'>dcterms:description</a></li><li><a href='1.0/index.html#dcterms:subject'>dcterms:subject</a></li><li><a href='1.0/index.html#event:agent'>event:agent</a></li><li><a href='1.0/index.html#event:place'>event:place</a></li><li><a href='1.0/index.html#event:sub_event'>event:sub_event</a></li><li><a href='1.0/index.html#event:time'>event:time</a></li><li><a href='1.0/index.html#foaf:based_near'>foaf:based_near</a></li><li><a href='1.0/index.html#foaf:homepage'>foaf:homepage</a></li><li><a href='1.0/index.html#foaf:name'>foaf:name</a></li><li><a href='1.0/index.html#foaf:page'>foaf:page</a></li><li><a href='1.0/index.html#geo:lat'>geo:lat</a></li><li><a href='1.0/index.html#geo:long'>geo:long</a></li><li><a href='1.0/index.html#oo:twitterHashtag'>oo:twitterHashtag</a></li><li><a href='1.0/index.html#prog:has_event'>prog:has_event</a></li><li><a href='1.0/index.html#prog:has_programme'>prog:has_programme</a></li><li><a href='1.0/index.html#prog:has_sidebar_event'>prog:has_sidebar_event</a></li><li><a href='1.0/index.html#prog:has_streamed_event'>prog:has_streamed_event</a></li><li><a href='1.0/index.html#prog:has_timeslot'>prog:has_timeslot</a></li><li><a href='1.0/index.html#prog:realises'>prog:realises</a></li><li><a href='1.0/index.html#prog:streamed_by_location'>prog:streamed_by_location</a></li><li><a href='1.0/index.html#prog:streamed_by_parent_event'>prog:streamed_by_parent_event</a></li><li><a href='1.0/index.html#prog:streamed_by_subject'>prog:streamed_by_subject</a></li><li><a href='1.0/index.html#rdfs:label'>rdfs:label</a></li><li><a href='1.0/index.html#skos:prefLabel'>skos:prefLabel</a></li><li><a href='1.0/index.html#spacerel:within'>spacerel:within</a></li><li><a href='1.0/index.html#tl:at'>tl:at</a></li><li><a href='1.0/index.html#tl:end'>tl:end</a></li><li><a href='1.0/index.html#tl:start'>tl:start</a></li></ul></td></tr></table><h3>Classes</h3>
+<a name='event:Event'></a><a name='Event'></a><div class='item_desc'><h4>event:Event <span class='type'>(Class)</span></h4><p>A single event in time. Used in this system to represent both the major event which has a <a class='crossref' href='1.0/index.html#prog:Programme'>prog:Programme</a>, and the individual events in a programme. Some events may appear in more than one programme. Some programmed events may have sub-events or programmes of their own. Most events will have <a class='crossref' href='1.0/index.html#event:time'>event:time</a> and <a class='crossref' href='1.0/index.html#event:place'>event:place</a>.
+</p><h5>Notes for programme producers</h5><p>
+If this event is in a <a class='crossref' href='1.0/index.html#prog:Programme'>prog:Programme</a> then it should have an <a class='crossref' href='1.0/index.html#event:time'>event:time</a> describing a <a class='crossref' href='1.0/index.html#tl:Interval'>tl:Interval</a> with both <a class='crossref' href='1.0/index.html#tl:start'>tl:start</a> and <a class='crossref' href='1.0/index.html#tl:end'>tl:end</a> defined. It should have a <a class='crossref' href='1.0/index.html#rdfs:label'>rdfs:label</a> which is the text which should be shown in the programme. A full title may be specified with dcterms:title (but <a class='crossref' href='1.0/index.html#rdfs:label'>rdfs:label</a> should still be set too). A description may be provided as either a <a class='crossref' href='1.0/index.html#dcterms:description'>dcterms:description</a>, or for more academic sessions a <a class='crossref' href='1.0/index.html#bibo:abstract'>bibo:abstract</a>. If it is the realisation of an Activity then and is missing any of <a class='crossref' href='1.0/index.html#rdfs:label'>rdfs:label</a>, dcterms:title, <a class='crossref' href='1.0/index.html#bibo:abstract'>bibo:abstract</a>, <a class='crossref' href='1.0/index.html#dcterms:description'>dcterms:description</a> then these values may be inherrited from the <a class='crossref' href='1.0/index.html#prog:Activity'>prog:Activity</a>. 
+Some programmes may need to define instants (eg. Bar closes) in addition to intervals. Do this with <a class='crossref' href='1.0/index.html#tl:Instant'>tl:Instant</a> and <a class='crossref' href='1.0/index.html#tl:at'>tl:at</a>, but some consumers may ignore it.
+</p><h5>Notes for programme consumers</h5><p>An application must understand <a class='crossref' href='1.0/index.html#rdfs:label'>rdfs:label</a>, <a class='crossref' href='1.0/index.html#event:time'>event:time</a> &rarr; <a class='crossref' href='1.0/index.html#tl:start'>tl:start</a> and <a class='crossref' href='1.0/index.html#event:time'>event:time</a> &rarr; <a class='crossref' href='1.0/index.html#tl:end'>tl:end</a>  
+and ideally <a class='crossref' href='1.0/index.html#prog:realises'>prog:realises</a>. 
+Points in time may be represented with <a class='crossref' href='1.0/index.html#tl:Instant'>tl:Instant</a> and <a class='crossref' href='1.0/index.html#tl:at'>tl:at</a>. An example is "Registration Desk Opens" or "No children permitted after this time". Points in time may be irrelevant to certain applications. We may improve this later.</p><h5>In domain of</h5><ul><li><a href='1.0/index.html#bibo:abstract'>bibo:abstract</a></li><li><a href='1.0/index.html#dcterms:description'>dcterms:description</a></li><li><a href='1.0/index.html#dcterms:subject'>dcterms:subject</a></li><li><a href='1.0/index.html#event:agent'>event:agent</a></li><li><a href='1.0/index.html#event:place'>event:place</a></li><li><a href='1.0/index.html#event:sub_event'>event:sub_event</a></li><li><a href='1.0/index.html#event:time'>event:time</a></li><li><a href='1.0/index.html#foaf:based_near'>foaf:based_near</a></li><li><a href='1.0/index.html#foaf:homepage'>foaf:homepage</a></li><li><a href='1.0/index.html#foaf:page'>foaf:page</a></li><li><a href='1.0/index.html#oo:twitterHashtag'>oo:twitterHashtag</a></li><li><a href='1.0/index.html#prog:has_programme'>prog:has_programme</a></li><li><a href='1.0/index.html#prog:realises'>prog:realises</a></li><li><a href='1.0/index.html#rdfs:label'>rdfs:label</a></li></ul><h5>In range of</h5><ul><li><a href='1.0/index.html#event:sub_event'>event:sub_event</a></li><li><a href='1.0/index.html#prog:has_event'>prog:has_event</a></li><li><a href='1.0/index.html#prog:has_sidebar_event'>prog:has_sidebar_event</a></li><li><a href='1.0/index.html#prog:has_streamed_event'>prog:has_streamed_event</a></li></ul></div><a name='foaf:Agent'></a><a name='Agent'></a><div class='item_desc'><h4>foaf:Agent <span class='type'>(Class)</span></h4><p>Generally use the subclasses of this class; foaf:Group, foaf:Organization and <a class='crossref' href='1.0/index.html#foaf:Person'>foaf:Person</a>.</p><h5>Notes for programme producers</h5><p>An <a class='crossref' href='1.0/index.html#foaf:Agent'>foaf:Agent</a> (or a subclass thereof) is expected to have a <a class='crossref' href='1.0/index.html#foaf:name'>foaf:name</a>. Use other foaf: predicates as appropriate. To give the biography of a speaker, use the <a class='crossref' href='1.0/index.html#bio:biography'>bio:biography</a> predicate. If you want an HTML biography use the xtypes:Fragment-HTML datatype.</p><h5>Notes for programme consumers</h5><p>You may choose to entirely ignore the agents involved in an event.</p><h5>In domain of</h5><ul><li><a href='1.0/index.html#foaf:name'>foaf:name</a></li></ul><h5>In range of</h5><ul><li><a href='1.0/index.html#event:agent'>event:agent</a></li></ul></div><a name='foaf:Person'></a><a name='Person'></a><div class='item_desc'><h4>foaf:Person <span class='type'>(Class)</span></h4><p>Subclass of <a class='crossref' href='1.0/index.html#foaf:Agent'>foaf:Agent</a> meaning an actual person.</p><h5>Notes for programme consumers</h5><p>You may choose to entirely ignore the agents involved in an event.</p><h5>In domain of</h5><ul><li><a href='1.0/index.html#bio:biography'>bio:biography</a></li></ul><h5>In range of</h5><ul></ul></div><a name='geo:SpatialThing'></a><a name='SpatialThing'></a><div class='item_desc'><h4>geo:SpatialThing <span class='type'>(Class)</span></h4><p>Use this class to for a location, either permenant or defined as part of an event. For example room 412 may be named 'Group Discussion Area' in the context of an event. In the case of a temporarily defined location, do not use owl:sameAs to link the temporary location with the permenant location. Locations in programmes come in three main types, 1. The city which a programmed event is <a class='crossref' href='1.0/index.html#foaf:based_near'>foaf:based_near</a>, 2. The venue in which a programmed event is held (generally a building or campus), 3. A location in which one or more specific programmed events occur. 
+</p><h5>Notes for programme producers</h5><p>Locations should have a <a class='crossref' href='1.0/index.html#rdfs:label'>rdfs:label</a>. They may have a <a class='crossref' href='1.0/index.html#geo:lat'>geo:lat</a> and <a class='crossref' href='1.0/index.html#geo:long'>geo:long</a>, but they must have both of these or neither. It is good practice to give details of venue and city, but this is not required. We recommend using the geonames (or at a push, dbpedia) URI for the city.</p><h5>Notes for programme consumers</h5><p>The application may ignore the venue and city information if it chooses. It must understand locations <a class='crossref' href='1.0/index.html#rdfs:label'>rdfs:label</a> at a minimum unless it ignores locations completely.</p><h5>In domain of</h5><ul><li><a href='1.0/index.html#dcterms:description'>dcterms:description</a></li><li><a href='1.0/index.html#foaf:homepage'>foaf:homepage</a></li><li><a href='1.0/index.html#foaf:page'>foaf:page</a></li><li><a href='1.0/index.html#geo:lat'>geo:lat</a></li><li><a href='1.0/index.html#geo:long'>geo:long</a></li><li><a href='1.0/index.html#oo:twitterHashtag'>oo:twitterHashtag</a></li><li><a href='1.0/index.html#rdfs:label'>rdfs:label</a></li><li><a href='1.0/index.html#spacerel:within'>spacerel:within</a></li></ul><h5>In range of</h5><ul><li><a href='1.0/index.html#event:place'>event:place</a></li><li><a href='1.0/index.html#foaf:based_near'>foaf:based_near</a></li><li><a href='1.0/index.html#prog:streamed_by_location'>prog:streamed_by_location</a></li><li><a href='1.0/index.html#prog:streamed_by_parent_event'>prog:streamed_by_parent_event</a></li><li><a href='1.0/index.html#spacerel:within'>spacerel:within</a></li></ul></div><a name='prog:Activity'></a><a name='Activity'></a><div class='item_desc'><h4>prog:Activity <span class='type'>(Class)</span></h4><p>This class represents the abstract content of an event, which may be repeated many times, once or never. For example a training course, or a play. The primary purpose is to indicate that several events will have very similar content, to aid planning what to attend. It does not indicate that there is any reason people could not attend more than one realisation. It should not be used to abstract a repeating event, such as morning coffee or a monthly meeting.</p><h5>Notes for programme producers</h5><p>
+Multiple Events may reference that they are realises of the same Activity. 
+Activities are not Events and may not have a time or place.</p><h5>In domain of</h5><ul><li><a href='1.0/index.html#bibo:abstract'>bibo:abstract</a></li><li><a href='1.0/index.html#dcterms:description'>dcterms:description</a></li><li><a href='1.0/index.html#foaf:homepage'>foaf:homepage</a></li><li><a href='1.0/index.html#foaf:page'>foaf:page</a></li><li><a href='1.0/index.html#rdfs:label'>rdfs:label</a></li></ul><h5>In range of</h5><ul><li><a href='1.0/index.html#prog:realises'>prog:realises</a></li></ul></div><a name='prog:Programme'></a><a name='Programme'></a><div class='item_desc'><h4>prog:Programme <span class='type'>(Class)</span></h4><p>A programme is a description of the parts of a complex event to aid understanding it. A single event may be described by several programmes, for example one may give a break down by day, another by rooms, another by topic.</p><h5>Notes for programme producers</h5><p>A programme should not have Timeslots or Events if it subprogrammes. In effect this means there are two subclasses of Programme, but there's no need to express that in the data.</p><h5>Notes for programme consumers</h5><p>A simple application only needs to operate on a single Programme at once.</p><h5>In domain of</h5><ul><li><a href='1.0/index.html#dcterms:description'>dcterms:description</a></li><li><a href='1.0/index.html#prog:has_event'>prog:has_event</a></li><li><a href='1.0/index.html#prog:has_sidebar_event'>prog:has_sidebar_event</a></li><li><a href='1.0/index.html#prog:has_streamed_event'>prog:has_streamed_event</a></li><li><a href='1.0/index.html#prog:has_timeslot'>prog:has_timeslot</a></li><li><a href='1.0/index.html#prog:streamed_by_location'>prog:streamed_by_location</a></li><li><a href='1.0/index.html#prog:streamed_by_parent_event'>prog:streamed_by_parent_event</a></li><li><a href='1.0/index.html#prog:streamed_by_subject'>prog:streamed_by_subject</a></li><li><a href='1.0/index.html#rdfs:label'>rdfs:label</a></li></ul><h5>In range of</h5><ul><li><a href='1.0/index.html#prog:has_programme'>prog:has_programme</a></li></ul></div><a name='prog:TimeSlot'></a><a name='TimeSlot'></a><div class='item_desc'><h4>prog:TimeSlot <span class='type'>(Class)</span></h4><p>This is a property of a Programme to facilitate understanding by humans. There is no semantic relationship between events in the programme and TimeSlots as complex programmes often have events which ignore the published timeslots. A timeslot is effectively an event with nothing but a time interval and label.</p><h5>Notes for programme producers</h5><p>A Timeslot must have an <a class='crossref' href='1.0/index.html#rdfs:label'>rdfs:label</a> and a <a class='crossref' href='1.0/index.html#event:time'>event:time</a> linking it to a <a class='crossref' href='1.0/index.html#tl:Interval'>tl:Interval</a>.</p><h5>Notes for programme consumers</h5><p>Timeslots are purely cosmetic and it is not recommended that events should not be artificially fitted into them.</p><h5>In domain of</h5><ul><li><a href='1.0/index.html#rdfs:label'>rdfs:label</a></li></ul><h5>In range of</h5><ul><li><a href='1.0/index.html#prog:has_timeslot'>prog:has_timeslot</a></li></ul></div><a name='skos:Concept'></a><a name='Concept'></a><div class='item_desc'><h4>skos:Concept <span class='type'>(Class)</span></h4><p>A concept is the subject of one or more events. It may be used to lay out a visualisation of a programme.</p><h5>Notes for programme producers</h5><p>A concept should have a <a class='crossref' href='1.0/index.html#skos:prefLabel'>skos:prefLabel</a>. When rendering a programme, only concepts linked from the programme by <a class='crossref' href='1.0/index.html#prog:streamed_by_subject'>prog:streamed_by_subject</a> will be looked for on events</p><h5>Notes for programme consumers</h5><p>An application needs to understand this if working with programmes, but not if only looking at basic events. A programme viewer should cope with the fact that an event can be in two concepts in the same programme, and two events with the same concepts as <a class='crossref' href='1.0/index.html#dcterms:subject'>dcterms:subject</a> may overlap in time. Do not worry about it being type <a class='crossref' href='1.0/index.html#skos:Concept'>skos:Concept</a> but rather just look at the <a class='crossref' href='1.0/index.html#prog:streamed_by_subject'>prog:streamed_by_subject</a> and <a class='crossref' href='1.0/index.html#dcterms:subject'>dcterms:subject</a> relations to it.</p><h5>In domain of</h5><ul><li><a href='1.0/index.html#oo:twitterHashtag'>oo:twitterHashtag</a></li><li><a href='1.0/index.html#rdfs:label'>rdfs:label</a></li><li><a href='1.0/index.html#skos:prefLabel'>skos:prefLabel</a></li></ul><h5>In range of</h5><ul><li><a href='1.0/index.html#dcterms:subject'>dcterms:subject</a></li><li><a href='1.0/index.html#prog:streamed_by_subject'>prog:streamed_by_subject</a></li></ul></div><a name='tl:Instant'></a><a name='Instant'></a><div class='item_desc'><h4>tl:Instant <span class='type'>(Class)</span></h4><p>Used for the <a class='crossref' href='1.0/index.html#event:time'>event:time</a> of events with no duration.</p><h5>In domain of</h5><ul><li><a href='1.0/index.html#tl:at'>tl:at</a></li></ul><h5>In range of</h5><ul><li><a href='1.0/index.html#event:time'>event:time</a></li></ul></div><a name='tl:Interval'></a><a name='Interval'></a><div class='item_desc'><h4>tl:Interval <span class='type'>(Class)</span></h4><p>Used for the <a class='crossref' href='1.0/index.html#event:time'>event:time</a> of events with a duration.</p><h5>In domain of</h5><ul><li><a href='1.0/index.html#tl:end'>tl:end</a></li><li><a href='1.0/index.html#tl:start'>tl:start</a></li></ul><h5>In range of</h5><ul><li><a href='1.0/index.html#event:time'>event:time</a></li></ul></div><h3>Properties</h3><a name='bibo:abstract'></a><a name='abstract'></a><div class='item_desc'><h4>bibo:abstract <span class='type'>(Property)</span></h4><p>A summary of the content of the event. Assumed to be plain text, but may use xtypes:Fragment-HTML as the datatype to indicate it contains a fragment of HTML.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#event:Event'>event:Event</a></div><div><a href='1.0/index.html#prog:Activity'>prog:Activity</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; bibo:abstract &rarr; </span></td><td valign='middle'><div>Text Literal</div></td></tr></table></div><a name='bio:biography'></a><a name='biography'></a><div class='item_desc'><h4>bio:biography <span class='type'>(Property)</span></h4><p>The biography of a person, if that's part of the programme. If you want to put the bio in HTML then make the datatype xtypes:Fragment-HTML. If you known that the biography in plain text only (no HTML markup, wiki markup etc), use datatype xtypes:Fragment-PlainText.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#foaf:Person'>foaf:Person</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; bio:biography &rarr; </span></td><td valign='middle'><div>Literal</div></td></tr></table></div><a name='dcterms:description'></a><a name='description'></a><div class='item_desc'><h4>dcterms:description <span class='type'>(Property)</span></h4><p>A fuller description than the label. While it can be added to anything, in the programme ontology it is not expected that an application will do anything with it if found on TimeSlot or Stream. Assumed to be plain text, but may use xtypes:Fragment-HTML as the datatype to indicate it contains a fragment of HTML.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#prog:Programme'>prog:Programme</a></div><div><a href='1.0/index.html#event:Event'>event:Event</a></div><div><a href='1.0/index.html#prog:Activity'>prog:Activity</a></div><div><a href='1.0/index.html#geo:SpatialThing'>geo:SpatialThing</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; dcterms:description &rarr; </span></td><td valign='middle'><div>Text Literal</div></td></tr></table></div><a name='dcterms:subject'></a><a name='subject'></a><div class='item_desc'><h4>dcterms:subject <span class='type'>(Property)</span></h4><p>Indicates that an event is associated with a given subject. This is used to create visualisations when the event is part of a <a class='crossref' href='1.0/index.html#prog:Programme'>prog:Programme</a>.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#event:Event'>event:Event</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; dcterms:subject &rarr; </span></td><td valign='middle'><div><a href='1.0/index.html#skos:Concept'>skos:Concept</a></div></td></tr></table></div><a name='event:agent'></a><a name='agent'></a><div class='item_desc'><h4>event:agent <span class='type'>(Property)</span></h4><p>Use this to relate an event to a Person or Group involed in the event. For academic events this will be the speaker of a talk, or the chair of a session. For performances it is the group, artist or troupe giving the performance. Don't try and list every individual involved. There may be extensions for expressing specific relationshipts. If so use <a class='crossref' href='1.0/index.html#event:agent'>event:agent</a> too, if you want the relationship to be understood by simple programme consumers.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#event:Event'>event:Event</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; event:agent &rarr; </span></td><td valign='middle'><div><a href='1.0/index.html#foaf:Agent'>foaf:Agent</a></div></td></tr></table></div><a name='event:place'></a><a name='place'></a><div class='item_desc'><h4>event:place <span class='type'>(Property)</span></h4><p>Relates an event to its specific Location. In the case of conferences, this is the conference venue. For other events, it's usually the room the event is in, or the location defined as within the room if the conference  or programme assigns special room names.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#event:Event'>event:Event</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; event:place &rarr; </span></td><td valign='middle'><div><a href='1.0/index.html#geo:SpatialThing'>geo:SpatialThing</a></div></td></tr></table></div><a name='event:sub_event'></a><a name='sub_event'></a><div class='item_desc'><h4>event:sub_event <span class='type'>(Property)</span></h4><p>Indicates that an event is part of a greater event.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#event:Event'>event:Event</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; event:sub_event &rarr; </span></td><td valign='middle'><div><a href='1.0/index.html#event:Event'>event:Event</a></div></td></tr></table></div><a name='event:time'></a><a name='time'></a><div class='item_desc'><h4>event:time <span class='type'>(Property)</span></h4><p>Link an event to either an interval of time or an instant of time. The timeline schema can define other gaps but they are beyond the scope of programmes. You can use them but don't expect anyone to understand it.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#event:Event'>event:Event</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; event:time &rarr; </span></td><td valign='middle'><div><a href='1.0/index.html#tl:Instant'>tl:Instant</a></div><div><a href='1.0/index.html#tl:Interval'>tl:Interval</a></div></td></tr></table></div><a name='foaf:based_near'></a><a name='based_near'></a><div class='item_desc'><h4>foaf:based_near <span class='type'>(Property)</span></h4><p>Used to locate a major event by identifying the nearest city, or similar notable spatial thing. Use this to identify the nearest well known location, and use <a class='crossref' href='1.0/index.html#event:place'>event:place</a> to identify the exact venue.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#event:Event'>event:Event</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; foaf:based_near &rarr; </span></td><td valign='middle'><div><a href='1.0/index.html#geo:SpatialThing'>geo:SpatialThing</a></div></td></tr></table></div><a name='foaf:homepage'></a><a name='homepage'></a><div class='item_desc'><h4>foaf:homepage <span class='type'>(Property)</span></h4><p>Relates an <a class='crossref' href='1.0/index.html#event:Event'>event:Event</a> or <a class='crossref' href='1.0/index.html#geo:SpatialThing'>geo:SpatialThing</a> to its homepage.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#event:Event'>event:Event</a></div><div><a href='1.0/index.html#geo:SpatialThing'>geo:SpatialThing</a></div><div><a href='1.0/index.html#prog:Activity'>prog:Activity</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; foaf:homepage &rarr; </span></td><td valign='middle'><div>URL</div></td></tr></table></div><a name='foaf:name'></a><a name='name'></a><div class='item_desc'><h4>foaf:name <span class='type'>(Property)</span></h4><p>The name of an <a class='crossref' href='1.0/index.html#foaf:Agent'>foaf:Agent</a>, foaf:Group, foaf:Organization or <a class='crossref' href='1.0/index.html#foaf:Person'>foaf:Person</a>.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#foaf:Agent'>foaf:Agent</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; foaf:name &rarr; </span></td><td valign='middle'><div>String Literal</div></td></tr></table></div><a name='foaf:page'></a><a name='page'></a><div class='item_desc'><h4>foaf:page <span class='type'>(Property)</span></h4><p>Relates an <a class='crossref' href='1.0/index.html#event:Event'>event:Event</a> or <a class='crossref' href='1.0/index.html#geo:SpatialThing'>geo:SpatialThing</a> to a web page about it.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#event:Event'>event:Event</a></div><div><a href='1.0/index.html#geo:SpatialThing'>geo:SpatialThing</a></div><div><a href='1.0/index.html#prog:Activity'>prog:Activity</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; foaf:page &rarr; </span></td><td valign='middle'><div>URL</div></td></tr></table></div><a name='geo:lat'></a><a name='lat'></a><div class='item_desc'><h4>geo:lat <span class='type'>(Property)</span></h4><p>The latitude of a location. Must always be used with <a class='crossref' href='1.0/index.html#geo:long'>geo:long</a>.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#geo:SpatialThing'>geo:SpatialThing</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; geo:lat &rarr; </span></td><td valign='middle'><div>Float</div></td></tr></table></div><a name='geo:long'></a><a name='long'></a><div class='item_desc'><h4>geo:long <span class='type'>(Property)</span></h4><p>The longitude of a location. Must always be used with <a class='crossref' href='1.0/index.html#geo:lat'>geo:lat</a>.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#geo:SpatialThing'>geo:SpatialThing</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; geo:long &rarr; </span></td><td valign='middle'><div>Float</div></td></tr></table></div><a name='oo:twitterHashtag'></a><a name='twitterHashtag'></a><div class='item_desc'><h4>oo:twitterHashtag <span class='type'>(Property)</span></h4><p>Relate an event, location or concept to the twitter hashtag(s) being used to refer to it.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#geo:SpatialThing'>geo:SpatialThing</a></div><div><a href='1.0/index.html#event:Event'>event:Event</a></div><div><a href='1.0/index.html#skos:Concept'>skos:Concept</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; oo:twitterHashtag &rarr; </span></td><td valign='middle'><div>Literal</div></td></tr></table></div><a name='prog:has_event'></a><a name='has_event'></a><div class='item_desc'><h4>prog:has_event <span class='type'>(Property)</span></h4><p>Indicates that an Event is part of the specified programme, but not streamed in any particular way. This should not relate a programme to the event it is a programme of. This is used for events in programmes without streams, or for events which are listed in all streams, such as 'Lunch','Check into Accomodation' or 'Plenary'.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#prog:Programme'>prog:Programme</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; prog:has_event &rarr; </span></td><td valign='middle'><div><a href='1.0/index.html#event:Event'>event:Event</a></div></td></tr></table></div><a name='prog:has_programme'></a><a name='has_programme'></a><div class='item_desc'><h4>prog:has_programme <span class='type'>(Property)</span></h4><p>Connects an ev:Event with a <a class='crossref' href='1.0/index.html#prog:Programme'>prog:Programme</a> which describes it.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#event:Event'>event:Event</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; prog:has_programme &rarr; </span></td><td valign='middle'><div><a href='1.0/index.html#prog:Programme'>prog:Programme</a></div></td></tr></table></div><a name='prog:has_sidebar_event'></a><a name='has_sidebar_event'></a><div class='item_desc'><h4>prog:has_sidebar_event <span class='type'>(Property)</span></h4><p>Indicates that an Event is part of the specified programme, but is not part of the normal grid and should be listed separately. Evening events, for example, may be included in this way. Other users include all-day events such as 'exhibition in main hall', for which you do not want to use up 'real-estate' in a grid-display of this programme.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#prog:Programme'>prog:Programme</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; prog:has_sidebar_event &rarr; </span></td><td valign='middle'><div><a href='1.0/index.html#event:Event'>event:Event</a></div></td></tr></table></div><a name='prog:has_streamed_event'></a><a name='has_streamed_event'></a><div class='item_desc'><h4>prog:has_streamed_event <span class='type'>(Property)</span></h4><p>Indicates that an Event is part of the specified programme, and should appear in any relevant 'streams' based on its subject or location. If it matches no things for which the programme is <a class='crossref' href='1.0/index.html#prog:streamed_by_location'>prog:streamed_by_location</a>, <a class='crossref' href='1.0/index.html#prog:streamed_by_parent_event'>prog:streamed_by_parent_event</a> or <a class='crossref' href='1.0/index.html#prog:streamed_by_subject'>prog:streamed_by_subject</a> then a tool may choose to report this as broken data.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#prog:Programme'>prog:Programme</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; prog:has_streamed_event &rarr; </span></td><td valign='middle'><div><a href='1.0/index.html#event:Event'>event:Event</a></div></td></tr></table></div><a name='prog:has_timeslot'></a><a name='has_timeslot'></a><div class='item_desc'><h4>prog:has_timeslot <span class='type'>(Property)</span></h4><p>Indicates that a TimeSlot is part of the specified programme.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#prog:Programme'>prog:Programme</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; prog:has_timeslot &rarr; </span></td><td valign='middle'><div><a href='1.0/index.html#prog:TimeSlot'>prog:TimeSlot</a></div></td></tr></table></div><a name='prog:realises'></a><a name='realises'></a><div class='item_desc'><h4>prog:realises <span class='type'>(Property)</span></h4><p>Relates a concrete <a class='crossref' href='1.0/index.html#event:Event'>event:Event</a> to the <a class='crossref' href='1.0/index.html#prog:Activity'>prog:Activity</a> that it is a realisation of. For example this would relate the training course on Thursday to the <a class='crossref' href='1.0/index.html#prog:Activity'>prog:Activity</a> of the laser safety lecure. All realisations of the laser safety lecture have generally the same content, although details may vary. It is not expected that a normal attendee will attend more than one realisation of an Activity, although certainly not precluded at the level of detail we're working with here.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#event:Event'>event:Event</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; prog:realises &rarr; </span></td><td valign='middle'><div><a href='1.0/index.html#prog:Activity'>prog:Activity</a></div></td></tr></table></div><a name='prog:streamed_by_location'></a><a name='streamed_by_location'></a><div class='item_desc'><h4>prog:streamed_by_location <span class='type'>(Property)</span></h4><p>Indicates that one of the streams in this visualisation is events with a <a class='crossref' href='1.0/index.html#event:place'>event:place</a> relating them to the <a class='crossref' href='1.0/index.html#geo:SpatialThing'>geo:SpatialThing</a> indicated. This is the most common way an programme is designed.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#prog:Programme'>prog:Programme</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; prog:streamed_by_location &rarr; </span></td><td valign='middle'><div><a href='1.0/index.html#geo:SpatialThing'>geo:SpatialThing</a></div></td></tr></table></div><a name='prog:streamed_by_parent_event'></a><a name='streamed_by_parent_event'></a><div class='item_desc'><h4>prog:streamed_by_parent_event <span class='type'>(Property)</span></h4><p>Indicates that one of the streams in this visualisation is events that are <a class='crossref' href='1.0/index.html#event:sub_event'>event:sub_event</a> of the <a class='crossref' href='1.0/index.html#event:Event'>event:Event</a> indicated. This can be used to show several workshops in an event. This should only apply to things which are immediately stated explicitly as <a class='crossref' href='1.0/index.html#event:sub_event'>event:sub_event</a>, it is assumed that the consumer will not treat this property as transitive, unless they are doing something weird or clever.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#prog:Programme'>prog:Programme</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; prog:streamed_by_parent_event &rarr; </span></td><td valign='middle'><div><a href='1.0/index.html#geo:SpatialThing'>geo:SpatialThing</a></div></td></tr></table></div><a name='prog:streamed_by_subject'></a><a name='streamed_by_subject'></a><div class='item_desc'><h4>prog:streamed_by_subject <span class='type'>(Property)</span></h4><p>Indicates that one of the streams in this visualisation is events with a <a class='crossref' href='1.0/index.html#dcterms:subject'>dcterms:subject</a> relating them to the <a class='crossref' href='1.0/index.html#skos:Concept'>skos:Concept</a> indicated.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#prog:Programme'>prog:Programme</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; prog:streamed_by_subject &rarr; </span></td><td valign='middle'><div><a href='1.0/index.html#skos:Concept'>skos:Concept</a></div></td></tr></table></div><a name='rdfs:label'></a><a name='label'></a><div class='item_desc'><h4>rdfs:label <span class='type'>(Property)</span></h4><p>The human readable description of a thing, generally short enough to be displayed in all views of the programme.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#prog:TimeSlot'>prog:TimeSlot</a></div><div><a href='1.0/index.html#prog:Programme'>prog:Programme</a></div><div><a href='1.0/index.html#skos:Concept'>skos:Concept</a></div><div><a href='1.0/index.html#event:Event'>event:Event</a></div><div><a href='1.0/index.html#prog:Activity'>prog:Activity</a></div><div><a href='1.0/index.html#geo:SpatialThing'>geo:SpatialThing</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; rdfs:label &rarr; </span></td><td valign='middle'><div>Text Literal</div></td></tr></table></div><a name='skos:prefLabel'></a><a name='prefLabel'></a><div class='item_desc'><h4>skos:prefLabel <span class='type'>(Property)</span></h4><p>The label to show for a concept. It may have other <a class='crossref' href='1.0/index.html#rdfs:label'>rdfs:label</a> added too if needed.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#skos:Concept'>skos:Concept</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; skos:prefLabel &rarr; </span></td><td valign='middle'><div>Text Literal</div></td></tr></table></div><a name='spacerel:within'></a><a name='within'></a><div class='item_desc'><h4>spacerel:within <span class='type'>(Property)</span></h4><p>Link a place to a place it is within. Use this to relate rooms to buildings. If a place doesn't have a <a class='crossref' href='1.0/index.html#geo:lat'>geo:lat</a> and <a class='crossref' href='1.0/index.html#geo:long'>geo:long</a> but it is within a place which does then this lat and long can be used as an appoximate reference point for the place.</p><table><tr><td valign='middle'><div><a href='1.0/index.html#geo:SpatialThing'>geo:SpatialThing</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; spacerel:within &rarr; </span></td><td valign='middle'><div><a href='1.0/index.html#geo:SpatialThing'>geo:SpatialThing</a></div></td></tr></table></div><a name='tl:at'></a><a name='at'></a><div class='item_desc'><h4>tl:at <span class='type'>(Property)</span></h4><p>The time of an event:Instant which is the  <a class='crossref' href='1.0/index.html#event:time'>event:time</a> of a <a class='crossref' href='1.0/index.html#event:Event'>event:Event</a> or <a class='crossref' href='1.0/index.html#prog:TimeSlot'>prog:TimeSlot</a>. In the format 2010-04-07T18:07Z. Seconds mat be added in .00 format, and the Z may be replaced by the time offset, eg. -0100. See 
+<a href='http://en.wikipedia.org/wiki/ISO_8601'>http://en.wikipedia.org/wiki/ISO_8601</a>
+</p><table><tr><td valign='middle'><div><a href='1.0/index.html#tl:Instant'>tl:Instant</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; tl:at &rarr; </span></td><td valign='middle'><div>Date-Time</div></td></tr></table></div><a name='tl:end'></a><a name='end'></a><div class='item_desc'><h4>tl:end <span class='type'>(Property)</span></h4><p>The end time of an event:Interval which is the  <a class='crossref' href='1.0/index.html#event:time'>event:time</a> of a <a class='crossref' href='1.0/index.html#event:Event'>event:Event</a> or <a class='crossref' href='1.0/index.html#prog:TimeSlot'>prog:TimeSlot</a>. In the format 2010-04-07T18:07Z. Seconds mat be added in .00 format, and the Z may be replaced by the time offset, eg. -0100. See 
+<a href='http://en.wikipedia.org/wiki/ISO_8601'>http://en.wikipedia.org/wiki/ISO_8601</a>
+</p><table><tr><td valign='middle'><div><a href='1.0/index.html#tl:Interval'>tl:Interval</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; tl:end &rarr; </span></td><td valign='middle'><div>Date-Time</div></td></tr></table></div><a name='tl:start'></a><a name='start'></a><div class='item_desc'><h4>tl:start <span class='type'>(Property)</span></h4><p>The start time of an event:Interval which is the  <a class='crossref' href='1.0/index.html#event:time'>event:time</a> of a <a class='crossref' href='1.0/index.html#event:Event'>event:Event</a> or <a class='crossref' href='1.0/index.html#prog:TimeSlot'>prog:TimeSlot</a>. In the format 2010-04-07T18:07Z. Seconds mat be added in .00 format, and the Z may be replaced by the time offset, eg. -0100. See 
+<a href='http://en.wikipedia.org/wiki/ISO_8601'>http://en.wikipedia.org/wiki/ISO_8601</a>
+</p><table><tr><td valign='middle'><div><a href='1.0/index.html#tl:Interval'>tl:Interval</a></div></td><td valign='middle' align='center'><span style='font-size: 150%; padding:10px'> &rarr; tl:start &rarr; </span></td><td valign='middle'><div>Date-Time</div></td></tr></table></div>
+<h2>Extension: Ticket Prices</h2>
+
+<p>
+We recommend using GoodRelations, <a href='http://answers.semanticweb.com/questions/14882/cost-of-attending-an-event-using-goodrelations#answer-container-14895'>as described in this article</a>.</p>
+
+<h2>Extension: People</h2>
+
+<p>This extension allows you to associate people (or other foaf:Agent) to your sessions and programme.</p>
+
+<h3>Relating People to Events</h3>
+
+<p>You may associate foaf:People with an event using the following properties. The can be applied to either the top-level event or the individual sessions. These are specifically aimed at more academic events, for music events use the <a href='http://musicontology.com/'>Music Ontology</a> Performance
+Relationships. </p>
+<p>We use foaf:Person in the examples, but it can be any foaf:Agent. All the following are sub-properties of event:agent.</p>
+<dl>
+
+<dt>&lt;event&gt; prog:speaker &lt;person&gt;</dt>
+<dd>A person or group who provides some of the live content of the event. This can also be a group (eg. theatre group). It includes presenters and performers. (but we can't think of a better term for it). A group listed as prog:speaker does not imply that all members are prog:speaker of the event.</dd>
+
+<dt>&lt;event&gt; prog:chair &lt;person&gt;</dt>
+<dd>A person who does any of introducing a session, chairs a panel, makes sure that the session runs to time. This is <u>not</u> a conference chair, which is an organisation role.</dd>
+
+<dt>&lt;event&gt; prog:attendee &lt;person&gt;</dt>
+<dd>A person or group which is attending, or did a attend an event. Use this to track people planning to go to an event, or a list of who did go. It may make sense to store the prog:attended-by relationships in a separate document to the main programme.</dd>
+
+<dt>&lt;event&gt; prog:panel_member &lt;person&gt;</dt>
+<dd>A person who is part of a panel in this event.</dd>
+
+</dl>
+
+<p>The following relations may relate a location, theme or event to a person or organisation, so are not simple sub-properies of event:agent.</p>
+
+
+<dl>
+
+<dt>&lt;event/subject/location&gt; prog:sponsor &lt;organization&gt;</dt>
+<dd>Unlike the above, this will usually be relating an organisation, but it can still be a person. It indicates that the organization has supported the event in some fashion and is identified by the event as a sponsor. This may also be used to relate a location or theme to a specific sponsor. For example, the childrens fun-zone could have a sponsor. It is recommended that a sponsoring organization has both a foaf:name and foaf:logo.</dd>
+</dl>
+
+<dt>&lt;event/subject/location&gt; prog:support &lt;person&gt;</dt>
+<dd>A person provides some kind of support for a session, such as lighting, helping people to their seats. This is included to help make sure you don't schedule two events at the same time requiring the same person.</dd>
+
+<dt>&lt;event/subject/location&gt; prog:organiser &lt;person&gt;</dt>
+<dd>A person who is organising all or part of this event. Organising an event does not imply attendance. The organisers can be both people and groups or organizations.</dd>
+
+</dl>
+
+<h3>Relating People to the Programme</h3>
+
+<p>You may describe the person or people who maintain the programme by using dcterms:creator.</p>
+<dl>
+<dt>&lt;programme&gt; dcterms:creator &lt;person&gt;</dt>
+</dl>
+
+<h3>Describing People</h3>
+<p>Basically use 'foaf', but use bio:biography and prog:has_affiliation for bigraphies and affiliation information. Both these should be constrianed to facts relevant to the person's relationship to the programme. If you use an HTML bio, that's fine but note it in the datatype.</p>
+<p>foaf:name should always be included, everything else is optional.</p>
+<p>Rather than describe this in detail; here's an example.</p>
+<pre style='width:90%; overflow: scroll;margin:10px; border:dashed 2px blue;padding:10px;'>
+
+  &lt;foaf:Person rdf:about=&quot;http://data.dev8d.org/2011/programme/dev8d_programme.rdf#person-cgutteridge&quot;&gt;
+
+    &lt;foaf:name&gt;Christopher Gutteridge&lt;/foaf:name&gt;
+    &lt;foaf:givenName&gt;Christopher&lt;/foaf:givenName&gt;
+    &lt;foaf:familyName&gt;Gutteridge&lt;/foaf:familyName&gt;
+    &lt;foaf:mbox rdf:resource=&quot;mailto:cjg@ecs.soton.ac.uk&quot;/&gt;
+    &lt;foaf:account&gt;
+      &lt;foaf:OnlineAccount&gt;
+        &lt;foaf:accountServiceHomepage rdf:resource=&quot;http://www.twitter.com/&quot;/&gt;
+        &lt;foaf:accountName&gt;cgutteridge&lt;/foaf:accountName&gt;
+        &lt;foaf:accountProfilePage rdf:resource=&quot;http://www.twitter.com/cgutteridge&quot;/&gt;
+      &lt;/foaf:OnlineAccount&gt;
+    &lt;/foaf:account&gt;
+    &lt;foaf:weblog rdf:resource=&quot;http://blogs.ecs.soton.ac.uk/webteam/&quot;/&gt;
+    &lt;foaf:homepage rdf:resource=&quot;http://users.ecs.soton.ac.uk/cjg/&quot;/&gt;
+    &lt;foaf:depiction rdf:resource=&quot;http://lemur.ecs.soton.ac.uk/~cjg/cjg.jpg&quot;/&gt;
+    &lt;foaf:workplaceHomepage rdf:resource=&quot;http://www.soton.ac.uk/&quot;/&gt;
+
+    &lt;bio:biography rdf:datatype=&quot;http://purl.org/xtypes/Fragment-PlainText&quot;&gt;Chris likes cheese and ham.&lt;/bio:biography&gt;
+    &lt;bio:biography rdf:datatype=&quot;http://purl.org/xtypes/Fragment-HTML&quot;&gt;&amp;lt;p&amp;gt;&amp;lt;a href=&quot;http://www.ecs.soton.ac.uk/people/cjg&quot;&amp;gt;Chris&amp;lt;/a&amp;gt; likes:&amp;lt;/p&amp;gt; &amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;cheese:&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;ham&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;&lt;/bio:biography&gt;
+
+    &lt;prog:has_affiliation&gt;
+      &lt;prog:Affiliation&gt;
+        &lt;rdfs:label&gt;Open Linked Data Architect&lt;/rdfs:label&gt;
+        &lt;prog:affiliation_to&gt;
+          &lt;foaf:Organization&gt;
+            &lt;foaf:name&gt;University of Southampton&lt;/foaf:name&gt;
+            &lt;foaf:homepage rdf:resource=&quot;http://www.soton.ac.uk/&quot;/&gt;
+          &lt;/foaf:Organization&gt;
+        &lt;/prog:affiliation_to&gt;
+      &lt;/prog:Affiliation&gt;
+    &lt;/prog:has_affiliation&gt;
+
+  &lt;/foaf:Person&gt;</pre>
+
+
+
+
+
+<div>&copy; 2010 Christopher Gutteridge, <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</div></body></html><script src="//archive-bar.soton.ac.uk/archive-bar.js"></script>

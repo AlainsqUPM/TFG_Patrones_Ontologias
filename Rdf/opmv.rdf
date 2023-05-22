@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Error 410 - Gone</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/base">
+<style>
+body { line-height: 1.4; }
+</style>
+</head>
+<body>
+<h1><a href="https://www.w3.org/"><img src=
+"https://www.w3.org/Icons/w3c_home" alt="W3C" width="72" /></a>
+<span class=h1text>Sorry, Gone</span></h1>
+<hr>
+
+<p><strong>The requested resource is no longer available on this server and
+there is no forwarding address. Please remove all references to this resource.
+</strong></p>
+
+<p>You may be able to find the information you need by consulting the <a
+href="https://www.w3.org/">W3C Home page</a> or <a
+href="https://www.w3.org/Consortium/siteindex.html">Site Map</a>,
+or using the <a
+href="https://www.w3.org/Help/search">W3C search page</a>.</p>
+
+<p>If you believe you received this page in error, please email the full
+URL to our Webmaster explaining where you got the link and what information
+you are looking for.</p>
+
+<p>The <a href=
+"https://www.w3.org/Help/Webmaster">W3C Webmaster FAQ</a> has answers
+to frequently asked questions about our site.</p>
+
+<hr>
+<address><a href="https://www.w3.org/Help/Webmaster">Webmaster</a></address>
+</body>
+</html>
