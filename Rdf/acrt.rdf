@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:acrt="https://vocab.methodandstructure.com/certification#" xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:dct="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfa="http://www.w3.org/ns/rdfa#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification">
+    <xhv:external rdf:resource="http://dublincore.org/documents/dcmi-terms/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification">
+    <xhv:external rdf:resource="http://purl.org/dc/terms/coverage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification">
+    <xhv:external rdf:resource="http://purl.org/dc/terms/identifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification">
+    <xhv:external rdf:resource="http://purl.org/dc/terms/issued"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification">
+    <xhv:external rdf:resource="http://purl.org/dc/terms/valid"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification">
+    <rdfa:usesVocabulary rdf:resource="http://www.w3.org/1999/xhtml/vocab#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#qualification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#qualification">
+    <rdfs:label xml:lang="en">qualification</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#qualification">
+    <xhv:external rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#qualification">
+    <xhv:external rdf:resource="http://www.w3.org/TR/vocab-org/#org:Role"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#qualification">
+    <xhv:external rdf:resource="http://smiy.sourceforge.net/cco/spec/cognitivecharacteristics.html"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#qualification">
+    <rdfs:comment xml:lang="en">This property specifies what achievement, skill, or fact is being certified.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#qualification">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/certification#Certification"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#qualification">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/certification#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#qualification">
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#qualification">
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/vocab-org/#org:Role"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#qualification">
+    <rdfs:seeAlso rdf:resource="http://smiy.sourceforge.net/cco/spec/cognitivecharacteristics.html"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#qualification">
+    <skos:note xml:lang="en">The range of this term is left open, but should probably reference something abstract like a skos:Concept, an org:Role (itself a subclass of skos:Concept), or a skill, such as modeled by the Cognitive Characteristics Ontology.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#authority">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#authority">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#authority">
+    <rdfs:label xml:lang="en">authority</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#authority">
+    <xhv:external rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#authority">
+    <rdfs:comment xml:lang="en">This property specifies who (or what) is doing the certifying.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#authority">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/certification#Certification"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#authority">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/certification#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#authority">
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#authority">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/certification#certifies"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#authority">
+    <skos:note xml:lang="en">The issuing authority can, once again, be a person, business, institution, or any other kind of agent.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#certifies">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#certifies">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#certifies">
+    <rdfs:label xml:lang="en">certifies</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#certifies">
+    <xhv:external rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#certifies">
+    <rdfs:comment xml:lang="en">This property specifies that its subject, an agent, has issued a certification.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#certifies">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#certifies">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/certification#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#certifies">
+    <rdfs:range rdf:resource="https://vocab.methodandstructure.com/certification#Certification"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#certifies">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/certification#authority"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#has-certification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#has-certification">
+    <rdfs:label xml:lang="en">has-certification</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#has-certification">
+    <xhv:external rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#has-certification">
+    <rdfs:comment xml:lang="en">This property specifies that an agent possesses a given certification.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#has-certification">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#has-certification">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/certification#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#has-certification">
+    <rdfs:range rdf:resource="https://vocab.methodandstructure.com/certification#Certification"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#has-certification">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/certification#principal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#principal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#principal">
+    <rdfs:label xml:lang="en">principal</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#principal">
+    <xhv:external rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#principal">
+    <rdfs:comment xml:lang="en">This property specifies who or what agent is being certified.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#principal">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/certification#Certification"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#principal">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/certification#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#principal">
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#principal">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/certification#has-certification"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#principal">
+    <skos:note xml:lang="en">The principal of the certification can be any agent, like a person, company, animal, AI, whatever.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#proof">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#proof">
+    <rdfs:label xml:lang="en">proof</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#proof">
+    <xhv:external rdf:resource="http://www.w3.org/ns/auth/cert"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#proof">
+    <rdfs:comment xml:lang="en">This property points to some proof of the certification, like a scan of an official document or a page on the issuing authority's website that corroborates the certification.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#proof">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/certification#Certification"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#proof">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/certification#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#proof">
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/auth/cert"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#proof">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/certification#proves"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#proof">
+    <skos:note xml:lang="en">The range of this term is left open, but should probably reference a document. It could even point to an actual cryptographic certificate.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#proves">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#proves">
+    <rdfs:label xml:lang="en">proves</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#proves">
+    <rdfs:comment xml:lang="en">This property asserts that its subject is somehow proof of a given certification.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#proves">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/certification#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#proves">
+    <rdfs:range rdf:resource="https://vocab.methodandstructure.com/certification#Certification"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#proves">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/certification#proof"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://doriantaylor.com/person/dorian-taylor#me">
+    <foaf:name xml:lang="en">Dorian Taylor</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#Certification">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#Certification">
+    <rdfs:label xml:lang="en">Certification</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#Certification">
+    <rdfs:comment xml:lang="en">This class represents the abstract notion of certification, of an agent, by another agent, that the first agent possesses some property or set of properties implied by the certification, potentially within some spatiotemporal scope, and which may or may not be designated by some identifier.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#Certification">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/certification#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#Certification">
+    <skos:example xml:lang="en">The issuance of a government-regulated privilege, e.g. driver's license</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#Certification">
+    <skos:example xml:lang="en">The issuance of an academic degree to a particular person</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#Certification">
+    <skos:example xml:lang="en">An officially-recognized trade qualification, e.g. a welding ticket</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#Certification">
+    <skos:example xml:lang="en">A mandatory professional status, e.g. bar association membership</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#Certification">
+    <skos:example xml:lang="en">A private certification of achievement, e.g. CISSP</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#Certification">
+    <skos:example xml:lang="en">An errors and omissions insurance policy</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#Certification">
+    <skos:example xml:lang="en">A pet license, where the principal is an animal</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#Certification">
+    <skos:example xml:lang="en">The notarization of an affadavit</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#Certification">
+    <skos:example xml:lang="en">An award (e.g. 2014 Nobel Prize in physics)</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#">
+    <rdf:type rdf:resource="http://purl.org/ontology/bibo/Webpage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#">
+    <dct:title xml:lang="en">An Agent Certification Ontology</dct:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#">
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-23T23:40:28Z</dct:created>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#">
+    <dct:creator rdf:resource="http://doriantaylor.com/person/dorian-taylor#me"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#">
+    <dct:description xml:lang="en">This document specifies a vocabulary for asserting the existence of official endorsements or certifications of agents, such as people and organizations.</dct:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#">
+    <bibo:uri rdf:resource="https://vocab.methodandstructure.com/certification#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#">
+    <vann:preferredNamespacePrefix xml:lang="en">acrt</vann:preferredNamespacePrefix>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#">
+    <xhv:external rdf:resource="http://doriantaylor.com/person/dorian-taylor#me"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#">
+    <xhv:external rdf:resource="http://creativecommons.org/ns"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#">
+    <xhv:external rdf:resource="http://www.w3.org/ns/auth/cert"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#">
+    <xhv:external rdf:resource="http://www.w3.org/TR/vocab-adms/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#">
+    <xhv:external rdf:resource="http://www.w3.org/community/odrl/two/model/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#">
+    <xhv:external rdf:resource="http://www.w3.org/TR/turtle/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#">
+    <xhv:external rdf:resource="http://openbadges.org/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#">
+    <rdfs:comment xml:lang="en">This document specifies a vocabulary for asserting the existence of official endorsements or certifications of agents, such as people and organizations.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/certification#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#">
+    <rdfs:seeAlso rdf:resource="http://creativecommons.org/ns"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#">
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/auth/cert"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#">
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/vocab-adms/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#">
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/community/odrl/two/model/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#">
+    <skos:editorialNote xml:lang="en">Note that this assertion says only in informal terms what the certification is, and what it allows me to do. This vocabulary is intended neither to describe the privileges granted by the certification, nor to describe the artifact that embodies the certification. It simply connects the subject of the certification to the issuing authority and their official serial number of the account.</skos:editorialNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/certification#">
+    <skos:scopeNote xml:lang="en">The purpose of this vocabulary is record-keeping and exchange, and likewise is its application context. The actual vetting mechanisms of the certifications in question are out of scope.</skos:scopeNote>
+  </rdf:Description>
+</rdf:RDF>

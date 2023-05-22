@@ -1,0 +1,82 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:j.0="http://purl.org/dc/terms/"
+    xmlns:j.1="http://www.w3.org/ns/adms#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:j.2="urn:neoneo:"
+    xmlns:j.3="http://purl.org/vocab/vann/"
+    xmlns:j.4="http://vocab.firegraph.store/decoration#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://vocab.resc.info/communication">
+    <j.3:preferredNamespacePrefix>comm</j.3:preferredNamespacePrefix>
+    <j.0:title>Vocabulary related to incident communication</j.0:title>
+    <dc:creator rdf:resource="http://vocab.resc.info/communication#bart"/>
+    <j.0:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-09-12</j.0:modified>
+    <j.0:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2014-05-05</j.0:created>
+    <j.0:description>This vocabulary is intended to describe all the aspects which are needed to communicate incident related information for fire department services</j.0:description>
+    <j.3:preferredNamespaceUri>http://vocab.resc.info/communication#</j.3:preferredNamespaceUri>
+    <j.2:vocab rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.2:vocab>
+    <rdf:type rdf:resource="http://www.w3.org/ns/adms#Asset"/>
+  </owl:Ontology>
+  <rdfs:Class rdf:about="http://vocab.resc.info/communication#DispatchMessage">
+    <j.4:glyphSource>data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nNTEuMicgaGVpZ2h0PSc1MS4yJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9Jy0wLjk4MzM5OCAtNjQuOTgzNCA2NDAuMTA0IDQ0OC40MjcnPjxwYXRoIGZpbGw9JyNGRjA0MDQnIHRyYW5zZm9ybT0nc2NhbGUoMSwtMSkgdHJhbnNsYXRlKDAsLTM0OCknIGQ9J001NzYgMjA4YzAgLTIzLjYyOTkgLTEyLjk1MDIgLTQ0LjA0IC0zMi4wMDk4IC01NS4xMjk5di0xNTIuODdjMCAtOS4yMTk3MyAtNy4wODAwOCAtMzIgLTMyIC0zMmMtNi4xOTMzNiAwLjAwNTg1OTM4IC0xNS4xNDQ1IDMuMTUwMzkgLTE5Ljk4MDUgNy4wMTk1M2wtODUuMDI5MyA2OC4wMzAzYy00Mi43MDAyIDM0LjE0MDYgLTk2LjMyMDMgNTIuOTUwMiAtMTUwLjk4IDUyLjk1MDJoLTI4LjA4MDEgYy0yLjc5MDA0IC0xMC4yMSAtNC40MTAxNiAtMjAuODg5NiAtNC40MTAxNiAtMzJjMCAtMjkuMDgwMSA5Ljc1IC01NS45MTk5IDI2LjE1MDQgLTc3LjQ0MDRjMTUuNzkgLTIwLjcxOTcgMC4xNDk0MTQgLTUwLjU1OTYgLTI1LjkwMDQgLTUwLjU1OTZoLTc0LjI3OTNjLTExLjg4MDkgMCAtMjMuMjEwOSA2LjM3MDEyIC0yOC40MDA0IDE3LjA1OTZjLTE2LjI5OTggMzMuNTkwOCAtMjUuNTYwNSA3MS4xNzA5IC0yNS41NjA1IDExMC45NCBjMCAxMC44NjA0IDAuNzkwMDM5IDIxLjUxOTUgMi4xODA2NiAzMmgtMzMuNzAwMmMtMzUuMzQ5NiAwIC02NCAyOC42NTA0IC02NCA2NHY5NmMwIDM1LjM0OTYgMjguNjUwNCA2NCA2NCA2NGgxOTJjNTQuNjYwMiAwIDEwOC4yOCAxOC44MDk2IDE1MC45OSA1Mi45NTAybDg1LjAyOTMgNjguMDMwM2M1Ljc5MDA0IDQuNjM5NjUgMTIuODYwNCA3LjAxOTUzIDE5Ljk4MDUgNy4wMTk1M2MyNS4wMTk1IDAgMzIgLTIzLjI1OTggMzIgLTMyLjAwOTggdi0xNTIuODdjMTkuMDQ5OCAtMTEuMDgwMSAzMiAtMzEuNDkwMiAzMiAtNTUuMTIwMXpNNDgwIDY2LjU4MDF2MjgyLjg0bC0zMy4wNDk4IC0yNi40Mzk1Yy01NCAtNDMuMjAwMiAtMTIxLjgzIC02Ni45ODA1IC0xOTAuOTUgLTY2Ljk4MDV2LTk2YzY5LjEyMDEgMCAxMzYuOTUgLTIzLjc4MDMgMTkwLjk1IC02Ni45ODA1eic+PC9wYXRoPjwvc3ZnPg==</j.4:glyphSource>
+    <j.4:glyphName>fas fa-bullhorn</j.4:glyphName>
+    <j.4:color>#FF0404</j.4:color>
+    <rdfs:comment>Resources of this class describe messages sent by a dispatch to individual units</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://semanticweb.cs.vu.nl/2009/11/sem/Event"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>DispatchMessage</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://vocab.resc.info/communication#Unit">
+    <j.4:glyphSource>data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nNTEuMicgaGVpZ2h0PSc1MS4yJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9Jy0wLjk4MzM5OCAtNjQuOTgzNCA2NDAuMTA0IDQ0OC40MjcnPjxwYXRoIGZpbGw9JyNBODBEMEQnIHRyYW5zZm9ybT0nc2NhbGUoMSwtMSkgdHJhbnNsYXRlKDAsLTM0OCknIGQ9J002MjQgOTZjOC43OTk4IDAgMTYgLTcuMjAwMiAxNiAtMTZ2LTMyYzAgLTguNzk5OCAtNy4yMDAyIC0xNiAtMTYgLTE2aC00OGMwIC01MyAtNDMgLTk2IC05NiAtOTZzLTk2IDQzIC05NiA5NmgtMTI4YzAgLTUzIC00MyAtOTYgLTk2IC05NnMtOTYgNDMgLTk2IDk2aC0xNmMtMjYuNSAwIC00OCAyMS41IC00OCA0OHYzMjBjMCAyNi41IDIxLjUgNDggNDggNDhoMzIwYzI2LjUgMCA0OCAtMjEuNSA0OCAtNDh2LTQ4aDQ0LjA5OTYgYzEyLjcwMDIgMCAyNC45MDA0IC01LjA5OTYxIDMzLjkwMDQgLTE0LjA5OTZsOTkuOTAwNCAtOTkuOTAwNGM5IC05IDE0LjA5OTYgLTIxLjIwMDIgMTQuMDk5NiAtMzMuOTAwNHYtMTA4LjFoMTZ6TTE2MCAtMTZjMjYuNSAwIDQ4IDIxLjUgNDggNDhzLTIxLjUgNDggLTQ4IDQ4cy00OCAtMjEuNSAtNDggLTQ4czIxLjUgLTQ4IDQ4IC00OHpNNDgwIC0xNmMyNi41IDAgNDggMjEuNSA0OCA0OHMtMjEuNSA0OCAtNDggNDhzLTQ4IC0yMS41IC00OCAtNDggczIxLjUgLTQ4IDQ4IC00OHpNNTYwIDE5MnYxMi4wOTk2bC05OS45MDA0IDk5LjkwMDRoLTQ0LjA5OTZ2LTExMmgxNDR6Jz48L3BhdGg+PC9zdmc+</j.4:glyphSource>
+    <j.4:glyphName>fas fa-truck</j.4:glyphName>
+    <j.4:color>#A80D0D</j.4:color>
+    <rdfs:comment>A Unit which can be send to a incident</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Unit</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://vocab.resc.info/communication#Classification">
+    <rdfs:comment>The classification of the incident</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Classification</rdfs:label>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://vocab.resc.info/communication#pagerMessage">
+    <rdfs:comment>This property contains the full message as send through pager networks</rdfs:comment>
+    <rdfs:label>The message send to pagers</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://vocab.resc.info/communication#unit">
+    <rdfs:range rdf:resource="http://vocab.resc.info/communication#Unit"/>
+    <rdfs:domain rdf:resource="http://vocab.resc.info/communication#DispatchMessage"/>
+    <rdfs:comment>Unit sent to the incident</rdfs:comment>
+    <rdfs:label>Unit</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://vocab.resc.info/communication#dispatchedTo">
+    <rdfs:domain rdf:resource="http://vocab.resc.info/communication#DispatchMessage"/>
+    <rdfs:comment>the adress on the P2000 pager network where the message was sent to</rdfs:comment>
+    <rdfs:label>Dispatched to</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://vocab.resc.info/communication#incidentLocation">
+    <rdfs:domain rdf:resource="http://vocab.resc.info/communication#DispatchMessage"/>
+    <rdfs:comment>The location in geo format where incident is reported</rdfs:comment>
+    <rdfs:label>Location</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://vocab.resc.info/communication#incidentAddress">
+    <rdfs:domain rdf:resource="http://vocab.resc.info/communication#DispatchMessage"/>
+    <rdfs:comment>The address where the incident was reported</rdfs:comment>
+    <rdfs:label>Incident address</rdfs:label>
+  </rdf:Property>
+  <owl:DatatypeProperty rdf:about="http://vocab.resc.info/communication#classificationType">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://vocab.resc.info/communication#Classification"/>
+    <rdfs:comment>The type of classification</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>Type</rdfs:label>
+  </owl:DatatypeProperty>
+</rdf:RDF>

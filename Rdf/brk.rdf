@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<imports xmlns="http://www.w3.org/2002/07/owl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk/DKK-Product"/>
+	<imports xmlns="http://www.w3.org/2002/07/owl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk/OnroerendeZaak"/>
+	<imports xmlns="http://www.w3.org/2002/07/owl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk/Typen"/>
+	<imports xmlns="http://www.w3.org/2002/07/owl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk/Historie"/>
+	<imports xmlns="http://www.w3.org/2002/07/owl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk/KadastraalObject"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk/DKK-Product">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk/Historie">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/Geometry">
+	<rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx1"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx1">
+	<datatype xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.opengis.net/ont/geosparql#wktLiteral"/>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.opengis.net/ont/geosparql#asWKT"/>
+	<nodeKind xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/Geometry">
+	<targetClass xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/KadastraleGemeente">
+	<rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+	<equivalent xmlns="http://bp4mc2.org/def/mim#" rdf:resource="http://bp4mc2.org/def/mim#Referentielijst"/>
+	<targetClass xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#KadastraleGemeente"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#kadastraleGemeente">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#historie">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">historie</label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#KadasterHistorieNEN3610">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<toelichting xmlns="http://bp4mc2.org/def/mim#">Alle datums in dit gegevensgroeptype moeten voldoen aan de datumdefinitie zoals vastgelegd in het Kadaster Historie Model: yyyy-mm-dd:hh:mm:ss.fff (datum + tijd met miliseconden).</toelichting>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">KadasterHistorie is een verzameling gegevens waarmee historie vastgelegd wordt. Historie betreft alleen voorkomens van objecten, dus het object op een bepaald moment. De historie is conform het Kadaster historiemodel.</comment>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">KadasterHistorieNEN3610</label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/TypeKadastraleAanduiding">
+	<rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx2"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx2">
+	<minLength xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</minLength>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">perceelnummer</label>
+	<datatype xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<name xmlns="http://www.w3.org/ns/shacl#">perceelnummer</name>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#perceelnummer"/>
+	<maxLength xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</maxLength>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/TypeKadastraleAanduiding">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx3"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx3">
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">kadastraleGemeente</label>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<name xmlns="http://www.w3.org/ns/shacl#">kadastraleGemeente</name>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#kadastraleGemeente"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/TypeKadastraleAanduiding">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx4"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx4">
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">akrKadastraleGemeenteCode</label>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<name xmlns="http://www.w3.org/ns/shacl#">akrKadastraleGemeenteCode</name>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#akrKadastraleGemeenteCode"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/TypeKadastraleAanduiding">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx5"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx5">
+	<minLength xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minLength>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">sectie</label>
+	<datatype xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<name xmlns="http://www.w3.org/ns/shacl#">sectie</name>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#sectie"/>
+	<maxLength xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</maxLength>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/_KadastraalObject">
+	<rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+	<datumOpname xmlns="http://bp4mc2.org/def/mim#">20070801</datumOpname>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">https://tax.kadaster.nl/doc/begrip/Kadastraal_object</comment>
+	<herkomstDefinitie xmlns="http://bp4mc2.org/def/mim#">BRK</herkomstDefinitie>
+	<equivalent xmlns="http://bp4mc2.org/def/mim#" rdf:resource="http://bp4mc2.org/def/mim#Objecttype"/>
+	<populatie xmlns="http://bp4mc2.org/def/mim#">Alle percelen, netwerken en appartementsrechten op het Nederlands grondgebied en teboekgestelde schepen en luchtvaartuigen.</populatie>
+	<kwaliteit xmlns="http://bp4mc2.org/def/mim#">https://www.kadaster.nl/kwaliteitshandvest</kwaliteit>
+	<indicatieAbstractObject xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</indicatieAbstractObject>
+	<herkomst xmlns="http://bp4mc2.org/def/mim#">BRK</herkomst>
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx6"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx6">
+	<name xmlns="http://www.w3.org/ns/shacl#">indicatie abstract constraint</name>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</minCount>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/_KadastraalObject">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx7"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx7">
+	<indicatieAfleidbaar xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieAfleidbaar>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<indicatieMaterieleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieMaterieleHistorie>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#identificatie"/>
+	<herkomstDefinitie xmlns="http://bp4mc2.org/def/mim#">BRK</herkomstDefinitie>
+	<identificerend xmlns="http://bp4mc2.org/def/mim#">true</identificerend>
+	<indicatieFormeleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieFormeleHistorie>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<authentiek xmlns="http://bp4mc2.org/def/mim#">Authentiek</authentiek>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">De Kadaster identificatie is een door het Kadaster toegekend landelijk uniek nummer aan dit object binnen de kadastrale registratie.</comment>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">identificatie</label>
+	<herkomst xmlns="http://bp4mc2.org/def/mim#">BRK</herkomst>
+	<name xmlns="http://www.w3.org/ns/shacl#">identificatie</name>
+	<datatype xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<nodeKind xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/_KadastraalObject">
+	<name xmlns="http://www.w3.org/ns/shacl#">_KadastraalObject</name>
+	<toelichting xmlns="http://bp4mc2.org/def/mim#">In de BRK worden zakelijke rechten op kadastrale objecten met de rechthebbenden geregistreerd. De eigendom van en beperkte rechten op een kadastraal object worden als zakelijk recht vermeld. Uitzondering: Hypotheek wordt als zekerheidstelling en Erfdienstbaarheid als een aantekening bij kadastrale objecten vermeld Indicatie omvang Initieel 7.000.000</toelichting>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">_KadastraalObject</label>
+	<targetClass xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#_KadastraalObject"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#identificatie">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">identificatie</label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#_VoorkomenNEN3610">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk/Historie"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">_VoorkomenNEN3610</label>
+	<toelichting xmlns="http://bp4mc2.org/def/mim#">Er wordt aangegeven op basis waarvan de informatie deze vorm heeft gekregen ("audit trail") en wanneer deze informatie ontstaan of vervallen ("historie").</toelichting>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">Een Voorkomen is een Object in de registratie waarvan wordt bijgehouden op basis waarvan en wanneer de vastgelegde informatie is ontstaan of gewijzigd.</comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk/KadastraalObject">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#_KadastraalObject">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk/KadastraalObject"/>
+	<populatie xmlns="http://bp4mc2.org/def/mim#">Alle percelen, netwerken en appartementsrechten op het Nederlands grondgebied en teboekgestelde schepen en luchtvaartuigen.</populatie>
+	<kwaliteit xmlns="http://bp4mc2.org/def/mim#">https://www.kadaster.nl/kwaliteitshandvest</kwaliteit>
+	<datumOpname xmlns="http://bp4mc2.org/def/mim#">20070801</datumOpname>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">_KadastraalObject</label>
+	<herkomstDefinitie xmlns="http://bp4mc2.org/def/mim#">BRK</herkomstDefinitie>
+	<herkomst xmlns="http://bp4mc2.org/def/mim#">BRK</herkomst>
+	<toelichting xmlns="http://bp4mc2.org/def/mim#">In de BRK worden zakelijke rechten op kadastrale objecten met de rechthebbenden geregistreerd. De eigendom van en beperkte rechten op een kadastraal object worden als zakelijk recht vermeld. Uitzondering: Hypotheek wordt als zekerheidstelling en Erfdienstbaarheid als een aantekening bij kadastrale objecten vermeld Indicatie omvang Initieel 7.000.000</toelichting>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">https://tax.kadaster.nl/doc/begrip/Kadastraal_object</comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/TypeOppervlak">
+	<rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx8"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx8">
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">soortGrootte</label>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<name xmlns="http://www.w3.org/ns/shacl#">soortGrootte</name>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#soortGrootte"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/TypeOppervlak">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx9"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx9">
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">waarde</label>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<name xmlns="http://www.w3.org/ns/shacl#">waarde</name>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#waarde"/>
+	<patroon xmlns="http://bp4mc2.org/def/mim#">[1-9][0-9]*|0,[1-4]</patroon>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk/OnroerendeZaak">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#KadastraleGemeente">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#Waardelijst"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/TypePerceelnummerVerschuiving">
+	<rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx10"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx10">
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">deltaY</label>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<name xmlns="http://www.w3.org/ns/shacl#">deltaY</name>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#deltaY"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/TypePerceelnummerVerschuiving">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx11"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx11">
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">deltaX</label>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<name xmlns="http://www.w3.org/ns/shacl#">deltaX</name>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#deltaX"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/SoortGrootte">
+	<rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+	<equivalent xmlns="http://bp4mc2.org/def/mim#" rdf:resource="http://bp4mc2.org/def/mim#Referentielijst"/>
+	<targetClass xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#SoortGrootte"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/KadasterHistorieNEN3610">
+	<rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+	<targetClass xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#KadasterHistorieNEN3610"/>
+	<name xmlns="http://www.w3.org/ns/shacl#">KadasterHistorieNEN3610</name>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">KadasterHistorieNEN3610</label>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">KadasterHistorie is een verzameling gegevens waarmee historie vastgelegd wordt. Historie betreft alleen voorkomens van objecten, dus het object op een bepaald moment. De historie is conform het Kadaster historiemodel.</comment>
+	<toelichting xmlns="http://bp4mc2.org/def/mim#">Alle datums in dit gegevensgroeptype moeten voldoen aan de datumdefinitie zoals vastgelegd in het Kadaster Historie Model: yyyy-mm-dd:hh:mm:ss.fff (datum + tijd met miliseconden).</toelichting>
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx12"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx12">
+	<indicatieAfleidbaar xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieAfleidbaar>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<indicatieMaterieleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieMaterieleHistorie>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#beginGeldigheid"/>
+	<patroon xmlns="http://bp4mc2.org/def/mim#">\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}</patroon>
+	<identificerend xmlns="http://bp4mc2.org/def/mim#">false</identificerend>
+	<indicatieFormeleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieFormeleHistorie>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<datatype xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+	<authentiek xmlns="http://bp4mc2.org/def/mim#">Authentiek</authentiek>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">Het moment waarop het voorkomen in de werkelijkheid is ontstaan.</comment>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">beginGeldigheid</label>
+	<name xmlns="http://www.w3.org/ns/shacl#">beginGeldigheid</name>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/KadasterHistorieNEN3610">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx13"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx13">
+	<indicatieAfleidbaar xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieAfleidbaar>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<indicatieMaterieleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieMaterieleHistorie>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#volgnummer"/>
+	<identificerend xmlns="http://bp4mc2.org/def/mim#">false</identificerend>
+	<indicatieFormeleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieFormeleHistorie>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<datatype xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+	<authentiek xmlns="http://bp4mc2.org/def/mim#">Authentiek</authentiek>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">Opvolgend nummer ter identificatie van een versie indien de identificatie van die versie niet wijzigt. Initieel heeft dit attribuut de waarde 0.</comment>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">volgnummer</label>
+	<name xmlns="http://www.w3.org/ns/shacl#">volgnummer</name>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/KadasterHistorieNEN3610">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx14"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx14">
+	<indicatieAfleidbaar xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieAfleidbaar>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<indicatieMaterieleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieMaterieleHistorie>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#eindGeldigheid"/>
+	<patroon xmlns="http://bp4mc2.org/def/mim#">\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}</patroon>
+	<identificerend xmlns="http://bp4mc2.org/def/mim#">false</identificerend>
+	<indicatieFormeleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieFormeleHistorie>
+	<datatype xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+	<authentiek xmlns="http://bp4mc2.org/def/mim#">Authentiek</authentiek>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">Het moment waarop het voorkomen in de werkelijkheid is vervallen. Wanneer deze waarde niet is opgegeven is de instantie nog geldig.</comment>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">eindGeldigheid</label>
+	<name xmlns="http://www.w3.org/ns/shacl#">eindGeldigheid</name>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/KadasterHistorieNEN3610">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx15"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx15">
+	<indicatieAfleidbaar xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieAfleidbaar>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<indicatieMaterieleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieMaterieleHistorie>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#statusHistorie"/>
+	<identificerend xmlns="http://bp4mc2.org/def/mim#">false</identificerend>
+	<indicatieFormeleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieFormeleHistorie>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<authentiek xmlns="http://bp4mc2.org/def/mim#">Authentiek</authentiek>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">Status geeft de status van de versie van het voorkomen aan (geldig/correctie/audit). De waarden zijn opgenomen in een waardelijst.</comment>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">statusHistorie</label>
+	<name xmlns="http://www.w3.org/ns/shacl#">statusHistorie</name>
+	<class xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#StatusHistorie"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/KadasterHistorieNEN3610">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx16"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx16">
+	<indicatieAfleidbaar xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieAfleidbaar>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<indicatieMaterieleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieMaterieleHistorie>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#tijdstipRegistratie"/>
+	<patroon xmlns="http://bp4mc2.org/def/mim#">\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}</patroon>
+	<identificerend xmlns="http://bp4mc2.org/def/mim#">false</identificerend>
+	<indicatieFormeleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieFormeleHistorie>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<datatype xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+	<authentiek xmlns="http://bp4mc2.org/def/mim#">Authentiek</authentiek>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">Het moment waarop het voorkomen in de registratie is ontstaan.</comment>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">tijdstipRegistratie</label>
+	<name xmlns="http://www.w3.org/ns/shacl#">tijdstipRegistratie</name>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/KadasterHistorieNEN3610">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx17"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx17">
+	<indicatieAfleidbaar xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieAfleidbaar>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<indicatieMaterieleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieMaterieleHistorie>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#eindRegistratie"/>
+	<patroon xmlns="http://bp4mc2.org/def/mim#">\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}</patroon>
+	<identificerend xmlns="http://bp4mc2.org/def/mim#">false</identificerend>
+	<indicatieFormeleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieFormeleHistorie>
+	<datatype xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+	<authentiek xmlns="http://bp4mc2.org/def/mim#">Authentiek</authentiek>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">Het moment waarop het voorkomen in de registratie is vervallen. Wanneer deze waarde niet is opgegeven is de instantie nog geldig.</comment>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">eindRegistratie</label>
+	<name xmlns="http://www.w3.org/ns/shacl#">eindRegistratie</name>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#_OnroerendeZaak">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk/OnroerendeZaak"/>
+	<populatie xmlns="http://bp4mc2.org/def/mim#">Alle percelen, netwerken en appartementsrechten op het Nederlands grondgebied.</populatie>
+	<kwaliteit xmlns="http://bp4mc2.org/def/mim#">https://www.kadaster.nl/kwaliteitshandvest</kwaliteit>
+	<datumOpname xmlns="http://bp4mc2.org/def/mim#">20070801</datumOpname>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">_OnroerendeZaak</label>
+	<herkomstDefinitie xmlns="http://bp4mc2.org/def/mim#">BRK</herkomstDefinitie>
+	<herkomst xmlns="http://bp4mc2.org/def/mim#">BRK</herkomst>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#_KadastraalObject"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#KadastraleGrens">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk/OnroerendeZaak"/>
+	<populatie xmlns="http://bp4mc2.org/def/mim#">Alle vastgestelde grenzen, die gereconstrueerd kunnen worden in het net van coordinatenpunten.</populatie>
+	<kwaliteit xmlns="http://bp4mc2.org/def/mim#">https://www.kadaster.nl/kwaliteitshandvest</kwaliteit>
+	<datumOpname xmlns="http://bp4mc2.org/def/mim#">20070801</datumOpname>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">KadastraleGrens</label>
+	<herkomstDefinitie xmlns="http://bp4mc2.org/def/mim#">BRK</herkomstDefinitie>
+	<herkomst xmlns="http://bp4mc2.org/def/mim#">Het veldwerk van de landmeter</herkomst>
+	<toelichting xmlns="http://bp4mc2.org/def/mim#">In de praktijk kent Kadastrale grens nu twee betekenissen: De grens zoals vastgesteld in het terrein, de terrein grens. (vaststelling o.b.v. de aanwijs van partijen aan beide zijde van de betreffende grens en vastgelegd door het Kadaster). De terreingrens is opgenomen in de terrestrische registratie van het Kadaster. De visualisatie van deze grens op de kadastrale kaart. De kaartgrens. Deze kan mogelijk 'verschoven' liggen door het inpassen van deze terreingrens in het 'overall' kaartbeeld. De kadastrale grens in deze betekenis vormt een indicatief gegeven over de ligging van de grens t.o.v. de topografie, d.w.z. van de in het terrein visueel waarneembare 'objecten' als huizen, straten, sloten, etc. Met het begrip 'Kadastrale grens' in relatie tot de BRK bedoelen we de kaartgrens. De terreingrens uit de 'terrestrische registratie' vormt de basis voor de kaartgrens. Bij juridische geschillen wordt echter de terreingrens uitgezet.</toelichting>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">uri http://tax.kadaster.nl/id/begrip/Kadastrale_grens</comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#Kwaliteit">
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk/OnroerendeZaak"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#Perceel">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<isDefinedBy xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk/OnroerendeZaak"/>
+	<populatie xmlns="http://bp4mc2.org/def/mim#">Alle percelen op het Nederlands grondgebied.</populatie>
+	<kwaliteit xmlns="http://bp4mc2.org/def/mim#">https://www.kadaster.nl/kwaliteitshandvest</kwaliteit>
+	<datumOpname xmlns="http://bp4mc2.org/def/mim#">20070801</datumOpname>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Perceel</label>
+	<herkomstDefinitie xmlns="http://bp4mc2.org/def/mim#">BRK</herkomstDefinitie>
+	<herkomst xmlns="http://bp4mc2.org/def/mim#">BRK</herkomst>
+	<toelichting xmlns="http://bp4mc2.org/def/mim#">In de BRK is een kadastraal perceel een specialisatie van een onroerende zaak. Percelen worden cartografisch gerepresenteerd door een tweedimensionale vlakbegrenzing. Tussen alle kadastrale percelen in Nederland geldt een topologische relatie (opdelende vlakstructuur), d.w.z. dat naburige perceelsvlakken naadloos moeten aansluiten en elkaar niet mogen overlappen.</toelichting>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#_OnroerendeZaak"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk/Typen">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#SoortGrootte">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#Waardelijst"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/TypeGrens">
+	<rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+	<equivalent xmlns="http://bp4mc2.org/def/mim#" rdf:resource="http://bp4mc2.org/def/mim#Referentielijst"/>
+	<targetClass xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#TypeGrens"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#code">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#TypeGrens">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#Waardelijst"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#sectie">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/StatusHistorie">
+	<rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+	<equivalent xmlns="http://bp4mc2.org/def/mim#" rdf:resource="http://bp4mc2.org/def/mim#Referentielijst"/>
+	<targetClass xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#StatusHistorie"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/_OnroerendeZaak">
+	<rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+	<datumOpname xmlns="http://bp4mc2.org/def/mim#">20070801</datumOpname>
+	<herkomstDefinitie xmlns="http://bp4mc2.org/def/mim#">BRK</herkomstDefinitie>
+	<equivalent xmlns="http://bp4mc2.org/def/mim#" rdf:resource="http://bp4mc2.org/def/mim#Objecttype"/>
+	<populatie xmlns="http://bp4mc2.org/def/mim#">Alle percelen, netwerken en appartementsrechten op het Nederlands grondgebied.</populatie>
+	<kwaliteit xmlns="http://bp4mc2.org/def/mim#">https://www.kadaster.nl/kwaliteitshandvest</kwaliteit>
+	<indicatieAbstractObject xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</indicatieAbstractObject>
+	<herkomst xmlns="http://bp4mc2.org/def/mim#">BRK</herkomst>
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx18"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx18">
+	<name xmlns="http://www.w3.org/ns/shacl#">indicatie abstract constraint</name>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</minCount>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/_OnroerendeZaak">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx19"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx19">
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">Gegevens omtrent de historie van een voorkomen van dit type.</comment>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<indicatieMaterieleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieMaterieleHistorie>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#historie"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">historie</label>
+	<name xmlns="http://www.w3.org/ns/shacl#">historie</name>
+	<class xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#KadasterHistorieNEN3610"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/_OnroerendeZaak">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx20"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx20">
+	<indicatieAfleidbaar xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieAfleidbaar>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<indicatieMaterieleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieMaterieleHistorie>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#kadastraleAanduiding"/>
+	<identificerend xmlns="http://bp4mc2.org/def/mim#">false</identificerend>
+	<indicatieFormeleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieFormeleHistorie>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">Kadastrale aanduiding is de unieke aanduiding van een onroerende zaak, die door het kadaster wordt vastgesteld.</comment>
+	<toelichting xmlns="http://bp4mc2.org/def/mim#">In de tijd gezien kan dezelfde onroerende zaak wel meerdere kadastrale aanduidingen hebben, te weten in het geval dat er een herindeling plaatsvindt.</toelichting>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">kadastraleAanduiding</label>
+	<herkomst xmlns="http://bp4mc2.org/def/mim#">Kadaster</herkomst>
+	<name xmlns="http://www.w3.org/ns/shacl#">kadastraleAanduiding</name>
+	<node xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/brk/id/shape/TypeKadastraleAanduiding"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/_OnroerendeZaak">
+	<name xmlns="http://www.w3.org/ns/shacl#">_OnroerendeZaak</name>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">_OnroerendeZaak</label>
+	<targetClass xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#_OnroerendeZaak"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#StatusHistorie">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#Waardelijst"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/Waardelijst">
+	<rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+	<equivalent xmlns="http://bp4mc2.org/def/mim#" rdf:resource="http://bp4mc2.org/def/mim#Referentielijst"/>
+	<targetClass xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#Waardelijst"/>
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx21"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx21">
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+	<identificerend xmlns="http://bp4mc2.org/def/mim#">false</identificerend>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">waarde</label>
+	<datatype xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<name xmlns="http://www.w3.org/ns/shacl#">waarde</name>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">De waarde zoals aangetroffen in de Waardelijst. het moment waarop de waarde geassocieerd is met de meegeleverde code is onbepaald.</comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/Waardelijst">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx22"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx22">
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#code"/>
+	<identificerend xmlns="http://bp4mc2.org/def/mim#">true</identificerend>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">code</label>
+	<datatype xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<name xmlns="http://www.w3.org/ns/shacl#">code</name>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">De code van deze waarde. De code is uniek binnen de Waardelijst en taalonafhankelijk.</comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#kadastraleAanduiding">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">kadastraleAanduiding</label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#Waardelijst">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#waarde">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#perceelnummer">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/KadastraleGrens">
+	<rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+	<datumOpname xmlns="http://bp4mc2.org/def/mim#">20070801</datumOpname>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">uri http://tax.kadaster.nl/id/begrip/Kadastrale_grens</comment>
+	<herkomstDefinitie xmlns="http://bp4mc2.org/def/mim#">BRK</herkomstDefinitie>
+	<equivalent xmlns="http://bp4mc2.org/def/mim#" rdf:resource="http://bp4mc2.org/def/mim#Objecttype"/>
+	<populatie xmlns="http://bp4mc2.org/def/mim#">Alle vastgestelde grenzen, die gereconstrueerd kunnen worden in het net van coordinatenpunten.</populatie>
+	<kwaliteit xmlns="http://bp4mc2.org/def/mim#">https://www.kadaster.nl/kwaliteitshandvest</kwaliteit>
+	<indicatieAbstractObject xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieAbstractObject>
+	<herkomst xmlns="http://bp4mc2.org/def/mim#">Het veldwerk van de landmeter</herkomst>
+	<name xmlns="http://www.w3.org/ns/shacl#">KadastraleGrens</name>
+	<toelichting xmlns="http://bp4mc2.org/def/mim#">In de praktijk kent Kadastrale grens nu twee betekenissen: De grens zoals vastgesteld in het terrein, de terrein grens. (vaststelling o.b.v. de aanwijs van partijen aan beide zijde van de betreffende grens en vastgelegd door het Kadaster). De terreingrens is opgenomen in de terrestrische registratie van het Kadaster. De visualisatie van deze grens op de kadastrale kaart. De kaartgrens. Deze kan mogelijk 'verschoven' liggen door het inpassen van deze terreingrens in het 'overall' kaartbeeld. De kadastrale grens in deze betekenis vormt een indicatief gegeven over de ligging van de grens t.o.v. de topografie, d.w.z. van de in het terrein visueel waarneembare 'objecten' als huizen, straten, sloten, etc. Met het begrip 'Kadastrale grens' in relatie tot de BRK bedoelen we de kaartgrens. De terreingrens uit de 'terrestrische registratie' vormt de basis voor de kaartgrens. Bij juridische geschillen wordt echter de terreingrens uitgezet.</toelichting>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">KadastraleGrens</label>
+	<targetClass xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#KadastraleGrens"/>
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx23"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx23">
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">Gegevens omtrent de historie van een voorkomen van dit type.</comment>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<indicatieMaterieleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieMaterieleHistorie>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#historie"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">historie</label>
+	<name xmlns="http://www.w3.org/ns/shacl#">historie</name>
+	<class xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#KadasterHistorieNEN3610"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/KadastraleGrens">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx24"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx24">
+	<indicatieAfleidbaar xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieAfleidbaar>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<indicatieMaterieleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieMaterieleHistorie>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#grenslijn"/>
+	<herkomstDefinitie xmlns="http://bp4mc2.org/def/mim#">BRK</herkomstDefinitie>
+	<identificerend xmlns="http://bp4mc2.org/def/mim#">false</identificerend>
+	<datumOpname xmlns="http://bp4mc2.org/def/mim#">2007</datumOpname>
+	<indicatieFormeleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieFormeleHistorie>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<class xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+	<class xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.opengis.net/ont/gml#Curve"/>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">Een grenslijn is of een lijn (GML LineString), of een boog (GML ArcString).</comment>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">grenslijn</label>
+	<herkomst xmlns="http://bp4mc2.org/def/mim#">BRK</herkomst>
+	<name xmlns="http://www.w3.org/ns/shacl#">grenslijn</name>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/KadastraleGrens">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx25"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx25">
+	<indicatieAfleidbaar xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieAfleidbaar>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<indicatieMaterieleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieMaterieleHistorie>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#typeGrens"/>
+	<identificerend xmlns="http://bp4mc2.org/def/mim#">false</identificerend>
+	<indicatieFormeleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieFormeleHistorie>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">typeGrens</label>
+	<name xmlns="http://www.w3.org/ns/shacl#">typeGrens</name>
+	<class xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#TypeGrens"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/KadastraleGrens">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx26"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx26">
+	<indicatieAfleidbaar xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieAfleidbaar>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<indicatieMaterieleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieMaterieleHistorie>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#perceelLinks"/>
+	<identificerend xmlns="http://bp4mc2.org/def/mim#">false</identificerend>
+	<indicatieFormeleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieFormeleHistorie>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">perceelLinks</label>
+	<name xmlns="http://www.w3.org/ns/shacl#">perceelLinks</name>
+	<nodeKind xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/KadastraleGrens">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx27"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx27">
+	<indicatieAfleidbaar xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieAfleidbaar>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<indicatieMaterieleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieMaterieleHistorie>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#perceelRechts"/>
+	<identificerend xmlns="http://bp4mc2.org/def/mim#">false</identificerend>
+	<indicatieFormeleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieFormeleHistorie>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">perceelRechts</label>
+	<name xmlns="http://www.w3.org/ns/shacl#">perceelRechts</name>
+	<nodeKind xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/KadastraleGrens">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx28"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx28">
+	<indicatieAfleidbaar xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieAfleidbaar>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<indicatieMaterieleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieMaterieleHistorie>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#identificatie"/>
+	<identificerend xmlns="http://bp4mc2.org/def/mim#">true</identificerend>
+	<indicatieFormeleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieFormeleHistorie>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">De Kadaster identificatie is een door het Kadaster toegekend landelijk uniek nummer aan dit object binnen de kadastrale registratie.</comment>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">identificatie</label>
+	<name xmlns="http://www.w3.org/ns/shacl#">identificatie</name>
+	<nodeKind xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#akrKadastraleGemeenteCode">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/Perceel">
+	<rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+	<datumOpname xmlns="http://bp4mc2.org/def/mim#">20070801</datumOpname>
+	<herkomstDefinitie xmlns="http://bp4mc2.org/def/mim#">BRK</herkomstDefinitie>
+	<equivalent xmlns="http://bp4mc2.org/def/mim#" rdf:resource="http://bp4mc2.org/def/mim#Objecttype"/>
+	<populatie xmlns="http://bp4mc2.org/def/mim#">Alle percelen op het Nederlands grondgebied.</populatie>
+	<kwaliteit xmlns="http://bp4mc2.org/def/mim#">https://www.kadaster.nl/kwaliteitshandvest</kwaliteit>
+	<indicatieAbstractObject xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieAbstractObject>
+	<herkomst xmlns="http://bp4mc2.org/def/mim#">BRK</herkomst>
+	<name xmlns="http://www.w3.org/ns/shacl#">Perceel</name>
+	<toelichting xmlns="http://bp4mc2.org/def/mim#">In de BRK is een kadastraal perceel een specialisatie van een onroerende zaak. Percelen worden cartografisch gerepresenteerd door een tweedimensionale vlakbegrenzing. Tussen alle kadastrale percelen in Nederland geldt een topologische relatie (opdelende vlakstructuur), d.w.z. dat naburige perceelsvlakken naadloos moeten aansluiten en elkaar niet mogen overlappen.</toelichting>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">Perceel</label>
+	<targetClass xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#Perceel"/>
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx29"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx29">
+	<indicatieAfleidbaar xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieAfleidbaar>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<indicatieMaterieleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieMaterieleHistorie>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#plaatscoordinaten"/>
+	<identificerend xmlns="http://bp4mc2.org/def/mim#">false</identificerend>
+	<indicatieFormeleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieFormeleHistorie>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<class xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+	<class xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.opengis.net/ont/gml#Point"/>
+	<authentiek xmlns="http://bp4mc2.org/def/mim#">Authentiek</authentiek>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">De aanduiding van een kaartpunt voor de weergave van de identificatie van een perceel (centroïde).</comment>
+	<toelichting xmlns="http://bp4mc2.org/def/mim#">Betreft de plaatsing van het perceelnummer bij verbeelding op een kaart, om deze op een overzichtelijke plek in de perceel begrenzing te plaatsen. Door de keuze van het nulpunt geldt dat zowel de x-coordinaat als de y-coordinaat altijd positief zijn.</toelichting>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">plaatscoordinaten</label>
+	<name xmlns="http://www.w3.org/ns/shacl#">plaatscoordinaten</name>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/Perceel">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx30"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx30">
+	<indicatieAfleidbaar xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieAfleidbaar>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<indicatieMaterieleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieMaterieleHistorie>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#perceelnummerVerschuiving"/>
+	<identificerend xmlns="http://bp4mc2.org/def/mim#">false</identificerend>
+	<indicatieFormeleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieFormeleHistorie>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">Verschuiving van het perceelnummer, ten op zichte van het plaatscoordinaat.</comment>
+	<toelichting xmlns="http://bp4mc2.org/def/mim#">Betreft de plaatsing van het perceelnummer bij verbeelding op een kaart, om deze op een overzichtelijke plek in de perceel begrenzing te plaatsen.</toelichting>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">perceelnummerVerschuiving</label>
+	<name xmlns="http://www.w3.org/ns/shacl#">perceelnummerVerschuiving</name>
+	<node xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/brk/id/shape/TypePerceelnummerVerschuiving"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/Perceel">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx31"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx31">
+	<indicatieAfleidbaar xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieAfleidbaar>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<indicatieMaterieleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieMaterieleHistorie>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#perceelnummerRotatie"/>
+	<identificerend xmlns="http://bp4mc2.org/def/mim#">false</identificerend>
+	<indicatieFormeleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieFormeleHistorie>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<authentiek xmlns="http://bp4mc2.org/def/mim#">Authentiek</authentiek>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">Rotatie van het perceelnummer, in een hoek tussen de -90 +90 graden.</comment>
+	<toelichting xmlns="http://bp4mc2.org/def/mim#">Betreft de plaatsing van het perceelnummer bij verbeelding op een kaart, om deze op een overzichtelijke plek in de perceel begrenzing te plaatsen. is met de klok mee, - is tegen de klok in.</toelichting>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">perceelnummerRotatie</label>
+	<name xmlns="http://www.w3.org/ns/shacl#">perceelnummerRotatie</name>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/Perceel">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx32"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx32">
+	<indicatieAfleidbaar xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieAfleidbaar>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<indicatieMaterieleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieMaterieleHistorie>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#kadastraleGrootte"/>
+	<identificerend xmlns="http://bp4mc2.org/def/mim#">false</identificerend>
+	<indicatieFormeleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieFormeleHistorie>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">https://tax.kadaster.nl/doc/begrip/Kadastrale_grootte</comment>
+	<toelichting xmlns="http://bp4mc2.org/def/mim#">Oppervlak grootte, in vierkante meters.</toelichting>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">kadastraleGrootte</label>
+	<herkomst xmlns="http://bp4mc2.org/def/mim#">Kadaster</herkomst>
+	<name xmlns="http://www.w3.org/ns/shacl#">kadastraleGrootte</name>
+	<node xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/brk/id/shape/TypeOppervlak"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/Perceel">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx33"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx33">
+	<indicatieAfleidbaar xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieAfleidbaar>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<indicatieMaterieleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieMaterieleHistorie>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#begrenzingPerceel"/>
+	<identificerend xmlns="http://bp4mc2.org/def/mim#">false</identificerend>
+	<indicatieFormeleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieFormeleHistorie>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<class xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+	<class xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.opengis.net/ont/gml#Surface"/>
+	<authentiek xmlns="http://bp4mc2.org/def/mim#">Authentiek</authentiek>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">Perceel.begrenzingPerceel is het geheel van lijnketens waarmee de vlakomtrek van een perceel wordt gevormd.</comment>
+	<toelichting xmlns="http://bp4mc2.org/def/mim#">Een Perceel is een (2D) vlakvormig ruimtelijk object dat "opdelend" van structuur is. Dit betekent dat Nederland altijd naadloos en volledig is bedekt met perceelsvlakken, die elkaar niet mogen overlappen. De begrenzing van een perceel bestaat uit één of meer Kaartbegrenzingen (gesloten polylijnen). De buitenomtrek wordt altijd door één Kaartbegrenzing gevormd. Indien er enclaves zijn (gebied dat niet tot het perceelsvlak behoort) zijn ook de binnenomtrekken als kaartbegrenzing opgenomen. Elk Perceel wordt begrensd door andere percelen, uitgezonderd diegenen die aan buitenland (Belgie, Duitsland en Noordzee) grenzen. Een Kaartbegrenzing is opgebouwd uit één of meer Kaartlijnen (lijnketens). Elke niet onderbroken begrenzing tussen precies 2 percelen noemen we een Kaartlijn. De topologische relatie tussen 2 vlakbegrenzingen van aangrenzende percelen wordt afgedwongen doordat hun gemeenschappelijke begrenzing door dezelfde Kaartlijn wordt gevormd. Een Kaartlijn ofwel lijnketen is opgebouwd uit opeenvolgend aansluitende kaartlijndelen, bestaande uit rechte en cirkelboogvormige lijnstukken. Hoewel momenteel in de kadastrale percelenstructuur geen exclaves (buitenliggende vlakken) voorkomen, doet dit aan de definitie van Begrenzing perceel niets af.</toelichting>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">begrenzingPerceel</label>
+	<herkomst xmlns="http://bp4mc2.org/def/mim#">Het verwerkingsproces waabij de gemeten perceelgrens wordt opgenomen in het digitale kadastrale kaartbestand.</herkomst>
+	<name xmlns="http://www.w3.org/ns/shacl#">begrenzingPerceel</name>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#grenslijn">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">grenslijn</label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/_VoorkomenNEN3610">
+	<rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">Een Voorkomen is een Object in de registratie waarvan wordt bijgehouden op basis waarvan en wanneer de vastgelegde informatie is ontstaan of gewijzigd.</comment>
+	<equivalent xmlns="http://bp4mc2.org/def/mim#" rdf:resource="http://bp4mc2.org/def/mim#Objecttype"/>
+	<indicatieAbstractObject xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</indicatieAbstractObject>
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx34"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx34">
+	<name xmlns="http://www.w3.org/ns/shacl#">indicatie abstract constraint</name>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</minCount>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/_VoorkomenNEN3610">
+	<property xmlns="http://www.w3.org/ns/shacl#" rdf:nodeID="node1h05ugvtsx35"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node1h05ugvtsx35">
+	<comment xmlns="http://www.w3.org/2000/01/rdf-schema#">Gegevens omtrent de historie van een voorkomen van dit type.</comment>
+	<maxCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+	<minCount xmlns="http://www.w3.org/ns/shacl#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+	<indicatieMaterieleHistorie xmlns="http://bp4mc2.org/def/mim#" rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</indicatieMaterieleHistorie>
+	<path xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#historie"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">historie</label>
+	<name xmlns="http://www.w3.org/ns/shacl#">historie</name>
+	<class xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#KadasterHistorieNEN3610"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/brk/id/shape/_VoorkomenNEN3610">
+	<name xmlns="http://www.w3.org/ns/shacl#">_VoorkomenNEN3610</name>
+	<toelichting xmlns="http://bp4mc2.org/def/mim#">Er wordt aangegeven op basis waarvan de informatie deze vorm heeft gekregen ("audit trail") en wanneer deze informatie ontstaan of vervallen ("historie").</toelichting>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">_VoorkomenNEN3610</label>
+	<targetClass xmlns="http://www.w3.org/ns/shacl#" rdf:resource="http://brk.basisregistraties.overheid.nl/def/brk#_VoorkomenNEN3610"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#typeGrens">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">typeGrens</label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#soortGrootte">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#perceelLinks">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">perceelLinks</label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#deltaX">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#perceelRechts">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">perceelRechts</label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#deltaY">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#begrenzingPerceel">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">begrenzingPerceel</label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#kadastraleGrootte">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">kadastraleGrootte</label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#perceelnummerRotatie">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">perceelnummerRotatie</label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#perceelnummerVerschuiving">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">perceelnummerVerschuiving</label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#plaatscoordinaten">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">plaatscoordinaten</label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#beginGeldigheid">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">beginGeldigheid</label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#eindGeldigheid">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">eindGeldigheid</label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#tijdstipRegistratie">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">tijdstipRegistratie</label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#eindRegistratie">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">eindRegistratie</label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#volgnummer">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">volgnummer</label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://brk.basisregistraties.overheid.nl/def/brk#statusHistorie">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<label xmlns="http://www.w3.org/2000/01/rdf-schema#">statusHistorie</label>
+</rdf:Description>
+
+</rdf:RDF>

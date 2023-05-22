@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Vocabularies/index</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="/bootstrap-reboot.css" />
+  <link rel="stylesheet" href="/bootstrap.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans" />
+  <link rel="stylesheet" href="/style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="headerWrapper" class="navbar navbar-expand-md navbar-dark fixed-top">
+    <div id="headerContent" class="container-fluid row">
+      <div class="col-3">
+      <a class="navbar-brand" href="http://www.heppnetz.de/projects/goodrelations/">
+        <img src="/logo.png" style="width: 206px; height: 52px" alt="GoodRelations" />
+      </a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#headerNav" aria-controls="headerNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      </div>
+      <div id="headerNav" class="collapse navbar-collapse col-9 justify-content-end">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="http://www.heppnetz.de/projects/goodrelations/" title="What is GoodRelations?">Main</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://wiki.goodrelations-vocabulary.org/Quickstart" title="How-to">Quickstart</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://wiki.goodrelations-vocabulary.org/Cookbook" title="Markup Recipes">Cookbook</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://wiki.goodrelations-vocabulary.org/Documentation" title="Documentation">User's Guide</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://www.heppnetz.de/ontologies/goodrelations/v1.html" title="Language Reference">Specification</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://wiki.goodrelations-vocabulary.org/Tools" title="Tools">Tools</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://wiki.goodrelations-vocabulary.org/Main_Page" title="Wiki">Community</a></li>
+        </ul>
+      </div>
+    </div>
+</nav>
+<div id="placeholder"></div>
+<div class="container-fluid">
+  <div class="row">
+<div class="col-3 py-4 bg-light">
+  <ul class="nav flex-column border bg-white">
+    <li class="nav-item">
+      <a class="nav-link" href="http://ebusiness-unibw.org/cgi-bin/mailman/listinfo/goodrelations">Mailing list</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="http://www.quora.com/GoodRelations">Quora</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="http://stackoverflow.com/questions/ask?tags=goodrelations&amp;title=Question%20regarding%20gr:Brand%20in%20GoodRelations">stackoverflow.com</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="http://wiki.goodrelations-vocabulary.org/IRC">IRC</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="http://wiki.goodrelations-vocabulary.org/FFAQ">FAQs</a>
+    </li>
+  </ul>
+  <ul class="nav flex-column border mt-2 bg-white">
+    <li class="nav-item text-center"><strong>Useful resources</strong></li>
+    <li class="nav-item">
+      <a class="nav-link" href="http://ebusiness-unibw.org/pipermail/goodrelations/">List archive</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="http://www.ebusiness-unibw.org/tools/grsnippetgen/">GR Snippet Generator</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="http://rdf-translator.appspot.com/">RDF Translator</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="http://www.rdfabout.com/demo/validator/">RDF Validator &amp; Converter</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="http://www.ebusiness-unibw.org/tools/goodrelations-validator/">GoodRelations Validator</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="http://www.google.com/webmasters/tools/richsnippets">Google Validator</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="http://gr-notify.appspot.com/">GR Notify Ping Service</a>
+    </li>
+  </ul>
+</div>
+<div class="col-9 py-2 border bg-white">
+<header id="title-block-header">
+<h1 class="title">Vocabularies/index</h1>
+</header>
+<h1 id="extensions_for_goodrelations_for_specific_industries">Extensions for GoodRelations for Specific Industries</h1>
+<p>GoodRelations can be used in combination with a vocabulary that defines the specific type of products and their features for a particular industry segment, e.g. - cars, - tickets, - hotels, etc.</p>
+<p>On this page, we list such vocabularies.</p>
+<h2 id="featured">Featured</h2>
+<ul>
+<li><strong>Cars, boats, bikes, etc.: The Vehicle Sales Ontology (VSO)</strong>
+<ul>
+<li><a href="http://purl.org/vso/ns" class="uri">http://purl.org/vso/ns</a></li>
+<li>Used by Volkswagen and others</li>
+</ul></li>
+<li><strong>Tickets for concerts, museums, and airfare and train tickets: The Tickets Ontology (TIO)</strong>
+<ul>
+<li><a href="http://purl.org/tio/ns" class="uri">http://purl.org/tio/ns</a></li>
+<li>Used by Volkswagen and others</li>
+</ul></li>
+<li><strong>The Products Ontology: over 600,000 precise classes from Wikipedia</strong>
+<ul>
+<li><a href="http://www.productontology.org" class="uri">http://www.productontology.org</a></li>
+<li>Used by sears.com and others</li>
+</ul></li>
+<li><strong>Hotels, Camping Sites, Vacation Homes: The Accommodation Ontology (ACCO)</strong>
+<ul>
+<li><a href="http://purl.org/acco/ns" class="uri">http://purl.org/acco/ns</a></li>
+<li>Used by STI Innsbruck in many tourism-related projects.</li>
+</ul></li>
+<li><strong>Consumer Products Ontologies from the OPDM Project</strong> (currently 37 ontologies)
+<ul>
+<li><a href="http://www.ebusiness-unibw.org/ontologies/opdm/" class="uri">http://www.ebusiness-unibw.org/ontologies/opdm/</a></li>
+<li>Bicycle Vocabulary</li>
+<li>DVD Player and Blu-ray Player Vocabulary</li>
+<li>Book Vocabulary</li>
+<li>Car HiFi Vocabulary</li>
+<li>Chair Vocabulary</li>
+<li>Coffee Machine Vocabulary</li>
+<li>Computer Vocabulary</li>
+<li>Cooker and Oven Vocabulary</li>
+<li>Digital Camera Vocabulary</li>
+<li>Digital Receiver Vocabulary</li>
+<li>Dishwasher Vocabulary</li>
+<li>Dryer Machine Vocabulary</li>
+<li>Game Console Vocabulary</li>
+<li>Garment Vocabulary</li>
+<li>Glasses Vocabulary</li>
+<li>Hair Dryer Vocabulary</li>
+<li>Home Hifi Vocabulary</li>
+<li>Landline Phones Vocabulary</li>
+<li>Microwave Vocabulary</li>
+<li>Mobile Phone Vocabulary</li>
+<li>Modem Vocabulary</li>
+<li>Navigation Device Vocabulary</li>
+<li>Paper Vocabulary</li>
+<li>Perfume Vocabulary</li>
+<li>Portable Media Player Vocabulary</li>
+<li>Printer Vocabulary</li>
+<li>Fridge and Freezer Vocabulary</li>
+<li>Shaver Vocabulary</li>
+<li>Shoe Vocabulary</li>
+<li>Shredder Vocabulary</li>
+<li>Storage Media Vocabulary</li>
+<li>Tablet PC Vocabulary</li>
+<li>Television Vocabulary</li>
+<li>Vacuum Cleaner Vocabulary</li>
+<li>Video Camera Vocabulary</li>
+<li>Video Projector Vocabulary</li>
+<li>Washer Machine Vocabulary</li>
+</ul></li>
+</ul>
+<h2 id="others">Others</h2>
+<ul>
+<li><strong>eClassOWL 5.1</strong>
+<ul>
+<li>The first industry-strength ontology for product types and features</li>
+<li>60,000 classes and 5,000 properties</li>
+<li><a href="http://www.heppnetz.de/projects/eclassowl/" class="uri">http://www.heppnetz.de/projects/eclassowl/</a></li>
+</ul></li>
+<li><strong>freeClassOWL - Construction and building materials</strong><br />
+*<a href="http://www.freeclass.eu/freeclass_v1">&lt;http://www.freeclass.eu/freeclass_v1&gt;</a></li>
+<li><strong>Volkswagen Vehicles Ontology</strong>
+<ul>
+<li><a href="http://purl.org/vvo/ns" class="uri">http://purl.org/vvo/ns</a></li>
+</ul></li>
+<li><strong>Volkswagen Car Options Ontology</strong>
+<ul>
+<li><a href="http://purl.org/coo/ns" class="uri">http://purl.org/coo/ns</a></li>
+</ul></li>
+<li><strong>Mobile Provider Ontology</strong>
+<ul>
+<li><a href="http://www.openvocabulary.info/ontologies/ecommerce.html" class="uri">http://www.openvocabulary.info/ontologies/ecommerce.html</a></li>
+</ul></li>
+<li><strong>Mobile Device Ontology</strong>
+<ul>
+<li><a href="http://www.openvocabulary.info/ontologies/device.html" class="uri">http://www.openvocabulary.info/ontologies/device.html</a></li>
+</ul></li>
+<li>openICEcat-compatible ontologies
+<ul>
+<li><a href="http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1">Consumer Electronics Ontology (CEO)</a></li>
+</ul></li>
+<li><strong>ebSemantics Ontologies</strong> (still pretty much beta but already in use in Austria)
+<ul>
+<li>Ontology for Events: <a href="http://www.ebsemantics.net/doc/events.owl">OWL</a>, <a href="http://www.ebsemantics.net/doc/eb_semantics2_doku_event-ontology.htm">HTML (Documentation)</a></li>
+<li>Ontology for Restaurants etc.: <a href="http://www.ebsemantics.net/doc/gastro.owl">OWL</a>, <a href="http://www.ebsemantics.net/doc/eb_semantics2_doku_gastro-ontology.htm">HTML (Documentation)</a></li>
+<li>Ontology for Accommodations: <a href="http://www.ebsemantics.net/doc/acco.owl">OWL</a>, <a href="http://www.ebsemantics.net/doc/eb_semantics2_doku_acco-ontology.htm">HTML (Documentation)</a></li>
+</ul></li>
+</ul>
+<h2 id="creating_new_vocabularies_for_products_and_services">Creating New Vocabularies for Products and Services</h2>
+<p>For specific vertical industries, it may be useful to create your own vocabulary/ontology for types of goods and services and their features.</p>
+<ul>
+<li>A detailed explanation on what to observe is here:<br />
+<a href="http://www.ebusiness-unibw.org/wiki/Own_GoodRelations_Vocabularies" class="uri">http://www.ebusiness-unibw.org/wiki/Own_GoodRelations_Vocabularies</a></li>
+<li>A Simple toy ontology for products and services (for educational purposes only) is at<br />
+<a href="http://www.heppnetz.de/ontologies/examples/toy">&lt;http://www.heppnetz.de/ontologies/examples/toy&gt;</a><br />
+</li>
+</ul>
+<p><a href="/Category:Vocabulary" title="wikilink">Category:Vocabulary</a></p>
+</div></div></div>
+<div class="container-fluid row bg-light">
+	<div class="col-3"></div>
+<footer class="col-9 small p-4 pt-4 pb-2">
+	<p class="float-end"><a href="#">Back to top</a></p>
+	<p>
+	<a href="http://wiki.goodrelations-vocabulary.org/GoodRelations_Wiki:Privacy_policy" title="Wiki of the E-Business and Web Science Research Group:Privacy policy">Privacy policy</a> &middot;
+	<a href="http://wiki.goodrelations-vocabulary.org/GoodRelations_Wiki:About" title="Wiki of the E-Business and Web Science Research Group:About">About GoodRelations Wiki</a> &middot;
+	<a href="http://wiki.goodrelations-vocabulary.org/GoodRelations_Wiki:General_disclaimer" title="Wiki of the E-Business and Web Science Research Group:General disclaimer">Disclaimers</a>
+	</p>
+</footer>
+</div>
+</body>
+</html>

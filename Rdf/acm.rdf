@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html lang="en">
+<head id="head">
+  <title>PAGE NOT FOUND!</title>
+  <link rel="stylesheet" type="text/css" href="/style/basic.css" />
+</head>
+<body>
+<h1 style="text-align: center;">PAGE NOT FOUND!</h1>
+<div style="text-align: center;"><strong>Sorry, but the current page is not working right now.</strong><br /><strong>Thank you!</strong></div>
+</body>
+</html>

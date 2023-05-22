@@ -1,0 +1,1776 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:bibo="http://purl.org/ontology/bibo/" xmlns:ci="https://vocab.methodandstructure.com/content-inventory#" xmlns:dct="http://purl.org/dc/terms/" xmlns:ev="http://purl.org/NET/c4dm/event.owl#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:org="http://www.w3.org/ns/org#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:qb="http://purl.org/linked-data/cube#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory">
+    <rdf:type rdf:resource="http://purl.org/ontology/bibo/Webpage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory">
+    <dct:subject rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory">
+    <foaf:primaryTopic rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Abstract">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Abstract">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">Abstract</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Abstract">
+    <rdfs:comment xml:lang="en">This is an explicit document abstract/executive summary class, intended to belong to BIBO, which appears to be abandonware.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Abstract">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Abstract">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/DocumentPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Advertisement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Advertisement">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">Advertisement</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Advertisement">
+    <rdfs:comment xml:lang="en">In general there is no programmatic way to tell whether a resource is an advertisement, since advertisements on the Web look (to a machine) like any other resource. This is intended to be a decorator class to indicate that the subject is an advertisement. It can therefore be combined with other classes such as foaf:Image, or bibo:AudioVisualDocument.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Advertisement">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Advertisement">
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Advertisement">
+    <skos:example xml:lang="en">@prefix bibo: &lt;http://purl.org/ontology/bibo/&gt; .
+@prefix dct:  &lt;http://purl.org/dc/terms/&gt; .
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix ci:   &lt;https://vocab.methodandstructure.com/content-inventory#&gt; .
+
+&lt;https://example.club/17-mindblowing-ways-to-write-listicles&gt; a bibo:Article ;
+  dct:title "17 Mindblowing Ways to Write Listicles!"@en ;
+  dct:hasPart &lt;https://adtech.biz/assets/punch-the-monkey&gt; .
+
+&lt;https://adtech.biz/assets/punch-the-monkey&gt; a foaf:Image, ci:Advertisement ;
+  dct:title "Punch The Monkey And WIN!#@$!%%^!"@en .</skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Appendix">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Appendix">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">Appendix</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Appendix">
+    <rdfs:comment xml:lang="en">This is an explicit document appendix class, intended to belong to BIBO, which appears to be abandonware.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Appendix">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Appendix">
+    <rdfs:seeAlso rdf:resource="https://github.com/structureddynamics/Bibliographic-Ontology-BIBO/pull/17"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Appendix">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/DocumentPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Block">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Block">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">Block</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Block">
+    <rdfs:comment xml:lang="en">This is intended to represent a generic block-level segment, such as a paragraph, list, figure, or table.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Block">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Block">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/DocumentPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Section">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Section">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">Section</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Section">
+    <rdfs:comment xml:lang="en">This is an explicit document section (i.e., sub-chapter) class.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Section">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Section">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ontology/bibo/DocumentPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Variable">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Variable">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">Variable</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Variable">
+    <rdfs:comment xml:lang="en">Identifies a variable which can be embedded into a document and assigned an rdf:value.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Variable">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Variable">
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Variable">
+    <skos:example xml:lang="en">
+            Consider the markup:
+            &lt;p about="https://example.biz/ratecard#"&gt;Shingy's bill-out rate is &lt;span rel="dct:references"&gt;
+  &lt;var about="#rate" typeof="ci:Variable" property="rdf:value" datatype="xsd:decimal"&gt;100.00&lt;/var&gt;
+  &lt;var about="#unit" typeof="ci:Variable" property="rdf:value" datatype="xsd:token"&gt;USD&lt;/var&gt;
+&lt;/span&gt; per hour.&lt;/p&gt;
+            …which when parsed will produce the statements:
+            @base &lt;https://example.biz/ratecard#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+@prefix ci:  &lt;https://vocab.methodandstructure.com/content-inventory#&gt; .
+
+&lt;&gt; dct:references &lt;#rate&gt;, &lt;#unit&gt; .
+
+&lt;#rate&gt; a ci:Variable ; rdf:value "100.00"^^xsd:decimal .
+&lt;#unit&gt; a ci:Variable ; rdf:value "USD"^^xsd:token .
+            
+          </skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#action">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#action">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">action</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#action">
+    <rdfs:comment xml:lang="en">Relates a document to an action to take.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#action">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#action">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#action">
+    <rdfs:range rdf:resource="https://vocab.methodandstructure.com/content-inventory#Action"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#action">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/NET/c4dm/event.owl#factor_of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#canonical-slug">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#canonical-slug">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#canonical-slug">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">canonical-slug</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#canonical-slug">
+    <rdfs:comment xml:lang="en">This is the canonical slug associated with the resource, and should be populated with the slug which is actually in use.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#canonical-slug">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#canonical-slug">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#canonical-slug">
+    <rdfs:subPropertyOf rdf:resource="https://vocab.methodandstructure.com/content-inventory#slug"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#circulated">
+    <rdf:type rdf:resource="http://purl.org/ontology/bibo/DocumentStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#circulated">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">circulated</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#circulated">
+    <rdfs:comment xml:lang="en">The document is available for select people to see, but not published in the strict literal sense.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#circulated">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#confidential">
+    <rdf:type rdf:resource="http://purl.org/ontology/bibo/DocumentStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#confidential">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">confidential</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#confidential">
+    <rdfs:comment xml:lang="en">The document is confidential and not for publication.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#confidential">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#depicts">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#depicts">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">depicts</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#depicts">
+    <rdfs:comment xml:lang="en">The document explicitly depicts this concept (or other entity).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#depicts">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#depicts">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#depicts">
+    <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/depicts"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#depicts">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#depicts">
+    <skos:note xml:lang="en">This term is identical in meaning to foaf:depicts except that the latter constrains its domain to images only, whereas this can relate any kind of document. The range of this property is also left open, to accommodate any kind of resource being depicted.</skos:note>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#desired-outcome">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#desired-outcome">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">desired-outcome</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#desired-outcome">
+    <rdfs:comment xml:lang="en">This property is intended to indicate what the document is supposed to do—what material effect it is supposed to produce. It is intentionally open-ended, and as such can point to something like a skos:Concept, another document, or a literal string of text describing the outcome.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#desired-outcome">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#desired-outcome">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#desired-outcome">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/type"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#desired-outcome">
+    <skos:example xml:lang="en">@prefix bibo: &lt;http://purl.org/ontology/bibo/&gt; .
+@prefix dct:  &lt;http://purl.org/dc/terms/&gt; .
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix ci:   &lt;https://vocab.methodandstructure.com/content-inventory#&gt; .
+@prefix eg:   &lt;https://backoffice.example.club/concepts/&gt; .
+
+# we can extend our article metadata the following way:
+
+&lt;https://example.club/17-mindblowing-ways-to-write-listicles&gt; a bibo:Article ;
+  dct:title "17 Mindblowing Ways to Write Listicles!"@en ;
+  ci:desired-outcome eg:maximize-clicks .
+
+# and create a corresponding resource to unambiguously identify the goal:
+
+eg:maximize-clicks a skos:Concept ;
+  skos:prefLabel "Maximize Clicks"@en ;
+  skos:description "Moar clicks means moar monies."@en .
+            </skos:example>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#embed">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#embed">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">embed</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#embed">
+    <rdfs:comment xml:lang="en">This property specifies an embedded resource, such as an image, which is visible on the document's canvas.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#embed">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#embed">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#embed">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/hasPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#empty">
+    <rdf:type rdf:resource="http://purl.org/ontology/bibo/DocumentStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#empty">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">empty</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#empty">
+    <rdfs:comment xml:lang="en">The document contains no content.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#empty">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#evokes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#evokes">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">evokes</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#evokes">
+    <rdfs:comment xml:lang="en">The document evokes the given concept without mentioning it explicitly.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#evokes">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#evokes">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#evokes">
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#evokes">
+    <rdfs:subPropertyOf rdf:resource="https://vocab.methodandstructure.com/content-inventory#assumes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#exemplar">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#exemplar">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">exemplar</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#exemplar">
+    <rdfs:comment xml:lang="en">This property relates an Audience to a specific foaf:Person who is an exemplar of the audience.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#exemplar">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/content-inventory#Audience"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#exemplar">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#exemplar">
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#exemplar">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#example"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#form">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#form">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">form</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#form">
+    <rdfs:comment xml:lang="en">This property specifies form target, which may or may not be visible to the user.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#form">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#form">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#form">
+    <rdfs:subPropertyOf rdf:resource="https://vocab.methodandstructure.com/content-inventory#link"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#fragment-of">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#fragment-of">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#fragment-of">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">fragment-of</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#fragment-of">
+    <rdfs:comment xml:lang="en">This property asserts that the subject should be treated as a fragment of the document it relates to.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#fragment-of">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#fragment-of">
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#include">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#include">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">include</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#include">
+    <rdfs:comment xml:lang="en">This property specifies a related resource which is not directly visible to the user.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#include">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#include">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#include">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/requires"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#incomplete">
+    <rdf:type rdf:resource="http://purl.org/ontology/bibo/DocumentStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#incomplete">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">incomplete</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#incomplete">
+    <rdfs:comment xml:lang="en">The document has been started, but is clearly not finished.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#incomplete">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#incorrect">
+    <rdf:type rdf:resource="http://purl.org/ontology/bibo/DocumentStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#incorrect">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">incorrect</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#incorrect">
+    <rdfs:comment xml:lang="en">The content of this document is factually wrong.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#incorrect">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#indegree">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#indegree">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">indegree</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#indegree">
+    <rdfs:comment xml:lang="en">The number of links pointing at the specified resource.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#indegree">
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#indegree">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#indegree">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#number"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#indegree">
+    <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Directed_graph#Indegree_and_outdegree"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#indexed">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#indexed">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#indexed">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">indexed</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#indexed">
+    <rdfs:comment xml:lang="en">This is a boolean value to indicate whether or not a resource ought to be indexed. It does not necessarily ascribe a policy: an absence of an explicit true value does not necessarily imply the resource ought not be indexed, but the presence of a false value probably should.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#indexed">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#indexed">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#introduces">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#introduces">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">introduces</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#introduces">
+    <rdfs:comment xml:lang="en">The document defines, describes, or otherwise introduces the audience to this concept.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#introduces">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#introduces">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#introduces">
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#introduces">
+    <rdfs:subPropertyOf rdf:resource="https://vocab.methodandstructure.com/content-inventory#mentions"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#keep">
+    <rdf:type rdf:resource="https://vocab.methodandstructure.com/content-inventory#Action"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#keep">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">keep</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#keep">
+    <rdfs:comment xml:lang="en">Keep this document to which this is associated; make no changes to it at this time.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#keep">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#landing">
+    <rdf:type rdf:resource="http://purl.org/ontology/bibo/DocumentStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#landing">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">landing</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#landing">
+    <rdfs:comment xml:lang="en">The resource is a landing page from some other medium (e.g. e-mail, television, billboard). This status is a hint to automated systems which would otherwise orphan or retire a landing page with no inbound links.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#landing">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#lists">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#lists">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">lists</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#lists">
+    <rdfs:comment xml:lang="en">The number of lists in the document.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#lists">
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#lists">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#lists">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#non-audience">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#non-audience">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">non-audience</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#non-audience">
+    <rdfs:comment xml:lang="en">This property complements dct:audience insofar as enabling the author or editor to designate a set of entities who are explicitly not the intended audience of the document.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#non-audience">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#non-audience">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#non-audience">
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/AgentClass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#non-audience">
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/audience"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#obsolete">
+    <rdf:type rdf:resource="http://purl.org/ontology/bibo/DocumentStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#obsolete">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">obsolete</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#obsolete">
+    <rdfs:comment xml:lang="en">The content of this document was correct and relevant at one point, but external circumstances have caused it to lapse in relevance or factual accuracy.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#obsolete">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#orphan">
+    <rdf:type rdf:resource="http://purl.org/ontology/bibo/DocumentStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#orphan">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">orphan</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#orphan">
+    <rdfs:comment xml:lang="en">The resource is not explicitly pending or removed from publication, however it has managed to be disconnected from the rest of the site: There is no path to it from a landing page, and it is not a landing page on its own. That is to say that the resource either has no inbound links, or if it does, those links are from other resources that are in the same situation. Documents which are only linked from retired documents are also considered orphans.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#orphan">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#outdegree">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#outdegree">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">outdegree</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#outdegree">
+    <rdfs:comment xml:lang="en">The number of links emanating from the specified resource.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#outdegree">
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#outdegree">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#outdegree">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#number"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#outdegree">
+    <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Directed_graph#Indegree_and_outdegree"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#primary">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#primary">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#primary">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">primary</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#primary">
+    <rdfs:comment xml:lang="en">Denotes the primary variant that concretely represents the resource.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#primary">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#primary">
+    <rdfs:subPropertyOf rdf:resource="https://vocab.methodandstructure.com/content-inventory#variant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#proofread">
+    <rdf:type rdf:resource="https://vocab.methodandstructure.com/content-inventory#Action"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#proofread">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">proofread</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#proofread">
+    <rdfs:comment xml:lang="en">Proofread this document.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#proofread">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#retire">
+    <rdf:type rdf:resource="https://vocab.methodandstructure.com/content-inventory#Action"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#retire">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">retire</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#retire">
+    <rdfs:comment xml:lang="en">Remove all references to this document and consign it to the archive.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#retire">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#retired">
+    <rdf:type rdf:resource="http://purl.org/ontology/bibo/DocumentStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#retired">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">retired</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#retired">
+    <rdfs:comment xml:lang="en">The document has been explicitly retired by an editor or curator, but still exists in the archive.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#retired">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#revise">
+    <rdf:type rdf:resource="https://vocab.methodandstructure.com/content-inventory#Action"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#revise">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">revise</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#revise">
+    <rdfs:comment xml:lang="en">Revise or restructure this document.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#revise">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#rewrite">
+    <rdf:type rdf:resource="https://vocab.methodandstructure.com/content-inventory#Action"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#rewrite">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">rewrite</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#rewrite">
+    <rdfs:comment xml:lang="en">Rewrite this document from scratch.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#rewrite">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#split">
+    <rdf:type rdf:resource="https://vocab.methodandstructure.com/content-inventory#Action"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#split">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">split</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#split">
+    <rdfs:comment xml:lang="en">Split this document into multiple pieces.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#split">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#target">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#target">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">target</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#target">
+    <rdfs:comment xml:lang="en">Specify the URI of the target resource into which this document should be merged.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#target">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/content-inventory#Merge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#target">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#target">
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#tentative-merge">
+    <rdf:type rdf:resource="https://vocab.methodandstructure.com/content-inventory#Action"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#tentative-merge">
+    <rdf:type rdf:resource="https://vocab.methodandstructure.com/content-inventory#Merge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#tentative-merge">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">tentative-merge</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#tentative-merge">
+    <rdfs:comment xml:lang="en">Merge this document into some other document, though unspecified at this time as to which.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#tentative-merge">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#unavailable">
+    <rdf:type rdf:resource="http://purl.org/ontology/bibo/DocumentStatus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#unavailable">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">unavailable</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#unavailable">
+    <rdfs:comment xml:lang="en">The resource at the subject address is unavailable for reasons other than explicit retirement, e.g. HTTP 404 or 403, or going out of print.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#unavailable">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#understands">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#understands">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">understands</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#understands">
+    <rdfs:comment xml:lang="en">This property relates an Audience to a SKOS concept that members of the audience are known to comprehend, and thereby do not need any additional explanation.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#understands">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/content-inventory#Audience"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#understands">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#understands">
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#understands">
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/educationLevel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#understands">
+    <rdfs:subPropertyOf rdf:resource="https://vocab.methodandstructure.com/content-inventory#aware-of"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#update-metadata">
+    <rdf:type rdf:resource="https://vocab.methodandstructure.com/content-inventory#Action"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#update-metadata">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">update-metadata</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#update-metadata">
+    <rdfs:comment xml:lang="en">Update the metadata of this document, such as keywords, audience, etc.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#update-metadata">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#ComponentSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <qb:dimension rdf:resource="https://vocab.methodandstructure.com/content-inventory#document"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#ComponentSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
+    <qb:measure rdf:resource="https://vocab.methodandstructure.com/content-inventory#sections"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid3">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#ComponentSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid3">
+    <qb:measure rdf:resource="https://vocab.methodandstructure.com/content-inventory#blocks"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid4">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#ComponentSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid4">
+    <qb:measure rdf:resource="https://vocab.methodandstructure.com/content-inventory#words"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid5">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#ComponentSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid5">
+    <qb:measure rdf:resource="https://vocab.methodandstructure.com/content-inventory#characters"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid6">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#ComponentSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid6">
+    <qb:measure rdf:resource="https://vocab.methodandstructure.com/content-inventory#images"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid7">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#ComponentSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid7">
+    <qb:measure rdf:resource="https://vocab.methodandstructure.com/content-inventory#videos"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid8">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#ComponentSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid8">
+    <qb:measure rdf:resource="https://vocab.methodandstructure.com/content-inventory#embeds"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid9">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#ComponentSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid9">
+    <qb:measure rdf:resource="https://vocab.methodandstructure.com/content-inventory#tables"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid10">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#ComponentSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid10">
+    <qb:measure rdf:resource="https://vocab.methodandstructure.com/content-inventory#forms"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid11">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#ComponentSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid11">
+    <qb:measure rdf:resource="https://vocab.methodandstructure.com/content-inventory#scripts"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid12">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#ComponentSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid12">
+    <qb:measure rdf:resource="https://vocab.methodandstructure.com/content-inventory#stylesheets"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid13">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#ComponentSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid13">
+    <qb:measure rdf:resource="https://vocab.methodandstructure.com/content-inventory#min"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid14">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#ComponentSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid14">
+    <qb:measure rdf:resource="https://vocab.methodandstructure.com/content-inventory#low-quartile"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid15">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#ComponentSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid15">
+    <qb:measure rdf:resource="https://vocab.methodandstructure.com/content-inventory#median"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid16">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#ComponentSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid16">
+    <qb:measure rdf:resource="https://vocab.methodandstructure.com/content-inventory#high-quartile"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid17">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#ComponentSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid17">
+    <qb:measure rdf:resource="https://vocab.methodandstructure.com/content-inventory#max"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid18">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#ComponentSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid18">
+    <qb:measure rdf:resource="https://vocab.methodandstructure.com/content-inventory#mean"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid19">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#ComponentSpecification"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid19">
+    <qb:measure rdf:resource="https://vocab.methodandstructure.com/content-inventory#sd"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words-and-blocks">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#DataStructureDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words-and-blocks">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">words-and-blocks</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words-and-blocks">
+    <qb:component rdf:nodeID="genid1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words-and-blocks">
+    <qb:component rdf:nodeID="genid2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words-and-blocks">
+    <qb:component rdf:nodeID="genid3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words-and-blocks">
+    <qb:component rdf:nodeID="genid4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words-and-blocks">
+    <qb:component rdf:nodeID="genid5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words-and-blocks">
+    <qb:component rdf:nodeID="genid6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words-and-blocks">
+    <qb:component rdf:nodeID="genid7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words-and-blocks">
+    <qb:component rdf:nodeID="genid8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words-and-blocks">
+    <qb:component rdf:nodeID="genid9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words-and-blocks">
+    <qb:component rdf:nodeID="genid10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words-and-blocks">
+    <qb:component rdf:nodeID="genid11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words-and-blocks">
+    <qb:component rdf:nodeID="genid12"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words-and-blocks">
+    <qb:component rdf:nodeID="genid13"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words-and-blocks">
+    <qb:component rdf:nodeID="genid14"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words-and-blocks">
+    <qb:component rdf:nodeID="genid15"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words-and-blocks">
+    <qb:component rdf:nodeID="genid16"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words-and-blocks">
+    <qb:component rdf:nodeID="genid17"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words-and-blocks">
+    <qb:component rdf:nodeID="genid18"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words-and-blocks">
+    <qb:component rdf:nodeID="genid19"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words-and-blocks">
+    <rdfs:comment xml:lang="en">A set of descriptive statistics pertaining to the number of words per block of text in a given document.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://doriantaylor.com/person/dorian-taylor#me">
+    <foaf:name xml:lang="en">Dorian Taylor</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#alias">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#alias">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">alias</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#alias">
+    <rdfs:comment xml:lang="en">Denotes an alternate URI for the subject resource. It extends owl:sameAs insofar as asserting that the object is somehow less canonical than the subject.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#alias">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#alias">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#alias">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/content-inventory#alias-for"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#assumes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#assumes">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">assumes</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#assumes">
+    <rdfs:comment xml:lang="en">The document assumes the audience is familiar with this concept, and may not mention it explicitly.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#assumes">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#assumes">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#assumes">
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#assumes">
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/educationLevel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#assumes">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#aware-of">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#aware-of">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">aware-of</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#aware-of">
+    <rdfs:comment xml:lang="en">This property relates an Audience to a SKOS concept that is likely to be in the orbit of the audience's members: they are aware that the concept exists, although they may not necessarily understand it.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#aware-of">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/content-inventory#Audience"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#aware-of">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#aware-of">
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#aware-of">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#blocks">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#blocks">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">blocks</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#blocks">
+    <rdfs:comment xml:lang="en">A block count is conceptually similar to a word or section count, though it counts the total of elements in the document considered to be text blocks, such as paragraphs, tables, lists and figures. It is suited for document types that have no concept of (semantic) sections, such as HTML. The purpose of this measurement is to provide a sort of ratio to the word count, to glean how well-proportioned the document is.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#blocks">
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#blocks">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#blocks">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#canonical">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#canonical">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#canonical">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">canonical</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#canonical">
+    <rdfs:comment xml:lang="en">Asserts the canonical URI of the subject resource, i.e., the one you always want to publish in content or redirect Web requests to.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#canonical">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#canonical">
+    <rdfs:subPropertyOf rdf:resource="https://vocab.methodandstructure.com/content-inventory#alias-for"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#characters">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#characters">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">characters</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#characters">
+    <rdfs:comment xml:lang="en">This indicates the number of characters in a document, with punctuation and the XPath normalize-space function applied. Note this is characters, not bytes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#characters">
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#characters">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#characters">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#characters">
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/xpath/#function-normalize-space"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#document">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#DimensionProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#document">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">document</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#document">
+    <rdfs:comment xml:lang="en">Document Reference</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#document">
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#document">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#document">
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#embeds">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#embeds">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">embeds</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#embeds">
+    <rdfs:comment xml:lang="en">The number of embeds in the document.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#embeds">
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#embeds">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#embeds">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#eschews">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#eschews">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">eschews</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#eschews">
+    <rdfs:comment xml:lang="en">This property relates an Audience to a SKOS concept that members of the audience are known to actively avoid or regard with contempt. This relation is intended to represent the complement of values.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#eschews">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/content-inventory#Audience"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#eschews">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#eschews">
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#eschews">
+    <rdfs:seeAlso rdf:resource="https://vocab.methodandstructure.com/content-inventory#values"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#eschews">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#forms">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#forms">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">forms</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#forms">
+    <rdfs:comment xml:lang="en">The number of forms in the document.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#forms">
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#forms">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#forms">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#high-quartile">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#high-quartile">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">high-quartile</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#high-quartile">
+    <rdfs:comment xml:lang="en">Third Quartile</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#high-quartile">
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#high-quartile">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#high-quartile">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#number"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#high-quartile">
+    <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Quartile"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#images">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#images">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">images</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#images">
+    <rdfs:comment xml:lang="en">This indicates the number of images in the document.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#images">
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#images">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#images">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#link">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#link">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">link</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#link">
+    <rdfs:comment xml:lang="en">This property specifies an ordinary hyperlink, which is visible on the document's canvas.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#link">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#link">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#link">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#low-quartile">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#low-quartile">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">low-quartile</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#low-quartile">
+    <rdfs:comment xml:lang="en">Equivalent to the bottom quarter, or 25th percentile, of the observed data.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#low-quartile">
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#low-quartile">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#low-quartile">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#number"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#low-quartile">
+    <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Quartile"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#max">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#max">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">max</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#max">
+    <rdfs:comment xml:lang="en">Maximum</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#max">
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#max">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#max">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#number"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#max">
+    <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Sample_maximum"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#mean">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#mean">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">mean</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#mean">
+    <rdfs:comment xml:lang="en">Mean</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#mean">
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#mean">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#mean">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#number"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#mean">
+    <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Mean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#median">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#median">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">median</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#median">
+    <rdfs:comment xml:lang="en">The median of a population </rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#median">
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#median">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#median">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#number"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#median">
+    <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Median"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#mentions">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#mentions">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">mentions</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#mentions">
+    <rdfs:comment xml:lang="en">The document explicitly mentions this concept.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#mentions">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#mentions">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#mentions">
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#mentions">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#min">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#min">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">min</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#min">
+    <rdfs:comment xml:lang="en">The smallest observation in the sample.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#min">
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#min">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#min">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#number"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#min">
+    <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Sample_minimum"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#representation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#representation">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">representation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#representation">
+    <rdfs:comment xml:lang="en">Denotes a resource that is a concrete representation of the subject, which assumed to be more abstract.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#representation">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#representation">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/hasFormat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#representation">
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#scripts">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#scripts">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">scripts</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#scripts">
+    <rdfs:comment xml:lang="en">The number of scripts in the document.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#scripts">
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#scripts">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#scripts">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#sd">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#sd">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">sd</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#sd">
+    <rdfs:comment xml:lang="en">Standard Deviation</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#sd">
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#sd">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#sd">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#number"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#sd">
+    <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Standard_deviation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#sections">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#sections">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">sections</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#sections">
+    <rdfs:comment xml:lang="en">For document types that have a concrete representation of sections, this property may be used to capture their sum.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#sections">
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#sections">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#sections">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#slug">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#slug">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">slug</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#slug">
+    <rdfs:comment xml:lang="en">The slug is a text token which represents either the full path or terminal path segment of an HTTP(S) URL by which a resource can be located. This property is mainly for the purpose of archiving old or alternative URL paths in a content inventory, for such tasks as generating URL rewriting maps.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#slug">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#slug">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#stylesheets">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#stylesheets">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">stylesheets</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#stylesheets">
+    <rdfs:comment xml:lang="en">The number of stylesheets in the document.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#stylesheets">
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#stylesheets">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#stylesheets">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#tables">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#tables">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">tables</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#tables">
+    <rdfs:comment xml:lang="en">The number of tables in the document.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#tables">
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#tables">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#tables">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#values">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#values">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">values</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#values">
+    <rdfs:comment xml:lang="en">This property relates an Audience to a SKOS concept that members of the audience are known to value, that is, to find meaningful in an axiological sense.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#values">
+    <rdfs:domain rdf:resource="https://vocab.methodandstructure.com/content-inventory#Audience"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#values">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#values">
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#values">
+    <rdfs:seeAlso rdf:resource="https://vocab.methodandstructure.com/content-inventory#eschews"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#values">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#variant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#variant">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">variant</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#variant">
+    <rdfs:comment xml:lang="en">Denotes a resource that is a variant of a concrete representation of the subject, which assumed to be more abstract.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#variant">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#variant">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/hasFormat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#variant">
+    <owl:equivalentProperty rdf:resource="https://vocab.methodandstructure.com/content-inventory#representation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#videos">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#videos">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">videos</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#videos">
+    <rdfs:comment xml:lang="en">The number of videos in the document.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#videos">
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#videos">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#videos">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words">
+    <rdf:type rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">words</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words">
+    <rdfs:comment xml:lang="en">This indicates the number of words in a document, similar to the familiar function in a word processor. The exact method of counting words may vary by document type, language etc., and is thus out of scope from this document.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words">
+    <rdfs:domain rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#words">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Merge">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Merge">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">Merge</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Merge">
+    <rdfs:comment xml:lang="en">In order to merge a document, we must define the target to which it ought to be merged. This class is identical to an Action, save for such a property.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Merge">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Merge">
+    <rdfs:subClassOf rdf:resource="https://vocab.methodandstructure.com/content-inventory#Action"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#alias-for">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#alias-for">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">alias-for</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#alias-for">
+    <rdfs:comment xml:lang="en">Denotes that the subject is the alias URI, and the object is more canonical (though not necessarily the most canonical).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#alias-for">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#alias-for">
+    <rdfs:seeAlso rdf:resource="https://vocab.methodandstructure.com/content-inventory#canonical"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#alias-for">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#alias-for">
+    <owl:inverseOf rdf:resource="https://vocab.methodandstructure.com/content-inventory#alias"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Audience">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Audience">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">Audience</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Audience">
+    <rdfs:comment xml:lang="en">An audience represents the set of people who are the intended recipients of the resource. This class is at once an agent class as well as a conceptual entity, capable of being mixed into a SKOS concept scheme.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Audience">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Audience">
+    <rdfs:seeAlso rdf:resource="http://purl.org/dc/terms/audience"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Audience">
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/org#Role"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Audience">
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/AgentClass"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Audience">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Action">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Action">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#token">Action</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Action">
+    <rdfs:comment xml:lang="en">An action, as its name implies, is meant to represent something a person or other agent ought to do to a document.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Action">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Action">
+    <rdfs:subClassOf rdf:resource="http://purl.org/NET/c4dm/event.owl#Event"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#Action">
+    <skos:usageNote xml:lang="en">Being a subclass of an event, a ci:Action can have agents, factors, products, places and times ascribed to it.</skos:usageNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:title xml:lang="en">A Content Inventory Vocabulary</dct:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-01-23T11:52:00-08:00</dct:created>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:creator rdf:resource="https://doriantaylor.com/person/dorian-taylor#me"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-11-02T19:19:18Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-12-11T22:22:00-08:00</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-02-06T14:10:00-08:00</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-02-03T14:39:00-08:00</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-06T15:24:00-07:00</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-06T16:23:52Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T23:38:59Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-07T16:36:10Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-18T01:01:09Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-07T22:10:55Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-10T22:28:06Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-21T23:05:32Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-04T20:27:32Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-26T05:02:30Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-24T23:16:20Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-30T01:05:51Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-06-29T02:24:58Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-04T01:24:22Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-13T03:27:35Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-05-17T17:57:27Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-10-05T10:36:04Z</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:references rdf:resource="http://en.wikipedia.org/wiki/Content_strategy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:references rdf:resource="http://vocab.org/frbr/core"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:references rdf:resource="http://vocab.org/frbr/extended"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:references rdf:resource="https://www.w3.org/TR/prov-o/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:references rdf:resource="http://www.w3.org/TR/vocab-data-cube/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:references rdf:resource="https://www.w3.org/TR/vocab-data-cube/#ref_qb_DataStructureDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:references rdf:resource="http://www.w3.org/TR/vocab-data-cube/#ref_qb_DataSet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:references rdf:resource="https://www.w3.org/TR/vocab-data-cube/#ref_qb_DimensionProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:references rdf:resource="https://www.w3.org/TR/vocab-data-cube/#ref_qb_MeasureProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:references rdf:resource="https://www.w3.org/TR/vocab-data-cube/#ref_qb_Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:references rdf:resource="http://en.wikipedia.org/wiki/Five-number_summary"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:references rdf:resource="http://en.wikipedia.org/wiki/Mean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <dct:references rdf:resource="http://en.wikipedia.org/wiki/Standard_deviation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <bibo:uri rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#token">ci</vann:preferredNamespacePrefix>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <xhv:license rdf:resource="http://creativecommons.org/licenses/by/2.5/ca/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <rdfs:comment xml:lang="en">This vocabulary defines a number of concepts peculiar to content strategy which are not accounted for by other vocabularies.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <rdfs:isDefinedBy rdf:resource="https://vocab.methodandstructure.com/content-inventory#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <owl:imports rdf:resource="http://www.w3.org/2002/07/owl#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <owl:imports rdf:resource="http://www.w3.org/2001/XMLSchema#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <owl:imports rdf:resource="http://purl.org/ontology/bibo/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <owl:imports rdf:resource="http://purl.org/NET/c4dm/event.owl#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <owl:imports rdf:resource="http://purl.org/linked-data/cube#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocab.methodandstructure.com/content-inventory#">
+    <owl:versionInfo>0.14</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid20">
+    <xhv:role rdf:resource="http://www.w3.org/1999/xhtml/vocab#note"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid21">
+    <xhv:role rdf:resource="http://www.w3.org/1999/xhtml/vocab#note"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid22">
+    <xhv:role rdf:resource="http://www.w3.org/1999/xhtml/vocab#note"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid23">
+    <xhv:role rdf:resource="http://www.w3.org/1999/xhtml/vocab#note"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid24">
+    <xhv:role rdf:resource="http://www.w3.org/1999/xhtml/vocab#note"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid25">
+    <xhv:role rdf:resource="http://www.w3.org/1999/xhtml/vocab#note"/>
+  </rdf:Description>
+</rdf:RDF>

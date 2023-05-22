@@ -1,0 +1,2693 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://w3id.org/amlo/core#"
+     xml:base="http://w3id.org/amlo/core"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:core="http://w3id.org/amlo/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:Ratings="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Ratings/">
+    <owl:Ontology rdf:about="http://w3id.org/amlo/core">
+        <owl:versionIRI rdf:resource="http://w3id.org/amlo/core"/>
+        <dc:creator>Andrea Danielli</dc:creator>
+        <dc:creator>Enrico Fagnoni</dc:creator>
+        <dc:description xml:lang="en">The AMLO-core is the main module of the AMLO projects that adds some concepts to describe the Anti Money Laundering (AML) knowledge and facts.
+
+AMLO-core can be used as an upper ontology to derive taxonomies and axioms as well as a way to share information among investigators.</dc:description>
+        <dc:rights xml:lang="en">The amlo-core  vocabulary is  copyright (c) 2019-2022 by Enrico Fagnoni and Andrea Danielli in the scope of the AMLO project by Mopso and it is available under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International By 4.0.  This work is compatible with the FIBO ontology Copyright (c) EDM Council, Inc. and Object Management Group, Inc.
+Please note that this software is Open Source but it is not free. You can use as is, or if you want to include it your commercial product, please contact Mopso, free licenses available for researchand student.</dc:rights>
+        <dc:title xml:lang="en">Anti Money Laundering Ontology core vocabulary  (AMLO-core)</dc:title>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by-nc-nd/4.0/"/>
+        <rdfs:comment xml:lang="en">AMLO-core is a formal conceptual model that defines the main terms used in Anti Money Laundering (AML) investigations. 
+
+AMLO-core  is developed by a multidisciplinary group of domain experts and data scientists as part of the AMLO project by Mopso and LinkedData.Center.</rdfs:comment>
+        <rdfs:label xml:lang="en">AMLO-core vocabulary</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://gitlab.com/mopso/amlo"/>
+        <rdfs:seeAlso rdf:resource="https://linkeddata.center/"/>
+        <rdfs:seeAlso rdf:resource="https://mopso.eu/"/>
+        <owl:versionInfo>1.6.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://w3id.org/amlo/core#hasRiskProfileImpact -->
+
+    <owl:AnnotationProperty rdf:about="http://w3id.org/amlo/core#hasRiskProfileImpact">
+        <rdfs:comment xml:lang="en">default weight vector to calculate a default risk profile. It applies only to risk annotations.</rdfs:comment>
+        <rdfs:label xml:lang="en">has risk profile impact</rdfs:label>
+        <rdfs:range rdf:resource="http://w3id.org/amlo/core#RiskProfileDistribution"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/amlo/core#RiskDistribution -->
+
+    <rdfs:Datatype rdf:about="http://w3id.org/amlo/core#RiskDistribution">
+        <rdfs:comment xml:lang="en">A statistical distribution on a risk dimension between 0 and 1</rdfs:comment>
+        <rdfs:label xml:lang="en">risk distribution</rdfs:label>
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdfs:Datatype>
+    
+
+
+    <!-- http://w3id.org/amlo/core#RiskEstimator -->
+
+    <rdfs:Datatype rdf:about="http://w3id.org/amlo/core#RiskEstimator">
+        <rdfs:comment xml:lang="en">a value that estimates a risk, if it tends to infinity the risk is a certainty; if it tends to negative the risk does not exist. Zero indicates an absence of information about a particular risk. The logarithmic scale best fits a measurement of this value.</rdfs:comment>
+        <rdfs:comment xml:lang="it">un valore che stima un rischio, se tende ad infinito il rischio è una certezza. se tende a negativo il rischio non esiste. Lo zero indica un assenza di informazione su un pèarticolare rischio. La scala logaritmica meglio si adatta ad una misurazione di questo valore.</rdfs:comment>
+        <rdfs:label xml:lang="en">risk estimator</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdfs:Datatype>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/amlo/core#customerDueDiligenceData -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/amlo/core#customerDueDiligenceData">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/amlo/core#referenceData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/amlo/core#InconsistentCDD"/>
+        <rdfs:comment xml:lang="en">this property relates an InconsistenceCDD annotation with the data provided by customer due diligence process</rdfs:comment>
+        <rdfs:label xml:lang="en">customer due diligence data</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#derivedFrom -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/amlo/core#derivedFrom">
+        <rdfs:domain rdf:resource="http://w3id.org/amlo/core#DerivedRiskRating"/>
+        <rdfs:range rdf:resource="http://w3id.org/amlo/core#Annotation"/>
+        <rdfs:label xml:lang="en">derived from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#hasBody -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/amlo/core#hasBody">
+        <rdfs:domain rdf:resource="http://w3id.org/amlo/core#Annotation"/>
+        <rdfs:comment xml:lang="en">in a data quality annotation defines the predicate that related the target with the referenceData</rdfs:comment>
+        <rdfs:label xml:lang="en">has body</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#hasRiskProfile -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/amlo/core#hasRiskProfile">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://w3id.org/amlo/core#RiskProfile"/>
+        <rdfs:comment xml:lang="en">the annotated subject has a money laundery risk profile</rdfs:comment>
+        <rdfs:label xml:lang="en">has risk profile</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#hasSizeEstimator -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/amlo/core#hasSizeEstimator">
+        <rdfs:comment xml:lang="it">collega una stima quantitativa ad un rischio</rdfs:comment>
+        <rdfs:label xml:lang="en">has size estimator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#hasTarget -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/amlo/core#hasTarget">
+        <rdfs:domain rdf:resource="http://w3id.org/amlo/core#Annotation"/>
+        <rdfs:label xml:lang="en">has target</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#isAffiliateOf -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/amlo/core#isAffiliateOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="en">is affilated of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#isClassifiedBy -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/amlo/core#isClassifiedBy">
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">a skos:Concept for something, per some scheme for such delineation, within a specified context</rdfs:comment>
+        <rdfs:label xml:lang="en">is classified by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#onProperty -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/amlo/core#onProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/amlo/core#DataQualityAnnotation"/>
+        <rdfs:comment xml:lang="en">in a data quality annotation relates the target with the reference data</rdfs:comment>
+        <rdfs:label xml:lang="en">on property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#operatesInCountry -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/amlo/core#operatesInCountry">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/Person"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Country"/>
+        <rdfs:comment xml:lang="en">The agent operates in a country</rdfs:comment>
+        <rdfs:label xml:lang="en">operates in country</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#referenceData -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/amlo/core#referenceData">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/amlo/core#hasBody"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/amlo/core#DataQualityAnnotation"/>
+        <rdfs:comment xml:lang="en">in a data quality annotation, it specializes the hasBody property and specifies the data associated with the triple made by &quot;target&quot; and &quot;onProperty&quot; URI</rdfs:comment>
+        <rdfs:label xml:lang="en">reference data</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#thirdPartyData -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/amlo/core#thirdPartyData">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/amlo/core#InconsistentCDD"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#wiresAccount -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/amlo/core#wiresAccount">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/amlo/core#WireTransfer"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/BankAccount"/>
+        <rdfs:label xml:lang="en">wires account</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/amlo/core#onProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.wikidata.org/entity/P31 -->
+
+    <owl:ObjectProperty rdf:about="http://www.wikidata.org/entity/P31">
+        <rdfs:comment xml:lang="en">that class of which this subject is a particular example and member; different from P279 (subclass of); for example: K2 is an instance of mountain; volcano is a subclass of mountain (and an instance of volcanic landform)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.wikidata.org/wiki/Property:P31"/>
+        <rdfs:label xml:lang="en">instance of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/appliesToAccount -->
+
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/appliesToAccount">
+        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/MD/CIVTemporal/FundsTemporal/appliesTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Ratings/hasRatingScore -->
+
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Ratings/hasRatingScore"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Ratings/rates -->
+
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Ratings/rates"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/Occurrences/exemplifies -->
+
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/Occurrences/exemplifies"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/comprises -->
+
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/comprises"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/MD/CIVTemporal/FundsTemporal/appliesTo -->
+
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/MD/CIVTemporal/FundsTemporal/appliesTo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/amlo/core#criminalRisk -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/amlo/core#criminalRisk">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/amlo/core#riskDimensionEstimator"/>
+        <rdfs:label xml:lang="en">criminal risk</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#criminalRiskWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/amlo/core#criminalRiskWeight">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/amlo/core#hasRiskDimensionWeight"/>
+        <rdfs:label xml:lang="en">criminal risk weight</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#fiscalRisk -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/amlo/core#fiscalRisk">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/amlo/core#riskDimensionEstimator"/>
+        <rdfs:label xml:lang="en">fiscal risk</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#fiscalRiskWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/amlo/core#fiscalRiskWeight">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/amlo/core#hasRiskDimensionWeight"/>
+        <rdfs:label xml:lang="en">fiscal risk weight</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#geographicRisk -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/amlo/core#geographicRisk">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/amlo/core#riskDimensionEstimator"/>
+        <rdfs:label xml:lang="en">geographic risk</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#geographicalRiskWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/amlo/core#geographicalRiskWeight">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/amlo/core#hasRiskDimensionWeight"/>
+        <rdfs:label xml:lang="en">geographical risk weight</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#hasEstimatedTransferSize -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/amlo/core#hasEstimatedTransferSize">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/amlo/core#ValueTransfer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">the estimated transfer size expressed as an EURO money amount actualized at the date of a transfer event</rdfs:comment>
+        <rdfs:label xml:lang="en">has estimated transfer size</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#hasNominalHeat -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/amlo/core#hasNominalHeat">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/amlo/core#hasNominalHeat"/>
+        <rdfs:domain rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <rdfs:label xml:lang="en">has nominal heat</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#hasReferenceFamilyName -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/amlo/core#hasReferenceFamilyName">
+        <rdfs:domain rdf:resource="http://w3id.org/amlo/core#CriminalFamilyAssociation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">the family name of a family association affiliated to a criminal syndicate</rdfs:comment>
+        <rdfs:label xml:lang="en">has reference family name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#hasRiskDimensionWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/amlo/core#hasRiskDimensionWeight">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <rdfs:range rdf:resource="http://w3id.org/amlo/core#RiskDistribution"/>
+        <rdfs:label xml:lang="en">has risk dimension weight</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#hasRiskEstimator -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/amlo/core#hasRiskEstimator">
+        <rdfs:range rdf:resource="http://w3id.org/amlo/core#RiskEstimator"/>
+        <rdfs:comment xml:lang="it">un valore copreso tra 0 e 1 che rappresenta lo stimatore di un rischio</rdfs:comment>
+        <rdfs:label xml:lang="en">has risk estimator</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#motivatedBy -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/amlo/core#motivatedBy">
+        <rdfs:domain rdf:resource="http://w3id.org/amlo/core#Annotation"/>
+        <rdfs:comment xml:lang="en">is used to record the user&apos;s intent or motivation for the creation of an  Annotation, or the inclusion of the body or target, that it is associated with.</rdfs:comment>
+        <rdfs:label xml:lang="en">motivated by</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#primaryCustomerClassification -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/amlo/core#primaryCustomerClassification">
+        <rdfs:comment xml:lang="en">represent the notation of the primary classification defined for the type of the annotated object.</rdfs:comment>
+        <rdfs:label xml:lang="en">primary customer classification</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#reputationalRisk -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/amlo/core#reputationalRisk">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/amlo/core#riskDimensionEstimator"/>
+        <rdfs:label xml:lang="en">reputational risk</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#reputationalRiskWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/amlo/core#reputationalRiskWeight">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/amlo/core#hasRiskDimensionWeight"/>
+        <rdfs:label xml:lang="en">reputational risk weight</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#riskDimensionEstimator -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/amlo/core#riskDimensionEstimator">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/amlo/core#hasRiskEstimator"/>
+        <rdfs:domain rdf:resource="http://w3id.org/amlo/core#RiskProfile"/>
+        <rdfs:label xml:lang="en">a general property to state common definition for profile dimension estimators</rdfs:label>
+        <rdfs:label xml:lang="en">risk dimension estimator</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#riskScore -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/amlo/core#riskScore">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/amlo/core#hasRiskEstimator"/>
+        <rdfs:comment xml:lang="en">a single number representing a syntetic risk estimation on the annotated object</rdfs:comment>
+        <rdfs:label xml:lang="en">risk score</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#subjectiveRisk -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/amlo/core#subjectiveRisk">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/amlo/core#riskDimensionEstimator"/>
+        <rdfs:label xml:lang="en">subjective risk</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#subjectiveRiskWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/amlo/core#subjectiveRiskWeight">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/amlo/core#hasRiskDimensionWeight"/>
+        <rdfs:label xml:lang="en">subjective risk weight</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#transferCounterpartyName -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/amlo/core#transferCounterpartyName">
+        <rdfs:domain rdf:resource="http://w3id.org/amlo/core#ValueTransfer"/>
+        <rdfs:comment xml:lang="en">the  declared  name  of a reciving actor in a  transfer event</rdfs:comment>
+        <rdfs:label xml:lang="en">transfer counterparty name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#transferPrincipalName -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/amlo/core#transferPrincipalName">
+        <rdfs:domain rdf:resource="http://w3id.org/amlo/core#ValueTransfer"/>
+        <rdfs:comment xml:lang="en">the self declared  name  of a sender actor in  transfer event</rdfs:comment>
+        <rdfs:label xml:lang="en">transfer principal name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/amlo/core#wasEstimatedOnDate -->
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/amlo/core#wasEstimatedOnDate">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="it">data in cui un valore è stato stimato</rdfs:comment>
+        <rdfs:label xml:lang="en">was estimated on date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Ratings/hasBestMeasure -->
+
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Ratings/hasBestMeasure"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Ratings/hasMeasureWithinScale -->
+
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Ratings/hasMeasureWithinScale"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Ratings/hasWorstMeasure -->
+
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Ratings/hasWorstMeasure"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Reporting/hasReportDate -->
+
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Reporting/hasReportDate"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/Occurrences/hasEventDateValue -->
+
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/Occurrences/hasEventDateValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/amlo/core#AMLQualitativeRatingScore -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#AMLQualitativeRatingScore">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Ratings/QualitativeRatingScore"/>
+        <rdfs:comment xml:lang="en">a rating score for AML risk as defined in http://w3id.org/amlo/core#ProfileRiskScale</rdfs:comment>
+        <rdfs:label xml:lang="en">AML qualitative rating score</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#AdverseInfo -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#AdverseInfo">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForAdverseInfo"/>
+        <rdfs:comment xml:lang="en">The client is reported by list managers such as WorldCheck, IDmerit, Cribis, or bad press etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">adverse info</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#Annotation -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#Annotation">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments/Opinion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasBody"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#motivatedBy"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Inspired by Web Annotation Ontology</rdfs:comment>
+        <rdfs:label xml:lang="en">annotation</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/annotation-vocab/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#BankruptOrganization -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#BankruptOrganization">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+        <rdfs:comment xml:lang="en">A company that declared bankrupt</rdfs:comment>
+        <rdfs:label xml:lang="en">bankrupt Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#BankruptcyRisk -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#BankruptcyRisk">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForBankruptcyRisk"/>
+        <rdfs:comment xml:lang="en">Bankruptcy risk rating</rdfs:comment>
+        <rdfs:label xml:lang="en">bankruptcy risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#BigTransfer -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#BigTransfer">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://w3id.org/amlo/sn#SocialRelation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForBigTransfer"/>
+        <rdfs:comment xml:lang="en">a value transfer very big</rdfs:comment>
+        <rdfs:comment xml:lang="en">big transfer</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ConnectedToBankruptcy -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#ConnectedToBankruptcy">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DerivedRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#derivedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/amlo/core#BankruptcyRisk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForConnectedToBankruptcy"/>
+        <rdfs:comment xml:lang="en">the annotated person is or was  part of a company bankruptcy</rdfs:comment>
+        <rdfs:label xml:lang="en">connected to bankruptcy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ConnectedToGeographicRisk -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#ConnectedToGeographicRisk">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DerivedRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#derivedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/amlo/core#GeographicRisk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/Person"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForConnectedToGeographicRisk"/>
+        <rdfs:comment xml:lang="en">the annotated agent is living  in a place with a geographic risk</rdfs:comment>
+        <rdfs:label xml:lang="en">connected to geographic risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ConnectedToPEP -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#ConnectedToPEP">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DerivedRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#derivedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/amlo/core#PoliticallyExposedPerson"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForConnectedToPEP"/>
+        <rdfs:comment xml:lang="en">The annotated organization has a political exposed person as an officer or as a shareholder</rdfs:comment>
+        <rdfs:label xml:lang="en">connected to PEP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ConnectedToPIL -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#ConnectedToPIL">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DerivedRiskRating"/>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForConnectedToPEP"/>
+        <rdfs:comment xml:lang="en">The annotated organization has a minor political exposed person as an officer or as a shareholder</rdfs:comment>
+        <rdfs:label xml:lang="en">connected to PIL</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#Covid19ChangeOfBoard -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#Covid19ChangeOfBoard">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#Covid19Risk"/>
+        <rdfs:comment xml:lang="en">The annotated organization changed board during the covid  period</rdfs:comment>
+        <rdfs:label xml:lang="en">covid 19 change of board</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#Covid19ChangeOfObjective -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#Covid19ChangeOfObjective">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#Covid19Risk"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The company objective was changed during Covid19 emergency period to something related to Covid</rdfs:comment>
+        <rdfs:label xml:lang="en">covid19 change of objective</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#Covid19ChangeOfShareholder -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#Covid19ChangeOfShareholder">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#Covid19Risk"/>
+        <rdfs:comment xml:lang="en">The annotated organization changed shareholder during the covid  period</rdfs:comment>
+        <rdfs:label xml:lang="en">covid 19 change of shareholder</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#Covid19ForeignBoardMember -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#Covid19ForeignBoardMember">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#Covid19Risk"/>
+        <rdfs:comment xml:lang="en">A new foreign  board member  detected during covid period</rdfs:comment>
+        <rdfs:label xml:lang="en">covid 19 foreign board member</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#Covid19Risk -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#Covid19Risk">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">covid19 risk</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#Covid19SellsToPA -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#Covid19SellsToPA">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#Covid19Risk"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:comment xml:lang="en">The annotated organization sells covid related matherial to PA during covid period</rdfs:comment>
+        <rdfs:label xml:lang="en">covid 19 sells to PA</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#Covid19WebOffering -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#Covid19WebOffering">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#Covid19Risk"/>
+        <rdfs:comment xml:lang="en">the agent web site exposes an offering of Covid related matherial</rdfs:comment>
+        <rdfs:label xml:lang="en">covid19 web offering</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#Covid19WorksWithPA -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#Covid19WorksWithPA">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#Covid19Risk"/>
+        <rdfs:comment xml:lang="en">The annotated organization works with public administration during covid period</rdfs:comment>
+        <rdfs:label xml:lang="en">covid 19 works with PA</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#Covid19YoungBoardMember -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#Covid19YoungBoardMember">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#Covid19Risk"/>
+        <rdfs:comment xml:lang="en">A  young board member detected during covid period</rdfs:comment>
+        <rdfs:label xml:lang="en">covid 19 young board member</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#CriminalFamilyAssociation -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#CriminalFamilyAssociation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#isAffiliateOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://w3id.org/amlo/core#CriminalSyndicate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasReferenceFamilyName"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A  family  affiliated to a criminal syndicate</rdfs:comment>
+        <rdfs:label xml:lang="en">criminal family association</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#CriminalRiskPlace -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#CriminalRiskPlace">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#GeographicRisk"/>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForGeographicRisk"/>
+        <rdfs:comment xml:lang="en">a place with hight risk of criminal infiltration</rdfs:comment>
+        <rdfs:label xml:lang="en">criminal risk place</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#CriminalSyndicate -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#CriminalSyndicate">
+        <rdfs:comment xml:lang="en">A mafia-type criminal syndicate</rdfs:comment>
+        <rdfs:label xml:lang="en">criminal syndicate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#CustomerRiskRating -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#CustomerRiskRating">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Ratings/Rating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Ratings/hasRatingScore"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://w3id.org/amlo/core#AMLQualitativeRatingScore"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Ratings/rates"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/Person"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">an AML risk assesment compute by a financial institution about one of its customers</rdfs:comment>
+        <rdfs:comment xml:lang="en">customer risk assesment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#DataQualityAnnotation -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#DataQualityAnnotation">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#Annotation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#onProperty"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#referenceData"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An annotation regarding potential problem with data integrity respect to ontology or common sense.</rdfs:comment>
+        <rdfs:label xml:lang="en">data quality annotation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#DerivedRiskRating -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#DerivedRiskRating">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#RiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#derivedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <rdfs:comment xml:lang="en">A risk derived from another closely related risk</rdfs:comment>
+        <rdfs:label xml:lang="en">derived risk rating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#DirectPoliticallyExposedPerson -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#DirectPoliticallyExposedPerson">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#PoliticallyExposedPerson"/>
+        <owl:disjointWith rdf:resource="http://w3id.org/amlo/core#IndirectPoliticallyExposedPerson"/>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForDirectPoliticallyExposedPerson"/>
+        <rdfs:comment xml:lang="en">direct PEP</rdfs:comment>
+        <rdfs:label xml:lang="en">direct politically exposed person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#DirectRiskRating -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#DirectRiskRating">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#RiskRating"/>
+        <rdfs:comment xml:lang="en">An annotation of risk associated directly with a node</rdfs:comment>
+        <rdfs:label xml:lang="en">direct risk rating</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#DistanceRisk -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#DistanceRisk">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForDistanceRisk"/>
+        <rdfs:comment xml:lang="it">Distance between location of legal representative and registered office displayed on Brain - Map</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="it">Andrea</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">distance risk</rdfs:label>
+        <rdfs:seeAlso xml:lang="it">20 - Distant_address</rdfs:seeAlso>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#EarlyCeased -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#EarlyCeased">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#InconsistentCDD"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForEarlyCeased"/>
+        <rdfs:comment xml:lang="en">Set annotation in case it appears DISCONTINUED and date of establishment is &lt;24 months.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="it">Andrea</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">early ceased</rdfs:label>
+        <rdfs:seeAlso xml:lang="it">21 - early_ceased</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#EmbargoedCountry -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#EmbargoedCountry">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#GeographicRisk"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.wikidata.org/entity/Q6256"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForGeographicRisk"/>
+        <rdfs:comment xml:lang="en">a country subjectet to international embargo</rdfs:comment>
+        <rdfs:label xml:lang="en">embargoed country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ExecutiveOfficer -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#ExecutiveOfficer">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/Executives/CorporateOfficer"/>
+        <rdfs:comment xml:lang="en">a CorporateOfficer with power of signature</rdfs:comment>
+        <rdfs:label xml:lang="en">executive officer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ExpiredExecutiveOfficer -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#ExpiredExecutiveOfficer">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#InconsistentCDD"/>
+        <rdfs:comment xml:lang="en">An executive officer that is declared in CDD but is not present in 3th party data</rdfs:comment>
+        <rdfs:label xml:lang="en">expired officer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#FamilyNameAndGeoRisk -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#FamilyNameAndGeoRisk">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForFamilyNameAndGeoRisk"/>
+        <rdfs:comment xml:lang="en">The person has a family name and origin and/or residence in a place annotated bi DIA in Italy</rdfs:comment>
+        <rdfs:label xml:lang="en">family name and geo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#FirstPartyDataset -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#FirstPartyDataset">
+        <rdfs:comment xml:lang="en">A dataset derived by data owned by the some owner of the knowledge base. It contains data derived from Customer Due Diligence and KYC processes.</rdfs:comment>
+        <rdfs:label xml:lang="en">1st party dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#FrequentlyPATenderWinner -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#FrequentlyPATenderWinner">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForFrequentlyPATenderWinner"/>
+        <rdfs:comment xml:lang="en">a company that wins the same type of tender more then ten times</rdfs:comment>
+        <rdfs:label xml:lang="en">frequently PA tender winner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#GeographicRisk -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#GeographicRisk">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/GeopoliticalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForGeographicRisk"/>
+        <rdfs:comment xml:lang="en">a risk connected to a geographic or political place</rdfs:comment>
+        <rdfs:label xml:lang="en">geographic risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#HiddenOwner -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#HiddenOwner">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForHiddenOwner"/>
+        <rdfs:comment xml:lang="en">their legal nature is verified by reporting the potential presence of hidden partners (trusts, fiduciaries)</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="it">Andrea</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">hidden owner</rdfs:label>
+        <rdfs:seeAlso xml:lang="it">3 - Nuovi_soci_rischio</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#HighRevenuesPerEmployee -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#HighRevenuesPerEmployee">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForHighRevenuesPerEmployee"/>
+        <rdfs:comment xml:lang="en">if the rate between revenues and the number of employee is greather than a reference value that depends from the company industrial sector</rdfs:comment>
+        <rdfs:label xml:lang="en">high revenues per employee</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#InSectorAtRisk -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#InSectorAtRisk">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DerivedRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasBody"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/BusinessRegistries/StandardIndustrialClassificationCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForInSectorAtRisk"/>
+        <rdfs:comment xml:lang="en">the organization operates in a sector classification at risk</rdfs:comment>
+        <rdfs:label xml:lang="en">in sector at risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#InactiveCompany -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#InactiveCompany">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DataQualityAnnotation"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForInactiveCompany"/>
+        <rdfs:comment xml:lang="en">Present &quot;inactive&quot; status</rdfs:comment>
+        <rdfs:comment xml:lang="en">inactive company</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="it">Andrea</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">inactive company</rdfs:label>
+        <rdfs:seeAlso xml:lang="it">22 - Inattive</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#IncoerentRevenues -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#IncoerentRevenues">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#InconsistentCDD"/>
+        <rdfs:comment xml:lang="en">the delared revenues does not match</rdfs:comment>
+        <rdfs:label xml:lang="en">incoerent revenues</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#InconsistentCDD -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#InconsistentCDD">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DataQualityAnnotation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/Person"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#customerDueDiligenceData"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A detected difference between a CDD data (i.e. a data about formally known person or an organization) and an information detected by external source</rdfs:comment>
+        <rdfs:label xml:lang="en">Inconsistent CDD</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#InconsistentIndustrialSector -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#InconsistentIndustrialSector">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DataQualityAnnotation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#customerDueDiligenceData"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/BusinessRegistries/StandardIndustrialClassificationCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#thirdPartyData"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/BusinessRegistries/StandardIndustrialClassificationCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">an inconsistence in company industrial code classificiations (e.g. SIC, NACE, ATECO, etc) was detected</rdfs:comment>
+        <rdfs:label xml:lang="en">inconsistent industrial code</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#IndirectPoliticallyExposedPerson -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#IndirectPoliticallyExposedPerson">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#PoliticallyExposedPerson"/>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForIndirectPoliticallyExposedPerson"/>
+        <rdfs:comment xml:lang="en">indirect PEP</rdfs:comment>
+        <rdfs:label xml:lang="en">indirect politically exposed person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#IndustrialSectorCrimeRisk -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#IndustrialSectorCrimeRisk">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#IndustrialSectorRisk"/>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForIndustrialSectorCrimeRisk"/>
+        <rdfs:comment xml:lang="en">Inustrial sector with high risk of criminal infiltration</rdfs:comment>
+        <rdfs:comment xml:lang="en">industrial sector crime risk</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#IndustrialSectorRisk -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#IndustrialSectorRisk">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/BusinessRegistries/StandardIndustrialClassificationCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForIndustrialSectorRisk"/>
+        <rdfs:comment xml:lang="en">Industrial sector risk of criminal infiltration</rdfs:comment>
+        <rdfs:label xml:lang="en">industrial sector risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ItalianCreditInstitution -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#ItalianCreditInstitution">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+        <rdfs:comment xml:lang="en">an italian Credit Institution</rdfs:comment>
+        <rdfs:label xml:lang="en">italian credit institution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#LowSalaries -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#LowSalaries">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForLowSalaries"/>
+        <rdfs:comment xml:lang="en">turnover/ staff_cost &gt; 50</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="it">Andrea</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">low salaries</rdfs:label>
+        <rdfs:seeAlso xml:lang="it">19 - Lsalaries</rdfs:seeAlso>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#MainCustomerClassification -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#MainCustomerClassification">
+        <rdfs:comment xml:lang="en">a skos:ConceptScheme that is used as the customer main classification scheme</rdfs:comment>
+        <rdfs:label xml:lang="en">main customer classification scheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#MinorPoliticalRole -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#MinorPoliticalRole">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForMinorPoliticalRole"/>
+        <rdfs:comment xml:lang="en">The subject has a minor political role that does not qualify as PEP</rdfs:comment>
+        <rdfs:label xml:lang="en">minor political role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#MoneyLaunderingRiskCountry -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#MoneyLaunderingRiskCountry">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#GeographicRisk"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.wikidata.org/entity/Q6256"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForGeographicRisk"/>
+        <rdfs:comment xml:lang="en">Country with high risk of money laundering activities.</rdfs:comment>
+        <rdfs:label xml:lang="en">money laundering risk country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#NegativeJudgments -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#NegativeJudgments">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForNegativeJudgments"/>
+        <rdfs:comment xml:lang="en">The only navigable site is the Supreme Court: a number of names submitted for further study are checked within the Judgments DB</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="it">Andrea</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">negative judgments</rdfs:label>
+        <rdfs:seeAlso xml:lang="it">16 - Sentenze</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#NoIncomeStatement -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#NoIncomeStatement">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForNoIncomeStatement"/>
+        <rdfs:comment xml:lang="en">Financial statements not filed</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="it">Andrea</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">no income statement</rdfs:label>
+        <rdfs:seeAlso xml:lang="it">18 - NoIncomeStatement</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#NoProfit -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#NoProfit">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForNoProfit"/>
+        <rdfs:comment xml:lang="en">The client is a non-profit organization</rdfs:comment>
+        <rdfs:label xml:lang="en">no profit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#OfficerAgeRisk -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#OfficerAgeRisk">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForOfficerAgeRisk"/>
+        <rdfs:comment xml:lang="en">Presence of exponents under 25 or over 80 years old</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="it">Andrea</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">officer age risk</rdfs:label>
+        <rdfs:seeAlso xml:lang="it">2 - Nuovi_esponenti_rischio</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#OfficerLocationRisk -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#OfficerLocationRisk">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DerivedRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForOfficerLocationRisk"/>
+        <rdfs:comment xml:lang="en">origin of the new administrator at risk (co-selected countries at risk: GAFI black list, gray list, countries of emigration to Italy - top 10)</rdfs:comment>
+        <rdfs:label xml:lang="en">officer location risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#OldCDD -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#OldCDD">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <rdfs:comment xml:lang="en">The CDD is too old</rdfs:comment>
+        <rdfs:label xml:lang="en">old CDD</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#OwnerLocationRisk -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#OwnerLocationRisk">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DerivedRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForOwnerLocationRisk"/>
+        <rdfs:comment xml:lang="en">origin of new risk partner (co-selected risk countries: GAFI black list, gray list, countries of emigration to Italy - top 10)</rdfs:comment>
+        <rdfs:label xml:lang="en">owner location risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#PoliticallyExposedPerson -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#PoliticallyExposedPerson">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForDirectPoliticallyExposedPerson"/>
+        <rdfs:comment xml:lang="it">a politically exposed person</rdfs:comment>
+        <rdfs:label xml:lang="en">politically exposed person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#PotentialPaperCompany -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#PotentialPaperCompany">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForPotentialPaperCompany"/>
+        <rdfs:comment xml:lang="en">Statistical risk based on some balance figures derived from EU autorities indications</rdfs:comment>
+        <rdfs:label xml:lang="en">potential paper company</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#PublicOrganization -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#PublicOrganization">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+        <rdfs:comment xml:lang="en">A public organization</rdfs:comment>
+        <rdfs:label xml:lang="en">public organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#RiskProfile -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#RiskProfile">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments/Opinion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#criminalRisk"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://w3id.org/amlo/core#RiskEstimator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#fiscalRisk"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://w3id.org/amlo/core#RiskEstimator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#geographicRisk"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://w3id.org/amlo/core#RiskEstimator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#reputationalRisk"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://w3id.org/amlo/core#RiskEstimator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#subjectiveRisk"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://w3id.org/amlo/core#RiskEstimator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">It is a vector of money landery risk extimators. Each dimension of the risk profile is calculated analyzing a set of risk rating annotations.</rdfs:comment>
+        <rdfs:comment xml:lang="it">LE RESTRIZIONI DI QUESTA CLASSE VANNO DEFINITE CON ANDREA</rdfs:comment>
+        <rdfs:label xml:lang="en">risk profile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#RiskProfileImpact -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#RiskProfileImpact">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasRiskDimensionWeight"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/amlo/core#RiskDistribution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasNominalHeat"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://w3id.org/amlo/core#RiskEstimator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#criminalRiskWeight"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://w3id.org/amlo/core#RiskDistribution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#fiscalRiskWeight"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://w3id.org/amlo/core#RiskDistribution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#geographicalRiskWeight"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://w3id.org/amlo/core#RiskDistribution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#reputationalRiskWeight"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://w3id.org/amlo/core#RiskDistribution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#subjectiveRiskWeight"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://w3id.org/amlo/core#RiskDistribution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Weigts vector to calculate a risk profile. It is used to qualify a risk annotation class</rdfs:comment>
+        <rdfs:label xml:lang="en">risk profile impact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#RiskRating -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#RiskRating">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#Annotation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasRiskEstimator"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://w3id.org/amlo/core#RiskEstimator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">an  risk annotation with a subjective risk extimation</rdfs:comment>
+        <rdfs:label xml:lang="en">risk rating annotation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#RoundFigureTransfer -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#RoundFigureTransfer">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForRoundFigureTransfer"/>
+        <rdfs:comment xml:lang="en">Search for at least 3 round-digit wire transfers (i.e., with 3 trailing zeros)</rdfs:comment>
+        <rdfs:label xml:lang="en">round figure transfer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#SemanticEntityWireTransfer -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#SemanticEntityWireTransfer">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForSemanticEntityWireTransfer"/>
+        <rdfs:comment xml:lang="en">Reading payer or payee names in order to find associations, onlus, no profit</rdfs:comment>
+        <rdfs:label xml:lang="en">semantic entity wire transfer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#SemanticScopeWireTransfer -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#SemanticScopeWireTransfer">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForSemanticScopeWireTransfer"/>
+        <rdfs:comment xml:lang="en">&quot;donation&quot;, &quot;consulting&quot; etc. in the motivation field of the transfer</rdfs:comment>
+        <rdfs:label xml:lang="en">semantic scope wire transfer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#SharedLegalAddressRisk -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#SharedLegalAddressRisk">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DerivedRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForSharedLegalAddressRisk"/>
+        <rdfs:comment xml:lang="en">The target companies shares the same legal address</rdfs:comment>
+        <rdfs:label xml:lang="en">shared legal address risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#SignificantChangeOfBusiness -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#SignificantChangeOfBusiness">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DataQualityAnnotation"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForSignificantChangeOfBusiness"/>
+        <rdfs:comment xml:lang="en">In the case of ATECO change, from first-party data, an inconsistency with previous ATECO is checked; the first 2 digits are checked.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="it">Andrea</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">significant change of business</rdfs:label>
+        <rdfs:seeAlso xml:lang="it">1 - ATECO_incoerente</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#SignificantLossWithHighAssets -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#SignificantLossWithHighAssets">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForSignificantLossWithHighAssets"/>
+        <rdfs:comment xml:lang="en">(ECONOMIC ACCOUNT) profit loss &lt; -€500,000 (i.e., a loss greater than half a million) and (BALANCE SHEET) property, plant, and equipment &gt; €5,000,000 (i.e. the size of collateral is greater than €5 million)</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="it">Andrea</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">significant loss and hight assets</rdfs:label>
+        <rdfs:seeAlso xml:lang="it">17 - HlossHasset</rdfs:seeAlso>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#SubjectiveRisk -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#SubjectiveRisk">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForSubjectiveRisk"/>
+        <rdfs:comment xml:lang="en">a subjective risk defined by the risk assessor agent</rdfs:comment>
+        <rdfs:label xml:lang="en">subjective risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#SubsequentPATenderWinner -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#SubsequentPATenderWinner">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForSubsequentPATenderWinner"/>
+        <rdfs:comment xml:lang="en">The annotation is created if the same company wins the same tender for at least two consecutive years.</rdfs:comment>
+        <rdfs:label xml:lang="en">subsequent PA Tender Winner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#TerrorismRiskCountry -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#TerrorismRiskCountry">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#GeographicRisk"/>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForGeographicRisk"/>
+        <rdfs:comment xml:lang="en">a place with high risk of terrorism</rdfs:comment>
+        <rdfs:label xml:lang="en">terrorism risk country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#UndeclaredCountry -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#UndeclaredCountry">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DataQualityAnnotation"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForUndeclaredCountry"/>
+        <rdfs:comment xml:lang="en">Questionnaire data &quot;area of activity&quot; compared with foreign IBANs (for counterparties)</rdfs:comment>
+        <rdfs:label xml:lang="en">undeclared country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#UnespectedWorkWithPA -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#UnespectedWorkWithPA">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#InconsistentCDD"/>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForUnespectedWorkWithPA"/>
+        <rdfs:comment xml:lang="en">In the QAV, the client does not report operation with public tenders, while this is identified by specific annotation</rdfs:comment>
+        <rdfs:label xml:lang="en">unexpected work with PA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#UnknownOfficer -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#UnknownOfficer">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DataQualityAnnotation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">unknown officer with Power of attorney or rappresentance</rdfs:comment>
+        <rdfs:label xml:lang="en">unknown officer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#UnknownUBO -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#UnknownUBO">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#InconsistentCDD"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">an inconsistent business ultimate owner was detected</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="it">Andrea</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">unknown UBO</rdfs:label>
+        <rdfs:seeAlso xml:lang="it">4 - Nuovi_TE</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ValueTransfer -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#ValueTransfer">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/Occurrences/Occurrence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#transferCounterpartyName"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#transferPrincipalName"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/Occurrences/hasEventDateValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasEstimatedTransferSize"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">any value transfer between  parties</rdfs:comment>
+        <rdfs:label xml:lang="en">value transfer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#VeryHighMargin -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#VeryHighMargin">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForVeryHighMargin"/>
+        <rdfs:comment xml:lang="en">We calculate turnover per employee (turnover/number of employees) and compare it with Bank of Italy data. We deem pathological situations X times the average (test in progress, for now range from 5 to 10 times the average); ONLY WITH THE FIRST TWO ATECO FIGURES.</rdfs:comment>
+        <rdfs:label xml:lang="en">very high margin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#WireTransfer -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#WireTransfer">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#ValueTransfer"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/IndividualTransaction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#wiresAccount"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/DepositAccount"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/appliesToAccount"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/DepositAccount"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">an  individual transaction between two bank accounts.</rdfs:comment>
+        <rdfs:label xml:lang="en">wire transfer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#WorksWithCountryAtRisk -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#WorksWithCountryAtRisk">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/Person"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForworksWithCountryAtRisk"/>
+        <rdfs:comment xml:lang="en">The annotated agent trasfer values to at least a country with a risk annotation</rdfs:comment>
+        <rdfs:label xml:lang="en">works with country at risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#WorksWithEU -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#WorksWithEU">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForWorksWithPA"/>
+        <rdfs:comment xml:lang="en">The subjet won a tender in EU</rdfs:comment>
+        <rdfs:label xml:lang="en">works with EU</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#WorksWithPA -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#WorksWithPA">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForWorksWithPA"/>
+        <rdfs:comment xml:lang="en">The high number of distractive conduct in public procurements, regardless of health care, related to the pandemic should be monitored, combining audits with PEP profiles (companies working with the use of public funds and having a TE)</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="it">Andrea</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">works with PA</rdfs:label>
+        <rdfs:seeAlso xml:lang="it">13 - Fondi pubblici</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/core#YoungCompany -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/core#YoungCompany">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/amlo/core#DirectRiskRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/amlo/core#hasTarget"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <hasRiskProfileImpact rdf:resource="http://w3id.org/amlo/core#ProfileImpactForYoungCompany"/>
+        <rdfs:comment xml:lang="en">Date of recent incorporation: within 12 months of relation ship opening</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="it">Andrea</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">young company</rdfs:label>
+        <rdfs:seeAlso xml:lang="it">7 - Data di costituzione recente</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/amlo/sn#SocialRelation -->
+
+    <owl:Class rdf:about="http://w3id.org/amlo/sn#SocialRelation"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q6256 -->
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q6256"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/Executives/CorporateOfficer -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/Executives/CorporateOfficer"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/BusinessRegistries/StandardIndustrialClassificationCode -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/BusinessRegistries/StandardIndustrialClassificationCode"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/BankAccount -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/BankAccount"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/DepositAccount -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/DepositAccount"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/IndividualTransaction -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/IndividualTransaction"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/Person -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/Person"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments/Opinion -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments/Opinion"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Ratings/QualitativeRatingScore -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Ratings/QualitativeRatingScore"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Ratings/Rating -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Ratings/Rating">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments/Opinion"/>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Ratings/RatingScale -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Ratings/RatingScale"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/Occurrences/Occurrence -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/Occurrences/Occurrence"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/Organizations/Organization"/>
+    
+
+
+    <!-- https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Country -->
+
+    <owl:Class rdf:about="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Country"/>
+    
+
+
+    <!-- https://www.omg.org/spec/LCC/Countries/CountryRepresentation/GeopoliticalEntity -->
+
+    <owl:Class rdf:about="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/GeopoliticalEntity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForAdverseInfo -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForAdverseInfo">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForBankruptcyRisk -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForBankruptcyRisk">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for BankruptcyRisk ClassBankruptcyRisk</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for BankruptcyRisk</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForBigTransfer -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForBigTransfer">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForConnectedToBankruptcy -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForConnectedToBankruptcy">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for ConnectedToBankruptcy ClassConnectedToBankruptcy</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for ConnectedToBankruptcy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForConnectedToGeographicRisk -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForConnectedToGeographicRisk">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for ConnectedToGeographicRisk ClassConnectedToGeographicRisk</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for ConnectedToGeographicRisk</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForConnectedToPEP -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForConnectedToPEP">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForDirectPoliticallyExposedPerson -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForDirectPoliticallyExposedPerson">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for DirectPoliticallyExposedPerson ClassDirectPoliticallyExposedPerson</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for DirectPoliticallyExposedPerson</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForDistanceRisk -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForDistanceRisk">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for DistanceRisk ClassDistanceRisk</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for DistanceRisk</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForEarlyCeased -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForEarlyCeased">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.6</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for EarlyCeased ClassEarlyCeased</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for EarlyCeased</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForFamilyNameAndGeoRisk -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForFamilyNameAndGeoRisk">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for FamilyNameAndGeoRisk ClassFamilyNameAndGeoRisk</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for FamilyNameAndGeoRisk</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForFrequentlyPATenderWinner -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForFrequentlyPATenderWinner">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForGeographicRisk -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForGeographicRisk">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for GeographicRisk ClassGeographicRisk</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for GeographicRisk</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForHiddenOwner -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForHiddenOwner">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for HiddenOwner ClassHiddenOwner</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for HiddenOwner</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForHighRevenuesPerEmployee -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForHighRevenuesPerEmployee">
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.6</hasNominalHeat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForInSectorAtRisk -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForInSectorAtRisk">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for InSectorAtRisk ClassInSectorAtRisk</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for InSectorAtRisk</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForInactiveCompany -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForInactiveCompany">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.6</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for InactiveCompany ClassInactiveCompany</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for InactiveCompany</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForIndirectPoliticallyExposedPerson -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForIndirectPoliticallyExposedPerson">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for IndirectPoliticallyExposedPerson ClassIndirectPoliticallyExposedPerson</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for IndirectPoliticallyExposedPerson</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForIndustrialSectorCrimeRisk -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForIndustrialSectorCrimeRisk">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForIndustrialSectorRisk -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForIndustrialSectorRisk">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for IndustrialSectorRisk ClassIndustrialSectorRisk</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for IndustrialSectorRisk</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForLowSalaries -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForLowSalaries">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.7</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for LowSalaries ClassLowSalaries</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for LowSalaries</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForMinorPoliticalRole -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForMinorPoliticalRole">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.6</hasNominalHeat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForNegativeJudgments -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForNegativeJudgments">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.7</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for NegativeJudgments ClassNegativeJudgments</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for NegativeJudgments</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForNoIncomeStatement -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForNoIncomeStatement">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for NoIncomeStatement ClassNoIncomeStatement</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for NoIncomeStatement</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForNoProfit -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForNoProfit">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForOfficerAgeRisk -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForOfficerAgeRisk">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.6</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for OfficerAgeRisk ClassOfficerAgeRisk</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for OfficerAgeRisk</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForOfficerLocationRisk -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForOfficerLocationRisk">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for OfficerLocationRisk ClassOfficerLocationRisk</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for OfficerLocationRisk</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForOwnerLocationRisk -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForOwnerLocationRisk">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for OwnerLocationRisk ClassOwnerLocationRisk</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for OwnerLocationRisk</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForPotentialPaperCompany -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForPotentialPaperCompany">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</hasNominalHeat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForRoundFigureTransfer -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForRoundFigureTransfer">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForSemanticEntityWireTransfer -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForSemanticEntityWireTransfer">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForSemanticScopeWireTransfer -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForSemanticScopeWireTransfer">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForSharedLegalAddressRisk -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForSharedLegalAddressRisk">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for SharedLegalAddressRisk ClassSharedLegalAddressRisk</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for SharedLegalAddressRisk</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForSignificantChangeOfBusiness -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForSignificantChangeOfBusiness">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for SignificantChangeOfBusiness ClassSignificantChangeOfBusiness</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for SignificantChangeOfBusiness</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForSignificantLossWithHighAssets -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForSignificantLossWithHighAssets">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.7</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for SignificantLossWithHighAssets ClassSignificantLossWithHighAssets</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for SignificantLossWithHighAssets</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForSubjectiveRisk -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForSubjectiveRisk">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for SubjectiveRisk ClassSubjectiveRisk</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for SubjectiveRisk</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForSubsequentPATenderWinner -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForSubsequentPATenderWinner">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForUndeclaredCountry -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForUndeclaredCountry">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForUnespectedWorkWithPA -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForUnespectedWorkWithPA">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForVeryHighMargin -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForVeryHighMargin">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForWorksWithPA -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForWorksWithPA">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for WorksWithPA ClassWorksWithPA</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for WorksWithPA</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForYoungCompany -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForYoungCompany">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.25</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for YoungCompany ClassYoungCompany</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for YoungCompany</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileImpactForworksWithCountryAtRisk -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileImpactForworksWithCountryAtRisk">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#RiskProfileImpact"/>
+        <hasNominalHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</hasNominalHeat>
+        <rdfs:comment xml:lang="en">the default profile impact for worksWithCountryAtRisk ClassworksWithCountryAtRisk</rdfs:comment>
+        <rdfs:label xml:lang="en">profile impact for worksWithCountryAtRisk</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#ProfileRiskScale -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#ProfileRiskScale">
+        <rdf:type rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Ratings/RatingScale"/>
+        <Ratings:hasBestMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</Ratings:hasBestMeasure>
+        <Ratings:hasWorstMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</Ratings:hasWorstMeasure>
+        <rdfs:comment xml:lang="en">the default five level AML risk rating from 0 (no risk) to 4 hight risk</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#highRiskRating -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#highRiskRating">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#AMLQualitativeRatingScore"/>
+        <Ratings:hasMeasureWithinScale rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</Ratings:hasMeasureWithinScale>
+        <rdfs:comment xml:lang="en">high AML risk Rating profile</rdfs:comment>
+        <rdfs:label xml:lang="en">D</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#irrelevantRiskRating -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#irrelevantRiskRating">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#AMLQualitativeRatingScore"/>
+        <Ratings:hasMeasureWithinScale rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</Ratings:hasMeasureWithinScale>
+        <rdfs:comment xml:lang="en">irrilevant AML risk Rating profile</rdfs:comment>
+        <rdfs:label xml:lang="en">A</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#lowRiskRating -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#lowRiskRating">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#AMLQualitativeRatingScore"/>
+        <Ratings:hasMeasureWithinScale rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</Ratings:hasMeasureWithinScale>
+        <rdfs:comment xml:lang="en">B</rdfs:comment>
+        <rdfs:comment xml:lang="en">low AML risk Rating profile</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/amlo/core#mediumRiskRating -->
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/amlo/core#mediumRiskRating">
+        <rdf:type rdf:resource="http://w3id.org/amlo/core#AMLQualitativeRatingScore"/>
+        <Ratings:hasMeasureWithinScale rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</Ratings:hasMeasureWithinScale>
+        <rdfs:comment xml:lang="en">medium AML risk profile</rdfs:comment>
+        <rdfs:label xml:lang="en">C</rdfs:label>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <hasRiskEstimator rdf:datatype="http://w3id.org/amlo/core#RiskEstimator">0.5</hasRiskEstimator>
+        <subjectiveRiskWeight rdf:datatype="http://w3id.org/amlo/core#RiskDistribution">1</subjectiveRiskWeight>
+    </rdf:Description>
+    <rdf:Description>
+        <criminalRiskWeight rdf:datatype="http://w3id.org/amlo/core#RiskDistribution">0.7</criminalRiskWeight>
+        <geographicalRiskWeight rdf:datatype="http://w3id.org/amlo/core#RiskDistribution">0.2</geographicalRiskWeight>
+        <reputationalRiskWeight rdf:datatype="http://w3id.org/amlo/core#RiskDistribution">0.7</reputationalRiskWeight>
+        <subjectiveRiskWeight rdf:datatype="http://w3id.org/amlo/core#RiskDistribution">0.3</subjectiveRiskWeight>
+    </rdf:Description>
+    <rdf:Description>
+        <criminalRiskWeight rdf:datatype="http://w3id.org/amlo/core#RiskDistribution">0.5</criminalRiskWeight>
+        <reputationalRiskWeight rdf:datatype="http://w3id.org/amlo/core#RiskDistribution">0.8</reputationalRiskWeight>
+    </rdf:Description>
+    <rdf:Description>
+        <subjectiveRiskWeight rdf:datatype="http://w3id.org/amlo/core#RiskDistribution">1</subjectiveRiskWeight>
+    </rdf:Description>
+    <rdf:Description>
+        <subjectiveRiskWeight rdf:datatype="http://w3id.org/amlo/core#RiskDistribution">1</subjectiveRiskWeight>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
