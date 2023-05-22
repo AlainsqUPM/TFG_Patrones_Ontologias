@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:cc="http://creativecommons.org/ns#"
+         xmlns:dc11="http://purl.org/dc/elements/1.1/"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:ns0="http://purl.org/vocab/vann/"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ns1="http://www.w3.org/2003/06/sw-vocab-status/ns#">
+
+  <owl:Ontology rdf:about="http://ns.inria.fr/semed/eduprogression/v1">
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+    <dc11:creator rdf:resource="http://www.oscarrodriguez.me"/>
+    <dc11:creator rdf:resource="https://plus.google.com/106595696646939943813"/>
+    <dc11:description xml:lang="en">The EduProgression ontology formalizes the educational progressions of the French educational system, making possible to represent the existing progressions in a standard formal model, searchable and understandable by machines (OWL).</dc11:description>
+    <dc11:publisher rdf:resource="http://dbpedia.org/resource/National_Institute_for_Research_in_Computer_Science_and_Control"/>
+    <dc11:rights xml:lang="en">This ontology is distributed under a Creative Commons Attribution License - http://creativecommons.org/licenses/by/3.0 .</dc11:rights>
+    <dc11:title xml:lang="en">EduProgression Ontology</dc11:title>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016-09-01</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016-09-01</dc:modified>
+    <ns0:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eduprogression</ns0:preferredNamespacePrefix>
+    <ns0:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://ns.inria.fr/semed/eduprogression/v1#</ns0:preferredNamespaceUri>
+    <rdfs:comment xml:lang="en">The EduProgression ontology formalizes the educational progressions of the French educational system, making possible to represent the existing progressions in a standard formal model, searchable and understandable by machines (OWL).</rdfs:comment>
+  </owl:Ontology>
+
+  <owl:Class rdf:about="http://ns.inria.fr/semed/eduprogression/v1#Course">
+    <rdfs:comment xml:lang="en">In the French educational system, skills that students are expected to develop, are defined by cycle and each cycle is organized into course.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/semed/eduprogression#"/>
+    <rdfs:label xml:lang="fr">Cours</rdfs:label>
+    <rdfs:label xml:lang="en">Course </rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/semed/eduprogression/v1#EKS">
+    <rdfs:comment xml:lang="en">An element of knowledge and skills is an instance of this class and it is associated to a set of knowledge pieces (class Knowledge) and skills (class Skill) for a specific French school cycle (class Course) containing reference points (class PointOfReference) and also a vocabulary of associated terms (class Vocabulary).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/semed/eduprogression#"/>
+    <rdfs:label xml:lang="fr">Element de connaissances et de competences</rdfs:label>
+    <rdfs:label xml:lang="en">Element of knowledge and skills </rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/semed/eduprogression/v1#Knowledge">
+    <rdfs:comment xml:lang="en">It is represented by class Knowledge and each of its instances is a skos:Concept that is part of a skos:ConceptScheme that contains all the knowledge pieces of a given progression. An instance of EKS is related to an instance of Knowledge through property hasKnowledge.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/semed/eduprogression#"/>
+    <rdfs:label xml:lang="fr">Connaissance</rdfs:label>
+    <rdfs:label xml:lang="en">Knowledge </rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/semed/eduprogression/v1#LearningDomain">
+    <rdfs:comment xml:lang="en">A learning domain is represented by an instance of the LearningDomain class, and it is also an instance of skos:Concept that is part of (only) one skos:ConceptScheme containing the only learning domains of a progression. Also, as they are SKOS concepts, learning domains are hierarchically structured by using the skos:broader and/or skos:narrower properties. A learning domain can be associated to a Progression or to an EKS.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/semed/eduprogression#"/>
+    <rdfs:label xml:lang="fr">Domaine d'enseignement</rdfs:label>
+    <rdfs:label xml:lang="en">Learning domain</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/semed/eduprogression/v1#PointOfReference">
+    <rdfs:comment xml:lang="en">An instance of class PointOfReference represents an educational reference element on a specific element of knowledge and skills (an instance of EKS). An instance of EKS is related to an instance of class PointOfReference through the property hasPointOfReference.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/semed/eduprogression#"/>
+    <rdfs:label xml:lang="en">Point of reference</rdfs:label>
+    <rdfs:label xml:lang="fr">Repère</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/semed/eduprogression/v1#Progression">
+    <rdfs:comment xml:lang="en">A progression is represented by an instance of class Progression. It can be further described by using the Dublin Core or RDFS vocabularies. A progression can be associated to an existing learning domain (through the hasLearningDomain property) and to one or several EKSs (through the hasEKS property).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/semed/eduprogression#"/>
+    <rdfs:label xml:lang="en">Progression</rdfs:label>
+    <rdfs:label xml:lang="fr">Progression</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://ns.inria.fr/semed/eduprogression/v1#Skill">
+    <rdfs:comment xml:lang="en">It is represented by class Skill and described as well by using the Dublin Core and RDFS vocabularies. An instance of EKS is related to an instance of Skill through property hasSkill.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/semed/eduprogression#"/>
+    <rdfs:label xml:lang="fr">Competence</rdfs:label>
+    <rdfs:label xml:lang="en">Skill</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/semed/eduprogression/v1#hasCourse">
+    <rdfs:comment xml:lang="en">Relates an instance of EKS to an instance of Course.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/semed/eduprogression/v1#EKS"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/semed/eduprogression#"/>
+    <rdfs:label xml:lang="en">Has course</rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/semed/eduprogression/v1#Course"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/semed/eduprogression/v1#hasEKS">
+    <rdfs:comment xml:lang="en">Allows a progression to be associated to one or several EKSs.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/semed/eduprogression/v1#Progression"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/semed/eduprogression#"/>
+    <rdfs:label xml:lang="en">Has an associated EKS </rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/semed/eduprogression/v1#EKS"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/semed/eduprogression/v1#hasKnowledge">
+    <rdfs:comment xml:lang="en">Relates an instance of EKS to an instance of Knowledge.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/semed/eduprogression/v1#EKS"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/semed/eduprogression#"/>
+    <rdfs:label xml:lang="en">Has knowledge</rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/semed/eduprogression/v1#Knowledge"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/semed/eduprogression/v1#hasLearningDomain">
+    <rdfs:comment xml:lang="en">Associates a learning domain to a Progression or to an EKS.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/semed/eduprogression#"/>
+    <rdfs:label xml:lang="en">Has a learning sub domain</rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/semed/eduprogression/v1#LearningDomain"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/semed/eduprogression/v1#hasPointOfReference">
+    <rdfs:comment xml:lang="en">Relates an instance of EKS to an instance of class PointOfReference.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/semed/eduprogression/v1#EKS"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/semed/eduprogression#"/>
+    <rdfs:label xml:lang="en">Has point of reference</rdfs:label>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/semed/eduprogression/v1#hasRelatedResource">
+    <rdfs:comment xml:lang="en">Associates an instance of a class with a resource on DBpedia</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/semed/eduprogression#"/>
+    <rdfs:label xml:lang="en">Has realted resource on DBpedia</rdfs:label>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/semed/eduprogression/v1#hasSkill">
+    <rdfs:comment xml:lang="en">Relates an instance of EKS to an instance of Skill.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/semed/eduprogression/v1#EKS"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/semed/eduprogression#"/>
+    <rdfs:label xml:lang="en">Has skill</rdfs:label>
+    <rdfs:range rdf:resource="http://ns.inria.fr/semed/eduprogression/v1#Skill"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://ns.inria.fr/semed/eduprogression/v1#hasVocabularyItem">
+    <rdfs:comment xml:lang="en">Relates an instance of EKS to an instance of the class VocabularyItem.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://ns.inria.fr/semed/eduprogression/v1#EKS"/>
+    <rdfs:isDefinedBy rdf:resource="http://ns.inria.fr/semed/eduprogression#"/>
+    <rdfs:label xml:lang="en">Has a vocabulary item</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:ObjectProperty>
+
+</rdf:RDF>

@@ -1,0 +1,2026 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.data-knowledge.org/dk/"
+     xml:base="http://www.data-knowledge.org/dk/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/">
+    <owl:Ontology rdf:about="http://www.data-knowledge.org/dk/">
+        <ns:license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agatha Dabrowski</terms:creator>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erik Thordsen</terms:creator>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martin Böhmer</terms:creator>
+        <terms:description xml:lang="de">Das Data-Knowledge-Vokabular erlaubt die verständliche Beschreibung von Datengütern und dem Datenmanagement in Unternehmen. Es deckt Bereiche der Geschäftsdatendefinition, des Datenqualitätsmanagement, der Daten-Governance, der technischen Infrastruktur und viele weitere Aspekte des Datenmanagements in Unternehmen ab. Das Vokabular repräsentiert eine Linked-Data-Implementierung des Datenwissen-Modells, welches ein Resultat umfassender angewandter Forschung ist.</terms:description>
+        <terms:description xml:lang="en">The Data Knowledge Vocabulary allows for a comprehensive description of data assets and enterprise data management. It covers a business data dictionary, data quality management, data governance, the technical infrastructure and many other aspects of enterprise data management. The vocabulary represents a linked data implementation of the Data Knowledge Model which resulted from extensive applied research.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-11-10</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-06-15</terms:modified>
+        <terms:publisher rdf:resource="http://de.dbpedia.org/resource/Fraunhofer-Gesellschaft"/>
+        <terms:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</terms:rights>
+        <terms:title xml:lang="de">Das Data-Knowledge-Vokabular</terms:title>
+        <terms:title xml:lang="en">The Data Knowledge Vocabulary</terms:title>
+        <bibo:status xml:lang="en">Ontology Specification</bibo:status>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dk</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.data-knowledge.org/dk/</vann:preferredNamespaceUri>
+        <rdfs:label xml:lang="de">Das Data-Knowledge-Vokabular</rdfs:label>
+        <rdfs:label xml:lang="en">The Data Knowledge Vocabulary</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.data-knowledge.org/"/>
+        <owl:priorVersion rdf:resource="http://www.data-knowledge.org/dk/1.1/"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/hasPart -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasPart"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/isPartOf -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isPartOf"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/example"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/addresses -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/addresses">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/TrainingOpportunity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <vann:example xml:lang="en">Web-based training session on the business effects of poor data quality</vann:example>
+        <vann:example xml:lang="de">Web-basierte Trainingssitzung zu den geschäftlichen Konsequenzen von schlechter Datenqualität</vann:example>
+        <rdfs:comment xml:lang="en">A training addresses specific Roles, Organizational Units, Business Object Types, Applications etc. A person can thus participate in appropriate trainings that are either meant for specific Roles or address specific topics</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein Training adressiert spezifische Rollen, Organisationseinheiten, Geschäftsobjekttypen, Applikationen etc. Eine Person kann somit an passenden Trainingsmöglichkeiten teilnehmen, die entweder für spezielle Rollen gedacht sind oder spezifische Dinge thematisieren</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">addresses</rdfs:label>
+        <rdfs:label xml:lang="de">adressiert</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/affectsApplication -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/affectsApplication">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/ChangeRequest"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/Application"/>
+        <vann:example xml:lang="en">Change Request &apos;add field &apos;kna1&apos; to Application &apos;ERP System&apos;</vann:example>
+        <vann:example xml:lang="de">Änderungsanfrage &apos;füge Feld &apos;kna1&apos; zu Applikation &apos;ERP-System&apos; hinzu</vann:example>
+        <rdfs:comment xml:lang="en">A Change Requests affects an Application</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Änderungsanfrage betrifft eine Aplikation</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">affects Application</rdfs:label>
+        <rdfs:label xml:lang="de">betrifft Applikation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/affectsDataConceptualization -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/affectsDataConceptualization">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/ChangeRequest"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/DataConceptualization"/>
+        <vann:example xml:lang="en">Change Request &apos;add field &apos;age&apos; to customer&apos; affects BOT &apos;Customer&apos;</vann:example>
+        <vann:example xml:lang="de">Änderungsanfrage &apos;füge Feld &apos;Alter&apos; zu Kunde hinzu&apos; betrifft BOT &apos;Kunde&apos;</vann:example>
+        <rdfs:comment xml:lang="en">A Change Requests affects a Data Conceptualization</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Änderungsanfrage betrifft eine Daten-Konzeptualisierung</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">affects Data Conceptualization</rdfs:label>
+        <rdfs:label xml:lang="de">betrifft Daten-Konzeptualisierung</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/answersQuestionAbout -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/answersQuestionAbout">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/FAQ"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <vann:example xml:lang="en">How much improvisation in data management processes is allowed?</vann:example>
+        <vann:example xml:lang="de">Was ist ein Dateneigentümer?</vann:example>
+        <vann:example xml:lang="de">Was ist eine Trainingsmöglichkeit?</vann:example>
+        <vann:example xml:lang="de">Was versteht man unter Stammdaten?</vann:example>
+        <vann:example xml:lang="en">What is Master Data?</vann:example>
+        <vann:example xml:lang="en">What is a Data Owner?</vann:example>
+        <vann:example xml:lang="en">What is a training opportunity?</vann:example>
+        <vann:example xml:lang="en">Where do I find Mr. Doe?</vann:example>
+        <vann:example xml:lang="de">Wie viel Improvisation ist in Datenmanagementprozessen erlaubt?</vann:example>
+        <vann:example xml:lang="de">Wo finde ich Hr. Reh?</vann:example>
+        <rdfs:comment xml:lang="en">FAQ answer questions about various model areas. As this is a universal property, it is intended to be used with all classes of the model. Thus, the range has not been restricted.</rdfs:comment>
+        <rdfs:comment xml:lang="de">FAQ beantworten Fragen zu verschiedenen Modellbereichen. Da es sich hierbei um eine universelle Relation handelt, ist vorgesehen, dass sie auf alle Klassen des Modells angewandt werden kann. Daher wurde der Wertebereich nicht eingeschränkt.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">answers question about</rdfs:label>
+        <rdfs:label xml:lang="de">beantwortet Fragen zu</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/appliesTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/appliesTo">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/Regulation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <vann:example xml:lang="de">Arbeitssicherheit bei der Ausführung bestimmter Tätigkeiten</vann:example>
+        <vann:example xml:lang="en">Internal regulations on Report design</vann:example>
+        <vann:example xml:lang="de">Interne Vorschriften bzgl. des Berichts-Designs</vann:example>
+        <vann:example xml:lang="en">Safety at work when executing specific tasks</vann:example>
+        <vann:example xml:lang="en">Shipping regulations concerning BOT &apos;customer&apos; with non-EU address</vann:example>
+        <vann:example xml:lang="de">Versandvorschriften bezüglich BOT &apos;Kunde&apos; mit Adresse außerhalb der EU</vann:example>
+        <rdfs:comment xml:lang="en">Regulations can apply to all kinds of instances. As this is a universal property, it is intended to be used with all classes of the model. Thus, the range has not been restricted.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Vorschriften können für alle Arten von Instanzen gelten. Da es sich hierbei um eine universelle Relation handelt, ist vorgesehen, dass sie auf alle Klassen des Modells angewandt werden kann. Daher wurde der Wertebereich nicht eingeschränkt.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">applies to</rdfs:label>
+        <rdfs:label xml:lang="de">gilt für</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/basedOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/basedOn">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/KpiDefinition"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/BusinessRule"/>
+        <vann:example xml:lang="en">KPI Definition: &apos;Number of customers without tax ID&apos; is based on BR: &apos;Tax ID must be provided&apos;</vann:example>
+        <vann:example xml:lang="de">KPI-Definition: &apos;Anzahl von Kunden ohne Steuer-ID&apos; basiert auf BR: &apos;Steuer-ID muss vorhanden sein&apos;</vann:example>
+        <rdfs:comment xml:lang="en">A KPI Definition is based on a Business Rule (BR)</rdfs:comment>
+        <rdfs:comment xml:lang="de">Die Definition einer Leistungskennzahl (KPI Definition) basier auf einer Geschäftsregel (BR).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">based on</rdfs:label>
+        <rdfs:label xml:lang="de">basiert auf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/comprises -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/comprises">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/Report"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <vann:example xml:lang="en">Spread sheet with charts showing various quality aspects of customer data</vann:example>
+        <vann:example xml:lang="de">Tabellenkalkulation mit Schaubildern, die verschiedene Qualitätsaspekte von Kundendaten zeigen</vann:example>
+        <rdfs:comment xml:lang="en">A Report comprises certain KPI Measurements and their definitions</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein Bericht umfasst gewisse Leistungskennzahlen (KPIs) und ihre Definitionen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="de">beinhaltet</rdfs:label>
+        <rdfs:label xml:lang="en">comprises</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/computedOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/computedOn">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/DataAsset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/cooperatesWith -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/cooperatesWith">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <vann:example xml:lang="de">Datenschutzmanager kooperiert mit globalem Dateneigentümer</vann:example>
+        <vann:example xml:lang="en">Privacy manager cooperates with global data owner</vann:example>
+        <rdfs:comment xml:lang="de">Organisationseinheiten und Rollen können kooperieren</rdfs:comment>
+        <rdfs:comment xml:lang="en">Organizational Units and Roles can cooperate</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">cooperates with</rdfs:label>
+        <rdfs:label xml:lang="de">kooperiert mit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/definesIntegrityOfAttribute -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/definesIntegrityOfAttribute">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/BusinessRule"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/BusinessObjectAttribute"/>
+        <vann:example xml:lang="de">BR: &apos;E-Mail-Validierung ErsatzteilGmbH&apos; definiert die Integrität des BOA &apos;email&apos; des Kunden Kunden (BO) &apos;Ersatzteil GmbH&apos;</vann:example>
+        <vann:example xml:lang="en">BR: &apos;eMail validation SparePartsLtd&apos; defines the integrity of the BOA &apos;email&apos; of the customer (BO) &apos;Spare Parts Ltd&apos;</vann:example>
+        <rdfs:comment xml:lang="en">A Business Rule (BR) defines the integrity of a single Business Object Attribute (BOA). This property is used for relations between BR and BOAs and defines instance-specific rules</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Geschäftsregel (BR) definiert die Integrität eines einzelnen Geschäftsobjekttyp-Attributs (BOAs)). Diese Relation wird für Verbindungen zwischen BR und BOTAs genutzt und definiert instanzspezifische Regeln</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">defines integrity of attribute</rdfs:label>
+        <rdfs:label xml:lang="de">definiert die Integrität von Attribut</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/definesIntegrityOfObject -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/definesIntegrityOfObject">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/BusinessRule"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/BusinessObject"/>
+        <vann:example xml:lang="de">BR: &apos;Steuer-ID muss vorhanden sein&apos; definiert die Integrität von BOs des Typs &apos;Kunde&apos;</vann:example>
+        <vann:example xml:lang="en">BR: &apos;Tax ID must be provided&apos; defines the integrity of BOs of Type &apos;customer&apos;</vann:example>
+        <rdfs:comment xml:lang="en">A Business Rule (BR) defines the integrity of Business Objects (BOs), i.e. across multiple Business Object Attributes (BOAs). This property is used for relations between BR and BOs to define instance-specific rules</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Geschäftsregel (BR) definiert die Integrität von Geschäftsobjekten (BOs), d.h. über mehrere ihrer Geschäftsobjekt-Attribute (BOAs). Diese Relation wird für Verbindungen zwischen BR und BOs genutzt und definiert instanzspezifische Regeln</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">defines integrity of object</rdfs:label>
+        <rdfs:label xml:lang="de">definiert die Integrität von Objekt</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/definesIntegrityOfType -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/definesIntegrityOfType">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/BusinessRule"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/DataConceptualization"/>
+        <vann:example xml:lang="de">BR: &apos;Steuer-ID muss vorhanden sein&apos; definiert die Integrität von Instanzen des BOT &apos;Kunde&apos;</vann:example>
+        <vann:example xml:lang="en">BR: &apos;Tax ID must be provided&apos; defines the integrity of instances of BOT &apos;customer&apos;</vann:example>
+        <rdfs:comment xml:lang="en">A Business Rule (BR) defines the integrity of Business Object Types (BOTs), Business Object Type Attributes (BOTAs) and entire Business Object Domains (BODS) as a collection of BOTs and BOTAs. This property is used for relations between BR and BODs/BOTs/BOTAs, which are part of a Data Conceptualization. It defines type-level rules</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Geschäftsregel (BR) definiert die Integrität von Geschäftsobjekttypen (BOTs), Geschäftsobjekttyp-Attributen (BOTAs) und Geschäftsobjekt-Domänen (BODs) als Sammlung von BOTs und BOTAs. Diese Relation wird für Verbindungen zwischen BR und BODs/BOTs/BOTAs genutzt, welche Teil einer Daten-Konzeptualisierung sind. Sie definiert Regeln auf Typebene</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">defines integrity of type</rdfs:label>
+        <rdfs:label xml:lang="de">definiert die Integrität von Typ</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/definesLifecycleOfInstances -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/definesLifecycleOfInstances">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/DataLifecycle"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/DataConceptualization"/>
+        <vann:example xml:lang="de">Der Lebenszyklus von Geschäftsobjeten des BOT &apos;Sendung&apos; ist definiert durch den Sendsungslebenszyklus: &apos;Sendungsdaten erfasst&apos;,&apos;Bearbeitet im Start-Paketzentrum&apos;, &apos;Bearbeitet im Ziel-Paketzentrum&apos;, &apos;ausgeliefert&apos;</vann:example>
+        <vann:example xml:lang="en">The life cycle of Business Objects of BOT &apos;Shipment&apos; is defined by the Shipment Life Cycle: &apos;Shipment data collected&apos;, &apos;Handled at start parcel center&apos;, &apos;Handled at destination parcel center&apos;, &apos;Delivered&apos;</vann:example>
+        <rdfs:comment xml:lang="en">Specifies the life cycle of the Business Object instances on the conceptual type level. The current life cycle state of an individual Business Object is referred to from each Business Object via the property lifecycle:state.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Spezifiziert den Lebenszyklus der Geschäftsobjektinstanzen auf der konzeptuellen Typebene. Der aktuelle Lebenszyklusstatus eines individuellen Geschäftsobjekts wird von jedem Geschäftsobjekt über die Relation lifecycle:state referenziert.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">defines lifecycle of instances</rdfs:label>
+        <rdfs:label xml:lang="de">definiert den Lebenszyklus von Instanzen</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/documents -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/documents">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/SupplementaryDocumentation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <vann:example xml:lang="en">Graphic representation of data flows</vann:example>
+        <vann:example xml:lang="de">Graphische Repräsentation von Datenflüssen</vann:example>
+        <vann:example xml:lang="en">Presentations of past trainings</vann:example>
+        <vann:example xml:lang="de">Präsentationen von vergangenen Trainings</vann:example>
+        <vann:example xml:lang="en">Video about how to initiate a project</vann:example>
+        <vann:example xml:lang="de">Video darüber, wie man ein neues Projekt beginnt</vann:example>
+        <vann:example xml:lang="en">Wiki-Page with best practices</vann:example>
+        <vann:example xml:lang="de">Wiki-Seite mit Best Practices</vann:example>
+        <rdfs:comment xml:lang="de">Ergänzende Dokumentation dokumentiert verschiedene Modellbereiche. Da es sich hierbei um eine universelle Relation handelt, ist vorgesehen, dass sie auf alle Klassen des Modells angewandt werden kann. Daher wurde der Wertebereich nicht eingeschränkt.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Supplementary documentation documents various model areas. As this is a universal property, it is intended to be used with all classes of the model. Thus, the range has not been restricted.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">documents</rdfs:label>
+        <rdfs:label xml:lang="de">dokumentiert</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/fillsRole -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/fillsRole">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/Person"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/Role"/>
+        <vann:example xml:lang="de">Fr. Müller ist die Datenmanagerin für die Abteilung &apos;Beschaffung&apos;</vann:example>
+        <vann:example xml:lang="en">Mrs. Miller is the data manager for department &apos;procurement&apos;</vann:example>
+        <rdfs:comment xml:lang="de">Personen können Rollen übernehmen</rdfs:comment>
+        <rdfs:comment xml:lang="en">Persons can fill Roles</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">fills Role</rdfs:label>
+        <rdfs:label xml:lang="de">übernimmt Rolle</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/flowsFrom -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/flowsFrom">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/DataFlow"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/ApplicationInterface"/>
+        <vann:example xml:lang="en">Master data repository sends out dataset 324</vann:example>
+        <vann:example xml:lang="de">Stammdatenspeicher sendet Datensatz 324</vann:example>
+        <rdfs:comment xml:lang="en">Interface A sends data</rdfs:comment>
+        <rdfs:comment xml:lang="de">Schnittstelle A sendet Daten</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="de">fließt von</rdfs:label>
+        <rdfs:label xml:lang="en">flows from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/flowsTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/flowsTo">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/DataFlow"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/ApplicationInterface"/>
+        <vann:example xml:lang="en">Dataset 324 is sent to ERP system</vann:example>
+        <vann:example xml:lang="de">Datensatz 324 wird an ERP-System gesendet</vann:example>
+        <rdfs:comment xml:lang="en">Data is sent to Interface B</rdfs:comment>
+        <rdfs:comment xml:lang="de">Daten werden zu Schnittstelle B gesendet</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="de">fließt an</rdfs:label>
+        <rdfs:label xml:lang="en">flows to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/hasApplicationLifecycle -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/hasApplicationLifecycle">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/Application"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/ApplicationLifecycle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/hasDataLifecycle -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/hasDataLifecycle">
+        <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/DataLifecycle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/hasKnowledgeLifecycle -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/hasKnowledgeLifecycle">
+        <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/KnowledgeLifecycle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/hasRole -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/hasRole">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/OrganizationalUnit"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/Role"/>
+        <vann:example xml:lang="de">Abteilung A ist der Stammdateneigentümer</vann:example>
+        <vann:example xml:lang="en">Department A is the Master Data Owner</vann:example>
+        <rdfs:comment xml:lang="de">Organisationseinheiten können Rollen innehaben</rdfs:comment>
+        <rdfs:comment xml:lang="en">Organizational Units can have Roles</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">has Role</rdfs:label>
+        <rdfs:label xml:lang="de">hat Rolle</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/hasTerms -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/hasTerms">
+        <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/TermsOfUse"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/illustrates -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/illustrates">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/Example"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/DataConceptualization"/>
+        <vann:example xml:lang="de">Beispiel &apos;DE&apos; für BOTA &apos;Land&apos; verdeutlicht die korrekte Nutzung des BOTAs</vann:example>
+        <vann:example xml:lang="en">Example &apos;DE&apos; for BOTA &apos;country&apos; indicates correct use of BOTA</vann:example>
+        <rdfs:comment xml:lang="en">An example illustrates a Data Conceptualization</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein Beispiel illustriert eine Daten-Konzeptualisierung</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">illustrates</rdfs:label>
+        <rdfs:label xml:lang="de">illustriert</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/initiatedByProcess -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/initiatedByProcess">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/ChangeRequest"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/DataManagementProcess"/>
+        <vann:example xml:lang="en">Data Management Process &apos;Customer data consistency management&apos; makes change request &apos;Add field &apos;age&apos; to customer&apos;</vann:example>
+        <vann:example xml:lang="de">Datenmanagementprozess  &apos;Kundendatenkonsistenzmanagement&apos; stellt Änderungsanfrage &apos;Füge Feld &apos;Alter&apos; zu Kunde hinzu&apos;</vann:example>
+        <rdfs:comment xml:lang="en">A Data Management Process initiates a change request</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein Datenmanagementprozess initiiert eine Änderungsanfrage</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">initiated by Process</rdfs:label>
+        <rdfs:label xml:lang="de">von Prozess initiiert</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/initiatedByProject -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/initiatedByProject">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/ChangeRequest"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/Project"/>
+        <vann:example xml:lang="en">Project &apos;Improvement of data distribution&apos; makes change request &apos;Add new distribution channel X&apos;</vann:example>
+        <vann:example xml:lang="de">Projekt &apos;Verbesserung der Datendistribution&apos; stellt Änderungsanfrage &apos;Füge neuen Distributionskanal X hinzu&apos;</vann:example>
+        <rdfs:comment xml:lang="en">A project initiates a change request</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein Projekt initiiert eine Änderungsanfrage</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">initiated by Project</rdfs:label>
+        <rdfs:label xml:lang="de">von Projekt initiiert</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/instantiatesBusinessType -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/instantiatesBusinessType">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/BusinessObject"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/BusinessObjectType"/>
+        <vann:example xml:lang="en">BO &apos;Customer 2338&apos; instantiates BOT &apos;Customer&apos;</vann:example>
+        <vann:example xml:lang="de">BO &apos;Kunde 2338&apos; instantiiert BOT &apos;Kunde&apos;</vann:example>
+        <rdfs:comment xml:lang="en">Connection from specific instances of BOs to conceptually coherent sets of BOTs</rdfs:comment>
+        <rdfs:comment xml:lang="de">Verknüpfung von spezifischen Instanzen von BOs zu konzeptuell kohärenten Mengen von BOTs</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">instantiates Business Object Type</rdfs:label>
+        <rdfs:label xml:lang="de">instantiiert Geschäftsobjekttyp</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/instantiatesTechnicalType -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/instantiatesTechnicalType">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/DataObject"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/DataObjectType"/>
+        <vann:example xml:lang="en">DO &apos;cst#2338&apos; represents DOT &apos;cst&apos;</vann:example>
+        <vann:example xml:lang="de">DO &apos;kd#2338&apos; repräsentiert DOT &apos;kd&apos;</vann:example>
+        <rdfs:comment xml:lang="en">Connection from specific instances of DOs to conceptually coherent sets of DOTs</rdfs:comment>
+        <rdfs:comment xml:lang="de">Verknüpfung von spezifischen Instanzen von DOs zu konzeptuell kohärenten Mengen von DOTs</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">instantiates Data Object Type</rdfs:label>
+        <rdfs:label xml:lang="de">instantiiert den Datenobjekttyp</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/isMeasurementOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/isMeasurementOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/isReleatedTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/isReleatedTo">
+        <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/maintains -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/maintains">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/DataManagementProcess"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/DataAsset"/>
+        <vann:example xml:lang="en">&apos;Customer data consistency management, group 4&apos; maintains all customer master data from a particular CRM</vann:example>
+        <vann:example xml:lang="de">&apos;Kundendatenkonsistenzmanagement, Gruppe 4&apos; pflegt die Konsistenz der gesamten Kundenstammdaten eines bestimmten CRM-Systems</vann:example>
+        <rdfs:comment xml:lang="en">Specific Data Management Processes maintain Data Assets</rdfs:comment>
+        <rdfs:comment xml:lang="de">Spezifische Datenmanagementprozesse pflegen Datengüter</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">maintains</rdfs:label>
+        <rdfs:label xml:lang="de">pflegt</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/maintainsInstancesOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/maintainsInstancesOf">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/DataManagementProcess"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/DataConceptualization"/>
+        <vann:example xml:lang="de">Der Datenmanagementprozess &apos;Adressänderung&apos; verändert Instanzen des BOTAs &apos;strasse&apos;, &apos;hausnummer&apos;, &apos;plz&apos;, &apos;stadt&apos; des BOT &apos;Kunde&apos;</vann:example>
+        <vann:example xml:lang="de">Der Datenmanagementprozess &apos;Anlage Produktstammdaten&apos; erzeugt Instanzen des BOT &apos;Kunde&apos;</vann:example>
+        <vann:example xml:lang="en">The data management process &apos;Address change&apos; modifies instances of the BOTAs &apos;address-line1&apos;, &apos;address-line2&apos;, &apos;postal-code&apos;, &apos;city&apos; of BOT &apos;Customer&apos;</vann:example>
+        <vann:example xml:lang="en">The data management process &apos;Product master data creation&apos; generates Instances of BOT &apos;Customer&apos;</vann:example>
+        <rdfs:comment xml:lang="en">Specific Data Management Processes maintain instances of Data Conceptualizations</rdfs:comment>
+        <rdfs:comment xml:lang="de">Spezifische Datenmanagementprozesse pflegen Instanzen von Daten-Konzeptualisierungen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">maintains instances of</rdfs:label>
+        <rdfs:label xml:lang="de">pflegt Instanzen von</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/mapsFrom -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/mapsFrom">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/Mapping"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <vann:example xml:lang="en">Mapping class &apos;GlobalMasterDataMapping&apos; maps from DOT &apos;MstrDat8&apos; and maps to BOT &apos;Global Master Data&apos; with usage comments and documentation added</vann:example>
+        <vann:example xml:lang="de">Zuordnungsklasse &apos;GlobaleStammdatenMapping&apos; ordnet zu von DOT &apos;MstrDat8&apos; und ordnet zu zu BOT &apos;Globale Stammdaten&apos; mit angefügten Nutzungskommentaren und Dokumentation zu</vann:example>
+        <rdfs:comment xml:lang="en">A specific Mapping Class assigns various representations of the same concepts, i.e in a conceptual vs. technical view (possibly in different data formats, e.g. Java or XML objects). 
+ Code Mappings map from Code to NamedValue ;
+ Type Mappings map from BusinessObjectType to DataObjectType ;
+ Attribute Mappings map from BusinessObjectTypeAttribute to DataObjectTypeAttribute ;
+ Schema Mappings map from DataObjectTypeAttribute to DataObjectTypeAttribute ;
+ Key Mappings map from Business to DataObject</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine spezifische Zuordnungs-Klasse (Mapping) weist verschiedene Repräsentationen des selben Konzeptes zu, dh. hinsichtlich einer konzeptuellen ggü. einer technischen Sicht (möglicherweise in verschiedenen Datenformaten, z.B. Java oder XML-Objekte). 
+ Code Mappings ordnen zu von Code zu NamedValue ;
+ Type Mappings ordnen zu von BusinessObjectType zu DataObjectType ;
+ Attribute Mappings ordnen zu von BusinessObjectTypeAttribute zu DataObjectTypeAttribute ;
+ Schema Mappings ordnen zu von DataObjectTypeAttribute zu DataObjectTypeAttribute ;
+ Key Mappings ordnen zu von Business zu DataObject</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">maps from</rdfs:label>
+        <rdfs:label xml:lang="de">ordnet zu von</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/mapsTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/mapsTo">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/Mapping"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <vann:example xml:lang="en">Mapping class &apos;GlobalMasterDataMapping&apos; maps from DOT &apos;MstrDat8&apos; and maps to BOT &apos;Global Master Data&apos; with usage comments and documentation added</vann:example>
+        <vann:example xml:lang="de">Zuordnungsklasse &apos;GlobaleStammdatenMapping&apos; ordnet zu von DOT &apos;MstrDat8&apos; und ordnet zu zu BOT &apos;Globale Stammdaten&apos; mit angefügten Nutzungskommentaren und Dokumentation zu</vann:example>
+        <rdfs:comment xml:lang="en">A specific Mapping Class assigns various representations of the same concepts, i.e in a conceptual vs. technical view (possibly in different data formats, e.g. Java or XML objects). 
+ Code Mappings map from Code to NamedValue ;
+ Type Mappings map from BusinessObjectType to DataObjectType ;
+ Attribute Mappings map from BusinessObjectTypeAttribute to DataObjectTypeAttribute ;
+ Schema Mappings map from DataObjectTypeAttribute to DataObjectTypeAttribute ;
+ Key Mappings map from Business to DataObject</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine spezifische Zuordnungs-Klasse (Mapping) weist verschiedene Repräsentationen des selben Konzeptes zu, dh. hinsichtlich einer konzeptuellen ggü. einer technischen Sicht (möglicherweise in verschiedenen Datenformaten, z.B. Java oder XML-Objekte). 
+ Code Mappings ordnen zu von Code zu NamedValue ;
+ Type Mappings ordnen zu von BusinessObjectType zu DataObjectType ;
+ Attribute Mappings ordnen zu von BusinessObjectTypeAttribute zu DataObjectTypeAttribute ;
+ Schema Mappings ordnen zu von DataObjectTypeAttribute zu DataObjectTypeAttribute ;
+ Key Mappings ordnen zu von Business zu DataObject</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">maps to</rdfs:label>
+        <rdfs:label xml:lang="de">ordnet zu zu</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/refersToCodeList -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/refersToCodeList">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/BusinessObjectTypeAttribute"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/CodeList"/>
+        <vann:example xml:lang="de">BOTA &apos;Land&apos; verweist auf eine fixe Code-Liste von Ländercodes</vann:example>
+        <vann:example xml:lang="en">BOTA &apos;country&apos; refers to fixed Code List of country codes</vann:example>
+        <rdfs:comment xml:lang="en">A reference from a BOTA to a Code List</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein Verweis von einem BOTA zu einer Code-Liste</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">refers to Code List</rdfs:label>
+        <rdfs:label xml:lang="de">verweist auf Code-Liste</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/refersToEnumeration -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/refersToEnumeration">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/DataObjectTypeAttribute"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/Enumeration"/>
+        <vann:example xml:lang="en">DOTA &apos;ctry&apos; refers to fixed Enumeration of country codes</vann:example>
+        <vann:example xml:lang="de">DOTA &apos;ld&apos; verweist auf einen fixen Aufzählungstypen von Ländercodes</vann:example>
+        <rdfs:comment xml:lang="en">A reference from a DOTA to an Enumeration</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein Verweis von einem DOTA zu einem Aufzählungstyp</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">refers to Enumeration</rdfs:label>
+        <rdfs:label xml:lang="de">verweist auf Aufzählungstyp</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/responsibleFor -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/responsibleFor">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/Responsibility"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <vann:example xml:lang="en">Data manager for procurement data is responsible for BOT &apos;supplier&apos; and BOT &apos;procurement order&apos;</vann:example>
+        <vann:example xml:lang="de">Datenmanager für Beschaffungsdaten ist verantwortlich für BOT &apos;Lieferant&apos; und BOT &apos;Beschaffungsauftrag&apos;</vann:example>
+        <rdfs:comment xml:lang="en">Specific assignment of a responsibility for a particular scope. As this is a universal property, it is intended to be used with all classes of the model. Thus, the range has not been restricted.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Spezifische Zuweisung einer Verantwortlichkeit für einen gewissen Bereich. Da es sich hierbei um eine universelle Relation handelt, ist vorgesehen, dass sie auf alle Klassen des Modells angewandt werden kann. Daher wurde der Wertebereich nicht eingeschränkt.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">responsible for</rdfs:label>
+        <rdfs:label xml:lang="de">verantwortlich für</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/takesOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/takesOn">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/Role"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/Responsibility"/>
+        <vann:example xml:lang="en">Master Data Owner takes on responsibility &apos;Master Data Owner for BOT Customer Master Data in China&apos; which refers to respective BOT</vann:example>
+        <vann:example xml:lang="de">Stammdateneigentümer übernimmt die Verantwortlichkeit &apos;Stammdateneigentümer für BOT Kundenstammdaten in China&apos; welche auf den entsprechenden BOT verweist</vann:example>
+        <rdfs:comment xml:lang="en">Roles can take on specific responsibilites</rdfs:comment>
+        <rdfs:comment xml:lang="de">Rollen können spezifische Verantwortungen übernehmen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">takes on</rdfs:label>
+        <rdfs:label xml:lang="de">übernimmt</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/tracks -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/tracks">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/ChangeHistory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <vann:example xml:lang="de">Neuer FAQ-Eintrag</vann:example>
+        <vann:example xml:lang="de">Neuer Name für Organisationseinheit</vann:example>
+        <vann:example xml:lang="en">New FAQ entry</vann:example>
+        <vann:example xml:lang="en">New name for organizational unit</vann:example>
+        <rdfs:comment xml:lang="de">Die Änderungshistorie dokumentiert Änderungen an Instanzen. Da es sich hierbei um eine universelle Relation handelt, ist vorgesehen, dass sie auf alle Klassen des Modells angewandt werden kann. Daher wurde der Wertebereich nicht eingeschränkt.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The change history keeps track of changes to instances. As this is a universal property, it is intended to be used with all classes of the model. Thus, the range has not been restricted.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">tracks</rdfs:label>
+        <rdfs:label xml:lang="de">verfolgt</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/transfersData -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/transfersData">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/DataFlow"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/SchemaMapping"/>
+        <vann:example xml:lang="de">Es findet ein Datenfluss vom ERP-System zum WMS-System statt, welcher Materialstammdaten überträgt. Die Schema-Zuordnung, auf die von diesem Datenfluss verwiesen wird, spezifiziert dass er den DOT &apos;Material Master&apos; auf der ERP-Seite mit den Attributen (DOTAs) &apos;mat_nr&apos;, &apos;mat_descr&apos;, etc. beinhaltet. Auf der WMS-Seite werden diese Daten mittels des DOTs &apos;ItemMaster&apos; und den DOTAs &apos;im_id&apos;, &apos;im_nm&apos;, etc. repräsentiert. Das Schema kann außerdem genauer spezifizieren, dass &apos;mat_nr&apos; &apos;im_id&apos; zugeordnet ist, &apos;mat_descr&apos; &apos;im_nm&apos;, etc.</vann:example>
+        <vann:example xml:lang="en">There is a Data Flow from the ERP system to the WMS system that transfers material master data. The Schema Mapping referenced by this Data Flow specifies, that it involves the Data Object Type &apos;Material Master&apos; on the ERP side with Data Object Type Attributes &apos;mat_nr&apos;, &apos;mat_descr&apos;, etc. On the WMS side, this data is represented by the Data Object Type &apos;ItemMaster&apos; with Data Object Type Attributes &apos;im_id&apos;, &apos;im_nm&apos;, etc. The Schema may also specify that &apos;mat_nr&apos; maps to &apos;im_id&apos;, &apos;mat_descr&apos; to &apos;im_nm&apos;, etc.</vann:example>
+        <rdfs:comment xml:lang="de">Diese Relation spezifiziert, welche Daten konkret im Rahmen des Datenflusses übermittelt werden. Hierzu müssen die Daten aus der Quellapplikation, repräsentiert durch einen Datenobjekttyp (DOT), den von der Zielapplikation erwarteten Daten zugewiesen werden, welche ebenfalls durch einen Datenobjekttyp (DOT) repräsentiert werden. Somit verbindet diese Relation einen Datenfluss mit einer Schema-Zuordnung, die die Quell- und Ziel-DOTs und ihre Zuordnung beschreibt.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property specifies what data is actually transferred by the data flow. This requires the data from the source application, represented by a Data Object Type, to be mapped to the data expected by the target application, also represented by a Data Object Type. Consequently, this property links a Data Flow with a Schema Mapping that outlines the source and target Data Object Types and how they map.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">transfers data</rdfs:label>
+        <rdfs:label xml:lang="de">übermittelt Daten</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/uses -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/uses">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/BusinessProcess"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/DataAsset"/>
+        <vann:example xml:lang="en">Business Process A uses the entirety of customer master data from a particular CRM</vann:example>
+        <vann:example xml:lang="de">Geschäftsprozess A nutzt die gesamten Kundenstammdaten eines bestimmten CRM-Systems</vann:example>
+        <rdfs:comment xml:lang="en">Business Processes consume or use Data Assets</rdfs:comment>
+        <rdfs:comment xml:lang="de">Geschäftsprozesse konsumieren oder nutzen Datengüter</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="de">nutzt</rdfs:label>
+        <rdfs:label xml:lang="en">uses</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/usesInstancesOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/usesInstancesOf">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/BusinessProcess"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/DataConceptualization"/>
+        <vann:example xml:lang="de">Der Lagerprozess &apos;Wareneingang&apos; nutzt Instanzen des BOT &apos;Sendung&apos;</vann:example>
+        <vann:example xml:lang="de">Der Prozess &apos;Angebotserstellung&apos; nutzt die BOTAs &apos;ID&apos; und &apos;Name&apos; des BOT &apos;Kunde&apos; und die BOTAs &apos;id&apos;, &apos;name&apos; und &apos;preis&apos; des BOT &apos;Produkt&apos;</vann:example>
+        <vann:example xml:lang="en">The business process &apos;Create quote&apos; uses instances of the BOTAs &apos;id&apos; and &apos;name&apos; of BOT &apos;customer&apos; and BOTAs &apos;id&apos;, &apos;name&apos; and &apos;price&apos; of BOT &apos;product&apos;</vann:example>
+        <vann:example xml:lang="en">The warehousing process &apos;Receiving&apos; uses instances of BOT &apos;Shipping&apos;</vann:example>
+        <rdfs:comment xml:lang="en">Business Processes consume or use instances of Data Conceptualizations</rdfs:comment>
+        <rdfs:comment xml:lang="de">Geschäftsprozesse konsumieren oder nutzen Instanzen von Daten-Konzeptualisierungen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="de">nutzt Instanzen von</rdfs:label>
+        <rdfs:label xml:lang="en">uses instances of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/worksOnApplication -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/worksOnApplication">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/Project"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/Application"/>
+        <vann:example xml:lang="en">Project &apos;Modernization of transport-related data&apos; works on Transport Management Software</vann:example>
+        <vann:example xml:lang="de">Projekt &apos;Modernisierung von transportbezogenen Daten&apos; arbeitet am Transportverwaltungssystem</vann:example>
+        <rdfs:comment xml:lang="en">Projects work on Applications, e.g. by creating or changing their data structures (Data Object Types) or application interfaces</rdfs:comment>
+        <rdfs:comment xml:lang="de">Projekte arbeiten an Applikationen, indem sie z.B. ihre Datenstrukturen (Datenobjekttypen) oder Schnittstellen erstellen oder verändern</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="de">arbeitet an Applikation</rdfs:label>
+        <rdfs:label xml:lang="en">works on Application</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/worksOnConceptualization -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.data-knowledge.org/dk/worksOnConceptualization">
+        <rdfs:domain rdf:resource="http://www.data-knowledge.org/dk/Project"/>
+        <rdfs:range rdf:resource="http://www.data-knowledge.org/dk/DataConceptualization"/>
+        <vann:example xml:lang="en">Project &apos;Modernization of transport-related data&apos; works on BOTs &apos;LoadSecuring&apos;,&apos;Packaging&apos;, &apos;Shipment&apos; and &apos;Transport&apos;</vann:example>
+        <vann:example xml:lang="de">Projekt &apos;Modernisierung von transportbezogenen Daten&apos; arbeitet an BOTs &apos;Ladungssicherung&apos;, &apos;Sendung&apos; und &apos;Transport&apos;</vann:example>
+        <rdfs:comment xml:lang="en">Projects work on Data Conceptualizations, e.g. by creating or changing Business Object Types</rdfs:comment>
+        <rdfs:comment xml:lang="de">Projekte arbeiten an Daten-Konzeptualisierungen, indem sie z.B. Geschäftsobjekttypen (BOTs) erstellen oder verändern</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="de">arbeitet an Konzeptualisierung</rdfs:label>
+        <rdfs:label xml:lang="en">works on Conceptualization</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/relation -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/relation"/>
+    
+
+
+    <!-- http://purl.org/dqm-vocabulary/v1/dqm#DataQualityScore -->
+
+
+    <owl:Class rdf:about="http://purl.org/dqm-vocabulary/v1/dqm#DataQualityScore">
+        <owl:equivalentClass rdf:resource="http://www.data-knowledge.org/dk/KpiMeasurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dqm-vocabulary/v1/dqm#DataRequirement -->
+
+
+    <owl:Class rdf:about="http://purl.org/dqm-vocabulary/v1/dqm#DataRequirement">
+        <owl:equivalentClass rdf:resource="http://www.data-knowledge.org/dk/BusinessRule"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/linked-data/cube#DataSet -->
+
+
+    <owl:Class rdf:about="http://purl.org/linked-data/cube#DataSet">
+        <owl:equivalentClass rdf:resource="http://www.data-knowledge.org/dk/DataAsset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/lifecycle/schema#Lifecycle -->
+
+
+    <owl:Class rdf:about="http://purl.org/vocab/lifecycle/schema#Lifecycle"/>
+    
+
+
+    <!-- http://purl.org/vocab/lifecycle/schema#Lifecyle -->
+
+
+    <owl:Class rdf:about="http://purl.org/vocab/lifecycle/schema#Lifecyle"/>
+    
+
+
+    <!-- http://purl.org/vocommons/voaf#Vocabulary -->
+
+
+    <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+    
+
+
+    <!-- http://purl.org/wai#Role -->
+
+
+    <owl:Class rdf:about="http://purl.org/wai#Role">
+        <owl:equivalentClass rdf:resource="http://www.data-knowledge.org/dk/Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/Application -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/Application">
+        <terms:hasPart rdf:resource="http://www.data-knowledge.org/dk/ApplicationInterface"/>
+        <terms:hasPart rdf:resource="http://www.data-knowledge.org/dk/DataObjectType"/>
+        <vann:example xml:lang="de">Enterprise Resource Planning System (ERP)</vann:example>
+        <vann:example xml:lang="en">Enterprise Resource Planning System (ERP)</vann:example>
+        <rdfs:comment xml:lang="en">An installed instance of an application that stores or processes data</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine installierte Instanz einer Anwendung, welche Daten speichert oder verarbeitet</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Application</rdfs:label>
+        <rdfs:label xml:lang="de">Applikation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/ApplicationInterface -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/ApplicationInterface">
+        <terms:isPartOf rdf:resource="http://www.data-knowledge.org/dk/Application"/>
+        <vann:example xml:lang="de">Der Web-Service des ERP-Systems</vann:example>
+        <vann:example xml:lang="en">ERP system&apos;s web-service</vann:example>
+        <rdfs:comment xml:lang="en">Technical specification of an application to exchange data</rdfs:comment>
+        <rdfs:comment xml:lang="de">Technische Spezifikation einer Applikation, um Daten auszutauschen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Application Interface</rdfs:label>
+        <rdfs:label xml:lang="de">Applikationsschnittstelle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/ApplicationLifecycle -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/ApplicationLifecycle"/>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/AttributeMapping -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/AttributeMapping">
+        <terms:isPartOf rdf:resource="http://www.data-knowledge.org/dk/Mapping"/>
+        <vann:example xml:lang="de">Das Geschäftsobjekttyp-Attribut (BOTA) &apos;Kundenname&apos; ist dem Datenobjekttyp-Attribut (DOTA) &apos;cust_nm&apos; im CRM-System und dem DOTA &apos;company_name&apos; im ERP-System zugeordnet.</vann:example>
+        <vann:example xml:lang="en">The Business Object Type Attribute &apos;Customer name&apos; is mapped to Data Object Type Attribute &apos;cust_nm&apos; in the CRM system and DOTA &apos;company_name&apos; in the ERP system.</vann:example>
+        <rdfs:comment xml:lang="en">Conceptual mapping of business definitions to technical representations for attributes.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Konzeptuelle Zuordnung von Geschäftsdefinitionen zu technischen Repräsentationen von Attributen.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="de">Attribut-Zuordnung</rdfs:label>
+        <rdfs:label xml:lang="en">Attribute Mapping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/BusinessObject -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/BusinessObject">
+        <terms:hasPart rdf:resource="http://www.data-knowledge.org/dk/BusinessObjectAttribute"/>
+        <vann:example xml:lang="de">Lieferant &apos;Fluid Supply Ltd&apos;</vann:example>
+        <vann:example xml:lang="en">Supplier &apos;Fluid Supply Ltd&apos;</vann:example>
+        <rdfs:comment xml:lang="en">Specific, individual instance of a Business Object Type (BOT)</rdfs:comment>
+        <rdfs:comment xml:lang="de">Spezifische, individuelle Instanz eines Geschäftsobjekttyps (BOT)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Business Object (BO)</rdfs:label>
+        <rdfs:label xml:lang="de">Geschäftsobjekt (BO)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/BusinessObjectAttribute -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/BusinessObjectAttribute">
+        <terms:isPartOf rdf:resource="http://www.data-knowledge.org/dk/BusinessObject"/>
+        <vann:example xml:lang="de">Steuer-ID &apos;DE-123456-789&apos;</vann:example>
+        <vann:example xml:lang="en">Tax ID &apos;DE-123456-789&apos;</vann:example>
+        <rdfs:comment xml:lang="en">Specific, individual instance of a Business Object Type Attribute (BOTA)</rdfs:comment>
+        <rdfs:comment xml:lang="de">Spezifische, individuelle Instanz eines Geschäftsobjekttyp-Attributs (BOTA)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Business Object Attribute (BOA)</rdfs:label>
+        <rdfs:label xml:lang="de">Geschäftsobjekt-Attribut (BOA)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/BusinessObjectDomain -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/BusinessObjectDomain"/>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/BusinessObjectType -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/BusinessObjectType"/>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/BusinessObjectTypeAttribute -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/BusinessObjectTypeAttribute"/>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/BusinessProcess -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/BusinessProcess">
+        <vann:example xml:lang="de">Bestellung, Auslieferung, Rechnungsstellung</vann:example>
+        <vann:example xml:lang="en">Ordering, delivering, invoicing</vann:example>
+        <rdfs:comment xml:lang="de">Abfolge von Tätigkeiten, die Daten konsumieren oder von ihnen abhängen (Datennutzungsperspektive)</rdfs:comment>
+        <rdfs:comment xml:lang="en">Sequence of activities consuming or relying on data (data usage perspective)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Business Process</rdfs:label>
+        <rdfs:label xml:lang="de">Geschäftsprozess</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/BusinessRule -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/BusinessRule">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/ns/dqv#QualityPolicy"/>
+        <vann:example xml:lang="de">Steuer-ID muss vorhanden sein</vann:example>
+        <vann:example xml:lang="en">Tax ID must be provided</vann:example>
+        <rdfs:comment xml:lang="en">Defines the integrity of a single Business Object or across them</rdfs:comment>
+        <rdfs:comment xml:lang="de">Legt die Integrität eines einzelnen Geschäftsobjekts oder zwischen Geschäftsobjekten fest</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Business Rule</rdfs:label>
+        <rdfs:label xml:lang="de">Geschäftsregel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/BusinessRuleAssessment -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/BusinessRuleAssessment">
+        <vann:example xml:lang="de">Die Summe der ausstehenden Bestellungen für Kunde X übersteigt seine Kreditlinie nicht.</vann:example>
+        <vann:example xml:lang="en">The sum of open purchases from customer X does not exceed his credit line.</vann:example>
+        <vann:example xml:lang="en">foo-at-bar.com is not a valid email address.</vann:example>
+        <vann:example xml:lang="de">foo-at-bar.com ist keine gültige E-Mail-Adresse.</vann:example>
+        <rdfs:comment xml:lang="en">Represents the evaluation of a certain Business Rule on a specific Data Asset</rdfs:comment>
+        <rdfs:comment xml:lang="de">Repräsentiert die Auswertung einer bestimmten Geschäftsregel auf der Grundlage eines konkreten Datengutes</rdfs:comment>
+        <rdfs:label xml:lang="en">Business Rule Assessment</rdfs:label>
+        <rdfs:label xml:lang="de">Geschäftsregelauswertung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/ChangeHistory -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/ChangeHistory">
+        <vann:example xml:lang="de">Feld &apos;Alter&apos; zu Kunde hinzugefügt</vann:example>
+        <vann:example xml:lang="en">Field &apos;age&apos; added to customer</vann:example>
+        <rdfs:comment xml:lang="en">Information that allows to track the development of data definitions, processes, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Informationen, welche es erlauben, die Entwicklung von Datendefinitionen, Prozessen, etc. nachzuverfolgen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Change History</rdfs:label>
+        <rdfs:label xml:lang="de">Änderungshistorie</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/ChangeRequest -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/ChangeRequest">
+        <vann:example xml:lang="en">Add field &apos;age&apos; to Business Object Type &apos;customer&apos;</vann:example>
+        <vann:example xml:lang="de">Feld &apos;Alter&apos; zu Geschäftsobjekttyp &apos;Kunde&apos; hinzufügen</vann:example>
+        <rdfs:comment xml:lang="en">Detailed description of a specific change requirement, resulting from projects or operations</rdfs:comment>
+        <rdfs:comment xml:lang="de">Detaillierte Beschreibung eines spezifischen Änderungsbedarfs, welcher sich aus Projekten oder dem operativen Ablauf ergibt</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Change Request</rdfs:label>
+        <rdfs:label xml:lang="de">Änderungsanfrage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/Code -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/Code">
+        <terms:isPartOf rdf:resource="http://www.data-knowledge.org/dk/CodeList"/>
+        <vann:example xml:lang="de">DE</vann:example>
+        <vann:example xml:lang="en">DE</vann:example>
+        <rdfs:comment xml:lang="en">Pre-defined value for a Business Object Type Attribute (BOTA)</rdfs:comment>
+        <rdfs:comment xml:lang="de">Vordefinierter Wert eines Geschäftsobjektattributs (BOTA)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="de">Code</rdfs:label>
+        <rdfs:label xml:lang="en">Code</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/CodeList -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/CodeList">
+        <terms:hasPart rdf:resource="http://www.data-knowledge.org/dk/Code"/>
+        <vann:example xml:lang="de">Incoterms, Ländercodes</vann:example>
+        <vann:example xml:lang="en">Incoterms, country codes</vann:example>
+        <rdfs:comment xml:lang="en">List with pre-defined values (Codes) for a Business Object Type Attribute (BOTA)</rdfs:comment>
+        <rdfs:comment xml:lang="de">Liste mit vordefinierten Werten (Code) für ein Geschäftsobjekt-Attribut (BOTA)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Code List</rdfs:label>
+        <rdfs:label xml:lang="de">Code-Liste</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/CodeMapping -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/CodeMapping">
+        <terms:isPartOf rdf:resource="http://www.data-knowledge.org/dk/Mapping"/>
+        <vann:example xml:lang="en">Country Code &apos;DEU&apos; from Code List &apos;ISO 3166 Country Codes&apos; is mapped to Named Value &apos;ger&apos; of Enumeration &apos;CRM system countries&apos; and Named Value &apos;duitsland&apos; of Enumeration &apos;Dutch Accounting System countries&apos;</vann:example>
+        <vann:example xml:lang="de">Der Ländercode &apos;DEU&apos; der Codeliste &apos;ISO 3166 Country Codes&apos; wird zugeordnet zu Named Value &apos;ger&apos; der Enumeration &apos;Länder des CRM Systems&apos; und zu Named Value &apos;duitsland&apos; der Enumeration &apos;Länder des niederländischen Abrechungssystems&apos;</vann:example>
+        <rdfs:comment xml:lang="en">Conceptual mapping of business-related codes and terminology of Code Lists to named values of technical Enumerations.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Konzeptuelle Zuordnung geschäftsbezogener Codes und Terminologie von Code-Listen zu benannten Werten von technischen Aufzählungen.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Code Mapping</rdfs:label>
+        <rdfs:label xml:lang="de">Code-Zuordnung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/DataAsset -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/DataAsset"/>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/DataConceptualization -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/DataConceptualization"/>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/DataFlow -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/DataFlow">
+        <vann:example xml:lang="en">Dataset2837 flows from Central master data repository to ERP system</vann:example>
+        <vann:example xml:lang="de">Datensatz2837 fließt vom zentralen Stammdatenspeicher zum ERP-System</vann:example>
+        <rdfs:comment xml:lang="en">Indicates the actual connection and data exchange between particular applications</rdfs:comment>
+        <rdfs:comment xml:lang="de">Zeigt die tatsächliche Verbindung und den Datenaustausch zwischen konkreten Applikationen an</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Data Flow</rdfs:label>
+        <rdfs:label xml:lang="de">Datenfluss</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/DataLifecycle -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/DataLifecycle"/>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/DataManagementProcess -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/DataManagementProcess">
+        <vann:example xml:lang="en">Creation of customer master data</vann:example>
+        <vann:example xml:lang="de">Erstellung von Kundenstammdaten</vann:example>
+        <rdfs:comment xml:lang="de">Abfolge von Tätigkeiten für die Datenpflege oder die Daten-Governance</rdfs:comment>
+        <rdfs:comment xml:lang="en">Sequence of activities for data maintenance or data governance</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Data Management Process</rdfs:label>
+        <rdfs:label xml:lang="de">Datenmanagementprozess</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/DataObject -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/DataObject">
+        <terms:hasPart rdf:resource="http://www.data-knowledge.org/dk/DataObjectAttribute"/>
+        <terms:isPartOf rdf:resource="http://www.data-knowledge.org/dk/DataAsset"/>
+        <vann:example xml:lang="en">Database record of &apos;Fluid Supply Ltd&apos;</vann:example>
+        <vann:example xml:lang="de">Datenbankeintrag zu &apos;Fluid Supply Ltd&apos;</vann:example>
+        <rdfs:comment xml:lang="en">Individual record of a Data Object Type (DOT), i.e. the technical representation of a Business Object (BO)</rdfs:comment>
+        <rdfs:comment xml:lang="de">Individuelle Instanz eines Datenobjekttyps (DOT), d.h. die technische Repräsentation eines Geschäftsobjekts (BO)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Data Object (DO)</rdfs:label>
+        <rdfs:label xml:lang="de">Datenobjekt (DO)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/DataObjectAttribute -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/DataObjectAttribute">
+        <terms:isPartOf rdf:resource="http://www.data-knowledge.org/dk/DataObject"/>
+        <vann:example xml:lang="de">&apos;DE-123456-789&apos; als Wert der Datenbankspalte &apos;stceg&apos; des Datenbankeintrags &apos;Fluid Supply Ltd&apos;</vann:example>
+        <vann:example xml:lang="en">&apos;DE-123456-789&apos; being the value of database column &apos;stceg&apos; of record &apos;Fluid Supply Ltd&apos;</vann:example>
+        <rdfs:comment xml:lang="en">A piece of information being a part of a Data Object (DO), i.e. the technical representation of a Business Object Attribute (BOA)</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Informationseinheit, welche Bestandteil eines Datenobjekts (DO) ist, d.h. die technische Repräsentation eines Geschäftsobjektattributs (BOA)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Data Object Attribute (DOA)</rdfs:label>
+        <rdfs:label xml:lang="de">Datenobjektattribut (DOA)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/DataObjectType -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/DataObjectType">
+        <terms:hasPart rdf:resource="http://www.data-knowledge.org/dk/DataObjectTypeAttribute"/>
+        <terms:isPartOf rdf:resource="http://www.data-knowledge.org/dk/Application"/>
+        <vann:example xml:lang="en">Database table &apos;kna1&apos;</vann:example>
+        <vann:example xml:lang="de">Datenbanktabelle &apos;kna1&apos;</vann:example>
+        <rdfs:comment xml:lang="en">Technical representation of a Business Object Type (BOT)</rdfs:comment>
+        <rdfs:comment xml:lang="de">Technische Repräsentation eines Geschäftsobjekttyps (BOT)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Data Object Type (DOT)</rdfs:label>
+        <rdfs:label xml:lang="de">Datenobjekttyp (DOT)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/DataObjectTypeAttribute -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/DataObjectTypeAttribute">
+        <terms:isPartOf rdf:resource="http://www.data-knowledge.org/dk/DataObjectType"/>
+        <vann:example xml:lang="en">Database column &apos;stceg&apos;</vann:example>
+        <vann:example xml:lang="de">Datenbankspalte &apos;stceg&apos;</vann:example>
+        <rdfs:comment xml:lang="en">Individual (atomic) field to store a piece of information</rdfs:comment>
+        <rdfs:comment xml:lang="de">Individuelles (atomares) Feld, um eine Informationseineit zu speichern</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Data Object Type Attribute (DOTA)</rdfs:label>
+        <rdfs:label xml:lang="de">Datenobjekttypattribut (DOTA)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/Enumeration -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/Enumeration">
+        <terms:hasPart rdf:resource="http://www.data-knowledge.org/dk/NamedValue"/>
+        <vann:example xml:lang="de">Incoterms, Ländercodes</vann:example>
+        <vann:example xml:lang="en">Incoterms, country codes</vann:example>
+        <rdfs:comment xml:lang="en">List with pre-defined values (Named Values) for a Data Object Type Attribute (DOTA)</rdfs:comment>
+        <rdfs:comment xml:lang="de">Liste mit vordefinierten Werten (Benannter Wert) für ein Datenobjekttyp-Attribut (DOTA)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="de">Enumeration</rdfs:label>
+        <rdfs:label xml:lang="en">Enumeration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/Example -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/Example">
+        <vann:example xml:lang="de">Beispiel für ungültige Rechtsform: &apos;Limtd&apos;</vann:example>
+        <vann:example xml:lang="en">Example for invalid legal form: &apos;Limtd&apos;</vann:example>
+        <rdfs:comment xml:lang="en">Illustrative instances of a BOT/BOTA to indicate valid / invalid use</rdfs:comment>
+        <rdfs:comment xml:lang="de">Instanzen eines BOT/BOTA, die gültige und ungültige Nutzung illustrieren</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="de">Beispiel</rdfs:label>
+        <rdfs:label xml:lang="en">Example</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/FAQ -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/FAQ">
+        <vann:example xml:lang="de">Was sind Stammdaten?</vann:example>
+        <vann:example xml:lang="en">What is master data?</vann:example>
+        <rdfs:comment xml:lang="en">Frequently Asked Questions</rdfs:comment>
+        <rdfs:comment xml:lang="de">Häufig gestellte Fragen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="de">FAQ</rdfs:label>
+        <rdfs:label xml:lang="en">FAQ</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/KeyMapping -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/KeyMapping">
+        <terms:isPartOf rdf:resource="http://www.data-knowledge.org/dk/Mapping"/>
+        <vann:example xml:lang="en">Customer &apos;Acme Ltd.&apos; is represented by a Business Object with ID = 1234. This same customer is kept in the CRM system as a Data Object with ID = A324-4535, as another Data Object in the Accouting system with ID = 3534646 and as another Data Object in the ERP system with ID = acemeltd</vann:example>
+        <vann:example xml:lang="de">Kunde &apos;Acme Ltd.&apos; wird durch ein Geschäftsobjekt (BO) mit der ID = 1234 repräsentiert. Der selbe Kunde ist im CRM-System als Datenobjekt (DO) mit der ID = A324-4535 abgelegt, als weiteres DO im Buchhaltungssystem mit der ID = 3534646 und als weiteres DO im ERP-System mit der ID = acemeltd</vann:example>
+        <rdfs:comment xml:lang="de">Kann genutzt werden, um Datenobjekte verschiedener Applikationen zuzuordnen, die die selbe Geschäftsentität repräsentieren. Dies kann bei der Erstellung von &apos;Golden Records&apos; und der Datenverteilung nützlich sein.</rdfs:comment>
+        <rdfs:comment xml:lang="en">May be used to map data objects from different applications that represent the same business entity. This is useful for creation of &apos;golden records&apos; and the distribution of data.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Key Mapping</rdfs:label>
+        <rdfs:label xml:lang="de">Schlüssel-Zuordnung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/KnowledgeLifecycle -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/KnowledgeLifecycle"/>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/KpiDefinition -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/KpiDefinition">
+        <vann:example xml:lang="de">Anzahl der Kunden ohne Adresse oder Steuer-ID</vann:example>
+        <vann:example xml:lang="en">Number of customers without address or tax ID</vann:example>
+        <rdfs:comment xml:lang="en">Defines a data quality (performance) measure based on a set of business rules</rdfs:comment>
+        <rdfs:comment xml:lang="de">Definiert eine Datenqualitäts-Leistungskennzahl basierend auf einer Menge von Geschäftsregeln</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">KPI Definition</rdfs:label>
+        <rdfs:label xml:lang="de">KPI-Definition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/KpiMeasurement -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/KpiMeasurement">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/ns/dqv#QualityMeasurement"/>
+        <vann:example xml:lang="en">75% are valid customer records</vann:example>
+        <vann:example xml:lang="de">75% sind gültige Kundendaten</vann:example>
+        <rdfs:comment xml:lang="en">Actual performance values measured at a particular time</rdfs:comment>
+        <rdfs:comment xml:lang="de">Konkrete Leistungskennzahlen, zu einer bestimmten Zeit gemessen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">KPI Measurement</rdfs:label>
+        <rdfs:label xml:lang="de">KPI-Messwert</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/Mapping -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/Mapping">
+        <terms:hasPart rdf:resource="http://www.data-knowledge.org/dk/AttributeMapping"/>
+        <terms:hasPart rdf:resource="http://www.data-knowledge.org/dk/CodeMapping"/>
+        <terms:hasPart rdf:resource="http://www.data-knowledge.org/dk/KeyMapping"/>
+        <terms:hasPart rdf:resource="http://www.data-knowledge.org/dk/SchemaMapping"/>
+        <terms:hasPart rdf:resource="http://www.data-knowledge.org/dk/TypeMapping"/>
+        <vann:example xml:lang="en">Code Mapping</vann:example>
+        <vann:example xml:lang="de">Code-Zuordnung</vann:example>
+        <rdfs:comment xml:lang="en">Abstract class of different kinds of mappings</rdfs:comment>
+        <rdfs:comment xml:lang="de">Abstrakte Klasse verschiedener Arten von Zuordnungen</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Mapping</rdfs:label>
+        <rdfs:label xml:lang="de">Zuordnung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/NamedValue -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/NamedValue">
+        <terms:isPartOf rdf:resource="http://www.data-knowledge.org/dk/Enumeration"/>
+        <vann:example xml:lang="de">DE</vann:example>
+        <vann:example xml:lang="en">DE</vann:example>
+        <rdfs:comment xml:lang="en">Pre-defined value of an Enumeration for a Data Object Type Attribute (DOTA)</rdfs:comment>
+        <rdfs:comment xml:lang="de">Vordefinierter Wert einer Enumeration eines Datenobjekttyp-Attribut (DOTA)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="de">Benannter Wert</rdfs:label>
+        <rdfs:label xml:lang="en">Named Value</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/OrganizationalUnit -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/OrganizationalUnit">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/vcard/ns#Group"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Group"/>
+        <terms:hasPart rdf:resource="http://www.data-knowledge.org/dk/Person"/>
+        <vann:example xml:lang="de">Abteilung A</vann:example>
+        <vann:example xml:lang="en">department A</vann:example>
+        <rdfs:comment xml:lang="de">Einheit der Organisationsstruktur (Hierarchie), Gruppe von Individuen</rdfs:comment>
+        <rdfs:comment xml:lang="en">Unit of the organizational structure (hierarchy), group of individuals</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="de">Organisationseinheit</rdfs:label>
+        <rdfs:label xml:lang="en">Organizational Unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/Person -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/Person">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2006/vcard/ns#Individual"/>
+        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <terms:isPartOf rdf:resource="http://www.data-knowledge.org/dk/OrganizationalUnit"/>
+        <vann:example xml:lang="de">Fr. Schmidt, Hr. Reh</vann:example>
+        <vann:example xml:lang="en">Mrs. Smith, Mr. Doe</vann:example>
+        <rdfs:comment xml:lang="en">Individual of an organization assigned with certain roles</rdfs:comment>
+        <rdfs:comment xml:lang="de">Individuum einer Organisation, welchem bestimmte Rollen zugewiesen werden</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="de">Person</rdfs:label>
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/Project -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/Project">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <terms:hasPart rdf:resource="http://www.data-knowledge.org/dk/ProjectPlan"/>
+        <vann:example xml:lang="de">Neuer Distributionskanal</vann:example>
+        <vann:example xml:lang="en">New distribution channel</vann:example>
+        <rdfs:comment xml:lang="en">A project that implies changes to data or data management</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein Projekt, welches Änderungen von Daten oder dem Datenmanagement zum Zweck hat</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Project</rdfs:label>
+        <rdfs:label xml:lang="de">Projekt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/ProjectPlan -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/ProjectPlan">
+        <terms:isPartOf rdf:resource="http://www.data-knowledge.org/dk/Project"/>
+        <vann:example xml:lang="de">Auslieferung eines Prozesses oder einer Anwendung</vann:example>
+        <vann:example xml:lang="en">Rollout of process or application</vann:example>
+        <rdfs:comment xml:lang="en">Schedule illustrating when a particular action is taken on something</rdfs:comment>
+        <rdfs:comment xml:lang="de">Zeitplan, der illustriert, wann eine bestimmte Maßnahme ergriffen wird</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Project Plan</rdfs:label>
+        <rdfs:label xml:lang="de">Projektplan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/Regulation -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/Regulation">
+        <vann:example xml:lang="de">Datenschutzrichtlinien</vann:example>
+        <vann:example xml:lang="en">privacy policies</vann:example>
+        <rdfs:comment xml:lang="en">Internal or external regulatory driver influencing data management</rdfs:comment>
+        <rdfs:comment xml:lang="de">Interne oder externe Verordnung, die das Datenmanagement beeinflusst</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Regulation</rdfs:label>
+        <rdfs:label xml:lang="de">Vorschrift</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/Report -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/Report">
+        <vann:example xml:lang="en">Spread sheet with charts</vann:example>
+        <vann:example xml:lang="de">Tabellenkalkulation mit Schaubildern</vann:example>
+        <rdfs:comment xml:lang="de">Menge von KPI-Messwerten, welche für einen bestimmten Zweck zusammengetragen wurden</rdfs:comment>
+        <rdfs:comment xml:lang="en">Set of KPI measurements gathered for a particular purpose</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="de">Bericht</rdfs:label>
+        <rdfs:label xml:lang="en">Report</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/Responsibility -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/Responsibility">
+        <vann:example xml:lang="de">Hr. Reh ist der Datenqualitätsverantwortliche für Datensatz x-325, er ist zuständig im Falle dass ein Kunde unzufrieden mit der Qualität ist, verantwortlich vom 01.01.2016 bis zum 31.12.2016, hat Maßnahme X, Y und Z zu ergreifen</vann:example>
+        <vann:example xml:lang="de">Leiter des Projekts &apos;Neuer Datendistributionskanal&apos; ist bis 6 Monate nach Veröffentlichung für die Ergebnisse des Projekts verantwortlich</vann:example>
+        <vann:example xml:lang="en">Manager of project &apos;new data distribution channel&apos; is responsible for this project&apos;s results until 6 months after rollout</vann:example>
+        <vann:example xml:lang="en">Mr. Doe is the data quality responsible of Dataset x-325, he is accountable in case a customer is unsatisfied with the quality, responsible from 01/01/2016 to 31/12/2016, has to take measure X, Y and Z</vann:example>
+        <rdfs:comment xml:lang="de">Genaue Beschreibung einer Verantwortlichkeit, inkl. ihres genauen Zuständigkeitsbereiches, der Dauer der Zuständigkeit, zu ergreifenden Maßnahmen und weiteren Informationen</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specific description of a responsibility, including the particular scope, duration of accountability, measures to be taken and further information</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Responsibility</rdfs:label>
+        <rdfs:label xml:lang="de">Verantwortlichkeit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/Role -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/Role">
+        <vann:example xml:lang="en">Data coordinator</vann:example>
+        <vann:example xml:lang="de">Datenkoordinator</vann:example>
+        <rdfs:comment xml:lang="en">Abstract definition of a general function and its goals and authorities</rdfs:comment>
+        <rdfs:comment xml:lang="de">Abstrakte Definition einer allgemeinen Funktion und ihrer Ziele und Autoritäten</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Role</rdfs:label>
+        <rdfs:label xml:lang="de">Rolle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/SchemaMapping -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/SchemaMapping">
+        <terms:isPartOf rdf:resource="http://www.data-knowledge.org/dk/Mapping"/>
+        <vann:example xml:lang="de">Das DOTA &apos;ctxid&apos; im Buchhaltungssystem ist dem DOTA &apos;cust_tax_id&apos; im CRM-System zugeordnet</vann:example>
+        <vann:example xml:lang="en">The DOTA &apos;ctxid&apos; in the Accouting system maps to the DOTA &apos;cust_tax_id&apos; in the CRM system</vann:example>
+        <rdfs:comment xml:lang="en">Technical mapping specifiying data flows between Applications.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Technische Zuordnung, welche Datenflüsse zwischen Applikationen spezifiziert.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Schema Mapping</rdfs:label>
+        <rdfs:label xml:lang="de">Schema-Zuordnung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/SupplementaryDocumentation -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/SupplementaryDocumentation">
+        <vann:example xml:lang="en">Concepts, presentations, videos</vann:example>
+        <vann:example xml:lang="de">Konzepte, Präsentationen, Videos</vann:example>
+        <rdfs:comment xml:lang="de">Lern- oder Referenzmaterial für Datenmanagementoperationen</rdfs:comment>
+        <rdfs:comment xml:lang="en">Material to learn or use as a reference for data management operations</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="de">Ergänzende Dokumentation</rdfs:label>
+        <rdfs:label xml:lang="en">Supplementary Documentation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/TermsOfUse -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/TermsOfUse">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/ns/dqv#QualityPolicy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/TrainingOpportunity -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/TrainingOpportunity">
+        <vann:example xml:lang="de">Web-basierte Übungssitzung</vann:example>
+        <vann:example xml:lang="en">web-based training session</vann:example>
+        <rdfs:comment xml:lang="en">A planned event a person can participate in</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine geplante Veranstaltung, an der eine Person teilnehmen kann</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Training Opportunity</rdfs:label>
+        <rdfs:label xml:lang="de">Trainingsmöglichkeit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/TypeMapping -->
+
+
+    <owl:Class rdf:about="http://www.data-knowledge.org/dk/TypeMapping">
+        <terms:isPartOf rdf:resource="http://www.data-knowledge.org/dk/Mapping"/>
+        <vann:example xml:lang="en">Mapping class &apos;GlobalMasterDataMapping&apos; connects DOT &apos;MstrDat8&apos; and BOT &apos;Global Master Data&apos; with usage comments and documentation added</vann:example>
+        <vann:example xml:lang="de">Zuordnungsklasse &apos;GlobaleStammdatenMapping&apos; verbindet DOT &apos;MstrDat8&apos; und BOT &apos;Globale Stammdaten&apos; mit angefügten Nutzungskommentaren und Dokumentation</vann:example>
+        <rdfs:comment xml:lang="en">Conceptual mapping of business definitions to technical representations for objects.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Konzeptuelle Zuordnung von Geschäftsdefinitionen zu technischen Repräsentationen von Objekten.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="de">Typ-Zuordnung</rdfs:label>
+        <rdfs:label xml:lang="en">Type Mapping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Property -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#Group -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Group"/>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#Individual -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Individual"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#DataSet -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#DataSet"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#QualityMeasurement -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dqv#QualityMeasurement"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#QualityPolicy -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dqv#QualityPolicy"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#computedOn -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dqv#computedOn"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#isMeasurementOf -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dqv#isMeasurementOf"/>
+    
+
+
+    <!-- http://www.w3.org/ns/odrl/2/Asset -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/odrl/2/Asset"/>
+    
+
+
+    <!-- http://www.w3.org/ns/odrl/2/Policy -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/odrl/2/Policy"/>
+    
+
+
+    <!-- http://www.w3.org/ns/odrl/2/hasPolicy -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/odrl/2/hasPolicy"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Group -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Group"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Project -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Project"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/ -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.data-knowledge.org/dk/">
+        <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/ApplicationLifecycle -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.data-knowledge.org/dk/ApplicationLifecycle">
+        <rdf:type rdf:resource="http://purl.org/vocab/lifecycle/schema#Lifecycle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/BusinessObjectDomain -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.data-knowledge.org/dk/BusinessObjectDomain">
+        <rdf:type rdf:resource="http://www.data-knowledge.org/dk/DataConceptualization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/BusinessObjectType -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.data-knowledge.org/dk/BusinessObjectType">
+        <rdf:type rdf:resource="http://www.data-knowledge.org/dk/DataConceptualization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/BusinessObjectTypeAttribute -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.data-knowledge.org/dk/BusinessObjectTypeAttribute">
+        <rdf:type rdf:resource="http://www.data-knowledge.org/dk/DataConceptualization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/DataAsset -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.data-knowledge.org/dk/DataAsset">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataSet"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/DataConceptualization -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.data-knowledge.org/dk/DataConceptualization">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/DataLifecycle -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.data-knowledge.org/dk/DataLifecycle">
+        <rdf:type rdf:resource="http://purl.org/vocab/lifecycle/schema#Lifecyle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/KnowledgeLifecycle -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.data-knowledge.org/dk/KnowledgeLifecycle">
+        <rdf:type rdf:resource="http://purl.org/vocab/lifecycle/schema#Lifecycle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/TermsOfUse -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.data-knowledge.org/dk/TermsOfUse">
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Policy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/computedOn -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.data-knowledge.org/dk/computedOn">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#computedOn"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/hasApplicationLifecycle -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.data-knowledge.org/dk/hasApplicationLifecycle">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/hasDataLifecycle -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.data-knowledge.org/dk/hasDataLifecycle">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/hasKnowledgeLifecycle -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.data-knowledge.org/dk/hasKnowledgeLifecycle">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/hasTerms -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.data-knowledge.org/dk/hasTerms">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/hasPolicy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/isMeasurementOf -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.data-knowledge.org/dk/isMeasurementOf">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#isMeasurementOf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.data-knowledge.org/dk/isReleatedTo -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.data-knowledge.org/dk/isReleatedTo">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/relation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://www.data-knowledge.org/dk/ApplicationLifecycle">
+        <vann:example xml:lang="de">Test, produktiv, abgekündigt</vann:example>
+        <vann:example xml:lang="en">test, production, deprecated</vann:example>
+        <rdfs:comment xml:lang="en">Defines the life cycle of Applications. A life cycle is defined by a set of possible life cycle states (lifecycle:State). The life cycle definition may also specify constraints on the transitions between the life cycle states (lifecycle:possibleTransition).</rdfs:comment>
+        <rdfs:comment xml:lang="de">Definiert den Lebenszyklus von Applikationen. Ein Lebenszyklus wird durch eine Menge von möglichen Lebenszyklusphasen (lifecycle:State) definiert. Die Lebenszyklusdefinition kann außerdem Einschränkungen der möglichen Übergange zwischen Lebenszyklusphasen spezifizieren (lifecycle:possibleTransition).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Application Lifecycle</rdfs:label>
+        <rdfs:label xml:lang="de">Applikationslebenszyklus</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.data-knowledge.org/dk/BusinessObjectDomain">
+        <terms:hasPart rdf:resource="http://www.data-knowledge.org/dk/BusinessObjectType"/>
+        <vann:example xml:lang="en">Business partner: customer and vendor data</vann:example>
+        <vann:example xml:lang="de">Geschäftspartner: Kunden- und Verkäuferdaten</vann:example>
+        <rdfs:comment xml:lang="en">Clusters of coherent Business Object Types (BOTs), either from a subject matter or management point of view</rdfs:comment>
+        <rdfs:comment xml:lang="de">Gruppierung kohärenter Geschäftsobjekttypen (BOTs), entweder aus Themen- oder Verwaltungssicht</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Business Object Domain (BOD)</rdfs:label>
+        <rdfs:label xml:lang="de">Geschäftsobjektdomäne (BOD)</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.data-knowledge.org/dk/BusinessObjectType">
+        <terms:hasPart rdf:resource="http://www.data-knowledge.org/dk/BusinessObjectTypeAttribute"/>
+        <terms:isPartOf rdf:resource="http://www.data-knowledge.org/dk/BusinessObjectDomain"/>
+        <vann:example xml:lang="en">Customer, Employee, Bill of Material, Sales Region</vann:example>
+        <vann:example xml:lang="de">Kunde, Angestellter, Materialliste, Vertriebsregion</vann:example>
+        <rdfs:comment xml:lang="en">Conceptual (data) entity relevant to business that represents a coherent set of information about a group of real or virtual objects</rdfs:comment>
+        <rdfs:comment xml:lang="de">Konzeptuelle, unternehmensrelevante (Daten-) Einheit, welche eine kohärente Menge von Informationen über eine Gruppe realer oder virtueller Objekte darstellt</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Business Object Type (BOT)</rdfs:label>
+        <rdfs:label xml:lang="de">Geschäftsobjekttyp (BOT)</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.data-knowledge.org/dk/BusinessObjectTypeAttribute">
+        <terms:isPartOf rdf:resource="http://www.data-knowledge.org/dk/BusinessObjectType"/>
+        <vann:example xml:lang="de">Steuer-ID, Adresse</vann:example>
+        <vann:example xml:lang="en">Tax ID, Address</vann:example>
+        <rdfs:comment xml:lang="en">Conceptually elementary piece of information as part of a Business Object Type (BOT)</rdfs:comment>
+        <rdfs:comment xml:lang="de">Konzeptuell elementare Informationseinheit als Teil eines Geschäftsobjekttyps (BOT)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Business Object Type Attribute (BOTA)</rdfs:label>
+        <rdfs:label xml:lang="de">Geschäftsobjekttyp-Attribut (BOTA)</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.data-knowledge.org/dk/DataAsset">
+        <terms:hasPart rdf:resource="http://www.data-knowledge.org/dk/DataObject"/>
+        <vann:example xml:lang="de">Die Produktionspläne der Werke in Deutschland mit den Stücklisten der produzierten Güter.</vann:example>
+        <vann:example xml:lang="de">Die gesamten Kundenstammdaten eines bestimmten CRM-Systems oder Teile davon.</vann:example>
+        <vann:example xml:lang="en">The entirety of customer master data from a particular CRM system or parts thereof.</vann:example>
+        <vann:example xml:lang="en">The production schedules of German sites along with the bill of materials of the produced goods.</vann:example>
+        <rdfs:comment xml:lang="en">A Data Asset represents a collection of Data Objects serving an organizational or a business goal. The contained Data Objects may be of the same or of different Data Object Types.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein Datengut stellt eine Menge von Datenobjekten dar, die ein betriebliches oder geschäftliches Ziel unterstützen. Die enthaltenen Datenobjekte können vom dem selben oder unterschiedlichen Datenobjekttypen stammen.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Data Asset</rdfs:label>
+        <rdfs:label xml:lang="de">Datengut</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.data-knowledge.org/dk/DataConceptualization">
+        <vann:example xml:lang="en">A Business Object Domain &apos;Material&apos;, a Business Object Type &apos;Indirect material&apos;, a business Object Type attribute &apos;Material number&apos;</vann:example>
+        <vann:example xml:lang="de">Eine Geschäftsobjektdomäne &apos;Material&apos;, ein Geschäftsobjekttyp &apos;Indirektes Material&apos;, ein Geschäftsobjekttyp-Attribut &apos;Materialnummer&apos;</vann:example>
+        <rdfs:comment xml:lang="en">A Data Conceptualization represents a business concept to specify and structure data. As this is an abstract superclass only its subclasses may be used.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Daten-Konzeptualisierung repräsentiert ein fachliches Konzept, mit dem Daten spezifiziert oder strukturiert werden. Da es sich um eine abstrakte Super-Klasse handelt, sollten nur ihre Subklassen verwendet werden.</rdfs:comment>
+        <rdfs:label xml:lang="en">Data Conceptualization</rdfs:label>
+        <rdfs:label xml:lang="de">Daten-Konzeptualisierung</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.data-knowledge.org/dk/DataLifecycle">
+        <vann:example xml:lang="en">Draft, active, inactive</vann:example>
+        <vann:example xml:lang="de">Entwurf, aktiv, inaktiv</vann:example>
+        <vann:example xml:lang="de">Lebenszyklus von Produktstammdaten, spiegelt die Lebenszyklusphasen / -stadien des Produktes wieder: Entwicklung, Produktion, Aftermarket, Produktauslauf</vann:example>
+        <vann:example xml:lang="en">Life cycle of product master data reflecting the product&apos;s life cycles phases / states: Development, Production, After market, Phased out</vann:example>
+        <rdfs:comment xml:lang="en">Defines the life cycle of Business Objects, Data Objects and Data Assets. A life cycle is defined by a set of possible life cycle states (lifecycle:State). The life cycle definition may also specify constraints on the transitions between the life cycle states (lifecycle:possibleTransition).</rdfs:comment>
+        <rdfs:comment xml:lang="de">Definiert den Lebenszyklus von Geschäftsobjekten, Datenobjekten und Datengütern. Ein Lebenszyklus wird durch eine Menge möglicher Lebenszyklusphasen (lifecycle:State) definiert. Die Lebenszyklusdefinition kann außerdem Einschränkungen der möglichen Übergange zwischen Lebenszyklusphasen spezifizieren (lifecycle:possibleTransition).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Data Lifecycle</rdfs:label>
+        <rdfs:label xml:lang="de">Datenlebenszyklus</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.data-knowledge.org/dk/KnowledgeLifecycle">
+        <vann:example xml:lang="en">A life cycle for the Business Object Types and Business Object Type Attributes may define the workflow of data definitions by the life cycle states: Draft, Approved, Rejected, Withdrawn.</vann:example>
+        <vann:example xml:lang="de">Ein Lebenszyklus für die Geschäftsobjekttypen und Geschäftsobjekttyp-Attribute kann den Workflow von Datendefinitionen mithilfe der Lebenszyklusphasen dafinieren: Entwurf, Bestätigt, Abgewiesen, Zurückgezogen.</vann:example>
+        <rdfs:comment xml:lang="en">Defines the life cycle of a data knowledge entity, i.e. the instances from the classes of this model. This type of life cycles thus represents a metadata life cycle. A life cycle is defined by a set of possible life cycle states (lifecycle:State). The life cycle definition may also specify constraints on the transitions between the life cycle states (lifecycle:possibleTransition).</rdfs:comment>
+        <rdfs:comment xml:lang="de">Definiert den Lebenszyklus einer Datenwissen-Entität, d.h. der Instanzen der Klassen dieses Modells. Diese Art von Lebenszyklus repräsentiert daher einen Metadatenlebenszyklus. Ein Lebenszyklus wird durch eine Menge möglicher Lebenszyklusphasen (lifecycle:State) definiert. Die Lebenszyklusdefinition kann außerdem Einschränkungen der möglichen Übergange zwischen Lebenszyklusphasen spezifizieren (lifecycle:possibleTransition).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">Knowledge Lifecycle</rdfs:label>
+        <rdfs:label xml:lang="de">Wissenslebenszyklus</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.data-knowledge.org/dk/TermsOfUse">
+        <vann:example xml:lang="en">Permission to use and share a data asset within the company who purchased it</vann:example>
+        <vann:example xml:lang="en">Prohibition to (re-) sell a certain data asset</vann:example>
+        <vann:example xml:lang="en">Prohibition to transfer or process a data asset to/in a certain country</vann:example>
+        <vann:example xml:lang="de">Recht, ein Datengut innerhalb der Organisation, die es gekauft hat, zu nutzen und zu teilen</vann:example>
+        <vann:example xml:lang="de">Verbot, ein Datengut (weiter-) zu verkaufen</vann:example>
+        <vann:example xml:lang="de">Verbot, ein Datengut in ein bestimmtes Land zu transferieren oder dort zu bearbeiten</vann:example>
+        <rdfs:comment xml:lang="de">Die Nutzungsbedingungen geben an, unter welchen Bedinungen und Konditionen eine Applikation oder ein Datengut verwendet werden können oder müssen.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Terms of use specify the terms and conditions under which an Application or a Data Asset can or must be used.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="de">Nutzungsbedingungen</rdfs:label>
+        <rdfs:label xml:lang="en">Terms of Use</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.data-knowledge.org/dk/computedOn">
+        <vann:example xml:lang="de">KPI &apos;75% der Kundendaten sind vollständig&apos; wird berechnet für das Datengut mit den DOs &apos;Kunde 1&apos;, &apos;Kunde 2&apos; und &apos;Kunde 3&apos;</vann:example>
+        <vann:example xml:lang="en">KPI &apos;75% of customer data is complete&apos; is computed on the data asset comprising DOs &apos;customer 1&apos;, &apos;customer 2&apos; and &apos;customer 3&apos;</vann:example>
+        <rdfs:comment xml:lang="en">A KPI Measurement and Business Rule Assessments is computed on a Data Asset</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Leistungskennzahl (KPI) und eine Geschäftsregelauswertung wird für ein Datengut berechnet</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="de">berechnet für</rdfs:label>
+        <rdfs:label xml:lang="en">computed on</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.data-knowledge.org/dk/hasApplicationLifecycle">
+        <vann:example xml:lang="de">Das CRM-System wird entsprechend des &apos;Default Application Lifecycle&apos; verwaltet: Test, produktiv, abgekündigt</vann:example>
+        <vann:example xml:lang="en">The CRM system is managed according to the &apos;Default Application Lifecycle&apos;: test, production, deprecated</vann:example>
+        <rdfs:comment xml:lang="en">Specifies the life cycle of an individual Application instance. The current life cycle state of the instance is referred to via the property lifecycle:state.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Spezifiziert den Lebenszyklus einer individuellen Applikation. Der aktuelle Lebenszyklusstatus der Instanz wird über die Relation lifecycle:state zugewiesen.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">has application lifecycle</rdfs:label>
+        <rdfs:label xml:lang="de">hat Applikationslebenszyklus</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.data-knowledge.org/dk/hasDataLifecycle">
+        <vann:example xml:lang="en">A specific &apos;Shipment&apos; Business Object with SSCC = 12345678 has a differing life cycle than defined by the Business Object Type &apos;Shipment&apos;. It is the &apos;High value shipment life cycle&apos; including additional life cycle phases.</vann:example>
+        <vann:example xml:lang="de">Das konkrete Sendungs-Geschäftsobject mit NVE = 12345678 hat einen abweichenden Lebenszyklus, als den durch den Geschäftsobjekttyp definierten. Es handelt sich den &apos;Lebenszyklus für hochwertige Sendungen&apos;, der zusätzliche Lebenszyklusphasen enthält.</vann:example>
+        <rdfs:comment xml:lang="en">Specifies the life cycle of an individual instance of a Business Object, Data Object or Data Asset. This property can be used to override the general type level life cycle definition expressed by definesLifecycleOfInstances. The current life cycle state of the instance is referred to via the property lifecycle:state</rdfs:comment>
+        <rdfs:comment xml:lang="de">Spezifiziert den Lebenszyklus einer individuellen Instanz eines Geschäftsobjekts, Datenobjekts oder Datenguts. Diese Relation kann genutzt werden, um die generelle Typebenen-Definition des Lebenszyklus, welche durch definesLifecycleOfInstances ausgedrückt wird, zu überschreiben. Der aktuelle Lebenszyklusstatus der Instanz wird über die Relation lifecycle:state zugewiesen.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">has data lifecycle</rdfs:label>
+        <rdfs:label xml:lang="de">hat Datenlebenszyklus</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.data-knowledge.org/dk/hasKnowledgeLifecycle">
+        <vann:example xml:lang="en">A general knowledge life cycle would not have a specific subject, i.e. apply to all resources in this namespace.</vann:example>
+        <vann:example xml:lang="en">A lifecycle for data definitions would have a Business Object Domain, Business Object Type or Business Object Type Attribute as the property&apos;s subject.</vann:example>
+        <vann:example xml:lang="de">Ein Lebenszyklus für Datendefinitionen hätte eine Geschäftsobjektdomäne, einen Geschäftsobjekttypen oder Geschäftsobjekttyp-Attribute als Bezugsobjekte der Relation.</vann:example>
+        <vann:example xml:lang="de">Ein genereller Wissenslebenszyklus hätte kein spezifisches Bezugsobjekt, d.h. er würde alle Ressourcen in diesem Namespace betreffen.</vann:example>
+        <rdfs:comment xml:lang="de">Kann genutzt werden, um einen allgemeinen Lebenszyklus, der auf alle Klassen des Modells oder nur auf spezielle Klassen zutrifft, zu definieren.</rdfs:comment>
+        <rdfs:comment xml:lang="en">May be used to define a general life cycle that applies to all classes of the model or certain classes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">has Knowledge Lifecycle</rdfs:label>
+        <rdfs:label xml:lang="de">hat Wissenslebenszyklus</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.data-knowledge.org/dk/hasTerms">
+        <vann:example xml:lang="en">Duty to encrypt a stored data asset by using AES-256 or stronger</vann:example>
+        <vann:example xml:lang="de">Pflicht, ein Datengut ausschließlich verschlüsselt durch AES-256 oder stärker zu speichern</vann:example>
+        <rdfs:comment xml:lang="en">Resources can have specific Terms of Use</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ressourcen können spezifische Nutzungsbedingungen haben</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">has Terms of Use</rdfs:label>
+        <rdfs:label xml:lang="de">hat Nutzungsbedingungen</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.data-knowledge.org/dk/isMeasurementOf">
+        <vann:example xml:lang="de">Die KPI &apos;75% sind valide Kundendaten&apos; ist ein Messwert, der sich aus KPI-Definition: &apos;Anteil der Kunden mit Adresse und Steuer-ID an der Gesamtzahl der Kunden&apos; ergibt</vann:example>
+        <vann:example xml:lang="en">The KPI Measurement &apos;75% are valid customer records&apos; is a measure resulting from the KPI Definition: &apos;Ratio of customers with address and tax ID to total number of customers&apos;</vann:example>
+        <rdfs:comment xml:lang="en">A KPI Measurement is computed according to a KPI Definition on a given data asset at a given time. Similarly, a Business Rule Assessment results from a Business Rule</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Leistungskennzahl (KPI)wird anhand einer Leistungskennzahlen-Definition (KPI-Definition) für ein bestimmtes Datengut zu einer bestimmten Zeit berechnet. In gleicher Weise ergibt sich eine Geschäftsregelauswertung aus einer Geschäftsregel </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">is measurement of</rdfs:label>
+        <rdfs:label xml:lang="de">ist ein Messwert von</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.data-knowledge.org/dk/isReleatedTo">
+        <vann:example xml:lang="en">BO A is related to BO B</vann:example>
+        <vann:example xml:lang="de">BO A ist verknüpft mit BO B</vann:example>
+        <rdfs:comment xml:lang="de">Diese Relation wird genutzt, um generelle Verknüpfungen zwischen Entitäten darzustellen. Primärer Verwendungszweck ist die Darstellung von Verknüpfungen zwischen zwei oder mehr Geschäftsobjekttypen und zwischen zwei oder mehr Datenobjekttypen.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property is used to generally express relationships between entities. Primary purposes are to state connections between two or more Business Objects Types and between two or more Data Object Types.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.data-knowledge.org/dk/"/>
+        <rdfs:label xml:lang="en">is related to</rdfs:label>
+        <rdfs:label xml:lang="de">ist verknüpft mit</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/ -->
+
+

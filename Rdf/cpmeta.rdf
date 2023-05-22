@@ -1,0 +1,3491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://meta.icos-cp.eu/ontologies/cpmeta/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/wasAcquiredBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label>was acquired by</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObject"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataAcquisition"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/DataAcquisition">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736afe"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/prov#wasAssociatedWith">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:comment>A prov:Agent that had some (unspecified) responsibility for an occurrence of a prov:Activity</rdfs:comment>
+	<rdfs:label>was associated with</rdfs:label>
+	<rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+	<rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasNumberOfRows">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>number of rows</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/SimpleDataObject"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/DataObject">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/StaticObject"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736afd"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736afc"/>
+	<owl:disjointWith rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DocumentObject"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasObjectSpec">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>has specification</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObject"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObjectSpec"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasName">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>Name</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/title"/>
+	<rdfs:domain rdf:nodeID="genid-start-31ac94972b736b31"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasSha256sum">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>SHA-256 hashsum</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/StaticObject"/>
+	<rdfs:range rdf:nodeID="genid-start-31ac94972b736b24"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/wasSubmittedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>was submitted by</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/StaticObject"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataSubmission"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/DataSubmission">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736af3"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/prov#startedAtTime">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label>startedAtTime</rdfs:label>
+	<rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/prov#endedAtTime">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label>endedAtTime</rdfs:label>
+	<rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasSizeInBytes">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/StaticObject"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/wasPerformedAt">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>was performed at</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#atLocation"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+	<rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasActualColumnNames">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:comment>Contains a JSON array with actual column names</rdfs:comment>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/SimpleDataObject"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasEndTime">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>end time</rdfs:label>
+	<rdfs:domain rdf:nodeID="genid-start-31ac94972b736b4b"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/wasProducedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label>was produced by</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObject"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataProduction"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/DataProduction">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736af5"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736af4"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/wasHostedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Organization"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/wasPerformedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/isNextVersionOf">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasRevisionOf"/>
+	<rdfs:domain rdf:nodeID="genid-start-31ac94972b736b73"/>
+	<rdfs:range rdf:nodeID="genid-start-31ac94972b736b70"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasSamplingPoint">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#atLocation"/>
+	<rdfs:domain rdf:nodeID="genid-start-31ac94972b736b7d"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Position"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasLatitude">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:comment>Decimal degrees in WGS84/GRS80</rdfs:comment>
+	<rdfs:label>Latitude</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/latlongs"/>
+	<rdfs:domain rdf:nodeID="genid-start-31ac94972b736b43"/>
+	<rdfs:range rdf:nodeID="genid-start-31ac94972b736b3f"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#double">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasLongitude">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:comment>Decimal degrees in WGS84/GRS80</rdfs:comment>
+	<rdfs:label>Longitude</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/latlongs"/>
+	<rdfs:domain rdf:nodeID="genid-start-31ac94972b736b3a"/>
+	<rdfs:range rdf:nodeID="genid-start-31ac94972b736b36"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/Position">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Position</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/SpatialCoverage"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736acd"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736acc"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasDoi">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:domain rdf:nodeID="genid-start-31ac94972b736b5c"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasKeywords">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:comment>String representing a comma-separated list of keywords</rdfs:comment>
+	<rdfs:domain rdf:nodeID="genid-start-31ac94972b736b47"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/wasParticipatedInBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasSpatialCoverage">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>spatial coverage</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+	<rdfs:domain rdf:nodeID="genid-start-31ac94972b736b7a"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/SpatialCoverage"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/LatLonBox">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:equivalentClass rdf:nodeID="genid-start-31ac94972b736ae4"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasEasternBound">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>eastern bound</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/latlongs"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/LatLonBox"/>
+	<rdfs:range rdf:nodeID="genid-start-31ac94972b736b59"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasSouthernBound">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>southern bound</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/latlongs"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/LatLonBox"/>
+	<rdfs:range rdf:nodeID="genid-start-31ac94972b736b21"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasWesternBound">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>western bound</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/latlongs"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/LatLonBox"/>
+	<rdfs:range rdf:nodeID="genid-start-31ac94972b736b0a"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/asGeoJSON">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>GeoJSON representation</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#hasSerialization"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/SpatialCoverage"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasStartTime">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>start time</rdfs:label>
+	<rdfs:domain rdf:nodeID="genid-start-31ac94972b736b1c"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/terms/description">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label>Description</rdfs:label>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/terms/title">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasTemporalResolution">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:domain rdf:nodeID="genid-start-31ac94972b736b10"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasNorthernBound">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>northern bound</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/latlongs"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/LatLonBox"/>
+	<rdfs:range rdf:nodeID="genid-start-31ac94972b736b2c"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasSamplingHeight">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:nodeID="genid-start-31ac94972b736b27"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#float">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/prov#hadPrimarySource">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+	<rdfs:range rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/wasPerformedWith">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:comment>instrument used to perform data acquisition</rdfs:comment>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataAcquisition"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/resources/organizations/ETC">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ThematicCenter"/>
+	<hasName>Ecosystem Thematic Centre</hasName>
+	<rdfs:label>ICOS ETC</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://creativecommons.org/publicdomain/zero/1.0/">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
+	<rdfs:label>CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/resources/organizations/ATC">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ThematicCenter"/>
+	<hasName>Atmosphere Thematic Centre</hasName>
+	<rdfs:label>ICOS ATC</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+	<license xmlns="http://creativecommons.org/ns#" rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+	<creator xmlns="http://purl.org/dc/elements/1.1/" rdf:resource="http://meta.icos-cp.eu/resources/people/Oleg%20Mirzov"/>
+	<description xmlns="http://purl.org/dc/elements/1.1/" xml:lang="en">OWL vocabulary describing metadata of two environmental research infrastructures: ICOS and SITES</description>
+	<issued xmlns="http://purl.org/dc/elements/1.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-05-18</issued>
+	<modified xmlns="http://purl.org/dc/elements/1.1/" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-01-24</modified>
+	<publisher xmlns="http://purl.org/dc/elements/1.1/" rdf:resource="http://meta.icos-cp.eu/resources/organizations/CP"/>
+	<rights xmlns="http://purl.org/dc/elements/1.1/">Copyright © 2023 ICOS ERIC</rights>
+	<title xmlns="http://purl.org/dc/elements/1.1/" xml:lang="en">Ontology of Integrated Carbon Observation System (ICOS)</title>
+	<preferredNamespacePrefix xmlns="http://purl.org/vocab/vann/">cpmeta</preferredNamespacePrefix>
+	<preferredNamespaceUri xmlns="http://purl.org/vocab/vann/">http://meta.icos-cp.eu/ontologies/cpmeta/</preferredNamespaceUri>
+	<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/ValueType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:comment>Domain-specific meaning of the values</rdfs:comment>
+	<rdfs:label>Value Type</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasColumnTitle">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>column title</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasVariableTitle"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DatasetColumn"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasValueFormat">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>value format</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DatasetColumn"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ValueFormat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/iso8601date">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ValueFormat"/>
+	<rdfs:label>Date in ISO-8601 format</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasValueType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>value type</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DatasetVariable"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ValueType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/DatasetColumn">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Dataset column</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObjectSpecifyingThing"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736af1"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736af0"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736aef"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasQuantityKind">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>quantity kind</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ValueType"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/QuantityKind"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasUnit">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:comment>unit of measurement</rdfs:comment>
+	<rdfs:label>unit</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ValueType"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/float32">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ValueFormat"/>
+	<rdfs:label>32-bit floating point value</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/QuantityKind">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:comment>The kind of physical quantity, for example volume, length, concentration. Can be basic or derived, standard or non-standard. Implies an associated physical quantity dimension but does not have a fixed unit of measurement.</rdfs:comment>
+	<rdfs:label>Quantity Kind</rdfs:label>
+	<rdfs:seeAlso rdf:resource="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"/>
+	<rdfs:seeAlso rdf:resource="http://qudt.org/schema/qudt#QuantityKind"/>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObjectSpecifyingThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasDataLevel">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:comment>Data level according to ICOS classification. Does not imply the data are official ICOS data.</rdfs:comment>
+	<rdfs:label>data level</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObjectSpec"/>
+	<rdfs:range rdf:nodeID="genid-start-31ac94972b736b61"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasEncoding">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:comment>data stream encoding, e.g. zip, gzip, plain file</rdfs:comment>
+	<rdfs:label>encoding</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObjectSpec"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectEncoding"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/plainFileEncoding">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectEncoding"/>
+	<rdfs:label>plain file</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasFormat">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:comment>format of the Data Object; will be used to determine the machinery for processing it</rdfs:comment>
+	<rdfs:label>format</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/format"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObjectSpec"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/DataObjectSpec">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Data Object specification</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObjectSpecifyingThing"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736afb"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736afa"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736af9"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736af8"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736af7"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736af6"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/iso8601timeOfDay">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ValueFormat"/>
+	<rdfs:label>[h]h:mm[:ss]</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/iso8601dateTime">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ValueFormat"/>
+	<rdfs:comment>Internally represented as int64 milliseconds since Unix epoch.</rdfs:comment>
+	<rdfs:label>Date-and-time stamp in ISO-8601 format</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/containsDataset">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label>contains dataset</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObjectSpec"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DatasetSpec"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/asciiWdcggTimeSer">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:label>WDCGG gas mole fraction time series</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/SimpleObjectSpec">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Simple Object specification</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObjectSpec"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736ac5"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736ac4"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasColumn">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label>has column</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasVariable"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/TabularDatasetSpec"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DatasetColumn"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/TabularDatasetSpec">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Tabular Dataset Specification</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DatasetSpec"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736ab4"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/CentralFacility">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Central Facility</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Organization"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/Organization">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736ad5"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasEmail">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>E-mail</rdfs:label>
+	<rdfs:domain rdf:nodeID="genid-start-31ac94972b736b51"/>
+	<rdfs:range rdf:nodeID="genid-start-31ac94972b736b4e"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasFirstName">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>first name</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Person"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasLastName">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>last name</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Person"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasOrcidId">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>Orcid ID</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasStringId"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Person"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/Person">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736ad4"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736ad3"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736ad2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/Role">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/Membership">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Membership</rdfs:label>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736ad8"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736ad7"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/atOrganization">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>at organization</rdfs:label>
+	<rdfs:domain rdf:nodeID="genid-start-31ac94972b736b8d"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Organization"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasRole">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>has role</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Membership"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Role"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasMembership">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label>has membership</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Person"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Membership"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/netcdf">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:label>NetCDF (spatial)</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/asciiEtcTimeSer">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:label>Time series in ICOS Sweden format</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/etcDate">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ValueFormat"/>
+	<rdfs:label>d/m/yyyy</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/zipEncoding">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectEncoding"/>
+	<rdfs:label>zip</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/asciiAtcTimeSer">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:label>ICOS ATC Raw time series</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/ingosRar">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:label>RAR archive with InGoS time series results</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/float64">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ValueFormat"/>
+	<rdfs:label>64-bit floating point value</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/asciiOtcSocatTimeSer">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:label>Data in OTC/SOCAT TSV format</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/asciiEtcRawTimeSer">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:label>Raw ASCII ETC station data</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/binEtcRawTimeSer">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:label>Raw binary ETC station data</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/excel">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:label>Microsoft Excel (of unspecified structure)</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/image">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:label>Image of an unspecified format</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/etcRawTimeSerMultiZip">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:label>Multi-file zip archive with ETC raw time series</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/asciiAtcProductTimeSer">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:comment>Semicolon-separated ASCII, with #-prefixed multi-line header</rdfs:comment>
+	<rdfs:label>ICOS ATC time series</rdfs:label>
+	<hasGoodFlagValue>R</hasGoodFlagValue>
+	<hasGoodFlagValue>O</hasGoodFlagValue>
+	<hasGoodFlagValue>U</hasGoodFlagValue>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/DataTheme">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Data Theme</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObjectSpecifyingThing"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736af2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasDataTheme">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>has data theme</rdfs:label>
+	<rdfs:domain rdf:nodeID="genid-start-31ac94972b736b8a"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataTheme"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasIcon">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:comment>URL link to SVG icon to be used in user interfaces</rdfs:comment>
+	<rdfs:label>has icon</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://schema.org/image"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataTheme"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/bmpChar">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ValueFormat"/>
+	<rdfs:comment>a character from the basic multilingual plane</rdfs:comment>
+	<rdfs:label>UTF-16 character</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/int32">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ValueFormat"/>
+	<rdfs:label>32-bit integer value</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/zipArchive">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:label>Arbitrary ZIP archive</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/Project">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObjectSpecifyingThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasSkipPidMintingPolicy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasPolicy"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#boolean">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasSkipStoragePolicy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasPolicy"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasAssociatedProject">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>associated with project</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObjectSpec"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Project"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasHideFromSearchPolicy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasPolicy"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasMarkerIcon">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:comment>URL link to an icon that can be used by web apps to show e.g. locations of stations</rdfs:comment>
+	<rdfs:label>has marker icon</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://schema.org/image"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataTheme"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/isOptionalColumn">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/isOptionalVariable"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DatasetColumn"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/etcLocalDateTime">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ValueFormat"/>
+	<rdfs:comment>Local dateTime timestamp without any daylight savings time adjustments, that is, local winter time.</rdfs:comment>
+	<rdfs:label>yyyyMMddHHmm (no DST) (ICOS ETC)</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/asciiEtcHalfHourlyProductTimeSer">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:comment>The first two columns are expected to be the beginning and the end of the averaging period in yyyyMMddHHmm format (no DST)</rdfs:comment>
+	<rdfs:label>ICOS ETC half-hourly product CSV</rdfs:label>
+	<rdfs:seeAlso rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/etcLocalDateTime"/>
+	<hasGoodFlagValue>1</hasGoodFlagValue>
+	<hasGoodFlagValue>0</hasGoodFlagValue>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/asciiOtcProductCsv">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:comment>Single-line comment, first column is UTC ISO-8601 timestamp, NaN for missing values, comma-separated.</rdfs:comment>
+	<rdfs:label>ICOS OTC time series</rdfs:label>
+	<hasGoodFlagValue>2</hasGoodFlagValue>
+	<hasGoodFlagValue>9</hasGoodFlagValue>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/otcRawData">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:label>ICOS OTC Raw Data</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/Station">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Organization"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736ab6"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasStationId">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>Station ID</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasStringId"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/countryCode">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:comment>ISO 3166-1 alpha-2 country code</rdfs:comment>
+	<rdfs:label>country code</rdfs:label>
+	<rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/ISO_3166-1"/>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasStationSpecificParam"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+	<rdfs:range rdf:nodeID="genid-start-31ac94972b736b6d"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/isQualityFlagFor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+	<rdfs:label>is a quality flag for</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DatasetColumn"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DatasetColumn"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/netcdfTimeSeries">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:label>NetCDF (time series)</rdfs:label>
+	<hasGoodFlagValue>R</hasGoodFlagValue>
+	<hasGoodFlagValue>O</hasGoodFlagValue>
+	<hasGoodFlagValue>U</hasGoodFlagValue>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasOtcId">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasTcId"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasEtcId">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasTcId"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasDocumentationObject">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label>has documentation</rdfs:label>
+	<rdfs:domain rdf:nodeID="genid-start-31ac94972b736b87"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DocumentObject"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/isRegexColumn">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/isRegexVariable"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DatasetColumn"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/DatasetVariable">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Dataset variable</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736aee"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736aed"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasVariableTitle">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>variable title</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/title"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DatasetVariable"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/DatasetSpec">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Dataset Specification</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObjectSpecifyingThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasVariable">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label>has variable</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DatasetSpec"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DatasetVariable"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/isOptionalVariable">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DatasetVariable"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasAtcId">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasTcId"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/igbp_BSV">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/EcosystemType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/igbp_CRO">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/EcosystemType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/igbp_CSH">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/EcosystemType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/igbp_CVM">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/EcosystemType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/igbp_DBF">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/EcosystemType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/igbp_DNF">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/EcosystemType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/igbp_EBF">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/EcosystemType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/igbp_ENF">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/EcosystemType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/igbp_GRA">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/EcosystemType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/igbp_MF">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/EcosystemType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/igbp_OSH">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/EcosystemType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/igbp_SAV">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/EcosystemType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/igbp_SNO">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/EcosystemType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/igbp_URB">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/EcosystemType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/igbp_WAT">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/EcosystemType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/igbp_WET">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/EcosystemType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/igbp_WSA">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/EcosystemType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Af">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Am">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Aw_As">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_BSh">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_BSk">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_BWh">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_BWk">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Cfa">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Cfb">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Cfc">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Cwc">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Csa">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Csb">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Csc">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Cwa">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Cwb">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Dfa">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Dfb">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Dfc">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Dfd">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Dsc">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Dsd">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Dwc">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Dwd">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Dsa">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Dsb">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Dwa">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_Dwb">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_EF">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/koppen_ET">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/resources/organizations/OTC">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ThematicCenter"/>
+	<hasName>Ocean Thematic Centre</hasName>
+	<rdfs:label>ICOS OTC</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/isRegexVariable">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DatasetVariable"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/SpatialCoverage">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Spatial Coverage</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/country">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>Country</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasStationSpecificParam"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasElevation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:comment>Elevation above sea level in meters</rdfs:comment>
+	<rdfs:label>Elevation</rdfs:label>
+	<rdfs:domain rdf:nodeID="genid-start-31ac94972b736b54"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasClimateZone">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>climate zone</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+	<rdfs:label>close match (SKOS)</rdfs:label>
+	<rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://meta.fieldsites.se/ontologies/sites/delimitedHeaderCsv">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:label>Character delimited header csv</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/csvWithIso8601tsFirstCol">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:label>CSV with ISO8601 timestamp as first column</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+	<rdfs:label>exact match (SKOS)</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/multiImageZip">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:label>Uncompressed zip archive with images</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasSpecificDatasetType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>specific dataset type</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObjectSpec"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/SpecificDatasetType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/stationTimeSeriesDataset">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/SpecificDatasetType"/>
+	<rdfs:label>Station-specific time series dataset</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/spatioTemporalDataset">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/SpecificDatasetType"/>
+	<rdfs:label>Spatiotemporal dataset</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/Collection">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/PlainCollection"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736b01"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736b00"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736aff"/>
+	<owl:disjointWith rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/StaticObject"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/terms/hasPart">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/AS">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Atmospheric station</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/IcosStation"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736b05"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/OS">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Oceanic station</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/IcosStation"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736ad6"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasAttributionWeight">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:comment>to be used for determining the order of names in citation strings</rdfs:comment>
+	<rdfs:label>attribution weight</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasExtraRoleInfo"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Membership"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/ES">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Ecosystem station</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/IcosStation"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736aeb"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasExtraRoleInfo">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label>extra role info</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Membership"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasResponsibleOrganization">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label>responsible organization</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Organization"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/Instrument">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736ae8"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736ae7"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736ae6"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736ae5"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasModel">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>instrument model</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Instrument"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasSerialNumber">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>serial number</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Instrument"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasVendor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Instrument"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Organization"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasInstrumentComponent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/ssn/hasSubSystem"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Instrument"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Instrument"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasStationClass">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>Station Class</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasStationSpecificParam"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/IcosStation"/>
+	<rdfs:range rdf:nodeID="genid-start-31ac94972b736b18"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasTimeZoneOffset">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:comment>offset of local timezone from UTC</rdfs:comment>
+	<rdfs:label>time zone offset</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasStationSpecificParam"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasLabelingDate">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:comment>the date when the station was approved by ICOS and got labelled as an ICOS station</rdfs:comment>
+	<rdfs:label>labelling date</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasStationSpecificParam"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/IcosStation"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#date">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasInstrumentOwner">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Instrument"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Organization"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasMeanAnnualPrecip">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:comment>measured in mm</rdfs:comment>
+	<rdfs:label>mean annual precipitation</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasStationSpecificParam"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ES"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasMeanAnnualTemp">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:comment>measured in °C</rdfs:comment>
+	<rdfs:label>mean annual temperature</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasStationSpecificParam"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasEcosystemType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label>ecosystem type</rdfs:label>
+	<rdfs:domain rdf:nodeID="genid-start-31ac94972b736b84"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/EcosystemType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasDepiction">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label>has depiction</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://schema.org/image"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasMeanAnnualRadiation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:comment>measured in W m-2</rdfs:comment>
+	<rdfs:label>mean annual radiation</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasStationSpecificParam"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ES"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasAssociatedPublication">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label>associated publication</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/bibliographicCitation"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasDocumentationUri">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label>documentation link</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/bibliographicCitation"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/Funder">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Organization"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/awardTitle">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>award title</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/fundingInfoProp"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Funding"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasEndDate">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>end date</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Funding"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/awardURI">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>award URI</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/fundingInfoProp"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Funding"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasFunder">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>funder</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Funding"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Funder"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/awardNumber">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>award number</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/fundingInfoProp"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Funding"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasFunding">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label>has funding</rdfs:label>
+	<rdfs:domain rdf:nodeID="genid-start-31ac94972b736b80"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Funding"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/Funding">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736aea"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasStartDate">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>start date</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Funding"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/ssn/hasDeployment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label>has deployment</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/ssn/Deployment">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasVariableName">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:comment>A "virtual" property only used to define a variable in SPARQL, to support variable-name search. Is a multi-valued counterpart of cpmeta:hasActualColumnNames (for SimpleDataObjects), which contains a JSON array. Also, used to indicate variable name that a sensor is measuring (via Deployment).</rdfs:comment>
+	<rdfs:domain rdf:nodeID="genid-start-31ac94972b736b0d"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/ssn/forProperty">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label>for property</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasWigosId">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>WIGOS ID</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasStringId"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/AS"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasActualVariable">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObject"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/VariableInfo"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/VariableInfo">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObjectSpecifyingThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasMaxValue">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/VariableInfo"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasMinValue">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/VariableInfo"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/DocumentObject">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/StaticObject"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736aec"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasFormatSpecificMetadata">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:comment>parent property for concrete format-specific metadata properties</rdfs:comment>
+	<rdfs:comment>used for WDCGG data, may be retired in the future</rdfs:comment>
+	<rdfs:label>format-specific metadata</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObject"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/belongsToTheNetworkOf">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>belongs to thematic center</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ThematicCenter"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://meta.fieldsites.se/resources/organizations/SITES_SLU">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ThematicCenter"/>
+	<hasName>SITES coordination center at SLU</hasName>
+	<rdfs:label>SITES at SLU</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://meta.fieldsites.se/ontologies/sites/Station">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>SITES station</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736aad"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/isoLikeLocalDateTime">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ValueFormat"/>
+	<rdfs:comment>May use space instead of 'T' for separator</rdfs:comment>
+	<rdfs:label>ISO-like local dateTime</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://meta.fieldsites.se/ontologies/sites/image">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:label>Image</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/EcosystemType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Ecosystem Type</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/Site">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:comment>Physical research site</rdfs:comment>
+	<rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736ac3"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736ac2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/operatesOn">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label>operates on</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#atLocation"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Site"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://meta.fieldsites.se/ontologies/sites/aquanetPointMeasurementsCsv">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:label>AquaNet point measurements csv</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://meta.fieldsites.se/ontologies/sites/spectralPointCloud">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:label>SITES Spectral point cloud</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/ClimateZone">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Climate Zone</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasOperationalPeriod">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>operational period</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasStationSpecificParam"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/gzipEncoding">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectEncoding"/>
+	<rdfs:label>gzip</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://meta.fieldsites.se/ontologies/sites/zipLidar">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:label>Zipped LiDAR data</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#hasSerialization">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Literal">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/iso8601month">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ValueFormat"/>
+	<rdfs:label>Month in ISO-8601 format</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/IngosStation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>InGOS station</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/FluxnetStation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>FLUXNET station</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/AtmoStation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>ATMO station</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/SailDrone">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Sail Drone</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://creativecommons.org/ns#license">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/issued">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/modified">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/publisher">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/contributor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#hexBinary">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/ThematicCenter">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Thematic Center</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/CentralFacility"/>
+	<owl:equivalentClass rdf:nodeID="genid-start-31ac94972b736ab3"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/broaderEcosystem">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label>more general ecosystem</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/EcosystemType"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/EcosystemType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#broader">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label>has broader</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasAncillaryEntry">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:comment>ancillary entry associated with a station</rdfs:comment>
+	<rdfs:label>ancillary entry</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/AncillaryEntry"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/AncillaryEntry">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:comment>contains the ancillary value(s), submission date, and optional information date</rdfs:comment>
+	<rdfs:label>Ancillary Entry</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/AncillaryDatum"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736b02"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasAncillaryObjectValue">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:comment>parent property for ancillary value properties whose values come from controlled vocabularies</rdfs:comment>
+	<rdfs:label>ancillary object value</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/AncillaryEntry"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/AncillaryValue"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/AncillaryValue">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:comment>the class of ancillary values coming from controlled vocabularies</rdfs:comment>
+	<rdfs:label>Ancillary Value</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/AncillaryDatum"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/terms/format">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label>Format</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectEncoding">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/FileFormat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/FileFormat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/ssn/hasSubSystem">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:label>has subsystem</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasLinkbox">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/WebpageElements"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/LinkBox"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/WebpageElements">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Webpage Elements</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/WebpageSpecifyingThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/LinkBox">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Link Box</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/WebpageSpecifyingThing"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736ada"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736ad9"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/prov#atLocation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+	<rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#Feature">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+	<owl:disjointWith rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/SpecificDatasetType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>Specific dataset type</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObjectSpecifyingThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/ValueFormat">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObjectSpecifyingThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasWebpageElements">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Organization"/>
+	<rdfs:range rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/WebpageElements"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/impliesDefaultLicence">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>implies default licence</rdfs:label>
+	<rdfs:domain rdf:nodeID="genid-start-31ac94972b736b76"/>
+	<rdfs:range rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/terms/LicenseDocument">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/prov#wasRevisionOf">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+	<rdfs:range rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/StaticObject">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736ab7"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/locatedAt">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>located at</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#atLocation"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Organization"/>
+	<rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+	<rdfs:range rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/prov#Activity">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#Geometry">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/prov#Entity">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/prov#Agent">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/fundingInfoProp">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/containsString">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/StringVocabulary"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/StringVocabulary">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ValueFormat"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736ab5"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasStationSpecificParam">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/funderIdentifier">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>funder identifier</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/fundingInfoProp"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Funder"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/funderIdentifierType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>funder identifier type</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/fundingInfoProp"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Funder"/>
+	<rdfs:range rdf:nodeID="genid-start-31ac94972b736b6a"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/SimpleDataObject">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:disjointWith rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/SpatialDataObject"/>
+	<owl:equivalentClass rdf:nodeID="genid-start-31ac94972b736acb"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasAncillaryDataValue">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:comment>parent property for ancillary value properties whose values are plain literals (not from vocabularies)</rdfs:comment>
+	<rdfs:label>ancillary data value</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/AncillaryEntry"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/terms/bibliographicCitation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasTcId">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasStringId"/>
+	<rdfs:domain rdf:nodeID="genid-start-31ac94972b736b14"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasCitationString">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:comment>a synthetic property; the RDF triples with it as a predicate are to be created by business-logic-based inference, not inserted into the triple store explicitly</rdfs:comment>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/bibliographicCitation"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/StaticObject"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasCoverImage">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>cover image</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://schema.org/image"/>
+	<rdfs:domain rdf:nodeID="genid-start-31ac94972b736b64"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://schema.org/image">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/latlongs">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/SpatialDataObject">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:equivalentClass rdf:nodeID="genid-start-31ac94972b736ac1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasGoodFlagValue">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ObjectFormat"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasPolicy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Project"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasKeyword">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:comment>A "virtual" property, created for keyword search in SPARQL. A multi-value counterpart of cpmeta:hasKeywords, which contains a string with comma-separated list of keywords.</rdfs:comment>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObject"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/IcosStation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>ICOS station</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736ae9"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasStringId">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:comment>umbrella property for organizing id-related properties</rdfs:comment>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasOrderWeight">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdfs:label>order weight</rdfs:label>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/LinkBox"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/hasWebpageLink">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label>webpage link</rdfs:label>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/bibliographicCitation"/>
+	<rdfs:domain rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/LinkBox"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/terms/date">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label>Date</rdfs:label>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/terms/dateSubmitted">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:label>Date Submitted</rdfs:label>
+	<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/AncillaryDatum">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:disjointUnionOf rdf:nodeID="genid-start-31ac94972b736b04"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/DataObjectSpecifyingThing">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:comment>A container class for grouping related concepts together. Not meant to be explicitly used for modeling.</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/sosa/ObservableProperty">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sensor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736aae"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/WebpageSpecifyingThing">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:comment>A container class for grouping related concepts together. Not meant to be explicitly used for modeling.</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/NeonStation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>NEON station</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/terms/FileFormat">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/WdcggStation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label>WDCGG station</rdfs:label>
+	<rdfs:subClassOf rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/vocommons/voaf#Vocabulary">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#SpatialObject">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/icosLicence">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
+	<rdfs:label>ICOS CCBY4 Data Licence</rdfs:label>
+	<rdfs:seeAlso rdf:resource="https://data.icos-cp.eu/licence"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="https://creativecommons.org/licenses/by/4.0"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://creativecommons.org/licenses/by/4.0">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdfs:label>vanilla CC BY 4</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/string">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ValueFormat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://meta.fieldsites.se/ontologies/sites/sitesLicence">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
+	<rdfs:label>SITES CCBY4 Data Licence</rdfs:label>
+	<rdfs:seeAlso rdf:resource="https://data.fieldsites.se/licence"/>
+	<exactMatch xmlns="http://www.w3.org/2004/02/skos/core#" rdf:resource="https://creativecommons.org/licenses/by/4.0"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://meta.icos-cp.eu/ontologies/cpmeta/PlainCollection">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+	<rdfs:subClassOf rdf:nodeID="genid-start-31ac94972b736ad1"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b8d">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b8c"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b8c">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Membership"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b8b"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b8b">
+	<rdf:first rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b8a">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b89"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b89">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObjectSpec"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b88"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b88">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ThematicCenter"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b87">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b86"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b86">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObjectSpec"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b85"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b85">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b84">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b83"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b83">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/ES"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b82"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b82">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Site"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b81"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b81">
+	<rdf:first rdf:resource="https://meta.fieldsites.se/ontologies/sites/Station"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b80">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b7f"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b7f">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/CentralFacility"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b7e"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b7e">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b7d">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b7c"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b7c">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataAcquisition"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b7b"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b7b">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Site"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b7a">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b79"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b79">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObject"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b78"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b78">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b77"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b77">
+	<rdf:first rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b76">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b75"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b75">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObjectSpec"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b74"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b74">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Project"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b73">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b72"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b72">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/PlainCollection"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b71"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b71">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/StaticObject"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b70">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b6f"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b6f">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Collection"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b6e"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b6e">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/StaticObject"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b6d">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+	<owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<owl:withRestrictions rdf:nodeID="genid-start-31ac94972b736b6b"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b6b">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736b6c"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b6c">
+	<xsd:pattern>^[A-Z]{2}$</xsd:pattern>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b6a">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+	<owl:oneOf rdf:nodeID="genid-start-31ac94972b736b69"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b69">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+	<rdf:first>Crossref Funder ID</rdf:first>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b68"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b68">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+	<rdf:first>GRID</rdf:first>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b67"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b67">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+	<rdf:first>ISNI</rdf:first>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b66"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b66">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+	<rdf:first>Other</rdf:first>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b65"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b65">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+	<rdf:first>ROR</rdf:first>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b64">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b63"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b63">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/LinkBox"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b62"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b62">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/WebpageElements"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b61">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+	<owl:oneOf rdf:nodeID="genid-start-31ac94972b736b60"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b60">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+	<rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</rdf:first>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b5f"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b5f">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+	<rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdf:first>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b5e"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b5e">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+	<rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rdf:first>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b5d"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b5d">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+	<rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</rdf:first>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b5c">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b5b"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b5b">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Collection"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b5a"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b5a">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/StaticObject"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b59">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+	<owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+	<owl:withRestrictions rdf:nodeID="genid-start-31ac94972b736b57"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b57">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736b58"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b55"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b58">
+	<xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-180.0</xsd:minInclusive>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b55">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736b56"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b56">
+	<xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">180.0</xsd:maxInclusive>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b54">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b53"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b53">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b52"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b52">
+	<rdf:first rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b51">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b50"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b50">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Organization"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b4f"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b4f">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Person"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b4e">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+	<owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<owl:withRestrictions rdf:nodeID="genid-start-31ac94972b736b4c"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b4c">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736b4d"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b4d">
+	<xsd:pattern>^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$</xsd:pattern>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b4b">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b4a"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b4a">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Membership"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b49"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b49">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/SpatialDataObject"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b48"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b48">
+	<rdf:first rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b47">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b46"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b46">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObject"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b45"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b45">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObjectSpec"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b44"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b44">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Project"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b43">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b42"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b42">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Position"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b41"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b41">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b40"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b40">
+	<rdf:first rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b3f">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+	<owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+	<owl:withRestrictions rdf:nodeID="genid-start-31ac94972b736b3d"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b3d">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736b3e"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b3b"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b3e">
+	<xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-90.0</xsd:minInclusive>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b3b">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736b3c"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b3c">
+	<xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">90.0</xsd:maxInclusive>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b3a">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b39"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b39">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Position"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b38"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b38">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Station"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b37"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b37">
+	<rdf:first rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b36">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+	<owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+	<owl:withRestrictions rdf:nodeID="genid-start-31ac94972b736b34"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b34">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736b35"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b32"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b35">
+	<xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-180.0</xsd:minInclusive>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b32">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736b33"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b33">
+	<xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">180.0</xsd:maxInclusive>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b31">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b30"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b30">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Instrument"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b2f"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b2f">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/LinkBox"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b2e"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b2e">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Organization"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b2d"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b2d">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/StaticObject"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b2c">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+	<owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+	<owl:withRestrictions rdf:nodeID="genid-start-31ac94972b736b2a"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b2a">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736b2b"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b28"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b2b">
+	<xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-90.0</xsd:minInclusive>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b28">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736b29"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b29">
+	<xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">90.0</xsd:maxInclusive>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b27">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b26"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b26">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataAcquisition"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b25"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b25">
+	<rdf:first rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b24">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+	<owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#hexBinary"/>
+	<owl:withRestrictions rdf:nodeID="genid-start-31ac94972b736b22"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b22">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736b23"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b23">
+	<xsd:length rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">64</xsd:length>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b21">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+	<owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+	<owl:withRestrictions rdf:nodeID="genid-start-31ac94972b736b1f"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b1f">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736b20"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b1d"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b20">
+	<xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-90.0</xsd:minInclusive>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b1d">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736b1e"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b1e">
+	<xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">90.0</xsd:maxInclusive>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b1c">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b1b"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b1b">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Membership"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b1a"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b1a">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/SpatialDataObject"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b19"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b19">
+	<rdf:first rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b18">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+	<owl:oneOf rdf:nodeID="genid-start-31ac94972b736b17"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b17">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+	<rdf:first>1</rdf:first>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b16"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b16">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+	<rdf:first>2</rdf:first>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b15"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b15">
+	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+	<rdf:first>Associated</rdf:first>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b14">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b13"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b13">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Instrument"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b12"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b12">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Organization"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b11"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b11">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Person"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b10">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b0f"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b0f">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObject"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b0e"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b0e">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DatasetSpec"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b0d">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736b0c"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b0c">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObject"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b0b"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b0b">
+	<rdf:first rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b0a">
+	<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+	<owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+	<owl:withRestrictions rdf:nodeID="genid-start-31ac94972b736b08"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b08">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736b09"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b06"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b09">
+	<xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-180.0</xsd:minInclusive>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b06">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736b07"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b07">
+	<xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">180.0</xsd:maxInclusive>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b05">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/belongsToTheNetworkOf"/>
+	<owl:hasValue rdf:resource="http://meta.icos-cp.eu/resources/organizations/ATC"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b04">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/AncillaryEntry"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736b03"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b03">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/AncillaryValue"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b02">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dc/terms/dateSubmitted"/>
+	<owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+	<owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b01">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dc/terms/creator"/>
+	<owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+	<owl:onClass rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Organization"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736b00">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dc/terms/description"/>
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736aff">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dc/terms/title"/>
+	<owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+	<owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736afe">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736afd">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasObjectSpec"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736afc">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/isNextVersionOf"/>
+	<owl:allValuesFrom rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObject"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736afb">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasAssociatedProject"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736afa">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasDataTheme"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736af9">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasEncoding"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736af8">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasFormat"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736af7">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasSpecificDatasetType"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736af6">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasDataLevel"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736af5">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/wasPerformedBy"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736af4">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://www.w3.org/ns/prov#endedAtTime"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736af3">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736af2">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasIcon"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736af1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasValueFormat"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736af0">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasValueType"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736aef">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasColumnTitle"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736aee">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasValueType"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736aed">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasVariableTitle"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736aec">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/isNextVersionOf"/>
+	<owl:allValuesFrom rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DocumentObject"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736aeb">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/belongsToTheNetworkOf"/>
+	<owl:hasValue rdf:resource="http://meta.icos-cp.eu/resources/organizations/ETC"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736aea">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasFunder"/>
+	<owl:someValuesFrom rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Funder"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ae9">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/countryCode"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ae8">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasInstrumentOwner"/>
+	<owl:onClass rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Organization"/>
+	<owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ae7">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasVendor"/>
+	<owl:onClass rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Organization"/>
+	<owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ae6">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasModel"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ae5">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasSerialNumber"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ae4">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:intersectionOf rdf:nodeID="genid-start-31ac94972b736ae3"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ae3">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/SpatialCoverage"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736ae1"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ae1">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736ae2"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736adf"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ae2">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasEasternBound"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736adf">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736ae0"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736add"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ae0">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasNorthernBound"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736add">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736ade"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736adb"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ade">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasSouthernBound"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736adb">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736adc"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736adc">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasWesternBound"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ada">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasName"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ad9">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasWebpageLink"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ad8">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/atOrganization"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ad7">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasRole"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ad6">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/belongsToTheNetworkOf"/>
+	<owl:hasValue rdf:resource="http://meta.icos-cp.eu/resources/organizations/OTC"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ad5">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasName"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ad4">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasEmail"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ad3">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasFirstName"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ad2">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasLastName"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ad1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.org/dc/terms/hasPart"/>
+	<owl:allValuesFrom rdf:nodeID="genid-start-31ac94972b736ad0"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ad0">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:unionOf rdf:nodeID="genid-start-31ac94972b736acf"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736acf">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/Collection"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736ace"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ace">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/StaticObject"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736acd">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasLatitude"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736acc">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasLongitude"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736acb">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:intersectionOf rdf:nodeID="genid-start-31ac94972b736aca"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736aca">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObject"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736ac8"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ac8">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736ac9"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736ac6"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ac9">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/wasAcquiredBy"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ac6">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736ac7"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ac7">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasObjectSpec"/>
+	<owl:allValuesFrom rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/SimpleObjectSpec"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ac5">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/containsDataset"/>
+	<owl:allValuesFrom rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/TabularDatasetSpec"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ac4">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/containsDataset"/>
+	<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ac3">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+	<owl:allValuesFrom rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/SpatialCoverage"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ac2">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasEcosystemType"/>
+	<owl:onClass rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/EcosystemType"/>
+	<owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ac1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:intersectionOf rdf:nodeID="genid-start-31ac94972b736ac0"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ac0">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/DataObject"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736abe"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736abe">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736abf"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736abc"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736abf">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasSpatialCoverage"/>
+	<owl:someValuesFrom rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/LatLonBox"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736abc">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736abd"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736aba"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736abd">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/wasProducedBy"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736aba">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736abb"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736ab8"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736abb">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasEndTime"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ab8">
+	<rdf:first rdf:nodeID="genid-start-31ac94972b736ab9"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ab9">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasStartTime"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ab7">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/wasSubmittedBy"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ab6">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasStationId"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ab5">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/containsString"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ab4">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/hasColumn"/>
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ab3">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:oneOf rdf:nodeID="genid-start-31ac94972b736ab2"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ab2">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/resources/organizations/ATC"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736ab1"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ab1">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/resources/organizations/ETC"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736ab0"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736ab0">
+	<rdf:first rdf:resource="http://meta.icos-cp.eu/resources/organizations/OTC"/>
+	<rdf:rest rdf:nodeID="genid-start-31ac94972b736aaf"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736aaf">
+	<rdf:first rdf:resource="https://meta.fieldsites.se/resources/organizations/SITES_SLU"/>
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736aae">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasDeployment"/>
+	<owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid-start-31ac94972b736aad">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://meta.icos-cp.eu/ontologies/cpmeta/belongsToTheNetworkOf"/>
+	<owl:hasValue rdf:resource="https://meta.fieldsites.se/resources/organizations/SITES_SLU"/>
+</rdf:Description>
+
+</rdf:RDF>

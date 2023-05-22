@@ -1,0 +1,925 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/eeo#"
+     xml:base="https://w3id.org/eeo"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/eeo">
+        <owl:versionIRI rdf:resource="https://w3id.org/eeo/0.1.0"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Anne-Laure Jousselme</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Maximilian Zocholl</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2020-09-21</dc:date>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ontology to describe experiments, evaluations and their relation.</dc:description>
+        <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-21T11:35:00</dc:issued>
+        <dc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Experimental Evaluation Ontology</dc:title>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/version -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/version"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+        <rdfs:comment>A minimal interpretation of a stimulus.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/applies -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eeo/0.1.0/applies">
+        <owl:inverseOf rdf:resource="https://w3id.org/eeo/0.1.0/isAppliedBy"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:comment xml:lang="en">makes use of</rdfs:comment>
+        <rdfs:label xml:lang="en">applies</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/formalises -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eeo/0.1.0/formalises">
+        <rdfs:domain rdf:resource="https://w3id.org/eeo/0.1.0/Model"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:comment>provides a formal description</rdfs:comment>
+        <rdfs:label xml:lang="en">formalises</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/hasFactor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eeo/0.1.0/hasFactor">
+        <rdfs:domain rdf:resource="https://w3id.org/eeo/0.1.0/Treatment"/>
+        <rdfs:range rdf:resource="https://w3id.org/eeo/0.1.0/Factor"/>
+        <rdfs:comment>is described by</rdfs:comment>
+        <rdfs:label xml:lang="en">hasFactor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/hasFactorLevel -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eeo/0.1.0/hasFactorLevel">
+        <rdfs:domain rdf:resource="https://w3id.org/eeo/0.1.0/Factor"/>
+        <rdfs:range rdf:resource="https://w3id.org/eeo/0.1.0/FactorLevel"/>
+        <rdfs:comment>is described by and may take one of multiple values of</rdfs:comment>
+        <rdfs:label xml:lang="en">hasFactorLevel</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/hasPart -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eeo/0.1.0/hasPart">
+        <owl:inverseOf rdf:resource="https://w3id.org/eeo/0.1.0/isPartOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">consists of, contains</rdfs:comment>
+        <rdfs:label xml:lang="en">hasPart</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/isAppliedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eeo/0.1.0/isAppliedBy">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:comment>is used by an entity</rdfs:comment>
+        <rdfs:label xml:lang="en">isAppliedBy
+</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/isAppliedTo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eeo/0.1.0/isAppliedTo">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:comment>is used to interpret an entity</rdfs:comment>
+        <rdfs:label xml:lang="en">isAppliedTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/isEvaluationResultOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eeo/0.1.0/isEvaluationResultOf">
+        <rdfs:domain rdf:resource="https://w3id.org/eeo/0.1.0/EvaluationResult"/>
+        <rdfs:range rdf:resource="https://w3id.org/eeo/0.1.0/Evaluation"/>
+        <rdfs:comment xml:lang="en">is the output of an evaluation</rdfs:comment>
+        <rdfs:label xml:lang="en">isEvaluationResultOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/isExecutionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eeo/0.1.0/isExecutionOf">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:range rdf:resource="https://w3id.org/eeo/0.1.0/Implementation"/>
+        <rdfs:comment>is performing action at runtime according to</rdfs:comment>
+        <rdfs:label xml:lang="en">isExecutionOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/isExperimentalUnitOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eeo/0.1.0/isExperimentalUnitOf">
+        <rdfs:domain rdf:resource="https://w3id.org/eeo/0.1.0/ExperimentalUnit"/>
+        <rdfs:range rdf:resource="https://w3id.org/eeo/0.1.0/Experiment"/>
+        <rdfs:comment>is characterised by</rdfs:comment>
+        <rdfs:label xml:lang="en">isExperimentalUnitOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/isImplementing -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eeo/0.1.0/isImplementing">
+        <rdfs:domain rdf:resource="https://w3id.org/eeo/0.1.0/Implementation"/>
+        <rdfs:range rdf:resource="https://w3id.org/eeo/0.1.0/Specification"/>
+        <rdfs:comment>is interpreting</rdfs:comment>
+        <rdfs:label xml:lang="en">isImplementing</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/isInputOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eeo/0.1.0/isInputOf">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:comment>is included in the domain of a function</rdfs:comment>
+        <rdfs:label xml:lang="en">isInputOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/isOutputOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eeo/0.1.0/isOutputOf">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:comment>A value that is assigned</rdfs:comment>
+        <rdfs:label xml:lang="en">isOutputOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/isPartOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eeo/0.1.0/isPartOf"/>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/isRunningIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eeo/0.1.0/isRunningIn">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000011"/>
+        <rdfs:comment>depends on</rdfs:comment>
+        <rdfs:label xml:lang="en">isRunningIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/isSpecifiedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eeo/0.1.0/isSpecifiedBy">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:comment>is described in detail by</rdfs:comment>
+        <rdfs:label xml:lang="en">isSpecifiedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/isValueOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eeo/0.1.0/isValueOf">
+        <rdfs:domain rdf:resource="https://w3id.org/eeo/0.1.0/Value"/>
+        <rdfs:range rdf:resource="https://w3id.org/eeo/0.1.0/EvaluationResult"/>
+        <rdfs:comment>is specifying</rdfs:comment>
+        <rdfs:label xml:lang="en">isValueOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/projectsOn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eeo/0.1.0/projectsOn">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+        <rdfs:comment>assigns one or more elements from a given set</rdfs:comment>
+        <rdfs:label xml:lang="en">projectsOn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/pursues -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eeo/0.1.0/pursues">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:range rdf:resource="https://w3id.org/eeo/0.1.0/Task"/>
+        <rdfs:comment>aims to fulfill</rdfs:comment>
+        <rdfs:label xml:lang="en">pursues</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/spans -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eeo/0.1.0/spans">
+        <rdfs:domain rdf:resource="https://w3id.org/eeo/0.1.0/Predicate"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+        <rdfs:comment>turns a set into a space</rdfs:comment>
+        <rdfs:label xml:lang="en">spans</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000017 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000017">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eeo/0.1.0/projectsOn"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/eeo/0.1.0/EvaluationSpace"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/ComputationalProperty -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/ComputationalProperty">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eeo/0.1.0/Predicate"/>
+        <rdfs:comment>A property that is assignable to the computational unit on which the experimental run is performed. The computational properties are potentially impacting on the ExperimentalResult and the EvaluationResult.</rdfs:comment>
+        <rdfs:label xml:lang="en">ComputationalProperty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/Data -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/Data">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <rdfs:comment>A minimal interpretation of a stimulus.</rdfs:comment>
+        <rdfs:label xml:lang="en">Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/Effect -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/Effect">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:comment>A set of properties that result from an ExperimentalRun. Synonyms: Response variable, observational unit.</rdfs:comment>
+        <rdfs:label xml:lang="en">Effect</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/Evaluand -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/Evaluand">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/eeo/0.1.0/hasPart"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/eeo/0.1.0/Phenomenon"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/eeo/0.1.0/hasPart"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/eeo/0.1.0/Predicate"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/eeo/0.1.0/isPartOf"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/eeo/0.1.0/Evaluation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>An Entity that is the subject of an Evaluation. Synonym: Evaluand, EvaluationUnit.</rdfs:comment>
+        <rdfs:label xml:lang="en">Evaluand</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/Evaluation -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/Evaluation">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eeo/0.1.0/applies"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/eeo/0.1.0/EvaluationValueScale"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eeo/0.1.0/hasPart"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/eeo/0.1.0/Evaluand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eeo/0.1.0/isExecutionOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/eeo/0.1.0/EvaluationSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eeo/0.1.0/isRunningIn"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/eeo/0.1.0/EvaluationContext"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The Process of assigning a quantity or quality value to a property of one or more Evaluands by means of an EvaluationMethod. Each Evaluation has an EvaluationContext, an EvaluationResult and may consist of one or more Evaluations. Polysemy sibling with the result of an Evaluation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Evaluation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/EvaluationContext -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/EvaluationContext">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000011"/>
+        <rdfs:comment>A spatiotemporal region that includes a description of all Entities that impact on the Evaluation without being part of the Evaluation.</rdfs:comment>
+        <rdfs:label xml:lang="en">EvaluationContext</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/EvaluationMethod -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/EvaluationMethod">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eeo/0.1.0/isAppliedBy"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/eeo/0.1.0/Evaluation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eeo/0.1.0/isAppliedTo"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/eeo/0.1.0/Evaluand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A Method aiming at the quantification of a Quality of an Evaluand making use of one or more EvaluationCriteria and EvaluationValueScales.</rdfs:comment>
+        <rdfs:label xml:lang="en">EvaluationMethod</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/EvaluationResult -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/EvaluationResult">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:comment>An Output of an Evaluation. A Quantity that is assigned to the Evaluand referring to an EvaluationCriterion and an EvaluationValueScale.</rdfs:comment>
+        <rdfs:label xml:lang="en">EvaluationResult</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/EvaluationSpace -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/EvaluationSpace">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+        <rdfs:comment>The cartesian product of the sets of the EvaluationCriteria realised by their respective EvaluationMetrics.</rdfs:comment>
+        <rdfs:label xml:lang="en">EvaluationSpace</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/EvaluationSystem -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/EvaluationSystem">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+        <rdfs:comment xml:lang="en">An Implementation that performs an Evaluation.</rdfs:comment>
+        <rdfs:label xml:lang="en">EvaluationSystem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/EvaluationValueScale -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/EvaluationValueScale">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000026"/>
+        <rdfs:comment>A set of quality or quantity values of a quality or quantity that describes the relation between two or more values according to the properties of the set, e.g. set for distinguishing values, ordered set for ranking values, a metric that applies to all members of the set, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">EvaluationValueScale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/Experiment -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/Experiment">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eeo/0.1.0/hasPart"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/eeo/0.1.0/ExperimentalSpace"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eeo/0.1.0/isSpecifiedBy"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/eeo/0.1.0/ExperimentalPlan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eeo/0.1.0/isSpecifiedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/eeo/0.1.0/ExperimentalUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A Process that includes two or more ExperimentalRuns between which the Input to an ExperimentalUnit is varied according to an ExperimentalPlan in a controlled way and the Effects are observed.</rdfs:comment>
+        <rdfs:label xml:lang="en">Experiment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/ExperimentalPlan -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/ExperimentalPlan">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eeo/0.1.0/isSpecifiedBy"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/eeo/0.1.0/ExperimentalRun"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A randomly ordered set of two or more Treatments.</rdfs:comment>
+        <rdfs:label xml:lang="en">ExperimentalPlan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/ExperimentalRun -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/ExperimentalRun">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eeo/0.1.0/isRunningIn"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/eeo/0.1.0/ExperimentalRunContext"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/eeo/0.1.0/isOutputOf"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/eeo/0.1.0/Effect"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eeo/0.1.0/isExecutionOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/eeo/0.1.0/Implementation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eeo/0.1.0/isSpecifiedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/eeo/0.1.0/Treatment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A Process in which the ExperimentalUnit transforms an Input into an ExperimentalResult.</rdfs:comment>
+        <rdfs:label xml:lang="en">ExperimentalRun</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/ExperimentalRunContext -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/ExperimentalRunContext">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000011"/>
+        <rdfs:comment>A spatiotemporal region that is composed of ParameterSetting and ComputationalProperties.</rdfs:comment>
+        <rdfs:label xml:lang="en">ExperimentalRunContext</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/ExperimentalSpace -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/ExperimentalSpace">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000006"/>
+        <rdfs:comment>The cartesian product of the sets of the FactorLevels of each Factor.</rdfs:comment>
+        <rdfs:label xml:lang="en">ExperimentalSpace</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/ExperimentalUnit -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/ExperimentalUnit">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eeo/0.1.0/isExperimentalUnitOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/eeo/0.1.0/Experiment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eeo/0.1.0/pursues"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/eeo/0.1.0/Task"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An Entity that has a function which transforms a Treatment into an ExperimentalResult during the ExperimentalRun and whose properties remain unchanged over the period of the experiment.</rdfs:comment>
+        <rdfs:comment>Corresponds to Phenomenon in VIM</rdfs:comment>
+        <rdfs:label xml:lang="en">ExperimentalUnit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/Factor -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/Factor">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eeo/0.1.0/hasFactorLevel"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/eeo/0.1.0/FactorLevel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An Entity that is an Input of the ExperimentalUnit within an Experiment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Factor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/FactorLevel -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/FactorLevel">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:comment>A value that is or may be assigned to a factor.</rdfs:comment>
+        <rdfs:label xml:lang="en">FactorLevel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/Hypothesis -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/Hypothesis">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:comment>A model of the Evaluand to be accepted or rejected.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hypothesis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/Implementation -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/Implementation">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eeo/0.1.0/isImplementing"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/eeo/0.1.0/Specification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An entity that interprets a Specification and may create a process when being execute. An Implementation may be an ExperimentalUnit.</rdfs:comment>
+        <rdfs:label xml:lang="en">Implementation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/IntervalInterpretedValue -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/IntervalInterpretedValue">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000019"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000144"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>A Value interpreted according to multiple ordered categories that are subject to a distance measure.</rdfs:comment>
+        <rdfs:label xml:lang="en">IntervalInterpretedValue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/Measurement -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/Measurement">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:comment>A Process of assigning one or more quantity values to a measurand.</rdfs:comment>
+        <rdfs:label xml:lang="en">Measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/Method -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/Method">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:comment>A description of a Process to acquire Data, Information or Knowledge.</rdfs:comment>
+        <rdfs:label xml:lang="en">Method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/Model -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/Model">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+        <rdfs:comment>An incomplete and simplified representation of an entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/NominalInterpretedValue -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/NominalInterpretedValue">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000019"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000144"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>A Value interpreted according to multiple categories.</rdfs:comment>
+        <rdfs:label xml:lang="en">NominalInterpretedValue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/OrdinalInterpretedValue -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/OrdinalInterpretedValue">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000019"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000144"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>A Value interpreted according to multiple ordered categories.</rdfs:comment>
+        <rdfs:label xml:lang="en">OrdinalInterpretedValue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/ParameterSetting -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/ParameterSetting">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <rdfs:comment>A set of parameter values that are not changed during an Experiment.</rdfs:comment>
+        <rdfs:label xml:lang="en">ParameterSetting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/Phenomenon -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/Phenomenon">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/eeo/0.1.0/Evaluand"/>
+                    <rdf:Description rdf:about="https://w3id.org/eeo/0.1.0/EvaluationResult"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000002"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000003"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/Predicate -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/Predicate">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000019"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000144"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>A quality that allows to distinguish or match two or more Entities or Processes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Predicate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/QualityValue -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/QualityValue">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eeo/0.1.0/Value"/>
+        <rdfs:comment>A value of a property of an entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">QualityValue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/Quantity -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/Quantity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eeo/0.1.0/Predicate"/>
+        <rdfs:comment>A property of an entity to which a value can be assigned that has a meaningful quantitative interpretation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Quantity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/QuantityValue -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/QuantityValue">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eeo/0.1.0/Value"/>
+        <rdfs:comment>A numerical value of a property of an entity that has a magnitude.</rdfs:comment>
+        <rdfs:label xml:lang="en">QuantityValue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/RatioInterpretedValue -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/RatioInterpretedValue">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000019"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000144"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>A QuantityValue interpreted according to multiple ordered categories that are subject to a distance measure and that make reference to a zero element.</rdfs:comment>
+        <rdfs:label xml:lang="en">RatioInterpretedValue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/Specification -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/Specification">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:comment>An Entity that describes necessary properties of an Implementation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/Task -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/Task">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+        <rdfs:comment>A Process to be completed in order to fulfill a predefined goal.</rdfs:comment>
+        <rdfs:label xml:lang="en">Task</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/Treatment -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/Treatment">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eeo/0.1.0/hasFactor"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/eeo/0.1.0/Factor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eeo/0.1.0/isInputOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/eeo/0.1.0/ExperimentalRun"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A set of FactorLevels that specifies the input to the ExperimentalUnit in a domain independent way. Each ExperimentalRun/Test has exactly one treatment. In one Treatment for each factor exactly one factor level is specified.</rdfs:comment>
+        <rdfs:label xml:lang="en">Treatment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eeo/0.1.0/Value -->
+
+    <owl:Class rdf:about="https://w3id.org/eeo/0.1.0/Value">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:comment xml:lang="en">A quality which specifies a Predicate.</rdfs:comment>
+        <rdfs:label xml:lang="en">Value</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
